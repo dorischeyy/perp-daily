@@ -49,11 +49,23 @@ cd ~/perp-daily && node build-html.mjs content.json
 
 输出在 `~/perp-daily/out/perp-daily-<date>.html`。
 
-## 步骤 4 · 发布到静态托管，拿公网链接
+## 步骤 4 · 发布到 GitHub Pages，拿公网链接
 
-把 `out/perp-daily-<date>.html` 发布到静态托管（见 README「托管」一节，已配置好），
-得到一个**公网 URL**（渠道无关，飞书/Slack/邮件都能发同一个）。
-记下该 URL 备用。
+托管＝GitHub Pages（仓库 `dorischeyy/perp-daily`，从 `main` 分支 `/docs` 发布）。
+生成当天永久页 + 更新首页（首页恒为最新一期），提交并推送：
+
+```bash
+cd ~/perp-daily
+mkdir -p docs/archive
+node build-html.mjs content.json docs/archive/<date>.html   # 当天永久页
+cp docs/archive/<date>.html docs/index.html                  # 首页=最新一期
+git add docs && git commit -m "report: <date>" && git push origin main
+```
+
+推送后约 1 分钟，当天**公网永久链接**为：
+`https://dorischeyy.github.io/perp-daily/archive/<date>.html`
+（首页 `https://dorischeyy.github.io/perp-daily/` 恒为最新一期）
+记下当天永久链接备用。
 
 ## 步骤 5 · 交付到所有启用的渠道
 
