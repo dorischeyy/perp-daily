@@ -23,6 +23,19 @@
       ]
     },
     {
+      "id": "launchpad",
+      "title": "Launchpad",
+      "kicker": "发射台动态",
+      "items": [
+        {
+          "headline": "pump.fun 上线 creator fee 分成新机制",
+          "body": "发币者可按交易量分成，迁移机制同步调整；GMGN 工具侧跟进 smart money 标签。",
+          "source": "pump.fun",
+          "url": "https://x.com/pumpdotfun"
+        }
+      ]
+    },
+    {
       "id": "ai",
       "title": "AI",
       "kicker": "Builders 动态",

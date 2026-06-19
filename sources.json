@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "updated": "2026-06-20",
+  "_doc": "日报信源注册表。四层架构：official(官方主号=事实) / founder(创始人=提前信号) / media(媒体=覆盖面) / kol(=解读扩散) / data(链上数据)。generate.md 每天按此表抓取，core_pool 为必看核心池，verify:true 的账号 handle 待核实（先按 name 搜）。status:watch 为有 ban/改名风险需备替补的账号。",
+  "layers": {
+    "official": "官方主号——发事实：上市、新功能、perp/衍生品、市场、治理公告",
+    "founder": "创始人/核心角色——常先于官方爆料，提前信号",
+    "media": "媒体——覆盖面与行业大事件",
+    "kol": "KOL——解读、情绪、叙事扩散（避坑视角）",
+    "data": "链上数据/分析——whale、DEX 流量、资金流，用于交叉验证"
+  },
+  "themes": ["perp", "launchpad", "exchange", "chain", "onchain", "defi", "news", "meme", "ai"],
+  "core_pool": [
+    "WuBlockchain", "BlockTempo", "FORAB", "CoinDesk", "BanklessHQ",
+    "HyperliquidX", "Aster_DEX", "gmgnai", "pumpdotfun"
+  ],
+  "core_pool_note": "第 10 位为「KOL 补充位」，优先放高信噪比中文 KOL（AB Kuai.Dong 即 FORAB 已在列），后续再补 2-3 个同类。",
+  "sources": [
+    { "handle": "binance", "name": "Binance", "region": "both", "layer": "official", "themes": ["exchange", "perp"], "core": false, "note": "全球+本地公告，perp/衍生品上市" },
+    { "handle": "okx", "name": "OKX", "region": "both", "layer": "official", "themes": ["exchange", "perp"], "core": false, "note": "亚洲友好，中文内容多" },
+    { "handle": "Bybit_Official", "name": "Bybit", "region": "both", "layer": "official", "themes": ["exchange", "perp"], "core": false },
+
+    { "handle": "GMX_IO", "name": "GMX", "region": "en", "layer": "official", "themes": ["perp", "chain"], "core": false, "note": "Arbitrum/Solana multichain，新市场/功能" },
+    { "handle": "HyperliquidX", "name": "Hyperliquid", "region": "en", "layer": "official", "themes": ["perp", "chain"], "core": true, "note": "高性能 perp/L1，主号" },
+    { "handle": "HyperFND", "name": "Hyperliquid Foundation", "region": "en", "layer": "official", "themes": ["perp", "chain"], "core": false, "note": "基金会/生态号，与主号一起盯" },
+    { "handle": "dYdX", "name": "dYdX", "region": "en", "layer": "official", "themes": ["perp"], "core": false },
+    { "handle": "dydxfoundation", "name": "dYdX Foundation", "region": "en", "layer": "official", "themes": ["perp"], "core": false },
+    { "handle": "Aster_DEX", "name": "Aster", "region": "en", "layer": "official", "themes": ["perp"], "core": true, "note": "Simple/Pro Mode、MEV-free、多链" },
+    { "handle": "JupiterExchange", "name": "Jupiter", "region": "en", "layer": "official", "themes": ["perp", "defi"], "core": false, "note": "Solana DEX 聚合器，含 perps" },
+    { "handle": "RaydiumProtocol", "name": "Raydium", "region": "en", "layer": "official", "themes": ["defi"], "core": false },
+
+    { "handle": "pumpdotfun", "name": "pump.fun", "region": "en", "layer": "official", "themes": ["launchpad", "meme"], "core": true, "status": "watch", "note": "launchpad 绝对核心，已延伸 DEX/AMM；有 ban 历史，备替补" },
+    { "handle": "gmgnai", "name": "GMGN.AI", "region": "both", "layer": "official", "themes": ["launchpad", "onchain"], "core": true, "note": "smart money 跟踪、launchpad 工具、自动化交易" },
+    { "handle": null, "name": "Moonshot (Dexscreener)", "region": "en", "layer": "official", "themes": ["launchpad"], "core": false, "status": "watch", "verify": true, "note": "竞品层观察" },
+    { "handle": null, "name": "Four.meme", "region": "en", "layer": "official", "themes": ["launchpad", "meme"], "core": false, "status": "watch", "verify": true },
+    { "handle": null, "name": "SunPump", "region": "en", "layer": "official", "themes": ["launchpad", "meme"], "core": false, "status": "watch", "verify": true },
+    { "handle": null, "name": "Clanker", "region": "en", "layer": "official", "themes": ["launchpad", "meme"], "core": false, "status": "watch", "verify": true },
+
+    { "handle": "solana", "name": "Solana", "region": "en", "layer": "official", "themes": ["chain"], "core": false },
+    { "handle": "arbitrum", "name": "Arbitrum", "region": "en", "layer": "official", "themes": ["chain"], "core": false, "note": "支撑 GMX 等 perp 生态" },
+
+    { "handle": "VitalikButerin", "name": "Vitalik Buterin", "region": "en", "layer": "founder", "themes": ["chain", "defi"], "core": false, "note": "核心技术/生态、链上创新" },
+    { "handle": "cz_binance", "name": "CZ", "region": "both", "layer": "founder", "themes": ["exchange"], "core": false, "note": "交易所/监管/行业大势" },
+    { "handle": "justinsuntron", "name": "Justin Sun", "region": "both", "layer": "founder", "themes": ["exchange", "chain"], "core": false, "note": "中文区重量级，项目/交易所合作" },
+    { "handle": null, "name": "Da Hongfei", "region": "both", "layer": "founder", "themes": ["chain"], "core": false, "verify": true },
+    { "handle": null, "name": "Jihan Wu", "region": "both", "layer": "founder", "themes": ["exchange"], "core": false, "verify": true },
+    { "handle": null, "name": "meow (Jupiter cofounder)", "region": "en", "layer": "founder", "themes": ["perp", "defi"], "core": false, "verify": true },
+
+    { "handle": "CoinDesk", "name": "CoinDesk", "region": "en", "layer": "media", "themes": ["news"], "core": true, "note": "宏观新闻/监管/行业大事件底层来源" },
+    { "handle": "TheBlock__", "name": "The Block", "region": "en", "layer": "media", "themes": ["news"], "core": false, "note": "交易/融资/项目动态补充" },
+    { "handle": "BanklessHQ", "name": "Bankless", "region": "en", "layer": "media", "themes": ["defi", "news"], "core": true, "note": "前沿叙事、新协议、链上交易" },
+    { "handle": "CamiRusso", "name": "Camila Russo (The Defiant)", "region": "en", "layer": "media", "themes": ["defi"], "core": false },
+    { "handle": "DefiantNews", "name": "The Defiant", "region": "en", "layer": "media", "themes": ["defi", "news"], "core": false },
+    { "handle": "MessariCrypto", "name": "Messari", "region": "en", "layer": "data", "themes": ["defi", "onchain"], "core": false, "note": "DeFi/perp 研究报告" },
+
+    { "handle": "glassnode", "name": "Glassnode", "region": "en", "layer": "data", "themes": ["onchain"], "core": false, "note": "on-chain 数据" },
+    { "handle": "lookonchain", "name": "Lookonchain", "region": "en", "layer": "data", "themes": ["onchain"], "core": false, "note": "whale/DEX 流量" },
+
+    { "handle": "WuBlockchain", "name": "吴说区块链", "region": "zh", "layer": "media", "themes": ["news", "exchange"], "core": true, "note": "华语主干信源，交易所/项目/监管/突发" },
+    { "handle": "BlockTempo", "name": "动区动趋", "region": "zh", "layer": "media", "themes": ["news"], "core": true, "note": "中文老牌媒体，日更高频" },
+    { "handle": "FORAB", "name": "AB Kuai.Dong", "region": "zh", "layer": "kol", "themes": ["perp", "exchange"], "core": true, "note": "华语高信噪比，交易生态/平台策略/圈内舆情" },
+    { "handle": "zksgu", "name": "Lone Crane.hl", "region": "zh", "layer": "kol", "themes": ["perp", "defi"], "core": false, "note": "perp/DeFi alpha、避坑" },
+    { "handle": "CryptoSunova", "name": "CryptoSunova", "region": "zh", "layer": "kol", "themes": ["launchpad"], "core": false, "note": "GMGN 相关 launchpad 工具解读" },
+    { "handle": "iamyourchaos", "name": "Chaos the Catcher", "region": "zh", "layer": "kol", "themes": ["meme", "perp"], "core": false },
+    { "handle": null, "name": "链上分析师 Ai 姨", "region": "zh", "layer": "data", "themes": ["onchain"], "core": false, "verify": true, "note": "链上行为/资金流/热点叙事，分析视角" },
+    { "handle": null, "name": "区块先生", "region": "zh", "layer": "kol", "themes": ["news"], "core": false, "verify": true },
+    { "handle": null, "name": "BroLeon", "region": "zh", "layer": "kol", "themes": ["news"], "core": false, "verify": true },
+    { "handle": null, "name": "嗯哼 EnHeng", "region": "zh", "layer": "kol", "themes": ["news"], "core": false, "verify": true },
+    { "handle": null, "name": "sanyi.eth", "region": "zh", "layer": "kol", "themes": ["defi"], "core": false, "verify": true },
+    { "handle": null, "name": "NingNing", "region": "zh", "layer": "kol", "themes": ["meme", "perp"], "core": false, "verify": true },
+    { "handle": null, "name": "Snowball", "region": "zh", "layer": "kol", "themes": ["meme", "perp"], "core": false, "verify": true }
+  ]
+}

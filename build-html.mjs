@@ -12,8 +12,8 @@ const outPath = process.argv[3] || `out/perp-daily-${data.date}.html`;
 const esc = (s = "") =>
   String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
-// Perp DEX 永远排第一，其余按 ai / crypto 顺序
-const order = { perpdex: 0, ai: 1, crypto: 2 };
+// 栏目顺序：Perp DEX 永远第一，再 Launchpad、Crypto、AI
+const order = { perpdex: 0, launchpad: 1, crypto: 2, ai: 3 };
 const sections = [...data.sections].sort(
   (a, b) => (order[a.id] ?? 9) - (order[b.id] ?? 9)
 );
@@ -92,6 +92,7 @@ const html = `<!doctype html>
     letter-spacing:.14em; text-transform:uppercase; color:#a3987f;}
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
   .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6;}
   .item:last-child{border-bottom:none;}
   .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}

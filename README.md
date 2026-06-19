@@ -23,6 +23,7 @@
 | 文件 | 作用 |
 |------|------|
 | `generate.md` | 云端 Routine 每天执行的完整指令（调研→渲染→发布→交付） |
+| `sources.json` | 信源注册表（四层：official/founder/media/kol/data × 中英区 × 主题），含 core_pool 核心池 |
 | `build-html.mjs` | 内容 JSON → 杂志风单页 HTML（已跑通，无依赖） |
 | `deliver.mjs` | 渠道无关交付：读 `channels.json`，发到所有启用渠道（飞书/Slack 已内置适配器） |
 | `channels.sample.json` | 渠道配置样例（拷成 `channels.json` 用） |
