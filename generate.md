@@ -49,25 +49,19 @@ cd ~/perp-daily && node build-html.mjs content.json
 
 输出在 `~/perp-daily/out/perp-daily-<date>.html`。
 
-## 步骤 4 · 同步生成 Markdown（用于导入飞书云文档）
+## 步骤 4 · 发布到静态托管，拿公网链接
 
-飞书云文档不渲染自定义 CSS，需要一份结构化 Markdown。把同一份内容写成
-`~/perp-daily/out/perp-daily-<date>.md`：一级标题为「Perp DEX 日报 · 日期」，
-导语作引用块，三个板块用 `##`，每条要点 `### 标题` + 正文 + `[来源](url)`。
+把 `out/perp-daily-<date>.html` 发布到静态托管（见 README「托管」一节，已配置好），
+得到一个**公网 URL**（渠道无关，飞书/Slack/邮件都能发同一个）。
+记下该 URL 备用。
 
-## 步骤 5 · 导入飞书云文档，拿分享链接
-
-```bash
-cd ~/perp-daily && node feishu.mjs doc out/perp-daily-<date>.md "Perp DEX 日报 <date>"
-```
-
-会打印 `{"token":"...","url":"https://..."}`，记下其中的 `url`（飞书文档链接）。
-
-## 步骤 6 · 通过群机器人 Webhook 把链接发给我
+## 步骤 5 · 交付到所有启用的渠道
 
 ```bash
-cd ~/perp-daily && node feishu.mjs webhook "Perp DEX 日报 · <date>" "<上一步的飞书文档 url>" "<lead 导语>"
+cd ~/perp-daily && node deliver.mjs "Perp DEX 日报 · <date>" "<上一步的公网 URL>" "<lead 导语>"
 ```
 
-完成。若步骤 5 失败（应用权限未配好），降级为：直接把本地 HTML 路径或要点摘要通过
-Webhook 发出，并在结尾注明「飞书云文档导入失败，请检查应用权限」。
+`deliver.mjs` 会读 `channels.json`，把"标题+链接+导语"发到每个 `enabled:true` 的渠道
+（现阶段＝飞书群机器人；以后团队用 Slack 只需在 channels.json 把 slack 那条 enabled 改 true 并配好 SLACK_WEBHOOK）。
+
+若某渠道失败，脚本会打印 `❌ <渠道> 失败: <原因>`，其余渠道照常发送。

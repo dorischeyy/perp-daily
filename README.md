@@ -1,17 +1,34 @@
 # perp-daily · Perp DEX 每日杂志风日报
 
-每天早上 10:00（北京时间）自动：联网调研 → 生成极简杂志风 HTML → 导入飞书云文档 → 群机器人 Webhook 把链接发给你。
+每天早上 10:00（北京时间）自动：联网调研 → 生成极简杂志风 HTML → 发布到静态托管 → 把公网链接交付到各渠道。
 板块：**Perp DEX（主类别，置顶）** + AI + Crypto，全中文。
+
+## 设计原则：渠道可迁移
+
+系统分 4 层，每层与具体渠道解耦，所以"飞书 → 以后加 Slack/团队"零改动：
+
+| 层 | 文件 | 渠道无关性 |
+|----|------|-----------|
+| 内容层 | `generate.md` + `build-html.mjs` | 产出内容 JSON + HTML，与渠道无关 |
+| 托管层 | 静态托管（见下） | 产出**一个公网 URL**，任何渠道都能发 |
+| 交付层 | `deliver.mjs` + `channels.json` | 按配置发到所有启用渠道；**加渠道=改配置不改码** |
+| 调度层 | 云端 Routine（`/schedule`） | 渠道增减无感 |
+
+> 为什么不用「飞书云文档」：那是飞书私有形态，搬不到 Slack，且要建飞书应用。
+> 静态托管 HTML = 一个链接，飞书/Slack/邮件通用，杂志排版还 100% 保留。
+> `feishu.mjs`（云文档导入）作为可选保留，主链路不用它。
 
 ## 文件
 
 | 文件 | 作用 |
 |------|------|
-| `generate.md` | 云端 Routine 每天执行的完整指令（调研→渲染→导入→发送） |
+| `generate.md` | 云端 Routine 每天执行的完整指令（调研→渲染→发布→交付） |
 | `build-html.mjs` | 内容 JSON → 杂志风单页 HTML（已跑通，无依赖） |
-| `feishu.mjs` | 飞书集成：`doc` 导入云文档 / `webhook` 发链接 / `dm` 私信 |
+| `deliver.mjs` | 渠道无关交付：读 `channels.json`，发到所有启用渠道（飞书/Slack 已内置适配器） |
+| `channels.sample.json` | 渠道配置样例（拷成 `channels.json` 用） |
 | `content.sample.json` | 内容 JSON 结构样例 |
-| `out/` | 每日产物（HTML / MD） |
+| `feishu.mjs` | （可选）飞书云文档导入 / 私信 |
+| `out/` | 每日产物（HTML） |
 
 ## 本地测试（无需任何凭证）
 
@@ -20,36 +37,36 @@ node build-html.mjs content.sample.json   # → out/perp-daily-2026-06-20.html
 open out/perp-daily-2026-06-20.html
 ```
 
-## 接入飞书（需要你提供凭证）
+## 交付层：现在配飞书，以后加 Slack
 
-### A. 群机器人 Webhook（发链接，必需）
-1. 飞书目标群 → 设置 → 群机器人 → 添加「自定义机器人」→ 复制 Webhook 地址。
-2. 设环境变量：`export FEISHU_WEBHOOK="https://open.feishu.cn/open-apis/bot/v2/hook/xxxx"`
-3. 测试：`node feishu.mjs webhook "测试" "https://example.com" "这是一条测试"`
-
-### B. 自建应用（创建飞书云文档，必需）
-> Webhook 无法创建云文档，必须用自建应用。
-1. https://open.feishu.cn → 开发者后台 → 创建企业自建应用 → 拿到 **App ID / App Secret**。
-2. 开通权限（权限管理）：
-   - `drive:drive`（云空间读写，含导入）
-   - `docx:document`（文档读写）
-   - `im:message`（如需私信 `dm` 子命令）
-3. 发布应用版本并通过审核（自建应用通常企业内即时生效）。
-4. 设环境变量：
+1. 拷配置：`cp channels.sample.json channels.json`
+2. **飞书**：目标群 → 设置 → 群机器人 → 添加「自定义机器人」→ 复制 Webhook：
    ```bash
-   export FEISHU_APP_ID="cli_xxx"
-   export FEISHU_APP_SECRET="xxx"
-   # 可选：导入到指定文件夹（否则进「我的空间」根目录）
-   export FEISHU_FOLDER_TOKEN="fldcnxxx"
+   export FEISHU_WEBHOOK="https://open.feishu.cn/open-apis/bot/v2/hook/xxxx"
    ```
-5. 测试：`node feishu.mjs doc out/perp-daily-2026-06-20.html "测试日报"`
+3. 测试：`node deliver.mjs "测试" "https://example.com" "一条测试"`
+4. **以后加 Slack（团队用）**：Slack → Apps → Incoming Webhooks → 建一个 → 复制 URL：
+   ```bash
+   export SLACK_WEBHOOK="https://hooks.slack.com/services/xxx/xxx/xxx"
+   ```
+   再把 `channels.json` 里 slack 那条 `"enabled"` 改成 `true`。**不用改任何代码。**
 
-## 定时（云端 10:00）
+> 凭证不写进 `channels.json`（webhook 字段用 `"env:VAR"` 从环境变量读）；`channels.json` 已 gitignore。
 
-由 Claude 的 `/schedule` 创建云端 Routine，cron `3 10 * * *`（北京时间，避开整点），
-执行内容＝读取并按 `generate.md` 全流程跑一遍。凭证需配置在 Routine 的环境中。
+## 托管层：静态托管 HTML
+
+任选其一（都给纯公网 URL，杂志排版完整保留）：
+- **Cloudflare Pages**：可连私有仓库，免费，自定义域。
+- **GitHub Pages**：公开仓库免费；每天提交新 HTML 即自动发布。
+
+发布动作接进 `generate.md` 步骤 4（待选定托管后我补上具体发布命令）。
+
+## 调度层：云端 10:00 定时
+
+由 `/schedule` 创建云端 Routine，cron `3 10 * * *`（北京时间，避开整点拥堵），
+执行内容＝按 `generate.md` 全流程跑一遍。云端需要：① 能拉到本项目代码（私有仓库）
+② 注入 `FEISHU_WEBHOOK` 等环境变量。
 
 ## 注意
-- 飞书云文档不渲染自定义 CSS，杂志排版会被转成飞书原生样式（结构保留、视觉简化）。
-  若想保留完整杂志视觉，另选静态托管（GitHub/Cloudflare Pages）host HTML，再发链接。
-- 不收录无来源内容，不做投资建议。
+- 不收录无来源内容，每条要点必须有真实 URL，不做投资建议。
+- 板块顺序固定：Perp DEX 第一，再 AI、Crypto。
