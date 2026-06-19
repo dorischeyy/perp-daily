@@ -1,0 +1,52 @@
+{
+  "date": "2026-06-20",
+  "edition": 1,
+  "lead": "Perp DEX 赛道链上永续成交量周环比回暖，Hyperliquid 继续领跑；AI 侧 agent 工具链密集更新；BTC 在区间上沿震荡。",
+  "sections": [
+    {
+      "id": "perpdex",
+      "title": "Perp DEX",
+      "kicker": "今日主题",
+      "items": [
+        {
+          "headline": "Hyperliquid 日成交量重回百亿美元区间",
+          "body": "链上永续板块整体成交量周环比回升，Hyperliquid 占据多数份额，新上线市场带动活跃地址增长。",
+          "source": "DefiLlama Derivatives",
+          "url": "https://defillama.com/derivatives"
+        },
+        {
+          "headline": "GMX 与 dYdX 费用收入分化",
+          "body": "费用侧 GMX 稳健，dYdX v4 受激励调整影响环比走低，LP 年化收益随波动率回落。",
+          "source": "示例来源",
+          "url": "https://example.com"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI",
+      "kicker": "Builders 动态",
+      "items": [
+        {
+          "headline": "示例：某 AI 公司发布新一代 coding agent",
+          "body": "上下文窗口与工具调用稳定性提升，开发者反馈集成成本下降。",
+          "source": "示例 Builder X",
+          "url": "https://x.com/example/status/1"
+        }
+      ]
+    },
+    {
+      "id": "crypto",
+      "title": "Crypto",
+      "kicker": "宏观与行情",
+      "items": [
+        {
+          "headline": "BTC 区间上沿震荡，ETH 相对走强",
+          "body": "现货 ETF 净流入回正，市场风险偏好小幅修复。",
+          "source": "CoinGecko",
+          "url": "https://www.coingecko.com"
+        }
+      ]
+    }
+  ]
+}
