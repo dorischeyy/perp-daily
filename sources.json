@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "updated": "2026-06-20",
   "_doc": "日报信源注册表。四层架构：official(官方主号=事实) / founder(创始人=提前信号) / media(媒体=覆盖面) / kol(=解读扩散) / data(链上数据)。generate.md 每天按此表抓取，core_pool 为必看核心池，verify:true 的账号 handle 待核实（先按 name 搜）。status:watch 为有 ban/改名风险需备替补的账号。",
   "layers": {
@@ -28,6 +28,13 @@
     { "handle": "Aster_DEX", "name": "Aster", "region": "en", "layer": "official", "themes": ["perp"], "core": true, "note": "Simple/Pro Mode、MEV-free、多链" },
     { "handle": "JupiterExchange", "name": "Jupiter", "region": "en", "layer": "official", "themes": ["perp", "defi"], "core": false, "note": "Solana DEX 聚合器，含 perps" },
     { "handle": "RaydiumProtocol", "name": "Raydium", "region": "en", "layer": "official", "themes": ["defi"], "core": false },
+    { "handle": "Lighter_xyz", "name": "Lighter", "region": "en", "layer": "official", "themes": ["perp"], "core": false, "note": "ZK 订单簿 perp DEX，按量一度第二" },
+    { "handle": "ostium", "name": "Ostium", "region": "en", "layer": "official", "themes": ["perp"], "core": false, "note": "RWA/forex/商品 perps(Arbitrum)，有积分/空投" },
+    { "handle": "variational_io", "name": "Variational (Omni)", "region": "en", "layer": "official", "themes": ["perp", "defi"], "core": false, "note": "旗舰 app=Omni；Dragonfly 领投 $50M A 轮，RWA perps，$VAR" },
+    { "handle": "avantisfi", "name": "Avantis", "region": "en", "layer": "official", "themes": ["perp"], "core": false, "note": "Base 最大衍生品 DEX，ZFP 零费 perp；Pantera/Founders Fund 投" },
+    { "handle": "tradeparadex", "name": "Paradex", "region": "en", "layer": "official", "themes": ["perp"], "core": false, "verify": true, "note": "Paradigm 孵化，ZK L2，perp+options" },
+    { "handle": "edgeX_exchange", "name": "edgeX", "region": "en", "layer": "official", "themes": ["perp"], "core": false, "verify": true, "note": "Amber 孵化、Circle Ventures 投，StarkEx，$EDGE" },
+    { "handle": "DriftProtocol", "name": "Drift", "region": "en", "layer": "official", "themes": ["perp"], "core": false, "verify": true, "note": "Solana perp，混合流动性(CLOB+AMM+JIT)" },
 
     { "handle": "pumpdotfun", "name": "pump.fun", "region": "en", "layer": "official", "themes": ["launchpad", "meme"], "core": true, "status": "watch", "note": "launchpad 绝对核心，已延伸 DEX/AMM；有 ban 历史，备替补" },
     { "handle": "gmgnai", "name": "GMGN.AI", "region": "both", "layer": "official", "themes": ["launchpad", "onchain"], "core": true, "note": "smart money 跟踪、launchpad 工具、自动化交易" },
@@ -65,7 +72,6 @@
     { "handle": null, "name": "链上分析师 Ai 姨", "region": "zh", "layer": "data", "themes": ["onchain"], "core": false, "verify": true, "note": "链上行为/资金流/热点叙事，分析视角" },
     { "handle": null, "name": "区块先生", "region": "zh", "layer": "kol", "themes": ["news"], "core": false, "verify": true },
     { "handle": null, "name": "BroLeon", "region": "zh", "layer": "kol", "themes": ["news"], "core": false, "verify": true },
-    { "handle": null, "name": "嗯哼 EnHeng", "region": "zh", "layer": "kol", "themes": ["news"], "core": false, "verify": true },
     { "handle": null, "name": "sanyi.eth", "region": "zh", "layer": "kol", "themes": ["defi"], "core": false, "verify": true },
     { "handle": null, "name": "NingNing", "region": "zh", "layer": "kol", "themes": ["meme", "perp"], "core": false, "verify": true },
     { "handle": null, "name": "Snowball", "region": "zh", "layer": "kol", "themes": ["meme", "perp"], "core": false, "verify": true }
