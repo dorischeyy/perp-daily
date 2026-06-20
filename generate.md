@@ -83,39 +83,23 @@ BSC 上的 perp DEX，对标 GMX/Hyperliquid。28 交易对：7 Crypto / 10 Fore
 }
 ```
 
-## 步骤 3 · 渲染杂志风 HTML
+## 步骤 3 · 一键发布（渲染 + 推送 + 发飞书，原子）
+
+写好 `content.json` 后，**只跑这一条命令**——它把"渲染 HTML → 提交推送(触发 Pages) → 发飞书"
+绑定为一个原子操作，杜绝"推了却没发飞书"：
 
 ```bash
-cd ~/perp-daily && node build-html.mjs content.json
+cd ~/perp-daily && FEISHU_WEBHOOK="https://open.feishu.cn/open-apis/bot/v2/hook/xxxx" bash publish.sh
 ```
 
-输出在 `~/perp-daily/out/perp-daily-<date>.html`。
+`publish.sh` 内部：
+1. `node build-html.mjs content.json docs/archive/<date>.html` + 拷为 `docs/index.html`
+2. `git add docs && git commit && git pull --rebase && git push`（触发 GitHub Pages）
+3. `node deliver.mjs ...` 把当天永久链接 `https://dorischeyy.github.io/perp-daily/archive/<date>.html`
+   发到 `channels.json`（或 `channels.sample.json`）里所有 `enabled:true` 的渠道（现＝飞书群机器人）。
+   导语自动从 content.json 的 `lead` 读取。
 
-## 步骤 4 · 发布到 GitHub Pages，拿公网链接
-
-托管＝GitHub Pages（仓库 `dorischeyy/perp-daily`，从 `main` 分支 `/docs` 发布）。
-生成当天永久页 + 更新首页（首页恒为最新一期），提交并推送：
-
-```bash
-cd ~/perp-daily
-mkdir -p docs/archive
-node build-html.mjs content.json docs/archive/<date>.html   # 当天永久页
-cp docs/archive/<date>.html docs/index.html                  # 首页=最新一期
-git add docs && git commit -m "report: <date>" && git push origin main
-```
-
-推送后约 1 分钟，当天**公网永久链接**为：
-`https://dorischeyy.github.io/perp-daily/archive/<date>.html`
-（首页 `https://dorischeyy.github.io/perp-daily/` 恒为最新一期）
-记下当天永久链接备用。
-
-## 步骤 5 · 交付到所有启用的渠道
-
-```bash
-cd ~/perp-daily && node deliver.mjs "Perp DEX 日报 · <date>" "<上一步的公网 URL>" "<lead 导语>"
-```
-
-`deliver.mjs` 会读 `channels.json`，把"标题+链接+导语"发到每个 `enabled:true` 的渠道
-（现阶段＝飞书群机器人；以后团队用 Slack 只需在 channels.json 把 slack 那条 enabled 改 true 并配好 SLACK_WEBHOOK）。
+> ⚠️ 不要手动只 push 不发飞书——一律用 `publish.sh`，push 和 deliver 在同一脚本里。
+> 以后加 Slack：channels.json 把 slack 的 `enabled` 改 true 并配 `SLACK_WEBHOOK`，publish.sh 无需改动。
 
 若某渠道失败，脚本会打印 `❌ <渠道> 失败: <原因>`，其余渠道照常发送。
