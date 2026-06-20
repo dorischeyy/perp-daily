@@ -10,6 +10,7 @@
 import { readFileSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { execFileSync } from "node:child_process";
 
 // 加载脚本同目录的 .env（若存在），不覆盖已有环境变量
 try {
@@ -56,22 +57,23 @@ function resolveWebhook(v) {
   return v || "";
 }
 
-async function send(ch, msg) {
+// 用 curl 发 POST（比 node fetch 在各沙箱/云端更稳——node fetch 在受限环境常失败）
+function send(ch, msg) {
   const adapt = ADAPTERS[ch.type];
   if (!adapt) return { ch, ok: false, err: `未知渠道类型: ${ch.type}` };
   const hook = resolveWebhook(ch.webhook);
   if (!hook) return { ch, ok: false, err: `webhook 为空（检查 ${ch.webhook}）` };
   try {
-    const r = await fetch(hook, {
-      method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(adapt(msg)),
-    });
-    const txt = await r.text();
+    const txt = execFileSync(
+      "curl",
+      ["-s", "--max-time", "25", "-X", "POST", "-H", "Content-Type: application/json", "--data-binary", "@-", hook],
+      { input: JSON.stringify(adapt(msg)), encoding: "utf8", maxBuffer: 4 * 1024 * 1024 }
+    );
     // 飞书成功 {code:0}；Slack 成功返回纯文本 "ok"
-    let ok = r.ok;
-    try { const j = JSON.parse(txt); if (typeof j.code === "number") ok = j.code === 0; } catch {}
-    if (txt.trim() === "ok") ok = true;
-    return { ch, ok, err: ok ? null : txt.slice(0, 200) };
+    let ok = false;
+    try { const j = JSON.parse(txt); ok = typeof j.code === "number" ? j.code === 0 : true; }
+    catch { ok = txt.trim() === "ok"; }
+    return { ch, ok, err: ok ? null : String(txt).slice(0, 200) || "无响应" };
   } catch (e) {
     return { ch, ok: false, err: e.message };
   }
