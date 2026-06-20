@@ -12,8 +12,8 @@ const outPath = process.argv[3] || `out/perp-daily-${data.date}.html`;
 const esc = (s = "") =>
   String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
-// 栏目顺序：Perp DEX 永远第一，再 Launchpad、Crypto、AI
-const order = { perpdex: 0, launchpad: 1, crypto: 2, ai: 3 };
+// 栏目顺序：Perp DEX 第一，再 Launchpad、Crypto、AI，最后「对 Hertzflow 的启发」(CEO 视角收尾)
+const order = { perpdex: 0, launchpad: 1, crypto: 2, ai: 3, hertzflow: 4 };
 const sections = [...data.sections].sort(
   (a, b) => (order[a.id] ?? 9) - (order[b.id] ?? 9)
 );
@@ -96,6 +96,12 @@ const html = `<!doctype html>
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
+  /* 「对 Hertzflow 的启发」做成醒目的主编批注卡片 */
+  .sec-hertzflow{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
+    padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
+  .sec-hertzflow .sec-title{color:#9a7b1f;}
+  .sec-hertzflow .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
+  .sec-hertzflow .item-b{color:#3a3322;}
   .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6;}
   .item:last-child{border-bottom:none;}
   .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}

@@ -65,6 +65,20 @@
           "date": "2026-06-19"
         }
       ]
+    },
+    {
+      "id": "hertzflow",
+      "title": "对 Hertzflow 的启发",
+      "kicker": "CEO 视角 · 不掉队",
+      "items": [
+        {
+          "headline": "RWA 商品 perps 升温，建议评估上线原油/贵金属强运营",
+          "body": "Variational($50M)、Ostium、Avantis 集中押注 RWA/商品 perps，且 Avantis 用的正是 ZFP 零费模式——与我们核心差异点正面相撞。建议：① 我们已有贵金属(2)标的，可借商品热度做主推运营；② 跟踪原油是否值得新增 Feed。",
+          "source": "Variational 融资 · CoinDesk",
+          "url": "https://www.coindesk.com/business/2026/05/21/peer-to-peer-trading-startup-variational-raises-usd50-million-for-real-world-perps-in-funding-round-led-by-dragonfly",
+          "date": "2026-06-19"
+        }
+      ]
     }
   ]
 }
