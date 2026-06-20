@@ -44,9 +44,11 @@
   .item:last-child{border-bottom:none;}
   .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
   .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
-  .item-src{display:inline-block; margin-top:8px;
-    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
-    letter-spacing:.03em; color:#8a7f66; text-decoration:none;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-src{color:#8a7f66; text-decoration:none;}
   a.item-src:hover{color:#b03a2e;}
   .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -78,12 +80,18 @@
         <article class="item">
           <h3 class="item-h">Hyperliquid 日成交量重回百亿美元区间</h3>
           <p class="item-b">链上永续板块整体成交量周环比回升，Hyperliquid 占据多数份额，新上线市场带动活跃地址增长。</p>
-          <a class="item-src" href="https://defillama.com/derivatives" target="_blank" rel="noopener">DefiLlama Derivatives ↗</a>
+          <div class="item-meta">
+            <span class="item-date">2026-06-20</span>
+            <a class="item-src" href="https://defillama.com/derivatives" target="_blank" rel="noopener">DefiLlama Derivatives ↗</a>
+          </div>
         </article>
         <article class="item">
           <h3 class="item-h">GMX 与 dYdX 费用收入分化</h3>
           <p class="item-b">费用侧 GMX 稳健，dYdX v4 受激励调整影响环比走低，LP 年化收益随波动率回落。</p>
-          <a class="item-src" href="https://example.com" target="_blank" rel="noopener">示例来源 ↗</a>
+          <div class="item-meta">
+            <span class="item-date">2026-06-19</span>
+            <a class="item-src" href="https://defillama.com/fees" target="_blank" rel="noopener">DefiLlama Fees ↗</a>
+          </div>
         </article>
         </div>
       </section>
@@ -100,7 +108,10 @@
         <article class="item">
           <h3 class="item-h">pump.fun 上线 creator fee 分成新机制</h3>
           <p class="item-b">发币者可按交易量分成，迁移机制同步调整；GMGN 工具侧跟进 smart money 标签。</p>
-          <a class="item-src" href="https://x.com/pumpdotfun" target="_blank" rel="noopener">pump.fun ↗</a>
+          <div class="item-meta">
+            <span class="item-date">2026-06-20</span>
+            <a class="item-src" href="https://x.com/pumpdotfun" target="_blank" rel="noopener">pump.fun ↗</a>
+          </div>
         </article>
         </div>
       </section>
@@ -117,7 +128,10 @@
         <article class="item">
           <h3 class="item-h">BTC 区间上沿震荡，ETH 相对走强</h3>
           <p class="item-b">现货 ETF 净流入回正，市场风险偏好小幅修复。</p>
-          <a class="item-src" href="https://www.coingecko.com" target="_blank" rel="noopener">CoinGecko ↗</a>
+          <div class="item-meta">
+            <span class="item-date">2026-06-20</span>
+            <a class="item-src" href="https://www.coingecko.com" target="_blank" rel="noopener">CoinGecko ↗</a>
+          </div>
         </article>
         </div>
       </section>
@@ -132,9 +146,12 @@
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">示例：某 AI 公司发布新一代 coding agent</h3>
-          <p class="item-b">上下文窗口与工具调用稳定性提升，开发者反馈集成成本下降。</p>
-          <a class="item-src" href="https://x.com/example/status/1" target="_blank" rel="noopener">示例 Builder X ↗</a>
+          <h3 class="item-h">AI coding agent 工具链密集更新</h3>
+          <p class="item-b">多家厂商提升上下文窗口与工具调用稳定性，开发者反馈集成成本下降。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-06-19</span>
+            <a class="item-src" href="https://www.anthropic.com/engineering" target="_blank" rel="noopener">Anthropic Engineering ↗</a>
+          </div>
         </article>
         </div>
       </section>

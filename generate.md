@@ -37,6 +37,7 @@
 
 **硬规则**：
 - 每条要点必须有真实 URL，无来源不收录，绝不杜撰数字或事件。
+- 每条必须带 `date`（该信息/原文的发布日期，YYYY-MM-DD），优先取过去 24-48h；信息越新越优先。
 - 优先 verified 官方源；避免纯 shill 账号；KOL 内容侧重解读与避坑。
 - 用词客观克制，不喊单、不做投资建议。
 - 数字尽量给「环比/同比」方向与量级，不确定的标注「约」。
@@ -53,7 +54,7 @@
   "lead": "一句话导语，概括当天三板块最重要的一件事，60 字内",
   "sections": [
     { "id": "perpdex", "title": "Perp DEX", "kicker": "今日主题",
-      "items": [ { "headline": "标题", "body": "2-3 句正文", "source": "来源名", "url": "https://..." } ] },
+      "items": [ { "headline": "标题", "body": "2-3 句正文", "source": "来源名", "url": "https://...", "date": "YYYY-MM-DD" } ] },
     { "id": "launchpad", "title": "Launchpad", "kicker": "发射台动态", "items": [ ... ] },
     { "id": "crypto", "title": "Crypto", "kicker": "宏观与行情", "items": [ ... ] },
     { "id": "ai", "title": "AI", "kicker": "Builders 动态", "items": [ ... ] }

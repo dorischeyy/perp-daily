@@ -8,6 +8,19 @@
 // 渠道凭证：channels.json 里 webhook 写 "env:VAR" 从环境变量读，避免明文入库。
 
 import { readFileSync, existsSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+// 加载脚本同目录的 .env（若存在），不覆盖已有环境变量
+try {
+  const envPath = join(dirname(fileURLToPath(import.meta.url)), ".env");
+  if (existsSync(envPath)) {
+    for (const line of readFileSync(envPath, "utf8").split("\n")) {
+      const m = line.match(/^\s*([A-Za-z0-9_]+)\s*=\s*(.*)\s*$/);
+      if (m && !process.env[m[1]]) process.env[m[1]] = m[2].replace(/^["']|["']$/g, "");
+    }
+  }
+} catch {}
 
 // ---- 各渠道的 payload 适配器：输入统一 {title,url,summary}，输出该渠道的 webhook body ----
 const ADAPTERS = {

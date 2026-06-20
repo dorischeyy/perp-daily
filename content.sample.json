@@ -12,13 +12,15 @@
           "headline": "Hyperliquid 日成交量重回百亿美元区间",
           "body": "链上永续板块整体成交量周环比回升，Hyperliquid 占据多数份额，新上线市场带动活跃地址增长。",
           "source": "DefiLlama Derivatives",
-          "url": "https://defillama.com/derivatives"
+          "url": "https://defillama.com/derivatives",
+          "date": "2026-06-20"
         },
         {
           "headline": "GMX 与 dYdX 费用收入分化",
           "body": "费用侧 GMX 稳健，dYdX v4 受激励调整影响环比走低，LP 年化收益随波动率回落。",
-          "source": "示例来源",
-          "url": "https://example.com"
+          "source": "DefiLlama Fees",
+          "url": "https://defillama.com/fees",
+          "date": "2026-06-19"
         }
       ]
     },
@@ -31,20 +33,8 @@
           "headline": "pump.fun 上线 creator fee 分成新机制",
           "body": "发币者可按交易量分成，迁移机制同步调整；GMGN 工具侧跟进 smart money 标签。",
           "source": "pump.fun",
-          "url": "https://x.com/pumpdotfun"
-        }
-      ]
-    },
-    {
-      "id": "ai",
-      "title": "AI",
-      "kicker": "Builders 动态",
-      "items": [
-        {
-          "headline": "示例：某 AI 公司发布新一代 coding agent",
-          "body": "上下文窗口与工具调用稳定性提升，开发者反馈集成成本下降。",
-          "source": "示例 Builder X",
-          "url": "https://x.com/example/status/1"
+          "url": "https://x.com/pumpdotfun",
+          "date": "2026-06-20"
         }
       ]
     },
@@ -57,7 +47,22 @@
           "headline": "BTC 区间上沿震荡，ETH 相对走强",
           "body": "现货 ETF 净流入回正，市场风险偏好小幅修复。",
           "source": "CoinGecko",
-          "url": "https://www.coingecko.com"
+          "url": "https://www.coingecko.com",
+          "date": "2026-06-20"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI",
+      "kicker": "Builders 动态",
+      "items": [
+        {
+          "headline": "AI coding agent 工具链密集更新",
+          "body": "多家厂商提升上下文窗口与工具调用稳定性，开发者反馈集成成本下降。",
+          "source": "Anthropic Engineering",
+          "url": "https://www.anthropic.com/engineering",
+          "date": "2026-06-19"
         }
       ]
     }

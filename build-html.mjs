@@ -22,13 +22,16 @@ const renderItem = (it) => `
         <article class="item">
           <h3 class="item-h">${esc(it.headline)}</h3>
           <p class="item-b">${esc(it.body)}</p>
-          ${
-            it.url
-              ? `<a class="item-src" href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.source || "来源")} ↗</a>`
-              : it.source
-              ? `<span class="item-src">${esc(it.source)}</span>`
-              : ""
-          }
+          <div class="item-meta">
+            ${it.date ? `<span class="item-date">${esc(it.date)}</span>` : ""}
+            ${
+              it.url
+                ? `<a class="item-src" href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.source || "来源")} ↗</a>`
+                : it.source
+                ? `<span class="item-src">${esc(it.source)}</span>`
+                : ""
+            }
+          </div>
         </article>`;
 
 const renderSection = (s, idx) => `
@@ -97,9 +100,11 @@ const html = `<!doctype html>
   .item:last-child{border-bottom:none;}
   .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
   .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
-  .item-src{display:inline-block; margin-top:8px;
-    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
-    letter-spacing:.03em; color:#8a7f66; text-decoration:none;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-src{color:#8a7f66; text-decoration:none;}
   a.item-src:hover{color:#b03a2e;}
   .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
