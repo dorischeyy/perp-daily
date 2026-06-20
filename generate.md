@@ -36,6 +36,14 @@ BSC 上的 perp DEX，对标 GMX/Hyperliquid。28 交易对：7 Crypto / 10 Fore
 - 既无新进展又不重要的，**直接不写**。
 > 注：今天若是第一期（无存档）则跳过去重，可适度覆盖近几天的重大新闻。
 
+## 步骤 0.7 · 拉数据快照（数字参照系，免费无需 key）
+
+```bash
+node fetch-data.mjs   # 写 data/market.json（CoinGecko 免费：各家 perp OI/量、BTC/ETH/SOL/HYPE 价与24h、全市场市值与BTC占比）
+```
+报告里**任何量级数字优先用 data/market.json 的真实值**，并给参照系（谁第几、24h/7d 怎么变、创纪录还是常态），
+再用 sources.json 的 `data_pages`（DefiLlama perps / CoinGecko derivatives 网页）交叉核对。**不要凭印象编数字。**
+
 ## 步骤 1 · 联网调研
 
 用 WebSearch / WebFetch，按 sources.json 的账号 + 关键词（"perp"、"new feature"、"launch"、"testnet"、"governance"、"buyback"、"early access" 等）检索过去 24-48h 动态。
@@ -49,8 +57,10 @@ BSC 上的 perp DEX，对标 GMX/Hyperliquid。28 交易对：7 Crypto / 10 Fore
 
 **硬规则**：
 - 每条必须有真实 URL + `date`（原文发布日期 YYYY-MM-DD），无来源不收录，绝不杜撰。
-- 优先**一手信源**（官方公告、协议数据、SEC 文件），少用聚合站；不确定的事实标"待核实"。
-- 数字必须给**参照系**（相比什么、趋势如何、创纪录还是常态），否则删掉这个数字。
+- **一手优先**（见 sources.json 的 `sourcing_rule`）：事件以**事件主体的官方页面**(blog/docs/governance/announcement)为准——
+  聚合站(CryptoBriefing/blockchain.news 等)只用于发现线索，找到后尽量 WebFetch 官方页作为来源 url。
+- **无 X API**：sources.json 的 handle 只是搜索线索，**不能假装读到了原始推文**；KOL/创始人观点若无可引用的网页出处，标"待核实"或不收。
+- 数字必须来自 `data/market.json` 或官方/数据网页，并给**参照系**（相比什么、趋势如何、创纪录还是常态），否则删掉这个数字。
 - 客观克制，不喊单、不做投资建议。中英文信源并用。
 
 ## 步骤 1.5 · 「对 Hertzflow 的启发」（末栏 · payoff · 条件栏目）

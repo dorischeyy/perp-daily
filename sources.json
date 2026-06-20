@@ -15,6 +15,12 @@
     "HyperliquidX", "Aster_DEX", "gmgnai", "pumpdotfun"
   ],
   "core_pool_note": "第 10 位为「KOL 补充位」，优先放高信噪比中文 KOL（AB Kuai.Dong 即 FORAB 已在列），后续再补 2-3 个同类。",
+  "data_pages": [
+    "https://defillama.com/perps",
+    "https://www.coingecko.com/en/derivatives",
+    "https://www.theblock.co/category/markets"
+  ],
+  "sourcing_rule": "优先一手源：① 数字先看本地 data/market.json（fetch-data.mjs 拉的 CoinGecko 免费数据），再用 data_pages 网页交叉核对；② 事件以「事件主体的官方页面(blog/docs/governance/announcement)」为准——聚合站只用于发现线索，找到后尽量 WebFetch 官方页作为来源 url；③ 无 X API，sources.json 的 handle 仅作搜索线索，不能假装读到了原始推文。",
   "sources": [
     { "handle": "binance", "name": "Binance", "region": "both", "layer": "official", "themes": ["exchange", "perp"], "core": false, "note": "全球+本地公告，perp/衍生品上市" },
     { "handle": "okx", "name": "OKX", "region": "both", "layer": "official", "themes": ["exchange", "perp"], "core": false, "note": "亚洲友好，中文内容多" },
