@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-06-21</title>
+<title>Perp DEX 日报 · 2026-06-22</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -50,6 +50,8 @@
   .item:last-child{border-bottom:none;}
   .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
   .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
   .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
   .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
@@ -66,141 +68,77 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 3 期</span>
+        <span>每日链上观察</span><span>第 4 期</span>
       </div>
       <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 6 月 21 日 · 星期日</div>
+      <div class="mast-sub">2026 年 6 月 22 日 · 星期一</div>
     </header>
-    <p class="lead">Aster 响应 CZ 暗池呼吁上线隐藏订单，单月成交破 $33B 历史三倍新高——perp DEX 战场从散户做市正式进入机构大单争夺，「委托量不暴露」从加分项变成留住大户的入场门票，这道门槛正在向每一家 Forex/RWA perp 平台逼近。</p>
+    <p class="lead">CME 被迫在联邦起诉文件中承认持有美国衍生品市场 92% 份额——Chervinsky（Variant Fund）指出这场「诉讼战」已适得其反，链上 perp DEX 的去中心化叙事由此获得有史以来最强的外部背书。</p>
     
       <section class="sec sec-perpdex">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <div class="sec-kicker">暗池竞争 · HYPE 机构化 · RWA 渗透率</div>
+            <div class="sec-kicker">监管叙事逆转：CME 起诉助攻 DEX</div>
             <h2 class="sec-title">Perp DEX</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">Aster 响应 CZ 呼吁上线隐藏订单，6 月成交突破 $33B 历史三倍新高</h3>
-          <p class="item-b">Binance 创始人 CZ 于 6/2 公开提议 perp DEX 应支持「暗池」交易，起因是知名交易者 James Wynn 5 月将 $12 亿 BTC 多头公开上链，随后遭清算猎杀痛失逾 $1 亿纸面利润——暴露了链上委托可见性对大户的致命代价。Aster 在 CZ 发文后数周内上线「隐藏订单（Hidden Orders）」功能（具体上线日期见 The Defiant 原文），机制是：委托薄中仅显示占位符，实际委托量在撮合时才披露，防止前跑和流动性狩猎。功能上线叠加市场波动，Aster 6 月单月成交突破 $33B（来源：DL News，待 DefiLlama 核实），为其有史以来最高单月成交量，同比去年同期约三倍，同期 Hyperliquid 约为 Aster 五倍但增速远慢。二阶效应：① 链上 perp 首次有结构性机制保护大单委托，机构/高频做市商的上链摩擦成本实质下降；② 暗池与链上透明度天然对立，媒体已开始讨论「价格发现机制受损」风险，预期监管层注意力上升；③ Aster 的快速响应（CZ 提议 → 功能上线 &lt; 3 周）表明小型 perp DEX 在功能迭代速度上可与头部抗衡。对 HertzFlow：我们主打 Forex 和 RWA 大单，这类标的的交易者对委托隐私极敏感——想象一个 EURUSD perp 的百万美元仓位被对手方在委托薄中精准识别。建议评估是否引入隐藏订单作为高端账户特权，即使短期技术资源不足，将其列入显性 roadmap 也可在融资和机构客户招募中先形成差异叙事。</p>
+          <h3 class="item-h">CME 92% 垄断数据写入联邦记录：链上 perp DEX 合法性叙事的最强外部背书</h3>
+          <p class="item-b"><strong>事件</strong>：Variant Fund 政策主管 Jake Chervinsky 于 6/20 发文分析，CME 起诉 CFTC 批准加密永续合约的策略「适得其反」——联邦诉讼程序迫使 CME 在法庭文件中自行披露持有美国期货衍生品市场（DCM，即受监管期货合约市场）92% 份额；CFTC 已将此行为定性为 lawfare（诉讼战）。（来源：Crypto Times 报道；Chervinsky 原始分析出自 X，无直链。背景：CME 初始起诉 06-18，第 2 期首报）</p><p class="item-b"><strong>机制</strong>：CME 主张 CFTC 无权批准类永续合约的衍生品在其竞争对手平台上线，但法庭举证程序要求 CME 提交证据说明其市场地位——结果反而将「CME 掌控 92% 市场」这一垄断数字主动写进了联邦记录，为链上 perp DEX 的监管叙事提供了最有力的外部证据。</p><p class="item-b"><strong>二阶效应</strong>：链上 perp DEX 的「去中心化对抗垄断」叙事从此不再依赖行业自述，而是有联邦文件级数据可引用；监管讨论天平向开放竞争倾斜，对整个 DEX 赛道中长期利好，也让 SEC/CFTC 在审查链上衍生品时面临更大的舆论压力。</p><p class="item-b"><strong>对我们</strong>：CME 92% 数据是机构融资和白皮书中迄今最强的叙事锚点，建议直接引用至 pitch deck——「链上 Forex/美股指数 perp 打破单点垄断」这个框架现在有联邦法庭文件背书，说服力远超行业报告，对 HertzFlow 面向传统金融机构的沟通尤为有力。</p>
           <div class="item-meta">
-            <span class="item-date">2026-06-02</span>
-            <a class="item-src" href="https://thedefiant.io/news/defi/aster-dex-launches-hidden-orders-following-cz-s-call-for-dark-pool-perpetuals-trading" target="_blank" rel="noopener">The Defiant / DL News ↗</a>
-          </div>
-        </article>
-        <article class="item">
-          <h3 class="item-h">HYPE ETF 三足鼎立：$2.21 亿 AUM + 6 月 $5000 万净流入，HL 机构化路径已与 BTC ETF 同款</h3>
-          <p class="item-b">Grayscale（HYPG，0.29% 管理费，Nasdaq，6/3 上线）、Bitwise（BHYP，首月 0% 后 0.34%，NYSE，6/6）、21Shares（THYP，0.30%）三家资管在 72 小时内相继推出 HYPE 现货 ETF，进入费率战；截至 6/5，21Shares AUM $6600 万、Bitwise $8800 万、Grayscale $450 万，合计约 $1.59 亿；到 6 月中旬整体 AUM 升至约 $2.21 亿，6 月前两周 HYPE ETF 净流入约 $5000 万，高于同期 XRP ETF 的 $2400 万（来源：CoinDesk / Blockonomi，待核实）。HYPE 今日约 $70 附近（ATH $76.90 于 6/16，来源：CMC），近期因美联储鹰派信号小幅回落。机制：ETP 产品让散户通过传统券商账户被动持有 HYPE，无需链上钱包，这是 BTC ETF 2024 年打开机构资金闸门的同款路径——Hyperliquid 的估值逻辑正从「DeFi 用户自持」向「机构 AUM 背书」跨越。二阶效应：① ETF 持有者被动持有而非链上质押，HL 质押率可能结构性下降，通缩效应递减；② Grayscale 介入意味着 HL 已进入传统资产配置视野，没有代币或无可信协议收入的 perp DEX 将越来越难被机构层面「讲述」为可投资资产。对 HertzFlow：代币/协议可见性是战略紧迫项——我们的 ZFP 抽成模型有协议收入但目前无公开代币；建议评估「协议透明度」方案（如公开费率数据、OI 数据、链上收入），在机构采纳浪潮中建立基本的可信度基础，以免被排斥在机构视野之外。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-06-03</span>
-            <a class="item-src" href="https://www.coindesk.com/markets/2026/06/03/grayscale-launches-lowest-fee-u-s-hyperliquid-etf-as-competition-heats-up-around-hype" target="_blank" rel="noopener">CoinDesk / Blockonomi ↗</a>
-          </div>
-        </article>
-        <article class="item">
-          <h3 class="item-h">Ostium：91% OI 非加密，$4.7B 月成交，MAG7 全覆盖——RWA perp 不再是叙事，是独立于加密情绪的真实需求</h3>
-          <p class="item-b">Ostium（Arbitrum 上自托管 oracle 定价 perp DEX）当前运行 71 对，涵盖 MAG7 全部 7 支科技股、大宗商品、外汇、指数及加密；5 月 OI 约 $9500 万，其中约 91% 来自非加密 RWA 对；过去 30 日成交约 $47 亿（来源：MEXC Blog，待 DefiLlama 核实）；Season 2 OLP vault APY 约 53%（USDC，来源：Ostium 官网，待核实）。机制：完全链上自托管，oracle 定价，全天候运行（美股休市期间 stock 对降杠杆），无 KYC；LP 以 USDC 进入 OLP vault 作为对手方，承担 delta 风险，赚取高 APY。二阶效应：91% 的非加密 OI 证明链上 RWA perp 的用户群体独立于加密行情——即使 BTC 下跌，Forex/股票 perp 的交易需求不减；这个周期对我们最重要的信号是「RWA perp 用户和 crypto perp 用户是两类人」，共用平台有交叉销售机会，但需要独立设计产品体验。对 HertzFlow：Ostium 是我们在 RWA/Forex perp 赛道的直接竞品（10 Forex + 6 美股指数 + 2 贵金属高度重叠）；我们的优势是 BSC 低成本 + ZFP 零开平仓费，建议重点研究 Ostium 的 OLP vault 设计——LP 承担对手方风险换取高 APY 的模型，是解决流动性冷启动的有效路径，评估是否可在 HertzFlow 上复制类似 LP 激励机制。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-05-01</span>
-            <a class="item-src" href="https://blog.mexc.com/ostium-airdrop-2026-how-to-farm-points-on-the-rwa-perp-dex-bringing-gold-oil-and-stocks-on-chain/" target="_blank" rel="noopener">Ostium 官网 / MEXC Blog ↗</a>
-          </div>
-        </article>
-        </div>
-      </section>
-      <section class="sec sec-launchpad">
-        <div class="sec-head">
-          <span class="sec-no">02</span>
-          <div>
-            <div class="sec-kicker">pump.fun 平台收缩信号</div>
-            <h2 class="sec-title">Launchpad</h2>
-          </div>
-        </div>
-        <div class="sec-body">
-          
-        <article class="item">
-          <h3 class="item-h">pump.fun Q1 $124.7M 收入后骤跌约 80%，毕业率下滑——memecoin 热钱正在撤退，链上流量重配开始</h3>
-          <p class="item-b">CoinGecko 2026 Q1 报告显示 pump.fun 创收 $1.247 亿，占 Solana 应用收入 30% 以上；但 6 月初平台营收和 token 毕业率双双骤跌约 80%（来源：CryptoPotato，引用 CoinGecko 报告，具体跌幅仅供参考）。6/12 前后约 100 亿枚 PUMP 代币解锁进入流通（当前约 35% 已流通），协议回购提供有限对冲。继 6/4 GO 悬赏市集（昨日已报）后，pump.fun 扩张策略仍在推进，但流量基本盘已从 Q1 顶峰大幅萎缩。对 HertzFlow：memecoin 热钱撤退对我们有双面影响——① 正面：链上流量从炒作型向功能型迁移，Forex/RWA perp 这类有真实需求的产品将受益；② 风险：pump.fun 自身也在向 DEX/多功能平台延伸，如果 launchpad + perp 一体化成为下一步，meme 标的 perp（我们有 5 个）的流量窗口期有限，需在叙事上清晰区分。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-06-12</span>
-            <a class="item-src" href="https://cryptopotato.com/solana-based-meme-coin-launchpad-pump-fun-traders-see-turnaround-in-2026-coingecko/" target="_blank" rel="noopener">CryptoPotato / CoinGecko Q1 报告 ↗</a>
+            <span class="item-date">2026-06-20</span>
+            <a class="item-src" href="https://cryptotimes.io/2026/06/20/chervinsky-says-cmes-cftc-lawsuit-backfired-exposing-a-monopolist/" target="_blank" rel="noopener">Crypto Times ↗</a>
           </div>
         </article>
         </div>
       </section>
       <section class="sec sec-crypto">
         <div class="sec-head">
-          <span class="sec-no">03</span>
+          <span class="sec-no">02</span>
           <div>
-            <div class="sec-kicker">美联储鹰派信号重压</div>
+            <div class="sec-kicker">矿工 5 个月亏损，宏观偏鹰</div>
             <h2 class="sec-title">Crypto</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">美联储 6/18 按兵不动但鹰派 dot plot 震市：9 名官员预期年内加息，BTC 6/19 回落至 $62,498</h3>
-          <p class="item-b">美联储 6/17-18 会议维持联邦基金利率 3.50%-3.75% 不变（市场99%预期），但 dot plot（官员利率预测图）中值从 3 月的 3.4% 上调至 3.8%，18 名官员中 9 名预期年内至少加息一次，仅 1 名预期降息；Fed 主席 Warsh 同时宣布放弃前瞻指引，表示「旧有方式已不适合当前形势」。BTC 6/19 开盘 $62,882，跌至 $62,498；ETH $1,709 → $1,688（来源：Yahoo Finance，2026-06-19 报价，今日价格待核实）。这波鹰派信号打断了 5/15-6/3 连续 13 天 $4.4B ETF 净外流后 6/12 开始的回暖（IBIT 单日净流入 $57.7M），BTC 再度承压。对 HertzFlow：强美元 + 高利率环境下，Forex perp 市场（EURUSD、GBPUSD 等）的日内波动率将持续升高——这是我们 10 个外汇对的天然流量窗口；同时 BTC/ETH perp 的多头情绪受压，crypto 标的 OI 可能短期萎缩，Forex/贵金属可作为对冲叙事主推。</p>
+          <h3 class="item-h">BTC 连续 5 个月低于挖矿成本：矿企 Q1 创记录抛售 32,000 枚</h3>
+          <p class="item-b">摩根大通估算 BTC 挖矿成本约 $78K，而 BTC 6/19 报价 ~$63,675，已连续 5 个月低于成本线；6 家头部上市矿企（MARA、CleanSpark、Riot、Cango、Core Scientific、Bitdeer）Q1 合计出售 32,000 枚 BTC（创史上单季最高），同期全网算力 6 月已回落约 12%——叠加美联储 6/16-17 FOMC 维持利率 3.50%-3.75%（逾半数官员倾向 2026 年内加息），BTC 的宏观压力短期难以缓解。</p><p class="item-b">对我们：矿工抛压 + 算力萎缩 + 鹰派预期三重压力令 BTC 风险偏好持续偏低，正是 Forex/黄金等非相关标的对用户吸引力最强的时机；建议在 EURUSD、XAUUSD 等标的上加大做市激励和运营曝光，将差异化标的的优势转化为真实用户迁移。</p>
           <div class="item-meta">
-            <span class="item-date">2026-06-18</span>
-            <a class="item-src" href="https://cryptobriefing.com/fed-dot-plot-june-2026-rate-hike/" target="_blank" rel="noopener">CryptoBriefing / Yahoo Finance ↗</a>
-          </div>
-        </article>
-        </div>
-      </section>
-      <section class="sec sec-ai">
-        <div class="sec-head">
-          <span class="sec-no">04</span>
-          <div>
-            <div class="sec-kicker">CEX MCP 接口战已成标配</div>
-            <h2 class="sec-title">AI</h2>
-          </div>
-        </div>
-        <div class="sec-body">
-          
-        <article class="item">
-          <h3 class="item-h">OKX Agent Trade Kit：82 个 MCP 工具覆盖 spot/perp/期权，CEX 向 AI agent 全面开放衍生品接口已成行业标配</h3>
-          <p class="item-b">OKX 于 3 月发布 Agent Trade Kit（ATK），提供 82 个 MCP 工具，覆盖 spot、perp 合约、delivery 合约、期权和 margin 的完整交易生命周期，对接 Claude/Cursor/Copilot 等主流 AI 客户端；链上侧由 OnchainOS 补全，可触达 500+ DEX 和 60+ 条链，据称每日处理约 12 亿次 API 调用（来源：OKX 官方，待核实）。背景：Kraken（3/11）、Binance（3 月）、OKX（3 月）三家头部 CEX 在同一个月向 AI agent 打开 full-trading 接口，AI agent 通过自然语言下单 perp 合约已从概念变为现实（配合昨日已报的 Base MCP + ERC-4337）。二阶效应：AI agent 路由交易时会优先选择有 MCP 接口的平台——当三大 CEX 都支持，链上 perp DEX 若无类似接口，AI agent 生成的交易流量将被 CEX 虹吸。对 HertzFlow：这是上一期「AI plugin」威胁的 CEX 版放大——建议将 MCP 兼容 API 列为 H2 技术优先级，标准采用 MCP（而非自研私有协议）可直接被 Claude/Cursor 等 AI 客户端调用，比自研 SDK 快且边际成本低；有了 MCP 接口才能进入「AI agent 资产配置」的候选集。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-03-01</span>
-            <a class="item-src" href="https://www.okx.com/en-us/learn/agent-trade-kit" target="_blank" rel="noopener">OKX 官方 / Odaily ↗</a>
+            <span class="item-date">2026-06-19</span>
+            <a class="item-src" href="https://www.coindesk.com/markets/2026/06/19/live-markets-bitcoin-has-traded-below-its-mining-cost-for-five-months-squeezing-miners" target="_blank" rel="noopener">CoinDesk ↗</a>
           </div>
         </article>
         </div>
       </section>
       <section class="sec sec-hertzflow">
         <div class="sec-head">
-          <span class="sec-no">05</span>
+          <span class="sec-no">03</span>
           <div>
-            <div class="sec-kicker">CEO 视角 · 机会与打法</div>
+            <div class="sec-kicker">机会与打法</div>
             <h2 class="sec-title">对 Hertzflow 的启发</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">机会：Forex/RWA 大单客户的「委托隐私」需求已被 Aster 验证——建议评估隐藏订单功能优先级</h3>
-          <p class="item-b">Aster 暗池功能上线后月成交三倍增长，CZ 公开背书，验证了「大单交易者为保护委托量愿意选择平台」的需求。HertzFlow 的 Forex/RWA 大单用户（EURUSD、黄金 perp 等）恰好是最敏感的人群；建议评估隐藏订单功能的技术实现成本（订单簿端改动 vs 流动性影响权衡），即使短期不上线，将其写入产品 roadmap 并在对外沟通中提及，可提前锁定机构/半机构用户的注意力。</p>
+          <h3 class="item-h">CME 叙事背书：链上 Forex perp 的「开放竞争」论点有了联邦文件级锚点</h3>
+          <p class="item-b">CME 92% 垄断数据现已是联邦记录，建议将「链上 Forex/美股指数 perp 是打破单点垄断的基础设施」写入 HertzFlow 白皮书和 Pitch Deck，并在对外机构沟通中直接引用联邦法庭文件来源；这个论点从今天起有外部可引用的背书，不再是行业自我声明——对机构投资人的说服力将质的提升。</p>
           <div class="item-meta">
-            <span class="item-date">2026-06-02</span>
-            <a class="item-src" href="https://thedefiant.io/news/defi/aster-dex-launches-hidden-orders-following-cz-s-call-for-dark-pool-perpetuals-trading" target="_blank" rel="noopener">The Defiant ↗</a>
+            <span class="item-date">2026-06-20</span>
+            <a class="item-src" href="https://cryptotimes.io/2026/06/20/chervinsky-says-cmes-cftc-lawsuit-backfired-exposing-a-monopolist/" target="_blank" rel="noopener">Crypto Times ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">机会：美联储鹰派信号 → Forex perp 波动率窗口——主推 10 个外汇对是当下最应做的营销动作</h3>
-          <p class="item-b">强美元 + 鹰派预期推高 EURUSD/GBPUSD 等主要货币对的日内波动率，这正是 Forex perp 流量的最佳入场时机。HertzFlow 有 10 个 Forex 对，这是竞品中较完整的覆盖，建议在 6 月剩余时间内集中营销推力于 Forex 标的：① 专门的「Forex perp 高波动指南」内容；② 为 Forex 对设计专属杠杆优惠或临时零费活动，利用宏观窗口快速积累真实 Forex perp 用户数据，证明产品与 CEX 的差异化价值。</p>
+          <h3 class="item-h">宏观熊市窗口：BTC 承压期是 Forex/贵金属标的差异化运营的黄金时机</h3>
+          <p class="item-b">矿工 5 个月持续亏损出售、算力回落 12%、Fed 鹰派预期——这是典型的 BTC 压力环境，用户对非相关标的的需求会上升；HertzFlow 现有 10 个 Forex 对 + 2 个贵金属标的，建议值得在此窗口内对 EURUSD、XAUUSD 加大做市激励和运营曝光，将差异化标的的优势转化为真实用户迁移。（背景：Aster 6/17 推出 198% 回购销毁机制，代币经济优化与标的多元化并行是当前 perp DEX 主流趋势）</p>
           <div class="item-meta">
-            <span class="item-date">2026-06-18</span>
-            <a class="item-src" href="https://cryptobriefing.com/fed-dot-plot-june-2026-rate-hike/" target="_blank" rel="noopener">CryptoBriefing ↗</a>
-          </div>
-        </article>
-        <article class="item">
-          <h3 class="item-h">打法：MCP 兼容接口是 AI agent 时代的流量入口——建议将其列为 H2 技术优先级</h3>
-          <p class="item-b">三大 CEX（Kraken/Binance/OKX）已在 3 月完成 MCP perp 接口标准化部署，AI agent 路由交易优先选择有 MCP 接口的平台。链上 perp DEX 如果没有对应接口，将被 AI agent 生成的交易流量系统性绕过。建议 HertzFlow 以 MCP 标准（而非自研私有协议）发布 API SDK，优先覆盖：开仓/平仓/查询 OI/查询价格四个核心动作——这四个动作足以让 AI agent 自主执行 HertzFlow 上的 perp 交易，且实现成本远低于全功能 SDK；上线后主动联系 Claude/Cursor 等 MCP 客户端的插件市场申请收录。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-03-01</span>
-            <a class="item-src" href="https://www.okx.com/en-us/learn/agent-trade-kit" target="_blank" rel="noopener">OKX 官方 ↗</a>
+            <span class="item-date">2026-06-19</span>
+            <a class="item-src" href="https://www.coindesk.com/markets/2026/06/19/live-markets-bitcoin-has-traded-below-its-mining-cost-for-five-months-squeezing-miners" target="_blank" rel="noopener">CoinDesk ↗</a>
           </div>
         </article>
         </div>
