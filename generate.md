@@ -43,6 +43,7 @@ node fetch-data.mjs   # 写 data/market.json（CoinGecko 免费：各家 perp OI
 ```
 报告里**任何量级数字优先用 data/market.json 的真实值**，并给参照系（谁第几、24h/7d 怎么变、创纪录还是常态），
 再用 sources.json 的 `data_pages`（DefiLlama perps / CoinGecko derivatives 网页）交叉核对。**不要凭印象编数字。**
+**同时读 `benchmarks.md`**——它定义了 perp DEX 量/OI/费用的高中低梯队；每个数字都要据此判"统治/头部/腰部/新锐/平平"，而不是干报一个数。
 
 ## 步骤 1 · 联网调研
 
@@ -56,22 +57,24 @@ node fetch-data.mjs   # 写 data/market.json（CoinGecko 免费：各家 perp OI
 4. **AI**：AI builders 产品/模型/工具链（可复用 follow-builders skill 的 feed，或 WebSearch 当天要闻）。
 
 **硬规则**：
-- 每条必须有真实 URL + `date`（原文发布日期 YYYY-MM-DD），无来源不收录，绝不杜撰。
-- **一手优先**（见 sources.json 的 `sourcing_rule`）：事件以**事件主体的官方页面**(blog/docs/governance/announcement)为准——
-  聚合站(CryptoBriefing/blockchain.news 等)只用于发现线索，找到后尽量 WebFetch 官方页作为来源 url。
-- **无 X API**：sources.json 的 handle 只是搜索线索，**不能假装读到了原始推文**；KOL/创始人观点若无可引用的网页出处，标"待核实"或不收。
-- 数字必须来自 `data/market.json` 或官方/数据网页，并给**参照系**（相比什么、趋势如何、创纪录还是常态），否则删掉这个数字。
+- 每条必须有真实 URL + `date`，无来源不收录，绝不杜撰。
+- **`date` 的定义 = 事件实际发生 / 官方宣布的那一天**（YYYY-MM-DD），**不是聚合站转载文章的发布日**。分不清就取"事件主体官宣"那天。
+- **时效硬门槛（最重要，专治旧闻）**：独立条目只收 `date` 在**最近 72 小时内**的**新发展**。更早的：① 原则上不收；② 仅当它是理解今天某条的必要背景，才允许在该条 body 里**一句话带过并标「(背景，MM-DD)」**，绝不单独成条、绝不当今天的新闻。**发布前逐条用 date 自查：超 72h 的独立条目一律砍。**（反例：把 3 个月前的 OKX、7 周前的 Ostium 当今天新闻——禁止。）
+- **数字判读（对照 benchmarks.md）**：量级数字先读 `data/market.json`，再**按 benchmarks.md 归梯队**（统治/头部/腰部/新锐/平平），写明"相对谁、增速如何"；新所高量必须标尺度（约龙头的 X%），不许暗示比肩 Hyperliquid。只吹名义量不提 OI/费用/真实用户的，标"待核实质量"。数字无参照系就删。
+- **一手优先**（见 sources.json `sourcing_rule`）：事件以官方页(blog/docs/governance/announcement)为准，聚合站只用于发现线索。
+- **无 X API**：handle 只是搜索线索，**不能假装读到原始推文**；无可引用网页出处的观点标"待核实"或不收。
 - 客观克制，不喊单、不做投资建议。中英文信源并用。
 
 ## 步骤 1.5 · 「对 Hertzflow 的启发」（末栏 · payoff · 条件栏目）
 
-这是全报最有价值的一栏，也是读者最该带走的东西。以 **CEO / 产品负责人视角**，从当天动态提炼对 HertzFlow **可落地**的判断与打法。
+这是全报最有价值的一栏，也是读者最该带走的东西。从当天动态提炼对 HertzFlow **可落地**的判断与打法。
 框架用主动的"**机会与打法**"，不是被动的"别掉队"：
 - 友商做了什么我们没做 → 我们能**抄什么 / 差异化什么**？
 - 哪个标的类别在升温（美股/石油-商品/forex/某 meme）→ 我们**主推该类目 / 新增 Feed** 的窗口？
 - 友商新机制（ZFP、积分、回购销毁、RWA perps、pre-launch 市场）→ 对我们费用模型/代币经济/标的的含义？
 
 每条 = **洞察 + 具体建议**（是"建议评估/值得跟踪"，不替产品拍板），挂触发它的来源 url。
+**建议措辞不点名具体职位/角色**——不要写"建议 CEO/产品负责人/CTO 做 X"，只说"建议评估 X""值得纳入 H2 优先级"。
 **铁律：没有真实、具体、可落地的启发就整段省略此栏目，绝不硬凑、不强扯。**
 > 范例：Aster 推 1.98% 回购销毁 → 说清机制 → "对我们 ZFP 抽成→代币回购的设计有参照价值，建议评估" —— 这种就是合格的。
 
@@ -97,7 +100,7 @@ node fetch-data.mjs   # 写 data/market.json（CoinGecko 免费：各家 perp OI
 - **统一口吻 + house view**：有观点有立场，去掉八股套话。
 
 **产出《编辑自评》文件**（证明确实 argue 过自己，供主编审计）——写到 `docs/archive/<date>-review.md`，Markdown，含三段：
-- **A 体检报告**：六视角各 1-2 条最尖锐的问题（指到具体条目）+ 十维度打分（信噪比/排序/洞察vs搬运/纵深/可行动性/准确溯源/叙事连贯/可读性/house view/简洁度，各 1-10 分一句话理由）+ 圈出"今天必须改的 Top 3"。
+- **A 体检报告**：先做**时效自查**（逐条列 `date` 与今天的间隔小时数，>72h 的独立条目必须已砍或已降级为背景，写明处理）；再六视角各 1-2 条最尖锐问题（指到具体条目）+ 十维度打分（信噪比/排序/洞察vs搬运/纵深/可行动性/准确溯源/叙事连贯/可读性/house view/简洁度，各 1-10 分一句话理由）+ 圈出"今天必须改的 Top 3"。
 - **B 不收录清单**：今天砍掉/没收的素材 3-5 条，每条一句话说明为什么砍（砍 > 加，要有取舍痕迹）。
 - **C changelog**：相对初稿改了什么、为什么，3-5 条。
 
@@ -114,16 +117,17 @@ node fetch-data.mjs   # 写 data/market.json（CoinGecko 免费：各家 perp OI
   "lead": "今日唯一最重要的一件事：一句话、有钩子、不堆砌",
   "sections": [
     { "id": "perpdex", "title": "Perp DEX", "kicker": "今日主题",
-      "items": [ { "headline": "标题", "body": "发生了什么(精简)+机制+二阶效应+对我们的含义", "source": "来源名", "url": "https://...", "date": "YYYY-MM-DD" } ] },
+      "items": [ { "headline": "标题", "body": ["**事件**：发生了什么(精简,带 benchmark 判读)", "**机制**：怎么回事", "**二阶效应**：……", "**对我们**：……"], "source": "来源名", "url": "https://...", "date": "YYYY-MM-DD" } ] },
     { "id": "launchpad", "title": "Launchpad", "kicker": "发射台动态", "items": [ ... ] },
     { "id": "crypto", "title": "Crypto", "kicker": "宏观与行情", "items": [ ... ] },
     { "id": "ai", "title": "AI", "kicker": "Builders 动态", "items": [ ... ] }
     // 可选，仅当有真启发时追加；没有就别放这个 section：
-    // ,{ "id": "hertzflow", "title": "对 Hertzflow 的启发", "kicker": "CEO 视角 · 机会与打法", "items": [ ... ] }
+    // ,{ "id": "hertzflow", "title": "对 Hertzflow 的启发", "kicker": "机会与打法", "items": [ ... ] }
   ]
 }
 ```
-> 注：非 perpdex 栏目的 body 可短，但每条都要落到"对我们的含义"；纯行情复述不收。
+> **body 格式（重要，关乎可读性）**：用**字符串数组**分段，每段渲染成独立一行——perp DEX 用「事件/机制/二阶效应/对我们」四段，段首标签用 `**加粗**`；其余栏目 1-2 段即可。**每段一句话，别把一大坨揉成一段。**
+> 非 perpdex 栏目每条都要落到"对我们的含义"；纯行情复述不收。
 
 ## 步骤 3 · 一键发布（渲染 + 推送 + 发飞书，原子）
 

@@ -12,6 +12,17 @@ const outPath = process.argv[3] || `out/perp-daily-${data.date}.html`;
 const esc = (s = "") =>
   String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
+// 正文支持分段：body 可为字符串(按换行/双换行分段)或字符串数组，每段一个 <p>；支持 **标签** 加粗
+const mdInline = (s) => esc(s).replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+const renderBody = (body) => {
+  const parts = Array.isArray(body) ? body : String(body || "").split(/\n+/);
+  return parts
+    .map((p) => p.trim())
+    .filter(Boolean)
+    .map((p) => `<p class="item-b">${mdInline(p)}</p>`)
+    .join("");
+};
+
 // 栏目顺序：Perp DEX 第一，再 Launchpad、Crypto、AI，最后「对 Hertzflow 的启发」(CEO 视角收尾)
 const order = { perpdex: 0, launchpad: 1, crypto: 2, ai: 3, hertzflow: 4 };
 const sections = [...data.sections].sort(
@@ -21,7 +32,7 @@ const sections = [...data.sections].sort(
 const renderItem = (it) => `
         <article class="item">
           <h3 class="item-h">${esc(it.headline)}</h3>
-          <p class="item-b">${esc(it.body)}</p>
+          ${renderBody(it.body)}
           <div class="item-meta">
             ${it.date ? `<span class="item-date">${esc(it.date)}</span>` : ""}
             ${
@@ -106,6 +117,8 @@ const html = `<!doctype html>
   .item:last-child{border-bottom:none;}
   .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
   .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
   .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
   .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
