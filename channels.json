@@ -1,0 +1,17 @@
+{
+  "_comment": "渠道配置：飞书 webhook 从环境变量 FEISHU_WEBHOOK 读取。",
+  "channels": [
+    {
+      "type": "feishu",
+      "name": "Perp 日报群",
+      "webhook": "env:FEISHU_WEBHOOK",
+      "enabled": true
+    },
+    {
+      "type": "slack",
+      "name": "team-perp",
+      "webhook": "env:SLACK_WEBHOOK",
+      "enabled": false
+    }
+  ]
+}
