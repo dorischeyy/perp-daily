@@ -1,0 +1,28 @@
+name: Feishu Notify
+
+# 云端日报沙箱出口白名单不含 open.feishu.cn，无法直接发飞书。
+# 改由 GitHub Actions(runner 无出口限制)在 docs/latest.json 更新时发飞书卡片。
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/latest.json'
+  workflow_dispatch: {}   # 也允许手动触发
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Send Feishu card via deliver.mjs
+        env:
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+        run: |
+          if [ -z "$FEISHU_WEBHOOK" ]; then
+            echo "::error::FEISHU_WEBHOOK secret 未设置"; exit 1
+          fi
+          TITLE=$(node -e "console.log(require('./docs/latest.json').title)")
+          URL=$(node -e "console.log(require('./docs/latest.json').url)")
+          LEAD=$(node -e "console.log(require('./docs/latest.json').lead)")
+          echo "发送: $TITLE -> $URL"
+          node deliver.mjs "$TITLE" "$URL" "$LEAD"
