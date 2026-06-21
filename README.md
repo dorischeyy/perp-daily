@@ -1,7 +1,9 @@
 # perp-daily · Perp DEX 每日杂志风日报
 
-每天早上 10:00（北京时间）自动：联网调研 → 生成极简杂志风 HTML → 发布到静态托管 → 把公网链接交付到各渠道。
-板块：**Perp DEX（主类别，置顶）** + AI + Crypto，全中文。
+> 🛠 **运维 / 接手 / 排错看这里 → [OPERATIONS.md](OPERATIONS.md)**（完整运行说明 + 故障排查，权威文档）。
+
+每天**北京时间 08:03** 自动：联网调研 → 生成中文杂志风 HTML → GitHub Pages 发布网页 + GitHub Actions 发飞书卡片。
+栏目：**Perp DEX（主类别，置顶）→ Launchpad → Crypto → AI →「对 Hertzflow 的启发」**。
 
 ## 设计原则：渠道可迁移
 
