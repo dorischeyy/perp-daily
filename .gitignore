@@ -3,3 +3,4 @@ content.json
 .env
 node_modules/
 data/
+review.draft.md

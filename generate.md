@@ -99,12 +99,12 @@ node fetch-data.mjs   # 写 data/market.json（CoinGecko 免费：各家 perp OI
 - **串主线**：把零散条目归进本周趋势叙事，不是 N 条互不相干 bullet。
 - **统一口吻 + house view**：有观点有立场，去掉八股套话。
 
-**产出《编辑自评》文件**（证明确实 argue 过自己，供主编审计）——写到 `docs/archive/<date>-review.md`，Markdown，含三段：
+**产出《编辑自评》文件**（证明确实 argue 过自己，供主编审计）——写到仓库根目录固定文件名 `review.draft.md`（**不要自己算日期、不要带日期**；publish.sh 会按权威日期改名落到 `docs/archive/<date>-review.md`），Markdown，含三段：
 - **A 体检报告**：先做**时效自查**（逐条列 `date` 与今天的间隔小时数，>72h 的独立条目必须已砍或已降级为背景，写明处理）；再六视角各 1-2 条最尖锐问题（指到具体条目）+ 十维度打分（信噪比/排序/洞察vs搬运/纵深/可行动性/准确溯源/叙事连贯/可读性/house view/简洁度，各 1-10 分一句话理由）+ 圈出"今天必须改的 Top 3"。
 - **B 不收录清单**：今天砍掉/没收的素材 3-5 条，每条一句话说明为什么砍（砍 > 加，要有取舍痕迹）。
 - **C changelog**：相对初稿改了什么、为什么，3-5 条。
 
-此文件由 `publish.sh` 的 `git add docs` 一并提交（无需额外操作）。**正文 HTML 不含这些，自评只在 review.md 里。**
+publish.sh 会把 `review.draft.md` 改名为 `docs/archive/<权威date>-review.md` 并一并提交。**正文 HTML 不含这些，自评只在 review 文件里。**
 
 ## 步骤 2 · 产出内容 JSON
 

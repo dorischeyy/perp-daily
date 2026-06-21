@@ -12,6 +12,12 @@ mkdir -p docs/archive
 node build-html.mjs content.json "docs/archive/${DATE}.html"
 cp "docs/archive/${DATE}.html" docs/index.html
 
+# 1.5) 自评文件：agent 写到根目录 review.draft.md，这里按【权威 DATE】落到 archive，
+#      避免 agent 自己猜日期导致 review 与报告日期对不上。
+if [ -f review.draft.md ]; then
+  mv -f review.draft.md "docs/archive/${DATE}-review.md"
+fi
+
 # 2) 提交并推送（触发 GitHub Pages 发布）
 git config user.name "dorischeyy"
 git config user.email "startrail1016@gmail.com"
