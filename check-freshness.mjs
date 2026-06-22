@@ -24,11 +24,22 @@ const EXEMPT = new Set(["hertzflow"]); // 启发栏豁免
 const diffDays = (d) => Math.round((today - d) / 86400000);
 const isTrend = (h) => /^\s*本周主线/.test(h || "");
 
+// 从 url 里抽内嵌日期（/2026/01/29/、/2026-01-29-、_2026_01_29 等），用于反「改日期骗关卡」。
+// 很多新闻站 url 自带发布日，agent 即便把 date 字段改新，url 也藏不住真日期。
+const extractUrlDate = (url = "") => {
+  const m = url.match(/\b(20\d{2})[\/\-_](0[1-9]|1[0-2])[\/\-_](0[1-9]|[12]\d|3[01])\b/);
+  if (!m) return null;
+  const iso = `${m[1]}-${m[2]}-${m[3]}`;
+  const d = new Date(iso + "T00:00:00Z");
+  return isNaN(d) ? null : { iso, d };
+};
+
 const violations = [];
 const ok = [];
 
 for (const sec of data.sections || []) {
-  if (EXEMPT.has(sec.id)) continue;
+  // 启发栏豁免「时效」，但仍做 url 日期一致性校验（防止挂一篇旧文却标新日期误导）
+  const exemptFreshness = EXEMPT.has(sec.id);
   for (const it of sec.items || []) {
     const ds = it.date;
     const d = ds ? new Date(ds + "T00:00:00Z") : null;
@@ -36,6 +47,22 @@ for (const sec of data.sections || []) {
       violations.push({ sec: sec.id, h: it.headline, reason: `date 缺失/无法解析: ${ds}` });
       continue;
     }
+
+    // 防造假：url 内嵌日期与 date 字段差 >2 天 → 判为「改日期」，无条件拦（含启发栏）
+    const ud = extractUrlDate(it.url);
+    if (ud && Math.abs(diffDays(d) - diffDays(ud.d)) > 2) {
+      violations.push({
+        sec: sec.id,
+        h: it.headline,
+        reason: `🚩date 造假嫌疑：标注 date=${ds}，但 url 内嵌日期=${ud.iso}（相差 ${Math.abs(
+          diffDays(d) - diffDays(ud.d)
+        )} 天）。date 必须取来源真实发布日。`,
+      });
+      continue;
+    }
+
+    if (exemptFreshness) continue; // 启发栏过了 url 校验即放行，不查 72h
+
     const age = diffDays(d);
     const limit = isTrend(it.headline) ? TREND_MAX : NEWS_MAX;
     const tag = isTrend(it.headline) ? "本周主线" : "新闻";
