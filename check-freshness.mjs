@@ -1,0 +1,64 @@
+#!/usr/bin/env node
+// check-freshness.mjs — 发布前机械化时效关卡（不靠 agent 自觉）。
+// 规则：
+//   - 新闻条目（perpdex/launchpad/crypto/ai）：date 距今 ≤ 3 天（72h）。
+//   - headline 以「本周主线」开头的趋势条目：放宽到 ≤ 7 天。
+//   - 末栏启发（hertzflow）：豁免（是研判综述，不显示日期）。
+//   - 任何条目 date 缺失或无法解析 → 失败。
+//   - 命中违规 → 退出码 1，阻断 publish.sh，逼回去砍。
+// 用法：node check-freshness.mjs content.json [今天YYYY-MM-DD]
+import fs from "node:fs";
+
+const file = process.argv[2] || "content.json";
+const todayStr =
+  process.argv[3] ||
+  new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Shanghai" }); // YYYY-MM-DD
+
+const today = new Date(todayStr + "T00:00:00Z");
+const data = JSON.parse(fs.readFileSync(file, "utf8"));
+
+const NEWS_MAX = 3; // 天，72h
+const TREND_MAX = 7; // 天，本周主线
+const EXEMPT = new Set(["hertzflow"]); // 启发栏豁免
+
+const diffDays = (d) => Math.round((today - d) / 86400000);
+const isTrend = (h) => /^\s*本周主线/.test(h || "");
+
+const violations = [];
+const ok = [];
+
+for (const sec of data.sections || []) {
+  if (EXEMPT.has(sec.id)) continue;
+  for (const it of sec.items || []) {
+    const ds = it.date;
+    const d = ds ? new Date(ds + "T00:00:00Z") : null;
+    if (!d || isNaN(d)) {
+      violations.push({ sec: sec.id, h: it.headline, reason: `date 缺失/无法解析: ${ds}` });
+      continue;
+    }
+    const age = diffDays(d);
+    const limit = isTrend(it.headline) ? TREND_MAX : NEWS_MAX;
+    const tag = isTrend(it.headline) ? "本周主线" : "新闻";
+    if (age > limit) {
+      violations.push({
+        sec: sec.id,
+        h: it.headline,
+        reason: `${tag}条目 date=${ds} 距今 ${age} 天 > ${limit} 天上限`,
+      });
+    } else {
+      ok.push({ sec: sec.id, h: it.headline, age, tag });
+    }
+  }
+}
+
+console.log(`时效关卡 · 今天=${todayStr} · 共 ${ok.length + violations.length} 条`);
+for (const o of ok) console.log(`  ✅ [${o.sec}] ${o.age}天 (${o.tag}) ${o.h}`);
+for (const v of violations) console.log(`  ❌ [${v.sec}] ${v.reason} | ${v.h}`);
+
+if (violations.length) {
+  console.error(
+    `\n⛔ 时效关卡未通过：${violations.length} 条违规。请砍掉或降级为「(背景，MM-DD)」内联，或改写为「本周主线」(≤7天且为趋势综述)。发布已阻断。`
+  );
+  process.exit(1);
+}
+console.log("\n✅ 时效关卡通过。");

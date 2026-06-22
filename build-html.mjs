@@ -29,12 +29,13 @@ const sections = [...data.sections].sort(
   (a, b) => (order[a.id] ?? 9) - (order[b.id] ?? 9)
 );
 
-const renderItem = (it) => `
+// 启发栏(hertzflow)是研判综述、可引用较老来源，不渲染日期，避免页面显示老日期被误读为旧闻。
+const renderItem = (it, hideDate = false) => `
         <article class="item">
           <h3 class="item-h">${esc(it.headline)}</h3>
           ${renderBody(it.body)}
           <div class="item-meta">
-            ${it.date ? `<span class="item-date">${esc(it.date)}</span>` : ""}
+            ${!hideDate && it.date ? `<span class="item-date">${esc(it.date)}</span>` : ""}
             ${
               it.url
                 ? `<a class="item-src" href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.source || "来源")} ↗</a>`
@@ -55,7 +56,7 @@ const renderSection = (s, idx) => `
           </div>
         </div>
         <div class="sec-body">
-          ${(s.items || []).map(renderItem).join("")}
+          ${(s.items || []).map((it) => renderItem(it, s.id === "hertzflow")).join("")}
         </div>
       </section>`;
 

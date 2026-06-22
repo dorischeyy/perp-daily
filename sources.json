@@ -1,6 +1,6 @@
 {
-  "version": 2,
-  "updated": "2026-06-20",
+  "version": 3,
+  "updated": "2026-06-22",
   "_doc": "日报信源注册表。四层架构：official(官方主号=事实) / founder(创始人=提前信号) / media(媒体=覆盖面) / kol(=解读扩散) / data(链上数据)。generate.md 每天按此表抓取，core_pool 为必看核心池，verify:true 的账号 handle 待核实（先按 name 搜）。status:watch 为有 ban/改名风险需备替补的账号。",
   "layers": {
     "official": "官方主号——发事实：上市、新功能、perp/衍生品、市场、治理公告",
@@ -20,7 +20,22 @@
     "https://www.coingecko.com/en/derivatives",
     "https://www.theblock.co/category/markets"
   ],
-  "sourcing_rule": "优先一手源：① 数字先看本地 data/market.json（fetch-data.mjs 拉的 CoinGecko 免费数据），再用 data_pages 网页交叉核对；② 事件以「事件主体的官方页面(blog/docs/governance/announcement)」为准——聚合站只用于发现线索，找到后尽量 WebFetch 官方页作为来源 url；③ 无 X API，sources.json 的 handle 仅作搜索线索，不能假装读到了原始推文。",
+  "feeds": {
+    "_doc": "免费 RSS 实时源层——替代「读不到的原始推文」。无 X API，但这些媒体会在分钟级报道项目方在 X 发的重大动态，等于间接拿到推特实时面。generate.md 步骤1 先 WebFetch 这些 feed 拉近 24-72h 条目作为线索池，再按 sourcing_rule 回溯官方页核实。全部为 2026-06-22 实测可抓、内容新鲜。用 WebFetch 直接抓 url（勿写 node 脚本——云端沙箱对部分域名有出口白名单限制，WebFetch 工具不受限）。",
+    "rss": [
+      { "name": "Cointelegraph", "url": "https://cointelegraph.com/rss", "region": "en", "layer": "media", "themes": ["news", "perp", "exchange"], "note": "快讯型新闻线，分钟级，覆盖项目方 X 动态" },
+      { "name": "CoinDesk", "url": "https://www.coindesk.com/arc/outboundfeeds/rss/", "region": "en", "layer": "media", "themes": ["news", "exchange"], "note": "宏观/监管/ETF 资金流权威底料" },
+      { "name": "The Block", "url": "https://www.theblock.co/rss.xml", "region": "en", "layer": "media", "themes": ["news", "perp", "exchange"], "note": "交易/融资/perp 项目动态" },
+      { "name": "Decrypt", "url": "https://decrypt.co/feed", "region": "en", "layer": "media", "themes": ["news", "ai"], "note": "AI 栏目主力，AI builders/模型动态多" },
+      { "name": "The Defiant", "url": "https://thedefiant.io/feed", "region": "en", "layer": "media", "themes": ["defi", "news"], "note": "DeFi 协议/新机制" },
+      { "name": "Wu Blockchain", "url": "https://wublock.substack.com/feed", "region": "en", "layer": "media", "themes": ["news", "exchange"], "note": "吴说英文版，亚洲区交易所/项目/监管，更新偏周报节奏" },
+      { "name": "BlockTempo 动区", "url": "https://www.blocktempo.com/feed/", "region": "zh", "layer": "media", "themes": ["news"], "note": "中文区高频日更，繁中" }
+    ],
+    "api_pending_key": [
+      { "name": "CryptoPanic", "endpoint": "https://cryptopanic.com/api/developer/v2/posts/?auth_token=${CRYPTOPANIC_TOKEN}&public=true", "themes": ["news", "perp", "exchange"], "note": "聚合大量 CT/项目方 X 帖子，最接近「推特实时面」。需免费 API key——存为 env CRYPTOPANIC_TOKEN（云端 Routine 指令里内嵌或 repo secret）。key 到位前此源不启用，公开 RSS 端点已 403 需 key。" }
+    ]
+  },
+  "sourcing_rule": "优先一手源：① 数字先看本地 data/market.json（fetch-data.mjs 拉的 CoinGecko 免费数据），再用 data_pages 网页交叉核对；② 事件以「事件主体的官方页面(blog/docs/governance/announcement)」为准——聚合站只用于发现线索，找到后尽量 WebFetch 官方页作为来源 url；③ 无 X API，sources.json 的 handle 仅作搜索线索，不能假装读到了原始推文——但 feeds.rss 是合法的实时线索池，可 WebFetch 直接读，引用时优先回溯到事件主体官方页。",
   "sources": [
     { "handle": "binance", "name": "Binance", "region": "both", "layer": "official", "themes": ["exchange", "perp"], "core": false, "note": "全球+本地公告，perp/衍生品上市" },
     { "handle": "okx", "name": "OKX", "region": "both", "layer": "official", "themes": ["exchange", "perp"], "core": false, "note": "亚洲友好，中文内容多" },

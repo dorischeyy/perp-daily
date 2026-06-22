@@ -7,6 +7,12 @@ set -uo pipefail
 DATE=$(TZ=Asia/Shanghai date +%F)
 URL="https://dorischeyy.github.io/perp-daily/archive/${DATE}.html"
 
+# 0) 时效关卡（机械化，不过则阻断发布；启发栏豁免，新闻≤72h、本周主线≤7天）
+node check-freshness.mjs content.json "${DATE}" || {
+  echo "⛔ 时效关卡未通过，发布中止。请按上方违规条目修 content.json 后重跑。" >&2
+  exit 1
+}
+
 # 1) 渲染 + 自评落档
 mkdir -p docs/archive
 node build-html.mjs content.json "docs/archive/${DATE}.html"
