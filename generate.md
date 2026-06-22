@@ -48,7 +48,7 @@ node fetch-data.mjs   # 写 data/market.json（CoinGecko 免费：各家 perp OI
 ## 步骤 1 · 联网调研
 
 用 WebSearch / WebFetch，按 sources.json 的账号 + 关键词（"perp"、"new feature"、"launch"、"testnet"、"governance"、"buyback"、"early access" 等）检索过去 24-48h 动态。
-**收录门槛：这条能不能改变一个判断、或更新一个认知？不能就不收。** 各栏目宁少勿滥。
+**收录门槛：这条能不能改变一个判断、或更新一个认知？不能就不收。** 但别因此做太薄：**全报新闻目标 ≥ 5-6 条**（perp DEX 主栏 3-5 条，Launchpad / Crypto / AI 各 1-3 条）；慢新闻日靠「本周主线」「竞品格局」补量。每条都有料的前提下，宁可多覆盖，不要只剩 2-3 条。
 
 1. **Perp DEX（主栏目，份量最重）**：成交量/费用/OI/新市场/激励/治理/代币经济。
    信源：sources.json 中 `themes` 含 `perp` 的官方+founder（Hyperliquid/HyperFND、GMX、dYdX、Aster、Lighter、Ostium、Avantis、Variational、Jupiter…）、DefiLlama Derivatives 交叉验证 volume、媒体(The Block/CoinDesk)。
@@ -70,7 +70,7 @@ node fetch-data.mjs   # 写 data/market.json（CoinGecko 免费：各家 perp OI
 
 ## 步骤 1.5 · 「对 Hertzflow 的启发」（末栏 · payoff · 条件栏目）
 
-这是全报最有价值的一栏，也是读者最该带走的东西，**也是全报唯一集中说"对 Hertzflow"的地方**——把当天各条新闻里值得说的启发**综合收到这里**（新闻条目里不缀"对我们"）。通常 **2-4 条**，做成全天研判而非逐条复读。
+这是全报最有价值的一栏，也是读者最该带走的东西，**也是全报唯一集中说"对 Hertzflow"的地方**：把当天各条新闻里值得说的启发**综合收到这里**（新闻条目里不缀"对我们"）。通常 **2-4 条**，做成全天研判而非逐条复读。
 框架用主动的"**机会与打法**"，不是被动的"别掉队"：
 - 友商做了什么我们没做 → 我们能**抄什么 / 差异化什么**？
 - 哪个标的类别在升温（美股/石油-商品/forex/某 meme）→ 我们**主推该类目 / 新增 Feed** 的窗口？
