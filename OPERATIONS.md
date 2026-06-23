@@ -65,7 +65,19 @@
 1. 08:03 北京，云端 Routine 触发。
 2. 约 5–15 分钟后，仓库出现新 commit `report: YYYY-MM-DD`（含当天 html + 自评 + latest.json）。
 3. GitHub Pages 约 1 分钟后更新网页。
-4. GitHub Actions "Feishu Notify" 触发（绿勾），飞书群收到卡片。
+4. GitHub Actions "Notify (Feishu + Slack)" 触发（绿勾），飞书 + Slack 收到卡片。
+5. 10:30 北京，"Daily Watchdog" 自动自检：若今天没出报告，发告警卡到飞书+Slack。正常出报则静默不打扰。
+
+## 4.5 可靠性兜底（自动，无需人工）
+
+| 机制 | 在哪 | 作用 |
+|------|------|------|
+| **去重** | feishu-notify.yml 的 Gate 步 | 只在 `report:` 提交或手动触发(workflow_dispatch)时投递；对 latest.json 的其它改动(chore 重推/修订标记)跳过，**防一天多条**。再加 `concurrency` 防并发双发 |
+| **兜底告警** | daily-watchdog.yml（cron 10:30 北京） | 检查 `latest.json.date == 今天`，否则发「⚠️ 今日未生成」告警卡，**防云端 Routine 静默失败漏一天** |
+| **投递重试** | deliver.mjs send() | curl 瞬时失败自动重试 3 次(2s/4s 退避)，**防飞书/Slack 抖动丢卡** |
+| **push 防假成功** | publish.sh | docs 无变更 / rebase 失败 / push 失败 都 `exit 1` 报错，**不再谎报「✅ 完成」** |
+
+> 手动强制补发一次（绕过去重）：仓库 Actions 页 → "Notify (Feishu + Slack)" → Run workflow（或 `gh workflow run feishu-notify.yml`）。
 
 ## 5. 排错手册（症状 → 去哪查 → 怎么修）
 

@@ -3,19 +3,41 @@ name: Notify (Feishu + Slack)
 # 云端日报沙箱出口白名单不含 open.feishu.cn / hooks.slack.com，无法直接发。
 # 改由 GitHub Actions(runner 无出口限制)在 docs/latest.json 更新时发卡片到所有 enabled 渠道。
 # 渠道开关在 channels.json；密钥用 repo secrets：FEISHU_WEBHOOK / SLACK_WEBHOOK。
+#
+# 去重：只在「当天报告提交(report:)」或手动触发时投递。其它对 latest.json 的改动
+# (如 chore 重推、修订标记) 不重复发，避免一天多条。
 on:
   push:
     branches: [main]
     paths:
       - 'docs/latest.json'
-  workflow_dispatch: {}   # 也允许手动触发
+  workflow_dispatch: {}   # 手动触发=有意为之，绕过去重强制发一次
+
+# 同一时间只跑一个投递，防并发双发
+concurrency:
+  group: notify
+  cancel-in-progress: false
 
 jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: "Gate 去重（仅 report 提交或手动触发才投递）"
+        id: gate
+        env:
+          MSG: ${{ github.event.head_commit.message }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          if [ "$EVENT" = "workflow_dispatch" ]; then
+            echo "手动触发，强制投递"; echo "go=1" >> "$GITHUB_OUTPUT"
+          elif printf '%s' "$MSG" | head -1 | grep -qE '^report:'; then
+            echo "report 提交，投递"; echo "go=1" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::非 report 提交（$(printf '%s' "$MSG" | head -1)），跳过投递防重复"; echo "go=0" >> "$GITHUB_OUTPUT"
+          fi
       - name: Send cards via deliver.mjs (Feishu + Slack)
+        if: steps.gate.outputs.go == '1'
         env:
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}

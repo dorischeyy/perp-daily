@@ -26,8 +26,22 @@ node -e "const fs=require('fs');const c=JSON.parse(fs.readFileSync('content.json
 git config user.name "dorischeyy"
 git config user.email "startrail1016@gmail.com"
 git add docs
-git commit -m "report: ${DATE}" || echo "(无变更，跳过 commit)"
-git pull --rebase -q origin main || true
-git push origin main
+if git diff --cached --quiet; then
+  echo "⚠️ docs 无变更，未生成新提交——今日报告可能没正常产出，请检查。" >&2
+  exit 1
+fi
+git commit -m "report: ${DATE}"
 
-echo "✅ publish 完成：${URL}（飞书由 GitHub Actions 推送）"
+# 同步远端：rebase 失败要报错，不能默默用旧状态硬推
+if ! git pull --rebase -q origin main; then
+  echo "⛔ git pull --rebase 失败（可能有冲突/未提交改动），停止以免推坏。请人工处理。" >&2
+  exit 1
+fi
+
+# push 失败必须让整个脚本失败，不许谎报成功
+if ! git push origin main; then
+  echo "⛔ git push 失败，报告未发布、Action 不会触发。请检查 token/网络后重试。" >&2
+  exit 1
+fi
+
+echo "✅ publish 完成：${URL}（飞书+Slack 由 GitHub Actions 推送）"

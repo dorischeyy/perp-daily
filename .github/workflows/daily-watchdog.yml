@@ -1,0 +1,40 @@
+name: Daily Watchdog (兜底告警)
+
+# 兜底：云端 Routine 若失败/没跑/被时效关卡挡住，会全程静默（不生成、不 commit、不投递）。
+# 本 watchdog 每天在预期出报时间之后检查「今天的报告到底有没有」，没有就主动报警到飞书+Slack，
+# 让人知道要去手动重跑，而不是默默漏一天。
+on:
+  schedule:
+    - cron: '30 2 * * *'   # UTC 02:30 = 北京 10:30（Routine 08:03 北京之后约 2.5h）
+  workflow_dispatch: {}      # 也可手动自检
+
+concurrency:
+  group: watchdog
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 检查今日报告是否已生成，否则告警
+        env:
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          ROUTINE_URL: https://claude.ai/code/routines/trig_01LyfiMiKQpNnaRHUsNoiv4B
+        run: |
+          TODAY=$(TZ=Asia/Shanghai date +%F)
+          LATEST=$(node -e "try{console.log(require('./docs/latest.json').date||'')}catch(e){console.log('')}")
+          echo "今天(北京)=$TODAY，latest.json.date=$LATEST"
+          if [ "$LATEST" = "$TODAY" ]; then
+            echo "✅ 今日报告已生成，无需告警"
+            exit 0
+          fi
+          echo "::warning::今日($TODAY)未检测到新报告（latest=$LATEST），发送告警"
+          if [ -z "$FEISHU_WEBHOOK" ] && [ -z "$SLACK_WEBHOOK" ]; then
+            echo "::error::无可用 webhook，告警都发不出去"; exit 1
+          fi
+          node deliver.mjs \
+            "⚠️ Perp 日报今日($TODAY)未生成" \
+            "$ROUTINE_URL" \
+            "云端 Routine 可能失败/未跑/被时效关卡挡住（最新报告仍是 $LATEST）。请打开 Routine 管理页查看 run 日志并手动重跑；或本机 cd ~/perp-daily 手动补发。"

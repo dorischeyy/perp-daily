@@ -57,26 +57,44 @@ function resolveWebhook(v) {
   return v || "";
 }
 
-// 用 curl 发 POST（比 node fetch 在各沙箱/云端更稳——node fetch 在受限环境常失败）
-function send(ch, msg) {
-  const adapt = ADAPTERS[ch.type];
-  if (!adapt) return { ch, ok: false, err: `未知渠道类型: ${ch.type}` };
-  const hook = resolveWebhook(ch.webhook);
-  if (!hook) return { ch, ok: false, err: `webhook 为空（检查 ${ch.webhook}）` };
+// 同步睡眠（execFileSync 是同步的，重试间隔也得同步）
+function sleepSync(sec) {
+  try { execFileSync("sleep", [String(sec)]); } catch {}
+}
+
+// 单次 curl POST
+function postOnce(hook, body) {
   try {
     const txt = execFileSync(
       "curl",
       ["-s", "--max-time", "25", "-X", "POST", "-H", "Content-Type: application/json", "--data-binary", "@-", hook],
-      { input: JSON.stringify(adapt(msg)), encoding: "utf8", maxBuffer: 4 * 1024 * 1024 }
+      { input: body, encoding: "utf8", maxBuffer: 4 * 1024 * 1024 }
     );
     // 飞书成功 {code:0}；Slack 成功返回纯文本 "ok"
     let ok = false;
     try { const j = JSON.parse(txt); ok = typeof j.code === "number" ? j.code === 0 : true; }
     catch { ok = txt.trim() === "ok"; }
-    return { ch, ok, err: ok ? null : String(txt).slice(0, 200) || "无响应" };
+    return { ok, err: ok ? null : String(txt).slice(0, 200) || "无响应" };
   } catch (e) {
-    return { ch, ok: false, err: e.message };
+    return { ok: false, err: e.message };
   }
+}
+
+// 用 curl 发 POST（比 node fetch 在各沙箱/云端更稳）；瞬时失败重试 3 次（2s/4s 退避）
+function send(ch, msg) {
+  const adapt = ADAPTERS[ch.type];
+  if (!adapt) return { ch, ok: false, err: `未知渠道类型: ${ch.type}` };
+  const hook = resolveWebhook(ch.webhook);
+  if (!hook) return { ch, ok: false, err: `webhook 为空（检查 ${ch.webhook}）` };
+  const body = JSON.stringify(adapt(msg));
+  const MAX = 3;
+  let last = { ok: false, err: "未尝试" };
+  for (let i = 1; i <= MAX; i++) {
+    last = postOnce(hook, body);
+    if (last.ok) return { ch, ok: true, err: null, attempts: i };
+    if (i < MAX) { console.error(`↻ ${ch.type} 第 ${i} 次失败(${last.err})，${2 * i}s 后重试`); sleepSync(2 * i); }
+  }
+  return { ch, ok: false, err: `${MAX} 次重试后仍失败: ${last.err}`, attempts: MAX };
 }
 
 const [title, url, summary, cfgArg] = process.argv.slice(2);
