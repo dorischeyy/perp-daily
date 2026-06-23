@@ -29,10 +29,11 @@
       { "name": "Decrypt", "url": "https://decrypt.co/feed", "region": "en", "layer": "media", "themes": ["news", "ai"], "note": "AI 栏目主力，AI builders/模型动态多" },
       { "name": "The Defiant", "url": "https://thedefiant.io/feed", "region": "en", "layer": "media", "themes": ["defi", "news"], "note": "DeFi 协议/新机制" },
       { "name": "Wu Blockchain", "url": "https://wublock.substack.com/feed", "region": "en", "layer": "media", "themes": ["news", "exchange"], "note": "吴说英文版，亚洲区交易所/项目/监管，更新偏周报节奏" },
-      { "name": "BlockTempo 动区", "url": "https://www.blocktempo.com/feed/", "region": "zh", "layer": "media", "themes": ["news"], "note": "中文区高频日更，繁中" }
+      { "name": "BlockTempo 动区", "url": "https://www.blocktempo.com/feed/", "region": "zh", "layer": "media", "themes": ["news"], "note": "中文区高频日更，繁中" },
+      { "name": "CryptoSlate", "url": "https://cryptoslate.com/feed/", "region": "en", "layer": "media", "themes": ["news", "defi", "exchange"], "note": "2026-06-23 实测可抓、当日内容；perp/ETF/链上覆盖好。作为 CryptoPanic 免费档下线后的补强" }
     ],
     "api_pending_key": [
-      { "name": "CryptoPanic", "endpoint": "https://cryptopanic.com/api/developer/v2/posts/?auth_token=${CRYPTOPANIC_TOKEN}&public=true", "themes": ["news", "perp", "exchange"], "note": "聚合大量 CT/项目方 X 帖子，最接近「推特实时面」。需免费 API key——存为 env CRYPTOPANIC_TOKEN（云端 Routine 指令里内嵌或 repo secret）。key 到位前此源不启用，公开 RSS 端点已 403 需 key。" }
+      { "name": "CryptoPanic", "status": "dead", "note": "❌ 弃用：CryptoPanic 免费 Developer API 已于 2026-04-01 下线（2026-06-23 实测所有端点 404）。免费 token 不可用，要用需付费。CryptoCompare/CCData 新闻 API 也已改为需 key（401）。免费聚合新闻 API 这条路基本关闭——实时面继续靠 feeds.rss + WebSearch。" }
     ]
   },
   "sourcing_rule": "优先一手源：① 数字先看本地 data/market.json（fetch-data.mjs 拉的 CoinGecko 免费数据），再用 data_pages 网页交叉核对；② 事件以「事件主体的官方页面(blog/docs/governance/announcement)」为准——聚合站只用于发现线索，找到后尽量 WebFetch 官方页作为来源 url；③ 无 X API，sources.json 的 handle 仅作搜索线索，不能假装读到了原始推文——但 feeds.rss 是合法的实时线索池，可 WebFetch 直接读，引用时优先回溯到事件主体官方页；④ 【主辅原则】以国外优质源为主（CoinDesk/The Block/Cointelegraph/Decrypt/The Defiant 等 + 项目方官方），国内中文媒体（律动/Odaily/PANews/深潮/Foresight/链捕手/金色/吴说/动区）仅作辅助补充——它们多无稳定 RSS，用 WebSearch 按 name 搜当日要闻当线索，命中后回溯官方/外媒核实；⑤ 【只筛主要新闻】只收能改变判断的结构性事件：项目上线/新机制/融资/监管定性/大额链上或资金数据/竞品格局变化。明确跳过细枝末节：某 KOL/交易员喊单、纯价格行情评论、谁说了什么的口水、无信息量的日常快讯。",
