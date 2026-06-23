@@ -1,0 +1,31 @@
+name: CI
+
+# 代码改动即跑：语法检查 + 单元测试 + 关卡冒烟。
+# 让坏提交在进云端 Routine 前就被发现（仅文档改动的发报提交跳过，省算力）。
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'docs/**'
+  pull_request:
+  workflow_dispatch: {}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: 语法检查（所有 lib 脚本）
+        run: for f in lib/*.mjs; do node --check "$f" || exit 1; done
+      - name: 单元测试
+        run: npm test
+      - name: 关卡冒烟（用样例跑通整条校验+渲染）
+        run: |
+          node lib/validate-content.mjs config/content.sample.json
+          node lib/check-freshness.mjs config/content.sample.json 2026-06-20
+          node lib/threads.mjs
+          node lib/build-html.mjs config/content.sample.json /tmp/out.html
+          test -s /tmp/out.html

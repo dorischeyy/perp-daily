@@ -19,6 +19,8 @@ URL="https://dorischeyy.github.io/perp-daily/archive/${DATE}.html"
 
 # 阶段 1：校验关卡（纯只读，可反复跑）
 stage_validate() {
+  node lib/validate-content.mjs content.json || {
+    echo "⛔ content.json 结构校验未通过。按上方缺失字段修 content.json 后重跑 \`bash publish.sh validate\`。" >&2; return 1; }
   node lib/check-freshness.mjs content.json "${DATE}" || {
     echo "⛔ 时效/防造假关卡未通过。修 content.json 后重跑 \`bash publish.sh validate\`（无需重新调研）。" >&2; return 1; }
   node lib/threads.mjs "${DATE}" || {

@@ -72,6 +72,8 @@
 
 | 机制 | 在哪 | 作用 |
 |------|------|------|
+| **内容结构校验** | lib/validate-content.mjs（publish.sh validate 第一步） | 校验 content.json 字段齐全/URL 合法/日期格式，**坏结构阻断发布**，防漏到渲染崩溃 |
+| **单元测试 + CI** | test/ + ci.yml | 每次代码 push 自动跑语法检查+单测+关卡冒烟，**坏提交进不了云端** |
 | **去重** | feishu-notify.yml 的 Gate 步 | 只在 `report:` 提交或手动触发(workflow_dispatch)时投递；对 latest.json 的其它改动(chore 重推/修订标记)跳过，**防一天多条**。再加 `concurrency` 防并发双发 |
 | **兜底告警** | daily-watchdog.yml（cron 10:30 北京） | 检查 `latest.json.date == 今天`，否则发「⚠️ 今日未生成」告警卡，**防云端 Routine 静默失败漏一天** |
 | **投递重试** | lib/deliver.mjs send() | curl 瞬时失败自动重试 3 次(2s/4s 退避)，**防飞书/Slack 抖动丢卡** |

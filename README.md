@@ -49,7 +49,10 @@ If any downstream step fails, re-run only that stage — never re-research. See 
 | `threads.json` | **Story ledger** — persistent cross-day state (score / thesis / cadence / development log) |
 | `lib/threads.mjs` | Ledger QA — schema validation + "threads due for review today" reminder |
 | `lib/check-freshness.mjs` | Freshness + anti-fabrication gate (news ≤72h; URL-embedded date vs `date` cross-check) |
+| `lib/validate-content.mjs` | content.json structural validator (required fields / URL scheme / date format) |
 | `lib/build-html.mjs` | Content JSON → single-file magazine HTML (incl. the Story Threads block; zero dependencies) |
+| `test/` + `package.json` | Zero-dependency unit tests — `npm test` (Node's built-in runner) |
+| `.github/workflows/ci.yml` | CI: syntax check + unit tests + gate smoke on every code push |
 | `lib/deliver.mjs` | Channel-agnostic delivery — reads `config/channels.json`, fans out to enabled channels (Feishu/Slack adapters + retry) |
 | `.github/workflows/` | `feishu-notify.yml` (de-duplicated delivery) + `daily-watchdog.yml` (missed-run alert) |
 | `config/channels.sample.json` / `config/content.sample.json` | Sample channel / content JSON schemas |

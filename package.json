@@ -1,0 +1,14 @@
+{
+  "name": "perp-daily",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A Perp DEX daily, written like an analyst — scoring + cross-day story threading, with mechanical integrity gates.",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "check": "for f in lib/*.mjs; do node --check \"$f\" || exit 1; done"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
