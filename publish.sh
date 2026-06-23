@@ -19,9 +19,9 @@ URL="https://dorischeyy.github.io/perp-daily/archive/${DATE}.html"
 
 # 阶段 1：校验关卡（纯只读，可反复跑）
 stage_validate() {
-  node check-freshness.mjs content.json "${DATE}" || {
+  node lib/check-freshness.mjs content.json "${DATE}" || {
     echo "⛔ 时效/防造假关卡未通过。修 content.json 后重跑 \`bash publish.sh validate\`（无需重新调研）。" >&2; return 1; }
-  node threads.mjs "${DATE}" || {
+  node lib/threads.mjs "${DATE}" || {
     echo "⛔ 台账结构校验未通过。修 threads.json 后重跑 \`bash publish.sh validate\`。" >&2; return 1; }
   echo "✅ validate 通过"
 }
@@ -29,7 +29,7 @@ stage_validate() {
 # 阶段 2：渲染（幂等，可反复跑；只读 content.json，写 docs/）
 stage_render() {
   mkdir -p docs/archive
-  node build-html.mjs content.json "docs/archive/${DATE}.html" || { echo "⛔ 渲染失败" >&2; return 1; }
+  node lib/build-html.mjs content.json "docs/archive/${DATE}.html" || { echo "⛔ 渲染失败" >&2; return 1; }
   cp "docs/archive/${DATE}.html" docs/index.html
   [ -f review.draft.md ] && mv -f review.draft.md "docs/archive/${DATE}-review.md"
   node -e "const fs=require('fs');const c=JSON.parse(fs.readFileSync('content.json','utf8'));const d='${DATE}';fs.writeFileSync('docs/latest.json',JSON.stringify({date:d,url:'${URL}',title:'Perp DEX 日报 · '+d,lead:c.lead||'今日 Perp DEX 日报'},null,2))" \

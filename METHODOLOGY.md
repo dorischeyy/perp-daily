@@ -44,7 +44,7 @@ new S-tier event ──open──▶ active ──(due review: update & recall i
                               ├──(two cadences with no movement)──▶ dormant (kept, off the page)
                               └──(event resolves / ruling lands)───▶ closed (one closing line)
 ```
-`threads.mjs` mechanically lists, each day, the threads whose `next_check` is due — so nothing slips.
+`lib/threads.mjs` mechanically lists, each day, the threads whose `next_check` is due — so nothing slips.
 
 ### 2.3 How it surfaces (the line between professional and verbose)
 Two non-overlapping mechanisms:
@@ -61,12 +61,12 @@ Mechanisms run on scripts, not good intentions.
 
 | Gate | File | Function |
 |------|------|----------|
-| **Freshness** | `check-freshness.mjs` | News ≤72h, weekly-thread ≤7d; over the limit exits 1 and blocks publishing |
-| **Anti-fabrication** | `check-freshness.mjs` + `generate.md` | URL-embedded date vs `date` cross-check; and every `date` must be verified against the source page via WebFetch — unverifiable items are cut. Built after a real incident where months-old articles were stamped with today's date |
-| **Ledger integrity** | `threads.mjs` | Story-ledger schema validation; a broken ledger blocks publishing |
+| **Freshness** | `lib/check-freshness.mjs` | News ≤72h, weekly-thread ≤7d; over the limit exits 1 and blocks publishing |
+| **Anti-fabrication** | `lib/check-freshness.mjs` + `generate.md` | URL-embedded date vs `date` cross-check; and every `date` must be verified against the source page via WebFetch — unverifiable items are cut. Built after a real incident where months-old articles were stamped with today's date |
+| **Ledger integrity** | `lib/threads.mjs` | Story-ledger schema validation; a broken ledger blocks publishing |
 | **Delivery de-dup** | `feishu-notify.yml` | Delivers only on the day's report commit, preventing duplicate cards; plus a concurrency lock |
 | **Missed-run alert** | `daily-watchdog.yml` | Self-checks after the expected publish time; alerts if no report ran, preventing a silent missed day |
-| **Delivery retry** | `deliver.mjs` | Auto-retries transient channel failures so cards aren't dropped |
+| **Delivery retry** | `lib/deliver.mjs` | Auto-retries transient channel failures so cards aren't dropped |
 
 ---
 
@@ -81,13 +81,13 @@ Before each publish, an *Editor's Self-Review* (publicly archived) is produced: 
 ```
 Scheduling   Cloud Routine (daily)
    │
-Content      generate.md (score → thread → weave → self-review) + build-html.mjs (magazine render)
+Content      generate.md (score → thread → weave → self-review) + lib/build-html.mjs (magazine render)
    │           ├─ State: threads.json (story ledger)
-   │           └─ Gates: check-freshness.mjs / threads.mjs
+   │           └─ Gates: lib/check-freshness.mjs / lib/threads.mjs
    │
 Hosting      GitHub Pages (one public URL, channel-agnostic)
    │
-Delivery     GitHub Actions → deliver.mjs (de-dup / retry) → channels (Feishu + Slack)
+Delivery     GitHub Actions → lib/deliver.mjs (de-dup / retry) → channels (Feishu + Slack)
    └─ Safety net: daily-watchdog.yml
 ```
 

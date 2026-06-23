@@ -19,7 +19,7 @@ BSC 上的 perp DEX，对标 GMX/Hyperliquid。28 交易对：7 Crypto / 10 Fore
 
 ## 步骤 0 · 加载信源注册表
 
-读 `sources.json`，按**四层架构**组织监控账号：
+读 `config/sources.json`，按**四层架构**组织监控账号：
 - `official` 官方主号 → 事实（上市/新功能/perp/市场/治理）
 - `founder` 创始人/核心角色 → **提前信号**（常先于官方爆料）
 - `media` 媒体 → 覆盖面与大事件
@@ -40,30 +40,30 @@ BSC 上的 perp DEX，对标 GMX/Hyperliquid。28 交易对：7 Crypto / 10 Fore
 
 读 `threads.json`（故事线台账），并跑一次：
 ```bash
-node threads.mjs   # 校验台账结构 + 打印"今天到期该复盘的活跃线 / 该转 dormant 的线"
+node lib/threads.mjs   # 校验台账结构 + 打印"今天到期该复盘的活跃线 / 该转 dormant 的线"
 ```
 台账记录了所有**正在追踪的重要故事线**（S 级≥90 或有多周叙事潜力的事件，见步骤 1.3）。它的意义：让重要信息**不因读者漏看某天而断裂**——把分散在各天的进展串成一条连续叙事。今天的报告必须：
 - 知道**哪些线还活着**（status=active），它们的论点(thesis)、对我们的含义(why_us)、该盯什么(watch_for)；
-- 知道**哪些线今天 next_check 到期**（threads.mjs 会列出）——这些线今天必须主动复盘：有新进展就更新并 recall，没进展就给一句有信息量的状态或转 dormant（见步骤 1.4）。
+- 知道**哪些线今天 next_check 到期**（lib/threads.mjs 会列出）——这些线今天必须主动复盘：有新进展就更新并 recall，没进展就给一句有信息量的状态或转 dormant（见步骤 1.4）。
 
 ## 步骤 0.7 · 拉数据快照（数字参照系，免费无需 key）
 
 ```bash
-node fetch-data.mjs   # 写 data/market.json（CoinGecko 免费：各家 perp OI/量、BTC/ETH/SOL/HYPE 价与24h、全市场市值与BTC占比）
+node lib/fetch-data.mjs   # 写 data/market.json（CoinGecko 免费：各家 perp OI/量、BTC/ETH/SOL/HYPE 价与24h、全市场市值与BTC占比）
 ```
 报告里**任何量级数字优先用 data/market.json 的真实值**，并给参照系（谁第几、24h/7d 怎么变、创纪录还是常态），
-再用 sources.json 的 `data_pages`（DefiLlama perps / CoinGecko derivatives 网页）交叉核对。**不要凭印象编数字。**
-**同时读 `benchmarks.md`**——它定义了 perp DEX 量/OI/费用的高中低梯队；每个数字都要据此判"统治/头部/腰部/新锐/平平"，而不是干报一个数。
+再用 config/sources.json 的 `data_pages`（DefiLlama perps / CoinGecko derivatives 网页）交叉核对。**不要凭印象编数字。**
+**同时读 `config/benchmarks.md`**——它定义了 perp DEX 量/OI/费用的高中低梯队；每个数字都要据此判"统治/头部/腰部/新锐/平平"，而不是干报一个数。
 
 ## 步骤 1 · 联网调研
 
-**先拉实时 RSS 线索池（替代读不到的推文）**：无 X API，但 `sources.json` 的 `feeds.rss`（7 个实测可用的免费源：Cointelegraph / CoinDesk / The Block / Decrypt / The Defiant / Wu Blockchain / BlockTempo）会分钟级报道项目方在 X 发的重大动态，等于间接拿到推特实时面。**用 WebFetch 逐个抓这些 feed url**（勿写 node 脚本，云端 WebFetch 工具不受出口白名单限制），筛出近 24-72h 的条目当线索；命中 perp/launchpad 重大事件后，**按 `sourcing_rule` 回溯到事件主体的官方页**作为最终来源 url。`feeds.api_pending_key` 的 CryptoPanic（聚合 CT/项目方 X 帖、最接近推特实时面）等 `CRYPTOPANIC_TOKEN` 到位后启用。
+**先拉实时 RSS 线索池（替代读不到的推文）**：无 X API，但 `config/sources.json` 的 `feeds.rss`（7 个实测可用的免费源：Cointelegraph / CoinDesk / The Block / Decrypt / The Defiant / Wu Blockchain / BlockTempo）会分钟级报道项目方在 X 发的重大动态，等于间接拿到推特实时面。**用 WebFetch 逐个抓这些 feed url**（勿写 node 脚本，云端 WebFetch 工具不受出口白名单限制），筛出近 24-72h 的条目当线索；命中 perp/launchpad 重大事件后，**按 `sourcing_rule` 回溯到事件主体的官方页**作为最终来源 url。`feeds.api_pending_key` 的 CryptoPanic（聚合 CT/项目方 X 帖、最接近推特实时面）等 `CRYPTOPANIC_TOKEN` 到位后启用。
 
-再用 WebSearch / WebFetch，按 sources.json 的账号 + 关键词（"perp"、"new feature"、"launch"、"testnet"、"governance"、"buyback"、"early access" 等）补检索过去 24-48h 动态。
+再用 WebSearch / WebFetch，按 config/sources.json 的账号 + 关键词（"perp"、"new feature"、"launch"、"testnet"、"governance"、"buyback"、"early access" 等）补检索过去 24-48h 动态。
 **收录门槛：这条能不能改变一个判断、或更新一个认知？不能就不收。** perp DEX 主栏要够份量（3-5 条）；**Launchpad / Crypto / AI 是非主场栏目，当天没有 ≤72h 的真新闻就整栏省略，绝不用旧闻或边角料凑数**——「条数」从来不是目标，宁可全报只有 perp 主栏 + 启发栏。慢新闻日靠「本周主线」趋势综述（≤7天）补深度，不靠翻旧账补条数。
 
 1. **Perp DEX（主栏目，份量最重）**：成交量/费用/OI/新市场/激励/治理/代币经济。
-   信源：sources.json 中 `themes` 含 `perp` 的官方+founder（Hyperliquid/HyperFND、GMX、dYdX、Aster、Lighter、Ostium、Avantis、Variational、Jupiter…）、DefiLlama Derivatives 交叉验证 volume、媒体(The Block/CoinDesk)。
+   信源：config/sources.json 中 `themes` 含 `perp` 的官方+founder（Hyperliquid/HyperFND、GMX、dYdX、Aster、Lighter、Ostium、Avantis、Variational、Jupiter…）、DefiLlama Derivatives 交叉验证 volume、媒体(The Block/CoinDesk)。
 2. **Launchpad（单独成栏）**：发射台新机制/工具——**迁移机制、creator fee、airdrop、PK 机制**。信源：pump.fun、GMGN，竞品层 Moonshot/Four.meme/SunPump/Clanker。
 3. **Crypto**：交易所(Binance/OKX/Bybit)新功能、BTC/ETH、ETF 资金流、宏观、on-chain(Glassnode/Lookonchain)。
 4. **AI**：AI builders 产品/模型/工具链（可复用 follow-builders skill 的 feed，或 WebSearch 当天要闻）。
@@ -73,18 +73,18 @@ node fetch-data.mjs   # 写 data/market.json（CoinGecko 免费：各家 perp OI
 - **`date` 必须经 WebFetch 来源页核实后填写，严禁凭印象/猜测/为通过时效门槛而编一个「近几天」的日期**（🔴最高优先级铁律，曾多次翻车）：
   - 写每条新闻前，**WebFetch 它的 source url，从页面读到真实发布日期**（byline / pubDate / "published on"），`date` 字段 = 这个真实日期，一字不改。
   - **来源页打不开 / 403 / 读不到明确发布日 → 这条直接不收**，绝不蒙一个日期顶上。可换一个能打开的同事件来源（feeds.rss 里的、或官方页），核实到真实日期再收。
-  - URL 自带日期的（如 `/2026/01/29/`、`/2026-01-29-`），`date` 必须与之一致；`check-freshness.mjs` 会做 url 内嵌日期 vs date 字段的交叉校验，差 >2 天直接判「造假」阻断发布。
+  - URL 自带日期的（如 `/2026/01/29/`、`/2026-01-29-`），`date` 必须与之一致；`lib/check-freshness.mjs` 会做 url 内嵌日期 vs date 字段的交叉校验，差 >2 天直接判「造假」阻断发布。
   - ⚠️ 反面教训（真实事故）：把 The Block 2025-12-19、CCN 2026-03-18、BlockEden 2026-01-29、Investing 2026-06-03 的旧文统统标成 2026-06-20/21 当新闻发——这是最严重的事故，比漏发还糟。**宁可整份报告只有 2 条真新闻，也不许一条假日期。**
 - **`date` 的定义 = 事件实际发生 / 官方宣布的那一天**（YYYY-MM-DD），**不是聚合站转载文章的发布日**；但取的必须是真实可核实的日期，分不清就取"事件主体官宣"那天，仍要能在某个可打开的页面上查到。
 - **时效门槛（混合制，最重要）**：
   - **新闻条目**：`date` 必须在**最近 72 小时内**。更早的不单独成条；仅当是理解今天某条的必要背景，才在该条 body 里**一句话带过并标「(背景，MM-DD)」**。
   - **本周主线（趋势例外）**：每期可有 **≤ 1–2 条**「本周主线」条目，把**近 7 天**的一组相关发展**归并成趋势综述**——条件：① body 写成趋势演化（不是单一旧事件复述）② headline 前缀标「本周主线 ｜」③ `date` 取这组最新一笔且 ≤7 天 ④ body 点出"这周在发生什么结构性变化"。慢新闻日靠它补分量，**但绝不能用它把单条旧闻洗成新闻**。
   - 发布前逐条查 date：>72h 且非「本周主线」的独立条目一律砍；>7 天一律砍（反例：3 个月前 OKX、7 周前 Ostium——禁止）。
-  - **机械关卡兜底**：`publish.sh` 第 0 步会跑 `check-freshness.mjs`，对**新闻栏(perpdex/launchpad/crypto/ai)**逐条算「今天 − date」，>3 天(非本周主线)或 >7 天(本周主线)**直接退出码 1 阻断发布**。这不是靠自觉——关卡会拦，被拦了就回来砍/降级/改写本周主线，别试图绕过。
+  - **机械关卡兜底**：`publish.sh` 第 0 步会跑 `lib/check-freshness.mjs`，对**新闻栏(perpdex/launchpad/crypto/ai)**逐条算「今天 − date」，>3 天(非本周主线)或 >7 天(本周主线)**直接退出码 1 阻断发布**。这不是靠自觉——关卡会拦，被拦了就回来砍/降级/改写本周主线，别试图绕过。
   - **启发栏(hertzflow)豁免时效、且页面不显示日期**：它是研判综述，可引用较老来源（如某趋势的代表性事件）；build-html 对启发栏不渲染 `date`，所以不会让页面挂出老日期被误读为旧闻。但启发本身必须是**当下成立**的判断，不能拿过期结论当新洞察。
   - **今天 = 系统权威日期**：以 `publish.sh` 的 `TZ=Asia/Shanghai date +%F` 为唯一"今天"，不要凭印象判断年份/月份。检索时主动在 query 带当前年月、用 WebSearch 的近期时间窗，优先采信明确标注近 3 天日期的结果；搜到的旧文（哪怕被反复索引）一律按其真实事件日判定，过期就砍。
-- **数字判读（对照 benchmarks.md）**：量级数字先读 `data/market.json`，再**按 benchmarks.md 归梯队**（统治/头部/腰部/新锐/平平），写明"相对谁、增速如何"；新所高量必须标尺度（约龙头的 X%），不许暗示比肩 Hyperliquid。只吹名义量不提 OI/费用/真实用户的，标"待核实质量"。数字无参照系就删。
-- **一手优先**（见 sources.json `sourcing_rule`）：事件以官方页(blog/docs/governance/announcement)为准，聚合站只用于发现线索。
+- **数字判读（对照 config/benchmarks.md）**：量级数字先读 `data/market.json`，再**按 config/benchmarks.md 归梯队**（统治/头部/腰部/新锐/平平），写明"相对谁、增速如何"；新所高量必须标尺度（约龙头的 X%），不许暗示比肩 Hyperliquid。只吹名义量不提 OI/费用/真实用户的，标"待核实质量"。数字无参照系就删。
+- **一手优先**（见 config/sources.json `sourcing_rule`）：事件以官方页(blog/docs/governance/announcement)为准，聚合站只用于发现线索。
 - **无 X API**：handle 只是搜索线索，**不能假装读到原始推文**；无可引用网页出处的观点标"待核实"或不收。
 - 客观克制，不喊单、不做投资建议。中英文信源并用。
 
@@ -114,8 +114,8 @@ node fetch-data.mjs   # 写 data/market.json（CoinGecko 免费：各家 perp OI
 
 **A. 更新台账 `threads.json`（写状态）**
 - 今天的 S 级新闻（或 A 级且持续性高）→ 命中已有线就 `log` 追加一条 delta(只记新增，不复述) + 更新 `last_update`/`next_check`(=今天+cadence)；否则**新建一条线**(id/title/score/tier/thesis/why_us/watch_for/log)。
-- `threads.mjs` 列出的**到期线**(next_check≤今天)：核实有无新进展——有→更新；无但有意义的状态(关键节点临近/该来的没来)→记一句；**连续两个 cadence 无进展→转 `dormant`**；已了结(裁定出了/事件落地)→转 `closed` 并写一句收尾。
-- 改完 `threads.json` 后**务必再跑一次 `node threads.mjs` 确认结构合法**（publish.sh 也会卡）。
+- `lib/threads.mjs` 列出的**到期线**(next_check≤今天)：核实有无新进展——有→更新；无但有意义的状态(关键节点临近/该来的没来)→记一句；**连续两个 cadence 无进展→转 `dormant`**；已了结(裁定出了/事件落地)→转 `closed` 并写一句收尾。
+- 改完 `threads.json` 后**务必再跑一次 `node lib/threads.mjs` 确认结构合法**（publish.sh 也会卡）。
 
 **B. 串进当天报告（写呈现）—— 两个机制，分工不重叠**
 1. **内联回扣（inline callback）**：当天某条新闻属于某条活跃线时，在它 body 里用一句话点明它在叙事弧里的位置，例：`（CME-CFTC 线 · 自 06-19 · 第 3 个进展）今日 X`。这是"如数家珍"的叙事织入，让新闻有纵深。
@@ -162,9 +162,9 @@ node fetch-data.mjs   # 写 data/market.json（CoinGecko 免费：各家 perp OI
 - **统一口吻 + house view**：有观点有立场，去掉八股套话。
 
 **产出《编辑自评》文件**（证明确实 argue 过自己，供主编审计）——写到仓库根目录固定文件名 `review.draft.md`（**不要自己算日期、不要带日期**；publish.sh 会按权威日期改名落到 `docs/archive/<date>-review.md`），Markdown，含三段：
-- **A 体检报告**：先做**时效自查**——**必须逐条覆盖 content.json 里的每一个条目（含启发栏），表格行数 = item 总数，不许只抽几条叙述**；每行列 `headline / 栏目 / date字段 / 我WebFetch来源页读到的真实发布日(verbatim, 写明从哪句话读到) / 二者是否一致 / 距今天数 / 处理`。**date 字段与来源页真实发布日必须逐条一致**，不一致即造假事故，当场改正或砍掉；来源页打不开无法核实的条目一律砍。>72h 的独立新闻必须已砍、降级为背景、或属「本周主线」且 ≤7 天。**自查结论必须与 `check-freshness.mjs` 的输出一致**（关卡过了才算数，没过就是没做完）。再六视角各 1-2 条最尖锐问题（指到具体条目）+ 十维度打分（信噪比/排序/洞察vs搬运/纵深/可行动性/准确溯源/叙事连贯/可读性/house view/简洁度，各 1-10 分一句话理由）+ 圈出"今天必须改的 Top 3"。
+- **A 体检报告**：先做**时效自查**——**必须逐条覆盖 content.json 里的每一个条目（含启发栏），表格行数 = item 总数，不许只抽几条叙述**；每行列 `headline / 栏目 / date字段 / 我WebFetch来源页读到的真实发布日(verbatim, 写明从哪句话读到) / 二者是否一致 / 距今天数 / 处理`。**date 字段与来源页真实发布日必须逐条一致**，不一致即造假事故，当场改正或砍掉；来源页打不开无法核实的条目一律砍。>72h 的独立新闻必须已砍、降级为背景、或属「本周主线」且 ≤7 天。**自查结论必须与 `lib/check-freshness.mjs` 的输出一致**（关卡过了才算数，没过就是没做完）。再六视角各 1-2 条最尖锐问题（指到具体条目）+ 十维度打分（信噪比/排序/洞察vs搬运/纵深/可行动性/准确溯源/叙事连贯/可读性/house view/简洁度，各 1-10 分一句话理由）+ 圈出"今天必须改的 Top 3"。
 - **A2 评分表**（评分机制审计）：逐条列今天**所有候选**新闻的 5 维评分 `结构性/相关度/持续性/可行动性/量级×可信度 → 合计 → 级别(S/A/B/砍)`，并标注哪些建了线/更新了线。证明取舍和建线有据，不是拍脑袋。
-- **A3 故事线连续性检查**（threading 审计）：① `threads.mjs` 列出的到期线今天都处理了吗(更新/状态/转 dormant，逐条交代)；② 当天「持续追踪」块和内联回扣有没有**只写 delta、无复述**；③ 有没有该串没串、或硬串显冗余的——指出并修正。`threads.json` 改完已重跑 `threads.mjs` 通过。
+- **A3 故事线连续性检查**（threading 审计）：① `lib/threads.mjs` 列出的到期线今天都处理了吗(更新/状态/转 dormant，逐条交代)；② 当天「持续追踪」块和内联回扣有没有**只写 delta、无复述**；③ 有没有该串没串、或硬串显冗余的——指出并修正。`threads.json` 改完已重跑 `lib/threads.mjs` 通过。
 - **B 不收录清单**：今天砍掉/没收的素材 3-5 条，每条一句话说明为什么砍（砍 > 加，要有取舍痕迹）。
 - **C changelog**：相对初稿改了什么、为什么，3-5 条。
 

@@ -51,4 +51,4 @@ jobs:
           URL=$(node -e "console.log(require('./docs/latest.json').url)")
           LEAD=$(node -e "console.log(require('./docs/latest.json').lead)")
           echo "发送: $TITLE -> $URL"
-          node deliver.mjs "$TITLE" "$URL" "$LEAD"
+          node lib/deliver.mjs "$TITLE" "$URL" "$LEAD"

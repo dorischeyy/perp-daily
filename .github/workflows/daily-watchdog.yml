@@ -34,7 +34,7 @@ jobs:
           if [ -z "$FEISHU_WEBHOOK" ] && [ -z "$SLACK_WEBHOOK" ]; then
             echo "::error::无可用 webhook，告警都发不出去"; exit 1
           fi
-          node deliver.mjs \
+          node lib/deliver.mjs \
             "⚠️ Perp 日报今日($TODAY)未生成" \
             "$ROUTINE_URL" \
             "云端 Routine 可能失败/未跑/被时效关卡挡住（最新报告仍是 $LATEST）。请打开 Routine 管理页查看 run 日志并手动重跑；或本机 cd ~/perp-daily 手动补发。"

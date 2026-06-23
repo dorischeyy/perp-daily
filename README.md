@@ -21,9 +21,9 @@ Four decoupled layers, each independent of the delivery channel — so "Feishu t
 
 | Layer | Files | Channel-independence |
 |-------|-------|----------------------|
-| Content | `generate.md` + `build-html.mjs` | Produces content JSON + HTML, channel-agnostic |
+| Content | `generate.md` + `lib/build-html.mjs` | Produces content JSON + HTML, channel-agnostic |
 | Hosting | GitHub Pages | Produces **one public URL**, deliverable anywhere |
-| Delivery | `deliver.mjs` + `channels.json` | Fans out to every enabled channel; **add a channel = edit config, not code** |
+| Delivery | `lib/deliver.mjs` + `config/channels.json` | Fans out to every enabled channel; **add a channel = edit config, not code** |
 | Scheduling | Cloud Routine (`/schedule`) | Indifferent to channels coming and going |
 
 ## Pipeline decoupling (atomic & resumable)
@@ -45,29 +45,29 @@ If any downstream step fails, re-run only that stage — never re-research. See 
 |------|------|
 | `generate.md` | The full daily instruction set the cloud Routine executes (research → score → thread → self-review → render → publish → deliver) |
 | `METHODOLOGY.md` | Editorial methodology: scoring rubric + story threading + integrity gates |
-| `sources.json` | Source registry (official / founder / media / kol / data × region × topic) + a real-time RSS feed layer |
+| `config/sources.json` | Source registry (official / founder / media / kol / data × region × topic) + a real-time RSS feed layer |
 | `threads.json` | **Story ledger** — persistent cross-day state (score / thesis / cadence / development log) |
-| `threads.mjs` | Ledger QA — schema validation + "threads due for review today" reminder |
-| `check-freshness.mjs` | Freshness + anti-fabrication gate (news ≤72h; URL-embedded date vs `date` cross-check) |
-| `build-html.mjs` | Content JSON → single-file magazine HTML (incl. the Story Threads block; zero dependencies) |
-| `deliver.mjs` | Channel-agnostic delivery — reads `channels.json`, fans out to enabled channels (Feishu/Slack adapters + retry) |
+| `lib/threads.mjs` | Ledger QA — schema validation + "threads due for review today" reminder |
+| `lib/check-freshness.mjs` | Freshness + anti-fabrication gate (news ≤72h; URL-embedded date vs `date` cross-check) |
+| `lib/build-html.mjs` | Content JSON → single-file magazine HTML (incl. the Story Threads block; zero dependencies) |
+| `lib/deliver.mjs` | Channel-agnostic delivery — reads `config/channels.json`, fans out to enabled channels (Feishu/Slack adapters + retry) |
 | `.github/workflows/` | `feishu-notify.yml` (de-duplicated delivery) + `daily-watchdog.yml` (missed-run alert) |
-| `channels.sample.json` / `content.sample.json` | Sample channel / content JSON schemas |
+| `config/channels.sample.json` / `config/content.sample.json` | Sample channel / content JSON schemas |
 | `out/` | Daily artifacts (HTML) |
 
 ## Local preview (no credentials needed)
 
 ```bash
-node build-html.mjs content.sample.json   # → out/perp-daily-<date>.html
+node lib/build-html.mjs config/content.sample.json   # → out/perp-daily-<date>.html
 open out/perp-daily-<date>.html
 ```
 
 ## Delivery channels
 
-Credentials are never committed — `channels.json` references webhooks as `"env:VAR"`, and delivery runs on a GitHub Actions runner using repository secrets (`FEISHU_WEBHOOK`, `SLACK_WEBHOOK`).
+Credentials are never committed — `config/channels.json` references webhooks as `"env:VAR"`, and delivery runs on a GitHub Actions runner using repository secrets (`FEISHU_WEBHOOK`, `SLACK_WEBHOOK`).
 
 - **Feishu** — target group → Settings → Bots → Custom Bot → copy the webhook → store as repo secret `FEISHU_WEBHOOK`.
-- **Slack** — api.slack.com/apps → Create an App (from scratch) → Incoming Webhooks → Add New Webhook to Workspace → pick a channel → copy the URL → store as repo secret `SLACK_WEBHOOK`. Set the slack entry in `channels.json` to `"enabled": true`. **No code changes.**
+- **Slack** — api.slack.com/apps → Create an App (from scratch) → Incoming Webhooks → Add New Webhook to Workspace → pick a channel → copy the URL → store as repo secret `SLACK_WEBHOOK`. Set the slack entry in `config/channels.json` to `"enabled": true`. **No code changes.**
 
 ## Hosting & scheduling
 
