@@ -54,7 +54,8 @@ If any downstream step fails, re-run only that stage — never re-research. See 
 | `test/` + `package.json` | Zero-dependency unit tests — `npm test` (Node's built-in runner) |
 | `.github/workflows/ci.yml` | CI: syntax check + unit tests + gate smoke on every code push |
 | `lib/deliver.mjs` | Channel-agnostic delivery — reads `config/channels.json`, fans out to enabled channels (Feishu/Slack adapters + retry) |
-| `.github/workflows/` | `feishu-notify.yml` (de-duplicated delivery) + `daily-watchdog.yml` (missed-run alert) |
+| `lib/check-feeds.mjs` | RSS feed health check (dead/stale/unreachable detection) |
+| `.github/workflows/` | `feishu-notify.yml` (delivery) · `market-data.yml` (pre-fetch CoinGecko → `docs/market.json`) · `daily-watchdog.yml` (missed-run) · `feed-health.yml` (RSS health). Ops alerts go via Action-failure → GitHub, not the report channels |
 | `config/channels.sample.json` / `config/content.sample.json` | Sample channel / content JSON schemas |
 | `out/` | Daily artifacts (HTML) |
 

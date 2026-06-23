@@ -62,7 +62,8 @@
 
 ## 4. 每天发生什么（正常时序）
 
-1. 08:03 北京，云端 Routine 触发。
+0. 07:30 北京，`market-data` Action 在 runner 上拉 CoinGecko 快照、提交 `docs/market.json`（绕过云端出口墙，让日报有真实数字）。
+1. 08:03 北京，云端 Routine 触发（clone 时即读到 07:30 提交的 docs/market.json）。
 2. 约 5–15 分钟后，仓库出现新 commit `report: YYYY-MM-DD`（含当天 html + 自评 + latest.json）。
 3. GitHub Pages 约 1 分钟后更新网页。
 4. GitHub Actions "Notify (Feishu + Slack)" 触发（绿勾），飞书 + Slack 收到卡片。
@@ -74,12 +75,15 @@
 |------|------|------|
 | **内容结构校验** | lib/validate-content.mjs（publish.sh validate 第一步） | 校验 content.json 字段齐全/URL 合法/日期格式，**坏结构阻断发布**，防漏到渲染崩溃 |
 | **单元测试 + CI** | test/ + ci.yml | 每次代码 push 自动跑语法检查+单测+关卡冒烟，**坏提交进不了云端** |
-| **去重** | feishu-notify.yml 的 Gate 步 | 只在 `report:` 提交或手动触发(workflow_dispatch)时投递；对 latest.json 的其它改动(chore 重推/修订标记)跳过，**防一天多条**。再加 `concurrency` 防并发双发 |
-| **兜底告警** | daily-watchdog.yml（cron 10:30 北京） | 检查 `latest.json.date == 今天`，否则发「⚠️ 今日未生成」告警卡，**防云端 Routine 静默失败漏一天** |
-| **投递重试** | lib/deliver.mjs send() | curl 瞬时失败自动重试 3 次(2s/4s 退避)，**防飞书/Slack 抖动丢卡** |
+| **行情预拉** | market-data.yml（cron 07:30 北京） | runner 拉 CoinGecko 提交 `docs/market.json`，**绕过云端出口墙**，让日报有真实数字（agent 读时先查 fetched_at，非今天按待核实） |
+| **去重** | feishu-notify.yml 的 Gate 步 | 只在 `report:` 提交或手动触发(workflow_dispatch)时投递；对 latest.json 的其它改动跳过，**防一天多条**。再加 `concurrency` 防并发双发 |
+| **漏报兜底** | daily-watchdog.yml（cron 10:30 北京） | 检查 `latest.json.date == 今天`，否则**让 Action 失败 → GitHub 自动邮件通知 owner**（不发飞书/Slack——那俩只接收日报）。防云端 Routine 静默失败漏一天 |
+| **源健康监控** | feed-health.yml（cron 周一 09:00 北京） | 抓 feeds.rss，失活/陈旧/不可达就**让 Action 失败 → GitHub 通知**（同样不发飞书/Slack）。防源静默失活、日报少一路 |
+| **投递重试** | lib/deliver.mjs send() | curl 瞬时失败自动重试 3 次，**防飞书/Slack 抖动丢卡** |
 | **push 防假成功** | publish.sh | docs 无变更 / rebase 失败 / push 失败 都 `exit 1` 报错，**不再谎报「✅ 完成」** |
 
-> 手动强制补发一次（绕过去重）：仓库 Actions 页 → "Notify (Feishu + Slack)" → Run workflow（或 `gh workflow run feishu-notify.yml`）。
+> **告警渠道原则**：飞书/Slack **只发日报**；所有运维告警（漏报、源失活、CI 失败）走 **GitHub Action 失败 → GitHub 邮件/Actions 页**，不污染日报渠道。
+> 手动强制补发一次（绕过去重）：仓库 Actions 页 → "Notify (Feishu + Slack)" → Run workflow。
 
 ## 4.6 阶段化 resume（哪步坏跑哪步，不浪费 token）
 

@@ -46,12 +46,12 @@ node lib/threads.mjs   # 校验台账结构 + 打印"今天到期该复盘的活
 - 知道**哪些线还活着**（status=active），它们的论点(thesis)、对我们的含义(why_us)、该盯什么(watch_for)；
 - 知道**哪些线今天 next_check 到期**（lib/threads.mjs 会列出）——这些线今天必须主动复盘：有新进展就更新并 recall，没进展就给一句有信息量的状态或转 dormant（见步骤 1.4）。
 
-## 步骤 0.7 · 拉数据快照（数字参照系，免费无需 key）
+## 步骤 0.7 · 读数据快照（数字参照系，免费无需 key）
 
-```bash
-node lib/fetch-data.mjs   # 写 data/market.json（CoinGecko 免费：各家 perp OI/量、BTC/ETH/SOL/HYPE 价与24h、全市场市值与BTC占比）
-```
-报告里**任何量级数字优先用 data/market.json 的真实值**，并给参照系（谁第几、24h/7d 怎么变、创纪录还是常态），
+**读 `docs/market.json`**（CoinGecko 免费：各家 perp OI/量、BTC/ETH/SOL/HYPE 价与24h、全市场市值与BTC占比）。
+这个文件由 **`market-data` GitHub Action 在出报前(北京 07:30)预拉提交**——因为云端沙箱出口白名单挡了 api.coingecko.com，**你（云端 agent）自己跑 `node lib/fetch-data.mjs` 会被墙、拉不到，不要在云端跑它**（本机测试才跑）。
+> ⚠️ **防陈旧（重要）**：用之前先看 `docs/market.json` 的 `fetched_at`——**若不是今天（北京）**，说明预拉那次失败、数字是旧的，则**该批数字一律按"待核实"处理，绝不拿昨天的数字当今天报**。文件里带 `*_error` 字段的那组也按待核实。
+报告里**任何量级数字优先用 docs/market.json 的真实值**（且 fetched_at 为今天），并给参照系（谁第几、24h/7d 怎么变、创纪录还是常态），
 再用 config/sources.json 的 `data_pages`（DefiLlama perps / CoinGecko derivatives 网页）交叉核对。**不要凭印象编数字。**
 **同时读 `config/benchmarks.md`**——它定义了 perp DEX 量/OI/费用的高中低梯队；每个数字都要据此判"统治/头部/腰部/新锐/平平"，而不是干报一个数。
 
@@ -87,7 +87,7 @@ node lib/fetch-data.mjs   # 写 data/market.json（CoinGecko 免费：各家 per
   - **机械关卡兜底**：`publish.sh` 第 0 步会跑 `lib/check-freshness.mjs`，对**新闻栏(perpdex/launchpad/crypto/ai)**逐条算「今天 − date」，>3 天(非本周主线)或 >7 天(本周主线)**直接退出码 1 阻断发布**。这不是靠自觉——关卡会拦，被拦了就回来砍/降级/改写本周主线，别试图绕过。
   - **启发栏(hertzflow)豁免时效、且页面不显示日期**：它是研判综述，可引用较老来源（如某趋势的代表性事件）；build-html 对启发栏不渲染 `date`，所以不会让页面挂出老日期被误读为旧闻。但启发本身必须是**当下成立**的判断，不能拿过期结论当新洞察。
   - **今天 = 系统权威日期**：以 `publish.sh` 的 `TZ=Asia/Shanghai date +%F` 为唯一"今天"，不要凭印象判断年份/月份。检索时主动在 query 带当前年月、用 WebSearch 的近期时间窗，优先采信明确标注近 3 天日期的结果；搜到的旧文（哪怕被反复索引）一律按其真实事件日判定，过期就砍。
-- **数字判读（对照 config/benchmarks.md）**：量级数字先读 `data/market.json`，再**按 config/benchmarks.md 归梯队**（统治/头部/腰部/新锐/平平），写明"相对谁、增速如何"；新所高量必须标尺度（约龙头的 X%），不许暗示比肩 Hyperliquid。只吹名义量不提 OI/费用/真实用户的，标"待核实质量"。数字无参照系就删。
+- **数字判读（对照 config/benchmarks.md）**：量级数字先读 `docs/market.json`（fetched_at 须为今天，否则待核实），再**按 config/benchmarks.md 归梯队**（统治/头部/腰部/新锐/平平），写明"相对谁、增速如何"；新所高量必须标尺度（约龙头的 X%），不许暗示比肩 Hyperliquid。只吹名义量不提 OI/费用/真实用户的，标"待核实质量"。数字无参照系就删。
 - **一手优先**（见 config/sources.json `sourcing_rule`）：事件以官方页(blog/docs/governance/announcement)为准，聚合站只用于发现线索。
 - **无 X API**：handle 只是搜索线索，**不能假装读到原始推文**；无可引用网页出处的观点标"待核实"或不收。
 - 客观克制，不喊单、不做投资建议。中英文信源并用。

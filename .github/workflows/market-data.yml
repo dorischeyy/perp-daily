@@ -1,0 +1,36 @@
+name: Market Data Snapshot
+
+# 云端日报沙箱出口白名单挡了 api.coingecko.com，agent 自己拉不到行情 → 数字常只能标"待核实"。
+# 本 Action 在 runner(无出口限制) 上把 CoinGecko 快照拉好、提交到 docs/market.json，
+# 云端 Routine clone 即可读到真实数字。出报前 ~33 分钟跑，抗 GitHub 调度延迟。
+on:
+  schedule:
+    - cron: '30 23 * * *'   # UTC 23:30 = 北京 07:30（日报 Routine 北京 08:03 之前）
+  workflow_dispatch: {}
+
+concurrency:
+  group: market-data
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: 拉 CoinGecko 快照 → docs/market.json
+        run: node lib/fetch-data.mjs docs/market.json
+      - name: 有变更则提交
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/market.json
+          if git diff --cached --quiet; then echo "无变更，跳过"; exit 0; fi
+          git commit -m "data: market snapshot $(TZ=Asia/Shanghai date +%F)"
+          git pull --rebase -q origin main || true
+          git push
