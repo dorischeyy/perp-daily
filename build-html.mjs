@@ -23,6 +23,25 @@ const renderBody = (body) => {
     .join("");
 };
 
+// 「持续追踪 STORY THREADS」：跨日故事线的当前进展地图，紧跟导语之后渲染。
+// 数据来自 content.json.threads（agent 当天从 threads.json 台账里挑出值得呈现的活跃线的展示快照）。
+// 每条 = {title, since, day_n, tier, status, update(今日 delta 或有信息量的状态), watch(下一步看什么)}。
+const renderThreads = (threads) => {
+  if (!Array.isArray(threads) || !threads.length) return "";
+  const row = (t) => `
+        <div class="thread">
+          <div class="thread-t">${esc(t.title)}</div>
+          <div class="thread-meta">自 ${esc(t.since || "")}${t.day_n ? ` · 第 ${esc(String(t.day_n))} 天` : ""}${t.tier ? ` · ${esc(t.tier)} 级` : ""}${t.status && t.status !== "active" ? ` · ${esc(t.status)}` : ""}</div>
+          ${t.update ? `<div class="thread-u">${mdInline(t.update)}</div>` : ""}
+          ${t.watch ? `<div class="thread-w"><b>下一步看：</b>${esc(t.watch)}</div>` : ""}
+        </div>`;
+  return `
+    <section class="threads">
+      <div class="threads-h">持续追踪 · STORY THREADS</div>
+      ${threads.map(row).join("")}
+    </section>`;
+};
+
 // 栏目顺序：Perp DEX 第一，再 Launchpad、Crypto、AI，最后「对 Hertzflow 的启发」(CEO 视角收尾)
 const order = { perpdex: 0, launchpad: 1, crypto: 2, ai: 3, hertzflow: 4 };
 const sections = [...data.sections].sort(
@@ -95,6 +114,20 @@ const html = `<!doctype html>
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 持续追踪 STORY THREADS：跨日叙事线的"当前进展地图" */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
   /* 章节 */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
@@ -142,6 +175,7 @@ const html = `<!doctype html>
       <div class="mast-sub">${dateCN}</div>
     </header>
     ${data.lead ? `<p class="lead">${esc(data.lead)}</p>` : ""}
+    ${renderThreads(data.threads)}
     ${sections.map(renderSection).join("")}
     <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
   </main>

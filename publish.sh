@@ -13,6 +13,12 @@ node check-freshness.mjs content.json "${DATE}" || {
   exit 1
 }
 
+# 0b) 故事线台账结构校验（坏台账阻断，防把跨日状态写烂）+ 打印今日到期该复盘的线
+node threads.mjs "${DATE}" || {
+  echo "⛔ threads.json 结构校验未通过，发布中止。修好台账再重跑。" >&2
+  exit 1
+}
+
 # 1) 渲染 + 自评落档
 mkdir -p docs/archive
 node build-html.mjs content.json "docs/archive/${DATE}.html"
@@ -25,9 +31,9 @@ node -e "const fs=require('fs');const c=JSON.parse(fs.readFileSync('content.json
 # 3) 提交并推送（Pages 发布 + 触发 Actions 发飞书）
 git config user.name "dorischeyy"
 git config user.email "startrail1016@gmail.com"
-git add docs
+git add docs threads.json
 if git diff --cached --quiet; then
-  echo "⚠️ docs 无变更，未生成新提交——今日报告可能没正常产出，请检查。" >&2
+  echo "⚠️ docs/threads 无变更，未生成新提交——今日报告可能没正常产出，请检查。" >&2
   exit 1
 fi
 git commit -m "report: ${DATE}"

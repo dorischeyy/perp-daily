@@ -2,6 +2,17 @@
   "date": "2026-06-20",
   "edition": 1,
   "lead": "Perp DEX 赛道链上永续成交量周环比回暖，Hyperliquid 继续领跑；AI 侧 agent 工具链密集更新；BTC 在区间上沿震荡。",
+  "threads": [
+    {
+      "title": "CME 诉 CFTC：美国永续监管定性",
+      "since": "2026-06-19",
+      "day_n": 2,
+      "tier": "S",
+      "status": "active",
+      "update": "**今日**：CME 主张永续应按 swaps 而非 futures 监管，指 CFTC 橡皮图章批准 Kalshi 首个美国永续期货。这是该线自 06-19 起的第 2 个进展，定性之争升温。",
+      "watch": "庭审排期 / CME 是否申请初步禁令 / CFTC 回应"
+    }
+  ],
   "sections": [
     {
       "id": "perpdex",
@@ -80,7 +91,7 @@
           "body": "Variational($50M)、Ostium、Avantis 集中押注 RWA/商品 perps，且 Avantis 用的正是 ZFP 零费模式——与我们核心差异点正面相撞。建议：① 我们已有贵金属(2)标的，可借商品热度做主推运营；② 跟踪原油是否值得新增 Feed。",
           "source": "Variational 融资 · CoinDesk",
           "url": "https://www.coindesk.com/business/2026/05/21/peer-to-peer-trading-startup-variational-raises-usd50-million-for-real-world-perps-in-funding-round-led-by-dragonfly",
-          "date": "2026-06-19"
+          "date": "2026-05-21"
         }
       ]
     }

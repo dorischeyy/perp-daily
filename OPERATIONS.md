@@ -135,9 +135,17 @@ gh workflow run feishu-notify.yml --repo dorischeyy/perp-daily
 
 ## 9. 改需求去改哪
 
-- **日报内容标准 / 栏目 / 时效 / 自检规则** → `generate.md`（云端每天读它）
+- **日报内容标准 / 栏目 / 时效 / 评分 / 串联 / 自检规则** → `generate.md`（云端每天读它）
+- **编辑方法论（评分体系/故事线/守门，对外说明）** → `METHODOLOGY.md`
+- **故事线台账（在追哪些线、节奏、进展）** → `threads.json`（agent 每天读写；`threads.mjs` 校验+提醒）
 - **盯哪些账号/项目** → `sources.json`
 - **量级判读基准** → `benchmarks.md`
-- **网页样式/排版** → `build-html.mjs`（CSS 在文件内 `<style>`）
+- **网页样式/排版（含「持续追踪」块）** → `build-html.mjs`（CSS 在文件内 `<style>`）
 - **加交付渠道（如 Slack）** → `channels.json` 加一条 + 配 secret；deliver.mjs 已内置 slack 适配器
 - **改这些后云端下次跑自动生效**（云端每次 clone 最新仓库），无需动定时任务；只有改"时间/模型/凭证"才需要改 Routine 本身。
+
+## 10. 编辑机制速查（评分 + 故事线）
+
+- **评分**：每条新闻按 结构性30/相关度25/持续性20/可行动性15/量级×可信度10 打分(0-100)。S≥90 建线追踪，A 75-89 重点，B 60-74 收录，<60 砍。明细落在当天 `<date>-review.md`。
+- **故事线**：S 级或多周叙事事件进 `threads.json`，按 cadence 复盘、跨日 recall。`threads.mjs` 每天列"到期该复盘的线"。呈现=报告顶部「持续追踪」块 + 新闻内联回扣，反冗余铁律(只写 delta、≤3-4 条)。
+- **排错**：报告里故事线串得冗余/漏串 → 看当天 review 的「故事线连续性检查」；台账写坏导致发布被 `threads.mjs` 拦 → 看报错字段修 `threads.json`。完整说明见 `METHODOLOGY.md`。

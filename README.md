@@ -1,9 +1,17 @@
 # perp-daily · Perp DEX 每日杂志风日报
 
-> 🛠 **运维 / 接手 / 排错看这里 → [OPERATIONS.md](OPERATIONS.md)**（完整运行说明 + 故障排查，权威文档）。
+> **不是逐日新闻搬运，是一个分析者在持续追一组叙事。** 系统给每条新闻打分、维护跨日的"故事线台账"、把分散在各天的进展串成连续判断，并用机械关卡守住时效、防造假、防重复、漏报告警。
+>
+> 📐 **编辑方法论（为什么这样产出）→ [METHODOLOGY.md](METHODOLOGY.md)** ｜ 🛠 **运维 / 排错 → [OPERATIONS.md](OPERATIONS.md)**
 
-每天**北京时间 08:03** 自动：联网调研 → 生成中文杂志风 HTML → GitHub Pages 发布网页 + GitHub Actions 发飞书卡片。
-栏目：**Perp DEX（主类别，置顶）→ Launchpad → Crypto → AI →「对 Hertzflow 的启发」**。
+每天**北京时间 08:03** 自动：联网调研 → 评分与建线 → 生成中文杂志风 HTML → GitHub Pages 发布 + GitHub Actions 发飞书 + Slack 卡片；10:30 watchdog 自检漏报。
+栏目：**持续追踪 Story Threads → Perp DEX（主）→ Launchpad → Crypto → AI →「对 Hertzflow 的启发」**。
+
+### 凭什么说"有水平"，不是一句话喂模型的日报
+- **信号评分**：每条新闻按 结构性/相关度/持续性/可行动性/量级×可信度 5 维打分(0-100)，决定取舍、排序、是否长期追踪。
+- **故事线串联**：S 级(≥90)事件建成 `threads.json` 台账，按节奏复盘、跨日 recall，读者不会因漏看某天而断线。反冗余铁律保证"串联"而非"复读"。
+- **机械守门**：时效(≤72h)、防日期造假(URL+WebFetch 双校验)、台账结构校验、投递去重、漏报告警、投递重试，全部脚本强制。
+- **可审计**：每期产出《编辑自评》(评分表 + 时效逐条核对 + 故事线连续性 + 六视角找茬)，公开存档。
 
 ## 设计原则：渠道可迁移
 
@@ -24,12 +32,16 @@
 
 | 文件 | 作用 |
 |------|------|
-| `generate.md` | 云端 Routine 每天执行的完整指令（调研→渲染→发布→交付） |
-| `sources.json` | 信源注册表（四层：official/founder/media/kol/data × 中英区 × 主题），含 core_pool 核心池 |
-| `build-html.mjs` | 内容 JSON → 杂志风单页 HTML（已跑通，无依赖） |
-| `deliver.mjs` | 渠道无关交付：读 `channels.json`，发到所有启用渠道（飞书/Slack 已内置适配器） |
-| `channels.sample.json` | 渠道配置样例（拷成 `channels.json` 用） |
-| `content.sample.json` | 内容 JSON 结构样例 |
+| `generate.md` | 云端 Routine 每天执行的完整指令（调研→评分→建线→串联→自检→渲染→发布→交付） |
+| `METHODOLOGY.md` | 编辑方法论：评分体系 + 故事线串联 + 守门机制（说明"为什么这样产出"） |
+| `sources.json` | 信源注册表（四层：official/founder/media/kol/data × 中英区 × 主题）+ feeds RSS 实时源层 |
+| `threads.json` | **故事线台账**：跨日叙事追踪的持久状态（评分/论点/复盘节奏/进展日志） |
+| `threads.mjs` | 台账机械 QA：结构校验 + 提醒今日到期该复盘的线 |
+| `check-freshness.mjs` | 时效 + 防日期造假关卡（新闻≤72h、URL 内嵌日期 vs date 交叉校验） |
+| `build-html.mjs` | 内容 JSON → 杂志风单页 HTML（含「持续追踪」块渲染，无依赖） |
+| `deliver.mjs` | 渠道无关交付：读 `channels.json` 发到所有启用渠道（飞书/Slack 适配器 + 重试） |
+| `.github/workflows/` | `feishu-notify.yml`(去重投递) + `daily-watchdog.yml`(漏报兜底告警) |
+| `channels.sample.json` / `content.sample.json` | 渠道 / 内容 JSON 结构样例 |
 | `feishu.mjs` | （可选）飞书云文档导入 / 私信 |
 | `out/` | 每日产物（HTML） |
 

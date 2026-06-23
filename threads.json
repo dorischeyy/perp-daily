@@ -1,0 +1,39 @@
+{
+  "_doc": "故事线台账 Story Ledger —— 跨日叙事追踪的持久状态。评分达 S 级(≥90)或有明确多周叙事潜力的新闻在此建线，之后按 cadence 持续追踪、在后续日报里 recall 串联，让重要信息不因读者漏看某天而断裂。每天 generate.md 读它→更新(append 进展/推进 next_check/转 dormant/closed)→把当天值得呈现的活跃线写进 content.json.threads 渲染。threads.mjs 校验 schema 并提醒今天到期该复盘的线。这是把日报从『逐日报道』升级为『连续叙事分析』的状态核心。",
+  "schema": {
+    "id": "kebab-case 唯一标识",
+    "title": "线名(简短)",
+    "score": "建线时的重要性评分 0-100",
+    "tier": "S(≥90)/A(75-89)",
+    "status": "active 活跃 | dormant 蛰伏(暂无进展但未了结) | closed 已了结",
+    "first_seen": "首次出现日 YYYY-MM-DD",
+    "last_update": "最近一次有实质进展的日期",
+    "cadence_days": "复盘节奏(天)：S 级≈3，A 级≈5-7",
+    "next_check": "下次该主动复盘/recall 的日期",
+    "thesis": "这条线的核心论点(为什么重要、在赌什么)",
+    "why_us": "对 Hertzflow 的具体含义",
+    "watch_for": "下一个关键节点/该盯的触发事件",
+    "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
+  },
+  "updated": "2026-06-23",
+  "threads": [
+    {
+      "id": "cme-cftc-perp-classification",
+      "title": "CME 诉 CFTC：美国永续监管定性",
+      "score": 92,
+      "tier": "S",
+      "status": "active",
+      "first_seen": "2026-06-19",
+      "last_update": "2026-06-21",
+      "cadence_days": 3,
+      "next_check": "2026-06-24",
+      "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从『灰色创新』走向『监管确权』的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
+      "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
+      "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
+      "log": [
+        { "date": "2026-06-19", "point": "TD Cowen 研判 CME 在诉讼中占上风，预计 CME 将申请初步禁令暂停 perp 上市", "url": "https://www.theblock.co/post/405446/td-cowen-cme-upper-hand-cftc-lawsuit-crypto-perpetual-futures" },
+        { "date": "2026-06-21", "point": "CME 指 CFTC 未做自有分析、橡皮图章批准 Kalshi 首个美国永续期货，批准令通篇无 swap 一词", "url": "https://www.coindesk.com/policy/2026/06/21/are-perps-swaps-a-quick-look-at-that-cme-suit-state-of-crypto" }
+      ]
+    }
+  ]
+}
