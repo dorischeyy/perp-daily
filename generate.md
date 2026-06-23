@@ -60,6 +60,10 @@ node lib/fetch-data.mjs   # 写 data/market.json（CoinGecko 免费：各家 per
 **先拉实时 RSS 线索池（替代读不到的推文）**：无 X API，但 `config/sources.json` 的 `feeds.rss`（7 个实测可用的免费源：Cointelegraph / CoinDesk / The Block / Decrypt / The Defiant / Wu Blockchain / BlockTempo）会分钟级报道项目方在 X 发的重大动态，等于间接拿到推特实时面。**用 WebFetch 逐个抓这些 feed url**（勿写 node 脚本，云端 WebFetch 工具不受出口白名单限制），筛出近 24-72h 的条目当线索；命中 perp/launchpad 重大事件后，**按 `sourcing_rule` 回溯到事件主体的官方页**作为最终来源 url。`feeds.api_pending_key` 的 CryptoPanic（聚合 CT/项目方 X 帖、最接近推特实时面）等 `CRYPTOPANIC_TOKEN` 到位后启用。
 
 再用 WebSearch / WebFetch，按 config/sources.json 的账号 + 关键词（"perp"、"new feature"、"launch"、"testnet"、"governance"、"buyback"、"early access" 等）补检索过去 24-48h 动态。
+
+**国外为主、国内为辅（主辅原则）**：信息源**以国外优质源为主**（CoinDesk / The Block / Cointelegraph / Decrypt / The Defiant + 项目方官方页）；**国内中文媒体仅作辅助补充**——律动 BlockBeats / Odaily / PANews / 深潮 TechFlow / Foresight News / 链捕手 / 金色 / 吴说 / 动区（见 config/sources.json `region:zh`）。它们多无稳定 RSS，**用 WebSearch 按名字搜当日要闻当线索**，命中后回溯官方/外媒核实日期与事实。国内源的价值主要在：亚洲监管动态、项目方中文首发的上线/融资、中文区竞品动作。
+**只筛主要新闻、跳过细枝末节**：只收**能改变判断的结构性事件**（项目上线 / 新机制 / 融资 / 监管定性 / 大额链上或资金数据 / 竞品格局变化）。**明确跳过**：某 KOL/交易员喊单、纯价格行情评论（"某交易员说 BTC 会到 X"）、谁说了什么的口水、无信息量的日常快讯。你要自己会区分主次。
+
 **收录门槛：这条能不能改变一个判断、或更新一个认知？不能就不收。** perp DEX 主栏要够份量（3-5 条）；**Launchpad / Crypto / AI 是非主场栏目，当天没有 ≤72h 的真新闻就整栏省略，绝不用旧闻或边角料凑数**——「条数」从来不是目标，宁可全报只有 perp 主栏 + 启发栏。慢新闻日靠「本周主线」趋势综述（≤7天）补深度，不靠翻旧账补条数。
 
 1. **Perp DEX（主栏目，份量最重）**：成交量/费用/OI/新市场/激励/治理/代币经济。

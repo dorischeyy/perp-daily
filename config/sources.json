@@ -1,6 +1,6 @@
 {
-  "version": 3,
-  "updated": "2026-06-22",
+  "version": 4,
+  "updated": "2026-06-23",
   "_doc": "日报信源注册表。四层架构：official(官方主号=事实) / founder(创始人=提前信号) / media(媒体=覆盖面) / kol(=解读扩散) / data(链上数据)。generate.md 每天按此表抓取，core_pool 为必看核心池，verify:true 的账号 handle 待核实（先按 name 搜）。status:watch 为有 ban/改名风险需备替补的账号。",
   "layers": {
     "official": "官方主号——发事实：上市、新功能、perp/衍生品、市场、治理公告",
@@ -35,7 +35,7 @@
       { "name": "CryptoPanic", "endpoint": "https://cryptopanic.com/api/developer/v2/posts/?auth_token=${CRYPTOPANIC_TOKEN}&public=true", "themes": ["news", "perp", "exchange"], "note": "聚合大量 CT/项目方 X 帖子，最接近「推特实时面」。需免费 API key——存为 env CRYPTOPANIC_TOKEN（云端 Routine 指令里内嵌或 repo secret）。key 到位前此源不启用，公开 RSS 端点已 403 需 key。" }
     ]
   },
-  "sourcing_rule": "优先一手源：① 数字先看本地 data/market.json（fetch-data.mjs 拉的 CoinGecko 免费数据），再用 data_pages 网页交叉核对；② 事件以「事件主体的官方页面(blog/docs/governance/announcement)」为准——聚合站只用于发现线索，找到后尽量 WebFetch 官方页作为来源 url；③ 无 X API，sources.json 的 handle 仅作搜索线索，不能假装读到了原始推文——但 feeds.rss 是合法的实时线索池，可 WebFetch 直接读，引用时优先回溯到事件主体官方页。",
+  "sourcing_rule": "优先一手源：① 数字先看本地 data/market.json（fetch-data.mjs 拉的 CoinGecko 免费数据），再用 data_pages 网页交叉核对；② 事件以「事件主体的官方页面(blog/docs/governance/announcement)」为准——聚合站只用于发现线索，找到后尽量 WebFetch 官方页作为来源 url；③ 无 X API，sources.json 的 handle 仅作搜索线索，不能假装读到了原始推文——但 feeds.rss 是合法的实时线索池，可 WebFetch 直接读，引用时优先回溯到事件主体官方页；④ 【主辅原则】以国外优质源为主（CoinDesk/The Block/Cointelegraph/Decrypt/The Defiant 等 + 项目方官方），国内中文媒体（律动/Odaily/PANews/深潮/Foresight/链捕手/金色/吴说/动区）仅作辅助补充——它们多无稳定 RSS，用 WebSearch 按 name 搜当日要闻当线索，命中后回溯官方/外媒核实；⑤ 【只筛主要新闻】只收能改变判断的结构性事件：项目上线/新机制/融资/监管定性/大额链上或资金数据/竞品格局变化。明确跳过细枝末节：某 KOL/交易员喊单、纯价格行情评论、谁说了什么的口水、无信息量的日常快讯。",
   "sources": [
     { "handle": "binance", "name": "Binance", "region": "both", "layer": "official", "themes": ["exchange", "perp"], "core": false, "note": "全球+本地公告，perp/衍生品上市" },
     { "handle": "okx", "name": "OKX", "region": "both", "layer": "official", "themes": ["exchange", "perp"], "core": false, "note": "亚洲友好，中文内容多" },
@@ -86,6 +86,13 @@
 
     { "handle": "WuBlockchain", "name": "吴说区块链", "region": "zh", "layer": "media", "themes": ["news", "exchange"], "core": true, "note": "华语主干信源，交易所/项目/监管/突发" },
     { "handle": "BlockTempo", "name": "动区动趋", "region": "zh", "layer": "media", "themes": ["news"], "core": true, "note": "中文老牌媒体，日更高频" },
+    { "handle": "BlockBeatsAsia", "name": "律动 BlockBeats", "region": "zh", "layer": "media", "themes": ["news", "defi"], "core": false, "note": "国内辅助。新闻+研究并重，项目方发稿主力渠道；无稳定 RSS，作 WebSearch 线索；只收主要新闻" },
+    { "handle": "OdailyChina", "name": "Odaily 星球日报", "region": "zh", "layer": "media", "themes": ["news"], "core": false, "note": "国内辅助。36氪背景，资讯/快讯/项目专访，流量大；只收主要新闻，跳过纯快讯口水" },
+    { "handle": "PANewsCN", "name": "PANews", "region": "zh", "layer": "media", "themes": ["news", "defi"], "core": false, "note": "国内辅助。新闻+深度研报，质量高；适合融资/机制/监管类主要新闻" },
+    { "handle": "TechFlowPost", "name": "深潮 TechFlow", "region": "zh", "layer": "media", "themes": ["defi", "news"], "core": false, "note": "国内辅助。偏研究/叙事，投研内容强，KOL 属性；取其结构性研判，非喊单" },
+    { "handle": "Foresight_News", "name": "Foresight News", "region": "zh", "layer": "media", "themes": ["news", "defi"], "core": false, "note": "国内辅助。研究+新闻，英文也强，适合有深度的 launch/机制稿" },
+    { "handle": "ChainCatcher_", "name": "ChainCatcher 链捕手", "region": "zh", "layer": "media", "themes": ["news"], "core": false, "note": "国内辅助。研究+人物访谈；只收主要新闻" },
+    { "handle": "jinsefinance", "name": "金色财经", "region": "zh", "layer": "media", "themes": ["news", "exchange"], "core": false, "note": "国内辅助。老牌门户，流量大、快讯走量；信噪比偏低，只挑确有信息量的主要新闻" },
     { "handle": "FORAB", "name": "AB Kuai.Dong", "region": "zh", "layer": "kol", "themes": ["perp", "exchange"], "core": true, "note": "华语高信噪比，交易生态/平台策略/圈内舆情" },
     { "handle": "zksgu", "name": "Lone Crane.hl", "region": "zh", "layer": "kol", "themes": ["perp", "defi"], "core": false, "note": "perp/DeFi alpha、避坑" },
     { "handle": "CryptoSunova", "name": "CryptoSunova", "region": "zh", "layer": "kol", "themes": ["launchpad"], "core": false, "note": "GMGN 相关 launchpad 工具解读" },
