@@ -1,98 +1,98 @@
-# 编辑方法论 · Editorial Methodology
+# Editorial Methodology
 
-> 这份文档说明本日报**为什么这样产出**。核心立场：日报不是"把今天的新闻复述一遍"，而是**一个分析者在持续追一组叙事**——对每条重要线索的来龙去脉如数家珍，把分散在各天的信息串成连续的判断。下面是支撑这个立场的机制。
-
----
-
-## 0. 一句话定位
-
-> **不是逐日报道，是连续叙事分析。** 读者要带走的不是"今天发生了什么"，而是"正在发生的几条结构性变化走到哪一步了，对我们意味着什么，下一个节点该看什么"。
-
-为此，系统不止生成内容，还**维护状态**（跨日的故事线台账）、**给信号打分**（决定取舍与追踪）、**机械守门**（时效、防造假、防重复、兜底告警）。三者缺一，就退化成"一句话喂给模型的日报"。
+> This document explains **why the daily reads the way it does**. The core stance: a daily is not a re-statement of today's headlines — it is **an analyst tracking a set of narratives**, intimately familiar with the arc of each important story, weaving developments scattered across days into a single line of judgment. The mechanisms below exist to support that stance.
 
 ---
 
-## 1. 信号评分（Importance Scoring）
+## 0. One-line positioning
 
-每条候选新闻按 5 个维度打分（合计 0–100）。打分不是装饰，它**强制取舍、排序、和"要不要长期追踪"的判断有据可依**，并把真正重磅的事识别出来。
+> **Not day-by-day reporting — continuous narrative analysis.** What the reader should take away is not "what happened today," but "where the few structural shifts now under way stand, what they mean for us, and what to watch next."
 
-| 维度 | 满分 | 衡量 |
-|------|------|------|
-| 结构性 Structural | 30 | 是否改变市场结构 / 竞争格局 / 监管定性 / 核心机制 |
-| 相关度 Relevance | 25 | 是否触及本项目核心（perp DEX 机制 / RWA·Forex·美股标的 / 费用模型 / 监管 / 竞品打法） |
-| 持续性 Durability | 20 | 一次性事件，还是多周叙事的线头 |
-| 可行动性 Actionability | 15 | 能否转成具体机会 / 决策 / 风险 |
-| 量级×可信度 Magnitude×Credibility | 10 | 记录级 / 首例 / 官方确认 vs 传言 / 小量 |
-
-**分级**：S（≥90）建故事线长期追踪 · A（75–89）重点条目、持续性高也建线 · B（60–74）正常收录 · <60 砍。
-
-每期的评分明细落在当天的《编辑自评》里（`docs/archive/<date>-review.md`），可审计。
+To deliver that, the system does more than generate content. It **maintains state** (a cross-day story ledger), **scores signal** (to drive selection and tracking), and **enforces integrity mechanically** (freshness, anti-fabrication, de-duplication, missed-run alerting). Remove any one and it degrades into "a daily produced from a one-line prompt."
 
 ---
 
-## 2. 故事线台账与串联（Story Ledger & Threading）
+## 1. Signal scoring
 
-这是本日报区别于"每日新闻搬运"的核心。**重要信息不能因为读者漏看某天就断裂。**
+Every candidate story is scored across five dimensions (0–100 total). Scoring is not decoration — it **forces selection, ordering, and the "track it long-term?" decision to be defensible**, and surfaces what genuinely matters.
 
-### 2.1 台账（持久状态）
-`threads.json` 记录所有正在追踪的故事线，每条含：论点（thesis）、对我们的含义（why_us）、该盯的触发点（watch_for）、复盘节奏（cadence）、下次复盘日（next_check）、按时间的进展日志（log，只记 delta）。它是公开可见的——你可以直接看本日报在追哪几条线、各到了哪一步。
+| Dimension | Max | What it measures |
+|-----------|-----|------------------|
+| Structural | 30 | Does it shift market structure / competitive landscape / regulatory definition / a core mechanism? |
+| Relevance | 25 | Does it touch the project's core (perp-DEX mechanics / RWA·FX·equity markets / fee model / regulation / competitor playbooks)? |
+| Durability | 20 | A one-off event, or the head of a multi-week narrative? |
+| Actionability | 15 | Can it become a concrete opportunity / decision / risk for us? |
+| Magnitude × Credibility | 10 | Record-setting / first-of-kind / officially confirmed vs. rumor / small numbers |
 
-### 2.2 生命周期
+**Tiers**: S (≥90) opens a tracked story thread · A (75–89) lead item, threaded if durable · B (60–74) included · <60 cut.
+
+Each edition's scoring detail is recorded in that day's *Editor's Self-Review* (`docs/archive/<date>-review.md`) and is auditable.
+
+---
+
+## 2. Story ledger & threading
+
+This is what separates the daily from a news relay. **Important information must not break just because a reader missed one day.**
+
+### 2.1 The ledger (persistent state)
+`threads.json` holds every story currently being tracked. Each entry carries: the thesis, the implication for us (`why_us`), the trigger to watch (`watch_for`), a review cadence, the next review date (`next_check`), and a time-ordered development log (deltas only). It is public — anyone can see which threads the daily is tracking and where each one stands.
+
+### 2.2 Lifecycle
 ```
-新 S 级事件 ──建线──▶ active ──(到期复盘: 有进展则更新/串联)──▶ active
-                         │
-                         ├──(连续两个节奏无进展)──▶ dormant（留档不占版面）
-                         └──(事件了结/裁定落地)────▶ closed（一句收尾）
+new S-tier event ──open──▶ active ──(due review: update & recall if there's news)──▶ active
+                              │
+                              ├──(two cadences with no movement)──▶ dormant (kept, off the page)
+                              └──(event resolves / ruling lands)───▶ closed (one closing line)
 ```
-`threads.mjs` 每天机械地列出"今天 next_check 到期、必须复盘"的线，确保不漏追。
+`threads.mjs` mechanically lists, each day, the threads whose `next_check` is due — so nothing slips.
 
-### 2.3 怎么呈现（专业 vs 啰嗦的生死线）
-两个不重叠的机制：
-- **内联回扣**：当天新闻属于某条活跃线时，一句话点明它在叙事弧里的位置（"X 线 · 自 MM-DD · 第 N 个进展"）。让单条新闻有纵深。
-- **「持续追踪」地图**：报告顶部一个紧凑块，列当天值得呈现的活跃线 + 今日 delta + 下一步看什么。让读者一眼看到"正在追的几条线走到哪了"。
+### 2.3 How it surfaces (the line between professional and verbose)
+Two non-overlapping mechanisms:
+- **Inline callback** — when today's story belongs to an active thread, one sentence places it on the arc ("X thread · since MM-DD · 3rd development"). Gives a single story depth.
+- **"Story Threads" map** — a compact block at the top of the report listing the threads worth surfacing today, each with today's delta + what to watch next. Lets the reader see, at a glance, where the tracked stories stand.
 
-**反冗余铁律**：一条线当天只有"有真实新进展"或"到期且有有信息量的状态"才出现；回扣只写 delta、绝不复述旧内容；地图最多 3–4 条。衡量标准是读者的体感——"作者真在跟这件事"，而不是"同一件事又被念一遍"。
-
----
-
-## 3. 完整性守门（Integrity Gates）
-
-机制不靠自觉，靠机械关卡。
-
-| 关卡 | 文件 | 作用 |
-|------|------|------|
-| **时效** | `check-freshness.mjs` | 新闻 ≤72h、本周主线 ≤7 天，超限退出码 1 阻断发布 |
-| **防日期造假** | `check-freshness.mjs` + `generate.md` | URL 内嵌日期 vs date 字段交叉校验；且每条 date 必须 WebFetch 来源页核实真实发布日，读不到就砍。曾发生"把数月前旧文标成今天"的事故，这是针对性防线 |
-| **台账完整性** | `threads.mjs` | 故事线结构校验，坏台账阻断 |
-| **投递去重** | `feishu-notify.yml` | 只在当天报告提交时投递，防一天多条；并发加锁 |
-| **兜底告警** | `daily-watchdog.yml` | 出报时间后自检，没出报就主动告警，防静默漏一天 |
-| **投递重试** | `deliver.mjs` | 渠道瞬时失败自动重试，防丢卡 |
+**Anti-redundancy rule**: a thread appears on a given day only if there is a real new development, or its review is due *and* there is something informative to say. A callback states only the delta, never re-narrates. The map holds at most 3–4 threads. The test is the reader's felt sense — "the author is genuinely following this" — not "that story got repeated again."
 
 ---
 
-## 4. 自检与审计痕迹（Audit Trail）
+## 3. Integrity gates
 
-每期发布前产出一份《编辑自评》（公开存档），包含：时效逐条核对、5 维评分表、故事线连续性检查、六视角找茬、十维度打分、不收录清单、改稿 changelog。**没有自评 = 视为没做自检。** 这让每一天的判断都可回溯、可质疑、可改进。
+Mechanisms run on scripts, not good intentions.
+
+| Gate | File | Function |
+|------|------|----------|
+| **Freshness** | `check-freshness.mjs` | News ≤72h, weekly-thread ≤7d; over the limit exits 1 and blocks publishing |
+| **Anti-fabrication** | `check-freshness.mjs` + `generate.md` | URL-embedded date vs `date` cross-check; and every `date` must be verified against the source page via WebFetch — unverifiable items are cut. Built after a real incident where months-old articles were stamped with today's date |
+| **Ledger integrity** | `threads.mjs` | Story-ledger schema validation; a broken ledger blocks publishing |
+| **Delivery de-dup** | `feishu-notify.yml` | Delivers only on the day's report commit, preventing duplicate cards; plus a concurrency lock |
+| **Missed-run alert** | `daily-watchdog.yml` | Self-checks after the expected publish time; alerts if no report ran, preventing a silent missed day |
+| **Delivery retry** | `deliver.mjs` | Auto-retries transient channel failures so cards aren't dropped |
 
 ---
 
-## 5. 管道架构（Pipeline）
+## 4. Audit trail
+
+Before each publish, an *Editor's Self-Review* (publicly archived) is produced: per-item freshness verification, the five-axis scoring table, the thread-continuity check, a six-lens critique, a ten-dimension scorecard, a not-included list, and a draft changelog. **No self-review = the check was not done.** Every day's judgment is traceable, contestable, and improvable.
+
+---
+
+## 5. Pipeline architecture
 
 ```
-调度层  云端 Routine（每天定时）
+Scheduling   Cloud Routine (daily)
    │
-内容层  generate.md（评分→建线→串联→自检）+ build-html.mjs（杂志风渲染）
-   │      ├─ 状态：threads.json（故事线台账）
-   │      └─ 守门：check-freshness.mjs / threads.mjs
+Content      generate.md (score → thread → weave → self-review) + build-html.mjs (magazine render)
+   │           ├─ State: threads.json (story ledger)
+   │           └─ Gates: check-freshness.mjs / threads.mjs
    │
-托管层  GitHub Pages（一个公网 URL，渠道无关）
+Hosting      GitHub Pages (one public URL, channel-agnostic)
    │
-交付层  GitHub Actions → deliver.mjs（去重/重试）→ 多渠道（飞书 + Slack）
-   └─ 兜底：daily-watchdog.yml
+Delivery     GitHub Actions → deliver.mjs (de-dup / retry) → channels (Feishu + Slack)
+   └─ Safety net: daily-watchdog.yml
 ```
 
-设计原则：**内容与渠道解耦**（加渠道改配置不改码）、**状态与呈现分离**（台账 vs 当天快照）、**判断与守门分离**（模型做判断、脚本做机械校验）。
+Principles: **content decoupled from channel** (add a channel by editing config, not code), **state separated from presentation** (ledger vs. daily snapshot), **judgment separated from gatekeeping** (the model judges, scripts validate).
 
 ---
 
-*本方法论随系统演进更新。每一条规则背后通常都有一次真实的踩坑。*
+*This methodology evolves with the system. Behind most of these rules sits a real lesson learned the hard way.*
