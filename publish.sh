@@ -1,53 +1,64 @@
 #!/usr/bin/env bash
-# publish.sh — 渲染 HTML → 写 latest.json → 推送(触发 Pages + GitHub Actions 发飞书)。
-# 云端沙箱出口白名单不含 open.feishu.cn，所以飞书改由 GitHub Actions 发(见 .github/workflows/feishu-notify.yml)。
-# 用法：bash publish.sh
+# publish.sh — 机械发布管线（零 LLM、零 token）。
+#
+# 解耦原则：昂贵的"调研+评分+生成"(产出 content.json / threads.json / review.draft.md) 是上游，
+# 本脚本只消费这些交接物做"校验→渲染→推送"。content.json 是两段之间的持久交接物，
+# 下游任何一步失败都能"哪步坏跑哪步"单独重跑，绝不需要重新调研。
+#
+# 阶段化用法（可插拔）：
+#   bash publish.sh            # 全流程 validate → render → push
+#   bash publish.sh validate   # 只跑两道关卡(时效 + 台账结构)
+#   bash publish.sh render      # 只渲染 HTML + 落自评 + 写 latest.json
+#   bash publish.sh push        # 只 commit + pull --rebase + push（已 render 过就只补推这步）
+# 交付(发飞书/Slack)是独立的 GitHub Action；它失败用仓库 Actions 页 "Run workflow" 重发，同样不碰生成。
 set -uo pipefail
 
+STAGE="${1:-all}"
 DATE=$(TZ=Asia/Shanghai date +%F)
 URL="https://dorischeyy.github.io/perp-daily/archive/${DATE}.html"
 
-# 0) 时效关卡（机械化，不过则阻断发布；启发栏豁免，新闻≤72h、本周主线≤7天）
-node check-freshness.mjs content.json "${DATE}" || {
-  echo "⛔ 时效关卡未通过，发布中止。请按上方违规条目修 content.json 后重跑。" >&2
-  exit 1
+# 阶段 1：校验关卡（纯只读，可反复跑）
+stage_validate() {
+  node check-freshness.mjs content.json "${DATE}" || {
+    echo "⛔ 时效/防造假关卡未通过。修 content.json 后重跑 \`bash publish.sh validate\`（无需重新调研）。" >&2; return 1; }
+  node threads.mjs "${DATE}" || {
+    echo "⛔ 台账结构校验未通过。修 threads.json 后重跑 \`bash publish.sh validate\`。" >&2; return 1; }
+  echo "✅ validate 通过"
 }
 
-# 0b) 故事线台账结构校验（坏台账阻断，防把跨日状态写烂）+ 打印今日到期该复盘的线
-node threads.mjs "${DATE}" || {
-  echo "⛔ threads.json 结构校验未通过，发布中止。修好台账再重跑。" >&2
-  exit 1
+# 阶段 2：渲染（幂等，可反复跑；只读 content.json，写 docs/）
+stage_render() {
+  mkdir -p docs/archive
+  node build-html.mjs content.json "docs/archive/${DATE}.html" || { echo "⛔ 渲染失败" >&2; return 1; }
+  cp "docs/archive/${DATE}.html" docs/index.html
+  [ -f review.draft.md ] && mv -f review.draft.md "docs/archive/${DATE}-review.md"
+  node -e "const fs=require('fs');const c=JSON.parse(fs.readFileSync('content.json','utf8'));const d='${DATE}';fs.writeFileSync('docs/latest.json',JSON.stringify({date:d,url:'${URL}',title:'Perp DEX 日报 · '+d,lead:c.lead||'今日 Perp DEX 日报'},null,2))" \
+    || { echo "⛔ 写 latest.json 失败" >&2; return 1; }
+  echo "✅ render 完成：docs/archive/${DATE}.html"
 }
 
-# 1) 渲染 + 自评落档
-mkdir -p docs/archive
-node build-html.mjs content.json "docs/archive/${DATE}.html"
-cp "docs/archive/${DATE}.html" docs/index.html
-[ -f review.draft.md ] && mv -f review.draft.md "docs/archive/${DATE}-review.md"
+# 阶段 3：提交+推送（可重入：已 commit 但 push 失败时，重跑只补推）
+stage_push() {
+  git config user.name "dorischeyy"; git config user.email "startrail1016@gmail.com"
+  git add docs threads.json
+  local has_staged=0; git diff --cached --quiet || has_staged=1
+  [ "$has_staged" = 1 ] && { git commit -m "report: ${DATE}" || { echo "⛔ commit 失败" >&2; return 1; }; }
+  git fetch -q origin main 2>/dev/null || true
+  local ahead; ahead=$(git rev-list --count origin/main..HEAD 2>/dev/null || echo 0)
+  if [ "$has_staged" = 0 ] && [ "$ahead" = 0 ]; then
+    echo "⚠️ 无新变更、无待推提交——内容可能没产出或今天已发过，请检查上游。" >&2; return 1
+  fi
+  git pull --rebase -q origin main || {
+    echo "⛔ rebase 失败（冲突/未提交改动）。人工处理后重跑 \`bash publish.sh push\`。" >&2; return 1; }
+  git push origin main || {
+    echo "⛔ push 失败。修 token/网络后重跑 \`bash publish.sh push\`（已 render 过，不会重做）。" >&2; return 1; }
+  echo "✅ push 完成：${URL}（飞书+Slack 由 GitHub Action 投递）"
+}
 
-# 2) 写 latest.json，供 GitHub Actions 读取并发飞书
-node -e "const fs=require('fs');const c=JSON.parse(fs.readFileSync('content.json','utf8'));const d='${DATE}';fs.writeFileSync('docs/latest.json',JSON.stringify({date:d,url:'${URL}',title:'Perp DEX 日报 · '+d,lead:c.lead||'今日 Perp DEX 日报'},null,2))"
-
-# 3) 提交并推送（Pages 发布 + 触发 Actions 发飞书）
-git config user.name "dorischeyy"
-git config user.email "startrail1016@gmail.com"
-git add docs threads.json
-if git diff --cached --quiet; then
-  echo "⚠️ docs/threads 无变更，未生成新提交——今日报告可能没正常产出，请检查。" >&2
-  exit 1
-fi
-git commit -m "report: ${DATE}"
-
-# 同步远端：rebase 失败要报错，不能默默用旧状态硬推
-if ! git pull --rebase -q origin main; then
-  echo "⛔ git pull --rebase 失败（可能有冲突/未提交改动），停止以免推坏。请人工处理。" >&2
-  exit 1
-fi
-
-# push 失败必须让整个脚本失败，不许谎报成功
-if ! git push origin main; then
-  echo "⛔ git push 失败，报告未发布、Action 不会触发。请检查 token/网络后重试。" >&2
-  exit 1
-fi
-
-echo "✅ publish 完成：${URL}（飞书+Slack 由 GitHub Actions 推送）"
+case "$STAGE" in
+  validate|gate) stage_validate || exit 1 ;;
+  render)        stage_render   || exit 1 ;;
+  push|commit)   stage_push     || exit 1 ;;
+  all)           stage_validate && stage_render && stage_push || exit 1 ;;
+  *) echo "未知阶段: ${STAGE} (可选 validate | render | push | all)" >&2; exit 2 ;;
+esac

@@ -201,19 +201,21 @@ publish.sh 会把 `review.draft.md` 改名为 `docs/archive/<权威date>-review.
 > **新闻条目里不要写"对我们/对 Hertzflow"**，启发统一进末栏「对 Hertzflow 的启发」。纯行情复述不收。
 > **全文禁用破折号** `——`（及 `—`、`–`）：该用的地方一律换成逗号、冒号或句号。这是硬性文风要求。
 
-## 步骤 3 · 一键发布（渲染 + 推送 + 发飞书，原子）
+## 步骤 3 · 发布（机械阶段，零 token，可插拔）
 
-写好 `content.json` 后，**只跑这一条命令**（渲染 HTML → push 触发 Pages → 发飞书，三件事绑定）：
-
+写好 `content.json` / `threads.json` 后跑：
 ```bash
-cd ~/perp-daily && FEISHU_WEBHOOK="https://open.feishu.cn/open-apis/bot/v2/hook/xxxx" bash publish.sh
+cd ~/perp-daily && bash publish.sh        # 全流程 validate → render → push
 ```
+`publish.sh` 是纯机械管线（不调 LLM）：校验关卡 → build-html 渲染 → 写 latest.json → commit/pull/push。
+push 后，独立的 GitHub Action 自动发飞书 + Slack（用 repo secret，云端沙箱出口受限发不了，所以交付不在 publish.sh 里）。
 
-`publish.sh` 内部：build-html → git commit/pull --rebase/push → deliver.mjs 发当天永久链接
-`https://dorischeyy.github.io/perp-daily/archive/<date>.html` 到所有 `enabled:true` 渠道（现＝飞书）。导语自动从 lead 读取。
-
-> ⚠️ 不要只 push 不发飞书——一律用 `publish.sh`。检查输出须有「✅ feishu … 已发送」+「✅ publish 完成」；deliver 失败就重跑一次，仍失败在汇报里写明错误。
-> 加 Slack：channels.json 把 slack 的 `enabled` 改 true 并配 `SLACK_WEBHOOK`，publish.sh 无需改动。
+> 🔌 **解耦/原子性铁律（重要，省 token）**：步骤 0-2 的"调研+评分+建线+写作"是昂贵的 LLM 阶段，产出 `content.json` / `threads.json` / `review.draft.md` 这三个**持久交接物**。步骤 3 起全是廉价机械步骤，**只消费交接物、零 token、可单独重跑**。所以**下游任何一步失败，绝不要从头重新调研**，只跑坏掉的那一阶段：
+> - 校验没过(时效/防造假/台账)：**只修 content.json 或 threads.json 的对应条目**，再 `bash publish.sh validate`，过了再 `bash publish.sh render && bash publish.sh push`。不重新调研。
+> - 渲染报错：`bash publish.sh render`。
+> - push 失败(网络/token/rebase)：修好后 `bash publish.sh push`（已 render 的不会重做）。
+> - 飞书/Slack 没收到：是交付层(Action)的事，去仓库 Actions 页 "Run workflow" 重发，**不碰生成**。
+> 只有当 `content.json` 本身没产出/被判作废，才需要回到步骤 1 重做内容。
 
 ## 每日铁律
 - 找茬要狠、能指到具体条目，不笼统。

@@ -79,6 +79,21 @@
 
 > 手动强制补发一次（绕过去重）：仓库 Actions 页 → "Notify (Feishu + Slack)" → Run workflow（或 `gh workflow run feishu-notify.yml`）。
 
+## 4.6 阶段化 resume（哪步坏跑哪步，不浪费 token）
+
+管线解耦成「昂贵的 LLM 生成阶段」与「廉价的机械发布阶段」，交接物是 `content.json` / `threads.json` / `review.draft.md`。**机械阶段任何一步失败，只重跑那一步，绝不回去重新调研。**
+
+| 失败在哪 | 现象 | 怎么 resume（零或极小 token） |
+|----------|------|------------------------------|
+| 时效/防造假关卡 | `bash publish.sh` 在 validate 卡住、exit 1 | **只改 content.json 对应条目**(砍/改 date)，`bash publish.sh validate` 复验，过了再 render+push。不重新调研 |
+| 台账结构 | threads.mjs 报字段错 | 按报错修 `threads.json`，`bash publish.sh validate` |
+| 渲染 | build-html 报错 | `bash publish.sh render` |
+| 提交/推送 | rebase/push 失败 | 修网络/token/冲突后 `bash publish.sh push`（已 render 不重做） |
+| 飞书/Slack 没到 | 报告已 push 但群里没卡 | 交付层(Action)问题：Actions 页 "Run workflow" 重发，**不碰生成** |
+| 云端 Routine 整体跑挂 | 没有 `report:` 提交 | 只有这种情况才需回步骤 1 重做内容（LLM 单程无中间 checkpoint，这是唯一不可避免的重跑点） |
+
+> 阶段单独调用：`bash publish.sh validate | render | push | all`。每个机械脚本也能独立单跑：`node check-freshness.mjs content.json` / `node threads.mjs` / `node build-html.mjs content.json out.html` / `node deliver.mjs 标题 链接 摘要`。
+
 ## 5. 排错手册（症状 → 去哪查 → 怎么修）
 
 ### A. 飞书群没收到卡片
