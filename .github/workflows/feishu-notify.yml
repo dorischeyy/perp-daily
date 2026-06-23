@@ -1,7 +1,8 @@
-name: Feishu Notify
+name: Notify (Feishu + Slack)
 
-# 云端日报沙箱出口白名单不含 open.feishu.cn，无法直接发飞书。
-# 改由 GitHub Actions(runner 无出口限制)在 docs/latest.json 更新时发飞书卡片。
+# 云端日报沙箱出口白名单不含 open.feishu.cn / hooks.slack.com，无法直接发。
+# 改由 GitHub Actions(runner 无出口限制)在 docs/latest.json 更新时发卡片到所有 enabled 渠道。
+# 渠道开关在 channels.json；密钥用 repo secrets：FEISHU_WEBHOOK / SLACK_WEBHOOK。
 on:
   push:
     branches: [main]
@@ -14,13 +15,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Send Feishu card via deliver.mjs
+      - name: Send cards via deliver.mjs (Feishu + Slack)
         env:
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         run: |
-          if [ -z "$FEISHU_WEBHOOK" ]; then
-            echo "::error::FEISHU_WEBHOOK secret 未设置"; exit 1
+          if [ -z "$FEISHU_WEBHOOK" ] && [ -z "$SLACK_WEBHOOK" ]; then
+            echo "::error::FEISHU_WEBHOOK 和 SLACK_WEBHOOK 都未设置，无渠道可发"; exit 1
           fi
+          [ -z "$SLACK_WEBHOOK" ] && echo "::warning::SLACK_WEBHOOK 未设置，跳过 Slack（仅发飞书）"
+          [ -z "$FEISHU_WEBHOOK" ] && echo "::warning::FEISHU_WEBHOOK 未设置，跳过飞书（仅发 Slack）"
           TITLE=$(node -e "console.log(require('./docs/latest.json').title)")
           URL=$(node -e "console.log(require('./docs/latest.json').url)")
           LEAD=$(node -e "console.log(require('./docs/latest.json').lead)")
