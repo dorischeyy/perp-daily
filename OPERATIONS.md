@@ -124,6 +124,38 @@
 ### E. 自评文件(review)日期和报告对不上
 → 已修：agent 写 `review.draft.md`（不带日期），publish.sh 按权威日期改名。若又出现，检查 publish.sh 的改名逻辑和 agent 是否写了 review.draft.md。
 
+### F. 云端 push 被 403 拦 / 当天漏发（relay proxy 仓库授权，2026-06-24 事故）
+**症状**：云端 Routine 日志显示**内容生成成功**（content.json/threads.json/commit 都在），但最后 `git push` 报
+`Anthropic relay proxy 403` 或 `{"type":"permission_error","message":"Not authorized to access repository dorischeyy/perp-daily"}`；
+GitHub 上没有 `report:` 提交，feishu-notify 不触发，群里漏发。
+
+**根因（平台侧机制变更，重要）**：原方案靠**内嵌 GITHUB_TOKEN 直推 github.com**（不依赖 GitHub App）。
+但平台已强制把云端 session 所有 git 流量经 `url.insteadOf` 改道到 **Anthropic git relay proxy**（`http://127.0.0.1:41729/git/`），
+代理按**会话级仓库白名单**放行，白名单 = **Claude GitHub App 的安装仓库授权**，与内嵌 token 无关（token 没用上就被代理 403）。
+即旧的「内嵌 token 直推」被代理架空了。
+
+**真正缺口**：Claude 在该账号只做了 **OAuth 授权**（`github.com/settings/installations` 的 *Authorized GitHub Apps* tab 有 Claude）
+但 **GitHub App 没安装**（*Installed GitHub Apps* tab 空）。OAuth 只给读、App 安装才给仓库级写/push（参考 anthropics/claude-code issue #57009）。
+注意 claude.ai → Customize → Connectors 里 GitHub 显示「已连接」是**假象**，只连了 OAuth 半边、漏了 App 安装。
+
+**修复（一次性，已于 2026-06-24 完成）**：
+1. 浏览器登录 **dorischeyy**（perp-daily 所有者，别用工作号 doris7527）。
+2. 打开 `https://github.com/apps/claude` → 绿色 **Install**（已装则显示 Configure）。
+3. 选 **dorischeyy** 账号 → Repository access 选 **All repositories**（或 Only select + 勾 perp-daily），需含 *read+write to code* → **Save**。
+4. 装完 `Installed GitHub Apps` tab 应出现 Claude；relay proxy 拿到 App 安装令牌后云端 push 恢复。
+5. 验证：**不要当天手动重跑 Routine**（会重复出报），等次日 08:03 自动跑那次验证；watchdog（北京 10:30）失败会发邮件兜底。
+
+**当天漏发的应急补发（本地全流程重做，云端内容捞不回）**：
+Resumed session 会起新沙箱重新 clone、又被 403，旧沙箱已回收，所以**生成好的 content.json 找不回**，只能本地重做：
+```bash
+cd ~/perp-daily && git pull --ff-only           # 取当天 docs/market.json（market-data Action 北京07:30预拉，fetched_at 须为当天）
+# 按 generate.md：WebFetch config/sources.json 的 feeds.rss 逐条核 verbatim 发布日，砍 >72h（警惕旧文被搜索索引）
+# 写 content.json / threads.json / review.draft.md
+bash publish.sh validate && bash publish.sh render && bash publish.sh push   # 本机推送不过 relay proxy、无此限制
+# push 触发 feishu-notify.yml 自动发飞书+Slack
+```
+本机 push 不走 relay proxy，所以本地补发不受此 bug 影响（这是漏发当天的可靠兜底通道）。
+
 ## 6. 已知限制 / 约束（重要）
 
 - **云端出口白名单**：云端沙箱只能访问白名单内的域名。**github.com 可以**（所以能 push），**open.feishu.cn、api.coingecko.com 不可以**。
@@ -131,6 +163,7 @@
   → 彻底解法：在 claude.ai 的环境设置里把这两个域名加进 egress 白名单（若平台支持）。
 - **无 X/Twitter API**：config/sources.json 的 handle 只是搜索线索，读不到原始推文。要真读推文需付费 X API（$100/mo）或第三方。
 - **DefiLlama 衍生品 API 已转付费**，弃用，用 CoinGecko 免费替代。
+- **云端 git 走 relay proxy（仓库授权前置）**：平台强制云端 session 的 git 经 Anthropic relay proxy，按 **Claude GitHub App 安装授权**放行，不再认内嵌 token。前置条件：Claude App 必须**安装**（非仅 OAuth 授权）在 perp-daily 所有者账号 dorischeyy 上并有写权限。详见 §5.F。本机 push 不受此限制。
 
 ## 7. 凭证清单（值不在本文件，本仓库公开）
 
