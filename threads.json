@@ -24,15 +24,16 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-06-19",
-      "last_update": "2026-06-21",
+      "last_update": "2026-06-24",
       "cadence_days": 3,
-      "next_check": "2026-06-24",
+      "next_check": "2026-06-27",
       "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从『灰色创新』走向『监管确权』的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
       "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
       "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
       "log": [
         { "date": "2026-06-19", "point": "TD Cowen 研判 CME 在诉讼中占上风，预计 CME 将申请初步禁令暂停 perp 上市", "url": "https://www.theblock.co/post/405446/td-cowen-cme-upper-hand-cftc-lawsuit-crypto-perpetual-futures" },
-        { "date": "2026-06-21", "point": "CME 指 CFTC 未做自有分析、橡皮图章批准 Kalshi 首个美国永续期货，批准令通篇无 swap 一词", "url": "https://www.coindesk.com/policy/2026/06/21/are-perps-swaps-a-quick-look-at-that-cme-suit-state-of-crypto" }
+        { "date": "2026-06-21", "point": "CME 指 CFTC 未做自有分析、橡皮图章批准 Kalshi 首个美国永续期货，批准令通篇无 swap 一词", "url": "https://www.coindesk.com/policy/2026/06/21/are-perps-swaps-a-quick-look-at-that-cme-suit-state-of-crypto" },
+        { "date": "2026-06-24", "point": "监管侧双向发力：扩张端 CBOE 探索把 BTC/ETH 连续期货转永续（诱因 Kalshi 数周 $85 亿量）、CFTC 06-22 就原油等实物能源永续公开征询；划界端 CFTC 主席 Selig 06-23 称永续不适合玉米/原油等实物交割商品。监管开始按标的属性分层放行，定性官司仍未决。", "url": "https://crypto.news/cboe-eyes-crypto-perpetuals-as-kalshi-upends-futures-market/" }
       ]
     }
   ]
