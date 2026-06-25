@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-06-23",
+  "updated": "2026-06-25",
   "threads": [
     {
       "id": "cme-cftc-perp-classification",
@@ -34,6 +34,24 @@
         { "date": "2026-06-19", "point": "TD Cowen 研判 CME 在诉讼中占上风，预计 CME 将申请初步禁令暂停 perp 上市", "url": "https://www.theblock.co/post/405446/td-cowen-cme-upper-hand-cftc-lawsuit-crypto-perpetual-futures" },
         { "date": "2026-06-21", "point": "CME 指 CFTC 未做自有分析、橡皮图章批准 Kalshi 首个美国永续期货，批准令通篇无 swap 一词", "url": "https://www.coindesk.com/policy/2026/06/21/are-perps-swaps-a-quick-look-at-that-cme-suit-state-of-crypto" },
         { "date": "2026-06-24", "point": "监管侧双向发力：扩张端 CBOE 探索把 BTC/ETH 连续期货转永续（诱因 Kalshi 数周 $85 亿量）、CFTC 06-22 就原油等实物能源永续公开征询；划界端 CFTC 主席 Selig 06-23 称永续不适合玉米/原油等实物交割商品。监管开始按标的属性分层放行，定性官司仍未决。", "url": "https://crypto.news/cboe-eyes-crypto-perpetuals-as-kalshi-upends-futures-market/" }
+      ]
+    },
+    {
+      "id": "hyperliquid-equity-perp-expansion",
+      "title": "Hyperliquid 股票永续矩阵扩张",
+      "score": 91,
+      "tier": "S",
+      "status": "active",
+      "first_seen": "2026-06-12",
+      "last_update": "2026-06-23",
+      "cadence_days": 3,
+      "next_check": "2026-06-26",
+      "thesis": "Hyperliquid 的 HIP-3 无需许可机制正在把「任何可定价标的」都变成 24/7 永续市场，从加密到股票到优先股，产品矩阵覆盖速度远超任何中心化或其他链上对手。链上股票永续的基础设施护城河正在此形成。",
+      "why_us": "HertzFlow 美股指数 perp 和虚拟 RWA 标的是核心差异化，而 Hyperliquid HIP-3 的扩张速度定义了产品升级的参照系和竞争压力窗口。",
+      "watch_for": "HIP-3 总 OI 突破 $40 亿 / 下一重量级个股标的上线(Apple/Nvidia/ARM) / Coinbase 或 Aster 在个股 perp 的追赶进度",
+      "log": [
+        { "date": "2026-06-12", "point": "SpaceX IPO 当日 SPCX 永续成交 $14 亿，占 Hyperliquid 当日总量 30%；Binance/Bybit/Bitget 因备货问题当日临时下线产品", "url": "https://www.theblock.co/post/404804/spacex-ipo-1-4-billion-trading-frenzy-hyperliquid-spcx-perp-hip-3s-biggest-market" },
+        { "date": "2026-06-23", "point": "Strategy STRC 可变利率优先股永续由 trade.xyz 通过 HIP-3 上线，10 倍杠杆；tokenized equity 已占平台前 30 OI 对 23 席，HIP-3 OI 突破 $30 亿", "url": "https://www.cryptotimes.io/2026/06/23/strategys-strc-stock-futures-goes-live-on-hyperliquid-amid-volatile-comeback/" }
       ]
     }
   ]
