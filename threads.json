@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-06-25",
+  "updated": "2026-06-26",
   "threads": [
     {
       "id": "cme-cftc-perp-classification",
@@ -45,13 +45,14 @@
       "first_seen": "2026-06-12",
       "last_update": "2026-06-23",
       "cadence_days": 3,
-      "next_check": "2026-06-26",
+      "next_check": "2026-06-29",
       "thesis": "Hyperliquid 的 HIP-3 无需许可机制正在把「任何可定价标的」都变成 24/7 永续市场，从加密到股票到优先股，产品矩阵覆盖速度远超任何中心化或其他链上对手。链上股票永续的基础设施护城河正在此形成。",
       "why_us": "HertzFlow 美股指数 perp 和虚拟 RWA 标的是核心差异化，而 Hyperliquid HIP-3 的扩张速度定义了产品升级的参照系和竞争压力窗口。",
       "watch_for": "HIP-3 总 OI 突破 $40 亿 / 下一重量级个股标的上线(Apple/Nvidia/ARM) / Coinbase 或 Aster 在个股 perp 的追赶进度",
       "log": [
         { "date": "2026-06-12", "point": "SpaceX IPO 当日 SPCX 永续成交 $14 亿，占 Hyperliquid 当日总量 30%；Binance/Bybit/Bitget 因备货问题当日临时下线产品", "url": "https://www.theblock.co/post/404804/spacex-ipo-1-4-billion-trading-frenzy-hyperliquid-spcx-perp-hip-3s-biggest-market" },
-        { "date": "2026-06-23", "point": "Strategy STRC 可变利率优先股永续由 trade.xyz 通过 HIP-3 上线，10 倍杠杆；tokenized equity 已占平台前 30 OI 对 23 席，HIP-3 OI 突破 $30 亿", "url": "https://www.cryptotimes.io/2026/06/23/strategys-strc-stock-futures-goes-live-on-hyperliquid-amid-volatile-comeback/" }
+        { "date": "2026-06-23", "point": "Strategy STRC 可变利率优先股永续由 trade.xyz 通过 HIP-3 上线，10 倍杠杆；tokenized equity 已占平台前 30 OI 对 23 席，HIP-3 OI 突破 $30 亿", "url": "https://www.cryptotimes.io/2026/06/23/strategys-strc-stock-futures-goes-live-on-hyperliquid-amid-volatile-comeback/" },
+        { "date": "2026-06-26", "point": "复盘(无新增事件)：今日无新增重量级个股标的，HIP-3 OI 六月见顶约 $32 亿后进入平台期；链上股票永续从『抢上线』转入存量竞争，CEX 的 pre-IPO/个股永续反扑暂未撼动格局", "url": "https://www.coingecko.com/learn/hyperliquid-hip3-hip4-tokenized-stocks-and-prediction-markets" }
       ]
     }
   ]
