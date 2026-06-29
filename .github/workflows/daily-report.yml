@@ -49,7 +49,7 @@ jobs:
             只做到「写完这三个文件」为止：**绝不要运行 publish.sh，也不要 git add / commit / push** —— 校验、渲染、推送、投递都由后续 workflow 步骤处理。
           claude_args: '--permission-mode bypassPermissions --model sonnet'
 
-      - name: 校验 → 渲染 → 推送（report: 提交）
+      - name: "校验 → 渲染 → 推送（report: 提交）"
         run: bash publish.sh
 
       - name: 投递飞书 + Slack（内联）
