@@ -1,0 +1,67 @@
+name: Daily Report (Claude Code · Max subscription)
+
+# 用 Max 订阅（OAuth token，零 API 费）在 GitHub runner 上生成日报，
+# 取代脆弱的 claude.ai 云端 Routine（relay proxy push 反复 403、06-27/28 漏发）。
+# 流程：Claude 按 generate.md 产出 content/threads/review → publish.sh 校验/渲染/推送 → 内联投递飞书+Slack。
+#
+# 为什么 runner 推送稳：用 GITHUB_TOKEN 直推、不过 Anthropic relay proxy，永不 403。
+# 为什么自己投递：GITHUB_TOKEN 推的提交不会触发 feishu-notify（GitHub 防递归），故本 workflow 末尾自己发。
+#   feishu-notify.yml 保留做手动补发（Actions 页 Run workflow）。
+
+on:
+  schedule:
+    - cron: '0 0 * * *'        # UTC 00:00 = 北京 08:00（market-data 北京 07:30 已先提交行情）
+  workflow_dispatch: {}        # 手动触发测试 / 补发
+
+concurrency:
+  group: daily-report
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0        # publish.sh 要 fetch + rebase origin/main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 计算北京日期（权威 today）
+        id: meta
+        run: echo "d=$(TZ=Asia/Shanghai date +%F)" >> "$GITHUB_OUTPUT"
+
+      - name: Claude 生成交接物（content.json / threads.json / review.draft.md）
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: |
+            你是《Perp DEX 日报》的主编兼首席分析师。今天是 ${{ steps.meta.outputs.d }}（北京时间，权威日期，content.json 的 date 必须用它）。
+            严格按仓库根目录的 `generate.md` 全流程执行：读 config/sources.json、docs/market.json、threads.json、近几天 docs/archive/；用 WebSearch / WebFetch 联网调研，并逐条 WebFetch 来源页核实真实发布日、砍掉 >72h 的旧闻；按 generate.md 的评分 / 故事线 / 时效 / 防造假铁律产出。
+            产出三个交接物到仓库根目录：content.json、threads.json（更新台账并跑通 node lib/threads.mjs 校验）、review.draft.md。
+            只做到「写完这三个文件」为止：**绝不要运行 publish.sh，也不要 git add / commit / push** —— 校验、渲染、推送、投递都由后续 workflow 步骤处理。
+          claude_args: '--permission-mode bypassPermissions --model sonnet'
+
+      - name: 校验 → 渲染 → 推送（report: 提交）
+        run: bash publish.sh
+
+      - name: 投递飞书 + Slack（内联）
+        env:
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        run: |
+          if [ -z "$FEISHU_WEBHOOK" ] && [ -z "$SLACK_WEBHOOK" ]; then
+            echo "::error::FEISHU_WEBHOOK / SLACK_WEBHOOK 都未设置"; exit 1
+          fi
+          TITLE=$(node -e "console.log(require('./docs/latest.json').title)")
+          URL=$(node -e "console.log(require('./docs/latest.json').url)")
+          LEAD=$(node -e "console.log(require('./docs/latest.json').lead)")
+          echo "投递: $TITLE -> $URL"
+          node lib/deliver.mjs "$TITLE" "$URL" "$LEAD"
