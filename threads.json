@@ -15,8 +15,25 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-06-29",
+  "updated": "2026-06-30",
   "threads": [
+    {
+      "id": "aster-fee-buyback-burn",
+      "title": "Aster 手续费回购销毁飞轮",
+      "score": 76,
+      "tier": "A",
+      "status": "active",
+      "first_seen": "2026-06-30",
+      "last_update": "2026-06-30",
+      "cadence_days": 6,
+      "next_check": "2026-07-06",
+      "thesis": "Aster 把 99% 平台手续费转成对自家代币的回购（给质押者）+ 团队份额等量销毁，用真实现金流为币价托底、把交易活跃度绑定到代币通缩与质押收益。这是 perp DEX『手续费→代币价值捕获』飞轮的激进样本。",
+      "why_us": "Hertzflow ZFP 用盈利抽成替代手续费，若未来做代币经济，抽成现金流如何回流代币（回购/销毁/质押分红）可直接参照 Aster 的飞轮设计，及其在去杠杆期的可持续性表现。",
+      "watch_for": "去杠杆致手续费收缩后回购力度是否明显减弱 / veASTER 质押率与币价是否背离 / 是否有其他 perp DEX 跟进同款 99% 费用回购",
+      "log": [
+        { "date": "2026-06-30", "point": "新建线：Aster 披露 06-17 上线的新代币经济首轮成绩，06-17 至 29 用 99% 日费回购约 294 万枚 $ASTER 注入 veASTER 奖励池并等量销毁团队份额，长期目标总供应 80 亿→30 亿；另每笔 permissionless 上币 5 万 USDT 并入未来回购。", "url": "https://www.cryptotimes.io/2026/06/29/aster-burns-2-9m-tokens-in-first-buyback-under-new-tokenomics/" }
+      ]
+    },
     {
       "id": "cme-cftc-perp-classification",
       "title": "CME 诉 CFTC：美国永续监管定性",
