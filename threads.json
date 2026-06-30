@@ -27,7 +27,7 @@
       "last_update": "2026-06-30",
       "cadence_days": 6,
       "next_check": "2026-07-06",
-      "thesis": "Aster 把 99% 平台手续费转成对自家代币的回购（给质押者）+ 团队份额等量销毁，用真实现金流为币价托底、把交易活跃度绑定到代币通缩与质押收益。这是 perp DEX『手续费→代币价值捕获』飞轮的激进样本。",
+      "thesis": "Aster 把 99% 平台手续费转成对自家代币的回购（给质押者）+ 团队份额等量销毁，用真实现金流为币价托底、把交易活跃度绑定到代币通缩与质押收益。这是 perp DEX「手续费→代币价值捕获」飞轮的激进样本。",
       "why_us": "Hertzflow ZFP 用盈利抽成替代手续费，若未来做代币经济，抽成现金流如何回流代币（回购/销毁/质押分红）可直接参照 Aster 的飞轮设计，及其在去杠杆期的可持续性表现。",
       "watch_for": "去杠杆致手续费收缩后回购力度是否明显减弱 / veASTER 质押率与币价是否背离 / 是否有其他 perp DEX 跟进同款 99% 费用回购",
       "log": [
@@ -41,17 +41,35 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-06-19",
-      "last_update": "2026-06-24",
+      "last_update": "2026-06-30",
       "cadence_days": 3,
       "next_check": "2026-07-02",
-      "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从『灰色创新』走向『监管确权』的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
+      "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
       "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
       "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
       "log": [
         { "date": "2026-06-19", "point": "TD Cowen 研判 CME 在诉讼中占上风，预计 CME 将申请初步禁令暂停 perp 上市", "url": "https://www.theblock.co/post/405446/td-cowen-cme-upper-hand-cftc-lawsuit-crypto-perpetual-futures" },
         { "date": "2026-06-21", "point": "CME 指 CFTC 未做自有分析、橡皮图章批准 Kalshi 首个美国永续期货，批准令通篇无 swap 一词", "url": "https://www.coindesk.com/policy/2026/06/21/are-perps-swaps-a-quick-look-at-that-cme-suit-state-of-crypto" },
         { "date": "2026-06-24", "point": "监管侧双向发力：扩张端 CBOE 探索把 BTC/ETH 连续期货转永续（诱因 Kalshi 数周 $85 亿量）、CFTC 06-22 就原油等实物能源永续公开征询；划界端 CFTC 主席 Selig 06-23 称永续不适合玉米/原油等实物交割商品。监管开始按标的属性分层放行，定性官司仍未决。", "url": "https://crypto.news/cboe-eyes-crypto-perpetuals-as-kalshi-upends-futures-market/" },
-        { "date": "2026-06-29", "point": "复盘（无新进展）：近 72h 无新裁定；06-18 CME 正式起诉后案件仍待审，CFTC 称诉讼“无理”。swaps vs futures 定性悬而未决，关键节点本周未到。连续一个 cadence 无实质推进，仍保持 active。", "url": "https://crypto.news/cme-cftc-lawsuit-perpetual-futures-swaps/" }
+        { "date": "2026-06-29", "point": "复盘（无新进展）：近 72h 无新裁定；06-18 CME 正式起诉后案件仍待审，CFTC 称诉讼「无理」。swaps vs futures 定性悬而未决，关键节点本周未到。连续一个 cadence 无实质推进，仍保持 active。", "url": "https://crypto.news/cme-cftc-lawsuit-perpetual-futures-swaps/" },
+        { "date": "2026-06-30", "point": "市场侧旁证：JPMorgan 研报（06-29）指出约半数链上永续量仅由 12 个钱包资金驱动，定性 perp 为散户/投机工具而非机构对冲标的。这与 CME「perp 本质是 swaps=非机构期货产品」的诉讼论述方向一致，但不影响诉讼本身进展。", "url": "https://www.coindesk.com/business/2026/06/29/jpmorgan-sees-limited-institutional-demand-for-perpetual-futures" }
+      ]
+    },
+    {
+      "id": "mas-hyperliquid-investor-alert",
+      "title": "亚太监管压力：MAS 将链上 perp 纳入警告名单",
+      "score": 81,
+      "tier": "A",
+      "status": "active",
+      "first_seen": "2026-06-30",
+      "last_update": "2026-06-30",
+      "cadence_days": 7,
+      "next_check": "2026-07-07",
+      "thesis": "新加坡 MAS 将 Hyperliquid 列入 IAL 标志着亚太监管压力从中心化交易所蔓延到链上 perp，是 perp DEX 在监管视野中从边缘走向被动接触的拐点；亚太各主要司法管辖区的后续跟进动向将塑造链上 perp 在该地区的生态位。",
+      "why_us": "HertzFlow 在 BSC 上运营，亚太用户是核心市场。MAS 的先例若被日本 FSA、韩国 FSC、台湾 FSC 等复制，将直接影响产品在这些区域的可及性及合规话术的必要性。",
+      "watch_for": "日本/韩国/澳大利亚是否跟进同类警告 / Hyperliquid 的官方声明是否形成链上 perp 行业话语标准 / MAS 是否从 IAL 升级为执法行动 / 本地支付机构是否实际切断出入金通道",
+      "log": [
+        { "date": "2026-06-30", "point": "新建线：MAS 于 06-26 将 Hyperliquid 主站及 Hyper Foundation 列入 IAL，与 Bybit（06-17 列入）、KuCoin、Bitget 并列；Hyperliquid 自称无许可基础设施、从未申请 MAS 牌照。IAL 为消费者保护机制，不是执法禁令，但本地金融机构将受压力切断相关支付通道；本周同期澳大利亚 ASIC 延长加密牌照申请截止，亚太监管节奏整体加快。", "url": "https://cointelegraph.com/features/singapores-hyperliquid-warning-indonesias-finfluencer-licence-asia-express" }
       ]
     },
     {
@@ -59,19 +77,20 @@
       "title": "Hyperliquid 股票永续矩阵扩张",
       "score": 91,
       "tier": "S",
-      "status": "active",
+      "status": "dormant",
       "first_seen": "2026-06-12",
       "last_update": "2026-06-23",
       "cadence_days": 3,
-      "next_check": "2026-07-02",
+      "next_check": "2026-07-07",
       "thesis": "Hyperliquid 的 HIP-3 无需许可机制正在把「任何可定价标的」都变成 24/7 永续市场，从加密到股票到优先股，产品矩阵覆盖速度远超任何中心化或其他链上对手。链上股票永续的基础设施护城河正在此形成。",
       "why_us": "HertzFlow 美股指数 perp 和虚拟 RWA 标的是核心差异化，而 Hyperliquid HIP-3 的扩张速度定义了产品升级的参照系和竞争压力窗口。",
       "watch_for": "HIP-3 总 OI 突破 $40 亿 / 下一重量级个股标的上线(Apple/Nvidia/ARM) / Coinbase 或 Aster 在个股 perp 的追赶进度",
       "log": [
         { "date": "2026-06-12", "point": "SpaceX IPO 当日 SPCX 永续成交 $14 亿，占 Hyperliquid 当日总量 30%；Binance/Bybit/Bitget 因备货问题当日临时下线产品", "url": "https://www.theblock.co/post/404804/spacex-ipo-1-4-billion-trading-frenzy-hyperliquid-spcx-perp-hip-3s-biggest-market" },
         { "date": "2026-06-23", "point": "Strategy STRC 可变利率优先股永续由 trade.xyz 通过 HIP-3 上线，10 倍杠杆；tokenized equity 已占平台前 30 OI 对 23 席，HIP-3 OI 突破 $30 亿", "url": "https://www.cryptotimes.io/2026/06/23/strategys-strc-stock-futures-goes-live-on-hyperliquid-amid-volatile-comeback/" },
-        { "date": "2026-06-26", "point": "复盘(无新增事件)：今日无新增重量级个股标的，HIP-3 OI 六月见顶约 $32 亿后进入平台期；链上股票永续从『抢上线』转入存量竞争，CEX 的 pre-IPO/个股永续反扑暂未撼动格局", "url": "https://www.coingecko.com/learn/hyperliquid-hip3-hip4-tokenized-stocks-and-prediction-markets" },
-        { "date": "2026-06-29", "point": "复盘（结构性事实）：HIP-3 总 OI 自六月初约 $30 亿后维持平台期；结构上单一 builder trade.xyz 独占全 HIP-3 逾 90% 未平仓量，permissionless 市场工厂实为单点集中。叙事从『抢上线』转向『集中度风险』。", "url": "https://www.coingecko.com/learn/hyperliquid-hip3-hip4-tokenized-stocks-and-prediction-markets" }
+        { "date": "2026-06-26", "point": "复盘(无新增事件)：今日无新增重量级个股标的，HIP-3 OI 六月见顶约 $32 亿后进入平台期；链上股票永续从「抢上线」转入存量竞争，CEX 的 pre-IPO/个股永续反扑暂未撼动格局", "url": "https://www.coingecko.com/learn/hyperliquid-hip3-hip4-tokenized-stocks-and-prediction-markets" },
+        { "date": "2026-06-29", "point": "复盘（结构性事实）：HIP-3 总 OI 自六月初约 $30 亿后维持平台期；结构上单一 builder trade.xyz 独占全 HIP-3 逾 90% 未平仓量，permissionless 市场工厂实为单点集中。叙事从「抢上线」转向「集中度风险」。", "url": "https://www.coingecko.com/learn/hyperliquid-hip3-hip4-tokenized-stocks-and-prediction-markets" },
+        { "date": "2026-06-30", "point": "转 dormant：自 06-23 起连续超两个 cadence 无实质进展，HIP-3 OI 维持平台期，叙事已从扩张转入存量。待 OI 新高或重量级新标的上线时复活。", "url": "https://www.coingecko.com/learn/hyperliquid-hip3-hip4-tokenized-stocks-and-prediction-markets" }
       ]
     }
   ]
