@@ -15,23 +15,42 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-06-30",
+  "updated": "2026-07-01",
   "threads": [
     {
       "id": "aster-fee-buyback-burn",
-      "title": "Aster 手续费回购销毁飞轮",
+      "title": "费用→通缩飞轮：Aster / Lighter",
       "score": 76,
+      "tier": "A",
+      "status": "active",
+      "first_seen": "2026-06-30",
+      "last_update": "2026-07-01",
+      "cadence_days": 6,
+      "next_check": "2026-07-07",
+      "thesis": "新锐 perp DEX 集体把交易手续费转成对自家代币的回购+销毁，用真实现金流为币价托底、把交易活跃度绑定到代币通缩与质押收益。这是 perp DEX「手续费→代币价值捕获」飞轮的激进样本，正从个案（Aster）扩散为赛道范式。",
+      "why_us": "Hertzflow ZFP 用盈利抽成替代手续费，若未来做代币经济，抽成现金流如何回流代币（回购/销毁/质押分红）可直接参照这批飞轮设计，及其在去杠杆期的可持续性表现。",
+      "watch_for": "去杠杆致手续费收缩后回购力度是否明显减弱 / 质押率与币价是否背离 / 还有哪些 perp DEX 跟进同款高比例费用回购销毁",
+      "log": [
+        { "date": "2026-06-30", "point": "新建线：Aster 披露 06-17 上线的新代币经济首轮成绩，06-17 至 29 用 99% 日费回购约 294 万枚 $ASTER 注入 veASTER 奖励池并等量销毁团队份额，长期目标总供应 80 亿→30 亿；另每笔 permissionless 上币 5 万 USDT 并入未来回购。", "url": "https://www.cryptotimes.io/2026/06/29/aster-burns-2-9m-tokens-in-first-buyback-under-new-tokenomics/" },
+        { "date": "2026-06-30", "point": "Lighter 跟进（watch_for 命中）：把自 TGE 以来用 100% 交易费回购的约 1550 万枚 LIT（≈流通 6.3%）从『囤积』改为『永久销毁』，首销定于 Q2 结束后数周；并承认 pre-TGE 补贴模型不可持续，质押收益改由生态储备承担、目标年化 6%。个案变趋势：费用→通缩成新锐 perp DEX 争夺估值锚的标配叙事。", "url": "https://www.cryptotimes.io/2026/07/01/lighter-updates-tokenomics-with-lit-burns-and-6-staking-target/" }
+      ]
+    },
+    {
+      "id": "hip3-builder-shakeout",
+      "title": "HIP-3 建市者退场潮",
+      "score": 81,
       "tier": "A",
       "status": "active",
       "first_seen": "2026-06-30",
       "last_update": "2026-06-30",
       "cadence_days": 6,
-      "next_check": "2026-07-06",
-      "thesis": "Aster 把 99% 平台手续费转成对自家代币的回购（给质押者）+ 团队份额等量销毁，用真实现金流为币价托底、把交易活跃度绑定到代币通缩与质押收益。这是 perp DEX「手续费→代币价值捕获」飞轮的激进样本。",
-      "why_us": "Hertzflow ZFP 用盈利抽成替代手续费，若未来做代币经济，抽成现金流如何回流代币（回购/销毁/质押分红）可直接参照 Aster 的飞轮设计，及其在去杠杆期的可持续性表现。",
-      "watch_for": "去杠杆致手续费收缩后回购力度是否明显减弱 / veASTER 质押率与币价是否背离 / 是否有其他 perp DEX 跟进同款 99% 费用回购",
+      "next_check": "2026-07-07",
+      "thesis": "Hyperliquid HIP-3 的 permissionless 建市者层正在退场/被整合：明星建市者被钱包分发方收编（Ventuals 团队→Phantom）、USDT 系建市者因平台转向 USDC 原生化而清算离场（Dreamcash）。证明 permissionless 市场的护城河从来不是『能否上市』，而是『结算资产标准 + 分发/订单流』。是对 06-12 起 HIP-3 扩张叙事（见 hyperliquid-equity-perp-expansion）的反面续章。",
+      "why_us": "Hertzflow 的 permissionless 市场创建是核心差异化，此线直接警示：建市容易、留量难。且 Hertzflow 全 USDT 抵押，需评估结算币标准变更风险（Dreamcash 正死于 USDT vs USDC）、僵尸市场退场机制、以及分发/流量入口的自建。",
+      "watch_for": "更多 HIP-3 建市者停运/被收编 / Hyperliquid 是否进一步收紧建市者标准 / 钱包（Phantom）是否自建 perp 分发闭环 / 结算稳定币标准之争是否蔓延到其他平台",
       "log": [
-        { "date": "2026-06-30", "point": "新建线：Aster 披露 06-17 上线的新代币经济首轮成绩，06-17 至 29 用 99% 日费回购约 294 万枚 $ASTER 注入 veASTER 奖励池并等量销毁团队份额，长期目标总供应 80 亿→30 亿；另每笔 permissionless 上币 5 万 USDT 并入未来回购。", "url": "https://www.cryptotimes.io/2026/06/29/aster-burns-2-9m-tokens-in-first-buyback-under-new-tokenomics/" }
+        { "date": "2026-06-30", "point": "新建线：Solana 头部钱包 Phantom 收编 Hyperliquid 明星建市者 Ventuals 三位创始人并入交易/数据团队；Ventuals（未上市公司估值永续，曾上 OpenAI/Anthropic 私司永续）本月早些时候已停运并入生态另一项目。CEO 称 open markets 是重点、perps 上要做得更深，Phantom 自称是 Hyperliquid 生态最大分发伙伴。", "url": "https://www.coindesk.com/business/2026/06/30/phantom-doubles-down-on-perpetual-futures-with-hire-of-hyperliquid-market-builders" },
+        { "date": "2026-06-30", "point": "同期 Tether 系 Dreamcash（HIP-3 上 USDT 计价建市者）宣布停运全部 CASH 市场，6/30–7/2 分三批结算退场（KWEB/INTC/MSFT→GOLD/NVDA→GOOGL/TSLA/USA500），理由：Hyperliquid 原生集成 USDC 后，作为 USDT 建市者的 UX 门槛无法克服。非托管，用户资金不受影响。", "url": "https://www.cryptotimes.io/2026/06/26/tether-backed-dreamcash-cuts-cash-markets-amid-hyperliquid-usdc-surge/" }
       ]
     },
     {
