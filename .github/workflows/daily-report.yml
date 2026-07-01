@@ -10,7 +10,7 @@ name: Daily Report (Claude Code · Max subscription)
 
 on:
   schedule:
-    - cron: '0 0 * * *'        # UTC 00:00 = 北京 08:00（market-data 北京 07:30 已先提交行情）
+    - cron: '17 0 * * *'       # UTC 00:17 = 北京 08:17（避开整点最堵槽位，整点 scheduled 常被延迟数小时或静默丢弃）
   workflow_dispatch: {}        # 手动触发测试 / 补发
 
 concurrency:
