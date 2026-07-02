@@ -38,16 +38,26 @@ jobs:
         run: echo "d=$(TZ=Asia/Shanghai date +%F)" >> "$GITHUB_OUTPUT"
 
       - name: Claude 生成交接物（content.json / threads.json / review.draft.md）
+        id: claude
         uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          show_full_output: true    # 输出留痕：07-02 空跑（agent 自称成功但没写 content.json）时输出被隐藏，无法定位原因
           prompt: |
             你是《Perp DEX 日报》的主编兼首席分析师。今天是 ${{ steps.meta.outputs.d }}（北京时间，权威日期，content.json 的 date 必须用它）。
             严格按仓库根目录的 `generate.md` 全流程执行：读 config/sources.json、docs/market.json、threads.json、近几天 docs/archive/；用 WebSearch / WebFetch 联网调研，并逐条 WebFetch 来源页核实真实发布日、砍掉 >72h 的旧闻；按 generate.md 的评分 / 故事线 / 时效 / 防造假铁律产出。
             产出三个交接物到仓库根目录：content.json、threads.json（更新台账并跑通 node lib/threads.mjs 校验）、review.draft.md。
             只做到「写完这三个文件」为止：**绝不要运行 publish.sh，也不要 git add / commit / push** —— 校验、渲染、推送、投递都由后续 workflow 步骤处理。
           claude_args: '--permission-mode bypassPermissions --model sonnet'
+
+      - name: 上传 Claude execution log（失败排查用）
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: claude-execution-log
+          path: ${{ steps.claude.outputs.execution_file }}
+          if-no-files-found: warn
 
       - name: "校验 → 渲染 → 推送（report: 提交）"
         run: bash publish.sh
