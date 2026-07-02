@@ -49,7 +49,8 @@ jobs:
             严格按仓库根目录的 `generate.md` 全流程执行：读 config/sources.json、docs/market.json、threads.json、近几天 docs/archive/；用 WebSearch / WebFetch 联网调研，并逐条 WebFetch 来源页核实真实发布日、砍掉 >72h 的旧闻；按 generate.md 的评分 / 故事线 / 时效 / 防造假铁律产出。
             产出三个交接物到仓库根目录：content.json、threads.json（更新台账并跑通 node lib/threads.mjs 校验）、review.draft.md。
             只做到「写完这三个文件」为止：**绝不要运行 publish.sh，也不要 git add / commit / push** —— 校验、渲染、推送、投递都由后续 workflow 步骤处理。
-          claude_args: '--permission-mode bypassPermissions --model sonnet'
+            **执行方式铁律**：全部工作在主循环里自己做完（WebSearch / WebFetch / 读写文件），**禁止用 Agent / Task 工具派子代理或后台任务**——这是单程无人值守运行，你一结束回合整个任务就终止了，"等后台代理跑完"等于什么都没产出（07-02 两次空跑的真实事故根因）。结束回合前必须确认三个交接物已写到磁盘。
+          claude_args: '--permission-mode bypassPermissions --model sonnet --disallowedTools "Agent,Task"'
 
       - name: 上传 Claude execution log（失败排查用）
         if: always()
