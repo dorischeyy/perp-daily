@@ -15,8 +15,25 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-07-01",
+  "updated": "2026-07-02",
   "threads": [
+    {
+      "id": "robinhood-chain-perp-distribution",
+      "title": "Robinhood Chain 上线：经纪商巨头直接下场做 perp 分发",
+      "score": 93,
+      "tier": "S",
+      "status": "active",
+      "first_seen": "2026-07-02",
+      "last_update": "2026-07-02",
+      "cadence_days": 3,
+      "next_check": "2026-07-05",
+      "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
+      "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。",
+      "watch_for": "Arcus/Lighter 在 Robinhood Chain 上的首周实际交易量与用户转化 / 是否有更多 perp DEX 跟进同类经纪商嵌入 / dYdX 原链与 Arcus 的资源、路线图是否分叉 / 其他券商(Webull/eToro等)是否跟进自建链+嵌入 perp",
+      "log": [
+        { "date": "2026-07-02", "point": "新建线：Robinhood Chain（Arbitrum技术栈 L2）07-01 主网上线，Uniswap/Pleiades 首发部署专属AMM；同日上线 Stock Tokens（120+国可用，美国除外），经Uniswap/Rialto/Lighter/1inch/Arcus等DEX交易；dYdX 团队打造的 Arcus 定位『链上最强DEX』，提供永续+95只代币化股票免费交易、股票代币可作永续保证金；Lighter 永续原生嵌入 Robinhood 钱包，获Robinhood社区承诺1100万枚LIT，钱包内交易积分2倍于Lighter官网；前90天Robinhood包gas、免Lighter永续手续费。dYdX Foundation澄清原dYdX链不受影响。LIT代币应声上涨20%+。", "url": "https://www.theblock.co/post/406918/robinhood-chain-goes-live-mainnet-alongside-24-7-tokenized-stocks-lighter-perps-planned-crypto-agentic-trading" }
+      ]
+    },
     {
       "id": "aster-fee-buyback-burn",
       "title": "费用→通缩飞轮：Aster / Lighter",
@@ -62,7 +79,7 @@
       "first_seen": "2026-06-19",
       "last_update": "2026-06-30",
       "cadence_days": 3,
-      "next_check": "2026-07-02",
+      "next_check": "2026-07-05",
       "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
       "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
       "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
@@ -71,7 +88,8 @@
         { "date": "2026-06-21", "point": "CME 指 CFTC 未做自有分析、橡皮图章批准 Kalshi 首个美国永续期货，批准令通篇无 swap 一词", "url": "https://www.coindesk.com/policy/2026/06/21/are-perps-swaps-a-quick-look-at-that-cme-suit-state-of-crypto" },
         { "date": "2026-06-24", "point": "监管侧双向发力：扩张端 CBOE 探索把 BTC/ETH 连续期货转永续（诱因 Kalshi 数周 $85 亿量）、CFTC 06-22 就原油等实物能源永续公开征询；划界端 CFTC 主席 Selig 06-23 称永续不适合玉米/原油等实物交割商品。监管开始按标的属性分层放行，定性官司仍未决。", "url": "https://crypto.news/cboe-eyes-crypto-perpetuals-as-kalshi-upends-futures-market/" },
         { "date": "2026-06-29", "point": "复盘（无新进展）：近 72h 无新裁定；06-18 CME 正式起诉后案件仍待审，CFTC 称诉讼「无理」。swaps vs futures 定性悬而未决，关键节点本周未到。连续一个 cadence 无实质推进，仍保持 active。", "url": "https://crypto.news/cme-cftc-lawsuit-perpetual-futures-swaps/" },
-        { "date": "2026-06-30", "point": "市场侧旁证：JPMorgan 研报（06-29）指出约半数链上永续量仅由 12 个钱包资金驱动，定性 perp 为散户/投机工具而非机构对冲标的。这与 CME「perp 本质是 swaps=非机构期货产品」的诉讼论述方向一致，但不影响诉讼本身进展。", "url": "https://www.coindesk.com/business/2026/06/29/jpmorgan-sees-limited-institutional-demand-for-perpetual-futures" }
+        { "date": "2026-06-30", "point": "市场侧旁证：JPMorgan 研报（06-29）指出约半数链上永续量仅由 12 个钱包资金驱动，定性 perp 为散户/投机工具而非机构对冲标的。这与 CME「perp 本质是 swaps=非机构期货产品」的诉讼论述方向一致，但不影响诉讼本身进展。", "url": "https://www.coindesk.com/business/2026/06/29/jpmorgan-sees-limited-institutional-demand-for-perpetual-futures" },
+        { "date": "2026-07-02", "point": "复盘（无新进展，第2个cadence无实质推进）：距06-18正式起诉已15天，仍无排期/初步禁令/裁定的公开记录；同期Kalshi+Polymarket合计月交易量因世界杯环比暴涨75%至$448亿（Kalshi一家$315亿，+87%），涉诉的BTCPERP等产品热度不降反升，诉讼结果的现实利害更重。案件本身进入静默期，next_check顺延至07-05。", "url": "https://www.theblock.co/post/406983/kalshi-polymarket-volume-45-billion" }
       ]
     },
     {
