@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-07-03",
+  "updated": "2026-07-04",
   "threads": [
     {
       "id": "robinhood-chain-perp-distribution",
@@ -24,7 +24,7 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-02",
-      "last_update": "2026-07-03",
+      "last_update": "2026-07-04",
       "cadence_days": 3,
       "next_check": "2026-07-06",
       "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
@@ -32,7 +32,8 @@
       "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
       "log": [
         { "date": "2026-07-02", "point": "新建线：Robinhood Chain（Arbitrum技术栈 L2）07-01 主网上线，Uniswap/Pleiades 首发部署专属AMM；同日上线 Stock Tokens（120+国可用，美国除外），经Uniswap/Rialto/Lighter/1inch/Arcus等DEX交易；dYdX 团队打造的 Arcus 定位『链上最强DEX』，提供永续+95只代币化股票免费交易、股票代币可作永续保证金；Lighter 永续原生嵌入 Robinhood 钱包，获Robinhood社区承诺1100万枚LIT，钱包内交易积分2倍于Lighter官网；前90天Robinhood包gas、免Lighter永续手续费。dYdX Foundation澄清原dYdX链不受影响。LIT代币应声上涨20%+。", "url": "https://www.theblock.co/post/406918/robinhood-chain-goes-live-mainnet-alongside-24-7-tokenized-stocks-lighter-perps-planned-crypto-agentic-trading" },
-        { "date": "2026-07-03", "point": "反转信号：市场消化细节后发现 Arcus 是『完全独立公司』、有专属代币，dYdX 创始人 Antonio Juliano 转任董事会成员，原 dYdX v4 定位改为『维护而非积极开发』；DYDX 代币24小时内从$0.179跌至$0.138（-23%），交易量激增650%。同日 eToro（联合Jump Crypto）领投链上永续交易所 Extended（StarkEx架构）$1250万融资，计划整合进自家自托管钱包 Zengo，是继 Robinhood 后第二家用『投资+集成』打法嵌入 perp DEX 的持牌经纪商，命中 watch_for『其他券商是否跟进』。", "url": "https://www.cryptopolitan.com/dydx-launches-arcus-dex-on-robinhood-chain-as-dydx-token-drops-23/" }
+        { "date": "2026-07-03", "point": "反转信号：市场消化细节后发现 Arcus 是『完全独立公司』、有专属代币，dYdX 创始人 Antonio Juliano 转任董事会成员，原 dYdX v4 定位改为『维护而非积极开发』；DYDX 代币24小时内从$0.179跌至$0.138（-23%），交易量激增650%。同日 eToro（联合Jump Crypto）领投链上永续交易所 Extended（StarkEx架构）$1250万融资，计划整合进自家自托管钱包 Zengo，是继 Robinhood 后第二家用『投资+集成』打法嵌入 perp DEX 的持牌经纪商，命中 watch_for『其他券商是否跟进』。", "url": "https://www.cryptopolitan.com/dydx-launches-arcus-dex-on-robinhood-chain-as-dydx-token-drops-23/" },
+        { "date": "2026-07-04", "point": "Robinhood CEO Vlad Tenev 07-02 在CNBC采访中首次公开说明战略动机：『加密的未来在RWA，不在meme币』，称链上代币化终将吞噬整条传统金融轨道『a freight train that can't be stopped』；并透露下一步是给用户提供OpenAI等未上市公司的份额敞口。这是首次由经纪商一把手正面阐述『为什么要焊perp DEX进钱包』的战略逻辑，而非仅是产品公告。", "url": "https://www.theblock.co/post/407047" }
       ]
     },
     {
