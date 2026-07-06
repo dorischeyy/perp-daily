@@ -1,31 +1,57 @@
-name: Daily Watchdog (兜底告警)
+name: Daily Watchdog (兜底自愈)
 
-# 兜底：云端 Routine 若失败/没跑/被关卡挡住，会全程静默（不生成、不 commit）。
-# 本 watchdog 每天在预期出报时间之后检查「今天的报告有没有」，没有就让本 Action 失败
-# → GitHub 自动邮件通知仓库 owner + Actions 页变红，让人知道要手动重跑。
-# 不发飞书/Slack（那两个渠道只用于接收日报，不放运维告警）。
+# 兜底自愈：daily-report 的 scheduled cron（北京08:17）常被 GitHub 延迟/静默丢弃，
+# 导致整天漏发。本 watchdog 在预期出报时间之后检查「今天的报告有没有」：
+#   - 有 → 什么都不做
+#   - 没有 → 自动 workflow_dispatch 触发 daily-report 重跑（dispatch 触发可靠，不像 schedule 会被丢）
+#          → 轮询复检；重跑后仍没出，才让本 Action 失败 → GitHub 邮件通知 owner。
+# 不发飞书/Slack（那两个渠道只接收日报，不放运维告警）。
 on:
   schedule:
-    - cron: '30 2 * * *'   # UTC 02:30 = 北京 10:30（Routine 08:03 北京之后约 2.5h）
+    - cron: '30 1 * * *'   # UTC 01:30 = 北京 09:30（主发 08:17 之后约 1h，且避开整点堵槽）
   workflow_dispatch: {}
 
 concurrency:
   group: watchdog
   cancel-in-progress: false
 
+permissions:
+  contents: read
+  actions: write           # gh workflow run 触发 daily-report 需要
+
 jobs:
   check:
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
-      - name: 检查今日报告是否已生成（没有则失败 → GitHub 通知）
+
+      - name: 检查今日报告，缺失则自动重跑 daily-report
         run: |
           TODAY=$(TZ=Asia/Shanghai date +%F)
           LATEST=$(node -e "try{console.log(require('./docs/latest.json').date||'')}catch(e){console.log('')}")
           echo "今天(北京)=$TODAY，latest.json.date=$LATEST"
           if [ "$LATEST" = "$TODAY" ]; then
-            echo "✅ 今日报告已生成"
+            echo "✅ 今日报告已生成，无需干预"
             exit 0
           fi
-          echo "::error::今日($TODAY)未检测到新报告（latest=$LATEST）。云端 Routine 可能失败/未跑/被关卡挡住，请打开 Routine 管理页查看 run 日志并手动重跑。"
+
+          echo "⚠️ 今日($TODAY)缺报告（latest=$LATEST）→ 自动触发 daily-report 重跑"
+          gh workflow run daily-report.yml --ref main
+
+          echo "已派发重跑，轮询复检（最多约 15 分钟）…"
+          for i in $(seq 1 15); do
+            sleep 60
+            git fetch -q origin main || true
+            NEW=$(git show origin/main:docs/latest.json 2>/dev/null \
+              | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{console.log(JSON.parse(s).date||'')}catch(e){console.log('')}})")
+            echo "  第 ${i}/15 次复检：latest=$NEW"
+            if [ "$NEW" = "$TODAY" ]; then
+              echo "✅ 重跑已产出今日报告，自愈成功"
+              exit 0
+            fi
+          done
+
+          echo "::error::自动重跑后约 15 分钟内仍未见今日($TODAY)报告。请人工查看 daily-report 最近一次 run 日志（可能是生成阶段挂了，非触发问题）。"
           exit 1
