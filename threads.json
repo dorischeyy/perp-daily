@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-07-06",
+  "updated": "2026-07-07",
   "threads": [
     {
       "id": "robinhood-chain-perp-distribution",
@@ -35,7 +35,8 @@
         { "date": "2026-07-03", "point": "反转信号：市场消化细节后发现 Arcus 是『完全独立公司』、有专属代币，dYdX 创始人 Antonio Juliano 转任董事会成员，原 dYdX v4 定位改为『维护而非积极开发』；DYDX 代币24小时内从$0.179跌至$0.138（-23%），交易量激增650%。同日 eToro（联合Jump Crypto）领投链上永续交易所 Extended（StarkEx架构）$1250万融资，计划整合进自家自托管钱包 Zengo，是继 Robinhood 后第二家用『投资+集成』打法嵌入 perp DEX 的持牌经纪商，命中 watch_for『其他券商是否跟进』。", "url": "https://www.cryptopolitan.com/dydx-launches-arcus-dex-on-robinhood-chain-as-dydx-token-drops-23/" },
         { "date": "2026-07-04", "point": "Robinhood CEO Vlad Tenev 07-02 在CNBC采访中首次公开说明战略动机：『加密的未来在RWA，不在meme币』，称链上代币化终将吞噬整条传统金融轨道『a freight train that can't be stopped』；并透露下一步是给用户提供OpenAI等未上市公司的份额敞口。这是首次由经纪商一把手正面阐述『为什么要焊perp DEX进钱包』的战略逻辑，而非仅是产品公告。", "url": "https://www.theblock.co/post/407047" },
         { "date": "2026-07-01", "point": "现实检查（核实 dYdX 官方博客与独立媒体后发现）：Arcus 目前只有 95 只代币化股票的现货交易真正上线，其被称为『核心产品』的 35 个 RWA 永续市场仍卡在候补名单（waitlist），尚未对外开放交易。分发到位不等于产品交付，Robinhood 钱包内目前能做的只是股票代币现货，不是永续合约。", "url": "https://www.dydx.xyz/blog/a-new-arc" },
-        { "date": "2026-07-06", "point": "第 4 例样本：南非/非洲最大交易所 VALR 官方博客 07-02 公告、07-06 web 端上线，直接整合 Hyperliquid 无需许可基础设施，新增 200+ 跨资产永续市场（股票/商品/外汇/加密）；VALR 自称是『首次主流受监管交易所原生整合链上一层协议获取流动性和执行』，账户/合规关系留在自己手里，订单管理执行清算全部转包给 Hyperliquid 侧第三方流动性提供者，并声明不为第三方过错担责。继 Robinhood×Lighter/Arcus、eToro×Extended 之后，『贴牌接入而非自建』的样本又添一例，且是首次做到底层协议对用户完全不可见。", "url": "https://blog.valr.com/blog/valr-launches-200-hyperliquid-perps-markets" }
+        { "date": "2026-07-06", "point": "第 4 例样本：南非/非洲最大交易所 VALR 官方博客 07-02 公告、07-06 web 端上线，直接整合 Hyperliquid 无需许可基础设施，新增 200+ 跨资产永续市场（股票/商品/外汇/加密）；VALR 自称是『首次主流受监管交易所原生整合链上一层协议获取流动性和执行』，账户/合规关系留在自己手里，订单管理执行清算全部转包给 Hyperliquid 侧第三方流动性提供者，并声明不为第三方过错担责。继 Robinhood×Lighter/Arcus、eToro×Extended 之后，『贴牌接入而非自建』的样本又添一例，且是首次做到底层协议对用户完全不可见。", "url": "https://blog.valr.com/blog/valr-launches-200-hyperliquid-perps-markets" },
+        { "date": "2026-07-07", "point": "分发效应首次在价格上被验证：被嵌入 Robinhood 钱包的 Lighter，其代币 LIT 本周暴涨超 50%（24小时+13.5%），叠加其代币经济学从『回购持有』改『回购销毁』的消息，30 天交易量达 400 亿美元；同期第三方数据显示 Robinhood Chain 生态整体 TVL 上线 4 天后仍只有约 7673 万美元，规模有限，提示『被选中做分发』与『生态实际沉淀资金』之间仍有明显落差，二者需分开评估。", "url": "https://www.coindesk.com/markets/2026/07/06/crypto-bounces-back-from-the-brink-as-altcoin-optimism-returns-despite-pockets-of-weakness" }
       ]
     },
     {
@@ -45,15 +46,16 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-06-30",
-      "last_update": "2026-07-01",
+      "last_update": "2026-07-06",
       "cadence_days": 6,
-      "next_check": "2026-07-07",
+      "next_check": "2026-07-13",
       "thesis": "新锐 perp DEX 集体把交易手续费转成对自家代币的回购+销毁，用真实现金流为币价托底、把交易活跃度绑定到代币通缩与质押收益。这是 perp DEX「手续费→代币价值捕获」飞轮的激进样本，正从个案（Aster）扩散为赛道范式。",
       "why_us": "Hertzflow ZFP 用盈利抽成替代手续费，若未来做代币经济，抽成现金流如何回流代币（回购/销毁/质押分红）可直接参照这批飞轮设计，及其在去杠杆期的可持续性表现。",
       "watch_for": "去杠杆致手续费收缩后回购力度是否明显减弱 / 质押率与币价是否背离 / 还有哪些 perp DEX 跟进同款高比例费用回购销毁",
       "log": [
         { "date": "2026-06-30", "point": "新建线：Aster 披露 06-17 上线的新代币经济首轮成绩，06-17 至 29 用 99% 日费回购约 294 万枚 $ASTER 注入 veASTER 奖励池并等量销毁团队份额，长期目标总供应 80 亿→30 亿；另每笔 permissionless 上币 5 万 USDT 并入未来回购。", "url": "https://www.cryptotimes.io/2026/06/29/aster-burns-2-9m-tokens-in-first-buyback-under-new-tokenomics/" },
-        { "date": "2026-06-30", "point": "Lighter 跟进（watch_for 命中）：把自 TGE 以来用 100% 交易费回购的约 1550 万枚 LIT（≈流通 6.3%）从『囤积』改为『永久销毁』，首销定于 Q2 结束后数周；并承认 pre-TGE 补贴模型不可持续，质押收益改由生态储备承担、目标年化 6%。个案变趋势：费用→通缩成新锐 perp DEX 争夺估值锚的标配叙事。", "url": "https://www.cryptotimes.io/2026/07/01/lighter-updates-tokenomics-with-lit-burns-and-6-staking-target/" }
+        { "date": "2026-06-30", "point": "Lighter 跟进（watch_for 命中）：把自 TGE 以来用 100% 交易费回购的约 1550 万枚 LIT（≈流通 6.3%）从『囤积』改为『永久销毁』，首销定于 Q2 结束后数周；并承认 pre-TGE 补贴模型不可持续，质押收益改由生态储备承担、目标年化 6%。个案变趋势：费用→通缩成新锐 perp DEX 争夺估值锚的标配叙事。", "url": "https://www.cryptotimes.io/2026/07/01/lighter-updates-tokenomics-with-lit-burns-and-6-staking-target/" },
+        { "date": "2026-07-06", "point": "Lighter 明确执行时间表：此前累计回购的 1550 万枚 LIT 将从 Q3 起永久销毁（此前只说『Q2 结束后数周』，现落实到季度）；消息叠加 Robinhood Chain 分发热度，LIT 单周暴涨超 50%、24 小时+13.5%，市场在销毁真正执行前就已提前定价这份承诺。同期确认 Avantis（Base 最大衍生品 DEX）自 03-11 起也在跑同款机制（30% 日开平仓/盈利费回购+每 6 小时销毁 AVNT），飞轮打法已扩散至至少三个新锐 perp DEX（Aster/Lighter/Avantis）。", "url": "https://www.banklesstimes.com/articles/2026/07/06/lit-token-price-prediction-after-lighter-replaces-buybacks-with-burns/" }
       ]
     },
     {
@@ -65,13 +67,14 @@
       "first_seen": "2026-06-30",
       "last_update": "2026-06-30",
       "cadence_days": 6,
-      "next_check": "2026-07-07",
+      "next_check": "2026-07-13",
       "thesis": "Hyperliquid HIP-3 的 permissionless 建市者层正在退场/被整合：明星建市者被钱包分发方收编（Ventuals 团队→Phantom）、USDT 系建市者因平台转向 USDC 原生化而清算离场（Dreamcash）。证明 permissionless 市场的护城河从来不是『能否上市』，而是『结算资产标准 + 分发/订单流』。是对 06-12 起 HIP-3 扩张叙事（见 hyperliquid-equity-perp-expansion）的反面续章。",
       "why_us": "Hertzflow 的 permissionless 市场创建是核心差异化，此线直接警示：建市容易、留量难。且 Hertzflow 全 USDT 抵押，需评估结算币标准变更风险（Dreamcash 正死于 USDT vs USDC）、僵尸市场退场机制、以及分发/流量入口的自建。",
       "watch_for": "更多 HIP-3 建市者停运/被收编 / Hyperliquid 是否进一步收紧建市者标准 / 钱包（Phantom）是否自建 perp 分发闭环 / 结算稳定币标准之争是否蔓延到其他平台",
       "log": [
         { "date": "2026-06-30", "point": "新建线：Solana 头部钱包 Phantom 收编 Hyperliquid 明星建市者 Ventuals 三位创始人并入交易/数据团队；Ventuals（未上市公司估值永续，曾上 OpenAI/Anthropic 私司永续）本月早些时候已停运并入生态另一项目。CEO 称 open markets 是重点、perps 上要做得更深，Phantom 自称是 Hyperliquid 生态最大分发伙伴。", "url": "https://www.coindesk.com/business/2026/06/30/phantom-doubles-down-on-perpetual-futures-with-hire-of-hyperliquid-market-builders" },
-        { "date": "2026-06-30", "point": "同期 Tether 系 Dreamcash（HIP-3 上 USDT 计价建市者）宣布停运全部 CASH 市场，6/30–7/2 分三批结算退场（KWEB/INTC/MSFT→GOLD/NVDA→GOOGL/TSLA/USA500），理由：Hyperliquid 原生集成 USDC 后，作为 USDT 建市者的 UX 门槛无法克服。非托管，用户资金不受影响。", "url": "https://www.cryptotimes.io/2026/06/26/tether-backed-dreamcash-cuts-cash-markets-amid-hyperliquid-usdc-surge/" }
+        { "date": "2026-06-30", "point": "同期 Tether 系 Dreamcash（HIP-3 上 USDT 计价建市者）宣布停运全部 CASH 市场，6/30–7/2 分三批结算退场（KWEB/INTC/MSFT→GOLD/NVDA→GOOGL/TSLA/USA500），理由：Hyperliquid 原生集成 USDC 后，作为 USDT 建市者的 UX 门槛无法克服。非托管，用户资金不受影响。", "url": "https://www.cryptotimes.io/2026/06/26/tether-backed-dreamcash-cuts-cash-markets-amid-hyperliquid-usdc-surge/" },
+        { "date": "2026-07-07", "point": "复盘（无新增退场/收编事件）：本周未见新的 HIP-3 建市者停运或被收编，TradeXYZ 仍占 HIP-3 逾九成未平仓量，集中度未改善。唯一的反向信号是 Kinetiq『Launch』众筹质押平台（06-11 上线，帮团队凑够 50 万+ HYPE 建市门槛）在低门槛化建市，但截至目前尚无团队借此挑战 TradeXYZ 的份额，暂不构成对论点的反驳。", "url": "https://www.coindesk.com/business/2026/06/30/phantom-doubles-down-on-perpetual-futures-with-hire-of-hyperliquid-market-builders" }
       ]
     },
     {
@@ -106,12 +109,13 @@
       "first_seen": "2026-06-30",
       "last_update": "2026-06-30",
       "cadence_days": 7,
-      "next_check": "2026-07-07",
+      "next_check": "2026-07-14",
       "thesis": "新加坡 MAS 将 Hyperliquid 列入 IAL 标志着亚太监管压力从中心化交易所蔓延到链上 perp，是 perp DEX 在监管视野中从边缘走向被动接触的拐点；亚太各主要司法管辖区的后续跟进动向将塑造链上 perp 在该地区的生态位。",
       "why_us": "HertzFlow 在 BSC 上运营，亚太用户是核心市场。MAS 的先例若被日本 FSA、韩国 FSC、台湾 FSC 等复制，将直接影响产品在这些区域的可及性及合规话术的必要性。",
       "watch_for": "日本/韩国/澳大利亚是否跟进同类警告 / Hyperliquid 的官方声明是否形成链上 perp 行业话语标准 / MAS 是否从 IAL 升级为执法行动 / 本地支付机构是否实际切断出入金通道",
       "log": [
-        { "date": "2026-06-30", "point": "新建线：MAS 于 06-26 将 Hyperliquid 主站及 Hyper Foundation 列入 IAL，与 Bybit（06-17 列入）、KuCoin、Bitget 并列；Hyperliquid 自称无许可基础设施、从未申请 MAS 牌照。IAL 为消费者保护机制，不是执法禁令，但本地金融机构将受压力切断相关支付通道；本周同期澳大利亚 ASIC 延长加密牌照申请截止，亚太监管节奏整体加快。", "url": "https://cointelegraph.com/features/singapores-hyperliquid-warning-indonesias-finfluencer-licence-asia-express" }
+        { "date": "2026-06-30", "point": "新建线：MAS 于 06-26 将 Hyperliquid 主站及 Hyper Foundation 列入 IAL，与 Bybit（06-17 列入）、KuCoin、Bitget 并列；Hyperliquid 自称无许可基础设施、从未申请 MAS 牌照。IAL 为消费者保护机制，不是执法禁令，但本地金融机构将受压力切断相关支付通道；本周同期澳大利亚 ASIC 延长加密牌照申请截止，亚太监管节奏整体加快。", "url": "https://cointelegraph.com/features/singapores-hyperliquid-warning-indonesias-finfluencer-licence-asia-express" },
+        { "date": "2026-07-07", "point": "复盘（无新进展）：一周以来未见日本/韩国/澳大利亚等亚太监管机构跟进同类警告，Hyperliquid 06-26 的『不构成禁令』澄清立场也未再升级；MAS 未见执法动作，事件维持在消费者提示层面，暂无新触发点。", "url": "https://cryptorank.io/news/feed/86604-hyperliquid-mas-investor-alert-list-clarification" }
       ]
     },
     {
