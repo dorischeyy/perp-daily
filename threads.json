@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-07-07",
+  "updated": "2026-07-08",
   "threads": [
     {
       "id": "robinhood-chain-perp-distribution",
