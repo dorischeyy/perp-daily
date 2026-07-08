@@ -37,7 +37,18 @@ jobs:
         id: meta
         run: echo "d=$(TZ=Asia/Shanghai date +%F)" >> "$GITHUB_OUTPUT"
 
+      - name: 守卫：今天已发布则跳过（防手动补发后迟到的定时任务重发第二份）
+        id: guard
+        run: |
+          if [ -f docs/latest.json ] && [ "$(node -e "console.log(require('./docs/latest.json').date)")" = "${{ steps.meta.outputs.d }}" ]; then
+            echo "published=true" >> "$GITHUB_OUTPUT"
+            echo "今天（${{ steps.meta.outputs.d }}）的日报已发布，跳过生成与投递"
+          else
+            echo "published=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Claude 生成交接物（content.json / threads.json / review.draft.md）
+        if: steps.guard.outputs.published != 'true'
         id: claude
         uses: anthropics/claude-code-action@v1
         with:
@@ -53,7 +64,7 @@ jobs:
           claude_args: '--permission-mode bypassPermissions --model sonnet --disallowedTools "Agent,Task"'
 
       - name: 上传 Claude execution log（失败排查用）
-        if: always()
+        if: always() && steps.guard.outputs.published != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: claude-execution-log
@@ -61,9 +72,11 @@ jobs:
           if-no-files-found: warn
 
       - name: "校验 → 渲染 → 推送（report: 提交）"
+        if: steps.guard.outputs.published != 'true'
         run: bash publish.sh
 
       - name: 投递飞书 + Slack（内联）
+        if: steps.guard.outputs.published != 'true'
         env:
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
