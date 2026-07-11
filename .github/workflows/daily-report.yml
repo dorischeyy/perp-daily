@@ -24,6 +24,14 @@ jobs:
   report:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    env:
+      # 提交身份钉死为 dorischeyy：noreply 邮箱归属 dorischeyy 账号，每日 report: 提交计入其贡献格。
+      # 用 env 而非 git config：env 优先级最高，claude-code-action 内部再怎么改 git 配置也覆盖不了
+      #（此前身份被 action 配成 claude.ai 账号邮箱 startrail1016@gmail.com，贡献全记到了 Startrail1016 账号）。
+      GIT_AUTHOR_NAME: dorischeyy
+      GIT_AUTHOR_EMAIL: dorischeyy@users.noreply.github.com
+      GIT_COMMITTER_NAME: dorischeyy
+      GIT_COMMITTER_EMAIL: dorischeyy@users.noreply.github.com
     steps:
       - uses: actions/checkout@v4
         with:
