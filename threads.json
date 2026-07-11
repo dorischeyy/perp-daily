@@ -42,9 +42,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-02",
-      "last_update": "2026-07-10",
+      "last_update": "2026-07-11",
       "cadence_days": 3,
-      "next_check": "2026-07-13",
+      "next_check": "2026-07-14",
       "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
       "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
       "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -56,7 +56,8 @@
         { "date": "2026-07-06", "point": "第 4 例样本：南非/非洲最大交易所 VALR 官方博客 07-02 公告、07-06 web 端上线，直接整合 Hyperliquid 无需许可基础设施，新增 200+ 跨资产永续市场（股票/商品/外汇/加密）；VALR 自称是『首次主流受监管交易所原生整合链上一层协议获取流动性和执行』，账户/合规关系留在自己手里，订单管理执行清算全部转包给 Hyperliquid 侧第三方流动性提供者，并声明不为第三方过错担责。继 Robinhood×Lighter/Arcus、eToro×Extended 之后，『贴牌接入而非自建』的样本又添一例，且是首次做到底层协议对用户完全不可见。", "url": "https://blog.valr.com/blog/valr-launches-200-hyperliquid-perps-markets" },
         { "date": "2026-07-07", "point": "分发效应首次在价格上被验证：被嵌入 Robinhood 钱包的 Lighter，其代币 LIT 本周暴涨超 50%（24小时+13.5%），叠加其代币经济学从『回购持有』改『回购销毁』的消息，30 天交易量达 400 亿美元；同期第三方数据显示 Robinhood Chain 生态整体 TVL 上线 4 天后仍只有约 7673 万美元，规模有限，提示『被选中做分发』与『生态实际沉淀资金』之间仍有明显落差，二者需分开评估。", "url": "https://www.coindesk.com/markets/2026/07/06/crypto-bounces-back-from-the-brink-as-altcoin-optimism-returns-despite-pockets-of-weakness" },
         { "date": "2026-07-09", "point": "TVL 单日（07-07）因 Ethena 约 5000 万美元稳定币存款暴涨超 160% 破 2.34 亿美元，DEX 交易量峰值近 4 亿美元；但同日真正引爆的是 pump.fun 07-08 新增 Robinhood Chain 代币交易支持后的 meme 币投机（CASHCAT 24 小时+700-950%，市值冲至 6800 万-1 亿美元），而被称为『核心产品』的 Arcus 35 个 RWA 永续市场，07-01 上线至今仍卡在候补名单未开放交易。『分发到位不等于产品交付』的判断进一步被坐实。", "url": "https://thedefiant.io/news/blockchains/robinhood-chain-metrics-surge-as-the-network-leans-into-memecoins" },
-        { "date": "2026-07-10", "point": "CASHCAT 市值一周内冲高至 1.5 亿美元（24 小时量 1.59 亿美元），占 Robinhood Chain 前 25 meme 币总市值约 79%；同期 Noxa.fun 等第三方 launchpad 单日代币部署量从 1858 跳增至 6675（+259%），链上日交易量 +133% 至 280 万笔，且这些交易全部经 Uniswap V3 池与 pump.fun/Noxa.fun 外部路由完成，未经 Robinhood 官方 App 批准；『核心产品』Arcus 的 35 个 RWA 永续市场自 07-01 以来仍卡在候补名单，无新进展。分发热度持续由投机 meme 币驱动，而非承诺的 RWA 永续。", "url": "https://cryptoslate.com/robinhood-launched-a-wall-street-layer-2-chain-and-the-market-crowned-a-150m-cat-coin-first/" }
+        { "date": "2026-07-10", "point": "CASHCAT 市值一周内冲高至 1.5 亿美元（24 小时量 1.59 亿美元），占 Robinhood Chain 前 25 meme 币总市值约 79%；同期 Noxa.fun 等第三方 launchpad 单日代币部署量从 1858 跳增至 6675（+259%），链上日交易量 +133% 至 280 万笔，且这些交易全部经 Uniswap V3 池与 pump.fun/Noxa.fun 外部路由完成，未经 Robinhood 官方 App 批准；『核心产品』Arcus 的 35 个 RWA 永续市场自 07-01 以来仍卡在候补名单，无新进展。分发热度持续由投机 meme 币驱动，而非承诺的 RWA 永续。", "url": "https://cryptoslate.com/robinhood-launched-a-wall-street-layer-2-chain-and-the-market-crowned-a-150m-cat-coin-first/" },
+        { "date": "2026-07-11", "point": "首次有第三方披露真实收入数据：Cointelegraph 07-10 报道，上线首周桥入 ETH 超 7000 万美元，链上 TVL 达 4.67 万 ETH（约 8300 万美元），日活地址 19.4 万，日收入约 3.9 万美元（年化约 1400 万美元）；同日 The Defiant 报道 Arbitrum 官方确认，作为 Orbit 框架 L2，Robinhood Chain 需向 Arbitrum 缴纳 10% 手续费（8% 入 ARB 国库、2% 给开发方）。年化 1400 万美元的真实收入相对其 2800 万用户/38 国的分发体量和过去一周的 meme 炒作声量明显克制，『分发到位不等于产品交付』的判断再添一组硬数据；Arcus 35 个 RWA 永续市场仍卡在候补名单，无新进展。", "url": "https://cointelegraph.com/news/robinhood-chain-sees-over-70m-in-eth-bridged-during-first-week" }
       ]
     },
     {
@@ -144,11 +145,11 @@
       "title": "Hyperliquid 股票永续矩阵扩张",
       "score": 91,
       "tier": "S",
-      "status": "dormant",
+      "status": "active",
       "first_seen": "2026-06-12",
-      "last_update": "2026-06-23",
+      "last_update": "2026-07-11",
       "cadence_days": 3,
-      "next_check": "2026-07-07",
+      "next_check": "2026-07-14",
       "thesis": "Hyperliquid 的 HIP-3 无需许可机制正在把「任何可定价标的」都变成 24/7 永续市场，从加密到股票到优先股，产品矩阵覆盖速度远超任何中心化或其他链上对手。链上股票永续的基础设施护城河正在此形成。",
       "why_us": "HertzFlow 美股指数 perp 和虚拟 RWA 标的是核心差异化，而 Hyperliquid HIP-3 的扩张速度定义了产品升级的参照系和竞争压力窗口。",
       "watch_for": "HIP-3 总 OI 突破 $40 亿 / 下一重量级个股标的上线(Apple/Nvidia/ARM) / Coinbase 或 Aster 在个股 perp 的追赶进度",
@@ -157,7 +158,8 @@
         { "date": "2026-06-23", "point": "Strategy STRC 可变利率优先股永续由 trade.xyz 通过 HIP-3 上线，10 倍杠杆；tokenized equity 已占平台前 30 OI 对 23 席，HIP-3 OI 突破 $30 亿", "url": "https://www.cryptotimes.io/2026/06/23/strategys-strc-stock-futures-goes-live-on-hyperliquid-amid-volatile-comeback/" },
         { "date": "2026-06-26", "point": "复盘(无新增事件)：今日无新增重量级个股标的，HIP-3 OI 六月见顶约 $32 亿后进入平台期；链上股票永续从「抢上线」转入存量竞争，CEX 的 pre-IPO/个股永续反扑暂未撼动格局", "url": "https://www.coingecko.com/learn/hyperliquid-hip3-hip4-tokenized-stocks-and-prediction-markets" },
         { "date": "2026-06-29", "point": "复盘（结构性事实）：HIP-3 总 OI 自六月初约 $30 亿后维持平台期；结构上单一 builder trade.xyz 独占全 HIP-3 逾 90% 未平仓量，permissionless 市场工厂实为单点集中。叙事从「抢上线」转向「集中度风险」。", "url": "https://www.coingecko.com/learn/hyperliquid-hip3-hip4-tokenized-stocks-and-prediction-markets" },
-        { "date": "2026-06-30", "point": "转 dormant：自 06-23 起连续超两个 cadence 无实质进展，HIP-3 OI 维持平台期，叙事已从扩张转入存量。待 OI 新高或重量级新标的上线时复活。", "url": "https://www.coingecko.com/learn/hyperliquid-hip3-hip4-tokenized-stocks-and-prediction-markets" }
+        { "date": "2026-06-30", "point": "转 dormant：自 06-23 起连续超两个 cadence 无实质进展，HIP-3 OI 维持平台期，叙事已从扩张转入存量。待 OI 新高或重量级新标的上线时复活。", "url": "https://www.coingecko.com/learn/hyperliquid-hip3-hip4-tokenized-stocks-and-prediction-markets" },
+        { "date": "2026-07-11", "point": "转回 active，watch_for『Coinbase 或 Aster 追赶』命中但主角是 Binance：Binance 07-09 14:00 UTC 起每 5 分钟依次上线 7 个 U 本位美股/ETF 永续（RoboStrategy/Wendy's/INTC 2x ETF/SNDK 2x ETF/XBI/CEA Industries/Forward Industries，前 5 个最高 25 倍杠杆），未使用任何 permissionless 建市机制，直接用现成撮合引擎整体上线；经查证这是 Binance 6 月以来的第二批同类批量上市（06-08 已上过 Blackstone/CrowdStrike/AMAT 等 8 个），证明是系统性铺量而非一次性事件。CEX 追赶股票永续不需要复制 HIP-3 的市场创建机制，只需标的选择权和现成流动性，permissionless 建市作为护城河的独特性被削弱。", "url": "https://en.cryptonomist.ch/2026/07/09/binance-perpetual-contracts-launch/" }
       ]
     }
   ]
