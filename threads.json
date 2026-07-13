@@ -15,7 +15,7 @@
         "watch_for": "下一个关键节点/该盯的触发事件",
         "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
     },
-    "updated": "2026-07-10",
+    "updated": "2026-07-13",
     "threads": [
         {
             "id": "tradfi-perp-asset-class",
@@ -55,9 +55,9 @@
             "tier": "S",
             "status": "active",
             "first_seen": "2026-07-02",
-            "last_update": "2026-07-11",
+            "last_update": "2026-07-13",
             "cadence_days": 3,
-            "next_check": "2026-07-14",
+            "next_check": "2026-07-16",
             "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
             "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
             "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -106,6 +106,11 @@
                     "date": "2026-07-11",
                     "point": "首次有第三方披露真实收入数据：Cointelegraph 07-10 报道，上线首周桥入 ETH 超 7000 万美元，链上 TVL 达 4.67 万 ETH（约 8300 万美元），日活地址 19.4 万，日收入约 3.9 万美元（年化约 1400 万美元）；同日 The Defiant 报道 Arbitrum 官方确认，作为 Orbit 框架 L2，Robinhood Chain 需向 Arbitrum 缴纳 10% 手续费（8% 入 ARB 国库、2% 给开发方）。年化 1400 万美元的真实收入相对其 2800 万用户/38 国的分发体量和过去一周的 meme 炒作声量明显克制，『分发到位不等于产品交付』的判断再添一组硬数据；Arcus 35 个 RWA 永续市场仍卡在候补名单，无新进展。",
                     "url": "https://cointelegraph.com/news/robinhood-chain-sees-over-70m-in-eth-bridged-during-first-week"
+                },
+                {
+                    "date": "2026-07-13",
+                    "point": "指标反超但成色未变：DefiLlama 数据显示 Robinhood Chain 07-10 单日现货 DEX 交易量约3.75亿美元，首次反超 Hyperliquid 同口径现货交易量约1.99亿美元（为主网上线以来首次）；但驱动力仍是 CASHCAT 等 meme 币投机与代币化股票现货，Arcus 承诺的 35 个 RWA 永续市场自 07-01 以来连续 12 天无新进展，仍卡在候补名单。'分发到位不等于产品交付'的判断进一步坐实。",
+                    "url": "https://www.cryptotimes.io/2026/07/10/robinhood-chain-outperforms-hyperliquid-in-dex-volume/"
                 }
             ]
         },
@@ -150,11 +155,11 @@
             "title": "HIP-3 建市者退场潮",
             "score": 81,
             "tier": "A",
-            "status": "active",
+            "status": "dormant",
             "first_seen": "2026-06-30",
             "last_update": "2026-06-30",
             "cadence_days": 6,
-            "next_check": "2026-07-13",
+            "next_check": "2026-07-27",
             "thesis": "Hyperliquid HIP-3 的 permissionless 建市者层正在退场/被整合：明星建市者被钱包分发方收编（Ventuals 团队→Phantom）、USDT 系建市者因平台转向 USDC 原生化而清算离场（Dreamcash）。证明 permissionless 市场的护城河从来不是『能否上市』，而是『结算资产标准 + 分发/订单流』。是对 06-12 起 HIP-3 扩张叙事（见 hyperliquid-equity-perp-expansion）的反面续章。",
             "why_us": "Hertzflow 的 permissionless 市场创建是核心差异化，此线直接警示：建市容易、留量难。且 Hertzflow 全 USDT 抵押，需评估结算币标准变更风险（Dreamcash 正死于 USDT vs USDC）、僵尸市场退场机制、以及分发/流量入口的自建。",
             "watch_for": "更多 HIP-3 建市者停运/被收编 / Hyperliquid 是否进一步收紧建市者标准 / 钱包（Phantom）是否自建 perp 分发闭环 / 结算稳定币标准之争是否蔓延到其他平台",
@@ -173,6 +178,11 @@
                     "date": "2026-07-07",
                     "point": "复盘（无新增退场/收编事件）：本周未见新的 HIP-3 建市者停运或被收编，TradeXYZ 仍占 HIP-3 逾九成未平仓量，集中度未改善。唯一的反向信号是 Kinetiq『Launch』众筹质押平台（06-11 上线，帮团队凑够 50 万+ HYPE 建市门槛）在低门槛化建市，但截至目前尚无团队借此挑战 TradeXYZ 的份额，暂不构成对论点的反驳。",
                     "url": "https://www.coindesk.com/business/2026/06/30/phantom-doubles-down-on-perpetual-futures-with-hire-of-hyperliquid-market-builders"
+                },
+                {
+                    "date": "2026-07-13",
+                    "point": "转 dormant（连续第2个cadence无新增退场/收编事件）：本周复核确认仍无新的 HIP-3 建市者停运/被收编报道，TradeXYZ 持续占逾九成 HIP-3 未平仓量，Kinetiq『Launch』众筹质押平台运行中但未见新团队借此挑战份额。叙事进入静默期，转 dormant，待有实质退场/收编/集中度变化事件再激活。",
+                    "url": "https://www.coindesk.com/business/2026/06/30/phantom-doubles-down-on-perpetual-futures-with-hire-of-hyperliquid-market-builders"
                 }
             ]
         },
@@ -185,7 +195,7 @@
             "first_seen": "2026-06-19",
             "last_update": "2026-07-10",
             "cadence_days": 3,
-            "next_check": "2026-07-13",
+            "next_check": "2026-07-16",
             "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
             "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
             "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
@@ -228,6 +238,11 @@
                 {
                     "date": "2026-07-10",
                     "point": "转回 active：案外监管姿态先于诉讼判决出现实质进展。CFTC 主席 Michael Selig 07-09 援引监管权限叫停 CME 集团原定 07-10 上市的 10 桶 WTI 原油连续期货自我认证（CME 仅 07-08 才提交，审查时间不足），称这种自我认证方式『完全不适当（wholly inappropriate）』，强调连续交易新品需逐案评估、不搞一刀切；同日 CME 诉 CFTC 案代理律所 Jenner and Block 因『positional conflicts』申请退出，前 CFTC 执法主管 Aitan Goelman（Zuckerman Spaeder）接手；同日 Hyperliquid 与 Phantom 联合向 CFTC 递交请愿书，要求豁免链上开发者与非托管钱包提供商的经纪商注册义务。CFTC 同时在『谁能做连续交易市场』这条战线上收紧对 CME、又收到来自链上阵营的规则松绑请求，案外监管姿态比诉讼本身更活跃，值得持续跟踪。",
+                    "url": "https://cryptobriefing.com/cftc-stays-cme-247-crude-oil-futures/"
+                },
+                {
+                    "date": "2026-07-13",
+                    "point": "复盘（无新进展，第1个cadence无实质推进）：距07-10的CFTC叫停CME原油连续期货自我认证、律所更换、Hyperliquid/Phantom联合请愿三重进展已过3天，未见诉讼本身排期/裁定/初步禁令的新公开记录，CME原油合约后续处置结果也未见跟进报道。案件本身仍无排期，维持active，待下次复盘。",
                     "url": "https://cryptobriefing.com/cftc-stays-cme-247-crude-oil-futures/"
                 }
             ]
