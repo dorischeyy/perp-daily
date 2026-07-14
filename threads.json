@@ -15,7 +15,7 @@
         "watch_for": "下一个关键节点/该盯的触发事件",
         "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
     },
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "threads": [
         {
             "id": "tradfi-perp-asset-class",
@@ -24,9 +24,9 @@
             "tier": "A",
             "status": "active",
             "first_seen": "2026-07-09",
-            "last_update": "2026-07-12",
+            "last_update": "2026-07-14",
             "cadence_days": 6,
-            "next_check": "2026-07-18",
+            "next_check": "2026-07-20",
             "thesis": "此前 Hyperliquid HIP-3 股票永续、Ondo Perps、Binance/OKX 的个股/大宗商品永续都是孤立个案，币安研究院 07-08 报告首次把它们汇总量化：稳定币结算的 TradFi 永续 2026 上半年交易量破 1.1 万亿美元，占全部加密永续交易量约 11%。这标志着虚拟/代币化非加密资产的永续交易正从零散尝试变成有统计意义的独立资产类别，值得持续跟踪其份额增速与背后驱动力（新平台上线 vs 存量平台放量）。",
             "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
             "watch_for": "下一份季度/半年度数据（币安研究院、DefiLlama、Messari）/ Hyperliquid HIP-3 OI 是否突破前高 $30-40 亿 / 更多 CEX(Binance/OKX/Bybit/Bitget) 加推 TradFi 永续或代币化股票产品 / 这 11% 份额的增速是否持续",
@@ -45,6 +45,11 @@
                     "date": "2026-07-12",
                     "point": "Pantera Capital 07-09 研报把叙事推进一层：Hyperliquid 单靠永续合约过去7天产生约1350万美元手续费，是全加密行业（不分类别）单周收入第四高的协议，不再只是「链上永续份额约40%」这一自证型数据；同一份研报重申 DEX 永续量已达 CEX 永续量14%（2023年初<1%）。",
                     "url": "https://cointelegraph.com/news/hyperliquid-onchain-perps-absorbing-tradfi-markets-pantera-capital"
+                },
+                {
+                    "date": "2026-07-14",
+                    "point": "CoinDesk交易所数据（经CryptoSlate引述，07-13发布）首次给出CEX侧RWA永续期货的月度量化：6月交易量环比增长57%至创纪录的3110亿美元，Binance一家占78.6%份额（约2450亿美元）。这是本线自07-09建线以来第一份聚焦『CEX端』（而非稳定币结算全口径）的月度数据，与Pantera 07-09『DEX永续占CEX永续14%』的链上视角形成互补，共同证明这一资产类别在CEX和DEX两端都在加速扩张。",
+                    "url": "https://cryptoslate.com/crypto-exchanges-are-becoming-the-new-distribution-channel-for-wall-street-assets/"
                 }
             ]
         },
@@ -55,9 +60,9 @@
             "tier": "S",
             "status": "active",
             "first_seen": "2026-07-02",
-            "last_update": "2026-07-13",
+            "last_update": "2026-07-14",
             "cadence_days": 3,
-            "next_check": "2026-07-16",
+            "next_check": "2026-07-17",
             "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
             "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
             "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -111,6 +116,11 @@
                     "date": "2026-07-13",
                     "point": "指标反超但成色未变：DefiLlama 数据显示 Robinhood Chain 07-10 单日现货 DEX 交易量约3.75亿美元，首次反超 Hyperliquid 同口径现货交易量约1.99亿美元（为主网上线以来首次）；但驱动力仍是 CASHCAT 等 meme 币投机与代币化股票现货，Arcus 承诺的 35 个 RWA 永续市场自 07-01 以来连续 12 天无新进展，仍卡在候补名单。'分发到位不等于产品交付'的判断进一步坐实。",
                     "url": "https://www.cryptotimes.io/2026/07/10/robinhood-chain-outperforms-hyperliquid-in-dex-volume/"
+                },
+                {
+                    "date": "2026-07-14",
+                    "point": "两份独立报告同日印证『分发到位不等于产品交付』：Bernstein（经The Block 07-13转引）测算上线首7天周DEX交易量达31亿美元、约6.5万活跃用户，跻身DEX交易量前五链（单日一度以8.09亿美元排第三，仅次于Solana、BNB Chain），维持『跑赢大盘』评级及130美元目标价；但CoinDesk 07-13深度数据显示，上线满13天时链上TVL约3.12亿美元中，RWA相关资产仅占4.1%（1281万美元，其中股票代币仅1068万美元），资产管理和借贷合计占比近79%，而CASHCAT一个meme币市值就达1.56亿美元，超过全部RWA资产总和逾10倍。同日第三方桥协议Relay披露有用户反映Robinhood Chain购买的代币从钱包中消失（私钥和其他余额未受影响），规模未披露，Relay称正在『拦截问题代币、核验安全代币』。",
+                    "url": "https://www.coindesk.com/tech/2026/07/13/robinhood-built-a-blockchain-for-tokenized-stocks-memecoins-took-over"
                 }
             ]
         },
@@ -252,11 +262,11 @@
             "title": "亚太监管压力：MAS 将链上 perp 纳入警告名单",
             "score": 81,
             "tier": "A",
-            "status": "active",
+            "status": "dormant",
             "first_seen": "2026-06-30",
             "last_update": "2026-06-30",
             "cadence_days": 7,
-            "next_check": "2026-07-14",
+            "next_check": "2026-07-28",
             "thesis": "新加坡 MAS 将 Hyperliquid 列入 IAL 标志着亚太监管压力从中心化交易所蔓延到链上 perp，是 perp DEX 在监管视野中从边缘走向被动接触的拐点；亚太各主要司法管辖区的后续跟进动向将塑造链上 perp 在该地区的生态位。",
             "why_us": "HertzFlow 在 BSC 上运营，亚太用户是核心市场。MAS 的先例若被日本 FSA、韩国 FSC、台湾 FSC 等复制，将直接影响产品在这些区域的可及性及合规话术的必要性。",
             "watch_for": "日本/韩国/澳大利亚是否跟进同类警告 / Hyperliquid 的官方声明是否形成链上 perp 行业话语标准 / MAS 是否从 IAL 升级为执法行动 / 本地支付机构是否实际切断出入金通道",
@@ -270,6 +280,11 @@
                     "date": "2026-07-07",
                     "point": "复盘（无新进展）：一周以来未见日本/韩国/澳大利亚等亚太监管机构跟进同类警告，Hyperliquid 06-26 的『不构成禁令』澄清立场也未再升级；MAS 未见执法动作，事件维持在消费者提示层面，暂无新触发点。",
                     "url": "https://cryptorank.io/news/feed/86604-hyperliquid-mas-investor-alert-list-clarification"
+                },
+                {
+                    "date": "2026-07-14",
+                    "point": "转 dormant（连续第2个cadence无实质进展）：核实确认日本FSA、韩国FSC官方渠道近期公告中均未见针对Hyperliquid或链上perp的专项警告；唯一相关进展是澳大利亚ASIC委托研究报告（06-30发布，早于上次复盘即已存在，未点名Hyperliquid/Lighter，仅泛泛指出『链上永续经济实质趋近CFD、游离于监管范围外』，性质是圆桌研究议题而非执法或正式警示）。MAS本身未见升级为执法行动。跟进信号持续缺席，转 dormant，待有司法管辖区正式跟进或MAS升级动作再激活。",
+                    "url": "https://www.financemagnates.com/forex/regulation/asic-warns-crypto-perps-now-mimic-cfds-while-dodging-its-rulebook/"
                 }
             ]
         },
@@ -280,9 +295,9 @@
             "tier": "S",
             "status": "active",
             "first_seen": "2026-06-12",
-            "last_update": "2026-07-11",
+            "last_update": "2026-07-14",
             "cadence_days": 3,
-            "next_check": "2026-07-14",
+            "next_check": "2026-07-17",
             "thesis": "Hyperliquid 的 HIP-3 无需许可机制正在把「任何可定价标的」都变成 24/7 永续市场，从加密到股票到优先股，产品矩阵覆盖速度远超任何中心化或其他链上对手。链上股票永续的基础设施护城河正在此形成。",
             "why_us": "HertzFlow 美股指数 perp 和虚拟 RWA 标的是核心差异化，而 Hyperliquid HIP-3 的扩张速度定义了产品升级的参照系和竞争压力窗口。",
             "watch_for": "HIP-3 总 OI 突破 $40 亿 / 下一重量级个股标的上线(Apple/Nvidia/ARM) / Coinbase 或 Aster 在个股 perp 的追赶进度",
@@ -316,6 +331,11 @@
                     "date": "2026-07-11",
                     "point": "转回 active，watch_for『Coinbase 或 Aster 追赶』命中但主角是 Binance：Binance 07-09 14:00 UTC 起每 5 分钟依次上线 7 个 U 本位美股/ETF 永续（RoboStrategy/Wendy's/INTC 2x ETF/SNDK 2x ETF/XBI/CEA Industries/Forward Industries，前 5 个最高 25 倍杠杆），未使用任何 permissionless 建市机制，直接用现成撮合引擎整体上线；经查证这是 Binance 6 月以来的第二批同类批量上市（06-08 已上过 Blackstone/CrowdStrike/AMAT 等 8 个），证明是系统性铺量而非一次性事件。CEX 追赶股票永续不需要复制 HIP-3 的市场创建机制，只需标的选择权和现成流动性，permissionless 建市作为护城河的独特性被削弱。",
                     "url": "https://en.cryptonomist.ch/2026/07/09/binance-perpetual-contracts-launch/"
+                },
+                {
+                    "date": "2026-07-14",
+                    "point": "结构性跃迁：The Block 07-13 报道，HIP-3 市场占 Hyperliquid 平台总永续交易量的份额，已从年初约2%攀升至现在的约50%，即年内25倍增长，标志着 Hyperliquid 已有一半交易量来自非加密标的（股票/商品）而非原生加密永续。同日 CryptoTimes 报道 Hyperliquid 总未平仓量首次突破110.7亿美元创2026年新高（经 docs/market.json 交叉核算约108亿美元，量级一致），其中 RWA 相关永续未平仓量创纪录达36亿美元，HIP-3 贡献约36.9亿美元未平仓量，逼近本线 watch_for 设定的40亿美元关口。TradeXYZ 仍是主导 builder（对应 hip3-builder-shakeout 线集中度论点未变）。",
+                    "url": "https://www.theblock.co/post/408064/hyperliquid-hip-3-markets-surge-50-perp-volume-onchain-stock-trading-grows"
                 }
             ]
         }
