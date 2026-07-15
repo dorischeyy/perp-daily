@@ -15,7 +15,7 @@
         "watch_for": "下一个关键节点/该盯的触发事件",
         "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
     },
-    "updated": "2026-07-14",
+    "updated": "2026-07-15",
     "threads": [
         {
             "id": "tradfi-perp-asset-class",
@@ -131,9 +131,9 @@
             "tier": "A",
             "status": "active",
             "first_seen": "2026-06-30",
-            "last_update": "2026-07-12",
+            "last_update": "2026-07-15",
             "cadence_days": 6,
-            "next_check": "2026-07-15",
+            "next_check": "2026-07-21",
             "thesis": "新锐 perp DEX 集体把交易手续费转成对自家代币的回购+销毁，用真实现金流为币价托底、把交易活跃度绑定到代币通缩与质押收益。这是 perp DEX「手续费→代币价值捕获」飞轮的激进样本，正从个案（Aster）扩散为赛道范式。",
             "why_us": "Hertzflow ZFP 用盈利抽成替代手续费，若未来做代币经济，抽成现金流如何回流代币（回购/销毁/质押分红）可直接参照这批飞轮设计，及其在去杠杆期的可持续性表现。",
             "watch_for": "去杠杆致手续费收缩后回购力度是否明显减弱 / 质押率与币价是否背离 / 还有哪些 perp DEX 跟进同款高比例费用回购销毁",
@@ -157,6 +157,11 @@
                     "date": "2026-07-12",
                     "point": "pump.fun（非 perp DEX，但同款「手续费回购销毁」机制的跨赛道样本）07-12 迎来上线以来最大一次解锁（约1.3亿美元，团队+早期投资者），正面对撞此前累计已烧掉四成流通供应的回购销毁飞轮，是这套模型在解锁高峰期成色的又一次压力测试，结果将在解锁后48小时内见分晓。",
                     "url": "https://crypto.news/pump-fun-127m-unlock-fair-launch-stress-test/"
+                },
+                {
+                    "date": "2026-07-15",
+                    "point": "到期复盘，watch_for「质押率与币价是否背离」命中：Aster 07-14 更新数据显示 06-29 至 07-13 继续以 99% 手续费回购 308.38 万枚 ASTER 并等量销毁团队份额（累计自 06-17 新机制销毁 602 万枚），但 ASTER 价格已从首轮回购时约 1.26 美元跌至 0.62 美元，腰斩超五成，同时下调质押 APY（26 周锁仓 5.35%，208 周封顶 28.85%）；平台自身永续交易量仍维持头部区间（24h 约 16.5 亿美元，OI 约 18.8 亿美元），回购机制运转正常，问题不在费用端而在价格端。对照组：Lighter 已把此前累计回购的 1564 万枚 LIT 于 07-11 完成首次真实链上销毁（约 4200 万美元，占流通量 6.3%），从公告兑现为执行；pump.fun（非 perp DEX，同款机制的跨赛道样本）扛住了自己史上最大一次代币解锁（07-12，1.3 亿美元，占流通供应 29%），07-14 前已有超 1900 万美元代币从团队钱包分发完毕，未见价格崩溃报道，截至 07-15 PUMP 24h+11%、7 日+5.3%，是正回报而非下跌，未出现崩盘。「回购持续销毁兑现但币价依然背离」与「同款机制扛住真实解锁压力测试」，是这条线目前并存的两个信号。",
+                    "url": "https://www.tronweekly.com/aster-price-eyes-0-70-after-aster-completes-3/"
                 }
             ]
         },
@@ -295,9 +300,9 @@
             "tier": "S",
             "status": "active",
             "first_seen": "2026-06-12",
-            "last_update": "2026-07-14",
+            "last_update": "2026-07-15",
             "cadence_days": 3,
-            "next_check": "2026-07-17",
+            "next_check": "2026-07-18",
             "thesis": "Hyperliquid 的 HIP-3 无需许可机制正在把「任何可定价标的」都变成 24/7 永续市场，从加密到股票到优先股，产品矩阵覆盖速度远超任何中心化或其他链上对手。链上股票永续的基础设施护城河正在此形成。",
             "why_us": "HertzFlow 美股指数 perp 和虚拟 RWA 标的是核心差异化，而 Hyperliquid HIP-3 的扩张速度定义了产品升级的参照系和竞争压力窗口。",
             "watch_for": "HIP-3 总 OI 突破 $40 亿 / 下一重量级个股标的上线(Apple/Nvidia/ARM) / Coinbase 或 Aster 在个股 perp 的追赶进度",
@@ -336,6 +341,11 @@
                     "date": "2026-07-14",
                     "point": "结构性跃迁：The Block 07-13 报道，HIP-3 市场占 Hyperliquid 平台总永续交易量的份额，已从年初约2%攀升至现在的约50%，即年内25倍增长，标志着 Hyperliquid 已有一半交易量来自非加密标的（股票/商品）而非原生加密永续。同日 CryptoTimes 报道 Hyperliquid 总未平仓量首次突破110.7亿美元创2026年新高（经 docs/market.json 交叉核算约108亿美元，量级一致），其中 RWA 相关永续未平仓量创纪录达36亿美元，HIP-3 贡献约36.9亿美元未平仓量，逼近本线 watch_for 设定的40亿美元关口。TradeXYZ 仍是主导 builder（对应 hip3-builder-shakeout 线集中度论点未变）。",
                     "url": "https://www.theblock.co/post/408064/hyperliquid-hip-3-markets-surge-50-perp-volume-onchain-stock-trading-grows"
+                },
+                {
+                    "date": "2026-07-15",
+                    "point": "The Defiant 用 Hyperliquid API 查询单日（周二 07-14）数据，把「50% 份额」拆开看：HIP-3 建市者市场当日成交 54.1 亿美元（占全平台 51.8%），首次以单日细分数据反超原生加密永续（50.3 亿美元）；但个股永续 32 亿美元里，SK Hynix ADR 一只标的就占 16.2 亿美元，约为个股交易量的一半；且反超只发生在工作日（07-08/09/10），周末（07-05/11/12）份额回落到 16%-33%。结构性跃迁的构成比份额本身更重要：剥离 SK Hynix + 工作日效应后，叙事会明显减弱，单一标的+单一建市者（TradeXYZ）的双重集中度仍是隐忧。",
+                    "url": "https://thedefiant.io/news/defi/builder-deployed-markets-overtake-crypto-on-hyperliquid"
                 }
             ]
         }
