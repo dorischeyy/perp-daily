@@ -15,7 +15,7 @@
         "watch_for": "下一个关键节点/该盯的触发事件",
         "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
     },
-    "updated": "2026-07-15",
+    "updated": "2026-07-16",
     "threads": [
         {
             "id": "tradfi-perp-asset-class",
@@ -60,9 +60,9 @@
             "tier": "S",
             "status": "active",
             "first_seen": "2026-07-02",
-            "last_update": "2026-07-14",
+            "last_update": "2026-07-15",
             "cadence_days": 3,
-            "next_check": "2026-07-17",
+            "next_check": "2026-07-18",
             "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
             "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
             "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -121,6 +121,11 @@
                     "date": "2026-07-14",
                     "point": "两份独立报告同日印证『分发到位不等于产品交付』：Bernstein（经The Block 07-13转引）测算上线首7天周DEX交易量达31亿美元、约6.5万活跃用户，跻身DEX交易量前五链（单日一度以8.09亿美元排第三，仅次于Solana、BNB Chain），维持『跑赢大盘』评级及130美元目标价；但CoinDesk 07-13深度数据显示，上线满13天时链上TVL约3.12亿美元中，RWA相关资产仅占4.1%（1281万美元，其中股票代币仅1068万美元），资产管理和借贷合计占比近79%，而CASHCAT一个meme币市值就达1.56亿美元，超过全部RWA资产总和逾10倍。同日第三方桥协议Relay披露有用户反映Robinhood Chain购买的代币从钱包中消失（私钥和其他余额未受影响），规模未披露，Relay称正在『拦截问题代币、核验安全代币』。",
                     "url": "https://www.coindesk.com/tech/2026/07/13/robinhood-built-a-blockchain-for-tokenized-stocks-memecoins-took-over"
+                },
+                {
+                    "date": "2026-07-15",
+                    "point": "meme 引擎本身也开始熄火：Robinhood Chain 上最大代币发射台 Noxa（一周内靠 CASHCAT 带动积累近 1200 万美元手续费）07-11 起停止接受新代币发射，07-13 网站下线，07-15 正式宣布『将 100% 交易收入返还给创作者』、平台方不再抽成，等于主动清零自己的收入模型；消息发布后 CASHCAT 24 小时内下跌超 33%。Arcus 承诺的 35 个 RWA 永续市场自 07-01 以来已连续 14 天无新进展，仍卡在候补名单。此前拉动链上活跃度的『备胎发动机』（meme 投机）与承诺的『核心产品』（RWA 永续）如今同时熄火，『分发到位不等于产品交付』的判断从『产品端缺席』升级为『替代性活跃度来源也不可持续』。",
+                    "url": "https://www.coindesk.com/business/2026/07/15/the-launchpad-that-fueled-robinhood-chain-s-memecoin-boom-just-gave-away-all-its-revenue"
                 }
             ]
         },
@@ -162,6 +167,11 @@
                     "date": "2026-07-15",
                     "point": "到期复盘，watch_for「质押率与币价是否背离」命中：Aster 07-14 更新数据显示 06-29 至 07-13 继续以 99% 手续费回购 308.38 万枚 ASTER 并等量销毁团队份额（累计自 06-17 新机制销毁 602 万枚），但 ASTER 价格已从首轮回购时约 1.26 美元跌至 0.62 美元，腰斩超五成，同时下调质押 APY（26 周锁仓 5.35%，208 周封顶 28.85%）；平台自身永续交易量仍维持头部区间（24h 约 16.5 亿美元，OI 约 18.8 亿美元），回购机制运转正常，问题不在费用端而在价格端。对照组：Lighter 已把此前累计回购的 1564 万枚 LIT 于 07-11 完成首次真实链上销毁（约 4200 万美元，占流通量 6.3%），从公告兑现为执行；pump.fun（非 perp DEX，同款机制的跨赛道样本）扛住了自己史上最大一次代币解锁（07-12，1.3 亿美元，占流通供应 29%），07-14 前已有超 1900 万美元代币从团队钱包分发完毕，未见价格崩溃报道，截至 07-15 PUMP 24h+11%、7 日+5.3%，是正回报而非下跌，未出现崩盘。「回购持续销毁兑现但币价依然背离」与「同款机制扛住真实解锁压力测试」，是这条线目前并存的两个信号。",
                     "url": "https://www.tronweekly.com/aster-price-eyes-0-70-after-aster-completes-3/"
+                },
+                {
+                    "date": "2026-07-15",
+                    "point": "压力测试结果落地补充细节：pump.fun 此前预告的最大解锁实际链上到账 572.79 亿枚 PUMP（约 8650 万美元，分发至 121 个钱包），低于解锁日历预期的 82.5 亿枚代币/约 1.27 亿美元口径，链上分析师指出这是因为『解锁日历』追踪的是归属资格而非实际转账时点；三年归属期正式开始，解锁落地当天 PUMP 不跌反涨，24 小时+13%。为『回购销毁能否扛住真实解锁』这一压力测试交出了目前最完整的数据支撑，与 Aster『回购持续但币价依然腰斩』形成鲜明对照。",
+                    "url": "https://crypto.news/pump-fun-unlocks-86m-in-pump-as-three-year-vesting-begins/"
                 }
             ]
         },
@@ -206,11 +216,11 @@
             "title": "CME 诉 CFTC：美国永续监管定性",
             "score": 92,
             "tier": "S",
-            "status": "active",
+            "status": "dormant",
             "first_seen": "2026-06-19",
             "last_update": "2026-07-10",
             "cadence_days": 3,
-            "next_check": "2026-07-16",
+            "next_check": "2026-07-27",
             "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
             "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
             "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
@@ -259,6 +269,11 @@
                     "date": "2026-07-13",
                     "point": "复盘（无新进展，第1个cadence无实质推进）：距07-10的CFTC叫停CME原油连续期货自我认证、律所更换、Hyperliquid/Phantom联合请愿三重进展已过3天，未见诉讼本身排期/裁定/初步禁令的新公开记录，CME原油合约后续处置结果也未见跟进报道。案件本身仍无排期，维持active，待下次复盘。",
                     "url": "https://cryptobriefing.com/cftc-stays-cme-247-crude-oil-futures/"
+                },
+                {
+                    "date": "2026-07-16",
+                    "point": "转 dormant（连续第2个cadence无实质推进）：诉讼本身(排期/初步禁令/裁定)仍无新公开记录。核实到 watch_for『Kalshi 那个永续产品的命运』有背景信息但非本案进展：Kalshi 07-09 确认正与CFTC磋商把永续期货扩展到贵金属(黄金)/外汇/能源三个新资产类别（此前5月上线的加密永续已录得161亿美元交易量），显示Kalshi在CME诉讼悬而未决期间选择加码而非收缩其永续业务；另 07-14 CFTC动用紧急权力叫停Kalshi执行密歇根州法院要求撤销交易的裁定，经核实该纠纷主体是预测市场event contracts、不是永续期货，与本案(swaps/futures定性)非同一战线，不计入本线进展。案件核心程序连续两个cadence静默，转dormant，待有排期/裁定/初步禁令等实质进展再激活。",
+                    "url": "https://www.cryptotimes.io/2026/07/09/kalshi-pushes-perpetual-futures-beyond-crypto-with-cftc-talks/"
                 }
             ]
         },
@@ -302,7 +317,7 @@
             "first_seen": "2026-06-12",
             "last_update": "2026-07-15",
             "cadence_days": 3,
-            "next_check": "2026-07-18",
+            "next_check": "2026-07-19",
             "thesis": "Hyperliquid 的 HIP-3 无需许可机制正在把「任何可定价标的」都变成 24/7 永续市场，从加密到股票到优先股，产品矩阵覆盖速度远超任何中心化或其他链上对手。链上股票永续的基础设施护城河正在此形成。",
             "why_us": "HertzFlow 美股指数 perp 和虚拟 RWA 标的是核心差异化，而 Hyperliquid HIP-3 的扩张速度定义了产品升级的参照系和竞争压力窗口。",
             "watch_for": "HIP-3 总 OI 突破 $40 亿 / 下一重量级个股标的上线(Apple/Nvidia/ARM) / Coinbase 或 Aster 在个股 perp 的追赶进度",
@@ -346,6 +361,32 @@
                     "date": "2026-07-15",
                     "point": "The Defiant 用 Hyperliquid API 查询单日（周二 07-14）数据，把「50% 份额」拆开看：HIP-3 建市者市场当日成交 54.1 亿美元（占全平台 51.8%），首次以单日细分数据反超原生加密永续（50.3 亿美元）；但个股永续 32 亿美元里，SK Hynix ADR 一只标的就占 16.2 亿美元，约为个股交易量的一半；且反超只发生在工作日（07-08/09/10），周末（07-05/11/12）份额回落到 16%-33%。结构性跃迁的构成比份额本身更重要：剥离 SK Hynix + 工作日效应后，叙事会明显减弱，单一标的+单一建市者（TradeXYZ）的双重集中度仍是隐忧。",
                     "url": "https://thedefiant.io/news/defi/builder-deployed-markets-overtake-crypto-on-hyperliquid"
+                },
+                {
+                    "date": "2026-07-15",
+                    "point": "HIP-3 准入门槛出现资本中介化苗头：纳斯达克上市的 Hyperliquid 国库公司 Hyperion DeFi 07-15 与 Skew Technologies 达成 HAUS（HYPE Asset Use Service）协议，将 50 万枚 HYPE（约 3360 万美元）质押出租给 Skew 用于满足 HIP-3 建市者门槛，换取 Skew 股权及市场服务收入分成，Skew 借此在 HIP-3 上线一批『机构级永续期货产品』。此前建市门槛是『自己攒够 50 万+ HYPE 质押』，现在变成『找到愿意出租 HYPE 的金主』，建市权开始被资本化、可交易化，是对 hip3-builder-shakeout 线『结算资产标准+分发/订单流才是真护城河』判断的新增一层：质押资本本身也可以被中介化。另注：SEC Crypto Task Force 07-14 与 Hyperliquid Policy Center、Highland Labs、XYZ Ltd（trade.xyz 运营方，占 HIP-3 逾九成未平仓量的主导建市者）及 Sullivan & Cromwell 举行过一次信息性会面，但无监管提案/结论/量化后续（经核实与 07-15 报告评估结论一致），不构成本线实质进展，仅背景记录。",
+                    "url": "https://www.theblock.co/post/408538/hyperliquid-treasury-firm-hyperion-new-500k-hype-bond-skew"
+                }
+            ]
+        },
+        {
+            "id": "oracle-attack-wave",
+            "title": "预言机攻击链：自动化价格基础设施成为 perp/RWA DeFi 新攻击面",
+            "score": 83,
+            "tier": "A",
+            "status": "active",
+            "first_seen": "2026-07-15",
+            "last_update": "2026-07-15",
+            "cadence_days": 5,
+            "next_check": "2026-07-20",
+            "thesis": "RWA/外汇永续 DEX Ostium 07-15 被攻破预言机签名密钥，攻击者用已注册的 PriceUpKeep 自动化转发器提交未来时间戳的伪造价格报告，从流动性金库卷走约 1800-2370 万美元（TVL 跌约 72%）。这不是智能合约漏洞或价格操纵，而是攻破了预言机系统的信任根本身；CoinDesk 指出这是 2026 年以来的第三起同类大额事件（此前一周 Summer.fi 损失约 600 万美元，更早还有 KelpDAO/Drift 等 9 位数损失）。当越来越多 perp DEX 把标的扩展到需要链下报价的虚拟资产（RWA/Forex/商品/个股），谁能签出那个价格、谁有权调用自动化更新，正在取代智能合约代码本身成为行业第二大攻击面。",
+            "why_us": "Hertzflow 的 ZFP 机制和虚拟 RWA/Forex/美股指数/贵金属标的定价，与 Ostium 同属『链下报价驱动链上结算』的架构，直接共享同一类攻击面；这条线的每次新事件都是审视自身预言机签名密钥托管、价格偏离熔断、自动化调用权限范围是否经得起审计的现实提醒。",
+            "watch_for": "Ostium 是否公布攻击后事故报告(post-mortem)与用户赔付方案 / 是否有更多 RWA/Forex perp DEX 曝出同类预言机密钥或自动化权限被攻破 / 主流预言机服务商(Chainlink 等)是否针对这类攻击调整密钥管理标准 / Ostium 能否恢复交易并挽回用户信任",
+            "log": [
+                {
+                    "date": "2026-07-15",
+                    "point": "新建线：Ostium（Arbitrum 上的 RWA/外汇永续 DEX，tradfi-perp-asset-class 线曾以其 400 天 EUR/USD 长仓证明存在真实长期持仓用户）被攻击者获取预言机签名者私钥，通过已注册的 PriceUpKeep 转发器提交约 20 笔循环交易的伪造未来价格，从 OLP 流动性金库套现约 1800-2370 万美元 USDC（金库原约 3270 万美元，攻击后仅剩约 900 万美元，TVL 跌约 72%）；安全公司 Blockaid 率先侦测预警，Ostium 已暂停全部交易，官方仅表态『团队正在调查』，尚未公布赔付方案或事故报告。CoinDesk 统计这是 2026 年迄今第三起利用『自动化基础设施特权角色被攻破』模式的大额事件（Summer.fi 一周前约 600 万美元）。",
+                    "url": "https://www.coindesk.com/business/2026/07/15/ostium-suffers-usd18-million-exploit-as-oracle-attack-wave-continues-to-hit-defi"
                 }
             ]
         }
