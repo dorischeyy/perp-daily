@@ -47,3 +47,33 @@ test("未知栏目 id → warning 而非 error", () => {
   assert.equal(errors.length, 0);
   assert.ok(warnings.some((w) => /已知栏目/.test(w)));
 });
+
+test("合法的数字量级说明通过校验", () => {
+  const c = baseContent();
+  c.sections[0].items[0].context = { label: "量级参照", text: "约为 DEX 永续日成交盘子的十分之一，属于头部梯队。" };
+  const { errors } = validateContent(c);
+  assert.equal(errors.length, 0, errors.join("; "));
+});
+
+test("数字量级说明的标签与长度受校验", () => {
+  const c = baseContent();
+  c.sections[0].items[0].context = { label: "很重要", text: "太短" };
+  const { errors } = validateContent(c);
+  assert.ok(errors.some((e) => /context\.label/.test(e)));
+  assert.ok(errors.some((e) => /context\.text/.test(e)));
+});
+
+test("可能影响判断的数字没有解释时给提醒", () => {
+  const c = baseContent();
+  c.sections[0].items[0].body = "24h 交易量达到 $1.2B。";
+  const { warnings } = validateContent(c);
+  assert.ok(warnings.some((w) => /量级说明/.test(w)));
+});
+
+test("有量级说明的数字不再给遗漏提醒", () => {
+  const c = baseContent();
+  c.sections[0].items[0].body = "24h 交易量达到 $1.2B。";
+  c.sections[0].items[0].context = { label: "量级参照", text: "约占 DEX 永续盘子的 1%，属腰部协议的活跃水平。" };
+  const { warnings } = validateContent(c);
+  assert.ok(!warnings.some((w) => /量级说明/.test(w)));
+});

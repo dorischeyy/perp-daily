@@ -50,6 +50,15 @@ test("启发栏(hertzflow)不渲染日期", () => {
   assert.ok(!seg.includes("2026-05-01"));
 });
 
+test("数字量级说明渲染为次级提示且会转义", () => {
+  const c = baseContent();
+  c.sections[0].items[0].context = { label: "量级参照", text: "约占 <10%，不应被解读成行业格局反转。" };
+  const { html } = render(c);
+  assert.match(html, /<p class="item-context">/);
+  assert.match(html, /量级参照/);
+  assert.match(html, /约占 &lt;10%/);
+});
+
 test("损坏 JSON → 干净报错退出 1（不崩栈）", () => {
   const inP = join(dir, "bad.json");
   writeFileSync(inP, "{ not json");

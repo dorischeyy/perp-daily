@@ -64,6 +64,7 @@ Mechanisms run on scripts, not good intentions.
 | **Freshness** | `lib/check-freshness.mjs` | News ≤72h, weekly-thread ≤7d; over the limit exits 1 and blocks publishing |
 | **Anti-fabrication** | `lib/check-freshness.mjs` + `generate.md` | URL-embedded date vs `date` cross-check; and every `date` must be verified against the source page via WebFetch — unverifiable items are cut. Built after a real incident where months-old articles were stamped with today's date |
 | **Ledger integrity** | `lib/threads.mjs` | Story-ledger schema validation; a broken ledger blocks publishing |
+| **Scale context** | `lib/validate-content.mjs` + `generate.md` | Validates the compact context schema and warns when a potentially material metric appears without a same-basis explanation |
 | **Delivery de-dup** | `feishu-notify.yml` | Delivers only on the day's report commit, preventing duplicate cards; plus a concurrency lock |
 | **Missed-run alert** | `daily-watchdog.yml` | Self-checks after the expected publish time; alerts if no report ran, preventing a silent missed day |
 | **Delivery retry** | `lib/deliver.mjs` | Auto-retries transient channel failures so cards aren't dropped |
