@@ -1,4 +1,4 @@
-name: Daily Report (Claude Code · Max subscription)
+name: Legacy Daily Report (manual fallback)
 
 # 用 Max 订阅（OAuth token，零 API 费）在 GitHub runner 上生成日报，
 # 取代脆弱的 claude.ai 云端 Routine（relay proxy push 反复 403、06-27/28 漏发）。
@@ -9,9 +9,7 @@ name: Daily Report (Claude Code · Max subscription)
 #   feishu-notify.yml 保留做手动补发（Actions 页 Run workflow）。
 
 on:
-  schedule:
-    - cron: '17 0 * * *'       # UTC 00:17 = 北京 08:17（避开整点最堵槽位，整点 scheduled 常被延迟数小时或静默丢弃）
-  workflow_dispatch: {}        # 手动触发测试 / 补发
+  workflow_dispatch: {}        # Codex 迁移后的人工兜底；不再定时执行 Claude
 
 concurrency:
   group: daily-report
