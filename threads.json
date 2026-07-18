@@ -24,7 +24,7 @@
             "tier": "A",
             "status": "active",
             "first_seen": "2026-07-09",
-            "last_update": "2026-07-16",
+            "last_update": "2026-07-17",
             "cadence_days": 6,
             "next_check": "2026-07-23",
             "thesis": "此前 Hyperliquid HIP-3 股票永续、Ondo Perps、Binance/OKX 的个股/大宗商品永续都是孤立个案，币安研究院 07-08 报告首次把它们汇总量化：稳定币结算的 TradFi 永续 2026 上半年交易量破 1.1 万亿美元，占全部加密永续交易量约 11%。这标志着虚拟/代币化非加密资产的永续交易正从零散尝试变成有统计意义的独立资产类别，值得持续跟踪其份额增速与背后驱动力（新平台上线 vs 存量平台放量）。",
@@ -55,6 +55,11 @@
                     "date": "2026-07-16",
                     "point": "TradFi资本继续加码交易所级衍生品基础设施：做市商巨头 Citadel Securities 宣布向 Crypto.com 投资 4 亿美元，是 Crypto.com 自 2016 年成立以来的首轮机构融资，交易所估值达 200 亿美元；官方明确资金将加速代币化证券、衍生品交易等资产类别扩张。与此前 Pantera（链上视角）、币安研究院/CoinDesk（CEX 视角）的数据互补，这是 TradFi 做市商首次直接用股权投资（而非只是交易/研报）押注加密衍生品基础设施。",
                     "url": "https://www.coindesk.com/business/2026/07/16/citadel-securities-invests-usd400-million-in-crypto-com-valuing-exchange-at-usd20-billion"
+                },
+                {
+                    "date": "2026-07-17",
+                    "point": "资产类别继续外扩：The Block 07-17 转引 Bernstein 确认，Bermuda 注册的 Architect AX 已上线以 GPU 租赁价格为标的的永续式算力期货，CME 与 ICE 的现金结算算力期货仍在等 CFTC 审查、目标 2026 年末；永续机制第一次从股票、商品、外汇继续推进到不可储存的 AI 算力。AX 初期流动性仍偏投机，且指数依赖私下成交数据，说明产品可先上线，但可信基准与真实套保深度仍是扩张瓶颈。",
+                    "url": "https://www.theblock.co/post/408758/crypto-style-derivatives-reach-ai-compute-ahead-of-planned-cme-and-ice-futures-bernstein"
                 }
             ]
         },
@@ -65,7 +70,7 @@
             "tier": "S",
             "status": "active",
             "first_seen": "2026-07-02",
-            "last_update": "2026-07-16",
+            "last_update": "2026-07-17",
             "cadence_days": 3,
             "next_check": "2026-07-20",
             "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
@@ -136,6 +141,11 @@
                     "date": "2026-07-16",
                     "point": "第三例发射台警讯，且性质变了：Vlad.fun（该链另一 meme 发射台）因『内部诚信问题』紧急暂停运营并寻求法律顾问介入，具体性质未披露；暂停公告前数小时，平台刚警示一枚冒用自己名义的仿冒代币，两起事件是否关联未说明。继 07-15 Noxa 因经济模型撑不住而清零抽成关站后，一周内该链两大发射台相继出问题，但这次是疑似团队操守问题，而非机制设计缺陷。Arcus 的 35 个 RWA 永续市场自 07-01 以来已连续 15 天无新进展，仍卡在候补名单。",
                     "url": "https://cointelegraph.com/news/robinhood-chain-memecoin-vladfun-halts-integrity"
+                },
+                {
+                    "date": "2026-07-17",
+                    "point": "CASHCAT 从 07-11 高点约 0.228 美元回落约 70% 至 0.065 美元附近，市值从约 2 亿美元降至约 6300 万美元；更关键的是，Hyperliquid 上线该标的后，只有 3 倍杠杆且强制逐仓的永续合约仍曾在数分钟内从 0.19 美元上方插针至约 0.08 美元，跌幅超 60%，同期现货几乎未动。Robinhood Chain 的投机引擎不只在降温，薄现货深度还把新永续市场变成独立的清算风险源；Arcus 承诺的 35 个 RWA 永续市场仍未见开放。",
+                    "url": "https://thedefiant.io/news/tokens/cashcat-falls-75-from-peak-after-hyperliquid-perp-listing"
                 }
             ]
         },
