@@ -48,6 +48,23 @@ test("未知栏目 id → warning 而非 error", () => {
   assert.ok(warnings.some((w) => /已知栏目/.test(w)));
 });
 
+test("机会与打法栏目使用固定标题，所有栏目都禁用 kicker", () => {
+  const ordinary = baseContent();
+  ordinary.sections[0].kicker = "重复副标题";
+  assert.ok(validateContent(ordinary).errors.some((e) => /只保留一级标题/.test(e)));
+
+  const c = baseContent();
+  const item = structuredClone(c.sections[0].items[0]);
+  c.sections = [{ id: "hertzflow", title: "机会与打法", items: [item] }];
+  assert.equal(validateContent(c).errors.length, 0);
+
+  c.sections[0].title = "对 Hertzflow 的启发";
+  c.sections[0].kicker = "机会与打法";
+  const { errors } = validateContent(c);
+  assert.ok(errors.some((e) => /title 必须固定/.test(e)));
+  assert.ok(errors.some((e) => /只保留一级标题/.test(e)));
+});
+
 test("合法的数字量级说明通过校验", () => {
   const c = baseContent();
   c.sections[0].items[0].context = { label: "量级参照", text: "约为 DEX 永续日成交盘子的十分之一，属于头部梯队。" };

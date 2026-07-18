@@ -38,12 +38,12 @@ test("URL 内嵌日期与 date 字段差 >2 天 → 判造假阻断", () => {
   assert.equal(cf(c).code, 1);
 });
 
-test("启发栏(hertzflow)豁免时效但仍查 url 造假", () => {
+test("机会与打法栏(hertzflow)豁免时效但仍查 url 造假", () => {
   const c = baseContent();
   c.sections = [
-    { id: "hertzflow", title: "启发", items: [
+    { id: "hertzflow", title: "机会与打法", items: [
       { headline: "老来源洞察", body: ["x"], url: "https://x.com/p", date: "2026-05-01" },
     ] },
   ];
-  assert.equal(cf(c).code, 0); // 启发栏老日期豁免
+  assert.equal(cf(c).code, 0); // 机会与打法栏老日期豁免
 });

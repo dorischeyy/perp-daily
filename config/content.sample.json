@@ -1,7 +1,7 @@
 {
   "date": "2026-06-20",
   "edition": 1,
-  "lead": "Perp DEX 赛道链上永续成交量周环比回暖，Hyperliquid 继续领跑；AI 侧 agent 工具链密集更新；BTC 在区间上沿震荡。",
+  "lead": "链上永续交易进一步向头部集中，真正值得追踪的是短期增量能否沉淀为持续流动性。",
   "threads": [
     {
       "title": "CME 诉 CFTC：美国永续监管定性",
@@ -17,7 +17,6 @@
     {
       "id": "perpdex",
       "title": "Perp DEX",
-      "kicker": "今日主题",
       "items": [
         {
           "headline": "Hyperliquid 日成交量重回百亿美元区间",
@@ -46,7 +45,6 @@
     {
       "id": "launchpad",
       "title": "Launchpad",
-      "kicker": "发射台动态",
       "items": [
         {
           "headline": "pump.fun 上线 creator fee 分成新机制",
@@ -60,7 +58,6 @@
     {
       "id": "crypto",
       "title": "Crypto",
-      "kicker": "宏观与行情",
       "items": [
         {
           "headline": "BTC 区间上沿震荡，ETH 相对走强",
@@ -74,7 +71,6 @@
     {
       "id": "ai",
       "title": "AI",
-      "kicker": "Builders 动态",
       "items": [
         {
           "headline": "AI coding agent 工具链密集更新",
@@ -87,18 +83,21 @@
     },
     {
       "id": "hertzflow",
-      "title": "对 Hertzflow 的启发",
-      "kicker": "机会与打法",
+      "title": "机会与打法",
       "items": [
         {
-          "headline": "RWA 商品 perps 升温，建议评估上线原油/贵金属强运营",
-          "body": "Variational($50M)、Ostium、Avantis 集中押注 RWA/商品 perps，且 Avantis 用的正是 ZFP 零费模式——与我们核心差异点正面相撞。建议：① 我们已有贵金属(2)标的，可借商品热度做主推运营；② 跟踪原油是否值得新增 Feed。",
+          "headline": "商品标的先补需求证据，不因融资新闻直接扩列",
+          "body": [
+            "**判断**：先验证。竞品融资只能说明资本关注，不能证明某个商品市场已具备交易需求。",
+            "**机制对照**：HertzFlow 上新同时依赖可靠 Feed、市场时间、独立池容量与资产类别风控参数，不能只完成价格接入。",
+            "**动作与验收**：先跟踪目标商品的同类协议 OI、活跃交易者和真实套保场景；达到预设需求门槛后，再进入 Feed 与池子参数评审。"
+          ],
           "source": "Variational 融资 · CoinDesk",
           "url": "https://www.coindesk.com/business/2026/05/21/peer-to-peer-trading-startup-variational-raises-usd50-million-for-real-world-perps-in-funding-round-led-by-dragonfly",
           "date": "2026-05-21",
           "context": {
-            "label": "量级参照",
-            "text": "对新锐 RWA perp 属重磅融资，但融资额不等于真实流动性或成交量，仍要看上线后的 OI 与费用。"
+            "label": "口径限制",
+            "text": "融资额不能替代市场需求证据，仍需同口径的 OI、活跃交易者与费用数据。"
           }
         }
       ]

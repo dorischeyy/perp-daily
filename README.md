@@ -6,7 +6,7 @@
 
 Every day at **08:03 Beijing time**, automatically: research the web → score & thread → render a magazine-style HTML → publish to GitHub Pages → deliver cards to Feishu + Slack via GitHub Actions. A 10:30 watchdog checks for a missed run.
 
-Sections: **Story Threads → Perp DEX (primary) → Launchpad → Crypto → AI → "Implications for Hertzflow"**.
+Sections: **Story Threads → Perp DEX (primary) → Launchpad → Crypto → AI → "Opportunities & Playbook"**.
 *(The published report is written in Chinese; the repository and its documentation are in English.)*
 
 ### Why this is analyst-grade, not a one-prompt digest

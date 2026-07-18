@@ -49,9 +49,9 @@ new S-tier event ──open──▶ active ──(due review: update & recall i
 ### 2.3 How it surfaces (the line between professional and verbose)
 Two non-overlapping mechanisms:
 - **Inline callback** — when today's story belongs to an active thread, one sentence places it on the arc ("X thread · since MM-DD · 3rd development"). Gives a single story depth.
-- **"Story Threads" map** — a compact block at the top of the report listing the threads worth surfacing today, each with today's delta + what to watch next. Lets the reader see, at a glance, where the tracked stories stand.
+- **"Story Threads" map** — a compact block used only for an informative due-status that does not already have a full news item, with the status change + what to watch next.
 
-**Anti-redundancy rule**: a thread appears on a given day only if there is a real new development, or its review is due *and* there is something informative to say. A callback states only the delta, never re-narrates. The map holds at most 3–4 threads. The test is the reader's felt sense — "the author is genuinely following this" — not "that story got repeated again."
+**Anti-redundancy rule**: one development gets one primary home. If it has a full news item, use the item plus one inline callback and omit it from the map. The map is reserved for an informative due-status without a standalone item and holds at most 3–4 threads. A callback states only the connection, never re-narrates. The test is the reader's felt sense — "the author is genuinely following this" — not "that story got repeated again."
 
 ---
 

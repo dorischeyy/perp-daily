@@ -39,15 +39,23 @@ test("javascript: 链接不被渲染进 href", () => {
   assert.ok(!/href="javascript:/i.test(html));
 });
 
-test("启发栏(hertzflow)不渲染日期", () => {
+test("机会与打法栏(hertzflow)不渲染日期", () => {
   const c = baseContent();
-  c.sections = [{ id: "hertzflow", title: "启发", items: [
+  c.sections = [{ id: "hertzflow", title: "机会与打法", items: [
     { headline: "洞察", body: ["x"], url: "https://x.com/p", date: "2026-05-01" },
   ] }];
   const { html } = render(c);
   const seg = (html.match(/<section class="sec sec-hertzflow">[\s\S]*?<\/section>/) || [""])[0];
   assert.ok(!seg.includes("item-date"));
   assert.ok(!seg.includes("2026-05-01"));
+});
+
+test("栏目只渲染一级标题，不渲染 kicker", () => {
+  const c = baseContent();
+  c.sections[0].kicker = "重复副标题";
+  const { html } = render(c);
+  assert.ok(!html.includes("重复副标题"));
+  assert.ok(!html.includes("sec-kicker"));
 });
 
 test("数字量级说明渲染为次级提示且会转义", () => {
