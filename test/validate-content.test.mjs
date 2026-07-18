@@ -94,3 +94,23 @@ test("有量级说明的数字不再给遗漏提醒", () => {
   const { warnings } = validateContent(c);
   assert.ok(!warnings.some((w) => /量级说明/.test(w)));
 });
+
+test("补充来源 references 必须有独立链接与真实日期", () => {
+  const c = baseContent();
+  c.sections[0].items[0].references = [
+    { source: "补充来源", url: "https://example.com/b", date: "2026-06-22" },
+  ];
+  assert.equal(validateContent(c).errors.length, 0);
+
+  c.sections[0].items[0].references[0].url = c.sections[0].items[0].url;
+  c.sections[0].items[0].references[0].date = "昨天";
+  const { errors } = validateContent(c);
+  assert.ok(errors.some((e) => /重复/.test(e)));
+  assert.ok(errors.some((e) => /date/.test(e)));
+});
+
+test("source 写多个来源却没有 references 时提醒", () => {
+  const c = baseContent();
+  c.sections[0].items[0].source = "来源 A / 来源 B";
+  assert.ok(validateContent(c).warnings.some((w) => /多个来源/.test(w)));
+});

@@ -67,6 +67,16 @@ test("数字量级说明渲染为次级提示且会转义", () => {
   assert.match(html, /约占 &lt;10%/);
 });
 
+test("补充来源渲染为独立可核查链接", () => {
+  const c = baseContent();
+  c.sections[0].items[0].references = [
+    { source: "交叉验证", url: "https://example.com/b", date: "2026-06-22" },
+  ];
+  const { html } = render(c);
+  assert.match(html, /补充：交叉验证 · 06-22 ↗/);
+  assert.match(html, /href="https:\/\/example\.com\/b"/);
+});
+
 test("损坏 JSON → 干净报错退出 1（不崩栈）", () => {
   const inP = join(dir, "bad.json");
   writeFileSync(inP, "{ not json");

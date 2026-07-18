@@ -72,6 +72,7 @@
   .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
     border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
   .item-src{color:#8a7f66; text-decoration:none;}
+  .item-ref{color:#a3987f;}
   a.item-src:hover{color:#b03a2e;}
   .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -89,8 +90,8 @@
       <div class="mast-sub">2026 年 7 月 18 日 · 星期六</div>
     </header>
     <p class="lead">永续正在成为新资产的首发定价工具，但没有可信基准，全天交易只会把定价误差连续化。</p>
-    
-    
+
+
       <section class="sec sec-perpdex">
         <div class="sec-head">
           <span class="sec-no">01</span>
@@ -99,7 +100,7 @@
           </div>
         </div>
         <div class="sec-body">
-          
+
         <article class="item">
           <h3 class="item-h">AI 算力先有了永续合约，CME 和 ICE 的传统期货仍在等审查</h3>
           <p class="item-b"><strong>事件</strong>：（TradFi/RWA 永续规模化线，自 07-09，第 9 天）The Block 07-17 转引 Bernstein 确认，Bermuda 注册的 Architect AX 已上线以 GPU 租赁价格为标的的永续式算力期货；CME 与 ICE 计划在 2026 年末推出现金结算算力期货，但仍在等待 CFTC 审查。</p><p class="item-b"><strong>机制</strong>：算力无法像石油一样储存，闲置的一小时 GPU 容量会直接消失；AX 用永续合约和资金费率把现货指数锚进连续市场，让云服务商、AI 实验室和投机者围绕同一条价格曲线交易，而不是等待固定到期日。</p><p class="item-b"><strong>二阶效应</strong>：crypto 市场结构的优势是先把产品做出来，短板则是可信基准和真实套保深度；现有 GPU 价格多来自私下成交，AX 初期流动性也仍以投机为主，若指数不能覆盖足够多地区、型号与真实成交，24/7 交易只会放大一条脆弱基准。</p>
@@ -115,7 +116,7 @@
           <p class="item-context"><span class="item-context-label">口径限制</span>公开资料未披露插针期间的清算总额与订单簿深度；逐仓只证明风险被隔离，无法量化单市场最大损失。</p>
           <div class="item-meta">
             <span class="item-date">2026-07-17</span>
-            <a class="item-src" href="https://crypto-economy.com/cashcat-memecoin-crashes-27-in-one-day/" target="_blank" rel="noopener">Crypto Economy / The Defiant ↗</a>
+            <a class="item-src" href="https://crypto-economy.com/cashcat-memecoin-crashes-27-in-one-day/" target="_blank" rel="noopener">Crypto Economy ↗</a><a class="item-src item-ref" href="https://thedefiant.io/news/tokens/cashcat-falls-75-from-peak-after-hyperliquid-perp-listing" target="_blank" rel="noopener">补充：The Defiant · 07-13 ↗</a>
           </div>
         </article>
         </div>
@@ -128,7 +129,7 @@
           </div>
         </div>
         <div class="sec-body">
-          
+
         <article class="item">
           <h3 class="item-h">代币化股票 90 天现货成交 18 亿美元，真正进入借贷市场的只有 2300 万美元</h3>
           <p class="item-b">Token Terminal 07-16 数据显示，代币化股票 90 天链上现货成交约 18 亿美元，其中 QQQ 与 SPY 跟踪代币合计占约 81%；但作为借贷抵押品的规模只有 2310 万美元，且 xStocks、Solana、Kamino 在各自口径都占约 83% 至 87%。</p><p class="item-b">这组数据把『能交易』和『能成为资本』分开了：代币化股票已经有现货换手，但借贷抵押仍高度集中且只占 xStocks 约 3.3 亿美元总规模的低个位数百分比，距离可组合的链上资产类别还有明显距离。</p>
@@ -148,23 +149,23 @@
           </div>
         </div>
         <div class="sec-body">
-          
+
         <article class="item">
           <h3 class="item-h">AI 算力先观察，不进入近期标的扩列</h3>
           <p class="item-b"><strong>判断</strong>：保持不动。GPU 报价按地区、型号、期限与服务质量分裂，当前又主要来自私下成交，不进入 HertzFlow 近期标的扩列。</p><p class="item-b"><strong>机制对照</strong>：HertzFlow 的新市场依赖可验证价格源，并已有 Pyth 主价格源、多源回退与偏离校验；问题不是再增加一层风控，而是算力价格暂时不满足同一结算口径。</p><p class="item-b"><strong>动作与验收</strong>：只保留观察项。出现覆盖多地区的可审计指数、独立备用源和可验证的套保需求后，再进入 Feed 与市场参数评审。</p>
-          
+
           <div class="item-meta">
-            
+
             <a class="item-src" href="https://www.theblock.co/post/408758/crypto-style-derivatives-reach-ai-compute-ahead-of-planned-cme-and-ice-futures-bernstein" target="_blank" rel="noopener">The Block ↗</a>
           </div>
         </article>
         <article class="item">
           <h3 class="item-h">CASHCAT 用来压测现有风控，不再发明一套新规则</h3>
           <p class="item-b"><strong>判断</strong>：先验证。HertzFlow 已有单市场隔离池、按资产类别配置杠杆、动态仓位限制与价格偏离拒单，CASHCAT 暴露的不是机制空白，而是这些参数在薄市场里能否及时生效。</p><p class="item-b"><strong>机制对照</strong>：隔离池可以限制风险传染，但单边 OI、储备不足和外部现货深度骤降仍会影响开平仓与 LP 退出，不能只看一个杠杆倍数。</p><p class="item-b"><strong>动作与验收</strong>：用现货深度骤降、预言机与外部现货价偏离、单边 OI 堆积三种场景回放，验收杠杆上限、DPL、OI/储备上限和暂停条件；任一场景无法限制损失范围，就不上线。</p>
-          
+
           <div class="item-meta">
-            
-            <a class="item-src" href="https://crypto-economy.com/cashcat-memecoin-crashes-27-in-one-day/" target="_blank" rel="noopener">Crypto Economy / The Defiant ↗</a>
+
+            <a class="item-src" href="https://crypto-economy.com/cashcat-memecoin-crashes-27-in-one-day/" target="_blank" rel="noopener">Crypto Economy ↗</a>
           </div>
         </article>
         </div>

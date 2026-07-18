@@ -4,15 +4,15 @@
 >
 > 📐 **Editorial methodology (the *why*) → [METHODOLOGY.md](METHODOLOGY.md)** ｜ 🛠 **Operations / troubleshooting → [OPERATIONS.md](OPERATIONS.md)**
 
-Every day at **08:03 Beijing time**, automatically: research the web → score & thread → render a magazine-style HTML → publish to GitHub Pages → deliver cards to Feishu + Slack via GitHub Actions. A 10:30 watchdog checks for a missed run.
+Every Beijing day, a Codex automation runs: preflight → research → score & thread → editorial gates → render → publish through the GitHub connector → deliver cards to Feishu + Slack via the repository workflows. A watchdog checks for a missed run.
 
-Sections: **Story Threads → Perp DEX (primary) → Launchpad → Crypto → AI → "Opportunities & Playbook"**.
+Sections: **Perp DEX (primary) → optional Launchpad / Crypto / AI → "Opportunities & Playbook"**. A compact Story Threads block appears only when a due thread has an informative status not already carried by a news item.
 *(The published report is written in Chinese; the repository and its documentation are in English.)*
 
 ### Why this is analyst-grade, not a one-prompt digest
 - **Signal scoring** — every story is scored 0–100 across five axes (structural impact / relevance / durability / actionability / magnitude × credibility), which drives selection, ordering, and whether it becomes a tracked thread.
 - **Narrative threading** — S-tier stories (≥90) are entered into a persistent `threads.json` ledger, revisited on a cadence, and recalled across days, so a reader who missed a day never loses the thread. An anti-redundancy rule guarantees *connection*, never *repetition*.
-- **Mechanical gates** — freshness (≤72h), anti-date-fabrication (URL + WebFetch cross-check), ledger schema validation, delivery de-duplication, missed-run alerting, and delivery retries — all enforced by scripts, not by good intentions.
+- **Mechanical gates** — already-published preflight, market-snapshot status, freshness (≤72h), anti-date-fabrication, provenance links, editorial de-duplication, opportunity-item grounding, ledger schema validation, delivery de-duplication, missed-run alerting, and delivery retries.
 - **Auditable** — every edition ships an *Editor's Self-Review* (scoring table + per-item freshness verification + thread-continuity check + six-lens critique), publicly archived.
 
 ## Design principle: channel portability
@@ -31,25 +31,28 @@ Four decoupled layers, each independent of the delivery channel — so "Feishu t
 The expensive **LLM stage** (research → score → thread → write) emits three durable hand-off artifacts — `content.json`, `threads.json`, `review.draft.md`. Everything downstream is **cheap, token-free, and independently re-runnable**:
 
 ```bash
-bash publish.sh            # full pipeline: validate → render → push
-bash publish.sh validate   # gates only (freshness + ledger schema)
+bash publish.sh preflight  # before research: already-published + market snapshot state
+bash publish.sh validate   # structure + editorial + freshness + ledger gates
 bash publish.sh render      # render HTML + write latest.json
-bash publish.sh push        # commit + rebase + push
 ```
 
-If any downstream step fails, re-run only that stage — never re-research. See the resume matrix in [OPERATIONS.md](OPERATIONS.md) §4.6.
+The scheduled Codex path publishes the validated artifact set to `main` through the GitHub connector. Local Git credentials, PATs, `gh`, and webhook access are not part of the daily path. The no-argument `publish.sh` / `push` stages remain only for the manual Legacy GitHub Actions fallback.
+
+If any downstream step fails, re-run only that stage — never re-research. See the resume matrix in [OPERATIONS.md](OPERATIONS.md) §5.
 
 ## Files
 
 | File | Role |
 |------|------|
-| `generate.md` | The full daily instruction set the cloud Routine executes (research → score → thread → self-review → render → publish → deliver) |
+| `generate.md` | The full daily instruction set the Codex automation executes (preflight → research → score → thread → self-review → gates → render → connector publication) |
 | `METHODOLOGY.md` | Editorial methodology: scoring rubric + story threading + integrity gates |
 | `config/sources.json` | Source registry (official / founder / media / kol / data × region × topic) + a real-time RSS feed layer |
 | `threads.json` | **Story ledger** — persistent cross-day state (score / thesis / cadence / development log) |
 | `lib/threads.mjs` | Ledger QA — schema validation + "threads due for review today" reminder |
 | `lib/check-freshness.mjs` | Freshness + anti-fabrication gate (news ≤72h; URL-embedded date vs `date` cross-check) |
 | `lib/validate-content.mjs` | content.json structural validator (required fields / URL scheme / date format) |
+| `lib/check-run-state.mjs` | Pre-research idempotency + market-snapshot status (`ALREADY_PUBLISHED` exits 10) |
+| `lib/check-editorial.mjs` | Blocks repeated lead/body/context and ungrounded or generic opportunity items |
 | `lib/build-html.mjs` | Content JSON → single-file magazine HTML (incl. the Story Threads block; zero dependencies) |
 | `test/` + `package.json` | Zero-dependency unit tests — `npm test` (Node's built-in runner) |
 | `.github/workflows/ci.yml` | CI: syntax check + unit tests + gate smoke on every code push |
@@ -76,7 +79,7 @@ Credentials are never committed — `config/channels.json` references webhooks a
 ## Hosting & scheduling
 
 - **Hosting** — GitHub Pages serves each day's HTML at `https://dorischeyy.github.io/perp-daily/archive/<date>.html`; the magazine layout is preserved 1:1.
-- **Scheduling** — a cloud Routine (created via `/schedule`) runs the full `generate.md` pipeline daily. Changing content rules / sources / styling takes effect on the next run automatically (the Routine clones the latest repo each time); only schedule, model, or credential changes touch the Routine itself.
+- **Scheduling** — a Codex automation runs the full `generate.md` pipeline daily. Content rules, sources, and styling take effect on the next run after publication to `main`; schedule and repository settings are managed separately.
 
 ## Ground rules
 - No item without a real, verifiable source URL. No investment advice.

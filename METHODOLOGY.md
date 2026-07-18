@@ -61,10 +61,13 @@ Mechanisms run on scripts, not good intentions.
 
 | Gate | File | Function |
 |------|------|----------|
+| **Run idempotency** | `lib/check-run-state.mjs` | Runs before research; exits 10 when today's report already exists, and labels the market snapshot fresh/stale so expensive work is not repeated and old numbers are not reused |
 | **Freshness** | `lib/check-freshness.mjs` | News ≤72h, weekly-thread ≤7d; over the limit exits 1 and blocks publishing |
 | **Anti-fabrication** | `lib/check-freshness.mjs` + `generate.md` | URL-embedded date vs `date` cross-check; and every `date` must be verified against the source page via WebFetch — unverifiable items are cut. Built after a real incident where months-old articles were stamped with today's date |
 | **Ledger integrity** | `lib/threads.mjs` | Story-ledger schema validation; a broken ledger blocks publishing |
 | **Scale context** | `lib/validate-content.mjs` + `generate.md` | Validates the compact context schema and warns when a potentially material metric appears without a same-basis explanation |
+| **Editorial economy** | `lib/check-editorial.mjs` | Blocks exact or near repetition across lead/body/context; enforces grounded, three-part, non-redundant opportunity items |
+| **Source provenance** | `references` + validator/renderer | Keeps one dated primary source and renders 1–3 separately dated background or cross-check links instead of hiding multiple outlets behind one URL |
 | **Delivery de-dup** | `feishu-notify.yml` | Delivers only on the day's report commit, preventing duplicate cards; plus a concurrency lock |
 | **Missed-run alert** | `daily-watchdog.yml` | Self-checks after the expected publish time; alerts if no report ran, preventing a silent missed day |
 | **Delivery retry** | `lib/deliver.mjs` | Auto-retries transient channel failures so cards aren't dropped |
@@ -82,9 +85,9 @@ Before each publish, an *Editor's Self-Review* (publicly archived) is produced: 
 ```
 Scheduling   Cloud Routine (daily)
    │
-Content      generate.md (score → thread → weave → self-review) + lib/build-html.mjs (magazine render)
+Content      preflight → generate.md (score → thread → weave → self-review) → editorial gates → HTML render
    │           ├─ State: threads.json (story ledger)
-   │           └─ Gates: lib/check-freshness.mjs / lib/threads.mjs
+   │           └─ Gates: run-state / structure / editorial / freshness / threads
    │
 Hosting      GitHub Pages (one public URL, channel-agnostic)
    │
@@ -92,7 +95,7 @@ Delivery     GitHub Actions → lib/deliver.mjs (de-dup / retry) → channels (F
    └─ Safety net: daily-watchdog.yml
 ```
 
-Principles: **content decoupled from channel** (add a channel by editing config, not code), **state separated from presentation** (ledger vs. daily snapshot), **judgment separated from gatekeeping** (the model judges, scripts validate).
+Principles: **content decoupled from channel**, **state separated from presentation**, **judgment separated from gatekeeping**, and **one fact has one visible home and traceable source**.
 
 ---
 

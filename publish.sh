@@ -6,8 +6,9 @@
 # 下游任何一步失败都能"哪步坏跑哪步"单独重跑，绝不需要重新调研。
 #
 # 阶段化用法（可插拔）：
-#   bash publish.sh            # 全流程 validate → render → push
-#   bash publish.sh validate   # 只跑两道关卡(时效 + 台账结构)
+#   bash publish.sh            # 全流程 preflight → validate → render → push
+#   bash publish.sh preflight  # 调研前查重复发布 + 行情快照状态
+#   bash publish.sh validate   # 只跑内容/编辑/时效/台账关卡
 #   bash publish.sh render      # 只渲染 HTML + 落自评 + 写 latest.json
 #   bash publish.sh push        # 只 commit + pull --rebase + push（已 render 过就只补推这步）
 # 交付(发飞书/Slack)是独立的 GitHub Action；它失败用仓库 Actions 页 "Run workflow" 重发，同样不碰生成。
@@ -17,10 +18,17 @@ STAGE="${1:-all}"
 DATE=$(TZ=Asia/Shanghai date +%F)
 URL="https://dorischeyy.github.io/perp-daily/archive/${DATE}.html"
 
+# 阶段 0：应在联网调研前运行。已发布返回 10，明确 no-op，避免重复消耗研究成本。
+stage_preflight() {
+  node lib/check-run-state.mjs "${DATE}"
+}
+
 # 阶段 1：校验关卡（纯只读，可反复跑）
 stage_validate() {
   node lib/validate-content.mjs content.json || {
     echo "⛔ content.json 结构校验未通过。按上方缺失字段修 content.json 后重跑 \`bash publish.sh validate\`。" >&2; return 1; }
+  node lib/check-editorial.mjs content.json || {
+    echo "⛔ 编辑去重/机会项关卡未通过。只修对应文案后重跑 \`bash publish.sh validate\`。" >&2; return 1; }
   node lib/check-freshness.mjs content.json "${DATE}" || {
     echo "⛔ 时效/防造假关卡未通过。修 content.json 后重跑 \`bash publish.sh validate\`（无需重新调研）。" >&2; return 1; }
   node lib/threads.mjs "${DATE}" || {
@@ -58,9 +66,11 @@ stage_push() {
 }
 
 case "$STAGE" in
+  preflight)      stage_preflight; exit $? ;;
   validate|gate) stage_validate || exit 1 ;;
   render)        stage_render   || exit 1 ;;
   push|commit)   stage_push     || exit 1 ;;
-  all)           stage_validate && stage_render && stage_push || exit 1 ;;
-  *) echo "未知阶段: ${STAGE} (可选 validate | render | push | all)" >&2; exit 2 ;;
+  all)           stage_preflight; rc=$?; [ "$rc" -eq 0 ] || exit "$rc"
+                 stage_validate && stage_render && stage_push || exit 1 ;;
+  *) echo "未知阶段: ${STAGE} (可选 preflight | validate | render | push | all)" >&2; exit 2 ;;
 esac

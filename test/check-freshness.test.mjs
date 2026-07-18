@@ -47,3 +47,14 @@ test("机会与打法栏(hertzflow)豁免时效但仍查 url 造假", () => {
   ];
   assert.equal(cf(c).code, 0); // 机会与打法栏老日期豁免
 });
+
+test("补充来源可较旧，但 URL 日期必须与自身 date 一致", () => {
+  const c = baseContent();
+  c.sections[0].items[0].references = [
+    { source: "背景", url: "https://example.com/2026/06/01/context", date: "2026-06-01" },
+  ];
+  assert.equal(cf(c).code, 0);
+
+  c.sections[0].items[0].references[0].date = "2026-06-20";
+  assert.equal(cf(c).code, 1);
+});

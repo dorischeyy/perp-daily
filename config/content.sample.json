@@ -28,6 +28,13 @@
           "source": "DefiLlama Derivatives",
           "url": "https://defillama.com/derivatives",
           "date": "2026-06-20",
+          "references": [
+            {
+              "source": "Hyperliquid 官方数据",
+              "url": "https://app.hyperliquid.xyz/stats",
+              "date": "2026-06-20"
+            }
+          ],
           "context": {
             "label": "量级参照",
             "text": "约占 DEX 永续日成交盘子的 4–10%，是统治级协议的常态区间，不代表单日格局突变。"
@@ -86,19 +93,15 @@
       "title": "机会与打法",
       "items": [
         {
-          "headline": "商品标的先补需求证据，不因融资新闻直接扩列",
+          "headline": "新增市场先看成交成色，不按单日峰值扩列",
           "body": [
-            "**判断**：先验证。竞品融资只能说明资本关注，不能证明某个商品市场已具备交易需求。",
-            "**机制对照**：HertzFlow 上新同时依赖可靠 Feed、市场时间、独立池容量与资产类别风控参数，不能只完成价格接入。",
-            "**动作与验收**：先跟踪目标商品的同类协议 OI、活跃交易者和真实套保场景；达到预设需求门槛后，再进入 Feed 与池子参数评审。"
+            "**判断**：先验证。单日成交峰值不能直接成为新增市场的理由。",
+            "**机制对照**：HertzFlow 上新同时依赖可靠 Feed、市场时间、独立池容量与资产类别风控参数，成交量只是一项输入。",
+            "**动作与验收**：连续跟踪 OI、活跃交易者和费用成色；达到预设需求门槛后，再进入 Feed 与池子参数评审。"
           ],
-          "source": "Variational 融资 · CoinDesk",
-          "url": "https://www.coindesk.com/business/2026/05/21/peer-to-peer-trading-startup-variational-raises-usd50-million-for-real-world-perps-in-funding-round-led-by-dragonfly",
-          "date": "2026-05-21",
-          "context": {
-            "label": "口径限制",
-            "text": "融资额不能替代市场需求证据，仍需同口径的 OI、活跃交易者与费用数据。"
-          }
+          "source": "DefiLlama Derivatives",
+          "url": "https://defillama.com/derivatives",
+          "date": "2026-06-20"
         }
       ]
     }
