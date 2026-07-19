@@ -72,7 +72,7 @@
             "first_seen": "2026-07-02",
             "last_update": "2026-07-17",
             "cadence_days": 3,
-            "next_check": "2026-07-20",
+            "next_check": "2026-07-22",
             "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
             "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
             "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -146,6 +146,11 @@
                     "date": "2026-07-17",
                     "point": "CASHCAT 从 07-11 高点约 0.228 美元回落约 70% 至 0.065 美元附近，市值从约 2 亿美元降至约 6300 万美元；更关键的是，Hyperliquid 上线该标的后，只有 3 倍杠杆且强制逐仓的永续合约仍曾在数分钟内从 0.19 美元上方插针至约 0.08 美元，跌幅超 60%，同期现货几乎未动。Robinhood Chain 的投机引擎不只在降温，薄现货深度还把新永续市场变成独立的清算风险源；Arcus 承诺的 35 个 RWA 永续市场仍未见开放。",
                     "url": "https://thedefiant.io/news/tokens/cashcat-falls-75-from-peak-after-hyperliquid-perp-listing"
+                },
+                {
+                    "date": "2026-07-17",
+                    "point": "CoinDesk 首次把钱包分发与链上自有市场拆开量化：Robinhood Wallet 已把 Lighter 的黄金、白银、外汇和加密永续开放给 120 多个国家，但 Robinhood Chain 07-13 自有永续成交约 590 万美元，同日 Hyperliquid 约 89 亿美元，前者只有后者约 0.07%。钱包路由能替外部交易场获客，却不会自动沉淀为 Robinhood Chain 的原生 OI、LP 收益或深度；本线后续必须分别跟踪外部路由量和本地市场量。",
+                    "url": "https://www.coindesk.com/business/2026/07/17/inside-robinhood-s-high-stakes-bet-to-onboard-10-million-casual-investors-onto-decentralized-finance"
                 }
             ]
         },
@@ -335,9 +340,9 @@
             "tier": "S",
             "status": "active",
             "first_seen": "2026-06-12",
-            "last_update": "2026-07-15",
+            "last_update": "2026-07-17",
             "cadence_days": 3,
-            "next_check": "2026-07-19",
+            "next_check": "2026-07-22",
             "thesis": "Hyperliquid 的 HIP-3 无需许可机制正在把「任何可定价标的」都变成 24/7 永续市场，从加密到股票到优先股，产品矩阵覆盖速度远超任何中心化或其他链上对手。链上股票永续的基础设施护城河正在此形成。",
             "why_us": "HertzFlow 美股指数 perp 和虚拟 RWA 标的是核心差异化，而 Hyperliquid HIP-3 的扩张速度定义了产品升级的参照系和竞争压力窗口。",
             "watch_for": "HIP-3 总 OI 突破 $40 亿 / 下一重量级个股标的上线(Apple/Nvidia/ARM) / Coinbase 或 Aster 在个股 perp 的追赶进度",
@@ -386,6 +391,11 @@
                     "date": "2026-07-15",
                     "point": "HIP-3 准入门槛出现资本中介化苗头：纳斯达克上市的 Hyperliquid 国库公司 Hyperion DeFi 07-15 与 Skew Technologies 达成 HAUS（HYPE Asset Use Service）协议，将 50 万枚 HYPE（约 3360 万美元）质押出租给 Skew 用于满足 HIP-3 建市者门槛，换取 Skew 股权及市场服务收入分成，Skew 借此在 HIP-3 上线一批『机构级永续期货产品』。此前建市门槛是『自己攒够 50 万+ HYPE 质押』，现在变成『找到愿意出租 HYPE 的金主』，建市权开始被资本化、可交易化，是对 hip3-builder-shakeout 线『结算资产标准+分发/订单流才是真护城河』判断的新增一层：质押资本本身也可以被中介化。另注：SEC Crypto Task Force 07-14 与 Hyperliquid Policy Center、Highland Labs、XYZ Ltd（trade.xyz 运营方，占 HIP-3 逾九成未平仓量的主导建市者）及 Sullivan & Cromwell 举行过一次信息性会面，但无监管提案/结论/量化后续（经核实与 07-15 报告评估结论一致），不构成本线实质进展，仅背景记录。",
                     "url": "https://www.theblock.co/post/408538/hyperliquid-treasury-firm-hyperion-new-500k-hype-bond-skew"
+                },
+                {
+                    "date": "2026-07-17",
+                    "point": "到期复盘命中新的重量级标的与 CEX 追赶信号：Trade.xyz 先在 Hyperliquid 部署长鑫科技 CXMT 盘前永续，MEXC 与 Gate 随后上线同标的合约；CXMT 是本线首个面向 A 股科创板 IPO 的盘前市场，但 Hyperliquid 首日仅约 132 万美元成交、241 万美元 OI，且跨境准入限制使现货套利链不完整。HIP-3 的首发优势再次只维持数天，07-27 上市后的价差收敛、深度与指数切换质量会决定这次扩列是价格发现还是平行投机。",
+                    "url": "https://www.gate.com/zh-tw/learn/articles/how-to-participate-cxmt-a-share-hyperliquid-gate-premarket-stocks"
                 }
             ]
         },
