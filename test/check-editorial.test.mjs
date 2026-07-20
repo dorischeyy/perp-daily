@@ -9,11 +9,11 @@ const withOpportunity = () => {
     id: "hertzflow",
     title: "机会与打法",
     items: [{
-      headline: "新标的先做深度压测",
+      headline: "统一保证金适合部分借鉴",
       body: [
-        "**判断**：先验证，不直接上线。",
-        "**机制对照**：现有隔离池只能限制风险传播。",
-        "**动作与验收**：回放深度骤降场景，任一损失边界失效就不上线。",
+        "**好处**：共享保证金可以提高跨市场资金效率。",
+        "**限制**：风险会跨市场传播，也依赖统一清算基础设施。",
+        "**对 HertzFlow**：适合借鉴资金效率展示，不适合照搬统一清算。",
       ],
       source: "S",
       url: "https://example.com/a",
@@ -33,7 +33,7 @@ test("机会项必须是固定三段并由当期新闻触发", () => {
   content.sections.at(-1).items[0].body = ["建议持续关注。"];
   content.sections.at(-1).items[0].url = "https://example.com/unrelated";
   const { errors } = auditEditorial(content);
-  assert.ok(errors.some((e) => /三段格式/.test(e)));
+  assert.ok(errors.some((e) => /好处 \/ 限制 \/ 对 HertzFlow/.test(e)));
   assert.ok(errors.some((e) => /当期一条新闻来源/.test(e)));
 });
 

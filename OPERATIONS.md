@@ -69,7 +69,7 @@ node lib/check-run-state.mjs YYYY-MM-DD
 4. 只给真实 delta 更新 `threads.json`。
 5. 产出 `content.json`、`threads.json`、`review.draft.md`。
 6. 一条内容混用多份材料时，主来源写 `source/url/date`，补充材料写 `references`。
-7. 「机会与打法」最多 3 条，严格使用判断、机制对照、动作与验收三段，且必须由当期新闻触发。
+7. 「机会与打法」最多 3 条，严格使用好处、限制、对 HertzFlow 三段，且必须由当期新闻触发；不强行制造“现在做”或动作项。
 
 ### 3.3 校验与渲染
 

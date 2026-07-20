@@ -151,8 +151,8 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">先测统一订单簿的真实深度，不跟进标的数量</h3>
-          <p class="item-b"><strong>判断</strong>：保持不动。Coinbase 与 Deribit 的基础设施合并会放大标的覆盖，但 09-09 前不能证明统一订单簿已经改善执行。</p><p class="item-b"><strong>机制对照</strong>：HertzFlow 采用预言机定价与隔离流动性池，无法复制中心化订单簿合并；真正需要对照的是跨品种保证金效率、价差与异常行情下的可成交深度。</p><p class="item-b"><strong>动作与验收</strong>：09-09 后连续两周跟踪 3 个代表性 RWA 永续的价差、盘口深度、OI 与故障记录；只有同口径执行质量持续改善，才重排 HertzFlow 扩列优先级。</p>
+          <h3 class="item-h">统一订单簿：不适合直接照搬</h3>
+          <p class="item-b"><strong>好处</strong>：合并订单流和保证金，有机会提升深度与跨品种资金效率。</p><p class="item-b"><strong>限制</strong>：迁移尚未完成，标的数量增加不代表真实深度改善，效果也依赖中心化撮合。</p><p class="item-b"><strong>对 HertzFlow</strong>：架构不同，不适合照搬。更值得关注统一保证金和真实可成交深度。</p>
 
           <div class="item-meta">
 
@@ -160,8 +160,8 @@
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">把未来 7 日持仓成本做成开仓前可验收指标</h3>
-          <p class="item-b"><strong>判断</strong>：现在做。传统平台已把永续资金费率翻译成预先公布的每周持仓成本，HertzFlow 需要先验证用户能否在开仓前看懂自己的费用暴露。</p><p class="item-b"><strong>机制对照</strong>：HertzFlow 已有资金费率、借币费用与仓位费用，缺口不是新增一套 CFD 计费，而是把多项费用合成可核对的 24 小时与 7 日成本估算。</p><p class="item-b"><strong>动作与验收</strong>：选取股票、商品和加密各 1 个市场，连续两周记录开仓时的 24 小时与 7 日估算值、实际结算值及差异原因；完成误差归因后再决定是否进入前端开发。</p>
+          <h3 class="item-h">持仓成本预估：适合做展示优化</h3>
+          <p class="item-b"><strong>好处</strong>：让用户开仓前理解预计持有成本，尤其适合费用结构较复杂的 RWA 市场。</p><p class="item-b"><strong>限制</strong>：资金费率会变化，7 日估算容易造成确定性错觉。</p><p class="item-b"><strong>对 HertzFlow</strong>：适合展示区间或情景估算，不需要改变现有费用机制。</p>
 
           <div class="item-meta">
 
