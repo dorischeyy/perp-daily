@@ -15,7 +15,7 @@
         "watch_for": "下一个关键节点/该盯的触发事件",
         "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
     },
-    "updated": "2026-07-16",
+    "updated": "2026-07-20",
     "threads": [
         {
             "id": "tradfi-perp-asset-class",
@@ -24,9 +24,9 @@
             "tier": "A",
             "status": "active",
             "first_seen": "2026-07-09",
-            "last_update": "2026-07-17",
+            "last_update": "2026-07-20",
             "cadence_days": 6,
-            "next_check": "2026-07-23",
+            "next_check": "2026-07-26",
             "thesis": "此前 Hyperliquid HIP-3 股票永续、Ondo Perps、Binance/OKX 的个股/大宗商品永续都是孤立个案，币安研究院 07-08 报告首次把它们汇总量化：稳定币结算的 TradFi 永续 2026 上半年交易量破 1.1 万亿美元，占全部加密永续交易量约 11%。这标志着虚拟/代币化非加密资产的永续交易正从零散尝试变成有统计意义的独立资产类别，值得持续跟踪其份额增速与背后驱动力（新平台上线 vs 存量平台放量）。",
             "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
             "watch_for": "下一份季度/半年度数据（币安研究院、DefiLlama、Messari）/ Hyperliquid HIP-3 OI 是否突破前高 $30-40 亿 / 更多 CEX(Binance/OKX/Bybit/Bitget) 加推 TradFi 永续或代币化股票产品 / 这 11% 份额的增速是否持续",
@@ -60,6 +60,11 @@
                     "date": "2026-07-17",
                     "point": "资产类别继续外扩：The Block 07-17 转引 Bernstein 确认，Bermuda 注册的 Architect AX 已上线以 GPU 租赁价格为标的的永续式算力期货，CME 与 ICE 的现金结算算力期货仍在等 CFTC 审查、目标 2026 年末；永续机制第一次从股票、商品、外汇继续推进到不可储存的 AI 算力。AX 初期流动性仍偏投机，且指数依赖私下成交数据，说明产品可先上线，但可信基准与真实套保深度仍是扩张瓶颈。",
                     "url": "https://www.theblock.co/post/408758/crypto-style-derivatives-reach-ai-compute-ahead-of-planned-cme-and-ice-futures-bernstein"
+                },
+                {
+                    "date": "2026-07-20",
+                    "point": "基础设施开始随资产类别一起规模化：Coinbase International Exchange 与 Deribit 的 Direct Gateways 07-20 进入全量生产，后续将把 Coinbase 交易量迁入 Deribit，统一 125 个以上加密、股票与商品永续的订单簿、风险管理、保证金与保险基金；但客户持仓和订单簿完整迁移排在 09-09，统一深度仍待验证。",
+                    "url": "https://help.coinbase.com/en/international-exchange/deribit/what-you-need-to-know"
                 }
             ]
         },
