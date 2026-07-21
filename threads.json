@@ -15,7 +15,7 @@
         "watch_for": "下一个关键节点/该盯的触发事件",
         "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
     },
-    "updated": "2026-07-20",
+    "updated": "2026-07-21",
     "threads": [
         {
             "id": "tradfi-perp-asset-class",
@@ -65,6 +65,11 @@
                     "date": "2026-07-20",
                     "point": "基础设施开始随资产类别一起规模化：Coinbase International Exchange 与 Deribit 的 Direct Gateways 07-20 进入全量生产，后续将把 Coinbase 交易量迁入 Deribit，统一 125 个以上加密、股票与商品永续的订单簿、风险管理、保证金与保险基金；但客户持仓和订单簿完整迁移排在 09-09，统一深度仍待验证。",
                     "url": "https://help.coinbase.com/en/international-exchange/deribit/what-you-need-to-know"
+                },
+                {
+                    "date": "2026-07-20",
+                    "point": "结算资产开始成为股票永续的独立竞争维度：Binance 的 SPCXUSD1 于 07-20 上线，是平台首个直接以 USD1 交易和结算的股票永续，此前 USD1 直结算只覆盖 BTC 与 ETH；同一 SpaceX 标的由 USDT 和 USD1 两条合约承接，资产覆盖竞争进一步延伸到稳定币分发与抵押品网络。",
+                    "url": "https://www.cryptotimes.io/2026/07/17/binances-new-spacex-perp-settles-in-the-trump-linked-usd1-stablecoin/"
                 }
             ]
         },
@@ -168,7 +173,7 @@
             "first_seen": "2026-06-30",
             "last_update": "2026-07-15",
             "cadence_days": 6,
-            "next_check": "2026-07-21",
+            "next_check": "2026-07-27",
             "thesis": "新锐 perp DEX 集体把交易手续费转成对自家代币的回购+销毁，用真实现金流为币价托底、把交易活跃度绑定到代币通缩与质押收益。这是 perp DEX「手续费→代币价值捕获」飞轮的激进样本，正从个案（Aster）扩散为赛道范式。",
             "why_us": "Hertzflow ZFP 用盈利抽成替代手续费，若未来做代币经济，抽成现金流如何回流代币（回购/销毁/质押分红）可直接参照这批飞轮设计，及其在去杠杆期的可持续性表现。",
             "watch_for": "去杠杆致手续费收缩后回购力度是否明显减弱 / 质押率与币价是否背离 / 还有哪些 perp DEX 跟进同款高比例费用回购销毁",
