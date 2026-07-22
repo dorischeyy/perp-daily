@@ -15,7 +15,7 @@
         "watch_for": "下一个关键节点/该盯的触发事件",
         "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
     },
-    "updated": "2026-07-21",
+    "updated": "2026-07-22",
     "threads": [
         {
             "id": "tradfi-perp-asset-class",
@@ -80,9 +80,9 @@
             "tier": "S",
             "status": "active",
             "first_seen": "2026-07-02",
-            "last_update": "2026-07-17",
+            "last_update": "2026-07-20",
             "cadence_days": 3,
-            "next_check": "2026-07-22",
+            "next_check": "2026-07-25",
             "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
             "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
             "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -161,6 +161,11 @@
                     "date": "2026-07-17",
                     "point": "CoinDesk 首次把钱包分发与链上自有市场拆开量化：Robinhood Wallet 已把 Lighter 的黄金、白银、外汇和加密永续开放给 120 多个国家，但 Robinhood Chain 07-13 自有永续成交约 590 万美元，同日 Hyperliquid 约 89 亿美元，前者只有后者约 0.07%。钱包路由能替外部交易场获客，却不会自动沉淀为 Robinhood Chain 的原生 OI、LP 收益或深度；本线后续必须分别跟踪外部路由量和本地市场量。",
                     "url": "https://www.coindesk.com/business/2026/07/17/inside-robinhood-s-high-stakes-bet-to-onboard-10-million-casual-investors-onto-decentralized-finance"
+                },
+                {
+                    "date": "2026-07-20",
+                    "point": "Lighter 把 Robinhood Chain 上的 NVDA、GOOG、AAPL 等股票代币从可交易资产升级为永续保证金，首次让经纪商发行的股票代币直接支撑 DEX 杠杆仓位；代币带 Chainlink 价格源，但只面向合资格非美国用户，且未披露抵押折扣、强平参数或采用规模。Robinhood 分发线由钱包入口推进到资金效率层，新增价值来自抵押品复用，而不是 Arcus 承诺的 35 个 RWA 永续市场交付。",
+                    "url": "https://coinmarketcap.com/cmc-ai/lighter/price-analysis/"
                 }
             ]
         },
@@ -352,7 +357,7 @@
             "first_seen": "2026-06-12",
             "last_update": "2026-07-17",
             "cadence_days": 3,
-            "next_check": "2026-07-22",
+            "next_check": "2026-07-27",
             "thesis": "Hyperliquid 的 HIP-3 无需许可机制正在把「任何可定价标的」都变成 24/7 永续市场，从加密到股票到优先股，产品矩阵覆盖速度远超任何中心化或其他链上对手。链上股票永续的基础设施护城河正在此形成。",
             "why_us": "HertzFlow 美股指数 perp 和虚拟 RWA 标的是核心差异化，而 Hyperliquid HIP-3 的扩张速度定义了产品升级的参照系和竞争压力窗口。",
             "watch_for": "HIP-3 总 OI 突破 $40 亿 / 下一重量级个股标的上线(Apple/Nvidia/ARM) / Coinbase 或 Aster 在个股 perp 的追赶进度",
@@ -416,9 +421,9 @@
             "tier": "A",
             "status": "active",
             "first_seen": "2026-07-15",
-            "last_update": "2026-07-16",
+            "last_update": "2026-07-20",
             "cadence_days": 5,
-            "next_check": "2026-07-22",
+            "next_check": "2026-07-25",
             "thesis": "RWA/外汇永续 DEX Ostium 07-15 被攻破预言机签名密钥，攻击者用已注册的 PriceUpKeep 自动化转发器提交未来时间戳的伪造价格报告，从流动性金库卷走约 1800-2370 万美元（TVL 跌约 72%）。这不是智能合约漏洞或价格操纵，而是攻破了预言机系统的信任根本身；CoinDesk 指出这是 2026 年以来的第三起同类大额事件（此前一周 Summer.fi 损失约 600 万美元，更早还有 KelpDAO/Drift 等 9 位数损失）。当越来越多 perp DEX 把标的扩展到需要链下报价的虚拟资产（RWA/Forex/商品/个股），谁能签出那个价格、谁有权调用自动化更新，正在取代智能合约代码本身成为行业第二大攻击面。",
             "why_us": "Hertzflow 的 ZFP 机制和虚拟 RWA/Forex/美股指数/贵金属标的定价，与 Ostium 同属『链下报价驱动链上结算』的架构，直接共享同一类攻击面；这条线的每次新事件都是审视自身预言机签名密钥托管、价格偏离熔断、自动化调用权限范围是否经得起审计的现实提醒。",
             "watch_for": "Ostium 是否公布攻击后事故报告(post-mortem)与用户赔付方案 / 是否有更多 RWA/Forex perp DEX 曝出同类预言机密钥或自动化权限被攻破 / 主流预言机服务商(Chainlink 等)是否针对这类攻击调整密钥管理标准 / Ostium 能否恢复交易并挽回用户信任",
@@ -437,6 +442,11 @@
                     "date": "2026-07-16",
                     "point": "Ostium 被盗资金追踪进展：安全公司 PeckShield 追踪显示，攻击者已把套现所得 12086 枚 ETH 中的 10540 枚分批存入 Tornado Cash 完成混币，追回希望渺茫；Ostium 官方仍未公布事故报告或赔付方案。资金一旦完成链上混币，传统追踪与执法手段基本失效，是本线除『协议死亡』外的第二种不可逆代价。",
                     "url": "https://thedefiant.io/news/hacks/ostium-vault-exploiter-routes-10-540-eth-to-tornado-cash"
+                },
+                {
+                    "date": "2026-07-20",
+                    "point": "Ostium 首次确认损失口径为 2375 万 USDC，并把受损 LP 金库与未受影响的交易者保证金合约拆开说明；所有持仓在攻击后 60 分钟内冻结，恢复交易前至少提前 24 小时通知，旧仓统一按重开价格标记。事故报告、LP 补偿与恢复日期仍未公布，说明资产隔离保住了交易者本金，却不能消除冻结期间的价格跳空和重启分配风险。",
+                    "url": "https://www.bleepingcomputer.com/news/security/hackers-steal-237-million-in-crypto-from-ostium-in-off-chain-attack/"
                 }
             ]
         }
