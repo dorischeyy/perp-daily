@@ -10,6 +10,8 @@
 
 To deliver that, the system does more than generate content. It **maintains state** (a cross-day story ledger), **scores signal** (to drive selection and tracking), and **enforces integrity mechanically** (freshness, anti-fabrication, de-duplication, missed-run alerting). Remove any one and it degrades into "a daily produced from a one-line prompt."
 
+The lead is still a news summary, not a free-floating thesis. In one or two sentences it names the edition's two or three most important actors, actions, and current stages, then may add the house view. A reader who sees only the lead should know what happened; detailed numbers, mechanics, and implications stay in the body.
+
 ---
 
 ## 1. Signal scoring

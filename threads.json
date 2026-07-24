@@ -20,16 +20,16 @@
         {
             "id": "tradfi-perp-asset-class",
             "title": "TradFi/RWA 永续规模化：从个案变成统计意义的资产类别",
-            "score": 81,
-            "tier": "A",
+            "score": 97,
+            "tier": "S",
             "status": "active",
             "first_seen": "2026-07-09",
-            "last_update": "2026-07-20",
+            "last_update": "2026-07-22",
             "cadence_days": 6,
-            "next_check": "2026-07-26",
-            "thesis": "此前 Hyperliquid HIP-3 股票永续、Ondo Perps、Binance/OKX 的个股/大宗商品永续都是孤立个案，币安研究院 07-08 报告首次把它们汇总量化：稳定币结算的 TradFi 永续 2026 上半年交易量破 1.1 万亿美元，占全部加密永续交易量约 11%。这标志着虚拟/代币化非加密资产的永续交易正从零散尝试变成有统计意义的独立资产类别，值得持续跟踪其份额增速与背后驱动力（新平台上线 vs 存量平台放量）。",
+            "next_check": "2026-07-28",
+            "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交，说明需求规模化与订单流集中正在同时发生。",
             "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
-            "watch_for": "下一份季度/半年度数据（币安研究院、DefiLlama、Messari）/ Hyperliquid HIP-3 OI 是否突破前高 $30-40 亿 / 更多 CEX(Binance/OKX/Bybit/Bitget) 加推 TradFi 永续或代币化股票产品 / 这 11% 份额的增速是否持续",
+            "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
             "log": [
                 {
                     "date": "2026-07-09",
@@ -70,6 +70,11 @@
                     "date": "2026-07-20",
                     "point": "结算资产开始成为股票永续的独立竞争维度：Binance 的 SPCXUSD1 于 07-20 上线，是平台首个直接以 USD1 交易和结算的股票永续，此前 USD1 直结算只覆盖 BTC 与 ETH；同一 SpaceX 标的由 USDT 和 USD1 两条合约承接，资产覆盖竞争进一步延伸到稳定币分发与抵押品网络。",
                     "url": "https://www.cryptotimes.io/2026/07/17/binances-new-spacex-perp-settles-in-the-trump-linked-usd1-stablecoin/"
+                },
+                {
+                    "date": "2026-07-22",
+                    "point": "新的全市场月度口径把规模与集中度同时量化：跨 CEX 与 DEX 的 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍；但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交，Binance 接近一半，Hyperliquid 是最突出的链上场所。资产类别已规模化，但订单流仍由少数平台和 SpaceX、半导体等事件型标的主导。",
+                    "url": "https://www.theblock.co/post/408961/tokenized-equity-perps-drive-rwa-trading-boom-to-470-billion-monthly-volume"
                 }
             ]
         },
@@ -416,17 +421,17 @@
         },
         {
             "id": "oracle-attack-wave",
-            "title": "预言机攻击链：自动化价格基础设施成为 perp/RWA DeFi 新攻击面",
-            "score": 83,
-            "tier": "A",
+            "title": "链下权限攻击链：预言机与桥接签名成为 perp/RWA DeFi 新攻击面",
+            "score": 94,
+            "tier": "S",
             "status": "active",
             "first_seen": "2026-07-15",
-            "last_update": "2026-07-20",
+            "last_update": "2026-07-22",
             "cadence_days": 5,
-            "next_check": "2026-07-25",
-            "thesis": "RWA/外汇永续 DEX Ostium 07-15 被攻破预言机签名密钥，攻击者用已注册的 PriceUpKeep 自动化转发器提交未来时间戳的伪造价格报告，从流动性金库卷走约 1800-2370 万美元（TVL 跌约 72%）。这不是智能合约漏洞或价格操纵，而是攻破了预言机系统的信任根本身；CoinDesk 指出这是 2026 年以来的第三起同类大额事件（此前一周 Summer.fi 损失约 600 万美元，更早还有 KelpDAO/Drift 等 9 位数损失）。当越来越多 perp DEX 把标的扩展到需要链下报价的虚拟资产（RWA/Forex/商品/个股），谁能签出那个价格、谁有权调用自动化更新，正在取代智能合约代码本身成为行业第二大攻击面。",
-            "why_us": "Hertzflow 的 ZFP 机制和虚拟 RWA/Forex/美股指数/贵金属标的定价，与 Ostium 同属『链下报价驱动链上结算』的架构，直接共享同一类攻击面；这条线的每次新事件都是审视自身预言机签名密钥托管、价格偏离熔断、自动化调用权限范围是否经得起审计的现实提醒。",
-            "watch_for": "Ostium 是否公布攻击后事故报告(post-mortem)与用户赔付方案 / 是否有更多 RWA/Forex perp DEX 曝出同类预言机密钥或自动化权限被攻破 / 主流预言机服务商(Chainlink 等)是否针对这类攻击调整密钥管理标准 / Ostium 能否恢复交易并挽回用户信任",
+            "next_check": "2026-07-27",
+            "thesis": "一周内两家 RWA/永续 DEX 因链下特权凭证失守遭受接近全额金库损失。Ostium 07-15 的预言机签名密钥被攻破，攻击者提交伪造价格报告，从 LP 金库卷走约 1800-2370 万美元；AFX Trade 07-22 的自营桥验证者热签名被攻破，五个签名达到约三分之二门槛，合约按设计转出约 2415 万 USDC。两起事故都不是合约代码没有按规则执行，而是谁掌握了让合约执行的链下签名权。随着永续 DEX 扩展到更多链、更多链下报价资产，权限面正在取代单纯代码漏洞成为核心攻击面。",
+            "why_us": "HertzFlow 的价格签名、Keeper 执行与多资产市场同样依赖链下特权角色。即使当前不运营跨链桥，Ostium 与 AFX 的共同模式仍直接要求审视密钥托管、权限组合、单笔限额、延迟、暂停与快速撤销能力，而不能把合约审计通过当作系统安全结论。",
+            "watch_for": "Ostium 与 AFX 是否公布事故报告和赔付方案 / AFX 是否更换热签名架构与争议期 / 是否有更多 perp DEX 曝出预言机、Keeper、桥验证者或后台凭证失守 / 主流基础设施是否调整密钥管理和提款限额标准",
             "log": [
                 {
                     "date": "2026-07-15",
@@ -447,6 +452,11 @@
                     "date": "2026-07-20",
                     "point": "Ostium 首次确认损失口径为 2375 万 USDC，并把受损 LP 金库与未受影响的交易者保证金合约拆开说明；所有持仓在攻击后 60 分钟内冻结，恢复交易前至少提前 24 小时通知，旧仓统一按重开价格标记。事故报告、LP 补偿与恢复日期仍未公布，说明资产隔离保住了交易者本金，却不能消除冻结期间的价格跳空和重启分配风险。",
                     "url": "https://www.bleepingcomputer.com/news/security/hackers-steal-237-million-in-crypto-from-ostium-in-off-chain-attack/"
+                },
+                {
+                    "date": "2026-07-22",
+                    "point": "攻击面从预言机签名扩展到桥接验证者签名：Arbitrum 上的永续 DEX AFX Trade 被转走约 2415 万 USDC，接近协议全部 TVL。Arbitrum 原生桥与 AFX 桥合约均按设计运行；攻击者控制 AFX 自营桥的五个热签名，达到约三分之二门槛，交易经过 200 秒争议期后被视为合法提款。继 Ostium 后，第二家永续 DEX 在一周内因链下特权凭证失守遭受接近全额金库损失。",
+                    "url": "https://www.coindesk.com/tech/2026/07/23/arbitrum-based-afx-trade-drained-of-usd24-million-after-bridge-keys-compromised"
                 }
             ]
         }
