@@ -70,6 +70,7 @@ node lib/check-run-state.mjs YYYY-MM-DD
 5. 产出 `content.json`、`threads.json`、`review.draft.md`。
 6. 一条内容混用多份材料时，主来源写 `source/url/date`，补充材料写 `references`。
 7. 「机会与打法」最多 3 条，严格使用好处、限制、对 HertzFlow 三段，且必须由当期新闻触发；不强行制造“现在做”或动作项。
+8. lead 用 1-2 句概括当期最重要的 2-3 个新闻主体、动作与阶段；可以补总判断，但不得只写脱离新闻要点的抽象概括。
 
 ### 3.3 校验与渲染
 
@@ -93,7 +94,8 @@ cmp -s docs/index.html docs/archive/YYYY-MM-DD.html
 - 页面无横向溢出
 - 首页与当日归档一致
 - 页面没有 `kicker`、旧标题「对 Hertzflow 的启发」或重复双语标签
-- lead、持续追踪、正文、context、机会与打法没有重复承载同一事实
+- lead 能独立说明当期最重要的新闻要点，不是“竞争升级、格局变化”式抽象口号
+- lead 只保留摘要层事实，没有复制持续追踪、正文、context 或机会与打法的精确数字和机制细节
 - 全文没有禁用长破折号
 
 ### 3.4 发布
