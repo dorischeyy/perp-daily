@@ -254,7 +254,7 @@ cd ~/perp-daily
 bash publish.sh validate
 bash publish.sh render
 ```
-Codex 定时任务在全部关卡通过后，使用 GitHub 连接器把完整产物以 `report: YYYY-MM-DD` 一次提交到 `dorischeyy/perp-daily` 的 `main`。不得使用本地 Git 凭证、PAT、`gh` 或 `.env`。push 后由现有 GitHub 工作流处理 Pages、飞书和 Slack，任务本身不访问渠道 webhook。
+Codex 定时任务在全部关卡通过后，使用 GitHub 连接器把完整产物以 `report: YYYY-MM-DD` 一次提交到 `dorischeyy/perp-daily` 的 `main`。不得使用本地 Git 凭证、PAT、`gh` 或 `.env`。连接器发布并完成远端 blob 核验后，只把本轮已发布文件提交为同名本地镜像基线，使工作区恢复干净；这个本地提交不推送，不能混入任何额外改动。push 后由现有 GitHub 工作流处理 Pages、飞书和 Slack，任务本身不访问渠道 webhook。
 
 `bash publish.sh` 的无参数 `all` / `push` 仅保留给 GitHub Actions 内的手动 Legacy fallback，不是 Codex 日常发布路径。
 

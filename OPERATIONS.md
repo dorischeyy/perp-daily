@@ -106,7 +106,8 @@ cmp -s docs/index.html docs/archive/YYYY-MM-DD.html
 2. 上传完整日报产物与必要的规则、台账变更。
 3. 创建一次 `report: YYYY-MM-DD` 提交并快进 `main`。
 4. 远端核验 commit、`docs/latest.json`、归档 HTML 和关键栏目。
-5. 报告 commit URL、公开日报 URL、验证结果和投递是否被触发。
+5. 远端 blob 与本地产物逐项一致后，只暂存本轮已发布文件，在本地创建同名 `report: YYYY-MM-DD` 镜像提交，使工作区恢复干净。这个本地提交不推送，远端连接器提交仍是发布权威。
+6. 报告 commit URL、公开日报 URL、验证结果和投递是否被触发。
 
 不得使用本地 `git push` 代替连接器。`publish.sh push` 仅供仓库里的手动 Legacy GitHub Actions fallback 使用，不是 Codex 日常路径。
 
@@ -115,7 +116,8 @@ cmp -s docs/index.html docs/archive/YYYY-MM-DD.html
 - `docs/latest.json.date` 已等于北京今天：无改动停止。
 - 发布前远端 `main` 已变化：重新读取变更，只合并本任务范围；无法安全合并则停止。
 - GitHub 连接器更新远端后不会移动当前本地 `.git/HEAD`。因此本地可能继续显示本轮已发布文件为 modified/untracked。
-- 遇到这种情况，先用远端 commit 和文件 blob 核验是否正是本轮产物。只有确认完全对应后，才把它视为已发布基线；任何额外文件仍按无关改动停止处理。
+- 遇到这种情况，先用远端 commit 和文件 blob 核验是否正是本轮产物。只有确认完全对应后，才把本轮已发布文件提交为本地镜像基线；任何额外文件仍按无关改动停止处理，不能混入镜像提交。
+- 本地镜像提交只用于保持工作区干净，可以与连接器创建的远端提交拥有不同 SHA。不得把它推到 GitHub，也不得用本地 `origin/main` 是否新鲜代替连接器远端核验。
 - 不用 `git reset`、`git checkout` 或删除文件来伪造干净状态。
 
 ## 5. 分阶段恢复
