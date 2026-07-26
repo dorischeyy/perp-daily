@@ -87,7 +87,7 @@
             "first_seen": "2026-07-02",
             "last_update": "2026-07-20",
             "cadence_days": 3,
-            "next_check": "2026-07-25",
+            "next_check": "2026-07-29",
             "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
             "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
             "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -261,11 +261,11 @@
             "title": "CME 诉 CFTC：美国永续监管定性",
             "score": 92,
             "tier": "S",
-            "status": "dormant",
+            "status": "active",
             "first_seen": "2026-06-19",
-            "last_update": "2026-07-10",
+            "last_update": "2026-07-23",
             "cadence_days": 3,
-            "next_check": "2026-07-27",
+            "next_check": "2026-07-29",
             "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
             "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
             "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
@@ -319,6 +319,11 @@
                     "date": "2026-07-16",
                     "point": "转 dormant（连续第2个cadence无实质推进）：诉讼本身(排期/初步禁令/裁定)仍无新公开记录。核实到 watch_for『Kalshi 那个永续产品的命运』有背景信息但非本案进展：Kalshi 07-09 确认正与CFTC磋商把永续期货扩展到贵金属(黄金)/外汇/能源三个新资产类别（此前5月上线的加密永续已录得161亿美元交易量），显示Kalshi在CME诉讼悬而未决期间选择加码而非收缩其永续业务；另 07-14 CFTC动用紧急权力叫停Kalshi执行密歇根州法院要求撤销交易的裁定，经核实该纠纷主体是预测市场event contracts、不是永续期货，与本案(swaps/futures定性)非同一战线，不计入本线进展。案件核心程序连续两个cadence静默，转dormant，待有排期/裁定/初步禁令等实质进展再激活。",
                     "url": "https://www.cryptotimes.io/2026/07/09/kalshi-pushes-perpetual-futures-beyond-crypto-with-cftc-talks/"
+                },
+                {
+                    "date": "2026-07-23",
+                    "point": "转回 active：CFTC 把能源衍生品规则征询延长 30 天至 08-26，并新增问题，明确把固定到期合约的 24/7 交易与以可储存或实物交割能源商品为标的的永续合约拆开审视。诉讼本身仍无排期或裁定，但案外监管从 07-09 叫停 CME 原油连续期货的个案处置，推进到公开建立能源永续的证据标准，说明美国正在按标的属性而非按“perp”名称统一放行。",
+                    "url": "https://www.cftc.gov/PressRoom/PressReleases/9271-26"
                 }
             ]
         },
@@ -426,9 +431,9 @@
             "tier": "S",
             "status": "active",
             "first_seen": "2026-07-15",
-            "last_update": "2026-07-22",
+            "last_update": "2026-07-23",
             "cadence_days": 5,
-            "next_check": "2026-07-27",
+            "next_check": "2026-07-28",
             "thesis": "一周内两家 RWA/永续 DEX 因链下特权凭证失守遭受接近全额金库损失。Ostium 07-15 的预言机签名密钥被攻破，攻击者提交伪造价格报告，从 LP 金库卷走约 1800-2370 万美元；AFX Trade 07-22 的自营桥验证者热签名被攻破，五个签名达到约三分之二门槛，合约按设计转出约 2415 万 USDC。两起事故都不是合约代码没有按规则执行，而是谁掌握了让合约执行的链下签名权。随着永续 DEX 扩展到更多链、更多链下报价资产，权限面正在取代单纯代码漏洞成为核心攻击面。",
             "why_us": "HertzFlow 的价格签名、Keeper 执行与多资产市场同样依赖链下特权角色。即使当前不运营跨链桥，Ostium 与 AFX 的共同模式仍直接要求审视密钥托管、权限组合、单笔限额、延迟、暂停与快速撤销能力，而不能把合约审计通过当作系统安全结论。",
             "watch_for": "Ostium 与 AFX 是否公布事故报告和赔付方案 / AFX 是否更换热签名架构与争议期 / 是否有更多 perp DEX 曝出预言机、Keeper、桥验证者或后台凭证失守 / 主流基础设施是否调整密钥管理和提款限额标准",
@@ -457,6 +462,11 @@
                     "date": "2026-07-22",
                     "point": "攻击面从预言机签名扩展到桥接验证者签名：Arbitrum 上的永续 DEX AFX Trade 被转走约 2415 万 USDC，接近协议全部 TVL。Arbitrum 原生桥与 AFX 桥合约均按设计运行；攻击者控制 AFX 自营桥的五个热签名，达到约三分之二门槛，交易经过 200 秒争议期后被视为合法提款。继 Ostium 后，第二家永续 DEX 在一周内因链下特权凭证失守遭受接近全额金库损失。",
                     "url": "https://www.coindesk.com/tech/2026/07/23/arbitrum-based-afx-trade-drained-of-usd24-million-after-bridge-keys-compromised"
+                },
+                {
+                    "date": "2026-07-23",
+                    "point": "Ostium 在暂停八天后分阶段恢复交易：先开放平仓、补充保证金、撤改订单、止盈止损与清算，积压订单处理后再开放新仓；既有仓位与挂单只按重开实时价执行，暂停期间的价格变动不倒推成交或清算。恢复顺序解决了停市后的仓位连续性，但签名密钥失守的完整事故报告、LP 赔付与资金追回仍未落地，交易恢复不等于安全线已经闭环。",
+                    "url": "https://cryptoticker.io/en/ostium-hack-oracle-exploit-arbitrum/"
                 }
             ]
         }
