@@ -15,7 +15,7 @@
         "watch_for": "下一个关键节点/该盯的触发事件",
         "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
     },
-    "updated": "2026-07-22",
+    "updated": "2026-07-27",
     "threads": [
         {
             "id": "tradfi-perp-asset-class",
@@ -24,9 +24,9 @@
             "tier": "S",
             "status": "active",
             "first_seen": "2026-07-09",
-            "last_update": "2026-07-22",
+            "last_update": "2026-07-27",
             "cadence_days": 6,
-            "next_check": "2026-07-28",
+            "next_check": "2026-08-02",
             "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交，说明需求规模化与订单流集中正在同时发生。",
             "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
             "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -75,6 +75,11 @@
                     "date": "2026-07-22",
                     "point": "新的全市场月度口径把规模与集中度同时量化：跨 CEX 与 DEX 的 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍；但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交，Binance 接近一半，Hyperliquid 是最突出的链上场所。资产类别已规模化，但订单流仍由少数平台和 SpaceX、半导体等事件型标的主导。",
                     "url": "https://www.theblock.co/post/408961/tokenized-equity-perps-drive-rwa-trading-boom-to-470-billion-monthly-volume"
+                },
+                {
+                    "date": "2026-07-27",
+                    "point": "受监管单股衍生品侧出现新的直接竞品：CME 于 07-27 上线 55 个标准与 22 个微型单股期货合约，覆盖 50 多只美国股票并采用美元现金结算、近 24 小时交易。与链上股票永续相比，CME 提供中央清算和到期收敛，代价是存在到期与交易时段边界；RWA 永续竞争从 CEX 与 DEX 内部扩展到传统交易所的标准化单股期货。",
+                    "url": "https://www.cmegroup.com/notices/electronic-trading/2026/07/20260706.html"
                 }
             ]
         },
@@ -179,11 +184,11 @@
             "title": "费用→通缩飞轮：Aster / Lighter",
             "score": 76,
             "tier": "A",
-            "status": "active",
+            "status": "dormant",
             "first_seen": "2026-06-30",
             "last_update": "2026-07-15",
             "cadence_days": 6,
-            "next_check": "2026-07-27",
+            "next_check": "2026-08-09",
             "thesis": "新锐 perp DEX 集体把交易手续费转成对自家代币的回购+销毁，用真实现金流为币价托底、把交易活跃度绑定到代币通缩与质押收益。这是 perp DEX「手续费→代币价值捕获」飞轮的激进样本，正从个案（Aster）扩散为赛道范式。",
             "why_us": "Hertzflow ZFP 用盈利抽成替代手续费，若未来做代币经济，抽成现金流如何回流代币（回购/销毁/质押分红）可直接参照这批飞轮设计，及其在去杠杆期的可持续性表现。",
             "watch_for": "去杠杆致手续费收缩后回购力度是否明显减弱 / 质押率与币价是否背离 / 还有哪些 perp DEX 跟进同款高比例费用回购销毁",
@@ -217,6 +222,11 @@
                     "date": "2026-07-15",
                     "point": "压力测试结果落地补充细节：pump.fun 此前预告的最大解锁实际链上到账 572.79 亿枚 PUMP（约 8650 万美元，分发至 121 个钱包），低于解锁日历预期的 82.5 亿枚代币/约 1.27 亿美元口径，链上分析师指出这是因为『解锁日历』追踪的是归属资格而非实际转账时点；三年归属期正式开始，解锁落地当天 PUMP 不跌反涨，24 小时+13%。为『回购销毁能否扛住真实解锁』这一压力测试交出了目前最完整的数据支撑，与 Aster『回购持续但币价依然腰斩』形成鲜明对照。",
                     "url": "https://crypto.news/pump-fun-unlocks-86m-in-pump-as-three-year-vesting-begins/"
+                },
+                {
+                    "date": "2026-07-27",
+                    "point": "转 dormant：连续两个复盘节奏未见 Aster 或 Lighter 公布新的费用回购、销毁规模或质押率数据。Aster 07-24 上线 Vault Beta，可能增加交易费用来源，但目前只披露受托策略、锁定期和分润机制，没有把金库采用与回购金额连接起来，不能当作飞轮已增强的证据。",
+                    "url": "https://en.bloomingbit.io/feed/news/116926"
                 }
             ]
         },
@@ -365,9 +375,9 @@
             "tier": "S",
             "status": "active",
             "first_seen": "2026-06-12",
-            "last_update": "2026-07-17",
+            "last_update": "2026-07-24",
             "cadence_days": 3,
-            "next_check": "2026-07-27",
+            "next_check": "2026-07-30",
             "thesis": "Hyperliquid 的 HIP-3 无需许可机制正在把「任何可定价标的」都变成 24/7 永续市场，从加密到股票到优先股，产品矩阵覆盖速度远超任何中心化或其他链上对手。链上股票永续的基础设施护城河正在此形成。",
             "why_us": "HertzFlow 美股指数 perp 和虚拟 RWA 标的是核心差异化，而 Hyperliquid HIP-3 的扩张速度定义了产品升级的参照系和竞争压力窗口。",
             "watch_for": "HIP-3 总 OI 突破 $40 亿 / 下一重量级个股标的上线(Apple/Nvidia/ARM) / Coinbase 或 Aster 在个股 perp 的追赶进度",
@@ -421,6 +431,11 @@
                     "date": "2026-07-17",
                     "point": "到期复盘命中新的重量级标的与 CEX 追赶信号：Trade.xyz 先在 Hyperliquid 部署长鑫科技 CXMT 盘前永续，MEXC 与 Gate 随后上线同标的合约；CXMT 是本线首个面向 A 股科创板 IPO 的盘前市场，但 Hyperliquid 首日仅约 132 万美元成交、241 万美元 OI，且跨境准入限制使现货套利链不完整。HIP-3 的首发优势再次只维持数天，07-27 上市后的价差收敛、深度与指数切换质量会决定这次扩列是价格发现还是平行投机。",
                     "url": "https://www.gate.com/zh-tw/learn/articles/how-to-participate-cxmt-a-share-hyperliquid-gate-premarket-stocks"
+                },
+                {
+                    "date": "2026-07-24",
+                    "point": "周度构成首次反转：07-13 至 07-19，Hyperliquid 的 RWA 永续成交约 251 亿至 260 亿美元，占平台周成交约 52% 至 54%，首次超过加密永续；个股又占 RWA 成交约 61%。这不是新增标的数量带来的口径扩张，而是非加密市场首次在完整一周内成为平台主引擎，但 SK Hynix 等少数事件型股票仍主导流量，集中度风险未消失。",
+                    "url": "https://www.techflowpost.com/newsletter/129338"
                 }
             ]
         },
