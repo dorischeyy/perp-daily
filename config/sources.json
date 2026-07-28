@@ -1,7 +1,7 @@
 {
-  "version": 4,
-  "updated": "2026-06-23",
-  "_doc": "日报信源注册表。四层架构：official(官方主号=事实) / founder(创始人=提前信号) / media(媒体=覆盖面) / kol(=解读扩散) / data(链上数据)。generate.md 每天按此表抓取，core_pool 为必看核心池，verify:true 的账号 handle 待核实（先按 name 搜）。status:watch 为有 ban/改名风险需备替补的账号。",
+  "version": 5,
+  "updated": "2026-07-27",
+  "_doc": "日报信源注册表。层级说明来源可信度，daily_scan 定义每天必须覆盖的竞争面。core_pool 只是高频入口，不代表固定报道对象；最终按当日变化和评分决定。verify:true 的账号 handle 待核实（先按 name 搜），status:watch 为有 ban/改名风险需备替补的账号。",
   "layers": {
     "official": "官方主号——发事实：上市、新功能、perp/衍生品、市场、治理公告",
     "founder": "创始人/核心角色——常先于官方爆料，提前信号",
@@ -9,12 +9,54 @@
     "kol": "KOL——解读、情绪、叙事扩散（避坑视角）",
     "data": "链上数据/分析——whale、DEX 流量、资金流，用于交叉验证"
   },
-  "themes": ["perp", "launchpad", "exchange", "chain", "onchain", "defi", "news", "meme", "ai"],
+  "themes": ["perp", "launchpad", "exchange", "broker", "wallet", "prediction", "tradfi", "rwa", "infrastructure", "distribution", "chain", "onchain", "defi", "news", "meme", "ai"],
+  "daily_scan": {
+    "_doc": "每天先按桶扫一遍，再深入当日命中的方向。每桶至少形成一个候选或在编辑自评不收录清单中说明为何无合格事件；不能只扫熟悉的 Perp DEX。",
+    "buckets": [
+      {
+        "id": "direct_derivatives",
+        "label": "直接衍生品竞品",
+        "targets": ["Perp DEX", "链上订单簿", "RWA/股票永续", "期权 DEX"],
+        "queries": ["perpetual DEX launch upgrade volume", "onchain derivatives new market", "RWA equity perpetual"]
+      },
+      {
+        "id": "centralized_venues",
+        "label": "中心化交易场所",
+        "targets": ["CEX", "做市商", "统一保证金", "Prime Brokerage"],
+        "queries": ["crypto exchange derivatives product", "unified margin exchange", "crypto prime brokerage clearing"]
+      },
+      {
+        "id": "distribution",
+        "label": "分发入口",
+        "targets": ["钱包", "经纪商", "超级 App", "聚合器", "嵌入式交易"],
+        "queries": ["wallet perpetual trading integration", "broker crypto derivatives", "embedded trading wallet"]
+      },
+      {
+        "id": "substitutes",
+        "label": "替代型交易产品",
+        "targets": ["预测市场", "受监管期货", "期权", "代币化证券", "现货杠杆"],
+        "queries": ["prediction market derivatives", "regulated perpetual futures", "tokenized stocks trading", "single stock futures crypto"]
+      },
+      {
+        "id": "infrastructure",
+        "label": "交易基础设施",
+        "targets": ["预言机", "清算", "稳定币抵押", "跨链", "托管", "风险引擎"],
+        "queries": ["oracle trading markets", "crypto clearing infrastructure", "stablecoin collateral derivatives", "crosschain trading settlement"]
+      },
+      {
+        "id": "emerging",
+        "label": "新项目发现",
+        "targets": ["近 30 天新上线", "融资", "测试网", "首次真实采用"],
+        "queries": ["new trading app launch funding", "new crypto exchange testnet", "onchain markets seed series launch"]
+      }
+    ]
+  },
   "core_pool": [
-    "WuBlockchain", "BlockTempo", "FORAB", "CoinDesk", "BanklessHQ",
-    "HyperliquidX", "Aster_DEX", "gmgnai", "pumpdotfun"
+    "CoinDesk", "TheBlock__", "WuBlockchain", "HyperliquidX", "GMX_IO",
+    "binance", "coinbase", "RobinhoodApp", "phantom", "CMEGroup",
+    "Kalshi", "PythNetwork"
   ],
-  "core_pool_note": "第 10 位为「KOL 补充位」，优先放高信噪比中文 KOL（AB Kuai.Dong 即 FORAB 已在列），后续再补 2-3 个同类。",
+  "core_pool_note": "核心池按直接竞品、CEX、分发入口、替代产品和基础设施做平衡，只是每日发现入口。不得因为进入核心池就固定出现在日报。",
   "data_pages": [
     "https://defillama.com/perps",
     "https://www.coingecko.com/en/derivatives",
@@ -36,11 +78,33 @@
       { "name": "CryptoPanic", "status": "dead", "note": "❌ 弃用：CryptoPanic 免费 Developer API 已于 2026-04-01 下线（2026-06-23 实测所有端点 404）。免费 token 不可用，要用需付费。CryptoCompare/CCData 新闻 API 也已改为需 key（401）。免费聚合新闻 API 这条路基本关闭——实时面继续靠 feeds.rss + WebSearch。" }
     ]
   },
-  "sourcing_rule": "优先一手源：① 数字先看本地 data/market.json（fetch-data.mjs 拉的 CoinGecko 免费数据），再用 data_pages 网页交叉核对；② 事件以「事件主体的官方页面(blog/docs/governance/announcement)」为准——聚合站只用于发现线索，找到后尽量 WebFetch 官方页作为来源 url；③ 无 X API，sources.json 的 handle 仅作搜索线索，不能假装读到了原始推文——但 feeds.rss 是合法的实时线索池，可 WebFetch 直接读，引用时优先回溯到事件主体官方页；④ 【主辅原则】以国外优质源为主（CoinDesk/The Block/Cointelegraph/Decrypt/The Defiant 等 + 项目方官方），国内中文媒体（律动/Odaily/PANews/深潮/Foresight/链捕手/金色/吴说/动区）仅作辅助补充——它们多无稳定 RSS，用 WebSearch 按 name 搜当日要闻当线索，命中后回溯官方/外媒核实；⑤ 【只筛主要新闻】只收能改变判断的结构性事件：项目上线/新机制/融资/监管定性/大额链上或资金数据/竞品格局变化。明确跳过细枝末节：某 KOL/交易员喊单、纯价格行情评论、谁说了什么的口水、无信息量的日常快讯。",
+  "sourcing_rule": "优先一手源：① 数字先看本地 docs/market.json（fetch-data.mjs 拉的 CoinGecko 免费数据），再用 data_pages 网页交叉核对；② 事件以「事件主体的官方页面(blog/docs/governance/announcement)」为准，聚合站只用于发现线索；③ 无 X API，handle 仅作搜索线索，不能假装读到了原始推文；④ 以国外优质源和项目方官方为主，国内中文媒体只作辅助并回溯核实；⑤ 先完成 daily_scan 六桶覆盖，再按评分决定报道对象，core_pool 不享有固定版面；⑥ 竞品按用户任务和价值链定义，只要会拿走用户、保证金、订单流、资产供给、价格发现或分发入口，即使不是 Perp DEX 也纳入候选；⑦ 只收能改变判断的结构性事件，跳过喊单、纯价格评论、口水和日常小更新。",
   "sources": [
     { "handle": "binance", "name": "Binance", "region": "both", "layer": "official", "themes": ["exchange", "perp"], "core": false, "note": "全球+本地公告，perp/衍生品上市" },
     { "handle": "okx", "name": "OKX", "region": "both", "layer": "official", "themes": ["exchange", "perp"], "core": false, "note": "亚洲友好，中文内容多" },
     { "handle": "Bybit_Official", "name": "Bybit", "region": "both", "layer": "official", "themes": ["exchange", "perp"], "core": false },
+    { "handle": "coinbase", "name": "Coinbase", "region": "en", "layer": "official", "themes": ["exchange", "broker", "perp", "distribution"], "core": true, "note": "受监管交易所与经纪入口，统一流动性、衍生品、钱包和多资产分发" },
+    { "handle": "krakenfx", "name": "Kraken", "region": "en", "layer": "official", "themes": ["exchange", "broker", "perp", "tradfi"], "core": false, "note": "受监管衍生品与多资产交易入口" },
+    { "handle": "RobinhoodApp", "name": "Robinhood", "region": "en", "layer": "official", "themes": ["broker", "wallet", "perp", "rwa", "distribution"], "core": true, "note": "经纪商、钱包、自建链与代币化资产分发，可能直接替代独立交易前端" },
+    { "handle": "eToro", "name": "eToro", "region": "en", "layer": "official", "themes": ["broker", "exchange", "distribution"], "core": false, "note": "多资产经纪商向链上与加密衍生品延伸" },
+    { "handle": "IBKR", "name": "Interactive Brokers", "region": "en", "layer": "official", "themes": ["broker", "tradfi", "distribution"], "core": false, "verify": true, "note": "传统经纪商的加密与全天候多资产交易扩张" },
+    { "handle": "CMEGroup", "name": "CME Group", "region": "en", "layer": "official", "themes": ["tradfi", "perp", "rwa", "infrastructure"], "core": true, "note": "受监管期货、期权、清算与 24/7 交易，是链上永续的替代和定价基准" },
+    { "handle": "CFTC", "name": "CFTC", "region": "en", "layer": "official", "themes": ["tradfi", "perp", "infrastructure"], "core": false, "note": "美国衍生品监管与永续、24/7、清算规则" },
+    { "handle": "SECGov", "name": "U.S. SEC", "region": "en", "layer": "official", "themes": ["tradfi", "rwa", "exchange"], "core": false, "note": "代币化证券、经纪与交易场所规则" },
+
+    { "handle": "phantom", "name": "Phantom", "region": "en", "layer": "official", "themes": ["wallet", "distribution", "perp"], "core": true, "note": "钱包内交易分发与 perp 集成，重点看订单流归属" },
+    { "handle": "MetaMask", "name": "MetaMask", "region": "en", "layer": "official", "themes": ["wallet", "distribution", "perp"], "core": false, "note": "钱包原生交易与聚合入口" },
+    { "handle": "Uniswap", "name": "Uniswap", "region": "en", "layer": "official", "themes": ["defi", "distribution", "wallet"], "core": false, "note": "聚合、钱包与交易前端，观察是否扩展到衍生品或跨资产路由" },
+    { "handle": "1inch", "name": "1inch", "region": "en", "layer": "official", "themes": ["defi", "distribution", "wallet"], "core": false, "note": "DEX 聚合与钱包分发" },
+
+    { "handle": "Kalshi", "name": "Kalshi", "region": "en", "layer": "official", "themes": ["prediction", "tradfi", "perp", "distribution"], "core": true, "note": "受监管预测市场与永续产品，替代事件交易和方向性杠杆任务" },
+    { "handle": "Polymarket", "name": "Polymarket", "region": "en", "layer": "official", "themes": ["prediction", "distribution", "onchain"], "core": false, "note": "事件市场、用户分发与链上价格发现" },
+    { "handle": "OndoFinance", "name": "Ondo Finance", "region": "en", "layer": "official", "themes": ["rwa", "tradfi", "distribution"], "core": false, "note": "代币化证券与链上资产供给" },
+    { "handle": "Securitize", "name": "Securitize", "region": "en", "layer": "official", "themes": ["rwa", "tradfi", "infrastructure"], "core": false, "note": "受监管代币化证券发行、经纪与资产基础设施" },
+
+    { "handle": "PythNetwork", "name": "Pyth Network", "region": "en", "layer": "official", "themes": ["infrastructure", "perp", "rwa"], "core": true, "note": "HertzFlow 主要价格源，重点看新 Feed、延迟、市场时间与事故" },
+    { "handle": "chainlink", "name": "Chainlink", "region": "en", "layer": "official", "themes": ["infrastructure", "rwa", "defi"], "core": false, "note": "价格源、跨链与机构数据基础设施" },
+    { "handle": "circle", "name": "Circle", "region": "en", "layer": "official", "themes": ["infrastructure", "exchange", "distribution"], "core": false, "note": "USDC 抵押、结算与跨链流动性标准" },
 
     { "handle": "GMX_IO", "name": "GMX", "region": "en", "layer": "official", "themes": ["perp", "chain"], "core": false, "note": "Arbitrum/Solana multichain，新市场/功能" },
     { "handle": "HyperliquidX", "name": "Hyperliquid", "region": "en", "layer": "official", "themes": ["perp", "chain"], "core": true, "note": "高性能 perp/L1，主号" },

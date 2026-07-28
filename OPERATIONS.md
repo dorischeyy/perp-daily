@@ -69,8 +69,11 @@ node lib/check-run-state.mjs YYYY-MM-DD
 4. 只给真实 delta 更新 `threads.json`。
 5. 产出 `content.json`、`threads.json`、`review.draft.md`。
 6. 一条内容混用多份材料时，主来源写 `source/url/date`，补充材料写 `references`。
-7. 「机会与打法」最多 3 条，严格使用好处、限制、对 HertzFlow 三段，且必须由当期新闻触发；不强行制造“现在做”或动作项。
-8. lead 用 1-2 句概括当期最重要的 2-3 个新闻主体、动作与阶段；可以补总判断，但不得只写脱离新闻要点的抽象概括。
+7. 每期必须有一个 `product_view`，直接给出最高优先级产品结论、相对基线的变化、置信度与证伪条件。
+8. 「产品判断」最多 2 条，只补充顶部 `product_view` 未覆盖的次级判断；严格使用判断变化、证据与边界、对 HertzFlow 三段，且必须由当期新闻触发。
+9. lead 用 1-2 句概括当期最重要的 2-3 个新闻主体、动作与阶段；可以补总判断，但不得只写脱离新闻要点的抽象概括。
+10. 顶部「今日进展」只展示当天有可核验新事实、且未由正文承载的故事线；到期无新闻不展示，同日多条线有变化就同时展示。
+11. 每日竞争扫描必须覆盖直接 Perp DEX、CEX、钱包/经纪商、预测市场与传统衍生品、代币化资产、清算/预言机等基础设施和新交易项目，不能把竞品等同于同类协议。
 
 ### 3.3 校验与渲染
 
@@ -85,9 +88,10 @@ cmp -s docs/index.html docs/archive/YYYY-MM-DD.html
 `validate` 顺序：
 
 1. `lib/validate-content.mjs`：结构、日期、URL、补充来源
-2. `lib/check-editorial.mjs`：语义重复、context 重复、机会项格式与相关性
-3. `lib/check-freshness.mjs`：时效与 URL 日期一致性
-4. `lib/threads.mjs`：故事线结构与到期提醒
+2. `lib/check-editorial.mjs`：语义重复、context 重复、产品判断格式与相关性
+3. `lib/check-review.mjs`：读者价值自问与编辑自评完整性
+4. `lib/check-freshness.mjs`：时效与 URL 日期一致性
+5. `lib/threads.mjs`：故事线结构与到期提醒
 
 还要检查：
 
@@ -95,7 +99,9 @@ cmp -s docs/index.html docs/archive/YYYY-MM-DD.html
 - 首页与当日归档一致
 - 页面没有 `kicker`、旧标题「对 Hertzflow 的启发」或重复双语标签
 - lead 能独立说明当期最重要的新闻要点，不是“竞争升级、格局变化”式抽象口号
-- lead 只保留摘要层事实，没有复制持续追踪、正文、context 或机会与打法的精确数字和机制细节
+- lead 只保留摘要层事实，没有复制今日进展、正文、context 或产品判断的精确数字和机制细节
+- 顶部产品判断直接给出结论，并明确说明原判断如何变化、置信度和证伪条件，不是新闻摘要第二遍
+- 今日进展每条都有 `date/source/url`，没有“尚未变化”“等待某日”“继续关注”等占位状态
 - 全文没有禁用长破折号
 
 ### 3.4 发布
@@ -148,7 +154,8 @@ cmp -s docs/index.html docs/archive/YYYY-MM-DD.html
 | `threads.json` | 跨日故事线台账 |
 | `lib/check-run-state.mjs` | 调研前幂等和行情状态检查 |
 | `lib/validate-content.mjs` | 内容结构与来源字段校验 |
-| `lib/check-editorial.mjs` | 编辑去重与机会项关卡 |
+| `lib/check-editorial.mjs` | 编辑去重与产品判断关卡 |
+| `lib/check-review.mjs` | 读者价值自问与编辑自评完整性关卡 |
 | `lib/check-freshness.mjs` | 时效和日期防造假 |
 | `lib/threads.mjs` | 台账校验与到期提醒 |
 | `lib/build-html.mjs` | HTML 渲染 |

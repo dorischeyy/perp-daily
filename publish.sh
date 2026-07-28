@@ -28,7 +28,9 @@ stage_validate() {
   node lib/validate-content.mjs content.json || {
     echo "⛔ content.json 结构校验未通过。按上方缺失字段修 content.json 后重跑 \`bash publish.sh validate\`。" >&2; return 1; }
   node lib/check-editorial.mjs content.json || {
-    echo "⛔ 编辑去重/机会项关卡未通过。只修对应文案后重跑 \`bash publish.sh validate\`。" >&2; return 1; }
+    echo "⛔ 编辑去重/产品判断关卡未通过。只修对应文案后重跑 \`bash publish.sh validate\`。" >&2; return 1; }
+  node lib/check-review.mjs review.draft.md || {
+    echo "⛔ 读者价值自问/编辑自评关卡未通过。只补全 review.draft.md 后重跑 \`bash publish.sh validate\`。" >&2; return 1; }
   node lib/check-freshness.mjs content.json "${DATE}" || {
     echo "⛔ 时效/防造假关卡未通过。修 content.json 后重跑 \`bash publish.sh validate\`（无需重新调研）。" >&2; return 1; }
   node lib/threads.mjs "${DATE}" || {

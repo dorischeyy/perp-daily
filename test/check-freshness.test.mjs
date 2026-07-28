@@ -38,14 +38,14 @@ test("URL 内嵌日期与 date 字段差 >2 天 → 判造假阻断", () => {
   assert.equal(cf(c).code, 1);
 });
 
-test("机会与打法栏(hertzflow)豁免时效但仍查 url 造假", () => {
+test("产品判断栏(hertzflow)豁免时效但仍查 url 造假", () => {
   const c = baseContent();
   c.sections = [
-    { id: "hertzflow", title: "机会与打法", items: [
+    { id: "hertzflow", title: "产品判断", items: [
       { headline: "老来源洞察", body: ["x"], url: "https://x.com/p", date: "2026-05-01" },
     ] },
   ];
-  assert.equal(cf(c).code, 0); // 机会与打法栏老日期豁免
+  assert.equal(cf(c).code, 0); // 产品判断栏老日期豁免
 });
 
 test("补充来源可较旧，但 URL 日期必须与自身 date 一致", () => {
@@ -56,5 +56,37 @@ test("补充来源可较旧，但 URL 日期必须与自身 date 一致", () => 
   assert.equal(cf(c).code, 0);
 
   c.sections[0].items[0].references[0].date = "2026-06-20";
+  assert.equal(cf(c).code, 1);
+});
+
+test("今日进展必须是近 72h 的新事实", () => {
+  const c = baseContent({
+    threads: [{
+      title: "新进展",
+      since: "2026-06-01",
+      date: "2026-06-21",
+      source: "S",
+      url: "https://example.com/thread",
+      update: "出现新变化。",
+      watch: "下一步。",
+    }],
+  });
+  assert.equal(cf(c).code, 0);
+  c.threads[0].date = "2026-06-18";
+  assert.equal(cf(c).code, 1);
+});
+
+test("今日进展的 URL 日期与 date 不一致会被阻断", () => {
+  const c = baseContent({
+    threads: [{
+      title: "日期不一致",
+      since: "2026-06-01",
+      date: "2026-06-23",
+      source: "S",
+      url: "https://example.com/2026/01/29/thread",
+      update: "出现新变化。",
+      watch: "下一步。",
+    }],
+  });
   assert.equal(cf(c).code, 1);
 });

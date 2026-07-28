@@ -6,11 +6,13 @@
 
 ## 0. One-line positioning
 
-> **Not day-by-day reporting — continuous narrative analysis.** What the reader should take away is not "what happened today," but "where the few structural shifts now under way stand, what they mean for us, and what to watch next."
+> **Not day-by-day reporting, and not a fixed-story diary.** What the reader should take away is which structural shifts actually moved today, what they mean for us, and what to watch next.
 
 To deliver that, the system does more than generate content. It **maintains state** (a cross-day story ledger), **scores signal** (to drive selection and tracking), and **enforces integrity mechanically** (freshness, anti-fabrication, de-duplication, missed-run alerting). Remove any one and it degrades into "a daily produced from a one-line prompt."
 
 The lead is still a news summary, not a free-floating thesis. In one or two sentences it names the edition's two or three most important actors, actions, and current stages, then may add the house view. A reader who sees only the lead should know what happened; detailed numbers, mechanics, and implications stay in the body.
+
+Every edition also carries one **product view**. It states the highest-priority product conclusion directly, then shows how it changed relative to the prior baseline, how confident the editor is, and what observable evidence would falsify it. This is the reason to open the daily rather than read a news feed.
 
 ---
 
@@ -21,7 +23,7 @@ Every candidate story is scored across five dimensions (0–100 total). Scoring 
 | Dimension | Max | What it measures |
 |-----------|-----|------------------|
 | Structural | 30 | Does it shift market structure / competitive landscape / regulatory definition / a core mechanism? |
-| Relevance | 25 | Does it touch the project's core (perp-DEX mechanics / RWA·FX·equity markets / fee model / regulation / competitor playbooks)? |
+| Relevance | 25 | Does it touch the project's core, or compete for the same users, collateral, order flow, asset supply, price discovery, liquidity, or distribution? A wallet, broker, prediction market, regulated futures venue, or trading agent may be as relevant as another perp DEX. |
 | Durability | 20 | A one-off event, or the head of a multi-week narrative? |
 | Actionability | 15 | Can it become a concrete opportunity / decision / risk for us? |
 | Magnitude × Credibility | 10 | Record-setting / first-of-kind / officially confirmed vs. rumor / small numbers |
@@ -34,7 +36,7 @@ Each edition's scoring detail is recorded in that day's *Editor's Self-Review* (
 
 ## 2. Story ledger & threading
 
-This is what separates the daily from a news relay. **Important information must not break just because a reader missed one day.**
+This is what separates the daily from a news relay. **Important information must not break just because a reader missed one day, but a thread does not earn page space merely by remaining open.**
 
 ### 2.1 The ledger (persistent state)
 `threads.json` holds every story currently being tracked. Each entry carries: the thesis, the implication for us (`why_us`), the trigger to watch (`watch_for`), a review cadence, the next review date (`next_check`), and a time-ordered development log (deltas only). It is public — anyone can see which threads the daily is tracking and where each one stands.
@@ -43,6 +45,7 @@ This is what separates the daily from a news relay. **Important information must
 ```
 new S-tier event ──open──▶ active ──(due review: update & recall if there's news)──▶ active
                               │
+                              ├──(due review, no delta)───────────▶ active (internal only, off the page)
                               ├──(two cadences with no movement)──▶ dormant (kept, off the page)
                               └──(event resolves / ruling lands)───▶ closed (one closing line)
 ```
@@ -51,9 +54,22 @@ new S-tier event ──open──▶ active ──(due review: update & recall i
 ### 2.3 How it surfaces (the line between professional and verbose)
 Two non-overlapping mechanisms:
 - **Inline callback** — when today's story belongs to an active thread, one sentence places it on the arc ("X thread · since MM-DD · 3rd development"). Gives a single story depth.
-- **"Story Threads" map** — a compact block used only for an informative due-status that does not already have a full news item, with the status change + what to watch next.
+- **"Today's Developments" map** — a compact block used only for a verified new delta that does not already have a full news item, with its dated source + what to watch next.
 
-**Anti-redundancy rule**: one development gets one primary home. If it has a full news item, use the item plus one inline callback and omit it from the map. The map is reserved for an informative due-status without a standalone item and holds at most 3–4 threads. A callback states only the connection, never re-narrates. The test is the reader's felt sense — "the author is genuinely following this" — not "that story got repeated again."
+**Anti-redundancy and rotation rule**: one development gets one primary home. If it has a full news item, use the item plus one inline callback and omit it from the map. A due review with no new fact remains internal. The map holds at most four verified deltas; if several tracked stories move on the same day, all qualifying deltas appear. The same story may appear on consecutive days only when a separate new fact lands.
+
+### 2.4 Competitive perimeter
+
+The daily does not define competition by product label. It scans six surfaces every day:
+
+1. direct perp and onchain-derivatives venues;
+2. centralized exchanges and market makers;
+3. wallets, brokers, super-apps, aggregators, and embedded trading;
+4. substitute products such as prediction markets, options, regulated futures, tokenized securities, and leveraged spot;
+5. oracles, clearing, stablecoins, bridges, custody, and risk infrastructure;
+6. newly launched or newly funded trading products showing early adoption.
+
+The operative question is not “is this another perp DEX?” It is “can this product replace the user's trading job, capture the collateral, own the distribution, or set the price?”
 
 ---
 
@@ -68,7 +84,9 @@ Mechanisms run on scripts, not good intentions.
 | **Anti-fabrication** | `lib/check-freshness.mjs` + `generate.md` | URL-embedded date vs `date` cross-check; and every `date` must be verified against the source page via WebFetch — unverifiable items are cut. Built after a real incident where months-old articles were stamped with today's date |
 | **Ledger integrity** | `lib/threads.mjs` | Story-ledger schema validation; a broken ledger blocks publishing |
 | **Scale context** | `lib/validate-content.mjs` + `generate.md` | Validates the compact context schema and warns when a potentially material metric appears without a same-basis explanation |
-| **Editorial economy** | `lib/check-editorial.mjs` | Blocks exact or near repetition across lead/body/context; enforces grounded, three-part, non-redundant opportunity items |
+| **Editorial economy** | `lib/check-editorial.mjs` | Blocks exact or near repetition across lead/body/context; enforces grounded, three-part, non-redundant product judgments |
+| **Decision value** | `product_view` + `lib/check-editorial.mjs` | Requires one explicit product judgment, baseline change, confidence level, and falsifier; blocks generic “keep watching” language |
+| **Reader-value audit** | `review.draft.md` + `lib/check-review.mjs` | Forces the editor to answer why today's edition is worth opening, what judgment changed, what decision improves, and what would invalidate the conclusion |
 | **Source provenance** | `references` + validator/renderer | Keeps one dated primary source and renders 1–3 separately dated background or cross-check links instead of hiding multiple outlets behind one URL |
 | **Delivery de-dup** | `feishu-notify.yml` | Delivers only on the day's report commit, preventing duplicate cards; plus a concurrency lock |
 | **Missed-run alert** | `daily-watchdog.yml` | Self-checks after the expected publish time; alerts if no report ran, preventing a silent missed day |

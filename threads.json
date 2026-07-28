@@ -1,5 +1,5 @@
 {
-    "_doc": "故事线台账 Story Ledger —— 跨日叙事追踪的持久状态。评分达 S 级(≥90)或有明确多周叙事潜力的新闻在此建线，之后按 cadence 持续追踪、在后续日报里 recall 串联，让重要信息不因读者漏看某天而断裂。每天 generate.md 读它→更新(append 进展/推进 next_check/转 dormant/closed)→把当天值得呈现的活跃线写进 content.json.threads 渲染。threads.mjs 校验 schema 并提醒今天到期该复盘的线。这是把日报从『逐日报道』升级为『连续叙事分析』的状态核心。",
+    "_doc": "故事线台账 Story Ledger —— 跨日叙事追踪的持久状态。评分达 S 级(≥90)或有明确多周叙事潜力的新闻在此建线，之后按 cadence 复核，让重要信息不因读者漏看某天而断裂。next_check 只是后台复盘提醒，不自动获得页面版面；只有当天出现可核验新 delta、且没有正文承载时，才写进 content.json.threads 的『今日进展』。无变化只推进复盘或转 dormant，不追加重复状态。threads.mjs 校验 schema 并提醒到期线。",
     "schema": {
         "id": "kebab-case 唯一标识",
         "title": "线名(简短)",

@@ -39,15 +39,25 @@ test("javascript: 链接不被渲染进 href", () => {
   assert.ok(!/href="javascript:/i.test(html));
 });
 
-test("机会与打法栏(hertzflow)不渲染日期", () => {
+test("产品判断栏(hertzflow)不渲染日期", () => {
   const c = baseContent();
-  c.sections = [{ id: "hertzflow", title: "机会与打法", items: [
-    { headline: "洞察", body: ["x"], url: "https://x.com/p", date: "2026-05-01" },
+  c.sections = [{ id: "hertzflow", title: "产品判断", items: [
+    { decision_area: "战略优先级", headline: "洞察", body: ["x"], url: "https://x.com/p", date: "2026-05-01" },
   ] }];
   const { html } = render(c);
   const seg = (html.match(/<section class="sec sec-hertzflow">[\s\S]*?<\/section>/) || [""])[0];
   assert.ok(!seg.includes("item-date"));
   assert.ok(!seg.includes("2026-05-01"));
+});
+
+test("最高优先级产品判断直接渲染结论、变化、置信度与证伪条件", () => {
+  const { html } = render(baseContent());
+  assert.match(html, /战略优先级 · 置信度 中/);
+  assert.match(html, /产品优先级应先验证真实订单流/);
+  assert.match(html, /判断变化：/);
+  assert.match(html, /证伪条件：/);
+  assert.ok(!html.includes("今天只看这一段"));
+  assert.ok(!html.includes("product-view-q"));
 });
 
 test("栏目只渲染一级标题，不渲染 kicker", () => {
@@ -89,4 +99,26 @@ test("缺 sections → 不崩溃（兜底渲染）", () => {
   const c = baseContent(); delete c.sections;
   const { code } = render(c);
   assert.equal(code, 0);
+});
+
+test("今日进展展示新 delta 的日期与来源，不再使用持续追踪标题", () => {
+  const c = baseContent({
+    threads: [{
+      title: "钱包分发出现新变化",
+      since: "2026-06-01",
+      day_n: 23,
+      tier: "A",
+      status: "active",
+      date: "2026-06-23",
+      source: "官方公告",
+      url: "https://example.com/thread",
+      update: "钱包新增嵌入式衍生品入口。",
+      watch: "观察订单流归属。",
+    }],
+  });
+  const { html } = render(c);
+  assert.match(html, />今日进展</);
+  assert.ok(!html.includes(">持续追踪<"));
+  assert.match(html, /官方公告 ↗/);
+  assert.match(html, /2026-06-23/);
 });

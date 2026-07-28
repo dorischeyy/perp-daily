@@ -48,21 +48,35 @@ test("未知栏目 id → warning 而非 error", () => {
   assert.ok(warnings.some((w) => /已知栏目/.test(w)));
 });
 
-test("机会与打法栏目使用固定标题，所有栏目都禁用 kicker", () => {
+test("产品判断栏目使用固定标题和 decision_area，所有栏目都禁用 kicker", () => {
   const ordinary = baseContent();
   ordinary.sections[0].kicker = "重复副标题";
   assert.ok(validateContent(ordinary).errors.some((e) => /只保留一级标题/.test(e)));
 
   const c = baseContent();
   const item = structuredClone(c.sections[0].items[0]);
-  c.sections = [{ id: "hertzflow", title: "机会与打法", items: [item] }];
+  item.decision_area = "战略优先级";
+  c.sections = [{ id: "hertzflow", title: "产品判断", items: [item] }];
   assert.equal(validateContent(c).errors.length, 0);
 
-  c.sections[0].title = "对 Hertzflow 的启发";
-  c.sections[0].kicker = "机会与打法";
+  c.sections[0].title = "机会与打法";
+  c.sections[0].kicker = "产品判断";
   const { errors } = validateContent(c);
   assert.ok(errors.some((e) => /title 必须固定/.test(e)));
   assert.ok(errors.some((e) => /只保留一级标题/.test(e)));
+});
+
+test("product_view 必填且字段受约束", () => {
+  const missing = baseContent();
+  delete missing.product_view;
+  assert.ok(validateContent(missing).errors.some((e) => /product_view 必须/.test(e)));
+
+  const invalid = baseContent();
+  invalid.product_view.area = "随便看看";
+  invalid.product_view.confidence = "非常高";
+  const { errors } = validateContent(invalid);
+  assert.ok(errors.some((e) => /product_view\.area/.test(e)));
+  assert.ok(errors.some((e) => /confidence/.test(e)));
 });
 
 test("合法的数字量级说明通过校验", () => {
@@ -113,4 +127,44 @@ test("source 写多个来源却没有 references 时提醒", () => {
   const c = baseContent();
   c.sections[0].items[0].source = "来源 A / 来源 B";
   assert.ok(validateContent(c).warnings.some((w) => /多个来源/.test(w)));
+});
+
+test("今日进展必须有日期来源链接和新 delta", () => {
+  const c = baseContent({
+    threads: [{
+      title: "钱包分发进入保证金复用",
+      since: "2026-06-20",
+      day_n: 4,
+      tier: "A",
+      status: "active",
+      date: "2026-06-23",
+      source: "官方公告",
+      url: "https://example.com/thread",
+      update: "钱包新增股票代币作为永续保证金。",
+      watch: "观察真实采用与抵押折扣。",
+    }],
+  });
+  assert.equal(validateContent(c).errors.length, 0);
+
+  delete c.threads[0].date;
+  delete c.threads[0].url;
+  const { errors } = validateContent(c);
+  assert.ok(errors.some((e) => /threads\[0\]\.date/.test(e)));
+  assert.ok(errors.some((e) => /threads\[0\]\.url/.test(e)));
+});
+
+test("今日进展为空或超过四条会被阻断", () => {
+  assert.ok(validateContent(baseContent({ threads: [] })).errors.some((e) => /整个省略/.test(e)));
+  const item = {
+    title: "线",
+    since: "2026-06-20",
+    status: "active",
+    date: "2026-06-23",
+    source: "S",
+    url: "https://example.com/thread",
+    update: "出现新的真实变化。",
+    watch: "下一步。",
+  };
+  const threads = Array.from({ length: 5 }, (_, i) => ({ ...item, title: `线${i}`, url: `${item.url}/${i}` }));
+  assert.ok(validateContent(baseContent({ threads })).errors.some((e) => /最多 4 条/.test(e)));
 });
