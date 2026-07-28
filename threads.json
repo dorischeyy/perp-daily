@@ -15,7 +15,7 @@
         "watch_for": "下一个关键节点/该盯的触发事件",
         "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
     },
-    "updated": "2026-07-27",
+    "updated": "2026-07-28",
     "threads": [
         {
             "id": "tradfi-perp-asset-class",
@@ -88,11 +88,11 @@
             "title": "Robinhood Chain 上线：经纪商巨头直接下场做 perp 分发",
             "score": 93,
             "tier": "S",
-            "status": "active",
+            "status": "dormant",
             "first_seen": "2026-07-02",
             "last_update": "2026-07-20",
             "cadence_days": 3,
-            "next_check": "2026-07-29",
+            "next_check": "2026-08-10",
             "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
             "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
             "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -446,9 +446,9 @@
             "tier": "S",
             "status": "active",
             "first_seen": "2026-07-15",
-            "last_update": "2026-07-23",
+            "last_update": "2026-07-28",
             "cadence_days": 5,
-            "next_check": "2026-07-28",
+            "next_check": "2026-08-02",
             "thesis": "一周内两家 RWA/永续 DEX 因链下特权凭证失守遭受接近全额金库损失。Ostium 07-15 的预言机签名密钥被攻破，攻击者提交伪造价格报告，从 LP 金库卷走约 1800-2370 万美元；AFX Trade 07-22 的自营桥验证者热签名被攻破，五个签名达到约三分之二门槛，合约按设计转出约 2415 万 USDC。两起事故都不是合约代码没有按规则执行，而是谁掌握了让合约执行的链下签名权。随着永续 DEX 扩展到更多链、更多链下报价资产，权限面正在取代单纯代码漏洞成为核心攻击面。",
             "why_us": "HertzFlow 的价格签名、Keeper 执行与多资产市场同样依赖链下特权角色。即使当前不运营跨链桥，Ostium 与 AFX 的共同模式仍直接要求审视密钥托管、权限组合、单笔限额、延迟、暂停与快速撤销能力，而不能把合约审计通过当作系统安全结论。",
             "watch_for": "Ostium 与 AFX 是否公布事故报告和赔付方案 / AFX 是否更换热签名架构与争议期 / 是否有更多 perp DEX 曝出预言机、Keeper、桥验证者或后台凭证失守 / 主流基础设施是否调整密钥管理和提款限额标准",
@@ -482,6 +482,32 @@
                     "date": "2026-07-23",
                     "point": "Ostium 在暂停八天后分阶段恢复交易：先开放平仓、补充保证金、撤改订单、止盈止损与清算，积压订单处理后再开放新仓；既有仓位与挂单只按重开实时价执行，暂停期间的价格变动不倒推成交或清算。恢复顺序解决了停市后的仓位连续性，但签名密钥失守的完整事故报告、LP 赔付与资金追回仍未落地，交易恢复不等于安全线已经闭环。",
                     "url": "https://cryptoticker.io/en/ostium-hack-oracle-exploit-arbitrum/"
+                },
+                {
+                    "date": "2026-07-28",
+                    "point": "AFX 首次公布主要攻击路径，但强调仍非最终取证报告：开发者 07-09 在 Telegram 诱导下克隆恶意仓库，攻击者随后取得 JFrog 制品库权限，07-16 植入恶意 Groovy 插件并利用重启恢复持久化，继而横向移动到验证者相关基础设施，最终让五个热签名共同批准约 2415 万 USDC 提款。多签在共同依赖同一开发、制品和部署信任域时，会退化为单一供应链故障；用户恢复方案仍在制定。",
+                    "url": "https://medium.com/@AFXTrade/afx-bridge-incident-what-happened-what-we-learned-and-what-comes-next-d97387746012"
+                }
+            ]
+        },
+        {
+            "id": "private-verifiable-perp-execution",
+            "title": "私密可验证执行：Perp DEX 把撮合移出公链",
+            "score": 95,
+            "tier": "S",
+            "status": "active",
+            "first_seen": "2026-07-28",
+            "last_update": "2026-07-28",
+            "cadence_days": 5,
+            "next_check": "2026-08-02",
+            "thesis": "Ondo Network 不再按传统 L1 复制执行，而让 Ondo Perps 的撮合、保证金、风险检查和清算在单一高性能 TEE enclave 内私密运行，再由多方 attestor 批准代码、分片保管密钥并验证链上事件。它把 Perp DEX 的扩容与仓位隐私问题改写成可验证执行问题，也把信任边界从公开共识转移到 enclave 软件来源、attestor 独立性、硬件证明和日志可用性。",
+            "why_us": "HertzFlow 若评估链下撮合、Keeper 或私密仓位架构，不能只要求最终结算上链。候选方案还应证明代码来源可复现、attestor 相互独立、关键密钥无法由单方重构、执行日志可重放，并具备紧急撤销与状态恢复路径。",
+            "watch_for": "Ondo 是否披露 attestor 身份与硬件多样性 / 是否开放 signed log 给外部 watcher 重放 / 是否落地链上状态承诺和无许可 attestor / 单一 enclave 的故障切换、真实 OI、成交与安全事件",
+            "log": [
+                {
+                    "date": "2026-07-28",
+                    "point": "新建线：Ondo 07-27 上线 Ondo Network，并以 Ondo Perps 为首个应用。当前撮合、保证金、风险检查与清算运行在单一 TEE enclave，多方 attestor 控制代码批准和关键密钥，状态写入签名日志；官方同时承认更大无许可 attestor 集、链上状态承诺、外部 watcher 与证明仍是后续方向，说明产品已运行但去信任化尚未完成。",
+                    "url": "https://ondo.finance/blog/introducing-the-ondo-network"
                 }
             ]
         }
