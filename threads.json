@@ -15,7 +15,7 @@
         "watch_for": "下一个关键节点/该盯的触发事件",
         "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
     },
-    "updated": "2026-07-28",
+    "updated": "2026-07-29",
     "threads": [
         {
             "id": "tradfi-perp-asset-class",
@@ -275,7 +275,7 @@
             "first_seen": "2026-06-19",
             "last_update": "2026-07-23",
             "cadence_days": 3,
-            "next_check": "2026-07-29",
+            "next_check": "2026-08-01",
             "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
             "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
             "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
@@ -375,7 +375,7 @@
             "tier": "S",
             "status": "active",
             "first_seen": "2026-06-12",
-            "last_update": "2026-07-24",
+            "last_update": "2026-07-27",
             "cadence_days": 3,
             "next_check": "2026-07-30",
             "thesis": "Hyperliquid 的 HIP-3 无需许可机制正在把「任何可定价标的」都变成 24/7 永续市场，从加密到股票到优先股，产品矩阵覆盖速度远超任何中心化或其他链上对手。链上股票永续的基础设施护城河正在此形成。",
@@ -436,6 +436,11 @@
                     "date": "2026-07-24",
                     "point": "周度构成首次反转：07-13 至 07-19，Hyperliquid 的 RWA 永续成交约 251 亿至 260 亿美元，占平台周成交约 52% 至 54%，首次超过加密永续；个股又占 RWA 成交约 61%。这不是新增标的数量带来的口径扩张，而是非加密市场首次在完整一周内成为平台主引擎，但 SK Hynix 等少数事件型股票仍主导流量，集中度风险未消失。",
                     "url": "https://www.techflowpost.com/newsletter/129338"
+                },
+                {
+                    "date": "2026-07-27",
+                    "point": "07-17 设定的 CXMT 上市切换观察点落地：长鑫科技在上海科创板开盘前，trade.xyz 的 CXMT 永续约报 7.14 美元，真实股票以 49.5 元、约合 7.30 美元开盘，价差约 2%；股票首日较 8.66 元发行价上涨约 472%。盘前永续在跨境受限的重量级 IPO 上形成了接近开盘的公开价格，但外国用户无法直接交易 A 股完成套利，上市后的折溢价、停牌和公司行动仍依赖指数规则与单一建市者处理。",
+                    "url": "https://hyperliquidguide.com/ecosystem/trade-cxmt-pre-ipo-hyperliquid"
                 }
             ]
         },

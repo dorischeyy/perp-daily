@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-28",
-  "url": "https://dorischeyy.github.io/perp-daily/archive/2026-07-28.html",
-  "title": "Perp DEX 日报 · 2026-07-28",
-  "lead": "Ondo 放弃把 Perp 执行全部塞进传统公链，改用单一 TEE enclave 完成撮合、保证金与清算，再由多方 attestor 验证代码和控制密钥。AFX 同日披露其桥损失始于开发者被诱导克隆恶意仓库，攻击一路穿透制品库与内部系统直达验证者，Perp DEX 的安全边界正在从合约扩展到构建链、密钥和验证者治理。"
+  "date": "2026-07-29",
+  "url": "https://dorischeyy.github.io/perp-daily/archive/2026-07-29.html",
+  "title": "Perp DEX 日报 · 2026-07-29",
+  "lead": "Hyperliquid 上的 CXMT 盘前永续在长鑫科技 A 股开盘前已经贴近真实开盘价，Securitize 则把代币化投资策略所需的投顾、经纪交易、过户与基金管理能力收进同一平台。RWA 交易的竞争正在从“先给出一个价格”推进到“能否平稳切换真实市场并承接完整权利”。"
 }
