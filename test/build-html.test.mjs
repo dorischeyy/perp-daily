@@ -50,14 +50,21 @@ test("产品判断栏(hertzflow)不渲染日期", () => {
   assert.ok(!seg.includes("2026-05-01"));
 });
 
-test("最高优先级产品判断直接渲染结论、变化、置信度与证伪条件", () => {
-  const { html } = render(baseContent());
-  assert.match(html, /战略优先级 · 置信度 中/);
-  assert.match(html, /产品优先级应先验证真实订单流/);
-  assert.match(html, /判断变化：/);
-  assert.match(html, /证伪条件：/);
-  assert.ok(!html.includes("今天只看这一段"));
-  assert.ok(!html.includes("product-view-q"));
+test("顶部只渲染一句市场概括，不渲染 product_view 卡片", () => {
+  const c = baseContent({
+    product_view: {
+      area: "战略优先级",
+      judgment: "旧判断不应再显示。",
+      change: "旧变化不应再显示。",
+      confidence: "中",
+      falsifier: "旧证伪条件不应再显示。",
+    },
+  });
+  const { html } = render(c);
+  assert.match(html, /近期永续市场的竞争正在从扩充标的数量/);
+  assert.ok(!html.includes("product-view"));
+  assert.ok(!html.includes("旧判断不应再显示"));
+  assert.ok(!html.includes("证伪条件："));
 });
 
 test("栏目只渲染一级标题，不渲染 kicker", () => {

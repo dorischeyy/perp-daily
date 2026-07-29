@@ -28,14 +28,7 @@ export function baseContent(overrides = {}) {
   return {
     date: "2026-06-23",
     edition: 1,
-    lead: "测试导语",
-    product_view: {
-      area: "战略优先级",
-      judgment: "产品优先级应先验证真实订单流，而不是继续增加相似标的。",
-      change: "从默认优先扩列，转向先验证分发入口与持仓质量。",
-      confidence: "中",
-      falsifier: "若新增标的在没有额外补贴时持续带来独立交易者与稳定持仓，该结论将被削弱。",
-    },
+    lead: "近期永续市场的竞争正在从扩充标的数量，转向验证真实订单流与持仓质量。",
     sections: [
       {
         id: "perpdex",

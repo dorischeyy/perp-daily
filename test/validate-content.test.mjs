@@ -66,17 +66,16 @@ test("产品判断栏目使用固定标题和 decision_area，所有栏目都禁
   assert.ok(errors.some((e) => /只保留一级标题/.test(e)));
 });
 
-test("product_view 必填且字段受约束", () => {
+test("lead 必须是一句话市场概括，product_view 已停用", () => {
   const missing = baseContent();
-  delete missing.product_view;
-  assert.ok(validateContent(missing).errors.some((e) => /product_view 必须/.test(e)));
+  delete missing.lead;
+  assert.ok(validateContent(missing).errors.some((e) => /lead 应为/.test(e)));
 
-  const invalid = baseContent();
-  invalid.product_view.area = "随便看看";
-  invalid.product_view.confidence = "非常高";
-  const { errors } = validateContent(invalid);
-  assert.ok(errors.some((e) => /product_view\.area/.test(e)));
-  assert.ok(errors.some((e) => /confidence/.test(e)));
+  const multiple = baseContent({ lead: "第一句市场概括。第二句继续展开。" });
+  assert.ok(validateContent(multiple).errors.some((e) => /只保留一句/.test(e)));
+
+  const legacy = baseContent({ product_view: { judgment: "旧字段" } });
+  assert.ok(validateContent(legacy).errors.some((e) => /product_view 已停用/.test(e)));
 });
 
 test("合法的数字量级说明通过校验", () => {
