@@ -25,18 +25,26 @@ export function tmpJson(obj) {
 
 // 一份结构合法的 content 基线，测试可在其上改字段
 export function baseContent(overrides = {}) {
+  const newsSection = (id, title) => ({
+    id,
+    title,
+    items: Array.from({ length: 3 }, (_, i) => ({
+      headline: id === "perpdex" && i === 0 ? "标题" : `${title} 示例 ${i + 1}`,
+      body: [id === "perpdex" ? `**事件**：${title} 示例事实 ${i + 1}` : `${title} 示例事实 ${i + 1}`],
+      source: "S",
+      url: id === "perpdex" && i === 0 ? "https://example.com/a" : `https://example.com/${id}-${i + 1}`,
+      date: "2026-06-23",
+    })),
+  });
   return {
     date: "2026-06-23",
     edition: 1,
     lead: "近期永续市场的竞争正在从扩充标的数量，转向验证真实订单流与持仓质量。",
     sections: [
-      {
-        id: "perpdex",
-        title: "Perp DEX",
-        items: [
-          { headline: "标题", body: ["**事件**：x"], source: "S", url: "https://example.com/a", date: "2026-06-23" },
-        ],
-      },
+      newsSection("perpdex", "Perp DEX"),
+      newsSection("launchpad", "Launchpad"),
+      newsSection("crypto", "Crypto"),
+      newsSection("ai", "AI"),
     ],
     ...overrides,
   };
