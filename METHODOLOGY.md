@@ -12,6 +12,8 @@ To deliver that, the system does more than generate content. It **maintains stat
 
 The lead is a one-sentence market summary, not a free-floating thesis. It names the edition's two or three most important actors, actions, and current stages. A reader who sees only the lead should know the recent market situation; detailed numbers, mechanics, and implications stay in the body. The page then moves directly into verified developments and news, without a separate top product-view card.
 
+Coverage is also explicit: Perp DEX, Launchpad, Crypto, and AI each carry 3–5 verified items per edition. Product judgments are optional and do not count toward that range. The structural validator blocks a missing section or an out-of-range item count; freshness and scoring thresholds still apply, so a thin source day fails visibly instead of being padded with stale or low-signal news.
+
 ---
 
 ## 1. Signal scoring
