@@ -17,6 +17,33 @@ test("sections 为空数组 → error", () => {
   assert.ok(validateContent(baseContent({ sections: [] })).errors.length > 0);
 });
 
+test("四个新闻栏目都必须存在，且每栏 3–5 条", () => {
+  const valid = baseContent();
+  const perpdex = valid.sections.find((s) => s.id === "perpdex");
+  perpdex.items.push(
+    { headline: "第 4 条", body: ["**事件**：第四条"], source: "S", url: "https://example.com/perpdex-4", date: "2026-06-23" },
+    { headline: "第 5 条", body: ["**事件**：第五条"], source: "S", url: "https://example.com/perpdex-5", date: "2026-06-23" },
+  );
+  assert.equal(validateContent(valid).errors.length, 0);
+
+  const tooFew = baseContent();
+  tooFew.sections.find((s) => s.id === "launchpad").items.pop();
+  assert.ok(validateContent(tooFew).errors.some((e) => /launchpad.*3–5 条/.test(e)));
+
+  const tooMany = baseContent();
+  const crypto = tooMany.sections.find((s) => s.id === "crypto");
+  crypto.items.push(
+    { headline: "第 4 条", body: ["第四条"], source: "S", url: "https://example.com/crypto-4", date: "2026-06-23" },
+    { headline: "第 5 条", body: ["第五条"], source: "S", url: "https://example.com/crypto-5", date: "2026-06-23" },
+    { headline: "第 6 条", body: ["第六条"], source: "S", url: "https://example.com/crypto-6", date: "2026-06-23" },
+  );
+  assert.ok(validateContent(tooMany).errors.some((e) => /crypto.*3–5 条/.test(e)));
+
+  const missing = baseContent();
+  missing.sections = missing.sections.filter((s) => s.id !== "ai");
+  assert.ok(validateContent(missing).errors.some((e) => /缺少必需新闻栏目：ai/.test(e)));
+});
+
 test("date 格式错 → error", () => {
   assert.ok(validateContent(baseContent({ date: "2026/06/23" })).errors.some((e) => /date/.test(e)));
 });
@@ -41,8 +68,9 @@ test("item body 为空 → error", () => {
   assert.ok(validateContent(c).errors.some((e) => /body/.test(e)));
 });
 
-test("未知栏目 id → warning 而非 error", () => {
-  const c = baseContent(); c.sections[0].id = "weird";
+test("额外未知栏目 id → warning 而非 error", () => {
+  const c = baseContent();
+  c.sections.push({ id: "weird", title: "Weird", items: [] });
   const { errors, warnings } = validateContent(c);
   assert.equal(errors.length, 0);
   assert.ok(warnings.some((w) => /已知栏目/.test(w)));
@@ -56,11 +84,11 @@ test("产品判断栏目使用固定标题和 decision_area，所有栏目都禁
   const c = baseContent();
   const item = structuredClone(c.sections[0].items[0]);
   item.decision_area = "战略优先级";
-  c.sections = [{ id: "hertzflow", title: "产品判断", items: [item] }];
+  c.sections.push({ id: "hertzflow", title: "产品判断", items: [item] });
   assert.equal(validateContent(c).errors.length, 0);
 
-  c.sections[0].title = "机会与打法";
-  c.sections[0].kicker = "产品判断";
+  c.sections.at(-1).title = "机会与打法";
+  c.sections.at(-1).kicker = "产品判断";
   const { errors } = validateContent(c);
   assert.ok(errors.some((e) => /title 必须固定/.test(e)));
   assert.ok(errors.some((e) => /只保留一级标题/.test(e)));
