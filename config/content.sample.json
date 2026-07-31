@@ -49,6 +49,17 @@
           "source": "DefiLlama Fees",
           "url": "https://defillama.com/fees",
           "date": "2026-06-19"
+        },
+        {
+          "headline": "Lighter 调整高波动市场的风险参数",
+          "body": [
+            "**事件**：Lighter 收紧高波动交易对的初始保证金与持仓上限。",
+            "**机制**：风险参数按市场深度和价格波动分层，避免新增标的共享同一杠杆模板。",
+            "**二阶效应**：Perp DEX 的扩列速度开始受制于逐市场风险配置能力。"
+          ],
+          "source": "Lighter",
+          "url": "https://lighter.xyz",
+          "date": "2026-06-20"
         }
       ]
     },
@@ -62,6 +73,20 @@
           "source": "pump.fun",
           "url": "https://x.com/pumpdotfun",
           "date": "2026-06-20"
+        },
+        {
+          "headline": "Four.meme 调整代币迁移门槛",
+          "body": "新的迁移条件把曲线成交和外部流动性准备拆开，减少一次性迁移失败。",
+          "source": "Four.meme",
+          "url": "https://four.meme",
+          "date": "2026-06-20"
+        },
+        {
+          "headline": "Moonshot 增加创建者费用披露",
+          "body": "代币页面在交易前展示创建者费用和迁移状态，降低用户判断成本。",
+          "source": "Moonshot",
+          "url": "https://moonshot.money",
+          "date": "2026-06-19"
         }
       ]
     },
@@ -75,6 +100,20 @@
           "source": "CoinGecko",
           "url": "https://www.coingecko.com",
           "date": "2026-06-20"
+        },
+        {
+          "headline": "Coinbase 扩大受监管衍生品覆盖",
+          "body": "新增合约把更多现货用户导向同一账户下的保证金交易入口。",
+          "source": "Coinbase",
+          "url": "https://www.coinbase.com/blog",
+          "date": "2026-06-20"
+        },
+        {
+          "headline": "代币化证券平台补充链上转移能力",
+          "body": "持有人可在合规账户与自托管钱包之间转移部分代币化资产，分发路径继续向链上延伸。",
+          "source": "Ondo Finance",
+          "url": "https://ondo.finance/blog",
+          "date": "2026-06-19"
         }
       ]
     },
@@ -87,6 +126,20 @@
           "body": "多家厂商提升上下文窗口与工具调用稳定性，开发者反馈集成成本下降。",
           "source": "Anthropic Engineering",
           "url": "https://www.anthropic.com/engineering",
+          "date": "2026-06-19"
+        },
+        {
+          "headline": "交易代理增加可审计工具调用记录",
+          "body": "代理执行搜索、报价与下单前会保留结构化调用记录，便于复核错误来源。",
+          "source": "OpenAI",
+          "url": "https://openai.com/news",
+          "date": "2026-06-20"
+        },
+        {
+          "headline": "Agent 工具链补充人工批准节点",
+          "body": "高风险操作可在执行前暂停并等待人工确认，减少自动化交易的误动作范围。",
+          "source": "LangChain",
+          "url": "https://blog.langchain.com",
           "date": "2026-06-19"
         }
       ]
