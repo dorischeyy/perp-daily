@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-07-31</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  /* 「产品判断」做成醒目的决策拆解卡片 */
+  .sec-hertzflow{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
+    padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
+  .sec-hertzflow .sec-title{color:#9a7b1f;}
+  .sec-hertzflow .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
+  .sec-hertzflow .item-b{color:#3a3322;}
+  .decision-area{display:inline-block; margin-bottom:5px; padding:1px 7px; border-radius:10px;
+    background:#efe5ca; color:#8a6c19; font-family:-apple-system,"PingFang SC",sans-serif;
+    font-size:10.5px; letter-spacing:.04em;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-src{color:#8a7f66; text-decoration:none;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 38 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 7 月 31 日 · 星期五</div>
+    </header>
+    <p class="lead">CFTC 与 Hyperliquid 阵营把预测市场竞争推进到合约认证和联邦监管口径，Mobee 则把 27 只全球股票与 ETF 的代币化入口带给印尼用户。</p>
+
+
+      <section class="sec sec-perpdex">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">Perp DEX</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+
+          <h3 class="item-h">本周主线 ｜ Hyperliquid 阵营把预测市场竞争推进到 CFTC 统一监管与结算口径</h3>
+          <p class="item-b"><strong>事件</strong>：（预测市场联邦规则线，自 07-24，第 2 个进展）CFTC 07-24 要求指定合约市场停止用宽泛模板一次性自我认证大量事件合约；Hyperliquid Policy Center 与 Multicoin 07-27 联合支持 CFTC 的预测市场框架，并主张由单一联邦监管者负责。</p><p class="item-b"><strong>机制</strong>：CFTC 要求场所逐项说明结算方法、数据源与核心原则合规；Hyperliquid 阵营进一步建议按合约实际结算结果判断是否涉及受限活动，并公开每次允许或阻止合约的理由，让 outcome contracts 的准入边界可复用。</p><p class="item-b"><strong>二阶效应</strong>：预测市场的竞争门槛不再只是更快创建合约，而是能否为每类结果提供可审计的数据源、结算规则与监管材料；Hyperliquid 已有链上 outcome contracts，但联合意见仍是政策主张，不代表最终规则或场内采用已经确定。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>联合意见是对拟议框架的政策主张，CFTC 07-24 文件是自我认证程序提醒；两者都不是最终规则、牌照批准或成交采用数据。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-07-27</span>
+            <a class="item-src" href="https://hyperliquidpolicy.org/blog/hpc-and-multicoin-back-the-cftc-s-prediction-markets-framework" target="_blank" rel="noopener">Hyperliquid Policy Center ↗</a><a class="item-src item-ref" href="https://www.cftc.gov/PressRoom/PressReleases/9273-26" target="_blank" rel="noopener">补充：CFTC · 07-24 ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-crypto">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">Crypto</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+
+          <h3 class="item-h">Mobee 面向印尼用户整合 27 只全球股票与 ETF 的代币化入口</h3>
+          <p class="item-b">印尼交易平台 Mobee 07-28 宣布开放 27 只全球股票与 ETF 的代币化交易入口，产品页显示用户可用印尼盾或加密资产购买，并可通过 Solana 在平台与 Web3 钱包之间转移代币。</p><p class="item-b">这些代币提供相关股票或 ETF 的经济敞口而非实体股东身份，入口把本地法币、交易所账户与链上可转移资产串成一条分发链；公告未给出成交、持仓或赎回规模，现阶段只能确认产品覆盖与流转路径。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>已确认 27 只股票与 ETF 的目录及 Solana 充提能力，但官方未披露用户数、成交、持仓、做市深度或底层资产托管规模。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-07-28</span>
+            <a class="item-src" href="https://web.mobee.com/en/news" target="_blank" rel="noopener">Mobee ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-hertzflow">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">产品判断</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <div class="decision-area">合规</div>
+          <h3 class="item-h">事件合约应先成为可审计的结算对象，再成为可批量创建的市场</h3>
+          <p class="item-b"><strong>判断变化</strong>：从“预测市场可以沿用普通标的的参数化上币流程”更新为“每类事件合约必须先绑定结算来源、争议路径与准入证据，再开放创建和交易”。</p><p class="item-b"><strong>证据与边界</strong>：CFTC 已明确反对用宽泛模板一次认证大量事件合约，Hyperliquid 阵营要求采用结算结果口径并公开审查理由；当前仍处于政策讨论阶段，不能据此假定最终规则会完全采纳。</p><p class="item-b"><strong>对 HertzFlow</strong>：若评估事件类或非标准标的，先把结算数据、异常处理、争议裁决和监管材料做成逐合约可审计对象，并设置上线前人工批准，不应先复制一个可任意扩列的市场工厂。</p>
+
+          <div class="item-meta">
+
+            <a class="item-src" href="https://hyperliquidpolicy.org/blog/hpc-and-multicoin-back-the-cftc-s-prediction-markets-framework" target="_blank" rel="noopener">Hyperliquid Policy Center ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>
