@@ -6,13 +6,13 @@
 
 Every Beijing day, a Codex automation runs: preflight → research → score & thread → editorial gates → render → publish through the GitHub connector → deliver cards to Feishu + Slack via the repository workflows. A watchdog checks for a missed run.
 
-Sections: **Perp DEX (primary) → optional Launchpad / Crypto / AI → "Opportunities & Playbook"**. A compact Story Threads block appears only when a due thread has an informative status not already carried by a news item.
+Sections: **Perp DEX (primary) → Launchpad → Crypto → AI → optional Product Judgment**. Each news section contains 3–5 verified items. A compact Story Threads block appears only when a due thread has an informative status not already carried by a news item.
 *(The published report is written in Chinese; the repository and its documentation are in English.)*
 
 ### Why this is analyst-grade, not a one-prompt digest
 - **Signal scoring** — every story is scored 0–100 across five axes (structural impact / relevance / durability / actionability / magnitude × credibility), which drives selection, ordering, and whether it becomes a tracked thread.
 - **Narrative threading** — S-tier stories (≥90) are entered into a persistent `threads.json` ledger, revisited on a cadence, and recalled across days, so a reader who missed a day never loses the thread. An anti-redundancy rule guarantees *connection*, never *repetition*.
-- **Mechanical gates** — already-published preflight, market-snapshot status, freshness (≤72h), anti-date-fabrication, provenance links, editorial de-duplication, opportunity-item grounding, ledger schema validation, delivery de-duplication, missed-run alerting, and delivery retries.
+- **Mechanical gates** — already-published preflight, market-snapshot status, four-section coverage with 3–5 items each, freshness (≤72h), anti-date-fabrication, provenance links, editorial de-duplication, product-judgment grounding, ledger schema validation, delivery de-duplication, missed-run alerting, and delivery retries.
 - **Auditable** — every edition ships an *Editor's Self-Review* (scoring table + per-item freshness verification + thread-continuity check + six-lens critique), publicly archived.
 
 ## Design principle: channel portability
@@ -83,4 +83,5 @@ Credentials are never committed — `config/channels.json` references webhooks a
 
 ## Ground rules
 - No item without a real, verifiable source URL. No investment advice.
-- Fixed section order: Perp DEX first.
+- Fixed section order: Perp DEX, Launchpad, Crypto, AI, then optional Product Judgment.
+- Each news section must contain 3–5 verified items.
