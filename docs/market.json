@@ -1,153 +1,153 @@
 {
-  "fetched_at": "2026-08-03T01:04:25.773Z",
+  "fetched_at": "2026-08-04T00:58:14.036Z",
   "source": "CoinGecko (free)",
   "derivatives": [
     {
       "name": "Binance (Futures)",
-      "oi_btc": 392441.33,
-      "vol24h_btc": "450910.8",
+      "oi_btc": 392114.64,
+      "vol24h_btc": "792448.44",
       "perps": 589
     },
     {
       "name": "Hyperliquid (Futures)",
-      "oi_btc": 165409.43,
-      "vol24h_btc": "62904.45",
+      "oi_btc": 167952.97,
+      "vol24h_btc": "121009.54",
       "perps": 364
     },
     {
-      "name": "CoinW (Futures)",
-      "oi_btc": 161711.44,
-      "vol24h_btc": "258132.4",
-      "perps": 355
-    },
-    {
-      "name": "Bybit (Futures)",
-      "oi_btc": 159651.06,
-      "vol24h_btc": "106647.26",
-      "perps": 779
-    },
-    {
       "name": "Gate (Futures)",
-      "oi_btc": 157665.73,
-      "vol24h_btc": "90552.2",
-      "perps": 870
+      "oi_btc": 164385.44,
+      "vol24h_btc": "158318.14",
+      "perps": 880
     },
     {
       "name": "MEXC (Futures)",
-      "oi_btc": 154653.89,
-      "vol24h_btc": "130500.4",
-      "perps": 1067
+      "oi_btc": 163857.23,
+      "vol24h_btc": "192035.27",
+      "perps": 1074
+    },
+    {
+      "name": "Bybit (Futures)",
+      "oi_btc": 158558.54,
+      "vol24h_btc": "158470.6",
+      "perps": 783
+    },
+    {
+      "name": "CoinW (Futures)",
+      "oi_btc": 131286.85,
+      "vol24h_btc": "352683.34",
+      "perps": 355
     },
     {
       "name": "WEEX (Futures)",
-      "oi_btc": 117696.84,
-      "vol24h_btc": "137984.22",
-      "perps": 919
+      "oi_btc": 118002.37,
+      "vol24h_btc": "204162.03",
+      "perps": 920
     },
     {
       "name": "BYDFi (Futures)",
-      "oi_btc": 112401.96,
-      "vol24h_btc": "2963.95",
-      "perps": 442
+      "oi_btc": 113346.07,
+      "vol24h_btc": "5224.29",
+      "perps": 435
     },
     {
       "name": "Bitget Futures",
-      "oi_btc": 110013.01,
-      "vol24h_btc": "67876.77",
-      "perps": 803
-    },
-    {
-      "name": "XT.COM (Derivatives)",
-      "oi_btc": 103634.59,
-      "vol24h_btc": "65537.96",
-      "perps": 701
-    },
-    {
-      "name": "OKX (Futures)",
-      "oi_btc": 100163.55,
-      "vol24h_btc": "190433.62",
-      "perps": 438
-    },
-    {
-      "name": "KuCoin Futures",
-      "oi_btc": 76381.17,
-      "vol24h_btc": "16096.25",
-      "perps": 680
+      "oi_btc": 109088.48,
+      "vol24h_btc": "119511.72",
+      "perps": 810
     },
     {
       "name": "Toobit Futures",
-      "oi_btc": 67344.72,
-      "vol24h_btc": "183595.01",
-      "perps": 727
+      "oi_btc": 103122.7,
+      "vol24h_btc": "285976.97",
+      "perps": 729
+    },
+    {
+      "name": "OKX (Futures)",
+      "oi_btc": 101026.23,
+      "vol24h_btc": "312404.1",
+      "perps": 438
+    },
+    {
+      "name": "XT.COM (Derivatives)",
+      "oi_btc": 100255.37,
+      "vol24h_btc": "110013.16",
+      "perps": 702
+    },
+    {
+      "name": "KuCoin Futures",
+      "oi_btc": 74075.65,
+      "vol24h_btc": "20980.35",
+      "perps": 682
     },
     {
       "name": "WhiteBIT Futures",
-      "oi_btc": 64828.34,
-      "vol24h_btc": "100738.85",
-      "perps": 398
+      "oi_btc": 64880.16,
+      "vol24h_btc": "93225.38",
+      "perps": 399
     },
     {
       "name": "HTX Futures",
-      "oi_btc": 57794.12,
-      "vol24h_btc": "15606.72",
-      "perps": 292
+      "oi_btc": 57077.48,
+      "vol24h_btc": "20868.49",
+      "perps": 295
     },
     {
       "name": "Bitmart Futures",
-      "oi_btc": 51831.04,
-      "vol24h_btc": "81006.99",
+      "oi_btc": 51312.75,
+      "vol24h_btc": "111543.58",
       "perps": 933
     },
     {
+      "name": "BingX (Futures)",
+      "oi_btc": 49966.43,
+      "vol24h_btc": "102611.73",
+      "perps": 997
+    },
+    {
       "name": "Deribit",
-      "oi_btc": 47412.3,
-      "vol24h_btc": "4359.51",
+      "oi_btc": 39409.24,
+      "vol24h_btc": "6135.13",
       "perps": 21
     },
     {
-      "name": "BingX (Futures)",
-      "oi_btc": 43284.92,
-      "vol24h_btc": "77882.82",
-      "perps": 981
-    },
-    {
       "name": "Phemex (Futures)",
-      "oi_btc": 39601.93,
-      "vol24h_btc": "15074.54",
+      "oi_btc": 38507.14,
+      "vol24h_btc": "21557.68",
       "perps": 499
     },
     {
       "name": "LBank (Futures)",
-      "oi_btc": 36696.02,
-      "vol24h_btc": "73636.28",
-      "perps": 763
+      "oi_btc": 36736.44,
+      "vol24h_btc": "118304.0",
+      "perps": 766
     }
   ],
   "prices": {
     "bitcoin": {
-      "usd": 63241,
-      "usd_market_cap": 1268714040197.1755,
-      "usd_24h_change": 0.6932906858932566
+      "usd": 63315,
+      "usd_market_cap": 1270713030526.951,
+      "usd_24h_change": 0.09266819771514014
     },
     "ethereum": {
-      "usd": 1871.88,
-      "usd_market_cap": 225903143793.94696,
-      "usd_24h_change": 1.3855987347144227
+      "usd": 1849.15,
+      "usd_market_cap": 223282055517.85672,
+      "usd_24h_change": -1.2204544639531223
     },
     "solana": {
-      "usd": 73.16,
-      "usd_market_cap": 42518224208.19967,
-      "usd_24h_change": 1.3842524193899788
+      "usd": 73.02,
+      "usd_market_cap": 42457611762.887344,
+      "usd_24h_change": -0.20487164910998357
     },
     "hyperliquid": {
-      "usd": 52.63,
-      "usd_market_cap": 11706484305.443138,
-      "usd_24h_change": 0.3930917644467715
+      "usd": 53.61,
+      "usd_market_cap": 11925999805.554981,
+      "usd_24h_change": 1.8423164275975326
     }
   },
   "global": {
-    "total_mcap_usd": 2254877381499.572,
-    "mcap_change_24h_pct": 0.8279522402420982,
-    "btc_dominance_pct": 56.280544764265485
+    "total_mcap_usd": 2254782352434.1157,
+    "mcap_change_24h_pct": -0.0028124774094917867,
+    "btc_dominance_pct": 56.3590944699059
   }
 }
