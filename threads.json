@@ -15,7 +15,7 @@
         "watch_for": "下一个关键节点/该盯的触发事件",
         "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
     },
-    "updated": "2026-08-04",
+    "updated": "2026-08-05",
     "threads": [
         {
             "id": "prediction-market-federal-rulebook",
@@ -24,9 +24,9 @@
             "tier": "A",
             "status": "active",
             "first_seen": "2026-07-24",
-            "last_update": "2026-07-27",
+            "last_update": "2026-08-04",
             "cadence_days": 7,
-            "next_check": "2026-08-07",
+            "next_check": "2026-08-12",
             "thesis": "CFTC 正把预测市场从宽泛的产品模板推进到逐类合约的结算方法、数据源与公共利益审查，Hyperliquid 阵营则要求以实际结算结果划界、由联邦独家监管并公开允许合约的理由。谁能把这些要求变成可复用的合约准入与争议处理基础设施，谁才可能规模化扩列链上 outcome contracts。",
             "why_us": "预测市场与非标准标的会争夺同一批交易用户、抵押品和分发入口。HertzFlow 若扩展事件类市场，需要先建立逐合约可审计的结算源、异常处理、争议裁决与准入材料，不能把普通永续的参数化上币流程直接复用。",
             "watch_for": "CFTC 是否发布最终规则及逐类合约示例 / 是否公开允许合约的审查理由 / 州级赌博监管与联邦专属管辖的法院结果 / Hyperliquid outcome contracts 的 OI、争议事件与结算记录",
@@ -40,6 +40,11 @@
                     "date": "2026-07-27",
                     "point": "Hyperliquid Policy Center 与 Multicoin 联合支持 CFTC 拟议框架，主张事件合约由联邦单一监管者负责、按实际结算结果理解受限活动，并公开每次允许或阻止合约的理由；Hyperliquid 已支持全额抵押、链上结算的 outcome contracts，但意见仍是政策主张而非最终规则。",
                     "url": "https://hyperliquidpolicy.org/blog/hpc-and-multicoin-back-the-cftc-s-prediction-markets-framework"
+                },
+                {
+                    "date": "2026-08-04",
+                    "point": "纽约联邦法官驳回 CFTC 为 Kalshi 申请紧急临时限制令的请求，认为现阶段未证明胜诉可能性和不可弥补损害；纽约州可暂时继续按州赌博法执法，CFTC 仍可在 08-07 前向主审法官重新申请。裁定只涉及事件合约与联邦优先权，不是 Kalshi 永续或 CME-CFTC swaps/futures 诉讼的进展。",
+                    "url": "https://cointelegraph.com/news/ny-judge-denies-cftc-motion-enforcement-kalshi"
                 }
             ]
         },
@@ -50,9 +55,9 @@
             "tier": "S",
             "status": "active",
             "first_seen": "2026-07-09",
-            "last_update": "2026-07-31",
+            "last_update": "2026-08-04",
             "cadence_days": 6,
-            "next_check": "2026-08-06",
+            "next_check": "2026-08-10",
             "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交，说明需求规模化与订单流集中正在同时发生。",
             "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
             "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -111,6 +116,11 @@
                     "date": "2026-07-31",
                     "point": "七日成交口径首次把 RWA 永续直接放到比特币永续旁比较：Hyperliquid 与 Binance 合计 RWA 永续成交 617 亿美元，达到同期比特币永续的 99.2%；股票与商品分别贡献 RWA 成交的 57.8% 与 28.2%。本周截至报道时 RWA 永续又以 372 亿美元高出比特币约 9%，说明非加密标的已能持续争夺核心保证金与订单流，但该口径只覆盖两家场所且成交不等于 OI 或长期持仓。",
                     "url": "https://cointelegraph.com/markets/rwa-perpetual-futures-bitcoin-hyperliquid-binance"
+                },
+                {
+                    "date": "2026-08-04",
+                    "point": "代币化现货开始以权利完整性与美国分发资格直接竞争 RWA 永续：Dinari 向合格美国投资者开放 724 只 1:1 托管股票，映射股息、投票、拆股等公司行动并支持自托管钱包与 USDC；但其约 1000 万美元规模仍只占约 22 亿美元同类市场的一小部分。RWA 竞争指标由成交量扩展到长期持有权利与合规可达性。",
+                    "url": "https://www.coindesk.com/business/2026/08/04/dinari-brings-tokenized-u-s-stocks-to-american-investors-as-equity-race-heats-up"
                 }
             ]
         },
@@ -306,7 +316,7 @@
             "first_seen": "2026-06-19",
             "last_update": "2026-07-30",
             "cadence_days": 3,
-            "next_check": "2026-08-05",
+            "next_check": "2026-08-08",
             "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
             "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
             "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
@@ -492,9 +502,9 @@
             "tier": "S",
             "status": "active",
             "first_seen": "2026-07-15",
-            "last_update": "2026-07-28",
+            "last_update": "2026-08-04",
             "cadence_days": 5,
-            "next_check": "2026-08-08",
+            "next_check": "2026-08-09",
             "thesis": "一周内两家 RWA/永续 DEX 因链下特权凭证失守遭受接近全额金库损失。Ostium 07-15 的预言机签名密钥被攻破，攻击者提交伪造价格报告，从 LP 金库卷走约 1800-2370 万美元；AFX Trade 07-22 的自营桥验证者热签名被攻破，五个签名达到约三分之二门槛，合约按设计转出约 2415 万 USDC。两起事故都不是合约代码没有按规则执行，而是谁掌握了让合约执行的链下签名权。随着永续 DEX 扩展到更多链、更多链下报价资产，权限面正在取代单纯代码漏洞成为核心攻击面。",
             "why_us": "HertzFlow 的价格签名、Keeper 执行与多资产市场同样依赖链下特权角色。即使当前不运营跨链桥，Ostium 与 AFX 的共同模式仍直接要求审视密钥托管、权限组合、单笔限额、延迟、暂停与快速撤销能力，而不能把合约审计通过当作系统安全结论。",
             "watch_for": "Ostium 与 AFX 是否公布事故报告和赔付方案 / AFX 是否更换热签名架构与争议期 / 是否有更多 perp DEX 曝出预言机、Keeper、桥验证者或后台凭证失守 / 主流基础设施是否调整密钥管理和提款限额标准",
@@ -533,6 +543,11 @@
                     "date": "2026-07-28",
                     "point": "AFX 首次公布主要攻击路径，但强调仍非最终取证报告：开发者 07-09 在 Telegram 诱导下克隆恶意仓库，攻击者随后取得 JFrog 制品库权限，07-16 植入恶意 Groovy 插件并利用重启恢复持久化，继而横向移动到验证者相关基础设施，最终让五个热签名共同批准约 2415 万 USDC 提款。多签在共同依赖同一开发、制品和部署信任域时，会退化为单一供应链故障；用户恢复方案仍在制定。",
                     "url": "https://medium.com/@AFXTrade/afx-bridge-incident-what-happened-what-we-learned-and-what-comes-next-d97387746012"
+                },
+                {
+                    "date": "2026-08-04",
+                    "point": "Kelp 跨链桥约 2.92 亿美元攻击后，BitGo 宣布把约 74 亿美元 WBTC 的独家跨链服务从 LayerZero 迁至 Chainlink CCIP；公开宣布同类迁移的资产合计约 145 亿美元。行业开始通过收缩桥接控制面应对验证风险，但 BitGo 仍掌握 WBTC 合约、速率限制与转移参数，且迁移完成时间和双轨期安排未披露。",
+                    "url": "https://www.coindesk.com/business/2026/08/04/bitgo-s-wbtc-move-pushes-layerzero-to-chainlink-tally-near-usd15-billion"
                 }
             ]
         },
