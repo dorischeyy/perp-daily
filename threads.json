@@ -24,7 +24,7 @@
             "tier": "A",
             "status": "active",
             "first_seen": "2026-07-24",
-            "last_update": "2026-08-04",
+      "last_update": "2026-08-05",
             "cadence_days": 7,
             "next_check": "2026-08-12",
             "thesis": "CFTC 正把预测市场从宽泛的产品模板推进到逐类合约的结算方法、数据源与公共利益审查，Hyperliquid 阵营则要求以实际结算结果划界、由联邦独家监管并公开允许合约的理由。谁能把这些要求变成可复用的合约准入与争议处理基础设施，谁才可能规模化扩列链上 outcome contracts。",
@@ -57,7 +57,7 @@
             "first_seen": "2026-07-09",
             "last_update": "2026-08-04",
             "cadence_days": 6,
-            "next_check": "2026-08-10",
+      "next_check": "2026-08-11",
             "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交，说明需求规模化与订单流集中正在同时发生。",
             "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
             "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -117,11 +117,16 @@
                     "point": "七日成交口径首次把 RWA 永续直接放到比特币永续旁比较：Hyperliquid 与 Binance 合计 RWA 永续成交 617 亿美元，达到同期比特币永续的 99.2%；股票与商品分别贡献 RWA 成交的 57.8% 与 28.2%。本周截至报道时 RWA 永续又以 372 亿美元高出比特币约 9%，说明非加密标的已能持续争夺核心保证金与订单流，但该口径只覆盖两家场所且成交不等于 OI 或长期持仓。",
                     "url": "https://cointelegraph.com/markets/rwa-perpetual-futures-bitcoin-hyperliquid-binance"
                 },
-                {
-                    "date": "2026-08-04",
-                    "point": "代币化现货开始以权利完整性与美国分发资格直接竞争 RWA 永续：Dinari 向合格美国投资者开放 724 只 1:1 托管股票，映射股息、投票、拆股等公司行动并支持自托管钱包与 USDC；但其约 1000 万美元规模仍只占约 22 亿美元同类市场的一小部分。RWA 竞争指标由成交量扩展到长期持有权利与合规可达性。",
-                    "url": "https://www.coindesk.com/business/2026/08/04/dinari-brings-tokenized-u-s-stocks-to-american-investors-as-equity-race-heats-up"
-                }
+        {
+          "date": "2026-08-04",
+          "point": "代币化现货开始以权利完整性与美国分发资格直接竞争 RWA 永续：Dinari 向合格美国投资者开放 724 只 1:1 托管股票，映射股息、投票、拆股等公司行动并支持自托管钱包与 USDC；但其约 1000 万美元规模仍只占约 22 亿美元同类市场的一小部分。RWA 竞争指标由成交量扩展到长期持有权利与合规可达性。",
+          "url": "https://www.coindesk.com/business/2026/08/04/dinari-brings-tokenized-u-s-stocks-to-american-investors-as-equity-race-heats-up"
+        },
+        {
+          "date": "2026-08-05",
+          "point": "代币化股票的权利竞争继续推进：Kraken 母公司 Payward 与 Broadridge 合作，让符合条件的 xStocks 持有人提交代理投票偏好，改变了这类产品此前只提供经济敞口、不传递底层投票权的边界；但持有人仍不是登记股东，且产品不向美国和英国开放。股票永续与代币化现货的比较由静态权利差异变成需要持续维护的动态矩阵。",
+          "url": "https://www.theblock.co/post/410878/kraken-parent-payward-shifts-position-tokenized-equities-voting-rights"
+        }
             ]
         },
         {
