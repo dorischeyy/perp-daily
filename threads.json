@@ -15,14 +15,14 @@
         "watch_for": "下一个关键节点/该盯的触发事件",
         "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
     },
-    "updated": "2026-08-05",
+  "updated": "2026-08-07",
     "threads": [
-        {
-            "id": "prediction-market-federal-rulebook",
+    {
+      "id": "prediction-market-federal-rulebook",
             "title": "预测市场联邦规则：合约准入与结算口径",
             "score": 87,
             "tier": "A",
-            "status": "active",
+      "status": "active",
             "first_seen": "2026-07-24",
       "last_update": "2026-08-05",
             "cadence_days": 7,
@@ -419,16 +419,16 @@
                 }
             ]
         },
-        {
-            "id": "hyperliquid-equity-perp-expansion",
+    {
+      "id": "hyperliquid-equity-perp-expansion",
             "title": "Hyperliquid 股票永续矩阵扩张",
             "score": 91,
             "tier": "S",
-            "status": "active",
+      "status": "dormant",
             "first_seen": "2026-06-12",
             "last_update": "2026-07-29",
             "cadence_days": 3,
-            "next_check": "2026-08-07",
+      "next_check": "2026-08-21",
             "thesis": "Hyperliquid 的 HIP-3 无需许可机制正在把「任何可定价标的」都变成 24/7 永续市场，从加密到股票到优先股，产品矩阵覆盖速度远超任何中心化或其他链上对手。链上股票永续的基础设施护城河正在此形成。",
             "why_us": "HertzFlow 美股指数 perp 和虚拟 RWA 标的是核心差异化，而 Hyperliquid HIP-3 的扩张速度定义了产品升级的参照系和竞争压力窗口。",
             "watch_for": "HIP-3 总 OI 突破 $40 亿 / 下一重量级个股标的上线(Apple/Nvidia/ARM) / Coinbase 或 Aster 在个股 perp 的追赶进度",
@@ -493,11 +493,16 @@
                     "point": "07-17 设定的 CXMT 上市切换观察点落地：长鑫科技在上海科创板开盘前，trade.xyz 的 CXMT 永续约报 7.14 美元，真实股票以 49.5 元、约合 7.30 美元开盘，价差约 2%；股票首日较 8.66 元发行价上涨约 472%。盘前永续在跨境受限的重量级 IPO 上形成了接近开盘的公开价格，但外国用户无法直接交易 A 股完成套利，上市后的折溢价、停牌和公司行动仍依赖指数规则与单一建市者处理。",
                     "url": "https://hyperliquidguide.com/ecosystem/trade-cxmt-pre-ipo-hyperliquid"
                 },
-                {
-                    "date": "2026-07-29",
-                    "point": "到期复盘命中价格质量事故：SKHYNIX 永续的一笔外部市场成交被多家独立数据商同时转发，标记价从 1127.90 美元跌至 917.25 美元并触发清算。Trade.xyz 称预言机按规格运行，仍决定一次性赔付符合条件的损失，并考虑提高自身订单簿价格权重。HIP-3 股票永续的竞争约束从标的扩列与市场切换进一步推进到原始价格来源去重、异常成交识别和清算损失分配。",
-                    "url": "https://cointelegraph.com/markets/trade-xyz-sk-hynix-perp-liquidations-price-anomaly"
-                }
+        {
+          "date": "2026-07-29",
+          "point": "到期复盘命中价格质量事故：SKHYNIX 永续的一笔外部市场成交被多家独立数据商同时转发，标记价从 1127.90 美元跌至 917.25 美元并触发清算。Trade.xyz 称预言机按规格运行，仍决定一次性赔付符合条件的损失，并考虑提高自身订单簿价格权重。HIP-3 股票永续的竞争约束从标的扩列与市场切换进一步推进到原始价格来源去重、异常成交识别和清算损失分配。",
+          "url": "https://cointelegraph.com/markets/trade-xyz-sk-hynix-perp-liquidations-price-anomaly"
+        },
+        {
+          "date": "2026-08-07",
+          "point": "转 dormant：本轮到期复盘未找到 HIP-3 新增重量级股票标的、股票永续 OI 突破 40 亿美元或 Coinbase/Aster 形成可核验追赶的证据；当天全平台快照仍显示 Hyperliquid 总 OI 约 107.7 亿美元，但该口径无法证明股票矩阵继续扩张。待资产级 OI、重大扩列或价格质量机制出现新数据时再激活。",
+          "url": "https://github.com/dorischeyy/perp-daily/blob/main/docs/market.json"
+        }
             ]
         },
         {
