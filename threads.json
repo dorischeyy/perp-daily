@@ -55,10 +55,10 @@
             "tier": "S",
             "status": "active",
             "first_seen": "2026-07-09",
-            "last_update": "2026-08-04",
+      "last_update": "2026-08-10",
             "cadence_days": 6,
-      "next_check": "2026-08-11",
-            "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交，说明需求规模化与订单流集中正在同时发生。",
+      "next_check": "2026-08-16",
+      "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
             "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
             "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
             "log": [
@@ -126,6 +126,11 @@
           "date": "2026-08-05",
           "point": "代币化股票的权利竞争继续推进：Kraken 母公司 Payward 与 Broadridge 合作，让符合条件的 xStocks 持有人提交代理投票偏好，改变了这类产品此前只提供经济敞口、不传递底层投票权的边界；但持有人仍不是登记股东，且产品不向美国和英国开放。股票永续与代币化现货的比较由静态权利差异变成需要持续维护的动态矩阵。",
           "url": "https://www.theblock.co/post/410878/kraken-parent-payward-shifts-position-tokenized-equities-voting-rights"
+        },
+        {
+          "date": "2026-08-10",
+          "point": "规模化叙事推进到价值捕获：CoinDesk 08-09 报道 HIP-3 builder 市场已贡献 Hyperliquid 约一半成交、RWA 永续 OI 达 36 亿美元，但协议季度总收入从 2025 年第三季度约 3.57 亿美元连续降至 2026 年第二季度约 2.02 亿美元，收入成本占比从一年前年低于 6% 升至 18%。Builder 最多保留一半交易费，说明 RWA 成交增长不能直接等同于协议净收入增长；后续应同时跟踪 builder 集中度、费率分成与回购资金。",
+          "url": "https://www.coindesk.com/business/2026/08/09/hyperliquid-s-rwa-perps-boom-is-eating-into-the-revenue-that-backs-hype"
         }
             ]
         },
