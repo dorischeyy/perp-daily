@@ -24,9 +24,9 @@
             "tier": "A",
       "status": "active",
             "first_seen": "2026-07-24",
-      "last_update": "2026-08-05",
+      "last_update": "2026-08-11",
             "cadence_days": 7,
-            "next_check": "2026-08-12",
+      "next_check": "2026-08-19",
             "thesis": "CFTC 正把预测市场从宽泛的产品模板推进到逐类合约的结算方法、数据源与公共利益审查，Hyperliquid 阵营则要求以实际结算结果划界、由联邦独家监管并公开允许合约的理由。谁能把这些要求变成可复用的合约准入与争议处理基础设施，谁才可能规模化扩列链上 outcome contracts。",
             "why_us": "预测市场与非标准标的会争夺同一批交易用户、抵押品和分发入口。HertzFlow 若扩展事件类市场，需要先建立逐合约可审计的结算源、异常处理、争议裁决与准入材料，不能把普通永续的参数化上币流程直接复用。",
             "watch_for": "CFTC 是否发布最终规则及逐类合约示例 / 是否公开允许合约的审查理由 / 州级赌博监管与联邦专属管辖的法院结果 / Hyperliquid outcome contracts 的 OI、争议事件与结算记录",
@@ -41,11 +41,16 @@
                     "point": "Hyperliquid Policy Center 与 Multicoin 联合支持 CFTC 拟议框架，主张事件合约由联邦单一监管者负责、按实际结算结果理解受限活动，并公开每次允许或阻止合约的理由；Hyperliquid 已支持全额抵押、链上结算的 outcome contracts，但意见仍是政策主张而非最终规则。",
                     "url": "https://hyperliquidpolicy.org/blog/hpc-and-multicoin-back-the-cftc-s-prediction-markets-framework"
                 },
-                {
-                    "date": "2026-08-04",
-                    "point": "纽约联邦法官驳回 CFTC 为 Kalshi 申请紧急临时限制令的请求，认为现阶段未证明胜诉可能性和不可弥补损害；纽约州可暂时继续按州赌博法执法，CFTC 仍可在 08-07 前向主审法官重新申请。裁定只涉及事件合约与联邦优先权，不是 Kalshi 永续或 CME-CFTC swaps/futures 诉讼的进展。",
-                    "url": "https://cointelegraph.com/news/ny-judge-denies-cftc-motion-enforcement-kalshi"
-                }
+        {
+          "date": "2026-08-04",
+          "point": "纽约联邦法官驳回 CFTC 为 Kalshi 申请紧急临时限制令的请求，认为现阶段未证明胜诉可能性和不可弥补损害；纽约州可暂时继续按州赌博法执法，CFTC 仍可在 08-07 前向主审法官重新申请。裁定只涉及事件合约与联邦优先权，不是 Kalshi 永续或 CME-CFTC swaps/futures 诉讼的进展。",
+          "url": "https://cointelegraph.com/news/ny-judge-denies-cftc-motion-enforcement-kalshi"
+        },
+        {
+          "date": "2026-08-11",
+          "point": "CFTC 动用紧急权限要求 Kalshi 在纽约州诉讼期间继续运营，联邦监管者与州赌博执法从立场争议升级为相互冲突的执行命令；移送联邦法院与发回州法院的动议仍待裁定，尚未形成联邦优先权终局结论。",
+          "url": "https://www.coindesk.com/policy/2026/08/11/cftc-orders-kalshi-to-continue-offering-prediction-markets-in-new-york-after-state-lawsuit"
+        }
             ]
         },
         {
