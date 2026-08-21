@@ -24,9 +24,9 @@
             "tier": "A",
       "status": "active",
             "first_seen": "2026-07-24",
-      "last_update": "2026-08-19",
+      "last_update": "2026-08-20",
             "cadence_days": 7,
-      "next_check": "2026-08-26",
+      "next_check": "2026-08-27",
             "thesis": "CFTC 正把预测市场从宽泛的产品模板推进到逐类合约的结算方法、数据源与公共利益审查，Hyperliquid 阵营则要求以实际结算结果划界、由联邦独家监管并公开允许合约的理由。谁能把这些要求变成可复用的合约准入与争议处理基础设施，谁才可能规模化扩列链上 outcome contracts。",
             "why_us": "预测市场与非标准标的会争夺同一批交易用户、抵押品和分发入口。HertzFlow 若扩展事件类市场，需要先建立逐合约可审计的结算源、异常处理、争议裁决与准入材料，不能把普通永续的参数化上币流程直接复用。",
             "watch_for": "CFTC 是否发布最终规则及逐类合约示例 / 是否公开允许合约的审查理由 / 州级赌博监管与联邦专属管辖的法院结果 / Hyperliquid outcome contracts 的 OI、争议事件与结算记录",
@@ -60,6 +60,11 @@
           "date": "2026-08-19",
           "point": "Cantor Fitzgerald 计划让约 3000 家机构客户通过经纪渠道交易 Kalshi 大宗合约，由 Susquehanna 提供定价与流动性。预测市场继续进入机构订单流和大宗基础设施，但州与联邦管辖、逐类合约准入及结算规则仍未解决。",
           "url": "https://www.coindesk.com/markets/2026/08/19/cantor-opens-kalshi-prediction-markets-to-thousands-of-institutional-clients"
+        },
+        {
+          "date": "2026-08-20",
+          "point": "CME CEO Terrence Duffy 质疑预测市场的操纵与自我认证，CFTC 主席 Mike Selig 回应称部分案例来自离岸平台或假新闻，并表示将提出事件合约上市规则和客户保护修订。联邦与州的管辖争议继续落到上市证据、操纵调查和损失责任，但正式文本尚未发布。",
+          "url": "https://www.theblock.co/news/regulation/2026-08-20-cme-ceo-terrence-duffy-trades-barbs-with-cftcs-selig-and-kalshis-coo-over-prediction-market-oversight-412397"
         }
             ]
         },
@@ -70,9 +75,9 @@
             "tier": "S",
             "status": "active",
             "first_seen": "2026-07-09",
-      "last_update": "2026-08-19",
+      "last_update": "2026-08-20",
             "cadence_days": 6,
-      "next_check": "2026-08-25",
+      "next_check": "2026-08-26",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
             "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
             "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -161,6 +166,11 @@
           "date": "2026-08-19",
           "point": "Silicon Data 完成 3000 万美元 A 轮融资，推进 GPU 租赁参考指数，并计划由 CME 于 10 月 5 日推出算力期货，仍待监管批准。非标准衍生品的价格发现从私下算力永续向受监管期货结算推进，但指数质量、审批与流动性尚未验证。",
           "url": "https://techcrunch.com/video/meet-the-startup-helping-wall-street-put-a-price-on-ai-compute/"
+        },
+        {
+          "date": "2026-08-20",
+          "point": "Ondo 披露代币化股票在八个月内达到 10 亿美元 TVL，代币化美债达到 20 亿美元，其永续平台在七周内累计名义成交约 90 亿美元，并计划推出组合型产品。数据继续证明规模化，但累计成交不能替代持续 OI、持有人权利和美国可用性验证。",
+          "url": "https://www.theblock.co/news/business/2026-08-20-ondo-executive-says-tokenization-following-same-path-as-early-etfs-412346"
         }
             ]
         },
