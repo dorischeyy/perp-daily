@@ -15,7 +15,7 @@
         "watch_for": "下一个关键节点/该盯的触发事件",
         "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
     },
-  "updated": "2026-08-20",
+  "updated": "2026-08-21",
     "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -75,9 +75,9 @@
             "tier": "S",
             "status": "active",
             "first_seen": "2026-07-09",
-      "last_update": "2026-08-20",
+      "last_update": "2026-08-21",
             "cadence_days": 6,
-      "next_check": "2026-08-26",
+      "next_check": "2026-08-27",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
             "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
             "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -171,6 +171,11 @@
           "date": "2026-08-20",
           "point": "Ondo 披露代币化股票在八个月内达到 10 亿美元 TVL，代币化美债达到 20 亿美元，其永续平台在七周内累计名义成交约 90 亿美元，并计划推出组合型产品。数据继续证明规模化，但累计成交不能替代持续 OI、持有人权利和美国可用性验证。",
           "url": "https://www.theblock.co/news/business/2026-08-20-ondo-executive-says-tokenization-following-same-path-as-early-etfs-412346"
+        },
+        {
+          "date": "2026-08-21",
+          "point": "OKX 新增 MRNA 与 PURR 两只股票永续，均用 USDT 保证金、24 小时交易，常态每 8 小时结算资金费，触及费率上下限时可自动缩短至每小时。TradFi 永续扩张继续由标的数量推进到对极端事件型股票的资金费节奏管理，但公告未披露成交、OI、指数成分或可用地区。",
+          "url": "https://www.okx.com/en-ar/help/okx-to-list-perpetual-futures-for-mrna-and-purr-equities"
         }
             ]
         },
