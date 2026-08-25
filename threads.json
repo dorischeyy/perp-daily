@@ -15,7 +15,7 @@
         "watch_for": "下一个关键节点/该盯的触发事件",
         "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
     },
-  "updated": "2026-08-21",
+  "updated": "2026-08-25",
     "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -369,9 +369,9 @@
             "tier": "S",
             "status": "active",
             "first_seen": "2026-06-19",
-            "last_update": "2026-08-19",
+            "last_update": "2026-08-24",
             "cadence_days": 3,
-            "next_check": "2026-08-25",
+            "next_check": "2026-08-28",
             "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
             "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
             "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
@@ -440,6 +440,11 @@
                     "date": "2026-08-19",
                     "point": "美国总统特朗普表示，CFTC 主席 Mike Selig 正研究让 Hyperliquid 以完全合规、合法方式进入美国。这是链上永续进入联邦监管边界的首个高层明确表态，但尚无产品结构、许可、客户保护或 swaps 与 futures 定性细节。",
                     "url": "https://www.coindesk.com/markets/2026/08/19/hype-jumps-11-as-trump-says-cftc-is-working-to-bring-hyperliquid-to-u-s"
+                },
+                {
+                    "date": "2026-08-24",
+                    "point": "Hyperliquid Policy Center 向 SEC 与 CFTC 提交意见，主张永续先按经济结构分类，再叠加股票、商品或加密资产规则，并利用 security futures 的联合监管与 notice registration 让不同类型交易场所在同一产品类别内竞争。该意见把 swaps 与 futures 争议推进到可复用分类框架，但仍是行业主张，尚无正式规则或法院裁定。",
+                    "url": "https://www.theblock.co/news/regulation/2026-08-24-hyperliquid-policy-center-urges-sec-cftc-harmonize-rules-perpetual-contracts-412601"
                 }
             ]
         },
