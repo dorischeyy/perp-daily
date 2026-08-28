@@ -677,6 +677,27 @@
           "url": "https://www.prnewswire.com/news-releases/layerzero-announces-atlas-a-headless-exchange-for-the-future-of-global-markets-302859062.html"
         }
       ]
+    },
+    {
+      "id": "machine-readable-market-lifecycle",
+      "title": "可机读市场生命周期：盘前、交易与结算状态统一",
+      "score": 86,
+      "tier": "A",
+      "status": "active",
+      "first_seen": "2026-08-28",
+      "last_update": "2026-08-28",
+      "cadence_days": 6,
+      "next_check": "2026-09-03",
+      "thesis": "KuCoin UTA API V2 把盘前转永续日期、到期与结算时间、资金费、最大市价单和多阶段交易状态放进统一合约接口，并给出 V1 退场时间。市场生命周期正从运营公告转成可驱动前端、订单与风控的机器状态，但中心化交易所枚举能否覆盖链上 Keeper、LP 和清算仍未验证。",
+      "why_us": "HertzFlow 的市场开放、仅减仓、暂停、结算、关闭和退场若由不同模块各自解释，会放大订单误提交和用户误解。先统一内部状态契约与异常用例，再映射前端、订单、Keeper 和市场配置，能降低生命周期切换风险。",
+      "watch_for": "KuCoin V1 实际下线与迁移事故 / 其他交易所是否公开同类状态接口 / 盘前转永续和结算状态是否出现错单 / HertzFlow 现有市场状态在前端、订单与 Keeper 间的映射缺口",
+      "log": [
+        {
+          "date": "2026-08-28",
+          "point": "新建线：KuCoin UTA API V2 于 08-27 生效，新增 preMarketToPerpDate、expiryTime、settlementTime、maxMarketOrderSize、maxLeverage、资金费与末次费率，并把合约状态拆成初始化、开放、禁用、准备结算、结算中、已结算、暂停、关闭和仅撤单；V1 预计 12-31 下线。接口已落地，但各接入方迁移质量与链上市场适配仍待验证。",
+          "url": "https://www.kucoin.com/announcement/en-announcement-of-kucoin-uta-api-v1-to-v2-upgrade"
+        }
+      ]
     }
   ]
 }
