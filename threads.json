@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-08-27",
+  "updated": "2026-08-29",
   "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -75,9 +75,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-08-26",
+      "last_update": "2026-08-28",
       "cadence_days": 6,
-      "next_check": "2026-09-02",
+      "next_check": "2026-09-04",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -186,6 +186,16 @@
           "date": "2026-08-26",
           "point": "MEXC 称一个月股票与指数期货活动期内日均成交达到 43 亿美元、报名超过 17 万次、净入金超过 4500 万美元。CEX 非加密衍生品已能在激励期形成十亿美元级日成交，但数据为平台自报，且零手续费与奖池会扭曲自然需求；没有持续 OI、反刷量和活动后留存，仍不能把活动成交直接写成资产类别的无补贴基线。",
           "url": "https://blog.mexc.com/press-release/mexc-tradfi-gala-concludes-4-billion-daily-trading-volume/"
+        },
+        {
+          "date": "2026-08-28",
+          "point": "Gate 将 RAM、DJT、TEM 与 MARA 四只美股相关标的接入最高 20 倍股票永续，其中 RAM 底层是每日 2 倍重置 ETF。资产类别继续扩张，但杠杆 ETF 叠加外层合约杠杆后，底层路径依赖、休市跳空与风险限额必须区别于普通单股；公告未披露成交、OI 或极端行情表现。",
+          "url": "https://www.gate.com/es/announcements/article/101420"
+        },
+        {
+          "date": "2026-08-28",
+          "point": "HTX 推出四个月邀请制 TradFi Growth Partner Program，按月成交从 5000 万至 5 亿 USDT 分档，最高提供 -0.010% 挂单费、0.0180% 吃单费和 8000 USDT 奖励。竞争由扩列推进到订单流补贴，但活动明确排除部分负费率与活动成交，活动后留存仍是自然需求的关键验证。",
+          "url": "https://www.htx.com/support/65042227146601/"
         }
       ]
     },
