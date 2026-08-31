@@ -24,7 +24,7 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-07-24",
-      "last_update": "2026-08-28",
+      "last_update": "2026-08-30",
       "cadence_days": 7,
       "next_check": "2026-09-04",
       "thesis": "CFTC 正把预测市场从宽泛的产品模板推进到逐类合约的结算方法、数据源与公共利益审查，Hyperliquid 阵营则要求以实际结算结果划界、由联邦独家监管并公开允许合约的理由。谁能把这些要求变成可复用的合约准入与争议处理基础设施，谁才可能规模化扩列链上 outcome contracts。",
@@ -66,11 +66,16 @@
           "point": "CME CEO Terrence Duffy 质疑预测市场的操纵与自我认证，CFTC 主席 Mike Selig 回应称部分案例来自离岸平台或假新闻，并表示将提出事件合约上市规则和客户保护修订。联邦与州的管辖争议继续落到上市证据、操纵调查和损失责任，但正式文本尚未发布。",
           "url": "https://www.theblock.co/news/regulation/2026-08-20-cme-ceo-terrence-duffy-trades-barbs-with-cftcs-selig-and-kalshis-coo-over-prediction-market-oversight-412397"
         },
-        {
-          "date": "2026-08-28",
-          "point": "第九巡回上诉法院拒绝阻止内华达州对 Kalshi 体育事件合约执行州级博彩监管，认为 Kalshi 尚未证明《商品交易法》很可能排除州监管。联邦独占管辖主张在禁令阶段受挫，但这不是终局判决，Kalshi 仍将寻求进一步复审。",
-          "url": "https://www.theblock.co/news/regulation/2026-08-28-ninth-circuit-deals-blow-to-kalshi-in-nevada-sports-betting-fight-challenging-cftcs-exclusive-jurisdiction-claim-413046"
-        }
+      {
+        "date": "2026-08-28",
+        "point": "第九巡回上诉法院拒绝阻止内华达州对 Kalshi 体育事件合约执行州级博彩监管，认为 Kalshi 尚未证明《商品交易法》很可能排除州监管。联邦独占管辖主张在禁令阶段受挫，但这不是终局判决，Kalshi 仍将寻求进一步复审。",
+        "url": "https://www.theblock.co/news/regulation/2026-08-28-ninth-circuit-deals-blow-to-kalshi-in-nevada-sports-betting-fight-challenging-cftcs-exclusive-jurisdiction-claim-413046"
+      },
+      {
+        "date": "2026-08-30",
+        "point": "据 Front Office Sports 报道，Kalshi 与美国网球协会达成美网独家预测市场合作，其他预测市场平台据称不能在赛事现场及 ESPN 转播中投放广告。该变化把体育赛事内容和预测市场分发进一步绑定，但财务条款未公开，Kalshi 当时也尚未列入美网官网合作伙伴，且不改变州与联邦管辖争议未决的状态。",
+        "url": "https://www.theblock.co/news/deals/2026-08-30-kalshi-becomes-exclusive-prediction-market-partner-of-us-open-report-413074"
+      }
       ]
     },
     {
