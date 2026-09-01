@@ -85,9 +85,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-08-28",
+      "last_update": "2026-08-31",
       "cadence_days": 6,
-      "next_check": "2026-09-04",
+      "next_check": "2026-09-06",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -211,6 +211,11 @@
           "date": "2026-08-28",
           "point": "Bybit 计划于 09-17 先为 SPCX 与 NVDA 股票永续推出 24/7 期权，并接入统一交易账户与组合保证金。TradFi 永续竞争从线性敞口扩展到期限、波动率与组合策略，但产品尚未上线，做市深度和极端行情表现仍待验证。",
           "url": "https://www.theblock.co/news/markets/2026-08-28-bybit-launches-24-7-options-on-stock-perpetuals-starting-with-spacex-and-nvidia-413032"
+        },
+        {
+          "date": "2026-08-31",
+          "point": "MEXC 宣布在 SHEIN 港股开盘并确认指数稳定后，将 SHEINUSDT 盘前永续自动转换为标准永续，保留现有仓位、挂单与历史记录；若指数波动过大则延迟或下架重上。RWA 永续竞争由扩列推进到开盘竞价、价格稳定、订单继承和异常退场组成的生命周期控制。",
+          "url": "https://www.mexc.com/announcements/article/mexc-to-convert-sheinusdt-pre-ipo-futures-into-standard-futures-17827791538008"
         }
       ]
     },
@@ -404,9 +409,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-06-19",
-      "last_update": "2026-08-26",
+      "last_update": "2026-08-31",
       "cadence_days": 3,
-      "next_check": "2026-09-02",
+      "next_check": "2026-09-03",
       "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
       "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
       "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
@@ -485,6 +490,11 @@
           "date": "2026-08-26",
           "point": "Hyperliquid Policy Center 与 trade[XYZ] 回应 CFTC 能源永续征询，以双模式休市参考价、逐 tick 限幅、多输入标记价和每小时资金费解释原油等实物商品如何支持 24/7 永续；平台同时自报 80 多个市场、约 40 亿美元 OI 和超过 5000 亿美元累计成交。美国定性争议从经济分类推进到具体运行控制，但仍是行业提交材料，不是 CFTC 规则、许可或法院裁定。",
           "url": "https://hyperliquidpolicy.org/hpctradecftcrfcresponse/2026-08-26_hpc_x_trade-xyz-_cftc_rfc_response.pdf"
+        },
+        {
+          "date": "2026-08-31",
+          "point": "据 Bloomberg 报道，Hyperliquid 与 Kraken 母公司 Payward 洽谈由 Bitnomial 向美国注册用户提供与 Hyperliquid 市场相连的加密永续，结构已向 CFTC 提交轮廓但尚未获批。美国永续路径从高层表态和行业分类建议推进到链上市场与持牌交易、清算、经纪实体分层的具体方案。",
+          "url": "https://www.theblock.co/news/markets/2026-08-31-hyperliquid-eyes-us-entry-kraken-parent-payward-perpetual-futures-deal-bloomberg-413129"
         }
       ]
     },
@@ -691,7 +701,7 @@
       "first_seen": "2026-08-25",
       "last_update": "2026-08-25",
       "cadence_days": 6,
-      "next_check": "2026-09-01",
+      "next_check": "2026-09-07",
       "thesis": "LayerZero 宣布 ATLAS，拟向保留前端和客户关系的经纪商及平台提供撮合、清算、结算与风控后台。若能在生产环境兑现，交易入口与执行基础设施可以分别竞争；目前仅为今年晚些时候推出的计划。",
       "why_us": "HertzFlow 研究外部分发或后台合作时，需要分开核验客户归属、风险责任、故障处置与执行兼容性；不可据公告性能直接替换现有 Keeper 与逐市场 LP 架构。",
       "watch_for": "正式推出时间 / 已上线合作方及真实订单流 / 生产延迟与故障恢复 / 风险与清算责任分配 / 开放及许可市场的隔离规则",
