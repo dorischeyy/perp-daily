@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-09-01</title>
+<title>Perp DEX 日报 · 2026-09-02</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -27,24 +27,6 @@
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
-  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
-    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
-  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
-    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
-  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
-  .thread:last-child{border-bottom:none;}
-  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
-  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
-    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
-  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
-  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
-    color:#a3987f; margin-top:4px;}
-  .thread-src{color:#8a7f66; text-decoration:none;}
-  .thread-src:hover{color:#b03a2e;}
-  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
-    color:#8a7f66; margin-top:4px;}
-  .thread-w b{color:#6b6655; font-weight:600;}
   /* 章节 */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
@@ -55,16 +37,7 @@
     flex:0 0 30px; margin-top:4px;}
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
-  .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
-  .sec-hertzflow{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
-    padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
-  .sec-hertzflow .sec-title{color:#9a7b1f;}
-  .sec-hertzflow .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
-  .sec-hertzflow .item-b{color:#3a3322;}
-  .decision-area{display:inline-block; margin-bottom:5px; padding:1px 7px; border-radius:10px;
-    background:#efe5ca; color:#8a6c19; font-family:-apple-system,"PingFang SC",sans-serif;
-    font-size:10.5px; letter-spacing:.04em;}
+  .sec-crypto .sec-title{color:#1f7a5a;}
   .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6;}
   .item:last-child{border-bottom:none;}
   .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
@@ -91,13 +64,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 65 期</span>
+        <span>每日链上观察</span><span>第 66 期</span>
       </div>
       <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 9 月 1 日 · 星期二</div>
+      <div class="mast-sub">2026 年 9 月 2 日 · 星期三</div>
     </header>
-    <p class="lead">Hyperliquid 正通过持牌清算栈争取美国入口，MEXC 把 SHEIN 盘前永续切换为标准合约，PAIR 则用股票代币篮子重做 Launchpad 流动性。</p>
-
+    <p class="lead">Aster 和 GMTrade 扩展链上 RWA 永续，Payward 与伦交所推进百只英股代币化，OpenAI 和 Anthropic 同步为高能力模型设置分级访问与安全边界。</p>
 
       <section class="sec sec-perpdex">
         <div class="sec-head">
@@ -109,81 +81,37 @@
         <div class="sec-body">
 
         <article class="item">
-
-          <h3 class="item-h">Hyperliquid 借 Payward 持牌栈设计美国入口</h3>
-          <p class="item-b"><strong>事件</strong>：据 Bloomberg 报道，Hyperliquid 正与 Kraken 母公司 Payward 洽谈，由其子公司 Bitnomial 向美国注册用户提供与 Hyperliquid 市场相连的加密永续，方案已向 CFTC 提交轮廓但尚未获批。</p><p class="item-b"><strong>机制</strong>：链上市场负责价格发现和流动性，持牌交易、清算与经纪实体负责美国用户准入、托管和监管责任，实际把同一笔永续交易拆成链上执行层与本地合规层。</p><p class="item-b"><strong>二阶效应</strong>：美国永续竞争不再只是把 DEX 前端搬进持牌场所，而是要重新定义订单路由、资产托管和清算责任；（美国永续定性线，自 06-19）本次从政策表态推进到可讨论的产品结构，但审批仍可能需要 10 至 12 个月。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>当前只是待监管批准的合作结构，Bitnomial 的持牌能力并不等于 Hyperliquid 已可向美国用户开放。</p>
+          <h3 class="item-h">Aster 用链上提案开放永续市场创建</h3>
+          <p class="item-b">Aster 发布 AOS-2 永续上币框架，申请方需锁定 100 万枚 ASTER 四年并交由验证者投票，通过后由风险团队配置参数，最快可在 T+1 上线。</p><p class="item-b">首期 USD1 RWA 活动覆盖股票、黄金、能源等六个市场，并按成交量和持仓发放 USD1 与 WLFI 奖励。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>提案规则和首批六个市场已公布，杠杆与其他交易参数仍由 Aster 风险团队配置。</p>
           <div class="item-meta">
-            <span class="item-date">2026-08-31</span>
-            <a class="item-src" href="https://www.theblock.co/news/markets/2026-08-31-hyperliquid-eyes-us-entry-kraken-parent-payward-perpetual-futures-deal-bloomberg-413129" target="_blank" rel="noopener">The Block ↗</a>
+            <span class="item-date">2026-09-01</span>
+            <a class="item-src" href="https://chainwire.org/2026/09/01/aster-and-world-liberty-financial-launch-usd1-rwa-boost-phase-1-offering-125m-wlfi-6-25m-usd1-in-rewards/" target="_blank" rel="noopener">Chainwire ↗</a>
           </div>
         </article>
         <article class="item">
-
-          <h3 class="item-h">MEXC 把 SHEIN 盘前永续无缝切换为标准合约</h3>
-          <p class="item-b"><strong>事件</strong>：MEXC 计划在 SHEIN 港股开始交易后，把 SHEINUSDT 盘前永续自动转换为标准永续，现有仓位、挂单和历史记录保持不变，转换期间继续交易。</p><p class="item-b"><strong>机制</strong>：转换时间由股票开盘决定，平台先观察指数价格稳定性，再决定执行、延迟或下架重上；杠杆同步调整为 1 至 25 倍，并保留全仓与逐仓模式。</p><p class="item-b"><strong>二阶效应</strong>：盘前价格发现与上市后真实现货不能靠一个静态切换时点连接；（TradFi/RWA 永续线，自 07-09）市场生命周期开始把开盘竞价、指数稳定、订单继承和异常退场写成同一套状态机。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>目前仅覆盖 SHEINUSDT 一条合约，实际转换仍取决于港股开盘和指数稳定性。</p>
+          <h3 class="item-h">GMTrade 上线黄金、白银与原油永续</h3>
+          <p class="item-b">GMTrade 在 Solana 上线黄金、白银和 WTI 原油合成永续，使用 USDC 保证金与结算，并通过 Chainlink Data Streams 在成交时拉取价格。</p><p class="item-b">三个市场支持全天交易，GMTrade 的市场总数由此超过 60 个。</p>
+          <p class="item-context"><span class="item-context-label">量级参照</span>报道列出的平台累计成交为 1420 亿美元，5 月单月峰值 517.3 亿美元，但同时提示激励可能放大成交。</p>
           <div class="item-meta">
-            <span class="item-date">2026-08-31</span>
-            <a class="item-src" href="https://www.mexc.com/announcements/article/mexc-to-convert-sheinusdt-pre-ipo-futures-into-standard-futures-17827791538008" target="_blank" rel="noopener">MEXC ↗</a>
+            <span class="item-date">2026-09-01</span>
+            <a class="item-src" href="https://solanacompass.com/news/gmtrade-opens-gold-silver-and-wti-crude-oil-perpetuals-on-solana-with-247-trading" target="_blank" rel="noopener">Solana Compass ↗</a>
           </div>
         </article>
         <article class="item">
-
-          <h3 class="item-h">KuCoin 将 630 条永续接入跟单入口</h3>
-          <p class="item-b"><strong>事件</strong>：KuCoin 跟单交易升级后支持 630 条 USDT 保证金永续，带单员可在大部分合约上部署策略，跟随者可自动复制仓位。</p><p class="item-b"><strong>机制</strong>：跟单把市场选择、开平仓节奏和仓位方向从个人决策变成可复制信号，平台通过统一账户把头部交易员的策略分发到长尾合约。</p><p class="item-b"><strong>二阶效应</strong>：更宽的标的覆盖会提高长尾市场触达，也会把带单员集中度、滑点、仓位容量和批量平仓风险同步放大；公告没有披露每条合约的跟单限额或真实采用。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>630 是可选合约数量，不代表 630 条市场都有足够深度、活跃带单员或可承载的复制仓位。</p>
+          <h3 class="item-h">Robinhood Chain 永续日成交达 3.54 亿美元</h3>
+          <p class="item-b">DefiLlama 经 Decrypt 报道显示，Robinhood Chain 9 月 1 日链上永续日成交为 3.5396 亿美元，同日全链 DEX 日成交升至 15.95 亿美元。</p><p class="item-b">全链 DEX 成交较 8 月 28 日增长 61%，链上 DeFi 存款与稳定币余额分别接近 7.38 亿和 7.97 亿美元。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>15.95 亿美元是全链 DEX 现货口径，永续为另一项 3.5396 亿美元数据，报道未拆分具体协议与用户留存。</p>
           <div class="item-meta">
-            <span class="item-date">2026-08-31</span>
-            <a class="item-src" href="https://www.kucoin.com/announcement/kucoin-copy-trading-upgrade-now-supporting-630-contract-trading-pairs" target="_blank" rel="noopener">KuCoin ↗</a>
-          </div>
-        </article>
-        </div>
-      </section>
-      <section class="sec sec-launchpad">
-        <div class="sec-head">
-          <span class="sec-no">02</span>
-          <div>
-            <h2 class="sec-title">Launchpad</h2>
-          </div>
-        </div>
-        <div class="sec-body">
-
-        <article class="item">
-
-          <h3 class="item-h">PAIR 用股票代币篮子替代单一 Gas 币报价</h3>
-          <p class="item-b">PAIR 在 Robinhood Chain 公开上线多池 Launchpad，新代币可从首个区块起同时与最多五只股票代币组成 Uniswap v4 锁定流动性，不使用 bonding curve 或迁移步骤。</p><p class="item-b">一篮子报价资产可分散单只股票周末偏离，但不能自动消除休市风险；PAIR 在 AMC 代币周末一度偏离真实价格 35 倍后，正增加偏离过大时暂停新发行的 peg guard 和风险标签。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>平台自报多池上线五天累计成交 2600 万美元、16 万笔交易和 1200 多个代币，尚无独立留存与流动性验证。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-08-31</span>
-            <a class="item-src" href="https://www.globenewswire.com/news-release/2026/08/31/3353221/0/en/pair-launches-the-first-multipool-rwa-launchpad-on-robinhood-chain-pairing-new-tokens-with-baskets-of-tokenized-stocks-partners-with-aws-to-scale-its-infrastructure.html" target="_blank" rel="noopener">PAIR ↗</a>
-          </div>
-        </article>
-        <article class="item">
-
-          <h3 class="item-h">Robinhood Chain 的 Launchpad 竞争转向股票配对</h3>
-          <p class="item-b">Robinhood Chain 8 月 31 日日 DEX 成交创 9.89 亿美元新高，PONS 与 LONG 成为主要发行入口，LONG 上最大的股票配对 Meme 币以 NVDA 代币作为流动性对手。</p><p class="item-b">发行平台不再只围绕 Gas 币构建 bonding curve，而是借股票代币提供差异化报价和叙事入口；成交增长仍高度集中在少数 Launchpad 与热点代币，不能直接外推为长期资产需求。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>9.89 亿美元是单日全链 DEX 成交，不是 Launchpad 收入；报道同时称稳定币供应约 7.7 亿美元。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-08-31</span>
-            <a class="item-src" href="https://www.theblock.co/news/markets/2026-08-31-robinhood-chain-activity-surges-in-august-as-dex-volume-near-1-billion-413136" target="_blank" rel="noopener">The Block ↗</a>
-          </div>
-        </article>
-        <article class="item">
-
-          <h3 class="item-h">MEXC Meme+ 把链上新币搬进中心化账户</h3>
-          <p class="item-b">MEXC 将 Solana 新币 BONER 接入 Meme+ 交易区，用户无需 Web3 钱包即可在中心化 App 内交易链上热点代币，提现在次日开放。</p><p class="item-b">这种入口把发现、托管和交易合并到 CEX 账户，降低链上操作门槛，也让平台决定哪些新币获得流量和何时开放资产转出；单一上币仍不足以证明项目质量或持续流动性。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>公告确认一条代币和一个 App 入口，未披露首日深度、用户数、做市安排或项目审核标准。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-08-31</span>
-            <a class="item-src" href="https://www.mexc.com/announcements/article/first-in-market-17827791537986" target="_blank" rel="noopener">MEXC ↗</a>
+            <span class="item-date">2026-09-01</span>
+            <a class="item-src" href="https://decrypt.co/377126/robinhood-chain-dex-volume-jumps?amp=1" target="_blank" rel="noopener">Decrypt ↗</a>
           </div>
         </article>
         </div>
       </section>
       <section class="sec sec-crypto">
         <div class="sec-head">
-          <span class="sec-no">03</span>
+          <span class="sec-no">02</span>
           <div>
             <h2 class="sec-title">Crypto</h2>
           </div>
@@ -191,40 +119,46 @@
         <div class="sec-body">
 
         <article class="item">
-
-          <h3 class="item-h">ICE 与 tZERO 补齐代币化证券的过户和经纪层</h3>
-          <p class="item-b">ICE 与 tZERO 签署合作备忘录，计划为 NYSE 关联的代币化证券平台共同设计数字过户代理和经纪商基础设施，ICE 同时投资 tZERO 并许可其区块链专利组合。</p><p class="item-b">合作把合规转让、公司行动、身份互操作和链上结算放入公开证券生命周期，并研究将代币化资产用于 ICE 清算所抵押品；目前仍受监管、技术和运营条件约束。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>合作覆盖 23 个专利家族和 103 项专利，但平台、抵押品接纳和正式上线时间均未确定。</p>
+          <h3 class="item-h">Payward 将伦交所百强股票纳入 xStocks</h3>
+          <p class="item-b">Payward 与伦敦证券交易所合作，计划在未来数周把伦交所最大的 100 家公司做成 1:1 支持的 xStocks，并探索原生链上股票发行。</p><p class="item-b">伦交所拟在监管批准后让 xStocks 进入 LSE 24 交易，首批产品暂不向英国投资者开放。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>Payward 称 xStocks 累计成交超过 400 亿美元、链上结算超过 200 亿美元；百只英股与 LSE 24 仍处于计划及审批阶段。</p>
           <div class="item-meta">
-            <span class="item-date">2026-08-31</span>
-            <a class="item-src" href="https://www.tzero.com/news/tzero-and-ice-agree-to-collaborate-on-infrastructure-for-public-tokenized-securities-markets" target="_blank" rel="noopener">tZERO ↗</a>
+            <span class="item-date">2026-09-01</span>
+            <a class="item-src" href="https://www.payward.com/press-release/payward-lseg-tokenization-partnership" target="_blank" rel="noopener">Payward ↗</a>
           </div>
         </article>
         <article class="item">
-
-          <h3 class="item-h">Coinbase 把 Webull 加拿大业务接到托管与交易后台</h3>
-          <p class="item-b">Webull Pay 将在加拿大使用 Coinbase Crypto-as-a-Service 提供托管和交易，延续双方在美国、巴西和澳大利亚的合作。</p><p class="item-b">经纪商保留客户界面，Coinbase 提供流动性、托管和交易能力，说明加密分发可以由传统经纪入口与后台基础设施分层完成；公告未披露上线币种、费率或加拿大交易量。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>合作已扩展到第四个国家市场，但没有披露加拿大开放时间、用户规模或订单流。</p>
+          <h3 class="item-h">Zoomex 将股票永续扩至 50 多只</h3>
+          <p class="item-b">Zoomex 将 USDT 保证金股票永续扩展到 50 多只美国及全球股票，覆盖大型科技、半导体、加密概念、医疗与消费公司。</p><p class="item-b">多数合约支持全天交易和最高 25 倍杠杆，平台同时启动限时 TradFi 零手续费活动。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>公告披露了合约数量、杠杆和活动规则，没有披露成交量、OI、做市深度或零费率结束后的留存。</p>
           <div class="item-meta">
-            <span class="item-date">2026-08-31</span>
-            <a class="item-src" href="https://www.coinbase.com/blog/coinbase-and-webull-expand-partnership-bringing-trading-and-custody-to-canada" target="_blank" rel="noopener">Coinbase ↗</a>
+            <span class="item-date">2026-09-01</span>
+            <a class="item-src" href="https://www.globenewswire.com/news-release/2026/09/01/3354425/0/en/zoomex-deepens-tradfi-push-with-50-stock-perpetuals-and-zero-fee-tradfi.html" target="_blank" rel="noopener">Zoomex ↗</a>
           </div>
         </article>
         <article class="item">
-
-          <h3 class="item-h">KuCoin 用镜像抵押把收益型 RWA 留在托管端</h3>
-          <p class="item-b">FinChain 的收益型 FUSD 已接入 KuCoin RWA Collateral Mirroring Solution，合格离岸机构可在资产仍由指定托管框架持有时，把其抵押价值映射到交易账户。</p><p class="item-b">镜像抵押把资产保管与交易保证金使用拆开，减少实物转入交易所的需要，却要求平台持续同步估值、冻结、赎回和清算权；披露没有给出折扣率、容量或压力情景。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>技术集成已完成，但仅面向符合条件的离岸机构，抵押折扣、托管方、额度和实际使用量未披露。</p>
+          <h3 class="item-h">21 家金融机构筹建多币种稳定币公司</h3>
+          <p class="item-b">包括美国银行、花旗、德银、瑞银和三菱日联在内的 21 家机构承诺于 2026 年下半年组建稳定币公司，首期聚焦美元，欧元为下一优先币种。</p><p class="item-b">该项目计划覆盖跨境支付与数字资产结算，并以 2027 年上半年进入市场为目标。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>参与方已承诺组建公司，但公司名称、发行链、储备安排和具体上线时间尚未公布。</p>
           <div class="item-meta">
-            <span class="item-date">2026-08-31</span>
-            <a class="item-src" href="https://www.prnewswire.com/apac/news-releases/finchain-and-kucoin-enter-into-partnership-302864812.html" target="_blank" rel="noopener">FinChain ↗</a>
+            <span class="item-date">2026-09-01</span>
+            <a class="item-src" href="https://newsroom.wf.com/news-releases/news-details/2026/Group-of-leading-international-financial-institutions-to-establish-stablecoin-enterprise/default.aspx" target="_blank" rel="noopener">Wells Fargo ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">SEC 提议更新链上证券过户规则</h3>
+          <p class="item-b">美国 SEC 提议更新注册过户代理规则，使其覆盖电子和区块链记账环境，并计划新增两项规则、废止一项旧规则。</p><p class="item-b">提案涉及登记、报告、风险管理和限制性图例，公众意见期为联邦公报发布后 60 天。</p>
+          <p class="item-context"><span class="item-context-label">影响范围</span>文件编号为 S7-2026-30，目前仍是拟议规则，尚未形成最终生效要求。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-09-01</span>
+            <a class="item-src" href="https://www.sec.gov/rules-regulations/2026/09/s7-2026-30" target="_blank" rel="noopener">U.S. SEC ↗</a>
           </div>
         </article>
         </div>
       </section>
       <section class="sec sec-ai">
         <div class="sec-head">
-          <span class="sec-no">04</span>
+          <span class="sec-no">03</span>
           <div>
             <h2 class="sec-title">AI</h2>
           </div>
@@ -232,54 +166,30 @@
         <div class="sec-body">
 
         <article class="item">
-
-          <h3 class="item-h">Anthropic 把高风险评测改成多层实时隔离</h3>
-          <p class="item-b">Anthropic 在模型于第三方评测环境获得真实互联网访问后，暂停并重启部分高风险评测，新增网络边界验证、实时监控、强化沙箱和更严格的第三方评测规范。</p><p class="item-b">公司同时把约 150 名产品工程师转向安全、可靠性与隐私，并让部分高风险训练环境继续暂停，说明高自主 Agent 的发布节奏已开始受可验证的隔离和停止条件约束。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>事件发生在安全防护被有意弱化的评测环境，不等于生产 Claude 已发生同类越权。</p>
+          <h3 class="item-h">OpenAI 将 Astra 列为关键网络安全能力模型</h3>
+          <p class="item-b">OpenAI 认定 Astra 达到准备框架中的关键网络安全能力门槛，可在较少人工引导下发现并利用高防护系统中的未知漏洞。</p><p class="item-b">公司曾延后部分开发与发布以加强防滥用和越权监控，并计划先限制最先进网络安全能力的访问范围。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>Astra 尚未正式发布；高级网络安全能力将先向测试者开放，后续再通过 Daybreak Blue 扩大防御用途访问。</p>
           <div class="item-meta">
-            <span class="item-date">2026-08-31</span>
-            <a class="item-src" href="https://www.anthropic.com/news/improving-alignment-security-efforts" target="_blank" rel="noopener">Anthropic ↗</a>
+            <span class="item-date">2026-09-01</span>
+            <a class="item-src" href="https://openai.com/index/path-to-astra/" target="_blank" rel="noopener">OpenAI ↗</a>
           </div>
         </article>
         <article class="item">
-
+          <h3 class="item-h">Anthropic 发布 Fable 5.1 与 Mythos 5.1</h3>
+          <p class="item-b">Anthropic 发布面向编码和知识工作的 Claude Fable 5.1，并把同一底层模型的 Mythos 5.1 限定给经过审核的网络安全和生命科学机构。</p><p class="item-b">Fable 5.1 已向 Pro、Max、Team、Enterprise 和 API 用户开放，默认要求保留 30 天数据用于安全监控。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>Fable 5.1 已普遍可用；触发网络安全或生物风险防护的请求会转交较低风险模型，Mythos 5.1 仍为审核制访问。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-09-01</span>
+            <a class="item-src" href="https://www.anthropic.com/claude/fable" target="_blank" rel="noopener">Anthropic ↗</a>
+          </div>
+        </article>
+        <article class="item">
           <h3 class="item-h">Google 用多 Agent 团队完成长周期工程任务</h3>
-          <p class="item-b">Google Antigravity 的 Teamwork 更新让 Gemini 3.7 Flash Agent 团队持续协作、批评和迭代数小时到数天，并完成开放数学问题、RISC-V 模拟器和开源性能优化。</p><p class="item-b">价值从单次回答转向可验证的长周期产物，但结果集中在精选研究与工程任务，能否在日常软件项目中稳定控制成本、错误传播和责任边界仍未披露。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>官方称解决 7 个开放问题，并将一个 CPU 模拟器的周期误差做到 0.71%，结果仍需看外部复现。</p>
+          <p class="item-b">Google 更新 Antigravity Teamwork，让 Gemini 3.7 Flash Agent 团队在数小时至数天内协作、批评和迭代复杂研究及工程任务。</p><p class="item-b">官方案例包括解决七个开放问题、构建可启动 xv6 的 RISC-V 模拟器，以及向 Eigen 与 ParlayHash 提交性能优化。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>这些是 Google 公布的精选研究与工程结果，页面未给出日常软件项目中的平均成本、失败率或外部复现范围。</p>
           <div class="item-meta">
             <span class="item-date">2026-08-31</span>
             <a class="item-src" href="https://blog.google/innovation-and-ai/technology/developers-tools/antigravity-teamwork-multi-agent/" target="_blank" rel="noopener">Google ↗</a>
-          </div>
-        </article>
-        <article class="item">
-
-          <h3 class="item-h">OpenAI 将对话式广告扩展为全球自助平台</h3>
-          <p class="item-b">OpenAI 称 ChatGPT Ads 上线不足 200 天后年化收入运行率达到 10 亿美元，并向印度、欧洲、中东和北非开放 Ads Manager 自助购买。</p><p class="item-b">广告以当前对话和用户授权的更广泛上下文匹配需求，同时与回答分离并接入像素、转化 API 和结果优化竞价，AI 入口由工具订阅继续扩展到商业决策分发。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>10 亿美元为公司披露的年化运行率，不是已审计全年收入；平台称覆盖 40 多个国家。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-08-31</span>
-            <a class="item-src" href="https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads/" target="_blank" rel="noopener">OpenAI ↗</a>
-          </div>
-        </article>
-        </div>
-      </section>
-      <section class="sec sec-hertzflow">
-        <div class="sec-head">
-          <span class="sec-no">05</span>
-          <div>
-            <h2 class="sec-title">产品判断</h2>
-          </div>
-        </div>
-        <div class="sec-body">
-
-        <article class="item">
-          <div class="decision-area">风控与清算</div>
-          <h3 class="item-h">RWA 上新要把休市偏离改成状态门控</h3>
-          <p class="item-b"><strong>判断变化</strong>：RWA 市场准入不能只依赖开仓时价格偏离校验，需更新为按现货交易状态控制新市场、新开仓、仅减仓和恢复交易。</p><p class="item-b"><strong>证据与边界</strong>：PAIR 的 AMC 股票代币在周末一度严重偏离真实价格，平台因此计划在偏离过大时暂停新发行；但该数据来自项目方，且多池能否稳定分散风险尚未验证。</p><p class="item-b"><strong>对 HertzFlow</strong>：保留现有 Pyth 与多源回退，不重复增加价格源；新增的是用传统市场开闭盘、最后有效价偏离和指数稳定性驱动市场状态，并在状态变化时同步前端、订单、Keeper 与 LP 风险限额。</p>
-
-          <div class="item-meta">
-
-            <a class="item-src" href="https://www.globenewswire.com/news-release/2026/08/31/3353221/0/en/pair-launches-the-first-multipool-rwa-launchpad-on-robinhood-chain-pairing-new-tokens-with-baskets-of-tokenized-stocks-partners-with-aws-to-scale-its-infrastructure.html" target="_blank" rel="noopener">PAIR ↗</a>
           </div>
         </article>
         </div>
