@@ -85,9 +85,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-08-31",
+      "last_update": "2026-09-01",
       "cadence_days": 6,
-      "next_check": "2026-09-06",
+      "next_check": "2026-09-07",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -216,6 +216,16 @@
           "date": "2026-08-31",
           "point": "MEXC 宣布在 SHEIN 港股开盘并确认指数稳定后，将 SHEINUSDT 盘前永续自动转换为标准永续，保留现有仓位、挂单与历史记录；若指数波动过大则延迟或下架重上。RWA 永续竞争由扩列推进到开盘竞价、价格稳定、订单继承和异常退场组成的生命周期控制。",
           "url": "https://www.mexc.com/announcements/article/mexc-to-convert-sheinusdt-pre-ipo-futures-into-standard-futures-17827791538008"
+        },
+        {
+          "date": "2026-09-01",
+          "point": "GMTrade 在 Solana 上线黄金、白银和 WTI 原油合成永续，使用 USDC 结算并由 Chainlink Data Streams 在成交时拉取价格；RWA 永续继续从股票扩展到全天商品市场，但报道同时提示其历史高成交可能受积分激励放大。",
+          "url": "https://solanacompass.com/news/gmtrade-opens-gold-silver-and-wti-crude-oil-perpetuals-on-solana-with-247-trading"
+        },
+        {
+          "date": "2026-09-01",
+          "point": "Payward 与伦敦证券交易所计划把伦交所最大的 100 家公司纳入 1:1 支持的 xStocks，并在监管批准后接入 LSE 24；代币化现货与 RWA 永续的竞争进一步扩展到英国股票的全球分发和受监管交易入口。",
+          "url": "https://www.payward.com/press-release/payward-lseg-tokenization-partnership"
         }
       ]
     },
@@ -224,11 +234,11 @@
       "title": "Robinhood Chain 上线：经纪商巨头直接下场做 perp 分发",
       "score": 93,
       "tier": "S",
-      "status": "dormant",
+      "status": "active",
       "first_seen": "2026-07-02",
-      "last_update": "2026-07-20",
+      "last_update": "2026-09-01",
       "cadence_days": 3,
-      "next_check": "2026-08-10",
+      "next_check": "2026-09-04",
       "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
       "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
       "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -312,6 +322,11 @@
           "date": "2026-07-20",
           "point": "Lighter 把 Robinhood Chain 上的 NVDA、GOOG、AAPL 等股票代币从可交易资产升级为永续保证金，首次让经纪商发行的股票代币直接支撑 DEX 杠杆仓位；代币带 Chainlink 价格源，但只面向合资格非美国用户，且未披露抵押折扣、强平参数或采用规模。Robinhood 分发线由钱包入口推进到资金效率层，新增价值来自抵押品复用，而不是 Arcus 承诺的 35 个 RWA 永续市场交付。",
           "url": "https://coinmarketcap.com/cmc-ai/lighter/price-analysis/"
+        },
+        {
+          "date": "2026-09-01",
+          "point": "DefiLlama 经 Decrypt 报道显示，Robinhood Chain 链上永续日成交升至约 3.54 亿美元，全链 DEX 日成交为 15.95 亿美元；分发线出现新的原生永续使用量，但报道未拆分具体协议、OI、费用或用户留存。",
+          "url": "https://decrypt.co/377126/robinhood-chain-dex-volume-jumps?amp=1"
         }
       ]
     },
@@ -699,7 +714,7 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-08-25",
-      "last_update": "2026-08-25",
+      "last_update": "2026-09-01",
       "cadence_days": 6,
       "next_check": "2026-09-07",
       "thesis": "LayerZero 宣布 ATLAS，拟向保留前端和客户关系的经纪商及平台提供撮合、清算、结算与风控后台。若能在生产环境兑现，交易入口与执行基础设施可以分别竞争；目前仅为今年晚些时候推出的计划。",
@@ -710,6 +725,11 @@
           "date": "2026-08-25",
           "point": "LayerZero Labs 宣布 ATLAS 交易基础设施，拟将撮合、清算、结算和风控放入同一引擎，由合作方保留应用和用户关系，计划今年晚些时候推出；尚无生产运行与采用数据可验证。",
           "url": "https://www.prnewswire.com/news-releases/layerzero-announces-atlas-a-headless-exchange-for-the-future-of-global-markets-302859062.html"
+        },
+        {
+          "date": "2026-09-01",
+          "point": "Aster 发布 AOS-2 永续上币框架，申请方锁定 100 万枚 ASTER 四年并经验证者投票后，可由风险团队配置市场并最快 T+1 上线；交易后台服务化由前端与撮合分层继续推进到市场创建规则标准化。",
+          "url": "https://chainwire.org/2026/09/01/aster-and-world-liberty-financial-launch-usd1-rwa-boost-phase-1-offering-125m-wlfi-6-25m-usd1-in-rewards/"
         }
       ]
     },
