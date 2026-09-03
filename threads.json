@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-08-30",
+  "updated": "2026-09-03",
   "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -24,9 +24,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-07-24",
-      "last_update": "2026-08-30",
+      "last_update": "2026-09-02",
       "cadence_days": 7,
-      "next_check": "2026-09-04",
+      "next_check": "2026-09-09",
       "thesis": "CFTC 正把预测市场从宽泛的产品模板推进到逐类合约的结算方法、数据源与公共利益审查，Hyperliquid 阵营则要求以实际结算结果划界、由联邦独家监管并公开允许合约的理由。谁能把这些要求变成可复用的合约准入与争议处理基础设施，谁才可能规模化扩列链上 outcome contracts。",
       "why_us": "预测市场与非标准标的会争夺同一批交易用户、抵押品和分发入口。HertzFlow 若扩展事件类市场，需要先建立逐合约可审计的结算源、异常处理、争议裁决与准入材料，不能把普通永续的参数化上币流程直接复用。",
       "watch_for": "CFTC 是否发布最终规则及逐类合约示例 / 是否公开允许合约的审查理由 / 州级赌博监管与联邦专属管辖的法院结果 / Hyperliquid outcome contracts 的 OI、争议事件与结算记录",
@@ -75,6 +75,11 @@
         "date": "2026-08-30",
         "point": "据 Front Office Sports 报道，Kalshi 与美国网球协会达成美网独家预测市场合作，其他预测市场平台据称不能在赛事现场及 ESPN 转播中投放广告。该变化把体育赛事内容和预测市场分发进一步绑定，但财务条款未公开，Kalshi 当时也尚未列入美网官网合作伙伴，且不改变州与联邦管辖争议未决的状态。",
         "url": "https://www.theblock.co/news/deals/2026-08-30-kalshi-becomes-exclusive-prediction-market-partner-of-us-open-report-413074"
+      },
+      {
+        "date": "2026-09-02",
+        "point": "新泽西州请求美国最高法院复审第三巡回法院关于联邦法排除州级体育博彩监管的裁定，并以第三与第九巡回法院分歧为受理理由。州与联邦管辖争议已推进到最高法院受理门槛，但法院尚未决定是否审理。",
+        "url": "https://newjerseymonitor.com/2026/09/02/nj-supreme-court-kalshi-sports-betting/"
       }
       ]
     },
@@ -85,9 +90,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-09-01",
+      "last_update": "2026-09-02",
       "cadence_days": 6,
-      "next_check": "2026-09-07",
+      "next_check": "2026-09-08",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -226,6 +231,16 @@
           "date": "2026-09-01",
           "point": "Payward 与伦敦证券交易所计划把伦交所最大的 100 家公司纳入 1:1 支持的 xStocks，并在监管批准后接入 LSE 24；代币化现货与 RWA 永续的竞争进一步扩展到英国股票的全球分发和受监管交易入口。",
           "url": "https://www.payward.com/press-release/payward-lseg-tokenization-partnership"
+        },
+        {
+          "date": "2026-09-02",
+          "point": "Variational 在 Omni 上线 XAU 与 US100 互换，以 RFQ 让 OLP 对接传统金融场所，并用美元借贷利率替代波动资金费；链上 RWA 敞口开始从扩列推进到流动性来源和持仓成本结构竞争，但初始 OI 上限与实际成交深度仍待验证。",
+          "url": "https://www.chaincatcher.com/article/2287087"
+        },
+        {
+          "date": "2026-09-02",
+          "point": "Backpack 上线 MU、SNDK、SPY 与 QQQ 永续，并允许 Micron 和 SanDisk 真实股票作为跨资产组合保证金。RWA 竞争由代币化现货与永续扩列推进到受监管股票持仓直接支持衍生品保证金，但首阶段仅两只股票可抵押。",
+          "url": "https://learn.backpack.exchange/blog/backpack-tradfi-perpetuals-equity-collateral"
         }
       ]
     },
@@ -426,7 +441,7 @@
       "first_seen": "2026-06-19",
       "last_update": "2026-08-31",
       "cadence_days": 3,
-      "next_check": "2026-09-03",
+      "next_check": "2026-09-06",
       "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
       "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
       "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
@@ -740,9 +755,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-08-28",
-      "last_update": "2026-08-29",
+      "last_update": "2026-09-02",
       "cadence_days": 6,
-      "next_check": "2026-09-04",
+      "next_check": "2026-09-08",
       "thesis": "KuCoin UTA API V2 把盘前转永续日期、到期与结算时间、资金费、最大市价单和多阶段交易状态放进统一合约接口，并给出 V1 退场时间。市场生命周期正从运营公告转成可驱动前端、订单与风控的机器状态，但中心化交易所枚举能否覆盖链上 Keeper、LP 和清算仍未验证。",
       "why_us": "HertzFlow 的市场开放、仅减仓、暂停、结算、关闭和退场若由不同模块各自解释，会放大订单误提交和用户误解。先统一内部状态契约与异常用例，再映射前端、订单、Keeper 和市场配置，能降低生命周期切换风险。",
       "watch_for": "KuCoin V1 实际下线与迁移事故 / 其他交易所是否公开同类状态接口 / 盘前转永续和结算状态是否出现错单 / HertzFlow 现有市场状态在前端、订单与 Keeper 间的映射缺口",
@@ -756,6 +771,11 @@
           "date": "2026-08-29",
           "point": "KuCoin 在约 120 分钟 API 升级期间保持交易服务整体运行，但明确提示 WebSocket 可能短暂断连、丢数据或延迟，并要求客户端重连恢复。市场生命周期需要同时描述服务状态与数据连接状态，接入方还需实现补数、幂等和状态恢复。",
           "url": "https://www.kucoin.com/announcement/en-announcement-of-kucoin-api-upgrade-2026-08-29"
+        },
+        {
+          "date": "2026-09-02",
+          "point": "HyENA 按此前计划在 08-31 至 09-02 逐小时下架全部市场，以最终标记价格自动结算仓位并把保证金返还现货余额；Entropy 的 io:OAI 则在零成交后被下架。两个样本都表明登记、开放、形成流动性和退出结算必须是可区分的市场状态。",
+          "url": "https://www.chaincatcher.com/article/2286294"
         }
       ]
     }
