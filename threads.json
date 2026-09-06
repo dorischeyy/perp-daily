@@ -256,7 +256,7 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-02",
-      "last_update": "2026-09-01",
+      "last_update": "2026-09-04",
       "cadence_days": 3,
       "next_check": "2026-09-07",
       "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
@@ -347,6 +347,11 @@
           "date": "2026-09-01",
           "point": "DefiLlama 经 Decrypt 报道显示，Robinhood Chain 链上永续日成交升至约 3.54 亿美元，全链 DEX 日成交为 15.95 亿美元；分发线出现新的原生永续使用量，但报道未拆分具体协议、OI、费用或用户留存。",
           "url": "https://decrypt.co/377126/robinhood-chain-dex-volume-jumps?amp=1"
+        },
+        {
+          "date": "2026-09-04",
+          "point": "The Defiant 按 DefiLlama 数据拆出 Robinhood 分发的独立贡献：Robinhood Chain 上的 Lighter 实例近24小时成交2.4亿美元，占 Lighter 同期16.9%；7日占15.3%，30日占11.6%。经纪商入口已稳定贡献一成以上成交，但产品仍不向美国等六个市场开放，且 Lighter 未提交美国指定合约市场注册申请。",
+          "url": "https://thedefiant.io/news/defi/lighter-lit-perp-dex-token-rally-robinhood-volume"
         }
       ]
     },
@@ -444,9 +449,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-06-19",
-      "last_update": "2026-08-31",
+      "last_update": "2026-09-04",
       "cadence_days": 3,
-      "next_check": "2026-09-06",
+      "next_check": "2026-09-07",
       "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
       "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
       "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
@@ -530,6 +535,16 @@
           "date": "2026-08-31",
           "point": "据 Bloomberg 报道，Hyperliquid 与 Kraken 母公司 Payward 洽谈由 Bitnomial 向美国注册用户提供与 Hyperliquid 市场相连的加密永续，结构已向 CFTC 提交轮廓但尚未获批。美国永续路径从高层表态和行业分类建议推进到链上市场与持牌交易、清算、经纪实体分层的具体方案。",
           "url": "https://www.theblock.co/news/markets/2026-08-31-hyperliquid-eyes-us-entry-kraken-parent-payward-perpetual-futures-deal-bloomberg-413129"
+        },
+        {
+          "date": "2026-09-03",
+          "point": "CFTC 正式请求联邦法院驳回 CME 对 Kalshi 比特币永续批准令的诉讼，主张 CME 未证明竞争损害且可自行上市同类期货；法院尚未裁定，CME 反对动议的期限为10月2日。诉讼由行业争论进入明确程序节点，swaps 与 futures 的实体定性仍未解决。",
+          "url": "https://www.coindesk.com/policy/2026/09/03/cftc-asks-judge-to-dismiss-cme-lawsuit-over-crypto-perpetual-futures"
+        },
+        {
+          "date": "2026-09-04",
+          "point": "Coinbase Derivatives 与 Coinbase Financial Markets 分别向 SEC 提交 Form 1-N 和 Form BD-N，尝试以证券期货交易场所加经纪实体的组合在美国提供单股永续；文件未披露上线日期或标的，仍待 CFTC 产品批准。美国永续分类框架从加密资产推进到单股敞口的具体登记路径。",
+          "url": "https://chaintechdaily.com/2026/09/04/coinbase-files-to-bring-stock-perpetuals-to-the-us/"
         }
       ]
     },
