@@ -24,9 +24,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-07-24",
-      "last_update": "2026-09-02",
+      "last_update": "2026-09-08",
       "cadence_days": 7,
-      "next_check": "2026-09-09",
+      "next_check": "2026-09-15",
       "thesis": "CFTC 正把预测市场从宽泛的产品模板推进到逐类合约的结算方法、数据源与公共利益审查，Hyperliquid 阵营则要求以实际结算结果划界、由联邦独家监管并公开允许合约的理由。谁能把这些要求变成可复用的合约准入与争议处理基础设施，谁才可能规模化扩列链上 outcome contracts。",
       "why_us": "预测市场与非标准标的会争夺同一批交易用户、抵押品和分发入口。HertzFlow 若扩展事件类市场，需要先建立逐合约可审计的结算源、异常处理、争议裁决与准入材料，不能把普通永续的参数化上币流程直接复用。",
       "watch_for": "CFTC 是否发布最终规则及逐类合约示例 / 是否公开允许合约的审查理由 / 州级赌博监管与联邦专属管辖的法院结果 / Hyperliquid outcome contracts 的 OI、争议事件与结算记录",
@@ -80,6 +80,11 @@
         "date": "2026-09-02",
         "point": "新泽西州请求美国最高法院复审第三巡回法院关于联邦法排除州级体育博彩监管的裁定，并以第三与第九巡回法院分歧为受理理由。州与联邦管辖争议已推进到最高法院受理门槛，但法院尚未决定是否审理。",
         "url": "https://newjerseymonitor.com/2026/09/02/nj-supreme-court-kalshi-sports-betting/"
+      },
+      {
+        "date": "2026-09-08",
+        "point": "Robinhood 与 Crypto.com、OG.com 合作，把部分事件合约新增路由至 OG.com，同时继续连接 Kalshi、ForecastEX 和 Rothera；第二季度成交 136 亿份事件合约、收入约 1.56 亿美元。预测市场分发进入多执行场所阶段，但这不解决逐类合约准入与州、联邦管辖争议。",
+        "url": "https://www.theblock.co/news/markets/2026-09-08-robinhood-expands-prediction-markets-crypto-com-og-partnerships-nfl-season-413832"
       }
       ]
     },
@@ -90,9 +95,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-09-03",
+      "last_update": "2026-09-08",
       "cadence_days": 6,
-      "next_check": "2026-09-09",
+      "next_check": "2026-09-14",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -246,6 +251,11 @@
           "date": "2026-09-03",
           "point": "RWAperp 宣布在 X Layer 上线覆盖股票、指数、商品和加密资产的永续市场，并将权益类休市、跳空、停牌和公司行动纳入风险引擎；但官网仍显示候补名单与即将上线，真实开放范围和成交尚待验证。",
           "url": "https://www.theblock.co/press-releases/413470/rwaperp-launches-ai-executed-perpetuals-venue-on-okxs-x-layer"
+        },
+        {
+          "date": "2026-09-08",
+          "point": "Hyperliquid 总未平仓量达到 143 亿美元，但过去一个月总量增加 35.7 亿美元时，HIP-3 未平仓量反而减少 1.19 亿美元，占比从 34% 降至 25%。RWA 永续已有规模，但短期新增持仓重新集中于核心加密永续，后续必须区分总量增长与资产类别持续性。",
+          "url": "https://www.theblock.co/news/ecosystems/2026-09-08-hyperliquid-open-interest-climbs-14-3-billion-hype-hits-all-time-high-413855"
         }
       ]
     },
@@ -751,7 +761,7 @@
       "first_seen": "2026-08-25",
       "last_update": "2026-09-03",
       "cadence_days": 6,
-      "next_check": "2026-09-09",
+      "next_check": "2026-09-15",
       "thesis": "LayerZero 宣布 ATLAS，拟向保留前端和客户关系的经纪商及平台提供撮合、清算、结算与风控后台。若能在生产环境兑现，交易入口与执行基础设施可以分别竞争；目前仅为今年晚些时候推出的计划。",
       "why_us": "HertzFlow 研究外部分发或后台合作时，需要分开核验客户归属、风险责任、故障处置与执行兼容性；不可据公告性能直接替换现有 Keeper 与逐市场 LP 架构。",
       "watch_for": "正式推出时间 / 已上线合作方及真实订单流 / 生产延迟与故障恢复 / 风险与清算责任分配 / 开放及许可市场的隔离规则",
