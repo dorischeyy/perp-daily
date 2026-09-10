@@ -266,9 +266,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-02",
-      "last_update": "2026-09-04",
+      "last_update": "2026-09-08",
       "cadence_days": 3,
-      "next_check": "2026-09-10",
+      "next_check": "2026-09-13",
       "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
       "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
       "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -362,6 +362,11 @@
           "date": "2026-09-04",
           "point": "The Defiant 按 DefiLlama 数据拆出 Robinhood 分发的独立贡献：Robinhood Chain 上的 Lighter 实例近24小时成交2.4亿美元，占 Lighter 同期16.9%；7日占15.3%，30日占11.6%。经纪商入口已稳定贡献一成以上成交，但产品仍不向美国等六个市场开放，且 Lighter 未提交美国指定合约市场注册申请。",
           "url": "https://thedefiant.io/news/defi/lighter-lit-perp-dex-token-rally-robinhood-volume"
+        },
+        {
+          "date": "2026-09-08",
+          "point": "The Block引述链上研究显示，Robinhood Chain的代币化股票在9月4日占该链代币化资产价值约77.1%，为1.151亿美元中的主要部分；DeFiPrime另记录432个以股票代币作报价资产的流动性池，覆盖19个股票代码，占这些资产24小时链上成交约31.3%。经纪商分发已从钱包入口和补贴推进到可组合流动性，但这些统计是第三方扫描下限，仍未拆出Arcus与Lighter的独立OI和留存。",
+          "url": "https://www.theblock.co/newsletters/tokenization-briefing/2026-09-08-tokenization-briefing-tokenized-treasuries-grew-75-in-2026-413931"
         }
       ]
     },
@@ -459,9 +464,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-06-19",
-      "last_update": "2026-09-04",
+      "last_update": "2026-09-09",
       "cadence_days": 3,
-      "next_check": "2026-09-10",
+      "next_check": "2026-09-12",
       "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
       "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
       "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
@@ -555,6 +560,11 @@
           "date": "2026-09-04",
           "point": "Coinbase Derivatives 与 Coinbase Financial Markets 分别向 SEC 提交 Form 1-N 和 Form BD-N，尝试以证券期货交易场所加经纪实体的组合在美国提供单股永续；文件未披露上线日期或标的，仍待 CFTC 产品批准。美国永续分类框架从加密资产推进到单股敞口的具体登记路径。",
           "url": "https://chaintechdaily.com/2026/09/04/coinbase-files-to-bring-stock-perpetuals-to-the-us/"
+        },
+        {
+          "date": "2026-09-09",
+          "point": "前美国副总检察长Elizabeth Prelogar代表Hyperliquid Policy Center申请提交法庭之友意见，支持CFTC驳回CME诉讼，主张CME未受法律可诉的竞争损害，且Kalshi获批反而扩大了可参与市场。案件首次出现链上永续政策组织的正式诉讼介入，但意见书仍待法院接纳，swaps与futures的实体定性也未获裁定。",
+          "url": "https://news.bloomberglaw.com/crypto/bidens-solicitor-general-backs-cftc-in-cmes-perpetuals-suit"
         }
       ]
     },
