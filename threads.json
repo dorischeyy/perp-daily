@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-09-04",
+  "updated": "2026-09-11",
   "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -24,9 +24,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-07-24",
-      "last_update": "2026-09-08",
+      "last_update": "2026-09-10",
       "cadence_days": 7,
-      "next_check": "2026-09-15",
+      "next_check": "2026-09-17",
       "thesis": "CFTC 正把预测市场从宽泛的产品模板推进到逐类合约的结算方法、数据源与公共利益审查，Hyperliquid 阵营则要求以实际结算结果划界、由联邦独家监管并公开允许合约的理由。谁能把这些要求变成可复用的合约准入与争议处理基础设施，谁才可能规模化扩列链上 outcome contracts。",
       "why_us": "预测市场与非标准标的会争夺同一批交易用户、抵押品和分发入口。HertzFlow 若扩展事件类市场，需要先建立逐合约可审计的结算源、异常处理、争议裁决与准入材料，不能把普通永续的参数化上币流程直接复用。",
       "watch_for": "CFTC 是否发布最终规则及逐类合约示例 / 是否公开允许合约的审查理由 / 州级赌博监管与联邦专属管辖的法院结果 / Hyperliquid outcome contracts 的 OI、争议事件与结算记录",
@@ -81,11 +81,16 @@
         "point": "新泽西州请求美国最高法院复审第三巡回法院关于联邦法排除州级体育博彩监管的裁定，并以第三与第九巡回法院分歧为受理理由。州与联邦管辖争议已推进到最高法院受理门槛，但法院尚未决定是否审理。",
         "url": "https://newjerseymonitor.com/2026/09/02/nj-supreme-court-kalshi-sports-betting/"
       },
-      {
-        "date": "2026-09-08",
-        "point": "Robinhood 与 Crypto.com、OG.com 合作，把部分事件合约新增路由至 OG.com，同时继续连接 Kalshi、ForecastEX 和 Rothera；第二季度成交 136 亿份事件合约、收入约 1.56 亿美元。预测市场分发进入多执行场所阶段，但这不解决逐类合约准入与州、联邦管辖争议。",
-        "url": "https://www.theblock.co/news/markets/2026-09-08-robinhood-expands-prediction-markets-crypto-com-og-partnerships-nfl-season-413832"
-      }
+        {
+          "date": "2026-09-08",
+          "point": "Robinhood 与 Crypto.com、OG.com 合作，把部分事件合约新增路由至 OG.com，同时继续连接 Kalshi、ForecastEX 和 Rothera；第二季度成交 136 亿份事件合约、收入约 1.56 亿美元。预测市场分发进入多执行场所阶段，但这不解决逐类合约准入与州、联邦管辖争议。",
+          "url": "https://www.theblock.co/news/markets/2026-09-08-robinhood-expands-prediction-markets-crypto-com-og-partnerships-nfl-season-413832"
+        },
+        {
+          "date": "2026-09-10",
+          "point": "tradeXYZ 在 Hyperliquid 上推出 Events，把体育、政治、经济和金融结果合约接入现货与永续共用账户，首批 Up/Down 合约以 XYZ 的 HIP-3 连续市场价格作为结算输入。预测市场分发由独立页面推进到统一保证金与定价基础设施，但争议处理和逐类准入仍待验证。",
+          "url": "https://coinness.com/en/news/1168359"
+        }
       ]
     },
     {
@@ -95,9 +100,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-09-08",
+      "last_update": "2026-09-10",
       "cadence_days": 6,
-      "next_check": "2026-09-14",
+      "next_check": "2026-09-16",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -256,6 +261,11 @@
           "date": "2026-09-08",
           "point": "Hyperliquid 总未平仓量达到 143 亿美元，但过去一个月总量增加 35.7 亿美元时，HIP-3 未平仓量反而减少 1.19 亿美元，占比从 34% 降至 25%。RWA 永续已有规模，但短期新增持仓重新集中于核心加密永续，后续必须区分总量增长与资产类别持续性。",
           "url": "https://www.theblock.co/news/ecosystems/2026-09-08-hyperliquid-open-interest-climbs-14-3-billion-hype-hits-all-time-high-413855"
+        },
+        {
+          "date": "2026-09-10",
+          "point": "Nasdaq Ventures 同意向 Kraken 母公司 Payward 投资 1 亿美元，并将双方合作推进到 Nasdaq Equity Token 与 xStocks 的分发、结算和交易互操作。代币化股票竞争由资产发行继续推进到传统交易所基础设施与加密执行场所的资本绑定，但正式市场仍待监管批准和流动性验证。",
+          "url": "https://www.nasdaq.com/newsroom/nasdaq-advances-always-on-markets-and-tokenized-equities-strategy-payward"
         }
       ]
     },
@@ -266,7 +276,7 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-02",
-      "last_update": "2026-09-08",
+      "last_update": "2026-09-10",
       "cadence_days": 3,
       "next_check": "2026-09-13",
       "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
@@ -802,7 +812,7 @@
       "first_seen": "2026-08-28",
       "last_update": "2026-09-08",
       "cadence_days": 6,
-      "next_check": "2026-09-14",
+      "next_check": "2026-09-16",
       "thesis": "KuCoin UTA API V2 把盘前转永续日期、到期与结算时间、资金费、最大市价单和多阶段交易状态放进统一合约接口，并给出 V1 退场时间。市场生命周期正从运营公告转成可驱动前端、订单与风控的机器状态，但中心化交易所枚举能否覆盖链上 Keeper、LP 和清算仍未验证。",
       "why_us": "HertzFlow 的市场开放、仅减仓、暂停、结算、关闭和退场若由不同模块各自解释，会放大订单误提交和用户误解。先统一内部状态契约与异常用例，再映射前端、订单、Keeper 和市场配置，能降低生命周期切换风险。",
       "watch_for": "KuCoin V1 实际下线与迁移事故 / 其他交易所是否公开同类状态接口 / 盘前转永续和结算状态是否出现错单 / HertzFlow 现有市场状态在前端、订单与 Keeper 间的映射缺口",
@@ -826,6 +836,11 @@
           "date": "2026-09-08",
           "point": "Binance 为 TACUSDT 公开从最新价格保护期切换到标准标记价的过渡安排：最长约三小时平滑转换，持仓与挂单保留、交易不中断，资金费上限随后从 0.005% 扩至 2%。这为新市场从保护态进入常规态提供了明确样本，但仍通过公告而非可机读状态接口传达。",
           "url": "https://www.binance.com/en/support/announcement/detail/2e512ed88fb64a34be4c9e38e1233991"
+        },
+        {
+          "date": "2026-09-10",
+          "point": "Reya 在 V2 从 AMM 迁往订单簿前，将 ADA、APT 等 12 个市场切为仅减仓，保留平仓与缩仓但禁止新增风险。市场生命周期开始同时承担撮合架构和流动性迁移门控，但受影响持仓、截止时间与最终结算规则尚未完整披露。",
+          "url": "https://www.kucoin.com/news/flash/reya-v2-shifts-to-orderbook-model-12-markets-enter-reduce-only-mode"
         }
       ]
     }
