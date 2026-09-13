@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-09-12",
+  "updated": "2026-09-13",
   "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -24,7 +24,7 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-07-24",
-      "last_update": "2026-09-10",
+      "last_update": "2026-09-12",
       "cadence_days": 7,
       "next_check": "2026-09-17",
       "thesis": "CFTC 正把预测市场从宽泛的产品模板推进到逐类合约的结算方法、数据源与公共利益审查，Hyperliquid 阵营则要求以实际结算结果划界、由联邦独家监管并公开允许合约的理由。谁能把这些要求变成可复用的合约准入与争议处理基础设施，谁才可能规模化扩列链上 outcome contracts。",
@@ -278,7 +278,7 @@
       "first_seen": "2026-07-02",
       "last_update": "2026-09-10",
       "cadence_days": 3,
-      "next_check": "2026-09-13",
+      "next_check": "2026-09-16",
       "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
       "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
       "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -377,6 +377,11 @@
           "date": "2026-09-08",
           "point": "The Block引述链上研究显示，Robinhood Chain的代币化股票在9月4日占该链代币化资产价值约77.1%，为1.151亿美元中的主要部分；DeFiPrime另记录432个以股票代币作报价资产的流动性池，覆盖19个股票代码，占这些资产24小时链上成交约31.3%。经纪商分发已从钱包入口和补贴推进到可组合流动性，但这些统计是第三方扫描下限，仍未拆出Arcus与Lighter的独立OI和留存。",
           "url": "https://www.theblock.co/newsletters/tokenization-briefing/2026-09-08-tokenization-briefing-tokenized-treasuries-grew-75-in-2026-413931"
+        },
+        {
+          "date": "2026-09-12",
+          "point": "MemeFees显示，Pons在9月12日录得583.84万美元手续费和9001.51万美元DefiLlama口径曲线成交，占其受追踪发射台手续费50.4%；约496.25万美元流向供给侧、87.59万美元计入协议收入。Robinhood Chain的分发已出现可观测价值捕获，但最近7日手续费较前7日下降49%，且样本未提供平台级活跃钱包。",
+          "url": "https://memefees.com/launchpads/pons"
         }
       ]
     },
@@ -779,9 +784,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-08-25",
-      "last_update": "2026-09-03",
+      "last_update": "2026-09-12",
       "cadence_days": 6,
-      "next_check": "2026-09-15",
+      "next_check": "2026-09-18",
       "thesis": "LayerZero 宣布 ATLAS，拟向保留前端和客户关系的经纪商及平台提供撮合、清算、结算与风控后台。若能在生产环境兑现，交易入口与执行基础设施可以分别竞争；目前仅为今年晚些时候推出的计划。",
       "why_us": "HertzFlow 研究外部分发或后台合作时，需要分开核验客户归属、风险责任、故障处置与执行兼容性；不可据公告性能直接替换现有 Keeper 与逐市场 LP 架构。",
       "watch_for": "正式推出时间 / 已上线合作方及真实订单流 / 生产延迟与故障恢复 / 风险与清算责任分配 / 开放及许可市场的隔离规则",
@@ -800,6 +805,11 @@
           "date": "2026-09-03",
           "point": "Hyperliquid 在测试网为 HIP-3 加入可选链上白名单与子部署方管理，市场部署者可在同一底层交易设施上选择开放或许可访问；功能仍属初步设计，未公布主网时间，许可控制也不替代监管义务。",
           "url": "https://chaintechdaily.com/2026/09/03/hyperliquid-expands-hip-3-with-permissioned-markets/"
+        },
+        {
+          "date": "2026-09-12",
+          "point": "Lighter开放开发者共享交易核心，并同时上线免gas入金、下调账户转移费与提高提币频率上限。交易后台服务化从公告与许可市场继续推进到可复用产品能力，但尚无开发者接入量、真实订单流或故障责任边界数据。",
+          "url": "https://perpdexwars.com/en/perpdex-news?venue=hyperliquid"
         }
       ]
     },
