@@ -281,9 +281,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-02",
-      "last_update": "2026-09-10",
+      "last_update": "2026-09-14",
       "cadence_days": 3,
-      "next_check": "2026-09-16",
+      "next_check": "2026-09-17",
       "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
       "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
       "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -387,6 +387,11 @@
           "date": "2026-09-12",
           "point": "MemeFees显示，Pons在9月12日录得583.84万美元手续费和9001.51万美元DefiLlama口径曲线成交，占其受追踪发射台手续费50.4%；约496.25万美元流向供给侧、87.59万美元计入协议收入。Robinhood Chain的分发已出现可观测价值捕获，但最近7日手续费较前7日下降49%，且样本未提供平台级活跃钱包。",
           "url": "https://memefees.com/launchpads/pons"
+        },
+        {
+          "date": "2026-09-14",
+          "point": "StoneX与The Block把Robinhood Chain增长来源拆到具体分发组件：Pons近期约每日发射1万个代币，Long.xyz以Robinhood股票代币为社区币提供交易对，gas补贴继续降低链上交互门槛；但CoinDesk Research估计Robinhood主App用户只贡献链上交易的1%至2%，多数活动仍来自交易终端、Uniswap与发射台。经纪商品牌和链上分发已形成规模，存量App用户迁移仍未证实。",
+          "url": "https://www.theblock.co/news/business/2026-09-14-robinhood-chain-rapid-growth-being-driven-4-key-factors-analyst-says-414687"
         }
       ]
     },
@@ -484,9 +489,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-06-19",
-      "last_update": "2026-09-09",
+      "last_update": "2026-09-15",
       "cadence_days": 3,
-      "next_check": "2026-09-15",
+      "next_check": "2026-09-18",
       "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
       "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
       "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
@@ -585,6 +590,11 @@
           "date": "2026-09-09",
           "point": "前美国副总检察长Elizabeth Prelogar代表Hyperliquid Policy Center申请提交法庭之友意见，支持CFTC驳回CME诉讼，主张CME未受法律可诉的竞争损害，且Kalshi获批反而扩大了可参与市场。案件首次出现链上永续政策组织的正式诉讼介入，但意见书仍待法院接纳，swaps与futures的实体定性也未获裁定。",
           "url": "https://news.bloomberglaw.com/crypto/bidens-solicitor-general-backs-cftc-in-cmes-perpetuals-suit"
+        },
+        {
+          "date": "2026-09-15",
+          "point": "SGX在CFTC Regulation 48.10授权下向合格美国机构开放既有比特币与以太坊永续订单簿，客户仍需经SGX清算会员完成KYC、入金和技术接入。美国永续合规路径新增境外注册交易所直连，但仅限机构，且截至8月约1900万美元日均成交远低于头部加密衍生品场所；CME诉CFTC的swaps与futures实体定性仍无裁定。",
+          "url": "https://www.coininsider.org/news/sgx-opens-crypto-perpetuals-to-u-s-institutions-as-market-expands/"
         }
       ]
     },
@@ -825,9 +835,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-08-28",
-      "last_update": "2026-09-08",
+      "last_update": "2026-09-15",
       "cadence_days": 6,
-      "next_check": "2026-09-16",
+      "next_check": "2026-09-21",
       "thesis": "KuCoin UTA API V2 把盘前转永续日期、到期与结算时间、资金费、最大市价单和多阶段交易状态放进统一合约接口，并给出 V1 退场时间。市场生命周期正从运营公告转成可驱动前端、订单与风控的机器状态，但中心化交易所枚举能否覆盖链上 Keeper、LP 和清算仍未验证。",
       "why_us": "HertzFlow 的市场开放、仅减仓、暂停、结算、关闭和退场若由不同模块各自解释，会放大订单误提交和用户误解。先统一内部状态契约与异常用例，再映射前端、订单、Keeper 和市场配置，能降低生命周期切换风险。",
       "watch_for": "KuCoin V1 实际下线与迁移事故 / 其他交易所是否公开同类状态接口 / 盘前转永续和结算状态是否出现错单 / HertzFlow 现有市场状态在前端、订单与 Keeper 间的映射缺口",
@@ -856,6 +866,11 @@
           "date": "2026-09-10",
           "point": "Reya 在 V2 从 AMM 迁往订单簿前，将 ADA、APT 等 12 个市场切为仅减仓，保留平仓与缩仓但禁止新增风险。市场生命周期开始同时承担撮合架构和流动性迁移门控，但受影响持仓、截止时间与最终结算规则尚未完整披露。",
           "url": "https://www.kucoin.com/news/flash/reya-v2-shifts-to-orderbook-model-12-markets-enter-reduce-only-mode"
+        },
+        {
+          "date": "2026-09-15",
+          "point": "Reya宣布v2订单簿DEX进入准入阶段，v1 AMM用户可直接获得访问资格，新用户需要先加入候补名单。市场生命周期从仅减仓继续推进到按用户来源分层迁移，但完整开放日期、v1关闭时间、做市激励和头寸迁移规则仍未披露。",
+          "url": "https://perpdexwars.com/en/perpdex-news"
         }
       ]
     }
