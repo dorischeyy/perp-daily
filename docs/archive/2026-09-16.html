@@ -56,15 +56,6 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
-  .sec-hertzflow{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
-    padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
-  .sec-hertzflow .sec-title{color:#9a7b1f;}
-  .sec-hertzflow .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
-  .sec-hertzflow .item-b{color:#3a3322;}
-  .decision-area{display:inline-block; margin-bottom:5px; padding:1px 7px; border-radius:10px;
-    background:#efe5ca; color:#8a6c19; font-family:-apple-system,"PingFang SC",sans-serif;
-    font-size:10.5px; letter-spacing:.04em;}
   .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6;}
   .item:last-child{border-bottom:none;}
   .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
@@ -109,9 +100,8 @@
         <div class="sec-body">
 
         <article class="item">
-
           <h3 class="item-h">edgeX在Arc上线首个全天日元外汇永续</h3>
-          <p class="item-b"><strong>事件</strong>：edgeX在Arc主网上线以原生USDC作为保证金和结算资产的24/7日元外汇永续，并把股票、商品和加密资产在内的可交易市场扩至150个以上。</p><p class="item-b"><strong>机制</strong>：链上连续撮合绕开传统外汇休市时段，统一USDC保证金又把跨资产仓位放进同一资金账户，产品覆盖因此从延长交易时段升级为全天跨资产组合。</p><p class="item-b"><strong>二阶效应</strong>：全天外汇能扩大周末与跨时区需求，但来源没有披露周末报价来源、做市深度、异常价处理和极端行情表现，连续交易不等于连续流动性。</p>
+          <p class="item-b"><strong>事件</strong>：edgeX在Arc主网上线以原生USDC作为保证金和结算资产的24/7日元外汇永续，并把股票、商品和加密资产在内的可交易市场扩至150个以上。</p><p class="item-b"><strong>机制</strong>：链上连续撮合绕开传统外汇休市时段，统一USDC保证金又把跨资产仓位放进同一资金账户；来源没有披露周末报价来源、做市深度、异常价处理和极端行情表现。</p>
           <p class="item-context"><span class="item-context-label">落地程度</span>产品已随Arc主网上线，周末深度、报价连续性与异常恢复仍缺公开数据。</p>
           <div class="item-meta">
             <span class="item-date">2026-09-16</span>
@@ -119,9 +109,8 @@
           </div>
         </article>
         <article class="item">
-
           <h3 class="item-h">tradeXYZ的未平仓量达到Hyperliquid的38%</h3>
-          <p class="item-b"><strong>事件</strong>：Perps.info的9月15日快照显示，35家受追踪场所合计24小时成交236.5亿美元、未平仓量215亿美元；tradeXYZ以29.6亿美元成交和39.7亿美元未平仓量位列成交第二。（TradFi/RWA永续线 · 自07-09 · 新增规模快照）</p><p class="item-b"><strong>机制</strong>：作为HIP-3 builder，tradeXYZ直接复用Hyperliquid底层账户与流动性基础设施扩展RWA等市场，因此能在不自建完整交易栈的情况下形成独立订单流。</p><p class="item-b"><strong>二阶效应</strong>：其成交与未平仓量分别约为Hyperliquid的46%和38%，证明builder已有独立体量；但这是单日第三方快照，且平台总量不能全部归为RWA需求。</p>
+          <p class="item-b"><strong>事件</strong>：Perps.info的9月15日快照显示，35家受追踪场所合计24小时成交236.5亿美元、未平仓量215亿美元；tradeXYZ以29.6亿美元成交和39.7亿美元未平仓量位列成交第二。（TradFi/RWA永续线 · 自07-09 · 新增规模快照）</p><p class="item-b"><strong>机制</strong>：作为HIP-3 builder，tradeXYZ直接复用Hyperliquid底层账户与流动性基础设施扩展RWA等市场；其成交与未平仓量分别约为Hyperliquid的46%和38%，但平台总量不能全部归为RWA需求。</p>
           <p class="item-context"><span class="item-context-label">量级参照</span>单日快照覆盖35家场所，排名与总量不能替代按资产拆分的持续OI和自然成交。</p>
           <div class="item-meta">
             <span class="item-date">2026-09-15</span>
@@ -129,9 +118,8 @@
           </div>
         </article>
         <article class="item">
-
           <h3 class="item-h">前Robinhood工程师被控用上币信息抢跑永续</h3>
-          <p class="item-b"><strong>事件</strong>：美国司法部起诉两名前Robinhood工程师，指控其盗用未公开上币信息，在公告前通过Hyperliquid永续建立仓位，每人获利超过5万美元。</p><p class="item-b"><strong>机制</strong>：现货上币会改变代币的可达性与预期需求，永续则允许知情者在现货公告前放大方向性敞口，把内部信息泄露直接转成跨场所衍生品交易。</p><p class="item-b"><strong>二阶效应</strong>：案件把上币权限、员工访问日志和关联钱包监测变成衍生品市场完整性问题；当前仅为检方指控，不能据此认定平台机制本身存在缺陷。</p>
+          <p class="item-b"><strong>事件</strong>：美国司法部起诉两名前Robinhood工程师，指控其盗用未公开上币信息，在公告前通过Hyperliquid永续建立仓位，每人获利超过5万美元。</p><p class="item-b"><strong>机制</strong>：现货上币会改变代币的可达性与预期需求，永续允许知情者在公告前放大方向性敞口；当前仅为检方指控，不能据此认定平台机制本身存在缺陷。</p>
           <p class="item-context"><span class="item-context-label">影响范围</span>指控涉及两名前员工和每人超过5万美元获利，案件尚未形成定罪结论。</p>
           <div class="item-meta">
             <span class="item-date">2026-09-15</span>
@@ -150,7 +138,6 @@
         <div class="sec-body">
 
         <article class="item">
-
           <h3 class="item-h">Parabola在Arc用单曲线完成发行与毕业</h3>
           <p class="item-b"><strong>事件</strong>：Parabola随Arc主网上线，项目采用固定供应量、无预售、无归属和无隐藏供应的发行方式，代币先在USDC单一联合曲线上交易。</p><p class="item-b"><strong>机制与影响</strong>：所有买卖先由同一条曲线定价，达到毕业条件后再把市场交给永久交易场所，减少多池迁移和团队预留带来的早期结构差异；项目尚未披露毕业阈值、迁移场所和失败项目处置。</p>
           <p class="item-context"><span class="item-context-label">落地程度</span>发行机制已随Arc开放，毕业阈值、永久市场和曲线尾部风险仍未公开。</p>
@@ -160,7 +147,6 @@
           </div>
         </article>
         <article class="item">
-
           <h3 class="item-h">缺报让发射台费用榜看起来换了冠军</h3>
           <p class="item-b"><strong>事件</strong>：MemeFees的9月15日快照只收到17家中的13家数据，已报告费用共362.2万美元，其中pump.fun占44.0%、Flap.sh占42.7%，前一日占59.5%的Pons当日缺报。</p><p class="item-b"><strong>机制与影响</strong>：榜单按已报告平台重算分母，缺报平台会同时缩小总额并抬高其余平台占比，因此份额变化可能来自数据可用性而非订单流迁移；对竞争格局的判断必须先固定报告覆盖率。</p>
           <p class="item-context"><span class="item-context-label">口径限制</span>当日仅13/17家报告且Pons缺报，86.7%的双平台份额不能与完整日直接比较。</p>
@@ -170,7 +156,6 @@
           </div>
         </article>
         <article class="item">
-
           <h3 class="item-h">Meteora承载当日74%的代币毕业</h3>
           <p class="item-b"><strong>事件</strong>：MemeFees统计9月15日12家平台共4,422个代币毕业，其中Meteora Dynamic Bonding Curve为3,282个，pump.fun为1,093个，两家合计约99%。</p><p class="item-b"><strong>机制与影响</strong>：毕业量集中说明联合曲线结束后的流动性迁移仍由少数基础设施承载，也让迁移故障和规则变化具备系统性影响；毕业只表示进入后续流动性阶段，不代表代币留存、成交或项目质量。</p>
           <p class="item-context"><span class="item-context-label">口径限制</span>数据覆盖12家已报告平台的完整UTC日，毕业数量不能替代毕业后留存与成交。</p>
@@ -191,7 +176,6 @@
         <div class="sec-body">
 
         <article class="item">
-
           <h3 class="item-h">CLARITY法案以49比50止步参议院程序票</h3>
           <p class="item-b"><strong>事件</strong>：美国参议院以49票赞成、50票反对否决CLARITY法案的程序性推进，没有民主党参议员支持，围绕特朗普家族加密利益的伦理条款成为主要分歧。</p><p class="item-b"><strong>机制与影响</strong>：程序票失败意味着市场结构法案暂时不能进入后续审议，交易平台与监管机构的权责划分继续缺少统一联邦框架；该票不是对法案正文的最终否决，后续仍可修改文本重启。</p>
           <p class="item-context"><span class="item-context-label">落地程度</span>49比50是程序票结果，法案暂时停滞但仍可修改后再次推进。</p>
@@ -201,7 +185,6 @@
           </div>
         </article>
         <article class="item">
-
           <h3 class="item-h">CoinEx用三阶段退出结束九年运营</h3>
           <p class="item-b"><strong>事件</strong>：CoinEx宣布结束九年运营，9月15日停止新注册，多数服务将在9月29日终止，用户可在12月22日前提款。</p><p class="item-b"><strong>机制与影响</strong>：12月22日后未领取资产将折算为USDT转入独立托管，并按月收取5%费用，最终申领截止日为2028年8月22日；分阶段退出给用户留下迁移窗口，也让小额和沉睡账户面临持续费用侵蚀。</p>
           <p class="item-context"><span class="item-context-label">影响范围</span>新注册已停止，核心服务9月29日结束，提款与后续托管有独立时间表。</p>
@@ -211,7 +194,6 @@
           </div>
         </article>
         <article class="item">
-
           <h3 class="item-h">Ethereum与Base放弃统一账户抽象标准</h3>
           <p class="item-b"><strong>事件</strong>：Ethereum与Base开发者停止协调EIP-8141和EIP-8130，改为分别推进原生账户抽象方案；两者都支持代付Gas、批量调用和Passkey等钱包体验。</p><p class="item-b"><strong>机制与影响</strong>：Ethereum优先抗审查、隐私和安全，Base优先规模、定制与合规，核心目标差异最终转成两种交易格式；若两案都落地，钱包需要同时支持两套原生标准，易用性改进会伴随新的适配成本。</p>
           <p class="item-context"><span class="item-context-label">落地程度</span>双方已停止共同设计，但两项EIP仍在推进，最终上线范围与钱包采用尚未确定。</p>
@@ -232,7 +214,6 @@
         <div class="sec-body">
 
         <article class="item">
-
           <h3 class="item-h">Gemini 3.8把实时语音与延长推理同时转正</h3>
           <p class="item-b"><strong>事件</strong>：Google在Gemini API正式开放Gemini 3.8 Live与Extended Thinking，前者面向低延迟音频到音频交互，后者增加延长推理和异步函数调用。</p><p class="item-b"><strong>机制与影响</strong>：同一代模型把实时对话与长链任务拆成不同推理档位，开发者可在响应速度和任务深度之间选择；正式可用降低了试验门槛，但公告未给出成本、延迟分位数和工具调用成功率。</p>
           <p class="item-context"><span class="item-context-label">落地程度</span>两种能力已正式可用，成本、延迟和复杂工具任务成功率仍需实测。</p>
@@ -242,7 +223,6 @@
           </div>
         </article>
         <article class="item">
-
           <h3 class="item-h">Claude给小企业打包43套可定时工作流</h3>
           <p class="item-b"><strong>事件</strong>：Anthropic为Claude小企业方案上线43套工作流和27项集成，覆盖销售、财务与运营，并支持按计划自动运行；官方称相关能力安装量已超过90万次。</p><p class="item-b"><strong>机制与影响</strong>：模板把模型、连接器和定时执行组合成可复用流程，同时默认要求在发送、发布或付款前由用户批准，把自动化权限边界嵌入任务节点；安装量不等于持续使用或业务产出。</p>
           <p class="item-context"><span class="item-context-label">量级参照</span>超过90万是安装量，不是活跃企业、成功运行次数或节省工时。</p>
@@ -252,34 +232,12 @@
           </div>
         </article>
         <article class="item">
-
           <h3 class="item-h">Salesforce让三类岗位代理进入正式可用</h3>
           <p class="item-b"><strong>事件</strong>：Salesforce发布面向高价值工作的Agentforce组合，Casey、Paige和Carter三类岗位代理已正式可用，可围绕目标连续工作数天或数周并协作完成任务。</p><p class="item-b"><strong>机制与影响</strong>：产品把单次问答升级为带岗位目标、技能和协作关系的持续代理，但用于自动分析和优化代理的Agent Optimizer要到10月26日才正式可用；当前不能把发布组合等同于完整闭环已上线。</p>
           <p class="item-context"><span class="item-context-label">落地程度</span>三类岗位代理已正式可用，Agent Optimizer计划10月26日上线。</p>
           <div class="item-meta">
             <span class="item-date">2026-09-14</span>
             <a class="item-src" href="https://www.salesforce.com/ap/news/press-releases/2026/09/14/ph-salesforce-expands-agentforce-with-a-new-portfolio-of-ai-agents-built-for-high-value-work/?bc=OTH" target="_blank" rel="noopener">Salesforce ↗</a>
-          </div>
-        </article>
-        </div>
-      </section>
-      <section class="sec sec-hertzflow">
-        <div class="sec-head">
-          <span class="sec-no">05</span>
-          <div>
-            <h2 class="sec-title">产品判断</h2>
-          </div>
-        </div>
-        <div class="sec-body">
-
-        <article class="item">
-          <div class="decision-area">市场与资产</div>
-          <h3 class="item-h">全天FX不能只靠延长交易时段</h3>
-          <p class="item-b"><strong>判断变化</strong>：从FX市场按传统开市时间配置即可，更新为全天交易必须单独验证周末价格形成与承载能力。</p><p class="item-b"><strong>证据与边界</strong>：edgeX在Arc用原生USDC上线24/7日元永续并接入150个以上市场，证明产品分发可以突破传统时段；但来源未披露周末报价来源、深度、异常价与极端行情表现，不能证明全天流动性已经成熟。</p><p class="item-b"><strong>对 HertzFlow</strong>：新增FX候选时，应把周末Feed活跃度、标记价偏离、OI与储备上限、仅减仓触发和恢复开市后的基差回归作为同一组验收条件，未通过前不应仅因标的可报价就开放全天交易。</p>
-
-          <div class="item-meta">
-
-            <a class="item-src" href="https://pro.edgex.exchange/en-US/news/article/edgex-goes-live-on-arc-mainnet" target="_blank" rel="noopener">edgeX ↗</a>
           </div>
         </article>
         </div>

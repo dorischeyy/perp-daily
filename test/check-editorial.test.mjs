@@ -3,45 +3,16 @@ import assert from "node:assert/strict";
 import { auditEditorial } from "../lib/check-editorial.mjs";
 import { baseContent } from "./_helpers.mjs";
 
-const withDecision = () => {
-  const content = baseContent({ lead: "市场扩张的速度不能超过可信定价能力。" });
-  content.sections.push({
-    id: "hertzflow",
-    title: "产品判断",
-    items: [{
-      decision_area: "流动性",
-      headline: "统一保证金判断从照搬转为先验证",
-      body: [
-        "**判断变化**：从把统一保证金视为直接升级，转为先验证风险隔离。",
-        "**证据与边界**：共享保证金可以提高资金效率，但风险会跨市场传播。",
-        "**对 HertzFlow**：适合借鉴资金效率展示，不适合照搬统一清算。",
-      ],
-      source: "S",
-      url: "https://example.com/a",
-      date: "2026-06-23",
-    }],
-  });
-  return content;
-};
-
-test("合格的产品判断通过", () => {
-  const { errors } = auditEditorial(withDecision());
-  assert.equal(errors.length, 0, errors.join("; "));
+test("已取消的产品判断栏会被阻断", () => {
+  const content = baseContent();
+  content.sections.push({ id: "hertzflow", title: "产品判断", items: [] });
+  assert.ok(auditEditorial(content).errors.some((e) => /产品判断栏已取消/.test(e)));
 });
 
-test("产品判断必须是固定三段并由当期新闻触发", () => {
-  const content = withDecision();
-  content.sections.at(-1).items[0].body = ["建议持续关注。"];
-  content.sections.at(-1).items[0].url = "https://example.com/unrelated";
-  const { errors } = auditEditorial(content);
-  assert.ok(errors.some((e) => /判断变化 \/ 证据与边界 \/ 对 HertzFlow/.test(e)));
-  assert.ok(errors.some((e) => /当期一条新闻来源/.test(e)));
-});
-
-test("产品判断禁止 context 二次摘要", () => {
-  const content = withDecision();
-  content.sections.at(-1).items[0].context = { label: "口径限制", text: "这是对上面判断的再次概括，不应保留。" };
-  assert.ok(auditEditorial(content).errors.some((e) => /不应设置 context/.test(e)));
+test("已取消的二阶效应段会被阻断", () => {
+  const content = baseContent();
+  content.sections[0].items[0].body.push("**二阶效应**：这段不应再出现。");
+  assert.ok(auditEditorial(content).errors.some((e) => /二阶效应段已取消/.test(e)));
 });
 
 test("完全重复段落会被阻断", () => {

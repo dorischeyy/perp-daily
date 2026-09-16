@@ -12,7 +12,7 @@ To deliver that, the system does more than generate content. It **maintains stat
 
 The lead is a one-sentence market summary, not a free-floating thesis. It names the edition's two or three most important actors, actions, and current stages. A reader who sees only the lead should know the recent market situation; detailed numbers, mechanics, and implications stay in the body. The page then moves directly into verified developments and news, without a separate top product-view card.
 
-Coverage is also explicit: Perp DEX, Launchpad, Crypto, and AI each carry 3–5 verified items per edition. Product judgments are optional and do not count toward that range. The structural validator blocks a missing section or an out-of-range item count; freshness and scoring thresholds still apply, so a thin source day fails visibly instead of being padded with stale or low-signal news.
+Coverage is also explicit: Perp DEX, Launchpad, Crypto, and AI each carry 3–5 verified items per edition. The report does not append a separate second-order-effects paragraph or product-judgment section; material boundaries stay inside the event, mechanism, or compact context note. The structural validator blocks a missing section, an out-of-range item count, or either retired format; freshness and scoring thresholds still apply, so a thin source day fails visibly instead of being padded with stale or low-signal news.
 
 ---
 
@@ -84,7 +84,7 @@ Mechanisms run on scripts, not good intentions.
 | **Anti-fabrication** | `lib/check-freshness.mjs` + `generate.md` | URL-embedded date vs `date` cross-check; and every `date` must be verified against the source page via WebFetch — unverifiable items are cut. Built after a real incident where months-old articles were stamped with today's date |
 | **Ledger integrity** | `lib/threads.mjs` | Story-ledger schema validation; a broken ledger blocks publishing |
 | **Scale context** | `lib/validate-content.mjs` + `generate.md` | Validates the compact context schema and warns when a potentially material metric appears without a same-basis explanation |
-| **Editorial economy** | `lib/check-editorial.mjs` | Blocks exact or near repetition across lead/body/context; enforces grounded, three-part, non-redundant product judgments |
+| **Editorial economy** | `lib/check-editorial.mjs` | Blocks exact or near repetition across lead/body/context and rejects retired second-order-effect or product-judgment formats |
 | **Market summary** | `lead` + `lib/validate-content.mjs` | Requires one concise, news-grounded sentence before the report moves directly into verified developments and news |
 | **Reader-value audit** | `review.draft.md` + `lib/check-review.mjs` | Forces the editor to answer why today's edition is worth opening, what judgment changed, what decision improves, and what would invalidate the conclusion |
 | **Source provenance** | `references` + validator/renderer | Keeps one dated primary source and renders 1–3 separately dated background or cross-check links instead of hiding multiple outlets behind one URL |

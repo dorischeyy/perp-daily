@@ -10,7 +10,8 @@
 #   bash publish.sh preflight  # 调研前查重复发布 + 行情快照状态
 #   bash publish.sh validate   # 只跑内容/编辑/时效/台账关卡
 #   bash publish.sh render      # 只渲染 HTML + 落自评 + 写 latest.json
-#   bash publish.sh push        # 只 commit + pull --rebase + push（已 render 过就只补推这步）
+#   bash publish.sh manifest    # 生成连接器发布清单（大小 + Git blob SHA）
+#   bash publish.sh push        # 只 commit + pull --rebase + push（Legacy Actions fallback）
 # 交付(发飞书/Slack)是独立的 GitHub Action；它失败用仓库 Actions 页 "Run workflow" 重发，同样不碰生成。
 set -uo pipefail
 
@@ -28,7 +29,7 @@ stage_validate() {
   node lib/validate-content.mjs content.json || {
     echo "⛔ content.json 结构校验未通过。按上方缺失字段修 content.json 后重跑 \`bash publish.sh validate\`。" >&2; return 1; }
   node lib/check-editorial.mjs content.json || {
-    echo "⛔ 编辑去重/产品判断关卡未通过。只修对应文案后重跑 \`bash publish.sh validate\`。" >&2; return 1; }
+    echo "⛔ 编辑去重/版式关卡未通过。只修对应文案后重跑 \`bash publish.sh validate\`。" >&2; return 1; }
   node lib/check-review.mjs review.draft.md || {
     echo "⛔ 读者价值自问/编辑自评关卡未通过。只补全 review.draft.md 后重跑 \`bash publish.sh validate\`。" >&2; return 1; }
   node lib/check-freshness.mjs content.json "${DATE}" || {
@@ -47,6 +48,13 @@ stage_render() {
   node -e "const fs=require('fs');const c=JSON.parse(fs.readFileSync('content.json','utf8'));const d='${DATE}';fs.writeFileSync('docs/latest.json',JSON.stringify({date:d,url:'${URL}',title:'Perp DEX 日报 · '+d,lead:c.lead||'今日 Perp DEX 日报'},null,2))" \
     || { echo "⛔ 写 latest.json 失败" >&2; return 1; }
   echo "✅ render 完成：docs/archive/${DATE}.html"
+}
+
+# 阶段 2.5：为连接器发布生成固定五文件清单。
+# 它不联网、不写仓库；任何文件缺失、截断或首页/归档不一致都会阻断发布。
+stage_manifest() {
+  node lib/build-publish-manifest.mjs "${DATE}" || {
+    echo "⛔ 发布清单未通过。不得上传文件或更新远端 main。" >&2; return 1; }
 }
 
 # 阶段 3：提交+推送（可重入：已 commit 但 push 失败时，重跑只补推）
@@ -71,8 +79,9 @@ case "$STAGE" in
   preflight)      stage_preflight; exit $? ;;
   validate|gate) stage_validate || exit 1 ;;
   render)        stage_render   || exit 1 ;;
+  manifest|publish-check) stage_manifest || exit 1 ;;
   push|commit)   stage_push     || exit 1 ;;
   all)           stage_preflight; rc=$?; [ "$rc" -eq 0 ] || exit "$rc"
-                 stage_validate && stage_render && stage_push || exit 1 ;;
-  *) echo "未知阶段: ${STAGE} (可选 preflight | validate | render | push | all)" >&2; exit 2 ;;
+                 stage_validate && stage_render && stage_manifest && stage_push || exit 1 ;;
+  *) echo "未知阶段: ${STAGE} (可选 preflight | validate | render | manifest | push | all)" >&2; exit 2 ;;
 esac

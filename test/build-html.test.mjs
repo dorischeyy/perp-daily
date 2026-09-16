@@ -39,15 +39,16 @@ test("javascript: 链接不被渲染进 href", () => {
   assert.ok(!/href="javascript:/i.test(html));
 });
 
-test("产品判断栏(hertzflow)不渲染日期", () => {
+test("渲染器不再为旧产品判断栏隐藏日期", () => {
   const c = baseContent();
   c.sections = [{ id: "hertzflow", title: "产品判断", items: [
     { decision_area: "战略优先级", headline: "洞察", body: ["x"], url: "https://x.com/p", date: "2026-05-01" },
   ] }];
   const { html } = render(c);
   const seg = (html.match(/<section class="sec sec-hertzflow">[\s\S]*?<\/section>/) || [""])[0];
-  assert.ok(!seg.includes("item-date"));
-  assert.ok(!seg.includes("2026-05-01"));
+  assert.ok(seg.includes("item-date"));
+  assert.ok(seg.includes("2026-05-01"));
+  assert.ok(!seg.includes("decision-area"));
 });
 
 test("顶部只渲染一句市场概括，不渲染 product_view 卡片", () => {

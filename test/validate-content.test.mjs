@@ -76,22 +76,18 @@ test("额外未知栏目 id → warning 而非 error", () => {
   assert.ok(warnings.some((w) => /已知栏目/.test(w)));
 });
 
-test("产品判断栏目使用固定标题和 decision_area，所有栏目都禁用 kicker", () => {
+test("产品判断栏和二阶效应已取消，所有栏目都禁用 kicker", () => {
   const ordinary = baseContent();
   ordinary.sections[0].kicker = "重复副标题";
   assert.ok(validateContent(ordinary).errors.some((e) => /只保留一级标题/.test(e)));
 
   const c = baseContent();
-  const item = structuredClone(c.sections[0].items[0]);
-  item.decision_area = "战略优先级";
-  c.sections.push({ id: "hertzflow", title: "产品判断", items: [item] });
-  assert.equal(validateContent(c).errors.length, 0);
+  c.sections.push({ id: "hertzflow", title: "产品判断", items: [] });
+  assert.ok(validateContent(c).errors.some((e) => /产品判断栏已取消/.test(e)));
 
-  c.sections.at(-1).title = "机会与打法";
-  c.sections.at(-1).kicker = "产品判断";
-  const { errors } = validateContent(c);
-  assert.ok(errors.some((e) => /title 必须固定/.test(e)));
-  assert.ok(errors.some((e) => /只保留一级标题/.test(e)));
+  const withSecondOrder = baseContent();
+  withSecondOrder.sections[0].items[0].body.push("**二阶效应**：这段不应再出现。");
+  assert.ok(validateContent(withSecondOrder).errors.some((e) => /二阶效应段已取消/.test(e)));
 });
 
 test("lead 必须是一句话市场概括，product_view 已停用", () => {
