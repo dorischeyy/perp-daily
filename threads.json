@@ -105,9 +105,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-09-10",
+      "last_update": "2026-09-15",
       "cadence_days": 6,
-      "next_check": "2026-09-16",
+      "next_check": "2026-09-21",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -271,6 +271,11 @@
           "date": "2026-09-10",
           "point": "Nasdaq Ventures 同意向 Kraken 母公司 Payward 投资 1 亿美元，并将双方合作推进到 Nasdaq Equity Token 与 xStocks 的分发、结算和交易互操作。代币化股票竞争由资产发行继续推进到传统交易所基础设施与加密执行场所的资本绑定，但正式市场仍待监管批准和流动性验证。",
           "url": "https://www.nasdaq.com/newsroom/nasdaq-advances-always-on-markets-and-tokenized-equities-strategy-payward"
+        },
+        {
+          "date": "2026-09-15",
+          "point": "Perps.info 的 09-15 快照把 tradeXYZ 列为 35 家场所中 24 小时成交第二，成交 29.6 亿美元、未平仓量 39.7 亿美元，分别约为 Hyperliquid 的 46% 和 38%。HIP-3 builder 已形成独立体量，但单日排名不能证明 RWA 持仓持续，后续仍需拆分资产类别、持仓期限与费用贡献。",
+          "url": "https://perps.info/"
         }
       ]
     },
