@@ -26,7 +26,7 @@
       "first_seen": "2026-07-24",
       "last_update": "2026-09-12",
       "cadence_days": 7,
-      "next_check": "2026-09-18",
+      "next_check": "2026-09-25",
       "thesis": "CFTC 正把预测市场从宽泛的产品模板推进到逐类合约的结算方法、数据源与公共利益审查，Hyperliquid 阵营则要求以实际结算结果划界、由联邦独家监管并公开允许合约的理由。谁能把这些要求变成可复用的合约准入与争议处理基础设施，谁才可能规模化扩列链上 outcome contracts。",
       "why_us": "预测市场与非标准标的会争夺同一批交易用户、抵押品和分发入口。HertzFlow 若扩展事件类市场，需要先建立逐合约可审计的结算源、异常处理、争议裁决与准入材料，不能把普通永续的参数化上币流程直接复用。",
       "watch_for": "CFTC 是否发布最终规则及逐类合约示例 / 是否公开允许合约的审查理由 / 州级赌博监管与联邦专属管辖的法院结果 / Hyperliquid outcome contracts 的 OI、争议事件与结算记录",
@@ -105,9 +105,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-09-15",
+      "last_update": "2026-09-17",
       "cadence_days": 6,
-      "next_check": "2026-09-21",
+      "next_check": "2026-09-23",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -276,6 +276,21 @@
           "date": "2026-09-15",
           "point": "Perps.info 的 09-15 快照把 tradeXYZ 列为 35 家场所中 24 小时成交第二，成交 29.6 亿美元、未平仓量 39.7 亿美元，分别约为 Hyperliquid 的 46% 和 38%。HIP-3 builder 已形成独立体量，但单日排名不能证明 RWA 持仓持续，后续仍需拆分资产类别、持仓期限与费用贡献。",
           "url": "https://perps.info/"
+        },
+        {
+          "date": "2026-09-16",
+          "point": "Project Harmonia 面向机构代币化基金开放 RFP，允许成熟基金接入 Solana，或由新基金在 Solana 原生发行；Allfunds 提供覆盖 3300 多家机构、约 1.9 万亿欧元资产的分发网络，首批项目目标在 2027 年第一季度推出，但当前仍处于征集与筛选阶段。",
+          "url": "https://solana.com/vi/news/project-harmonia-brings-institutional-tokenized-funds-to-solana"
+        },
+        {
+          "date": "2026-09-17",
+          "point": "Bybit 上线 24/7 TradFi Perp Options，首批覆盖 SPCX 与 NVDA，以 USDT 结算并接入统一交易账户和组合保证金。股票永续的扩列开始延伸到同一底层标的的期权结构，但首发标的仅两只，深度与跨时段定价仍待验证。",
+          "url": "https://announcements.bybit.com/en/article/trade-tradfi-options-24-7-an-industry-first-only-on-bybit--art3c4ee537eb85/"
+        },
+        {
+          "date": "2026-09-17",
+          "point": "SEC 提出限时的代币化证券交易豁免框架，拟允许合格场所用传统限价簿或 AMM 交易代币化 NMS 股票，并给予部分交易所和经纪交易商定义豁免；发行人可选择不参与，最终条件与采用规模仍待验证。",
+          "url": "https://www.sec.gov/newsroom/speeches-statements/peirce-slumber-number-innovation-exemption-statement-091726"
         }
       ]
     },
@@ -501,7 +516,7 @@
       "first_seen": "2026-06-19",
       "last_update": "2026-09-15",
       "cadence_days": 3,
-      "next_check": "2026-09-18",
+      "next_check": "2026-09-21",
       "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
       "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
       "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
@@ -809,9 +824,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-08-25",
-      "last_update": "2026-09-12",
+      "last_update": "2026-09-17",
       "cadence_days": 6,
-      "next_check": "2026-09-18",
+      "next_check": "2026-09-23",
       "thesis": "LayerZero 宣布 ATLAS，拟向保留前端和客户关系的经纪商及平台提供撮合、清算、结算与风控后台。若能在生产环境兑现，交易入口与执行基础设施可以分别竞争；目前仅为今年晚些时候推出的计划。",
       "why_us": "HertzFlow 研究外部分发或后台合作时，需要分开核验客户归属、风险责任、故障处置与执行兼容性；不可据公告性能直接替换现有 Keeper 与逐市场 LP 架构。",
       "watch_for": "正式推出时间 / 已上线合作方及真实订单流 / 生产延迟与故障恢复 / 风险与清算责任分配 / 开放及许可市场的隔离规则",
@@ -835,6 +850,11 @@
           "date": "2026-09-12",
           "point": "Lighter开放开发者共享交易核心，并同时上线免gas入金、下调账户转移费与提高提币频率上限。交易后台服务化从公告与许可市场继续推进到可复用产品能力，但尚无开发者接入量、真实订单流或故障责任边界数据。",
           "url": "https://perpdexwars.com/en/perpdex-news?venue=hyperliquid"
+        },
+        {
+          "date": "2026-09-17",
+          "point": "CFTC 市场参与者部门把被动软件提供商的不采取行动立场扩大为普遍适用，符合条件的软件可连接用户与注册期货佣金商、介绍经纪商及指定合约市场，而不因该项服务被建议追究未注册介绍经纪商责任。交易入口与执行场所的责任边界获得监管增量，但仍是附条件的工作人员立场。",
+          "url": "https://www.cftc.gov/PressRoom/PressReleases/9300-26"
         }
       ]
     },
