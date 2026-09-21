@@ -524,9 +524,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-06-19",
-      "last_update": "2026-09-15",
+      "last_update": "2026-09-21",
       "cadence_days": 3,
-      "next_check": "2026-09-21",
+      "next_check": "2026-10-02",
       "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
       "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
       "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
@@ -630,6 +630,11 @@
           "date": "2026-09-15",
           "point": "SGX在CFTC Regulation 48.10授权下向合格美国机构开放既有比特币与以太坊永续订单簿，客户仍需经SGX清算会员完成KYC、入金和技术接入。美国永续合规路径新增境外注册交易所直连，但仅限机构，且截至8月约1900万美元日均成交远低于头部加密衍生品场所；CME诉CFTC的swaps与futures实体定性仍无裁定。",
           "url": "https://www.coininsider.org/news/sgx-opens-crypto-perpetuals-to-u-s-institutions-as-market-expands/"
+        },
+        {
+          "date": "2026-09-21",
+          "point": "Coinbase Derivatives于09-18向SEC提交单股与ETF期货规则，明确包含无固定到期日的单股永续，并同步向CFTC申报；SEC公告同时注明CFTC尚未批准。美国永续分类争议从09-04登记意向推进到具体产品规则，但仍没有获批、上线或法院实体定性。下一项确定节点是CME于10-02提交反对驳回动议的文件。",
+          "url": "https://www.sec.gov/files/rules/sro/coin/2026/34-106420_0.pdf"
         }
       ]
     },
