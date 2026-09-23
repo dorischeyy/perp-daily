@@ -105,9 +105,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-09-20",
+      "last_update": "2026-09-22",
       "cadence_days": 6,
-      "next_check": "2026-09-26",
+      "next_check": "2026-09-29",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -296,6 +296,11 @@
           "date": "2026-09-20",
           "point": "Binance在9月18日一次开放七只美股USDT永续，全部支持全天交易、最高20倍杠杆、八小时资金费与多资产保证金。TradFi永续扩列继续加速，但公告未披露成交、未平仓量、指数异常处理或地区可用性，标的数量不能替代真实采用。",
           "url": "https://www.binance.com/en/support/announcement/detail/3c2b63c9c3e44d40b8cec99961166fe8"
+        },
+        {
+          "date": "2026-09-22",
+          "point": "Jupiter在同一前端并行运行JLP预言机池和GUM中央限价订单簿，并用后者上线SpaceX、SanDisk、SK Hynix等股票代币与加密资产永续。RWA永续扩列开始由单一流动性模型转向按资产选择撮合引擎，但新订单簿仍处测试入口，深度、成交与跨链结算责任尚未披露。",
+          "url": "https://solanacompass.com/news/jupiter-perps-adds-six-markets-including-tokenized-spacex-hype-and-zec-via-gum-orderbook"
         }
       ]
     },
@@ -306,9 +311,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-02",
-      "last_update": "2026-09-20",
+      "last_update": "2026-09-22",
       "cadence_days": 3,
-      "next_check": "2026-09-23",
+      "next_check": "2026-09-26",
       "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
       "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
       "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -427,6 +432,11 @@
           "date": "2026-09-20",
           "point": "MemeFees的9月19日完整日数据中，Pons发射11,501个代币，低于其七日均值18,531个，也落后于pump.fun的31,614个和four.meme的13,720个；Pons仍占近30日受追踪发射台手续费的51.3%。Robinhood Chain分发的费用领先与发射数量领先已出现分离。",
           "url": "https://memefees.com/stats/launches"
+        },
+        {
+          "date": "2026-09-22",
+          "point": "Bybit上线PONS现货并通过Robinhood Chain开放充提，还把PONS接入兑换与法币购买入口。Robinhood Chain的发射台价值捕获从链内手续费推进到外部中心化交易所分发，但Bybit引用的70亿美元累计成交仍是项目方口径，新增用户与留存尚未披露。",
+          "url": "https://announcements.bybit.com/en/article/bybit-to-list-pons-pons-on-spot--art9c05fc201aad/"
         }
       ]
     },
