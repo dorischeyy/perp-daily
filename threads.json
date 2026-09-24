@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-09-14",
+  "updated": "2026-09-24",
   "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -24,9 +24,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-07-24",
-      "last_update": "2026-09-12",
+      "last_update": "2026-09-22",
       "cadence_days": 7,
-      "next_check": "2026-09-25",
+      "next_check": "2026-09-29",
       "thesis": "CFTC 正把预测市场从宽泛的产品模板推进到逐类合约的结算方法、数据源与公共利益审查，Hyperliquid 阵营则要求以实际结算结果划界、由联邦独家监管并公开允许合约的理由。谁能把这些要求变成可复用的合约准入与争议处理基础设施，谁才可能规模化扩列链上 outcome contracts。",
       "why_us": "预测市场与非标准标的会争夺同一批交易用户、抵押品和分发入口。HertzFlow 若扩展事件类市场，需要先建立逐合约可审计的结算源、异常处理、争议裁决与准入材料，不能把普通永续的参数化上币流程直接复用。",
       "watch_for": "CFTC 是否发布最终规则及逐类合约示例 / 是否公开允许合约的审查理由 / 州级赌博监管与联邦专属管辖的法院结果 / Hyperliquid outcome contracts 的 OI、争议事件与结算记录",
@@ -95,6 +95,11 @@
           "date": "2026-09-11",
           "point": "ESMA表示主要预测平台普遍没有欧盟授权，并质疑Polymarket和Kalshi仅做部分地理封锁。事件合约可能按具体特征被归为MiFID衍生品、MiCA加密资产或博彩产品，VPN绕过、内幕交易和刷量使跨境分发需要逐产品判断，而不是复用单一牌照结论。",
           "url": "https://www.theblock.co/news/regulation/2026-09-11-esma-says-major-prediction-platforms-lack-eu-authorization-questions-polymarket-and-kalshis-partial-geo-blocks-414239"
+        },
+        {
+          "date": "2026-09-22",
+          "point": "CFTC市场监督部门把提及特定词语、出席活动或与他人互动的事件合约列为高操纵风险类型，要求指定合约市场只在有限情形上市，并为单个合约提交完整的抗操纵分析。逐类准入已从宽泛自我认证限制推进到具体高风险合约，但最终联邦规则和州级管辖仍未解决。",
+          "url": "https://www.cftc.gov/PressRoom/PressReleases/9302-26"
         }
       ]
     },
@@ -105,9 +110,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-09-22",
+      "last_update": "2026-09-23",
       "cadence_days": 6,
-      "next_check": "2026-09-29",
+      "next_check": "2026-09-30",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -301,6 +306,11 @@
           "date": "2026-09-22",
           "point": "Jupiter在同一前端并行运行JLP预言机池和GUM中央限价订单簿，并用后者上线SpaceX、SanDisk、SK Hynix等股票代币与加密资产永续。RWA永续扩列开始由单一流动性模型转向按资产选择撮合引擎，但新订单簿仍处测试入口，深度、成交与跨链结算责任尚未披露。",
           "url": "https://solanacompass.com/news/jupiter-perps-adds-six-markets-including-tokenized-spacex-hype-and-zec-via-gum-orderbook"
+        },
+        {
+          "date": "2026-09-23",
+          "point": "Binance把CYPHB、AMCB和AGPUB三只bStocks加入全仓与两类组合保证金的可抵押资产，代币化股票由交易标的推进到统一抵押品层；但只面向VIP 3及以上合格地区用户，且这些资产不能借入，实际抵押能力仍取决于指数定价和折扣率。",
+          "url": "https://www.binance.com/en/support/announcement/c61f3c18a3004f968b53fb09841f7bc7"
         }
       ]
     },
