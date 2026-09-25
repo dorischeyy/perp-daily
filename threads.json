@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-09-24",
+  "updated": "2026-09-25",
   "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -321,9 +321,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-02",
-      "last_update": "2026-09-22",
+      "last_update": "2026-09-24",
       "cadence_days": 3,
-      "next_check": "2026-09-26",
+      "next_check": "2026-09-27",
       "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
       "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
       "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -447,6 +447,11 @@
           "date": "2026-09-22",
           "point": "Bybit上线PONS现货并通过Robinhood Chain开放充提，还把PONS接入兑换与法币购买入口。Robinhood Chain的发射台价值捕获从链内手续费推进到外部中心化交易所分发，但Bybit引用的70亿美元累计成交仍是项目方口径，新增用户与留存尚未披露。",
           "url": "https://announcements.bybit.com/en/article/bybit-to-list-pons-pons-on-spot--art9c05fc201aad/"
+        },
+        {
+          "date": "2026-09-24",
+          "point": "Pintu在印尼上线PONS，为Robinhood Chain发射平台增加受当地金融服务管理局监管的中心化交易入口。分发从Bybit继续扩展到本地合规平台，但公告没有披露新增用户、成交量或链上资金回流。",
+          "url": "https://www.pintu.co.id/blog/pintu-listing-2-token-baru-24sep26"
         }
       ]
     },
@@ -905,9 +910,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-08-28",
-      "last_update": "2026-09-20",
+      "last_update": "2026-09-24",
       "cadence_days": 6,
-      "next_check": "2026-09-26",
+      "next_check": "2026-09-30",
       "thesis": "KuCoin UTA API V2 把盘前转永续日期、到期与结算时间、资金费、最大市价单和多阶段交易状态放进统一合约接口，并给出 V1 退场时间。市场生命周期正从运营公告转成可驱动前端、订单与风控的机器状态，但中心化交易所枚举能否覆盖链上 Keeper、LP 和清算仍未验证。",
       "why_us": "HertzFlow 的市场开放、仅减仓、暂停、结算、关闭和退场若由不同模块各自解释，会放大订单误提交和用户误解。先统一内部状态契约与异常用例，再映射前端、订单、Keeper 和市场配置，能降低生命周期切换风险。",
       "watch_for": "KuCoin V1 实际下线与迁移事故 / 其他交易所是否公开同类状态接口 / 盘前转永续和结算状态是否出现错单 / HertzFlow 现有市场状态在前端、订单与 Keeper 间的映射缺口",
@@ -951,6 +956,11 @@
           "date": "2026-09-20",
           "point": "OKX在原定ONEUSDT永续下线时点前宣布延期，并只说明新计划将另行公布。市场状态从确定下线回到待定，原先的自动撤单、交割和机器人关停安排随之失效，说明公告驱动的生命周期仍缺少稳定的机器状态和版本控制。",
           "url": "https://www.okx.com/en-sg/help/okx-to-postpone-the-delisting-of-oneusdt-perpetual-futures"
+        },
+        {
+          "date": "2026-09-24",
+          "point": "OKX为Kioxia三比一拆股公开股票永续调整流程：旧持仓按拆股前标记价关闭并按新价格重开，数量放大三倍，普通挂单换算，止盈止损、条件单和策略单取消或暂停。市场生命周期从开关与迁移状态推进到公司行动，但仍依赖公告而非统一可机读接口。",
+          "url": "https://www.okx.com/help/okx-to-adjust-kioxia-equity-perpetual-futures-due-to-corporate-action"
         }
       ]
     },
