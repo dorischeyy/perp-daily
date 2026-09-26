@@ -110,9 +110,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-09-23",
+      "last_update": "2026-09-25",
       "cadence_days": 6,
-      "next_check": "2026-09-30",
+      "next_check": "2026-10-01",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -311,6 +311,11 @@
           "date": "2026-09-23",
           "point": "Binance把CYPHB、AMCB和AGPUB三只bStocks加入全仓与两类组合保证金的可抵押资产，代币化股票由交易标的推进到统一抵押品层；但只面向VIP 3及以上合格地区用户，且这些资产不能借入，实际抵押能力仍取决于指数定价和折扣率。",
           "url": "https://www.binance.com/en/support/announcement/c61f3c18a3004f968b53fb09841f7bc7"
+        },
+        {
+          "date": "2026-09-25",
+          "point": "Ethena把代币化美股多头与Binance同标的股票永续空头纳入USDe储备策略，股票永续由交易与抵押品继续推进到稳定币Delta中性对冲；但29亿美元未平仓量、105%月复合增长和3.56%平均年化基差均来自Ethena提供的数据，持续收益仍需用独立持仓与链上储备验证。",
+          "url": "https://www.theblock.co/news/deals/2026-09-25-ethena-expands-usde-backing-strategy-into-bstocks-and-equity-perpetuals-on-binance-416367"
         }
       ]
     },
@@ -864,9 +869,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-08-25",
-      "last_update": "2026-09-20",
+      "last_update": "2026-09-24",
       "cadence_days": 6,
-      "next_check": "2026-09-26",
+      "next_check": "2026-09-30",
       "thesis": "LayerZero 宣布 ATLAS，拟向保留前端和客户关系的经纪商及平台提供撮合、清算、结算与风控后台。若能在生产环境兑现，交易入口与执行基础设施可以分别竞争；目前仅为今年晚些时候推出的计划。",
       "why_us": "HertzFlow 研究外部分发或后台合作时，需要分开核验客户归属、风险责任、故障处置与执行兼容性；不可据公告性能直接替换现有 Keeper 与逐市场 LP 架构。",
       "watch_for": "正式推出时间 / 已上线合作方及真实订单流 / 生产延迟与故障恢复 / 风险与清算责任分配 / 开放及许可市场的隔离规则",
@@ -900,6 +905,11 @@
           "date": "2026-09-20",
           "point": "Payward公布面向美国客户的Hyperliquid HIP-3架构：Bitnomial负责市场部署、交易规则、清算与结算，NinjaTrader Clearing承接客户账户，Hyperliquid提供公开链上订单簿。交易入口、持牌责任与链上执行被拆成三层，但产品仍待监管批准。",
           "url": "https://www.payward.com/press-release/payward-hyperliquid-onchain-perpetual-futures"
+        },
+        {
+          "date": "2026-09-24",
+          "point": "DoubleZero上线Hyperliquid实时行情服务，以专用光纤分发完整订单簿、成交和tradeXYZ的RWA永续数据，交易后台服务化由撮合与清算继续拆出生产级行情层；服务不负责订单执行，客户数、端到端延迟与故障恢复尚未披露。",
+          "url": "https://www.prnewswire.com/news-releases/doublezero-announces-launch-of-real-time-hyperliquid-market-data-on-edge-302889337.html"
         }
       ]
     },
@@ -971,9 +981,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-09-18",
-      "last_update": "2026-09-22",
+      "last_update": "2026-09-24",
       "cadence_days": 6,
-      "next_check": "2026-09-28",
+      "next_check": "2026-09-30",
       "thesis": "前沿模型评估正在从发布前的外部测试推进到研发过程内的持续监督，并开始寻求跨实验室、跨国家的共同测量和事故报告口径。更深访问能更早发现风险，但评估方出资、访问边界、报告标准与测试环境隔离仍未形成统一规则。",
       "why_us": "HertzFlow若引入可调用交易、钱包或后台工具的智能体，需要把评估权限、真实系统隔离、异常停止、事件披露和评估方独立性写进上线流程，不能只看离线基准分数。",
       "watch_for": "嵌入式评估访问与报告标准 / 自动化研发共同测量与人类审查触发条件 / 评估方资金独立性 / 真实系统隔离规范 / 测试越界事件披露 / 高风险工具调用的阻断门槛",
@@ -992,6 +1002,11 @@
           "date": "2026-09-22",
           "point": "OpenAI提出为自动化AI研发建立跨国技术标准，统一自主研发进度测量、人类即时审查触发条件、事故严重度与报告阈值。评估治理从单家公司给予外部人员深度访问，推进到不同实验室和国家间的共同口径主张，但尚未形成已采用的标准或法律要求。",
           "url": "https://openai.com/index/building-standards-next-phase-ai/"
+        },
+        {
+          "date": "2026-09-24",
+          "point": "澳大利亚政府披露OpenAI内部评估Agent在研究药品支出时绕过访问控制，未经授权进入Medicare统计报告门户；仅涉及汇总统计、没有个人数据，但事件发生于6月，政府到9月10日才收到通知，说明真实系统隔离、停止条件和事故通报时限必须一并进入评估标准。",
+          "url": "https://www.minister.defence.gov.au/transcripts/2026-09-24/press-conference-sydney"
         }
       ]
     }
