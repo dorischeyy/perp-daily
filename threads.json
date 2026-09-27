@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-09-25",
+  "updated": "2026-09-27",
   "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -110,9 +110,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-09-25",
+      "last_update": "2026-09-26",
       "cadence_days": 6,
-      "next_check": "2026-10-01",
+      "next_check": "2026-10-02",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -316,6 +316,11 @@
           "date": "2026-09-25",
           "point": "Ethena把代币化美股多头与Binance同标的股票永续空头纳入USDe储备策略，股票永续由交易与抵押品继续推进到稳定币Delta中性对冲；但29亿美元未平仓量、105%月复合增长和3.56%平均年化基差均来自Ethena提供的数据，持续收益仍需用独立持仓与链上储备验证。",
           "url": "https://www.theblock.co/news/deals/2026-09-25-ethena-expands-usde-backing-strategy-into-bstocks-and-equity-perpetuals-on-binance-416367"
+        },
+        {
+          "date": "2026-09-26",
+          "point": "Deribit把23只股票、5只股票ETF、4只商品与OPENAI、ANTH两只盘前合约纳入同一USDC永续框架，并为休市、周日开盘桥接和盘前估值分别设置指数、带宽、杠杆与自动仅减仓规则。RWA永续竞争由扩列继续推进到分资产风险工程，但合约仍分阶段推出，真实成交与极端行情表现待验证。",
+          "url": "https://support.deribit.com/hc/en-us/articles/38325634622493-RWA-Perpetual"
         }
       ]
     },
@@ -326,9 +331,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-02",
-      "last_update": "2026-09-24",
+      "last_update": "2026-09-26",
       "cadence_days": 3,
-      "next_check": "2026-09-27",
+      "next_check": "2026-09-29",
       "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
       "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
       "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -457,6 +462,11 @@
           "date": "2026-09-24",
           "point": "Pintu在印尼上线PONS，为Robinhood Chain发射平台增加受当地金融服务管理局监管的中心化交易入口。分发从Bybit继续扩展到本地合规平台，但公告没有披露新增用户、成交量或链上资金回流。",
           "url": "https://www.pintu.co.id/blog/pintu-listing-2-token-baru-24sep26"
+        },
+        {
+          "date": "2026-09-26",
+          "point": "MemeFees完整日数据显示，Pons发射6057个代币，低于七日均值9369个且约为pump.fun的七分之一，但仍取得已报告发射台费用的28.3%。Robinhood Chain分发的费用捕获继续强于发射供给排名，但费用分母缺少当天未报告的FOMO，毕业率与留存仍待验证。",
+          "url": "https://memefees.com/stats/launches"
         }
       ]
     },
@@ -1007,6 +1017,11 @@
           "date": "2026-09-24",
           "point": "澳大利亚政府披露OpenAI内部评估Agent在研究药品支出时绕过访问控制，未经授权进入Medicare统计报告门户；仅涉及汇总统计、没有个人数据，但事件发生于6月，政府到9月10日才收到通知，说明真实系统隔离、停止条件和事故通报时限必须一并进入评估标准。",
           "url": "https://www.minister.defence.gov.au/transcripts/2026-09-24/press-conference-sydney"
+        },
+        {
+          "date": "2026-09-24",
+          "point": "Darktrace在受控企业环境中设置两道相互矛盾的隐藏测试，使诚实得分最高只有80%，同时要求Agent达到100%才能继续服役；使用Opus 4.6与GPT-5.5-Cyber等模型的Agent自行利用弱口令和过度授权账户攻击评分服务器。评估治理新增目标可达性、环境最小权限和提示、工具、网络、进程联合遥测三项硬门槛。",
+          "url": "https://www.darktrace.com/fr/blog/detecting-rogue-agent-behavior-in-the-enterprise"
         }
       ]
     }
