@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-09-30",
+  "updated": "2026-10-01",
   "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -24,9 +24,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-07-24",
-      "last_update": "2026-09-29",
+      "last_update": "2026-09-30",
       "cadence_days": 7,
-      "next_check": "2026-10-06",
+      "next_check": "2026-10-07",
       "thesis": "CFTC 正把预测市场从宽泛的产品模板推进到逐类合约的结算方法、数据源与公共利益审查，Hyperliquid 阵营则要求以实际结算结果划界、由联邦独家监管并公开允许合约的理由。谁能把这些要求变成可复用的合约准入与争议处理基础设施，谁才可能规模化扩列链上 outcome contracts。",
       "why_us": "预测市场与非标准标的会争夺同一批交易用户、抵押品和分发入口。HertzFlow 若扩展事件类市场，需要先建立逐合约可审计的结算源、异常处理、争议裁决与准入材料，不能把普通永续的参数化上币流程直接复用。",
       "watch_for": "CFTC 是否发布最终规则及逐类合约示例 / 是否公开允许合约的审查理由 / 州级赌博监管与联邦专属管辖的法院结果 / Hyperliquid outcome contracts 的 OI、争议事件与结算记录",
@@ -110,6 +110,11 @@
           "date": "2026-09-29",
           "point": "美国众议院监督委员会把预测市场内幕交易调查扩到Crypto.com、Hyperliquid和PredictIt，索取身份核验、员工交易、可疑行为识别及转介记录。联邦关注点由合约准入与州级管辖继续延伸到执行场所的客户归属和内幕交易监控，但目前仅是资料要求。",
           "url": "https://www.theblock.co/news/regulation/2026-09-29-comer-presses-crypto-com-hyperliquid-predictit-identity-checks-suspicious-trades-417192"
+        },
+        {
+          "date": "2026-09-30",
+          "point": "CFTC把进一步明确swap定义包含事件合约、并排除赌场式博彩产品的两项规则送交白宫OIRA审查，其中后者显示为临时最终规则阶段。联邦规则开始进入正式文本发布前程序，但规则内容、体育合约边界及是否提供公众评议仍未确定。",
+          "url": "https://www.theblock.co/news/regulation/2026-09-30-white-house-weighs-new-cftc-event-contract-rules-in-growing-prediction-market-power-struggle-417345"
         }
       ]
     },
@@ -122,7 +127,7 @@
       "first_seen": "2026-07-09",
       "last_update": "2026-09-30",
       "cadence_days": 6,
-      "next_check": "2026-10-06",
+      "next_check": "2026-10-07",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -336,6 +341,11 @@
           "date": "2026-09-30",
           "point": "Variational上线COPP铜价永续，最高10倍杠杆并标注零交易费，流动性直接连接传统金融市场。RWA永续由股票继续扩到工业金属，但价格源、交易时段、OI上限和休市跳空处理尚未披露。",
           "url": "https://perpdexwars.com/en/perpdex-news"
+        },
+        {
+          "date": "2026-09-30",
+          "point": "Ondo Perps开放首批12只代币化股票与ETF现货，并允许现货头寸直接作为对应永续的抵押品。RWA永续从扩列标的推进到现货抵押与基差交易的一体化资本工作流，但抵押折扣、各资产深度和清算表现尚未披露。",
+          "url": "https://www.thestreet.com/crypto/markets/ondo-perps-launches-spot-trading-for-ondo-stocks"
         }
       ]
     },
@@ -904,9 +914,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-08-25",
-      "last_update": "2026-09-24",
+      "last_update": "2026-09-30",
       "cadence_days": 6,
-      "next_check": "2026-10-06",
+      "next_check": "2026-10-07",
       "thesis": "LayerZero 宣布 ATLAS，拟向保留前端和客户关系的经纪商及平台提供撮合、清算、结算与风控后台。若能在生产环境兑现，交易入口与执行基础设施可以分别竞争；目前仅为今年晚些时候推出的计划。",
       "why_us": "HertzFlow 研究外部分发或后台合作时，需要分开核验客户归属、风险责任、故障处置与执行兼容性；不可据公告性能直接替换现有 Keeper 与逐市场 LP 架构。",
       "watch_for": "正式推出时间 / 已上线合作方及真实订单流 / 生产延迟与故障恢复 / 风险与清算责任分配 / 开放及许可市场的隔离规则",
@@ -945,6 +955,11 @@
           "date": "2026-09-24",
           "point": "DoubleZero上线Hyperliquid实时行情服务，以专用光纤分发完整订单簿、成交和tradeXYZ的RWA永续数据，交易后台服务化由撮合与清算继续拆出生产级行情层；服务不负责订单执行，客户数、端到端延迟与故障恢复尚未披露。",
           "url": "https://www.prnewswire.com/news-releases/doublezero-announces-launch-of-real-time-hyperliquid-market-data-on-edge-302889337.html"
+        },
+        {
+          "date": "2026-09-30",
+          "point": "Markets.xyz、Perps.inc与Volmex共同在Hyperliquid HIP-3上线BVIV永续，联合部署方无需各自质押50万枚HYPE即可创建并管理市场。市场创建与底层交易设施进一步拆分，但首日成交、OI和故障责任仍未披露。",
+          "url": "https://www.globenewswire.com/news-release/2026/09/30/3372002/0/en/bviv-is-now-live-on-markets-xyz-bringing-bitcoin-s-crypto-vix-onchain-in-partnership-with-perps-inc-and-volmex-finance.html"
         }
       ]
     },
