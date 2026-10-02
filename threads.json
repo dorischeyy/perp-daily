@@ -356,9 +356,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-02",
-      "last_update": "2026-09-29",
+      "last_update": "2026-10-01",
       "cadence_days": 3,
-      "next_check": "2026-10-02",
+      "next_check": "2026-10-04",
       "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
       "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
       "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -502,6 +502,11 @@
           "date": "2026-09-29",
           "point": "MemeFees记录Pons的9月28日完整发射量为6583次，低于七日均值7940次；到9月29日02:20 UTC，其24小时费用仍为146万美元、占受追踪市场21.0%。费用领先与发射供给继续分离，但费用覆盖V1与V2，成交量仅覆盖V2曲线交易。",
           "url": "https://memefees.com/"
+        },
+        {
+          "date": "2026-10-01",
+          "point": "Robinhood Wallet把Arcus API接为190多只股票代币兑换的多家路由商之一，由专业做市商通过RFQ竞争报价；Arcus披露累计成交超过50亿美元、1.5万名交易者与2800万美元TVL，但未拆分钱包集成新增量，且永续仍处于beta。Robinhood分发线从钱包内展示推进到第三方执行路由，承诺的永续交付仍未完成。",
+          "url": "https://www.theblock.co/news/business/2026-10-01-robinhood-wallet-integrates-arcus-rfq-system-for-stock-token-swaps-417394"
         }
       ]
     },
@@ -601,7 +606,7 @@
       "first_seen": "2026-06-19",
       "last_update": "2026-09-21",
       "cadence_days": 3,
-      "next_check": "2026-10-02",
+      "next_check": "2026-10-03",
       "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
       "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
       "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
