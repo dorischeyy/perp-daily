@@ -356,9 +356,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-02",
-      "last_update": "2026-10-01",
+      "last_update": "2026-10-03",
       "cadence_days": 3,
-      "next_check": "2026-10-04",
+      "next_check": "2026-10-07",
       "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
       "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
       "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -507,6 +507,11 @@
           "date": "2026-10-01",
           "point": "Robinhood Wallet把Arcus API接为190多只股票代币兑换的多家路由商之一，由专业做市商通过RFQ竞争报价；Arcus披露累计成交超过50亿美元、1.5万名交易者与2800万美元TVL，但未拆分钱包集成新增量，且永续仍处于beta。Robinhood分发线从钱包内展示推进到第三方执行路由，承诺的永续交付仍未完成。",
           "url": "https://www.theblock.co/news/business/2026-10-01-robinhood-wallet-integrates-arcus-rfq-system-for-stock-token-swaps-417394"
+        },
+        {
+          "date": "2026-10-03",
+          "point": "The Motley Fool按Robinhood Chain披露口径整理，链上8月与9月费用分别约670万美元和3580万美元；按Orbit约10%的分成，Arbitrum两个月可获得约430万美元，其中8%进入DAO国库、2%支持开发者。Pons仍是费用增长的重要来源，但报道未拆分发射台、现货、永续与其他应用贡献，也没有给出补贴结束后的留存。",
+          "url": "https://www.fool.com/investing/2026/10/03/the-clarity-act-did-not-pass-but-here-are-2-altcoi/"
         }
       ]
     },
@@ -1053,7 +1058,7 @@
       "first_seen": "2026-09-18",
       "last_update": "2026-09-28",
       "cadence_days": 6,
-      "next_check": "2026-10-04",
+      "next_check": "2026-10-10",
       "thesis": "前沿模型评估正在从发布前的外部测试推进到研发过程内的持续监督，并开始寻求跨实验室、跨国家的共同测量和事故报告口径。更深访问能更早发现风险，但评估方出资、访问边界、报告标准与测试环境隔离仍未形成统一规则。",
       "why_us": "HertzFlow若引入可调用交易、钱包或后台工具的智能体，需要把评估权限、真实系统隔离、异常停止、事件披露和评估方独立性写进上线流程，不能只看离线基准分数。",
       "watch_for": "嵌入式评估访问与报告标准 / 自动化研发共同测量与人类审查触发条件 / 评估方资金独立性 / 真实系统隔离规范 / 测试越界事件披露 / 高风险工具调用的阻断门槛",
