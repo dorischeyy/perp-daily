@@ -26,7 +26,7 @@
       "first_seen": "2026-07-24",
       "last_update": "2026-09-30",
       "cadence_days": 7,
-      "next_check": "2026-10-07",
+      "next_check": "2026-10-15",
       "thesis": "CFTC 正把预测市场从宽泛的产品模板推进到逐类合约的结算方法、数据源与公共利益审查，Hyperliquid 阵营则要求以实际结算结果划界、由联邦独家监管并公开允许合约的理由。谁能把这些要求变成可复用的合约准入与争议处理基础设施，谁才可能规模化扩列链上 outcome contracts。",
       "why_us": "预测市场与非标准标的会争夺同一批交易用户、抵押品和分发入口。HertzFlow 若扩展事件类市场，需要先建立逐合约可审计的结算源、异常处理、争议裁决与准入材料，不能把普通永续的参数化上币流程直接复用。",
       "watch_for": "CFTC 是否发布最终规则及逐类合约示例 / 是否公开允许合约的审查理由 / 州级赌博监管与联邦专属管辖的法院结果 / Hyperliquid outcome contracts 的 OI、争议事件与结算记录",
@@ -125,9 +125,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-09-30",
+      "last_update": "2026-10-06",
       "cadence_days": 6,
-      "next_check": "2026-10-07",
+      "next_check": "2026-10-12",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -346,6 +346,11 @@
           "date": "2026-09-30",
           "point": "Ondo Perps开放首批12只代币化股票与ETF现货，并允许现货头寸直接作为对应永续的抵押品。RWA永续从扩列标的推进到现货抵押与基差交易的一体化资本工作流，但抵押折扣、各资产深度和清算表现尚未披露。",
           "url": "https://www.thestreet.com/crypto/markets/ondo-perps-launches-spot-trading-for-ondo-stocks"
+        },
+        {
+          "date": "2026-10-06",
+          "point": "CoinDesk Research统计9月链上代币化股票成交创156亿美元纪录，Robinhood贡献65.7亿美元、占42%，bStocks贡献54.2亿美元、占34.7%。RWA分发已形成可见月成交结构，但数据反映现货活动，不能直接推导永续采用、独立用户增长或清算质量。",
+          "url": "https://www.coindesk.com/research/stablecoins-and-tokenized-assets-report-october-2026"
         }
       ]
     },
@@ -356,9 +361,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-02",
-      "last_update": "2026-10-03",
+      "last_update": "2026-10-07",
       "cadence_days": 3,
-      "next_check": "2026-10-07",
+      "next_check": "2026-10-10",
       "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
       "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
       "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -512,6 +517,11 @@
           "date": "2026-10-03",
           "point": "The Motley Fool按Robinhood Chain披露口径整理，链上8月与9月费用分别约670万美元和3580万美元；按Orbit约10%的分成，Arbitrum两个月可获得约430万美元，其中8%进入DAO国库、2%支持开发者。Pons仍是费用增长的重要来源，但报道未拆分发射台、现货、永续与其他应用贡献，也没有给出补贴结束后的留存。",
           "url": "https://www.fool.com/investing/2026/10/03/the-clarity-act-did-not-pass-but-here-are-2-altcoi/"
+        },
+        {
+          "date": "2026-10-07",
+          "point": "Pons对外宣称累计成交超过160亿美元、累计费用约1.9亿美元，Robinhood Chain的高频发行与交易税规模继续扩大；累计数字来自平台社交口径，尚未由统一第三方方法复算，也没有拆出毕业项目、重复交易和补贴后留存。",
+          "url": "https://www.cryptocompass.com/articles/boom-pons-hits-16-000-000-000-trading-volume-3"
         }
       ]
     },
@@ -611,7 +621,7 @@
       "first_seen": "2026-06-19",
       "last_update": "2026-10-02",
       "cadence_days": 3,
-      "next_check": "2026-10-05",
+      "next_check": "2026-10-11",
       "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
       "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
       "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
@@ -929,9 +939,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-08-25",
-      "last_update": "2026-09-30",
+      "last_update": "2026-10-07",
       "cadence_days": 6,
-      "next_check": "2026-10-07",
+      "next_check": "2026-10-13",
       "thesis": "LayerZero 宣布 ATLAS，拟向保留前端和客户关系的经纪商及平台提供撮合、清算、结算与风控后台。若能在生产环境兑现，交易入口与执行基础设施可以分别竞争；目前仅为今年晚些时候推出的计划。",
       "why_us": "HertzFlow 研究外部分发或后台合作时，需要分开核验客户归属、风险责任、故障处置与执行兼容性；不可据公告性能直接替换现有 Keeper 与逐市场 LP 架构。",
       "watch_for": "正式推出时间 / 已上线合作方及真实订单流 / 生产延迟与故障恢复 / 风险与清算责任分配 / 开放及许可市场的隔离规则",
@@ -975,6 +985,11 @@
           "date": "2026-09-30",
           "point": "Markets.xyz、Perps.inc与Volmex共同在Hyperliquid HIP-3上线BVIV永续，联合部署方无需各自质押50万枚HYPE即可创建并管理市场。市场创建与底层交易设施进一步拆分，但首日成交、OI和故障责任仍未披露。",
           "url": "https://www.globenewswire.com/news-release/2026/09/30/3372002/0/en/bviv-is-now-live-on-markets-xyz-bringing-bitcoin-s-crypto-vix-onchain-in-partnership-with-perps-inc-and-volmex-finance.html"
+        },
+        {
+          "date": "2026-10-07",
+          "point": "Coinbase宣布Deribit并购后的产品整合已经完成，并准备把美国与全球加密衍生品连接到单一受监管流动性池。交易后台服务化从外部接口继续推进到统一账户、保证金与抵押品调度，但跨辖区流动性池仍待推出，清算与准入边界尚未披露。",
+          "url": "https://www.coinbase.com/blog/coinbase-is-building-the-most-complete-trading-platform"
         }
       ]
     },
@@ -987,7 +1002,7 @@
       "first_seen": "2026-08-28",
       "last_update": "2026-09-29",
       "cadence_days": 6,
-      "next_check": "2026-10-05",
+      "next_check": "2026-10-14",
       "thesis": "KuCoin UTA API V2 把盘前转永续日期、到期与结算时间、资金费、最大市价单和多阶段交易状态放进统一合约接口，并给出 V1 退场时间。市场生命周期正从运营公告转成可驱动前端、订单与风控的机器状态，但中心化交易所枚举能否覆盖链上 Keeper、LP 和清算仍未验证。",
       "why_us": "HertzFlow 的市场开放、仅减仓、暂停、结算、关闭和退场若由不同模块各自解释，会放大订单误提交和用户误解。先统一内部状态契约与异常用例，再映射前端、订单、Keeper 和市场配置，能降低生命周期切换风险。",
       "watch_for": "KuCoin V1 实际下线与迁移事故 / 其他交易所是否公开同类状态接口 / 盘前转永续和结算状态是否出现错单 / HertzFlow 现有市场状态在前端、订单与 Keeper 间的映射缺口",
@@ -1056,9 +1071,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-09-18",
-      "last_update": "2026-09-28",
+      "last_update": "2026-10-06",
       "cadence_days": 6,
-      "next_check": "2026-10-10",
+      "next_check": "2026-10-12",
       "thesis": "前沿模型评估正在从发布前的外部测试推进到研发过程内的持续监督，并开始寻求跨实验室、跨国家的共同测量和事故报告口径。更深访问能更早发现风险，但评估方出资、访问边界、报告标准与测试环境隔离仍未形成统一规则。",
       "why_us": "HertzFlow若引入可调用交易、钱包或后台工具的智能体，需要把评估权限、真实系统隔离、异常停止、事件披露和评估方独立性写进上线流程，不能只看离线基准分数。",
       "watch_for": "嵌入式评估访问与报告标准 / 自动化研发共同测量与人类审查触发条件 / 评估方资金独立性 / 真实系统隔离规范 / 测试越界事件披露 / 高风险工具调用的阻断门槛",
@@ -1097,6 +1112,11 @@
           "date": "2026-09-28",
           "point": "英伟达发布Open Agent Safety Platform，用OpenShell在CPU运行时执行策略，并由BlueField-4 DPU上的Sentry独立监控和隔离越界Agent。前沿评估新增模型与应用层之外的执行边界，但权限策略仍需部署方定义，毫秒级隔离尚缺统一第三方测试。",
           "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-Open-Agent-Safety-Platform-to-Secure-Agents-From-Testing-to-Deployment/default.aspx"
+        },
+        {
+          "date": "2026-10-06",
+          "point": "OpenAI与Ironclad用11项合同、法务和采购任务评估端到端计算机使用，每项按8至50个标准评分；GPT-6 Astra平均得分比GPT-5.6 Sol高32%，估算尝试时间低48%。评估从隔离基准推进到企业工作流，但时间节省来自模拟估算，不是客户生产环境的实测工时。",
+          "url": "https://openai.com/index/advancing-computer-use-with-ironclad/"
         }
       ]
     }
