@@ -125,9 +125,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-10-06",
+      "last_update": "2026-10-08",
       "cadence_days": 6,
-      "next_check": "2026-10-12",
+      "next_check": "2026-10-14",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -351,6 +351,11 @@
           "date": "2026-10-06",
           "point": "CoinDesk Research统计9月链上代币化股票成交创156亿美元纪录，Robinhood贡献65.7亿美元、占42%，bStocks贡献54.2亿美元、占34.7%。RWA分发已形成可见月成交结构，但数据反映现货活动，不能直接推导永续采用、独立用户增长或清算质量。",
           "url": "https://www.coindesk.com/research/stablecoins-and-tokenized-assets-report-october-2026"
+        },
+        {
+          "date": "2026-10-08",
+          "point": "Bitwise三季度复盘称去中心化永续交易所未平仓量创下接近260亿美元的新高，股票、商品、外汇和未上市公司敞口占比继续上升。持续保证金规模为RWA永续扩张增加了新的总量证据，但报告没有拆分协议、资产类别、持仓期限与激励贡献。",
+          "url": "https://bitwiseinvestments.com/crypto-market-insights/crypto-market-review-q4-2026"
         }
       ]
     },
@@ -361,9 +366,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-02",
-      "last_update": "2026-10-07",
+      "last_update": "2026-10-08",
       "cadence_days": 3,
-      "next_check": "2026-10-10",
+      "next_check": "2026-10-11",
       "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
       "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
       "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -522,6 +527,11 @@
           "date": "2026-10-07",
           "point": "Pons对外宣称累计成交超过160亿美元、累计费用约1.9亿美元，Robinhood Chain的高频发行与交易税规模继续扩大；累计数字来自平台社交口径，尚未由统一第三方方法复算，也没有拆出毕业项目、重复交易和补贴后留存。",
           "url": "https://www.cryptocompass.com/articles/boom-pons-hits-16-000-000-000-trading-volume-3"
+        },
+        {
+          "date": "2026-10-08",
+          "point": "Upbit为PONS开放韩元、BTC与USDT三个现货市场，并仅支持Robinhood Chain网络充提。Robinhood分发线新增韩国头部法币入口，但上币不等于发射质量、毕业率、链上新增用户或资金回流已经改善。",
+          "url": "https://www.cryptocompass.com/articles/upbit-pons-token-launch-today-price-rally-meets-fresh-liquidity"
         }
       ]
     },
@@ -1071,9 +1081,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-09-18",
-      "last_update": "2026-10-06",
+      "last_update": "2026-10-08",
       "cadence_days": 6,
-      "next_check": "2026-10-12",
+      "next_check": "2026-10-14",
       "thesis": "前沿模型评估正在从发布前的外部测试推进到研发过程内的持续监督，并开始寻求跨实验室、跨国家的共同测量和事故报告口径。更深访问能更早发现风险，但评估方出资、访问边界、报告标准与测试环境隔离仍未形成统一规则。",
       "why_us": "HertzFlow若引入可调用交易、钱包或后台工具的智能体，需要把评估权限、真实系统隔离、异常停止、事件披露和评估方独立性写进上线流程，不能只看离线基准分数。",
       "watch_for": "嵌入式评估访问与报告标准 / 自动化研发共同测量与人类审查触发条件 / 评估方资金独立性 / 真实系统隔离规范 / 测试越界事件披露 / 高风险工具调用的阻断门槛",
@@ -1117,6 +1127,11 @@
           "date": "2026-10-06",
           "point": "OpenAI与Ironclad用11项合同、法务和采购任务评估端到端计算机使用，每项按8至50个标准评分；GPT-6 Astra平均得分比GPT-5.6 Sol高32%，估算尝试时间低48%。评估从隔离基准推进到企业工作流，但时间节省来自模拟估算，不是客户生产环境的实测工时。",
           "url": "https://openai.com/index/advancing-computer-use-with-ironclad/"
+        },
+        {
+          "date": "2026-10-08",
+          "point": "Coinbase用历史欺诈结果和可验证奖励后训练Qwen3.5-9B，在自有Onramp基准上相对Opus 4.5提高9.6个百分点F1和35.4个百分点金额加权召回，并把P50线上延迟从1.515秒降至0.683秒。前沿评估从选模型推进到以领域结果驱动后训练与生产回滚，但证据仍限于单一反欺诈任务。",
+          "url": "https://www.coinbase.com/blog/part-three-owning-intelligence-series"
         }
       ]
     }
