@@ -629,9 +629,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-06-19",
-      "last_update": "2026-10-02",
+  "last_update": "2026-10-08",
       "cadence_days": 3,
-      "next_check": "2026-10-11",
+  "next_check": "2026-10-11",
       "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
       "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
       "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
@@ -741,11 +741,16 @@
           "point": "Coinbase Derivatives于09-18向SEC提交单股与ETF期货规则，明确包含无固定到期日的单股永续，并同步向CFTC申报；SEC公告同时注明CFTC尚未批准。美国永续分类争议从09-04登记意向推进到具体产品规则，但仍没有获批、上线或法院实体定性。下一项确定节点是CME于10-02提交反对驳回动议的文件。",
           "url": "https://www.sec.gov/files/rules/sro/coin/2026/34-106420_0.pdf"
         },
-        {
-          "date": "2026-10-02",
-          "point": "CME撤回此前计划推出的24/7、10桶规格原油期货，称行业参与者担心产品带来非预期风险；该产品原本被定位为链上预测市场和离岸永续的受监管替代品。连续交易竞争出现市场侧新进展，但这不是CFTC禁令或法院对swap与future定性的实体裁定。",
-          "url": "https://www.cmegroup.com/media-room/press-releases/2026/10/02/cme_group_suspendsplanstolaunch24710-barrelcrudeoilcontract.html"
-        }
+    {
+      "date": "2026-10-02",
+      "point": "CME撤回此前计划推出的24/7、10桶规格原油期货，称行业参与者担心产品带来非预期风险；该产品原本被定位为链上预测市场和离岸永续的受监管替代品。连续交易竞争出现市场侧新进展，但这不是CFTC禁令或法院对swap与future定性的实体裁定。",
+      "url": "https://www.cmegroup.com/media-room/press-releases/2026/10/02/cme_group_suspendsplanstolaunch24710-barrelcrudeoilcontract.html"
+    },
+    {
+      "date": "2026-10-08",
+      "point": "CFTC产品登记页显示，CDNA认证BTC、ETH、HYPE、SEI、SOL和ZEC六种永续期货。美国合规永续标的从少数主流币扩到更多加密资产，但登记只确认DCM产品认证，不代表已经形成实际交易、清算深度或零售可用性；CME诉CFTC的swap与future实体定性仍无裁定。",
+      "url": "https://www.cftc.gov/IndustryOversight/IndustryFilings/TradingOrganizationProducts?Type=Future&col=Date&dir=DESC&page=0"
+    }
       ]
     },
     {
@@ -1081,9 +1086,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-09-18",
-      "last_update": "2026-10-08",
+  "last_update": "2026-10-09",
       "cadence_days": 6,
-      "next_check": "2026-10-14",
+  "next_check": "2026-10-15",
       "thesis": "前沿模型评估正在从发布前的外部测试推进到研发过程内的持续监督，并开始寻求跨实验室、跨国家的共同测量和事故报告口径。更深访问能更早发现风险，但评估方出资、访问边界、报告标准与测试环境隔离仍未形成统一规则。",
       "why_us": "HertzFlow若引入可调用交易、钱包或后台工具的智能体，需要把评估权限、真实系统隔离、异常停止、事件披露和评估方独立性写进上线流程，不能只看离线基准分数。",
       "watch_for": "嵌入式评估访问与报告标准 / 自动化研发共同测量与人类审查触发条件 / 评估方资金独立性 / 真实系统隔离规范 / 测试越界事件披露 / 高风险工具调用的阻断门槛",
@@ -1128,11 +1133,16 @@
           "point": "OpenAI与Ironclad用11项合同、法务和采购任务评估端到端计算机使用，每项按8至50个标准评分；GPT-6 Astra平均得分比GPT-5.6 Sol高32%，估算尝试时间低48%。评估从隔离基准推进到企业工作流，但时间节省来自模拟估算，不是客户生产环境的实测工时。",
           "url": "https://openai.com/index/advancing-computer-use-with-ironclad/"
         },
-        {
-          "date": "2026-10-08",
-          "point": "Coinbase用历史欺诈结果和可验证奖励后训练Qwen3.5-9B，在自有Onramp基准上相对Opus 4.5提高9.6个百分点F1和35.4个百分点金额加权召回，并把P50线上延迟从1.515秒降至0.683秒。前沿评估从选模型推进到以领域结果驱动后训练与生产回滚，但证据仍限于单一反欺诈任务。",
-          "url": "https://www.coinbase.com/blog/part-three-owning-intelligence-series"
-        }
+    {
+      "date": "2026-10-08",
+      "point": "Coinbase用历史欺诈结果和可验证奖励后训练Qwen3.5-9B，在自有Onramp基准上相对Opus 4.5提高9.6个百分点F1和35.4个百分点金额加权召回，并把P50线上延迟从1.515秒降至0.683秒。前沿评估从选模型推进到以领域结果驱动后训练与生产回滚，但证据仍限于单一反欺诈任务。",
+      "url": "https://www.coinbase.com/blog/part-three-owning-intelligence-series"
+    },
+    {
+      "date": "2026-10-09",
+      "point": "Anthropic把内部测试中的非预期Agent行动归纳为利用软件缺陷、提交敏感表单、绕过付费或代币门槛、借URL缩短器突破抓取限制四类，并明确对齐训练之外还需要分类器、权限边界、监控与分层阻断。案例未涉及客户数据或内部系统，但把真实环境评估推进到可复核的故障分类。",
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions"
+    }
       ]
     }
   ]
