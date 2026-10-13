@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-10-13</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-src{color:#8a7f66; text-decoration:none;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 102 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 10 月 13 日 · 星期二</div>
+    </header>
+    <p class="lead">Binance将ETF和个股永续装进同一合约框架，AlloX用锁定期换取发行折扣，Standard Chartered则让RLUSD从托管走向抵押品候选。</p>
+
+
+      <section class="sec sec-perpdex">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">Perp DEX</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">Binance把ETF和个股一起纳入24/7永续</h3>
+          <p class="item-b"><strong>事件</strong>：Binance在10月12日连续上线ZCSH、MSTU、SNPS和RDW四只USDT永续，标的同时覆盖Zcash ETF、两倍做多MSTR的杠杆ETF和两只美股，均支持24/7交易、最高20倍杠杆与八小时资金费。</p><p class="item-b"><strong>机制</strong>：ZCSH和MSTU把ETF费用、再平衡与跟踪误差叠加到永续的指数和资金费之上，底层证券休市时仍继续交易；同一合约框架因此需要同时处理股票价格发现、ETF路径依赖和全天保证金风险。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>四只合约已上线，公告未披露成交量、OI、价差或底层证券休市时的价格质量。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-12</span>
+            <a class="item-src" href="https://www.binance.com/en/square/post/376400136183151" target="_blank" rel="noopener">Binance ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">DEX在百万美元BTC订单上进入成本前列</h3>
+          <p class="item-b"><strong>事件</strong>：PerpFinder在10月12日23:57 UTC扫描订单簿，Paradex以0.3个基点成为10万美元BTC永续市价买单的最低成本场所，Lighter以0.9个基点排在100万美元档首位；1000万美元档则由MEXC以5.8个基点居首。</p><p class="item-b"><strong>机制</strong>：成本口径同时计入吃单费、半边价差和价格冲击，订单放大后排名会随盘口深度重排；链上场所能在中等规模进入前列，但无法成交的场所数量从10万美元档的1家升至1000万美元档的20家。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>这是单时点BTC市价买单测量，不包含持仓期间资金费、网络成本、订单拆分和不同时间段的深度变化。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-12</span>
+            <a class="item-src" href="https://perpfinder.com/" target="_blank" rel="noopener">PerpFinder ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">澳大利亚拟把加密结算CFD纳入同一保护令</h3>
+          <p class="item-b"><strong>事件</strong>：ASIC提议把CFD零售保护令延长十年，并将通过数字资产转移结算的CFD纳入定义；方案继续要求杠杆限制、标准化强平和负余额保护，并明确相反头寸不能冲减单笔CFD的初始保证金。</p><p class="item-b"><strong>机制</strong>：监管边界从产品名称转向相同经济风险，现金、抵销和数字资产结算的杠杆敞口将适用一致保护；当前仍处四周征求意见阶段，反馈截止11月9日，延长期限还需部长批准。</p>
+          <p class="item-context"><span class="item-context-label">影响范围</span>ASIC称现行规则实施后六个月零售账户净损失下降91%；新范围和十年延期都尚未正式生效。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-12</span>
+            <a class="item-src" href="https://www.asic.gov.au/about-asic/news-centre/find-a-media-release/2026-releases/26-239mr-asic-moves-to-extend-and-strengthen-cfd-consumer-protections" target="_blank" rel="noopener">ASIC ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-launchpad">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">Launchpad</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">AlloX在Sonar把估值折扣换成长锁定</h3>
+          <p class="item-b">AlloX在10月12日开启100万美元社区销售，接受Ethereum上的USDC和USDT，并用三档方案把完全稀释估值从6500万美元降至3900万美元。</p><p class="item-b">Silver在TGE全额解锁，Gold以20%解锁加12个月线性释放换取较低估值，Platinum则用三个月悬崖期和随后12个月释放获得最低估值；超募按比例分配，多余资金结算时退回。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>承诺窗口已开放至10月19日，TGE和分发日期仍未确认；100万美元是募资目标，不是已完成金额。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-12</span>
+            <a class="item-src" href="https://sale.allox.ai/" target="_blank" rel="noopener">AlloX / Sonar ↗</a><a class="item-src item-ref" href="https://t.me/s/alloxdotai" target="_blank" rel="noopener">补充：AlloX Announcements · 10-12 ↗</a><a class="item-src item-ref" href="https://www.globenewswire.com/news-release/2026/10/09/3378173/0/en/allox-1-million-public-sale-opens-october-12-on-coinbase-owned-sonar-after-binance-wallet-success-and-5m-funding.html" target="_blank" rel="noopener">补充：GlobeNewswire · 10-09 ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">ChainGPT把Live状态拆成注册与售卖阶段</h3>
+          <p class="item-b">ChainGPT更新Launchpad状态定义，明确质押池与发行活动池分开，活动在注册窗口或售卖窗口开放时均属于Live。</p><p class="item-b">Buzz活动即使原始状态仍显示Upcoming，只要进入Buzz &amp; Registration就应视为可参与；普通销售则依次经过注册、保证轮、先到先得、售罄、领取和结束，前端状态需要由生命周期阶段而不是单一枚举决定。</p>
+          <p class="item-context"><span class="item-context-label">影响范围</span>更新的是活动分类和状态判定，不包含新增项目、募资金额或参与转化数据。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-11</span>
+            <a class="item-src" href="https://help.chaingpt.org/article/chaingpt-pad-pool-types-lifecycle-phases" target="_blank" rel="noopener">ChainGPT ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Robinhood Chain把免Gas窗口延长到年底</h3>
+          <p class="item-b">freefloat记录显示，Robinhood Chain的免Gas截止日从9月29日延长至12月31日，原截止日经过时链上没有出现可测的阶跃变化。</p><p class="item-b">对Pons而言，免费Gas继续补贴发行和交易，回购流量因此尚未经历完整成本测试；真正的需求弹性要等补贴终止后，再比较发行、成交和回购是否同步下降。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>页面把免Gas视为估值模型中的独立断点，延长日期不能证明Pons需求已经摆脱补贴。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-10</span>
+            <a class="item-src" href="https://freefloat.io/pons" target="_blank" rel="noopener">freefloat ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-crypto">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">Crypto</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">Standard Chartered上线RLUSD托管</h3>
+          <p class="item-b">Standard Chartered DIFC分行已为合格机构客户上线XRPL版RLUSD托管，并与Ripple和LMAX Group推进把RLUSD纳入合格抵押品。</p><p class="item-b">计划中的抵押镜像会让RLUSD继续留在银行托管端，由LMAX识别其价值用于交易和抵押管理，减少向交易场所直接转账；该能力仍需完成文件、测试、内部审批和各地监管准备。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>托管服务已经上线，LMAX抵押品资格和镜像能力仍是计划状态，尚无抵押规模或上线时间。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-12</span>
+            <a class="item-src" href="https://ripple.com/ripple-press/standard-chartered-launches-rlusd-custody-and-joins-planned-collateral-integration-with-ripple-and-lmax-group/" target="_blank" rel="noopener">Ripple ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">FSB把跨境协作列为稳定币监控缺口</h3>
+          <p class="item-b">FSB向G20提交全球稳定币跨境脆弱性说明，指出同一安排可跨多个司法辖区、实体类型和监管机关，单一地区难以完整评估风险传播。</p><p class="item-b">下一步重点是补足跨境监测、信息共享和2023年建议的实施协作，并改善现有数据源的覆盖与可比性；这是一份监控与政策协调文件，不是新的稳定币准入规则。</p>
+          <p class="item-context"><span class="item-context-label">影响范围</span>文件面向可能跨境并具系统重要性的稳定币安排，不等于所有单一地区稳定币都已被认定为系统性风险。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-12</span>
+            <a class="item-src" href="https://www.fsb.org/2026/10/global-stablecoin-arrangements-cross-border-vulnerabilities-and-financial-stability-monitoring/" target="_blank" rel="noopener">FSB ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Morgan Stanley把代币化股票推迟到明年一季度</h3>
+          <p class="item-b">Morgan Stanley数字资产战略负责人称，代币化股票接入其另类交易系统的现实时间表从2026年下半年推迟到2027年第一季度，团队仍在建设所需基础设施。</p><p class="item-b">该系统会把链上股票接入既有的场外撮合和客户服务框架，但银行认为当前产品供给和客户需求都未成熟；钱包、合规边界和可用于交易的真实资产仍是上线前置条件。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>新时间表来自负责人访谈，代表建设目标而非已上线服务；客户采用、资产范围和监管批准仍待确认。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-12</span>
+            <a class="item-src" href="https://www.theblock.co/news/markets/2026-10-12-morgan-stanley-tokenized-equities-q1-2027-418256" target="_blank" rel="noopener">The Block ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">04</span>
+          <div>
+            <h2 class="sec-title">AI</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">Binance把AI界面推向全球英语用户</h3>
+          <p class="item-b">Binance在约15万名用户测试后向全球英语用户推出Binance AI，界面会按用户经验和关注资产调整组件，并提供持仓回顾、异动分析、语音提醒和每四小时更新的市场简报。</p><p class="item-b">生成式界面把个性化从内容推荐推进到交易信息架构，但公告只确认功能与分发范围，没有披露建议准确率、错误提醒、用户留存或交易结果。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>约15万为测试人数，不是日活或持续使用规模；更多语言仍在逐步开放。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-12</span>
+            <a class="item-src" href="https://www.binance.com/en/square/post/376484922102853" target="_blank" rel="noopener">Binance ↗</a><a class="item-src item-ref" href="https://www.theblock.co/news/business/2026-10-12-binance-ai-trading-interface-global-rollout-418349" target="_blank" rel="noopener">补充：The Block · 10-12 ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Ozak把研究、永续和预测市场放进同一对话</h3>
+          <p class="item-b">Ozak AI上线Eon交易Agent，用同一聊天入口完成市场研究、现货、永续和预测市场准备，并在信息缺失时追问，而不是自动补齐订单参数。</p><p class="item-b">永续票据会展示保证金、杠杆、预估清算价、费用、止损和止盈，最终仍由用户钱包签名；产品把自然语言延伸到交易准备，但官方示例不能证明真实成交质量或风险提示有效性。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>产品已开放使用，页面展示的是10月10日示例，没有披露真实用户量、成交量、失败率或误下单数据。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-12</span>
+            <a class="item-src" href="https://ozak.ai/blogs/the-all-in-one-ai-crypto-trading-agent" target="_blank" rel="noopener">Ozak AI ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">MorningAI让网站修改先预览再发布</h3>
+          <p class="item-b">MorningAI发布Website Agent，连接GitHub后可用自然语言改文案、图片、布局、按钮和页面，并在桌面、平板和手机视图中生成预览。</p><p class="item-b">修改不会自动上线，用户预览后才执行发布，还可以复制审阅链接交给工程师；同一Agent也把社媒分析、内容生成、批准和排期串进一个对话。</p>
+          <p class="item-context"><span class="item-context-label">影响范围</span>已确认的是产品工作流和人工发布闸门，页面没有披露实际采用人数、回滚率或生产修改错误率。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-12</span>
+            <a class="item-src" href="https://www.morningai.com/blog/october-12-2026-product-updates" target="_blank" rel="noopener">MorningAI ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>

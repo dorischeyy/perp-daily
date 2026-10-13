@@ -130,9 +130,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-10-09",
+      "last_update": "2026-10-12",
       "cadence_days": 6,
-      "next_check": "2026-10-15",
+      "next_check": "2026-10-18",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -366,6 +366,11 @@
           "date": "2026-10-09",
           "point": "Bybit同日集中上线VKTX、BMNU、MP、UMC、BWE和USDEX六只股票标的USDT永续。TradFi永续供给从少数标的继续扩到批量上新，但公告未披露成交量、OI、价差或用户规模，尚不能判断需求质量。",
           "url": "https://announcements.bybit.com/en/"
+        },
+        {
+          "date": "2026-10-12",
+          "point": "Binance连续上线ZCSH、MSTU、SNPS和RDW四只USDT永续，首次在同一批次同时纳入Zcash ETF、两倍做多MSTR的杠杆ETF和普通个股，均支持24/7交易、20倍杠杆与八小时资金费。TradFi永续由批量扩列推进到ETF嵌套风险，指数设计需要额外处理底层休市、ETF再平衡、费用与路径依赖；公告尚未披露成交、OI或休市时价格质量。",
+          "url": "https://www.binance.com/en/square/post/376400136183151"
         }
       ]
     },
