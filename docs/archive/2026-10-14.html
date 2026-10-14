@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-10-14</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-src{color:#8a7f66; text-decoration:none;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 103 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 10 月 14 日 · 星期三</div>
+    </header>
+    <p class="lead">21Shares把私募公司估值包装成上市ETP，S&amp;P与Kaiko把信用指数互换搬上Canton，Workday则把企业Agent接入现有权限和审批体系。</p>
+
+
+      <section class="sec sec-perpdex">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">Perp DEX</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">21Shares用永续把私募估值包装成上市ETP</h3>
+          <p class="item-b"><strong>事件</strong>：21Shares披露其私募公司ETP不持有Anthropic股权，而由母公司FalconX发行票据，并通过Binance与Hyperliquid永续管理估值敞口，证券账户买到的是合成价格而不是股东权利。</p><p class="item-b"><strong>机制</strong>：上市前由二级交易、融资和订单簿共同形成参考价，上市后不强制换股，只把预言机切换到公开现货；（TradFi/RWA永续线 · 自07-09 · 第42个进展）永续由交易标的继续进入传统包装层，同时把对手方、资金费和预言机风险传给ETP净值。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>页面说明了结构与定价保护，但没有披露产品规模、永续持仓、资金费历史或极端行情偏离。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-13</span>
+            <a class="item-src" href="https://www.21shares.com/en-us/insights/pre-ipo-etp" target="_blank" rel="noopener">21Shares ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">S&amp;P与Kaiko完成首笔代币化指数链上互换</h3>
+          <p class="item-b"><strong>事件</strong>：DRW与Marex在Canton上的Derivnex完成总收益互换，参考由Kaiko代币化的S&amp;P iBoxx美元流动性投资级指数，S&amp;P称这是首笔引用完整代币化指数的链上OTC衍生品。</p><p class="item-b"><strong>机制</strong>：交易条款、授权基准值和估值事件由共享智能合约贯穿生命周期，参与方仍保留私密协商与许可控制；变化在于把基准授权、交易表示和持续估值放进同一账本，而不是把公开订单簿搬上链。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>交易已经完成，但公告未披露名义本金、保证金安排、结算周期或后续参与机构。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-13</span>
+            <a class="item-src" href="https://www.spglobal.com/spdji/en/corporate-news/article/sp-dow-jones-indices-and-kaiko-enable-first-on-chain-otc-swap-referencing-a-tokenized-benchmark-executed-by-drw-and-marex-on-derivnex/" target="_blank" rel="noopener">S&amp;P Dow Jones Indices ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Crypto.com单日增加60个可见永续市场</h3>
+          <p class="item-b"><strong>事件</strong>：PerpFinder的10月13日快照显示，Crypto.com可见永续市场数由318增至378；同一日报还记录BingX未平仓量一天由17.2亿美元升至24.8亿美元。</p><p class="item-b"><strong>机制</strong>：前者说明供给可在一天内批量扩列，后者说明风险资本也会快速迁移，但聚合器只读取公开接口，无法单独证明新增合约获得真实深度或未平仓量变化来自净入金。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>市场数与未平仓量来自不同平台的单日快照，不能相互归因，也不等于自然成交需求。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-13</span>
+            <a class="item-src" href="https://perpfinder.com/today/2026-10-13" target="_blank" rel="noopener">PerpFinder ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-launchpad">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">Launchpad</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">1win把经营收入写进代币回购机制</h3>
+          <p class="item-b">1win宣布10月15日启动Solana原生1WIN公开销售，固定总供应10亿枚，并称51%供应面向游戏奖励、投注奖励和Telegram分发。</p><p class="item-b">机制同时承诺用既有游戏收入在公开市场回购，并永久销毁支持场景中消费代币的10%；收入来源比储备池更可持续，但回购频率、审计和销售条款仍未完整披露。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>1亿注册玩家是平台自报覆盖，不等于代币购买者、活跃用户或可验证收入规模。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-13</span>
+            <a class="item-src" href="https://cryptocompass.com/articles/1win-announces-upcoming-public-sale-for-1win-token-13-oct" target="_blank" rel="noopener">CryptoCompass ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">ChainGPT用锁定期决定IDO分配权重</h3>
+          <p class="item-b">ChainGPT Pad更新质押池，11个池全部使用BNB Chain上的CGPT，锁定从45天到3年，对应1倍到3倍的Launchpad tier积分乘数。</p><p class="item-b">平台把代币销售额度与长期锁仓绑定，而不是只按先到先得分配；页面显示质押总锁仓约211万美元，但没有给出各档人数、实际IDO分配率或退出成本。</p>
+          <p class="item-context"><span class="item-context-label">量级参照</span>最长锁定相对最短档增加约24倍时长，只换得3倍积分，机会成本并非线性补偿。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-12</span>
+            <a class="item-src" href="https://help.chaingpt.org/article/chaingpt-pad-staking-pools" target="_blank" rel="noopener">ChainGPT Help Center ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">VAYLA把首发拆成竞价、交易和提现三步</h3>
+          <p class="item-b">KuCoin为VAYLA安排一小时集合竞价，随后开放VAYLA/USDT现货和多类交易机器人，并把提现延后到次日同一时刻。</p><p class="item-b">这种生命周期把开盘价格发现、二级交易和资产外流分开，减少首分钟连续撮合压力，但公告没有披露首发供应、竞价限额、做市承诺或解锁安排。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>入金、竞价与交易已开放，提现于10月14日开放，发行端持仓分布仍不可见。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-12</span>
+            <a class="item-src" href="https://www.kucoin.com/announcement/en-world-premiere-vayla-vayla-listed-on-kucoin" target="_blank" rel="noopener">KuCoin ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-crypto">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">Crypto</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">Ledger确认硬件植入物可窃取助记词</h3>
+          <p class="item-b">Ledger确认经CryptoBilis售出的设备内有带eSIM的LTE植入物，可在初始化时读取屏幕上的24词恢复短语并外传，且不需要修改Secure Element或系统软件。</p><p class="item-b">MediaMarkt随后暂停欧洲销售，Trezor和OneKey也收紧经销授权；安全边界由设备芯片扩展到装配、仓储、退货与经销链，现有链上损失估算仍未获Ledger确认。</p>
+          <p class="item-context"><span class="item-context-label">影响范围</span>已确认的是特定经销渠道中的植入物，受影响设备数与损失总额尚未核实，不能外推到全部官方直售设备。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-13</span>
+            <a class="item-src" href="https://www.theblock.co/news/business/2026-10-13-ledger-confirms-hardware-implant-cryptobilis-reseller-units-mediamarkt-suspends-sales-europe-418442" target="_blank" rel="noopener">The Block ↗</a><a class="item-src item-ref" href="https://decrypt.co/380826/ledger-finds-lte-implant-that-stole-recovery-phrases-in-suspected-86m-drain" target="_blank" rel="noopener">补充：Decrypt · 10-13 ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Privy把可编程钱包接入XRP Ledger</h3>
+          <p class="item-b">Privy与Ripple合作支持开发者程序化创建和管理XRPL钱包、签署交易，并使用XRP、RLUSD和其他链上资产。</p><p class="item-b">嵌入式钱包让支付应用和Agent无需用户逐次管理密钥即可持有和转移资金，同时保留私钥与助记词导出；这降低接入摩擦，也把服务器权限和交易审批变成新的控制点。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>合作和开发能力已公布，页面没有给出正式可用时间、生产客户、交易量或Agent支付失败率。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-13</span>
+            <a class="item-src" href="https://privy.io/blog/building-payments-and-agentic-commerce-with-the-xrp-ledger" target="_blank" rel="noopener">Privy ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Binance关停矿池和云挖矿服务</h3>
+          <p class="item-b">Binance计划11月10日停止矿池、Pool Savings、云挖矿和交易加速器，同时关闭相关API与连接端点，用户需迁移算力并赎回活动仓位。</p><p class="item-b">历史数据和结算状态只保留到11月24日，说明退出不仅是隐藏入口，还包括奖励停止、接口下线和有限的数据迁移窗口；平台资源则继续转向股票衍生品和AI交易工具。</p>
+          <p class="item-context"><span class="item-context-label">影响范围</span>公告未披露矿池份额、受影响用户数、待结算余额或资源转移规模。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-13</span>
+            <a class="item-src" href="https://www.theblock.co/news/business/2026-10-13-binance-to-shut-down-mining-pool-cloud-mining-and-related-services-418410" target="_blank" rel="noopener">The Block ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">04</span>
+          <div>
+            <h2 class="sec-title">AI</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">Google用真实代码库证明Argon的长任务能力</h3>
+          <p class="item-b">Google上线Gemini 4 Argon，并称其在内部把Agent代码提交提高超过35%、回滚减少近三分之一，还在一夜间把ADK长会话准备时间降低40%。</p><p class="item-b">模型通过Gemini API、Antigravity、Gemini应用和搜索AI Mode分发，复杂编码从基准进入真实仓库；但效率数字来自Google自有团队，尚缺外部复现和统一失败率。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>首发价为每百万输入2美元、输出10美元，11月30日后计划翻倍，成本结论需要按正式价格重算。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-13</span>
+            <a class="item-src" href="https://blog.google/intl/en-mena/product-updates/explore-get-answers/gemini-4-argon-built-to-solve-your-hardest-problems/" target="_blank" rel="noopener">Google ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Workday让外部Agent沿用HR和财务权限</h3>
+          <p class="item-b">Workday全面开放Agent Harness、MCP工具、Custom Agents和Developer Agent，第三方模型和框架接入后仍沿用现有用户权限、业务审批与审计轨迹。</p><p class="item-b">（前沿模型评估线 · 自09-18 · 第9个进展）生产治理开始从提示词扩展到系统记录层，但动作前按公司政策再次校验的Grounded Reasoning仍计划于2027年初早期开放，不能把已上线审计与未来阻断能力混为一谈。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>Harness与核心工具已正式可用，Context Service和Grounded Reasoning仍处早期开放计划。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-13</span>
+            <a class="item-src" href="https://newsroom.workday.com/2026-10-13-Workdays-Trusted-Agent-Platform-Now-Delivers-Headless-Access-to-HR-and-Finance,-Letting-Customers-Build-and-Run-Lawful-AI-Agents" target="_blank" rel="noopener">Workday ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Anthropic为Agent规模重写源码管理</h3>
+          <p class="item-b">Anthropic称代码合并量从5月日均约2500次升至9月超过3万次，原有Git镜像和克隆路径成为瓶颈，因此用五个月迁移到内部系统Scion。</p><p class="item-b">Scion把提交、合并、历史和稀疏读取集中到可水平扩展服务，Agent和CI可经API读取差异而无需完整仓库；变化说明AI编码的瓶颈已从生成转向审阅、存储、权限与回滚基础设施。</p>
+          <p class="item-context"><span class="item-context-label">量级参照</span>其主分支历史接近100GB、CI每日约2500万次检出，是极端内部规模，不能直接外推到普通团队。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-13</span>
+            <a class="item-src" href="https://www.anthropic.com/engineering/redesigning-source-control" target="_blank" rel="noopener">Anthropic ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>

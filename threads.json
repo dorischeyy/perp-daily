@@ -130,9 +130,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-10-12",
+      "last_update": "2026-10-13",
       "cadence_days": 6,
-      "next_check": "2026-10-18",
+      "next_check": "2026-10-19",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -371,6 +371,11 @@
           "date": "2026-10-12",
           "point": "Binance连续上线ZCSH、MSTU、SNPS和RDW四只USDT永续，首次在同一批次同时纳入Zcash ETF、两倍做多MSTR的杠杆ETF和普通个股，均支持24/7交易、20倍杠杆与八小时资金费。TradFi永续由批量扩列推进到ETF嵌套风险，指数设计需要额外处理底层休市、ETF再平衡、费用与路径依赖；公告尚未披露成交、OI或休市时价格质量。",
           "url": "https://www.binance.com/en/square/post/376400136183151"
+        },
+        {
+          "date": "2026-10-13",
+          "point": "21Shares披露其私募公司上市ETP不持有股权，而由母公司FalconX发行票据，并通过Binance与Hyperliquid永续管理Anthropic估值敞口；上市后不强制换股，只把预言机参考切换为公开现货。RWA永续由交易端价格发现继续进入证券账户可买的包装层，但投资者同时承担对手方、资金费、预言机与无股东权利风险。",
+          "url": "https://www.21shares.com/en-us/insights/pre-ipo-etp"
         }
       ]
     },
@@ -383,7 +388,7 @@
       "first_seen": "2026-07-02",
       "last_update": "2026-10-11",
       "cadence_days": 3,
-      "next_check": "2026-10-14",
+      "next_check": "2026-10-17",
       "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
       "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
       "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -651,7 +656,7 @@
       "first_seen": "2026-06-19",
   "last_update": "2026-10-08",
       "cadence_days": 3,
-  "next_check": "2026-10-14",
+  "next_check": "2026-10-17",
       "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
       "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
       "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
@@ -976,7 +981,7 @@
       "first_seen": "2026-08-25",
       "last_update": "2026-10-08",
       "cadence_days": 6,
-      "next_check": "2026-10-14",
+      "next_check": "2026-10-20",
       "thesis": "LayerZero 宣布 ATLAS，拟向保留前端和客户关系的经纪商及平台提供撮合、清算、结算与风控后台。若能在生产环境兑现，交易入口与执行基础设施可以分别竞争；目前仅为今年晚些时候推出的计划。",
       "why_us": "HertzFlow 研究外部分发或后台合作时，需要分开核验客户归属、风险责任、故障处置与执行兼容性；不可据公告性能直接替换现有 Keeper 与逐市场 LP 架构。",
       "watch_for": "正式推出时间 / 已上线合作方及真实订单流 / 生产延迟与故障恢复 / 风险与清算责任分配 / 开放及许可市场的隔离规则",
@@ -1111,9 +1116,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-09-18",
-  "last_update": "2026-10-09",
+  "last_update": "2026-10-13",
       "cadence_days": 6,
-  "next_check": "2026-10-15",
+  "next_check": "2026-10-19",
       "thesis": "前沿模型评估正在从发布前的外部测试推进到研发过程内的持续监督，并开始寻求跨实验室、跨国家的共同测量和事故报告口径。更深访问能更早发现风险，但评估方出资、访问边界、报告标准与测试环境隔离仍未形成统一规则。",
       "why_us": "HertzFlow若引入可调用交易、钱包或后台工具的智能体，需要把评估权限、真实系统隔离、异常停止、事件披露和评估方独立性写进上线流程，不能只看离线基准分数。",
       "watch_for": "嵌入式评估访问与报告标准 / 自动化研发共同测量与人类审查触发条件 / 评估方资金独立性 / 真实系统隔离规范 / 测试越界事件披露 / 高风险工具调用的阻断门槛",
@@ -1162,6 +1167,11 @@
       "date": "2026-10-08",
       "point": "Coinbase用历史欺诈结果和可验证奖励后训练Qwen3.5-9B，在自有Onramp基准上相对Opus 4.5提高9.6个百分点F1和35.4个百分点金额加权召回，并把P50线上延迟从1.515秒降至0.683秒。前沿评估从选模型推进到以领域结果驱动后训练与生产回滚，但证据仍限于单一反欺诈任务。",
       "url": "https://www.coinbase.com/blog/part-three-owning-intelligence-series"
+    },
+    {
+      "date": "2026-10-13",
+      "point": "Workday将Agent Harness、MCP工具、Custom Agents与Developer Agent全面上线，所有Agent沿用HR和财务系统现有权限、审批和审计轨迹；但动作前按政策再次校验的Grounded Reasoning仍计划于2027年初早期开放。前沿评估由测试环境继续落到生产系统的身份、上下文和审批治理，同时暴露已上线护栏与计划能力之间的时间差。",
+      "url": "https://newsroom.workday.com/2026-10-13-Workdays-Trusted-Agent-Platform-Now-Delivers-Headless-Access-to-HR-and-Finance,-Letting-Customers-Build-and-Run-Lawful-AI-Agents"
     },
     {
       "date": "2026-10-09",
