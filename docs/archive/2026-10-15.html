@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-10-15</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-src{color:#8a7f66; text-decoration:none;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 104 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 10 月 15 日 · 星期四</div>
+    </header>
+    <p class="lead">Perpetuals申请把带完整股东权利的美股代币带入美国，DriveWealth把经纪结算接入Ripple，Third Moment则把长时Agent研究推到万级并发。</p>
+
+
+      <section class="sec sec-perpdex">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">Perp DEX</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">Perpetuals申请在美国提供完整权利美股代币</h3>
+          <p class="item-b"><strong>事件</strong>：Perpetuals提交依赖SEC创新豁免的通知，计划在美国提供可全天交易、近实时结算且保留股息和投票权的代币化美股，完成通知后的等待期与豁免条件前仍未上线。</p><p class="item-b"><strong>机制</strong>：产品用受监管证券场所承接真实股东权利，而不是只复制价格敞口；（TradFi/RWA永续线 · 自07-09）股票交易竞争由杠杆和交易时段继续扩展到权利完整性、结算速度与美国合规分发。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>目前是依赖临时豁免的计划，技术实施、实际品种、流动性和用户采用仍待验证。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-14</span>
+            <a class="item-src" href="https://www.perpetuals.com/perpetuals-moves-to-offer-tokenized-u-s-stocks-under-sec-innovation-exemption.html" target="_blank" rel="noopener">Perpetuals.com ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Bybit把全部TradFi永续接入跟单</h3>
+          <p class="item-b"><strong>事件</strong>：Bybit宣布其支持的全部股票、商品和指数永续已可在Copy Trading Classic中跟随合格主交易员，仓位统一以USDT结算。</p><p class="item-b"><strong>机制</strong>：平台把原本需要用户逐个理解和下单的非加密永续，包装成可复制的策略分发入口；资产供给优势因此会通过主交易员覆盖、历史表现和跟单关系继续放大。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>公告确认产品范围与结算资产，但未披露合格主交易员数量、跟单资金或各标的深度。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-14</span>
+            <a class="item-src" href="https://www.reddit.com/r/Bybit/comments/1x5xrma/daily_roundup_oct_14_2026/" target="_blank" rel="noopener">Bybit ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">KuCoin把单次合约赛改成季度积分账户</h3>
+          <p class="item-b"><strong>事件</strong>：KuCoin上线Futures Arena，用户在合资格单人赛进入前200名后按成交量获得积分，可兑换手续费券、预开仓位或季度现金奖励。</p><p class="item-b"><strong>机制</strong>：积分在多场活动间延续，季度累计成交量又提高后续积分倍率，短期榜单奖励被改造成跨月留存系统，同时把交易频率、排名和权益兑换绑定到同一账户。</p>
+          <p class="item-context"><span class="item-context-label">量级参照</span>积分有效期为90天，季度倍率从1.01倍到1.10倍，留存激励明确但真实增量成交未披露。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-12</span>
+            <a class="item-src" href="https://www.kucoin.com/announcement/FuturesPoints" target="_blank" rel="noopener">KuCoin ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-launchpad">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">Launchpad</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">本周主线 ｜ ChainGPT把40个已结束池做成结果账本</h3>
+          <p class="item-b">ChainGPT本周更新已结束池清单，把公开销售、Buzzdrop、Launchdrop、Giveaway等40个池的参与人数、时间、价格和ROI放到同一结果页，发行平台开始从活动入口转向可回查的履约账本。</p><p class="item-b">同一PNT项目的公开销售记录为0名参与者，Buzzdrop记录为10104名参与者，说明免费或任务型分发与付费销售的参与结构差异很大，也暴露出结果字段仍需与项目页和链上分配核对。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>这是平台自有历史页，部分池缺少募资额或完整ROI，不能据参与人数比较融资质量。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-11</span>
+            <a class="item-src" href="https://help.chaingpt.org/article/chaingpt-pad-recently-ended-pools-roi" target="_blank" rel="noopener">ChainGPT Help Center ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">CryptoTotem显示在售项目多但资金披露很薄</h3>
+          <p class="item-b">CryptoTotem的10月14日快照列出33个仍在销售窗口内的ICO、IDO或IEO，页面汇总已披露募资约568.8万美元。</p><p class="item-b">列表按记录中的销售窗口和状态筛除售罄、暂停、延期与取消项目，但大量条目仍缺募资、平台或生态字段，说明在售数量不能直接等同于可验证供给。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>汇总金额只覆盖有填报数据的项目，页面未给完整率，也未独立审计项目方状态。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-14</span>
+            <a class="item-src" href="https://cryptototem.com/ico-list/ongoing-ico/" target="_blank" rel="noopener">CryptoTotem ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">TMM用零预留规则完成Pump.fun公平发射</h3>
+          <p class="item-b">The Mother Monster于10月13日在Pump.fun上线，固定供应10亿枚，声明无预售、无团队份额、无买卖税，全部供应通过公开曲线分发。</p><p class="item-b">流动性按Pump.fun毕业机制迁往PumpSwap，项目方承诺上线后撤销铸币权限；公平发射规则清楚，但持币集中度、实际成交和权限撤销仍需链上验证。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>官网已给出合约地址和发射时间，代币表现、持仓分布与铸币权限状态未在该页证明。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-13</span>
+            <a class="item-src" href="https://www.themothermonster.fun/" target="_blank" rel="noopener">The Mother Monster ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-crypto">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">Crypto</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">DriveWealth把经纪结算与资金调度接入Ripple</h3>
+          <p class="item-b">DriveWealth与Ripple合作，先在欧洲接入RLUSD结算、跨境支付和托管，并计划扩展到美国，同时探索股票融资与衍生品能力。</p><p class="item-b">（交易后台服务化线 · 自08-25）经纪平台保留客户与投资入口，Ripple承接资金、托管和结算轨道，客户可在美元、稳定币与加密资产之间近实时调度抵押品。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>欧洲稳定币结算处于接入阶段，美国扩展和股票融资仍是计划，未披露上线量或结算时延。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-14</span>
+            <a class="item-src" href="https://ripple.com/ripple-press/drivewealth-and-ripple-partner-to-bring-institutional-digital-asset-infrastructure-to-global-investing/" target="_blank" rel="noopener">Ripple ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">CoinShares把稳定币策略放进Safe自托管账户</h3>
+          <p class="item-b">CoinShares设计并管理稳定币收益策略，Safe用户通过Earn组件访问，Railnet提供金库基础设施，资产和头寸始终留在用户自己的Safe账户。</p><p class="item-b">三方把风险设计、分发账户与策略执行拆开，用户可随时请求退出，CoinShares不持有资产；收益会变化且受地区和资格限制。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>公告未披露首批策略、目标收益、容量、费用或赎回时延，不能据合作结构判断风险调整后回报。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-14</span>
+            <a class="item-src" href="https://etp.coinshares.com/us/news/coinshares-brings-institutional-grade-stablecoin-yield-strategies-to-safe-users-powered-by-railnet/" target="_blank" rel="noopener">CoinShares ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Federated Hermes计划把代币化基金接入券商账户</h3>
+          <p class="item-b">Federated Hermes与Prometheum计划发行代币化证券基金，由Prometheum体系承接发行、分发、交易、托管、清算与结算，并向介绍经纪商开放。</p><p class="item-b">首只产品目标在2027年第一季度上市，变化在于把链上基金放进美国投资者已有的券商和顾问关系，而不是要求用户进入独立加密平台。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>合作与目标时间已公布，基金类型、链、费用、流动性和监管文件尚未披露。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-13</span>
+            <a class="item-src" href="https://www.prometheum.com/press-releases/prometheum-and-federated-hermes-announce-strategic-partnership-to-issue-tokenized-securities-funds" target="_blank" rel="noopener">Prometheum ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">04</span>
+          <div>
+            <h2 class="sec-title">AI</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">Third Moment把长时研究推到万级Agent并发</h3>
+          <p class="item-b">Third Moment Research称其可同时运行10000个Agent执行36至48小时研究，并在单日使用约1万亿OpenAI tokens；Codex把一项年度逐笔美股回测从约3小时缩短到3至5分钟。</p><p class="item-b">（前沿模型评估线 · 自09-18）外层Harness会在任务提前停止时决定重试、终止或升级人工，Daybreak再测试工作环境安全，长时自治因此依赖运行监督与安全评估，而不只是模型能力。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>并发、时长和效率均来自客户案例，未公开成本、失败率、独立复现或交易策略收益。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-14</span>
+            <a class="item-src" href="https://openai.com/index/third-moment-research/" target="_blank" rel="noopener">OpenAI ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Grok Voice 3.0把语音Agent压到每分钟0.08美元</h3>
+          <p class="item-b">xAI上线Grok Voice 3.0，API价格维持每分钟0.08美元，官方称延迟低于1秒；Artificial Analysis的独立测试把它列为语音模型综合第一。</p><p class="item-b">Starlink称该系统每天处理约2万通多语种电话，约70%无需人工完成，单个Agent可核验客户、排障、发放额度并安排换货，语音模型已进入端到端业务执行。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>基准排名有第三方测试，生产采用和销售转化仍由xAI与关联公司自报。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-14</span>
+            <a class="item-src" href="https://x.ai/news/grok-voice-3" target="_blank" rel="noopener">xAI ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">SolarWinds让IT Agent按风险分级获得自治权</h3>
+          <p class="item-b">SolarWinds上线Avior，引导式接入后可跨本地和云环境关联告警、诊断根因、修复配置漂移并管理容量与资产生命周期。</p><p class="item-b">系统以预设目标和确定性执行框架运行，危险动作必须人工批准，所有动作继承发起者权限并记录审计轨迹，同时提供回滚、数据遮蔽和最小权限工具访问。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>产品已通过引导式计划开放，公告未给客户数量、自动修复成功率、回滚率或事故数据。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-14</span>
+            <a class="item-src" href="https://www.solarwinds.com/company/newsroom/press-releases/solarwinds-unveils-avior-bringing-deterministic-agentic-ai-to-enterprise-it" target="_blank" rel="noopener">SolarWinds ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>
