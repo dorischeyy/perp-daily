@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-10-11",
+  "updated": "2026-10-16",
   "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -26,7 +26,7 @@
       "first_seen": "2026-07-24",
       "last_update": "2026-10-09",
       "cadence_days": 7,
-      "next_check": "2026-10-16",
+      "next_check": "2026-10-23",
       "thesis": "CFTC 正把预测市场从宽泛的产品模板推进到逐类合约的结算方法、数据源与公共利益审查，Hyperliquid 阵营则要求以实际结算结果划界、由联邦独家监管并公开允许合约的理由。谁能把这些要求变成可复用的合约准入与争议处理基础设施，谁才可能规模化扩列链上 outcome contracts。",
       "why_us": "预测市场与非标准标的会争夺同一批交易用户、抵押品和分发入口。HertzFlow 若扩展事件类市场，需要先建立逐合约可审计的结算源、异常处理、争议裁决与准入材料，不能把普通永续的参数化上币流程直接复用。",
       "watch_for": "CFTC 是否发布最终规则及逐类合约示例 / 是否公开允许合约的审查理由 / 州级赌博监管与联邦专属管辖的法院结果 / Hyperliquid outcome contracts 的 OI、争议事件与结算记录",
@@ -130,9 +130,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-10-14",
+      "last_update": "2026-10-15",
       "cadence_days": 6,
-      "next_check": "2026-10-20",
+      "next_check": "2026-10-21",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -381,6 +381,11 @@
           "date": "2026-10-14",
           "point": "Perpetuals提交依赖SEC创新豁免的通知，计划在美国提供保留股息与投票权的代币化美股，并以全天交易、近实时结算和碎片化持有与合成永续竞争。产品仍需完成通知等待期和豁免条件，RWA交易的竞争指标继续从杠杆与交易时段扩展到权利完整性和美国合规分发。",
           "url": "https://www.perpetuals.com/perpetuals-moves-to-offer-tokenized-u-s-stocks-under-sec-innovation-exemption.html"
+        },
+        {
+          "date": "2026-10-15",
+          "point": "Ripple Prime开放100多个股票、指数、ETF、金属、能源与外汇参考市场的永续掉期，并以主事人身份把Trade.xyz在Hyperliquid上的执行接入机构交叉保证金与RLUSD抵押体系。RWA永续由零售交易前端继续进入主经纪授信、风控和清算关系，但名义成交、OI、点差与机构客户数仍未披露。",
+          "url": "https://ripple.com/ripple-press/ripple-launches-support-for-institutions-to-access-real-world-asset-perpetual-swaps/"
         }
       ]
     },
@@ -391,9 +396,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-02",
-      "last_update": "2026-10-11",
+      "last_update": "2026-10-15",
       "cadence_days": 3,
-      "next_check": "2026-10-17",
+      "next_check": "2026-10-18",
       "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
       "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
       "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -562,6 +567,11 @@
           "date": "2026-10-11",
           "point": "Pons Analytics显示累计产生1.972亿美元费用，其中创作者获得1.469亿美元、协议保留3610万美元，并记录95.83万枚代币与49.31万名创作者。Robinhood Chain分发线新增可量化的发行经济数据，但这些是平台自报累计值，不证明Arcus或Lighter永续流量增长。",
           "url": "https://ponsfamily.com/analytics"
+        },
+        {
+          "date": "2026-10-15",
+          "point": "OKX开放Exchange OS公测，把自托管、账户恢复、链上现货、永续和Outcomes放进同一应用账户，并让现货与永续共用保证金资产。经纪商分发线新增自托管统一账户样本，但当前仅为不可提取XP模拟盘，真钱转化与风险表现仍待验证。",
+          "url": "https://www.okx.com/en-gb/help/exchange-os-onchain-perps-and-spot-public-beta-launches-alongside-outcomes"
         }
       ]
     },
@@ -1126,9 +1136,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-09-18",
-  "last_update": "2026-10-14",
+  "last_update": "2026-10-15",
       "cadence_days": 6,
-  "next_check": "2026-10-20",
+  "next_check": "2026-10-21",
       "thesis": "前沿模型评估正在从发布前的外部测试推进到研发过程内的持续监督，并开始寻求跨实验室、跨国家的共同测量和事故报告口径。更深访问能更早发现风险，但评估方出资、访问边界、报告标准与测试环境隔离仍未形成统一规则。",
       "why_us": "HertzFlow若引入可调用交易、钱包或后台工具的智能体，需要把评估权限、真实系统隔离、异常停止、事件披露和评估方独立性写进上线流程，不能只看离线基准分数。",
       "watch_for": "嵌入式评估访问与报告标准 / 自动化研发共同测量与人类审查触发条件 / 评估方资金独立性 / 真实系统隔离规范 / 测试越界事件披露 / 高风险工具调用的阻断门槛",
@@ -1202,7 +1212,12 @@
           "date": "2026-10-14",
           "point": "Third Moment Research把长时Agent研究推进到10000个并发、单次36至48小时，并用外层Harness在任务提前停止时选择重试、终止或升级人工，同时用Daybreak测试工作环境安全。前沿评估由模型发布与生产权限继续推进到长时运行监督、失败恢复和环境安全的组合门槛。",
           "url": "https://openai.com/index/third-moment-research/"
-    }
+        },
+        {
+          "date": "2026-10-15",
+          "point": "ServiceNow发布AI Passport，用签名凭证记录Agent身份、所属组织、授权范围与可访问系统，并允许管理员在运行中改向、限制、断开或终止Agent。前沿评估由长时监督继续推进到跨连接器执行时的可撤销身份、运行时策略和审计链，但核心能力预计第四季度提供。",
+          "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-advances-its-operational-harness-for-enterprise-AI-with-AI-Passport-and-expanded-governance-capabilities/default.aspx"
+        }
       ]
     }
   ]
