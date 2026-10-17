@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-10-17</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-src{color:#8a7f66; text-decoration:none;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 106 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 10 月 17 日 · 星期六</div>
+    </header>
+    <p class="lead">Binance收紧14份永续合约仓位档位，日本三大银行完成联合稳定币跨境实证，OpenAI把协作式幻灯片与多Agent并行能力推向ChatGPT。</p>
+
+
+      <section class="sec sec-perpdex">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">Perp DEX</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">Binance批量收紧永续仓位档位，旧仓与网格同步受影响</h3>
+          <p class="item-b"><strong>事件</strong>：Binance于10月16日调整BLUR、CVC、STX、JASMY、WIF等14份USDⓈ-M永续合约的杠杆与保证金档位，已有仓位也按新档位计算维持保证金。</p><p class="item-b"><strong>机制</strong>：CVC最低档最高杠杆由50倍降至25倍，STX与JASMY取消75倍档位，风险上限直接压缩可承载名义仓位，受影响的期货网格可能被系统终止。</p>
+          <p class="item-context"><span class="item-context-label">影响范围</span>这是按合约逐档调整，不是全平台统一降杠杆；公告未披露受影响仓位、强平量或用户数。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-16</span>
+            <a class="item-src" href="https://www.binance.com/en/support/announcement/detail/05022e46363c4b17bbe81c5600f13526" target="_blank" rel="noopener">Binance ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Hibachi的ETH资金费在单日快照中由负转正</h3>
+          <p class="item-b"><strong>事件</strong>：PerpFinder的10月16日快照显示，Hibachi的ETH永续资金费由每小时负0.0007%转为正0.0046%，BingX未平仓量同期增加6.9%至26.3亿美元。</p><p class="item-b"><strong>机制</strong>：资金费翻正反映该时点多头支付空头，和价格涨跌不是同一指标；跨平台比较还受采样时间、计费周期和指数口径影响。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>页面是15分钟市场快照，不能外推为全天平均资金费，也不能把单个平台OI变化解释成全市场资金流。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-16</span>
+            <a class="item-src" href="https://perpfinder.com/today/2026-10-16" target="_blank" rel="noopener">PerpFinder ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Aster把七成网格奖励转向未成交挂单</h3>
+          <p class="item-b"><strong>事件</strong>：Aster自10月14日更新网格流动性挖矿，70%奖励按挂单规模、距离标记价格和在簿时长分配，剩余30%按Maker成交量分配。</p><p class="item-b"><strong>机制</strong>：未成交挂单也能获得主要奖励，而Taker成交不计入，激励目标由成交量转向可见盘口深度，奖励按小时计算并延迟24小时发放。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>活动持续至10月25日，但公告没有披露新增深度、点差改善或奖励成本，暂不能证明自然流动性提升。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-14</span>
+            <a class="item-src" href="https://www.asterdex.com/de/announcement/554" target="_blank" rel="noopener">Aster ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-launchpad">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">Launchpad</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">Gate用15日滚动合约积分筛选空投资格</h3>
+          <p class="item-b">Gate第155期合约积分空投设置两档兑换，15积分可领取0.031 AAPLG，20积分可领取100 USDT仓位体验金，资格由过去15天累计积分决定。</p><p class="item-b">积分还被用于TGE认购和限时活动，平台把真实合约行为沉淀为跨活动准入层，但跟单、量化机器人与USD1合约不计入。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>两档权益分别消耗15和20积分，但公告未披露各池名额、参与人数与积分对应交易成本。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-15</span>
+            <a class="item-src" href="https://www.gate.com/announcements/article/102245" target="_blank" rel="noopener">Gate ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">1WIN公开销售首日承诺额超过基础配额</h3>
+          <p class="item-b">1WIN在Solana上出售1.3亿枚代币，占固定供应量13%，10月16日承诺额约531万美元，相当于390万美元基础配额的1.36倍。</p><p class="item-b">超额部分按比例分配并退回未使用USDC，公开销售代币在TGE时全部解锁，超募因此不会自动抬高项目实际融资额。</p>
+          <p class="item-context"><span class="item-context-label">量级参照</span>531万美元是承诺额而非已确认融资额，销售硬上限仍为390万美元，差额会在按比例分配后退款。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-16</span>
+            <a class="item-src" href="https://icodrops.com/1win-token/" target="_blank" rel="noopener">ICO Drops ↗</a><a class="item-src item-ref" href="https://1wintoken.com/" target="_blank" rel="noopener">补充：1WIN官方销售页 · 10-15 ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">MemeToro第八阶段预售接近目标，七成供应进入公开销售</h3>
+          <p class="item-b">MemeToro自报第八阶段已筹集16.35万美元，约为17.69万美元目标的90%，当前价格为每枚0.00528美元。</p><p class="item-b">项目把12亿枚总供应的71%分配给公开销售，Launch Agent与BNB Chain发射台仍在开发，分配比例不等于TGE流通量。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>筹资额、目标和计划上市价均由项目方自报，未见链上独立核验，开发中功能也不能视为已交付。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-16</span>
+            <a class="item-src" href="https://www.globenewswire.com/news-release/2026/10/16/3382638/0/en/memetoro-hits-163-467-81-as-stage-8-closes-mt-public-sale-and-memecoin-tokenomics.html" target="_blank" rel="noopener">MemeToro via GlobeNewswire ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-crypto">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">Crypto</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">Marqeta与Coinbase拆分稳定币卡的托管、换汇与发卡责任</h3>
+          <p class="item-b">Marqeta企业客户将可发行稳定币余额支持的支付卡，Coinbase负责托管与法币转换，Base承载链上结算，Marqeta负责发卡处理及银行和卡组织关系。</p><p class="item-b">用户可在全球数百万家受理银行卡的商户消费，但公告描述的是合作计划，没有披露首批客户、上线时间或稳定币结算量。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>Marqeta 2025年处理支付规模接近4000亿美元，但这不能替代本次稳定币卡的客户数、交易量和上线证据。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-16</span>
+            <a class="item-src" href="https://investors.marqeta.com/news-releases/news-release-details/marqeta-and-coinbase-collaborate-enable-stablecoin-backed-card/" target="_blank" rel="noopener">Marqeta ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Jack Henry把Google链上账本接入社区银行核心系统</h3>
+          <p class="item-b">Jack Henry将成为首家集成Google Cloud Universal Ledger的核心银行技术商，让其7200多家银行和信用社客户探索代币化存款与全天候可编程结算。</p><p class="item-b">GCUL提供共享实时账本、自动清算和多边净额结算，但公告措辞仍是为推出铺路，并非客户已经上线代币化存款。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>7200多家是Jack Henry全部客户基数，不是本次集成采用量；首批银行、币种、时间表与生产交易均未披露。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-16</span>
+            <a class="item-src" href="https://www.prnewswire.com/news-releases/jack-henry-expands-collaboration-with-google-cloud-to-deliver-tokenized-deposits-for-banks-and-credit-unions-302911361.html" target="_blank" rel="noopener">Jack Henry ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">日本三大银行完成联合稳定币跨境支付实证</h3>
+          <p class="item-b">瑞穗、三菱UFJ和三井住友以共同委托人模式发行日元稳定币，并与三菱UFJ信托、TISI验证三菱商事日本与海外据点间的发行、移转和赎回流程。</p><p class="item-b">该实证同时覆盖多委托人运营、AML/CFT、用户保护和系统有效性。（交易后台服务化线，自08-25起第11个进展）</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>实证在7月17日至23日完成，10月16日公布；各方确认可行性，但真实交易计划、金额与正式上线日期仍待确定。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-16</span>
+            <a class="item-src" href="https://prtimes.jp/main/html/rd/p/000000384.000036656.html" target="_blank" rel="noopener">三菱UFJ信托银行 ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">04</span>
+          <div>
+            <h2 class="sec-title">AI</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">OpenAI把协作式幻灯片与多Agent并行推向ChatGPT</h3>
+          <p class="item-b">ChatGPT Slides开始向符合条件的Pro、Business与Enterprise Space用户推出，支持共同编辑、评论、演示，并导出PowerPoint、PDF和Google Slides。</p><p class="item-b">同日GPT-6 Pro在聊天页增加多Agent并行处理和任务进度查看，模型能力开始直接映射为可协作的交付流程，而非只返回文本。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>两项能力均在分批推出，Slides限符合条件的Space用户，多Agent并行限GPT-6 Pro，实际可用性取决于账户与工作区设置。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-16</span>
+            <a class="item-src" href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">OpenAI ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Proof用x401让网站核验Agent代表谁和获准做什么</h3>
+          <p class="item-b">Proof上线身份钱包、x401 HTTP协议和生产MCP服务，网站可要求用户在自己的设备上用生物识别确认身份，并对转账金额、收款方或购买条款逐笔签名。</p><p class="item-b">Agent若改变已签字段，验证就会失败，身份、授权与x402支付可分别校验。（前沿模型评估线，自09-18起第15个进展）</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>钱包、协议与MCP服务已上线，但兼容平台、生产客户和监管适用主要由Proof自报，跨站采用仍需独立验证。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-15</span>
+            <a class="item-src" href="https://www.globenewswire.com/news-release/2026/10/15/3381718/0/en/proof-launches-x401-giving-ai-agents-a-way-to-prove-who-they-represent-and-what-they-re-authorized-to-do.html" target="_blank" rel="noopener">Proof via GlobeNewswire ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Treasure AI把营销Agent定价从发送量转向点击</h3>
+          <p class="item-b">Treasure AI发布Digital Worker，让Agent在受治理客户上下文和批准工具内，把客户信号转成洞察、建议与动作，并在关键判断点请求人工批准。</p><p class="item-b">平台同时宣布邮件按点击等互动而非发送量计价，把供应商收入与用户反应绑定，但未披露单价、转化率或生产客户采用量。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>现场演示完成从品牌概念到待发送旅程，不等于持续生产运行；客户案例的80小时节省也由厂商活动材料自报。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-16</span>
+            <a class="item-src" href="https://www.treasure.ai/press-releases/agentic-world-2026-digital-worker" target="_blank" rel="noopener">Treasure AI ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>

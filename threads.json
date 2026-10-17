@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-10-16",
+  "updated": "2026-10-17",
   "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -994,10 +994,10 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-08-25",
-      "last_update": "2026-10-14",
+      "last_update": "2026-10-16",
       "cadence_days": 6,
-      "next_check": "2026-10-20",
-      "thesis": "LayerZero 宣布 ATLAS，拟向保留前端和客户关系的经纪商及平台提供撮合、清算、结算与风控后台。若能在生产环境兑现，交易入口与执行基础设施可以分别竞争；目前仅为今年晚些时候推出的计划。",
+      "next_check": "2026-10-22",
+      "thesis": "交易与资金后台正在从单一平台能力拆成可复用的撮合、清算、托管和结算服务。多家银行联合发行链上货币后，责任分工也从交易入口延伸到共同委托、信托托管与跨境支付；生产规模和故障责任仍需验证。",
       "why_us": "HertzFlow 研究外部分发或后台合作时，需要分开核验客户归属、风险责任、故障处置与执行兼容性；不可据公告性能直接替换现有 Keeper 与逐市场 LP 架构。",
       "watch_for": "正式推出时间 / 已上线合作方及真实订单流 / 生产延迟与故障恢复 / 风险与清算责任分配 / 开放及许可市场的隔离规则",
       "log": [
@@ -1055,6 +1055,11 @@
           "date": "2026-10-14",
           "point": "DriveWealth与Ripple合作，把欧洲稳定币结算、跨境支付和托管接入经纪后台，并计划扩展到美国及股票融资。交易入口与资金、托管、结算轨道进一步拆分，但上线时间、真实结算量和故障责任仍未披露。",
           "url": "https://ripple.com/ripple-press/drivewealth-and-ripple-partner-to-bring-institutional-digital-asset-infrastructure-to-global-investing/"
+        },
+        {
+          "date": "2026-10-16",
+          "point": "日本三大银行以共同委托人、三菱UFJ信托为受托人完成日元稳定币联合发行与跨境支付实证，验证发行、移转、赎回及AML/CFT流程。链上结算后台首次把多行共同发行、信托托管和企业跨境用例放进同一责任结构，但尚未进入真实商业运行。",
+          "url": "https://prtimes.jp/main/html/rd/p/000000384.000036656.html"
         }
       ]
     },
@@ -1136,10 +1141,10 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-09-18",
-  "last_update": "2026-10-15",
+      "last_update": "2026-10-15",
       "cadence_days": 6,
-  "next_check": "2026-10-21",
-      "thesis": "前沿模型评估正在从发布前的外部测试推进到研发过程内的持续监督，并开始寻求跨实验室、跨国家的共同测量和事故报告口径。更深访问能更早发现风险，但评估方出资、访问边界、报告标准与测试环境隔离仍未形成统一规则。",
+      "next_check": "2026-10-21",
+      "thesis": "前沿模型评估正在从发布前测试推进到生产运行中的身份、授权与持续监督。新协议开始让高风险动作绑定真实身份和逐笔签名，但发行方可信度、跨站采用、责任归属与撤销标准仍未统一。",
       "why_us": "HertzFlow若引入可调用交易、钱包或后台工具的智能体，需要把评估权限、真实系统隔离、异常停止、事件披露和评估方独立性写进上线流程，不能只看离线基准分数。",
       "watch_for": "嵌入式评估访问与报告标准 / 自动化研发共同测量与人类审查触发条件 / 评估方资金独立性 / 真实系统隔离规范 / 测试越界事件披露 / 高风险工具调用的阻断门槛",
       "log": [
@@ -1217,6 +1222,11 @@
           "date": "2026-10-15",
           "point": "ServiceNow发布AI Passport，用签名凭证记录Agent身份、所属组织、授权范围与可访问系统，并允许管理员在运行中改向、限制、断开或终止Agent。前沿评估由长时监督继续推进到跨连接器执行时的可撤销身份、运行时策略和审计链，但核心能力预计第四季度提供。",
           "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-advances-its-operational-harness-for-enterprise-AI-with-AI-Passport-and-expanded-governance-capabilities/default.aspx"
+        },
+        {
+          "date": "2026-10-15",
+          "point": "Proof上线x401身份钱包、HTTP协议和生产MCP服务，让网站验证Agent代表的真实用户及其逐笔授权；金额、收款方或条款被改动时签名失效。运行治理由平台内权限继续推进到可跨站验证的身份与交易证据，但当前采用与责任规则主要由Proof自报。",
+          "url": "https://www.globenewswire.com/news-release/2026/10/15/3381718/0/en/proof-launches-x401-giving-ai-agents-a-way-to-prove-who-they-represent-and-what-they-re-authorized-to-do.html"
         }
       ]
     }
