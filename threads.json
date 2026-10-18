@@ -396,9 +396,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-02",
-      "last_update": "2026-10-15",
+      "last_update": "2026-10-18",
       "cadence_days": 3,
-      "next_check": "2026-10-18",
+      "next_check": "2026-10-21",
       "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
       "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
       "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -572,6 +572,11 @@
           "date": "2026-10-15",
           "point": "OKX开放Exchange OS公测，把自托管、账户恢复、链上现货、永续和Outcomes放进同一应用账户，并让现货与永续共用保证金资产。经纪商分发线新增自托管统一账户样本，但当前仅为不可提取XP模拟盘，真钱转化与风险表现仍待验证。",
           "url": "https://www.okx.com/en-gb/help/exchange-os-onchain-perps-and-spot-public-beta-launches-alongside-outcomes"
+        },
+        {
+          "date": "2026-10-18",
+          "point": "RobinSeed以Robinhood Chain首个预售发射台为定位上线，SEED早期链上样本约有3.2万美元流动性、54个持有人，前十地址持有58.7%。经纪商分发线新增预售入口，但薄流动性与地址集中度表明采用仍处早期。",
+          "url": "https://dextape.com/launches/2026-10-15"
         }
       ]
     },
@@ -1141,9 +1146,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-09-18",
-      "last_update": "2026-10-15",
+      "last_update": "2026-10-18",
       "cadence_days": 6,
-      "next_check": "2026-10-21",
+      "next_check": "2026-10-24",
       "thesis": "前沿模型评估正在从发布前测试推进到生产运行中的身份、授权与持续监督。新协议开始让高风险动作绑定真实身份和逐笔签名，但发行方可信度、跨站采用、责任归属与撤销标准仍未统一。",
       "why_us": "HertzFlow若引入可调用交易、钱包或后台工具的智能体，需要把评估权限、真实系统隔离、异常停止、事件披露和评估方独立性写进上线流程，不能只看离线基准分数。",
       "watch_for": "嵌入式评估访问与报告标准 / 自动化研发共同测量与人类审查触发条件 / 评估方资金独立性 / 真实系统隔离规范 / 测试越界事件披露 / 高风险工具调用的阻断门槛",
@@ -1227,6 +1232,11 @@
           "date": "2026-10-15",
           "point": "Proof上线x401身份钱包、HTTP协议和生产MCP服务，让网站验证Agent代表的真实用户及其逐笔授权；金额、收款方或条款被改动时签名失效。运行治理由平台内权限继续推进到可跨站验证的身份与交易证据，但当前采用与责任规则主要由Proof自报。",
           "url": "https://www.globenewswire.com/news-release/2026/10/15/3381718/0/en/proof-launches-x401-giving-ai-agents-a-way-to-prove-who-they-represent-and-what-they-re-authorized-to-do.html"
+        },
+        {
+          "date": "2026-10-18",
+          "point": "Microsoft Copilot Studio开始通过Frontier推出持久型Agent，为其配置组织所有的独立账号、受限凭证、业务流程记忆与事件触发，并由管理员统一治理。前沿评估从跨站逐笔授权继续推进到长期运行中的独立身份、权限、记忆和自动启动条件。",
+          "url": "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/delegate-shared-business-processes-to-agents-that-are-more-persistent-and-proactive-with-microsoft-copilot-studio/"
         }
       ]
     }

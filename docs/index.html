@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-10-17</title>
+<title>Perp DEX 日报 · 2026-10-18</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -82,12 +82,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 106 期</span>
+        <span>每日链上观察</span><span>第 107 期</span>
       </div>
       <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 10 月 17 日 · 星期六</div>
+      <div class="mast-sub">2026 年 10 月 18 日 · 星期日</div>
     </header>
-    <p class="lead">Binance收紧14份永续合约仓位档位，日本三大银行完成联合稳定币跨境实证，OpenAI把协作式幻灯片与多Agent并行能力推向ChatGPT。</p>
+    <p class="lead">OKX把链上永续清算拆成三层资金池，SBI与Startale启动日元、美元稳定币互操作验证，微软则让组织级Agent拥有独立账号、记忆和触发器。</p>
 
 
       <section class="sec sec-perpdex">
@@ -100,30 +100,30 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Binance批量收紧永续仓位档位，旧仓与网格同步受影响</h3>
-          <p class="item-b"><strong>事件</strong>：Binance于10月16日调整BLUR、CVC、STX、JASMY、WIF等14份USDⓈ-M永续合约的杠杆与保证金档位，已有仓位也按新档位计算维持保证金。</p><p class="item-b"><strong>机制</strong>：CVC最低档最高杠杆由50倍降至25倍，STX与JASMY取消75倍档位，风险上限直接压缩可承载名义仓位，受影响的期货网格可能被系统终止。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>这是按合约逐档调整，不是全平台统一降杠杆；公告未披露受影响仓位、强平量或用户数。</p>
+          <h3 class="item-h">OKX把链上永续清算拆成三层资金池</h3>
+          <p class="item-b"><strong>事件</strong>：OKX公布链上永续的安全基金架构，按市场分别设置安全基金、金库和补充资金池，余额及市场映射可公开查询。</p><p class="item-b"><strong>机制</strong>：安全基金先接管并平掉穿仓仓位，金库由团队人工再平衡，补充池自动补足安全基金；三层资金仍不足时才可能进入自动减仓。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>页面披露了资金池职责和查询入口，但没有给出历史穿仓规模、补充频率或压力情景下的覆盖率。</p>
           <div class="item-meta">
-            <span class="item-date">2026-10-16</span>
-            <a class="item-src" href="https://www.binance.com/en/support/announcement/detail/05022e46363c4b17bbe81c5600f13526" target="_blank" rel="noopener">Binance ↗</a>
+            <span class="item-date">2026-10-15</span>
+            <a class="item-src" href="https://www.okx.com/en-us/help/how-does-security-fund-work-for-on-chain-perpetual-trading" target="_blank" rel="noopener">OKX ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Hibachi的ETH资金费在单日快照中由负转正</h3>
-          <p class="item-b"><strong>事件</strong>：PerpFinder的10月16日快照显示，Hibachi的ETH永续资金费由每小时负0.0007%转为正0.0046%，BingX未平仓量同期增加6.9%至26.3亿美元。</p><p class="item-b"><strong>机制</strong>：资金费翻正反映该时点多头支付空头，和价格涨跌不是同一指标；跨平台比较还受采样时间、计费周期和指数口径影响。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>页面是15分钟市场快照，不能外推为全天平均资金费，也不能把单个平台OI变化解释成全市场资金流。</p>
+          <h3 class="item-h">Bybit给10份永续合约设置风险参数迁移缓冲期</h3>
+          <p class="item-b"><strong>事件</strong>：Bybit于10月16日调整ENA、SUI、WLD、TAO等10份USDT永续的风险限额，未满足新保证金要求的仓位先被限制增加风险。</p><p class="item-b"><strong>机制</strong>：缓冲期内只能减仓，相关交易机器人也不能新开仓；11月2日迁移结束后仍不合规的仓位可能被强平。</p>
+          <p class="item-context"><span class="item-context-label">影响范围</span>公告覆盖10份合约并给出迁移时点，但没有披露受影响仓位、未平仓量或各档参数变化的实际分布。</p>
           <div class="item-meta">
-            <span class="item-date">2026-10-16</span>
-            <a class="item-src" href="https://perpfinder.com/today/2026-10-16" target="_blank" rel="noopener">PerpFinder ↗</a>
+            <span class="item-date">2026-10-15</span>
+            <a class="item-src" href="https://announcements.bybit.com/en/article/risk-limit-adjustment-for-selected-perpetual-contracts-enausdt-suiusdt-oct-16-2026--artd87870c45c1f/?category=maintenance_updates" target="_blank" rel="noopener">Bybit ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Aster把七成网格奖励转向未成交挂单</h3>
-          <p class="item-b"><strong>事件</strong>：Aster自10月14日更新网格流动性挖矿，70%奖励按挂单规模、距离标记价格和在簿时长分配，剩余30%按Maker成交量分配。</p><p class="item-b"><strong>机制</strong>：未成交挂单也能获得主要奖励，而Taker成交不计入，激励目标由成交量转向可见盘口深度，奖励按小时计算并延迟24小时发放。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>活动持续至10月25日，但公告没有披露新增深度、点差改善或奖励成本，暂不能证明自然流动性提升。</p>
+          <h3 class="item-h">Lighter在单次快照中拿下中小额BTC永续最低成本</h3>
+          <p class="item-b"><strong>事件</strong>：PerpFinder在10月18日02:33 UTC的订单簿快照中测得，Lighter买入10万美元与100万美元BTC永续的综合成本分别为0.3和1.0个基点。</p><p class="item-b"><strong>机制</strong>：该口径合并Taker费、半点差和冲击成本；订单扩大到1000万美元时，MEXC以2.2个基点领先，说明成本优势会随规模和深度变化。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>这是单次公开订单簿快照，不代表全天平均执行质量，也未计入资金费、提现和跨平台资金占用。</p>
           <div class="item-meta">
-            <span class="item-date">2026-10-14</span>
-            <a class="item-src" href="https://www.asterdex.com/de/announcement/554" target="_blank" rel="noopener">Aster ↗</a>
+            <span class="item-date">2026-10-18</span>
+            <a class="item-src" href="https://perpfinder.com/" target="_blank" rel="noopener">PerpFinder ↗</a>
           </div>
         </article>
         </div>
@@ -138,30 +138,30 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Gate用15日滚动合约积分筛选空投资格</h3>
-          <p class="item-b">Gate第155期合约积分空投设置两档兑换，15积分可领取0.031 AAPLG，20积分可领取100 USDT仓位体验金，资格由过去15天累计积分决定。</p><p class="item-b">积分还被用于TGE认购和限时活动，平台把真实合约行为沉淀为跨活动准入层，但跟单、量化机器人与USD1合约不计入。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>两档权益分别消耗15和20积分，但公告未披露各池名额、参与人数与积分对应交易成本。</p>
+          <h3 class="item-h">RobinSeed把预售入口带上Robinhood Chain</h3>
+          <p class="item-b">RobinSeed于10月15日以Robinhood Chain首个预售发射台为定位上线，Dextape把SEED标记为当日新项目。</p><p class="item-b">DexBrief同期记录SEED约3.2万美元流动性、54个持有人且前十地址持有58.7%，入口已经出现，但集中度和薄流动性仍限制价格发现。（Robinhood Chain分发线，自07-02起第35个进展）</p>
+          <p class="item-context"><span class="item-context-label">量级参照</span>首发定位来自项目页面，链上样本仍很早期；持有人数、流动性与地址集中度不能证明发射台已有持续采用。</p>
           <div class="item-meta">
             <span class="item-date">2026-10-15</span>
-            <a class="item-src" href="https://www.gate.com/announcements/article/102245" target="_blank" rel="noopener">Gate ↗</a>
+            <a class="item-src" href="https://dextape.com/launches/2026-10-15" target="_blank" rel="noopener">Dextape ↗</a><a class="item-src item-ref" href="https://dexbrief.com/coins/robinseed/" target="_blank" rel="noopener">补充：DexBrief · 10-15 ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">1WIN公开销售首日承诺额超过基础配额</h3>
-          <p class="item-b">1WIN在Solana上出售1.3亿枚代币，占固定供应量13%，10月16日承诺额约531万美元，相当于390万美元基础配额的1.36倍。</p><p class="item-b">超额部分按比例分配并退回未使用USDC，公开销售代币在TGE时全部解锁，超募因此不会自动抬高项目实际融资额。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>531万美元是承诺额而非已确认融资额，销售硬上限仍为390万美元，差额会在按比例分配后退款。</p>
+          <h3 class="item-h">yore.fun用无预售公平发射登陆Injective</h3>
+          <p class="item-b">yore.fun于10月17日16:00 UTC正式上线，代币经联合曲线发行，不设预售或团队分配，达到条件后迁移到Choice交易。</p><p class="item-b">首批持有至少0.5 INJ并完成交互的300个钱包可获OG标记，平台把早期身份权益与链上参与绑定，而不是按私募额度分配。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>上线规则和钱包门槛可核验，但页面未提供毕业项目、独立交易量、留存或创建者收益数据。</p>
           <div class="item-meta">
-            <span class="item-date">2026-10-16</span>
-            <a class="item-src" href="https://icodrops.com/1win-token/" target="_blank" rel="noopener">ICO Drops ↗</a><a class="item-src item-ref" href="https://1wintoken.com/" target="_blank" rel="noopener">补充：1WIN官方销售页 · 10-15 ↗</a>
+            <span class="item-date">2026-10-17</span>
+            <a class="item-src" href="https://yore.fun/og" target="_blank" rel="noopener">yore.fun ↗</a><a class="item-src item-ref" href="https://yore.fun/" target="_blank" rel="noopener">补充：yore.fun产品页 · 10-17 ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">MemeToro第八阶段预售接近目标，七成供应进入公开销售</h3>
-          <p class="item-b">MemeToro自报第八阶段已筹集16.35万美元，约为17.69万美元目标的90%，当前价格为每枚0.00528美元。</p><p class="item-b">项目把12亿枚总供应的71%分配给公开销售，Launch Agent与BNB Chain发射台仍在开发，分配比例不等于TGE流通量。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>筹资额、目标和计划上市价均由项目方自报，未见链上独立核验，开发中功能也不能视为已交付。</p>
+          <h3 class="item-h">Sikka.fun用多币种交易次数筛选短周期奖励</h3>
+          <p class="item-b">Sikka.fun于10月15日启动第36期24小时交易赛，前十名共享250万枚SHM，参与者需要交易至少50种不同代币。</p><p class="item-b">排名先按合格买卖次数，再以成交额、币种数和达标时间破同分；平台因此奖励覆盖广度和频次，而不是只奖励单一大额成交。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>奖池按代币数量披露，缺少法币价值、参与人数、交易成本和赛后留存，短周期活跃不能等同自然需求。</p>
           <div class="item-meta">
-            <span class="item-date">2026-10-16</span>
-            <a class="item-src" href="https://www.globenewswire.com/news-release/2026/10/16/3382638/0/en/memetoro-hits-163-467-81-as-stage-8-closes-mt-public-sale-and-memecoin-tokenomics.html" target="_blank" rel="noopener">MemeToro via GlobeNewswire ↗</a>
+            <span class="item-date">2026-10-15</span>
+            <a class="item-src" href="https://shardeum.org/blog/sikka-fun-trading-contest-36-is-live/" target="_blank" rel="noopener">Shardeum ↗</a>
           </div>
         </article>
         </div>
@@ -176,30 +176,30 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Marqeta与Coinbase拆分稳定币卡的托管、换汇与发卡责任</h3>
-          <p class="item-b">Marqeta企业客户将可发行稳定币余额支持的支付卡，Coinbase负责托管与法币转换，Base承载链上结算，Marqeta负责发卡处理及银行和卡组织关系。</p><p class="item-b">用户可在全球数百万家受理银行卡的商户消费，但公告描述的是合作计划，没有披露首批客户、上线时间或稳定币结算量。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>Marqeta 2025年处理支付规模接近4000亿美元，但这不能替代本次稳定币卡的客户数、交易量和上线证据。</p>
+          <h3 class="item-h">SBI与Startale验证日元、美元稳定币互操作</h3>
+          <p class="item-b">SBI Holdings、SBI Shinsei Bank与Startale加入Open Standard，计划验证信托型日元稳定币JPYSC与美元稳定币OUSD之间的互操作。</p><p class="item-b">试点重点是跨发行方的转换与结算路径，而非再建一条孤立支付轨道；公告明确这不是商业服务或生产部署。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>三方已加入联盟并探索试点，但尚未披露上线时间、交易金额、兑换机制或真实企业客户。</p>
           <div class="item-meta">
             <span class="item-date">2026-10-16</span>
-            <a class="item-src" href="https://investors.marqeta.com/news-releases/news-release-details/marqeta-and-coinbase-collaborate-enable-stablecoin-backed-card/" target="_blank" rel="noopener">Marqeta ↗</a>
+            <a class="item-src" href="https://www.startale.com/en/blog/openstandard-startale-sbi" target="_blank" rel="noopener">Startale ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Jack Henry把Google链上账本接入社区银行核心系统</h3>
-          <p class="item-b">Jack Henry将成为首家集成Google Cloud Universal Ledger的核心银行技术商，让其7200多家银行和信用社客户探索代币化存款与全天候可编程结算。</p><p class="item-b">GCUL提供共享实时账本、自动清算和多边净额结算，但公告措辞仍是为推出铺路，并非客户已经上线代币化存款。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>7200多家是Jack Henry全部客户基数，不是本次集成采用量；首批银行、币种、时间表与生产交易均未披露。</p>
+          <h3 class="item-h">Cross River把RLUSD接进核心银行基础设施</h3>
+          <p class="item-b">Cross River将Ripple USD接入自有核心银行系统COS，企业客户可通过单一API在美元与RLUSD之间转换，并连接ACH、电汇和实时支付。</p><p class="item-b">银行负责法币轨道和合规基础设施，XRPL承载稳定币转移，组合目标是把全天候链上结算嵌入现有企业资金流。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>集成和API入口已经公布，但首批客户、生产交易量、覆盖地区及稳定币余额没有披露。</p>
           <div class="item-meta">
-            <span class="item-date">2026-10-16</span>
-            <a class="item-src" href="https://www.prnewswire.com/news-releases/jack-henry-expands-collaboration-with-google-cloud-to-deliver-tokenized-deposits-for-banks-and-credit-unions-302911361.html" target="_blank" rel="noopener">Jack Henry ↗</a>
+            <span class="item-date">2026-10-15</span>
+            <a class="item-src" href="https://www.crossriver.com/newsroom/cross-river-embeds-ripple-usd-stablecoin-on-the-xrp-ledger-into-its-core-banking-infrastructure-expanding-faster-payment-capabilities-for-businesses" target="_blank" rel="noopener">Cross River ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">日本三大银行完成联合稳定币跨境支付实证</h3>
-          <p class="item-b">瑞穗、三菱UFJ和三井住友以共同委托人模式发行日元稳定币，并与三菱UFJ信托、TISI验证三菱商事日本与海外据点间的发行、移转和赎回流程。</p><p class="item-b">该实证同时覆盖多委托人运营、AML/CFT、用户保护和系统有效性。（交易后台服务化线，自08-25起第11个进展）</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>实证在7月17日至23日完成，10月16日公布；各方确认可行性，但真实交易计划、金额与正式上线日期仍待确定。</p>
+          <h3 class="item-h">Token Terminal为逾万种代币化资产统一披露字段</h3>
+          <p class="item-b">Token Terminal于10月16日上线Fact Sheets，为逾1万种代币化资产提供标准化资料页，覆盖发行人、司法辖区、托管和代币代表权利。</p><p class="item-b">统一字段降低跨发行方比较成本，但披露来自平台汇总，不替代底层法律文件、资产证明或持续审计。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>平台首页口径为超过1万种资产，具体覆盖量仍会变化；资料标准化不代表每项字段都由独立第三方验证。</p>
           <div class="item-meta">
             <span class="item-date">2026-10-16</span>
-            <a class="item-src" href="https://prtimes.jp/main/html/rd/p/000000384.000036656.html" target="_blank" rel="noopener">三菱UFJ信托银行 ↗</a>
+            <a class="item-src" href="https://tokenterminal.com/resources/newsletter" target="_blank" rel="noopener">Token Terminal ↗</a>
           </div>
         </article>
         </div>
@@ -214,30 +214,30 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">OpenAI把协作式幻灯片与多Agent并行推向ChatGPT</h3>
-          <p class="item-b">ChatGPT Slides开始向符合条件的Pro、Business与Enterprise Space用户推出，支持共同编辑、评论、演示，并导出PowerPoint、PDF和Google Slides。</p><p class="item-b">同日GPT-6 Pro在聊天页增加多Agent并行处理和任务进度查看，模型能力开始直接映射为可协作的交付流程，而非只返回文本。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>两项能力均在分批推出，Slides限符合条件的Space用户，多Agent并行限GPT-6 Pro，实际可用性取决于账户与工作区设置。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-10-16</span>
-            <a class="item-src" href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">OpenAI ↗</a>
-          </div>
-        </article>
-        <article class="item">
-          <h3 class="item-h">Proof用x401让网站核验Agent代表谁和获准做什么</h3>
-          <p class="item-b">Proof上线身份钱包、x401 HTTP协议和生产MCP服务，网站可要求用户在自己的设备上用生物识别确认身份，并对转账金额、收款方或购买条款逐笔签名。</p><p class="item-b">Agent若改变已签字段，验证就会失败，身份、授权与x402支付可分别校验。（前沿模型评估线，自09-18起第15个进展）</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>钱包、协议与MCP服务已上线，但兼容平台、生产客户和监管适用主要由Proof自报，跨站采用仍需独立验证。</p>
+          <h3 class="item-h">微软让组织级Agent拥有独立账号、记忆和触发器</h3>
+          <p class="item-b">Microsoft Copilot Studio开始通过Frontier推出持久型Agent，可使用组织所有的独立账号和受限凭证，并在业务流程中保留上下文。</p><p class="item-b">Agent可由事件触发、在Office协作中被提及，并由管理员统一治理，生产评估因此需要同时覆盖身份、权限、长期记忆和自动启动条件。（前沿模型评估线，自09-18起第17个进展）</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>能力正通过Frontier分批开放，独立云端电脑仍属后续计划；公告没有披露生产客户规模或异常率。</p>
           <div class="item-meta">
             <span class="item-date">2026-10-15</span>
-            <a class="item-src" href="https://www.globenewswire.com/news-release/2026/10/15/3381718/0/en/proof-launches-x401-giving-ai-agents-a-way-to-prove-who-they-represent-and-what-they-re-authorized-to-do.html" target="_blank" rel="noopener">Proof via GlobeNewswire ↗</a>
+            <a class="item-src" href="https://www.microsoft.com/en-us/copilot/blog/copilot-studio/delegate-shared-business-processes-to-agents-that-are-more-persistent-and-proactive-with-microsoft-copilot-studio/" target="_blank" rel="noopener">Microsoft ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Treasure AI把营销Agent定价从发送量转向点击</h3>
-          <p class="item-b">Treasure AI发布Digital Worker，让Agent在受治理客户上下文和批准工具内，把客户信号转成洞察、建议与动作，并在关键判断点请求人工批准。</p><p class="item-b">平台同时宣布邮件按点击等互动而非发送量计价，把供应商收入与用户反应绑定，但未披露单价、转化率或生产客户采用量。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>现场演示完成从品牌概念到待发送旅程，不等于持续生产运行；客户案例的80小时节省也由厂商活动材料自报。</p>
+          <h3 class="item-h">Tasklet用1Password维持跨线程浏览器登录</h3>
+          <p class="item-b">Tasklet于10月16日更新浏览器登录能力，用户可把凭证保存在1Password保险库，让Agent在不同线程中继续使用已登录会话。</p><p class="item-b">凭证保管与Agent执行被拆开，减少重复输入密码，但长期会话也要求独立核验授权范围、撤销速度和敏感动作确认。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>更新已列入产品日志，但页面没有披露支持站点、会话有效期、企业采用或安全事件数据。</p>
           <div class="item-meta">
             <span class="item-date">2026-10-16</span>
-            <a class="item-src" href="https://www.treasure.ai/press-releases/agentic-world-2026-digital-worker" target="_blank" rel="noopener">Treasure AI ↗</a>
+            <a class="item-src" href="https://tasklet.ai/blog" target="_blank" rel="noopener">Tasklet ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">HireFoundry把单一面试Agent拆成招聘Agent套件</h3>
+          <p class="item-b">Fusemachines于10月15日发布HireFoundry AI，把原有面试Agent扩展为覆盖筛选、面试和候选人沟通的专用Agent套件。</p><p class="item-b">平台可连接30多种招聘管理系统，并保留招聘人员审批，产品重心从单点自动化转向跨招聘流程编排。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>连接数量和产品能力由厂商自报，公告没有披露上线客户、招聘结果改善或人工复核率。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-15</span>
+            <a class="item-src" href="https://rss.globenewswire.com/news-release/2026/10/15/3381550/0/en/fusemachines-unveils-hirefoundry-ai-evolving-from-a-single-interview-agent-to-a-growing-platform-of-ai-agents-for-enterprise-hiring.html" target="_blank" rel="noopener">Fusemachines via GlobeNewswire ↗</a>
           </div>
         </article>
         </div>
