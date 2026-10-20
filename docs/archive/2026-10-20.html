@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-10-20</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-src{color:#8a7f66; text-decoration:none;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 108 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 10 月 20 日 · 星期二</div>
+    </header>
+    <p class="lead">CFTC以CME未证明实际竞争损害反驳其永续诉讼，JPMorgan把JPM Coin扩到Ethereum，Microsoft则把Agent权限改成随任务与风险动态收缩的独立控制面。</p>
+
+
+      <section class="sec sec-perpdex">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">Perp DEX</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">CFTC称CME未证明永续产品造成实际竞争损害</h3>
+          <p class="item-b"><strong>事件</strong>：CFTC在10月19日提交的法庭文件中称，CME没有说明Kalshi比特币永续期货造成了实际或迫近的竞争损害，因此缺乏起诉资格。</p><p class="item-b"><strong>机制</strong>：CFTC仍把该产品按个案认证为期货，CME则坚持无到期日产品属于掉期，法院尚未对实体分类作出裁定，美国永续分类线因此从产品登记推进到诉讼资格争议。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>这是监管方的诉讼立场，不是法院对永续属于期货还是掉期的最终裁定。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-19</span>
+            <a class="item-src" href="https://www.coindesk.com/policy/2026/10/19/u-s-cftc-rebuffs-cme-legal-stance-in-consequential-fight-over-perpetual-futures" target="_blank" rel="noopener">CoinDesk ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">TRUE把60个加密与非加密永续市场放进同一USDC余额</h3>
+          <p class="item-b"><strong>事件</strong>：TRUE文档列出60个永续市场，覆盖加密资产、美股、未上市公司、金属、原油、外汇和指数，并让同一USDC余额跨市场使用。</p><p class="item-b"><strong>机制</strong>：平台以自建排序器和订单簿撮合、在Solana结算，BTC最高50倍、非加密资产最高10倍、未上市公司最高5倍，但股票类产品只提供价格敞口，不代表实际股份。</p>
+          <p class="item-context"><span class="item-context-label">影响范围</span>跨资产保证金入口已经形成，真实成交、未平仓量、点差与极端行情表现仍未披露。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-18</span>
+            <a class="item-src" href="https://docs.truefinance.ai/en/docs/perps" target="_blank" rel="noopener">TRUE Docs ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Lighter在10万美元BTC永续市价单快照中成本最低</h3>
+          <p class="item-b"><strong>事件</strong>：PerpFinder在10月20日02:34 UTC的快照中测得，10万美元BTC永续市价买单在Lighter的预估总成本为0.5个基点，约5美元。</p><p class="item-b"><strong>机制</strong>：该口径把吃单费、半个买卖价差与预估价格冲击相加，适合比较同一时点的可见执行成本，但不能外推全天、限价单或大额拆单结果。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>同页显示全市场24小时成交1789.4亿美元、DEX占9.5%，两者都是动态快照，不代表长期份额。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-20</span>
+            <a class="item-src" href="https://perpfinder.com/" target="_blank" rel="noopener">PerpFinder ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-launchpad">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">Launchpad</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">FEAST公平发售以40.07 BNB完成结算</h3>
+          <p class="item-b">FEAST页面显示发售已结算，售出3亿枚代币并募集40.07 BNB，发售收取1%费用。</p><p class="item-b">合约只保留退款、结算和添加流动性路径，页面称已注入的流动性无法由所有者移除，但团队分配仍有36个月释放期。</p>
+          <p class="item-context"><span class="item-context-label">量级参照</span>发售份额占10亿总供应的30%，另有30%用于流动性池，募资规模仍属早期样本。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-19</span>
+            <a class="item-src" href="https://feast.meme/sale" target="_blank" rel="noopener">FEAST ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Debitum页面排定DEB发售价从4美元升至5美元</h3>
+          <p class="item-b">Debitum代币销售页把10月20日00:00 UTC列为单价从4美元上调至5美元的节点，销售额度为100万枚DEB。</p><p class="item-b">购买使用USDC、USDT、ETH、WETH或WBTC并在同一笔交易交付、无锁仓，Uniswap与Curve流动性仍只是后续计划。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>销售额度占1000万固定供应的10%，价格节点可查，但二级流动性尚未上线。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-19</span>
+            <a class="item-src" href="https://www.coingabbar.com/en/debitum-presale-update-deb-price-rises-to-5-stage-news" target="_blank" rel="noopener">CoinGabbar ↗</a><a class="item-src item-ref" href="https://debitum.app/token-sale" target="_blank" rel="noopener">补充：Debitum · 10-20 ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">NEAR两大发射台24小时合计完成6464笔交换</h3>
+          <p class="item-b">NEAR Stats在10月19日快照中记录JustHoot完成3586笔交换、37.11万美元成交，Nearly完成2878笔交换、34.01万美元成交。</p><p class="item-b">Nearly同时披露13次发射和4400美元费用，JustHoot未披露同口径费用与发射数，因此只能比较活跃度，不能直接比较收入效率。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>数据是24小时快照，且两家披露字段不完整一致，无法判断自然留存与单次发射质量。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-19</span>
+            <a class="item-src" href="https://nearstats.org/launchpads" target="_blank" rel="noopener">NEAR Stats ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-crypto">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">Crypto</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">JPMorgan把机构存款代币JPM Coin扩到Ethereum</h3>
+          <p class="item-b">JPMorgan面向机构客户把代表银行美元存款的JPM Coin扩到Ethereum，理由是客户与流动性已经聚集在该网络。</p><p class="item-b">代币仍是许可客户使用的银行负债，不是面向公众的稳定币；交易后台服务化线因此新增公共链结算样本，但跨行采用与链上规模尚未披露。</p>
+          <p class="item-context"><span class="item-context-label">量级参照</span>其Kinexys平台现有日处理量超过70亿美元，相对该行每日约12万亿美元支付业务仍是小规模通道。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-19</span>
+            <a class="item-src" href="https://www.coindesk.com/markets/2026/10/19/jpmorgan-s-jpm-coin-representing-dollar-deposits-is-coming-to-ethereum-bloomberg" target="_blank" rel="noopener">CoinDesk ↗</a><a class="item-src item-ref" href="https://www.jpmorgan.com/payments/newsroom/jpm-coin-live-on-ethereum" target="_blank" rel="noopener">补充：JPMorgan · 10-19 ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">DTCC首批代币化服务只覆盖25只证券</h3>
+          <p class="item-b">DTCC的代币化服务计划先在Canton与许可Besu网络覆盖25只证券，并让链上记录与DTC托管证券保持一比一对应。</p><p class="item-b">约30万亿美元可用资产是潜在资格范围，不是首日代币化规模，Stellar与Arc接入、数字现金结算和抵押品用途仍在后续路线图。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>首发标的仅25只，30万亿美元代表可纳入范围，不能写成已经上链的资产规模。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-17</span>
+            <a class="item-src" href="https://tsnmedia.org/dtcc-tokenization-service-launch-scope/" target="_blank" rel="noopener">TSN Media ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">BitTorrent用三季度服务收入回购并销毁21.621万亿枚BTT</h3>
+          <p class="item-b">BitTorrent称已把三季度去中心化服务收入全部用于回购，并在10月16日销毁21.621万亿枚BTT，按公告口径约760万美元。</p><p class="item-b">项目计划按季度继续执行，但收入基础、回购成交细节与效果均由项目方自报，销毁数量不能替代可审计的持续现金流。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>约760万美元价值和100%收入回购均来自项目公告，缺少独立审计与季度收入拆分。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-18</span>
+            <a class="item-src" href="https://www.globenewswire.com/news-release/2026/10/18/3382943/0/en/bittorrent-ushers-in-next-gen-web3-infrastructure-with-strategic-rebrand-and-inaugural-btt-burn.html" target="_blank" rel="noopener">GlobeNewswire ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">04</span>
+          <div>
+            <h2 class="sec-title">AI</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">Microsoft让Agent权限随任务与风险动态收缩</h3>
+          <p class="item-b">Microsoft提出Dynamic Permissions与Dynamic Agent Risk，让Agent按任务、时间和实时风险获得或收回权限，并由外部控制面执行条件访问。</p><p class="item-b">官方明确模型不能充当自身安全边界，前沿评估线因此从固定账号治理推进到任务级最小权限、持续风险评分与独立阻断。</p>
+          <p class="item-context"><span class="item-context-label">落地程度</span>方案给出控制面与产品方向，跨租户覆盖、误判率和生产事故数据尚未披露。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-19</span>
+            <a class="item-src" href="https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/" target="_blank" rel="noopener">Microsoft Security Blog ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Notion称自动模型路由把平均成本降约90%</h3>
+          <p class="item-b">Notion称其自动模型路由在20多类任务上达到接近Opus 5.5与Astra的结果，同时把平均模型成本降低约90%，并让积分可用量扩大10倍。</p><p class="item-b">Notion Agent任务时长上限由5分钟提高到24小时以上，并增加MCP与连接器工具，但质量与成本结论来自厂商内部评估，缺少独立生产基准。</p>
+          <p class="item-context"><span class="item-context-label">口径限制</span>成本下降来自20多类内部用例的平均值，未公开逐任务分布、失败率或长任务人工接管比例。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-19</span>
+            <a class="item-src" href="https://www.notion.com/blog/notion-ai-more-for-less" target="_blank" rel="noopener">Notion ↗</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">OpenA2A记录30天内420次外部工具调用</h3>
+          <p class="item-b">OpenA2A在9月19日至10月19日窗口记录420次工具调用，来自19种指纹；同期公开暴露的MCP服务器升至2495台，A2A握手达到27247次。</p><p class="item-b">报告建议把告警重点放在真实工具调用而非连接次数，前沿评估线新增外部可观察的Agent行为指标，但扫描覆盖和指纹归因仍有偏差。</p>
+          <p class="item-context"><span class="item-context-label">量级参照</span>报告同时扫描到255582个公开AI服务，其中80.5%为OpenClaw，暴露面不等于已发生攻击。</p>
+          <div class="item-meta">
+            <span class="item-date">2026-10-19</span>
+            <a class="item-src" href="https://research.opena2a.org/reports/state-of-ai-agent-security-2026-10" target="_blank" rel="noopener">OpenA2A Research ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>

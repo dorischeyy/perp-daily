@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-10-17",
+  "updated": "2026-10-20",
   "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -130,9 +130,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-10-15",
+      "last_update": "2026-10-18",
       "cadence_days": 6,
-      "next_check": "2026-10-21",
+      "next_check": "2026-10-26",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -386,6 +386,11 @@
           "date": "2026-10-15",
           "point": "Ripple Prime开放100多个股票、指数、ETF、金属、能源与外汇参考市场的永续掉期，并以主事人身份把Trade.xyz在Hyperliquid上的执行接入机构交叉保证金与RLUSD抵押体系。RWA永续由零售交易前端继续进入主经纪授信、风控和清算关系，但名义成交、OI、点差与机构客户数仍未披露。",
           "url": "https://ripple.com/ripple-press/ripple-launches-support-for-institutions-to-access-real-world-asset-perpetual-swaps/"
+        },
+        {
+          "date": "2026-10-18",
+          "point": "TRUE文档列出60个永续市场，覆盖加密、美股、未上市公司、金属、原油、外汇和指数，并让同一USDC余额跨市场使用；平台以自建排序器和订单簿撮合、在Solana结算，但股票类产品只提供价格敞口，真实成交、OI和压力表现仍未披露。",
+          "url": "https://docs.truefinance.ai/en/docs/perps"
         }
       ]
     },
@@ -672,11 +677,11 @@
       "title": "CME 诉 CFTC：美国永续监管定性",
       "score": 92,
       "tier": "S",
-      "status": "dormant",
+      "status": "active",
       "first_seen": "2026-06-19",
-  "last_update": "2026-10-08",
+      "last_update": "2026-10-19",
       "cadence_days": 3,
-  "next_check": "2026-10-17",
+      "next_check": "2026-10-23",
       "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
       "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
       "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
@@ -795,6 +800,11 @@
       "date": "2026-10-08",
       "point": "CFTC产品登记页显示，CDNA认证BTC、ETH、HYPE、SEI、SOL和ZEC六种永续期货。美国合规永续标的从少数主流币扩到更多加密资产，但登记只确认DCM产品认证，不代表已经形成实际交易、清算深度或零售可用性；CME诉CFTC的swap与future实体定性仍无裁定。",
       "url": "https://www.cftc.gov/IndustryOversight/IndustryFilings/TradingOrganizationProducts?Type=Future&col=Date&dir=DESC&page=0"
+    },
+    {
+      "date": "2026-10-19",
+      "point": "CFTC在法庭文件中称，CME没有说明Kalshi比特币永续期货造成实际或迫近的竞争损害，因此缺乏起诉资格；CME仍主张无到期日产品属于掉期，法院尚未对实体分类作出裁定。分类争议从产品登记推进到诉讼资格门槛。",
+      "url": "https://www.coindesk.com/policy/2026/10/19/u-s-cftc-rebuffs-cme-legal-stance-in-consequential-fight-over-perpetual-futures"
     }
       ]
     },
@@ -999,9 +1009,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-08-25",
-      "last_update": "2026-10-16",
+      "last_update": "2026-10-19",
       "cadence_days": 6,
-      "next_check": "2026-10-22",
+      "next_check": "2026-10-26",
       "thesis": "交易与资金后台正在从单一平台能力拆成可复用的撮合、清算、托管和结算服务。多家银行联合发行链上货币后，责任分工也从交易入口延伸到共同委托、信托托管与跨境支付；生产规模和故障责任仍需验证。",
       "why_us": "HertzFlow 研究外部分发或后台合作时，需要分开核验客户归属、风险责任、故障处置与执行兼容性；不可据公告性能直接替换现有 Keeper 与逐市场 LP 架构。",
       "watch_for": "正式推出时间 / 已上线合作方及真实订单流 / 生产延迟与故障恢复 / 风险与清算责任分配 / 开放及许可市场的隔离规则",
@@ -1065,6 +1075,11 @@
           "date": "2026-10-16",
           "point": "日本三大银行以共同委托人、三菱UFJ信托为受托人完成日元稳定币联合发行与跨境支付实证，验证发行、移转、赎回及AML/CFT流程。链上结算后台首次把多行共同发行、信托托管和企业跨境用例放进同一责任结构，但尚未进入真实商业运行。",
           "url": "https://prtimes.jp/main/html/rd/p/000000384.000036656.html"
+        },
+        {
+          "date": "2026-10-19",
+          "point": "JPMorgan把代表银行美元存款的JPM Coin扩到Ethereum，面向许可机构客户使用。交易后台服务化由多行稳定币实证继续推进到银行负债接入公共链结算，但跨行采用、链上交易量与故障责任仍未披露。",
+          "url": "https://www.coindesk.com/markets/2026/10/19/jpmorgan-s-jpm-coin-representing-dollar-deposits-is-coming-to-ethereum-bloomberg"
         }
       ]
     },
@@ -1146,9 +1161,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-09-18",
-      "last_update": "2026-10-18",
+      "last_update": "2026-10-19",
       "cadence_days": 6,
-      "next_check": "2026-10-24",
+      "next_check": "2026-10-26",
       "thesis": "前沿模型评估正在从发布前测试推进到生产运行中的身份、授权与持续监督。新协议开始让高风险动作绑定真实身份和逐笔签名，但发行方可信度、跨站采用、责任归属与撤销标准仍未统一。",
       "why_us": "HertzFlow若引入可调用交易、钱包或后台工具的智能体，需要把评估权限、真实系统隔离、异常停止、事件披露和评估方独立性写进上线流程，不能只看离线基准分数。",
       "watch_for": "嵌入式评估访问与报告标准 / 自动化研发共同测量与人类审查触发条件 / 评估方资金独立性 / 真实系统隔离规范 / 测试越界事件披露 / 高风险工具调用的阻断门槛",
@@ -1237,6 +1252,16 @@
           "date": "2026-10-18",
           "point": "Microsoft Copilot Studio开始通过Frontier推出持久型Agent，为其配置组织所有的独立账号、受限凭证、业务流程记忆与事件触发，并由管理员统一治理。前沿评估从跨站逐笔授权继续推进到长期运行中的独立身份、权限、记忆和自动启动条件。",
           "url": "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/delegate-shared-business-processes-to-agents-that-are-more-persistent-and-proactive-with-microsoft-copilot-studio/"
+        },
+        {
+          "date": "2026-10-19",
+          "point": "Microsoft提出Dynamic Permissions与Dynamic Agent Risk，让Agent按任务、时间和实时风险获得或收回权限，并由外部控制面执行条件访问；官方明确模型不能充当自身安全边界，运行治理推进到任务级最小权限与独立阻断。",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/"
+        },
+        {
+          "date": "2026-10-19",
+          "point": "OpenA2A在30天窗口记录420次外部工具调用、19种指纹、2495台公开MCP服务器与27247次A2A握手，并建议按真实工具调用而非连接告警。前沿评估新增外部可观察行为指标，但扫描覆盖与指纹归因仍有偏差。",
+          "url": "https://research.opena2a.org/reports/state-of-ai-agent-security-2026-10"
         }
       ]
     }
