@@ -1,0 +1,79 @@
+{
+  "version": 2,
+  "updated": "2026-10-20",
+  "note": "研究入口，不是热度榜或上线证明。分类和官网每轮重核；用户线索先查，轮换名单防止只写龙头。新发现记入当期自评A4，不在日常五文件发布中改本配置。",
+  "priority_until": "2026-10-27",
+  "projects_per_day": 4,
+  "query_templates": {
+    "identity": "{name} official docs product",
+    "mechanism": "{name} matching liquidity oracle settlement liquidation",
+    "gtm_product": "{name} referral points mobile wallet integration onboarding",
+    "discussion": "{name} trader review 体验 机制 criticism"
+  },
+  "ai_watchlist": [
+    {"id": "anthropic", "name": "Anthropic", "aliases": ["Claude"]},
+    {"id": "openai", "name": "OpenAI", "aliases": ["ChatGPT", "OpenAI API"]},
+    {"id": "scale-ai", "name": "Scale AI", "aliases": ["ScaleAI"]},
+    {"id": "xai", "name": "xAI", "aliases": ["Grok"]},
+    {"id": "moonshot", "name": "Moonshot AI", "aliases": ["Moonshot", "Kimi", "月之暗面"]},
+    {"id": "deepseek", "name": "DeepSeek", "aliases": ["深度求索"]},
+    {"id": "alibaba-qwen", "name": "Alibaba", "aliases": ["Qwen", "通义千问", "阿里云"]}
+  ],
+  "ai_daily_policy": {
+    "window_days": 3,
+    "scan_rule": "七家每天全部扫描，不参与Perp项目轮换；必扫不等于各占一条，搜索结果须打开原文核验。",
+    "selection": {
+      "max_items": 3,
+      "recommended_min_score": 75,
+      "weights": {"structural": 30, "relevance": 25, "durability": 20, "actionability": 15, "evidence": 10},
+      "audit_section": "A5",
+      "rule": "按实际候选五维评分排序，只从75分及以上候选中取最重要的3条；成稿硬校验75–100整数降序，不为七家平均分配篇幅，不用低价值或重复内容凑数；评分、排名和取舍写入A5人工审计。"
+    }
+  },
+  "projects": [
+    {
+      "id": "trasia", "name": "Trasia", "aliases": ["trasiaxyz"], "category": "trading-frontend", "priority": true,
+      "handle": "trasiaxyz", "checked_at": "2026-10-20",
+      "sources": ["https://play.google.com/store/apps/details?id=xyz.trasia.app", "https://168xclub.substack.com/p/trasia-mable-multicoin-hyperliquid"],
+      "questions": ["亚洲CEX用户如何经移动端和Scout进入Hyperliquid交易", "builder code前端收入与自建HIP-3市场是否区分", "比赛与观察地址如何转化，独立留存证据在哪里"],
+      "queries": ["\"Trasia\" \"Scout Mode\"", "\"trasiaxyz\" \"Asia Points\"", "\"Trasia\" \"HIP-3\" \"builder\"", "\"Mable\" \"Trasia\" 产品 私域"],
+      "caution": "7月创始人访谈可做历史策略基线；自有HIP-3部署未获核实，不能把计划写成已部署。"
+    },
+    {
+      "id": "deepbook", "name": "DeepBook", "aliases": ["DeepBook Alpha", "DeepBook App", "DeepBookonSui"], "category": "spot-infrastructure", "priority": true,
+      "handle": "DeepBookonSui", "checked_at": "2026-10-20",
+      "sources": ["https://www.docs.sui.io/onchain-finance/deepbook/deepbookv3/deepbook", "https://www.sui.io/blog/deepbook-app-is-live-onchain-power-for-serious-traders"],
+      "questions": ["共享现货订单簿如何扩展到第一方前端", "Margin借贷现货与Predict区间合约分别由谁承担风险", "技术文档暂停记录与当前产品可交易状态是否一致"],
+      "queries": ["\"DeepBook\" \"shared liquidity\" \"app\"", "\"DeepBook Predict\" \"PLP\" \"Pyth\"", "\"DeepBook\" referral points", "\"DeepBookonSui\" review slippage"],
+      "caution": "部署在Sui，不是独立永续链；现货、借贷杠杆和有到期的Predict需分别描述。文档历史暂停记录不代表今天实时状态。"
+    },
+    {
+      "id": "predict-fun", "name": "predict.fun", "aliases": ["predictdotfun"], "category": "prediction-market", "priority": true,
+      "handle": "predictdotfun", "checked_at": "2026-10-20",
+      "sources": ["https://docs.predict.fun/developers/technical-overview", "https://docs.predict.fun/the-basics/yields", "https://predict.fun/news/earn-predict-points-directly-via-the-binance-and-binance-wallet-apps"],
+      "questions": ["Binance分发如何承接交易、积分和排行榜", "生息与非生息市场的抵押、收益、赎回依赖", "UMA、白名单提案与Chainlink结算分别适用哪些市场版本"],
+      "queries": ["\"predict.fun\" \"Venus\" \"redemption\"", "\"predict.fun\" \"Binance Wallet\"", "\"predict.fun\" \"PP/hr\" spread", "\"predictdotfun\" review liquidity withdrawal"],
+      "caution": "属于预测市场；About与技术文档的裁决描述有差异，按市场和版本核验，不能概括全部无需信任。"
+    },
+    {"id": "hyperliquid", "name": "Hyperliquid", "aliases": ["HyperCore", "HIP-3"], "category": "perp-protocol", "sources": ["https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/oracle", "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/builder-codes"], "questions": ["原生市场与HIP-3预言机责任差异", "独立链、订单簿、HLP和builder分发如何分工"]},
+    {"id": "variational", "name": "Variational", "aliases": ["Variational Omni", "OLP"], "category": "perp-protocol", "sources": ["https://docs.variational.io/variational-protocol/key-concepts/trading-via-rfq", "https://docs.variational.io/omni/the-omni-liquidity-provider-olp"], "questions": ["RFQ、OLP单一对手方与双边结算池如何组合", "零显式手续费如何靠价差获利，谁承担外部对冲风险"]},
+    {"id": "lighter", "name": "Lighter", "aliases": ["Lighter_xyz"], "category": "perp-protocol", "sources": [], "questions": ["可验证撮合与结算边界", "零费率、机构API和钱包接入如何获客"]},
+    {"id": "ostium", "name": "Ostium", "aliases": ["Ostium perps"], "category": "perp-protocol", "sources": [], "questions": ["RWA与外汇定价、休市、LP对冲", "真实套保者与积分交易者如何区分"]},
+    {"id": "avantis", "name": "Avantis", "aliases": ["avantisfi"], "category": "perp-protocol", "sources": [], "questions": ["盈利收费和LP风险分层", "Base分发与留存证据"]},
+    {"id": "gmx", "name": "GMX", "aliases": ["GMX_IO"], "category": "perp-protocol", "sources": [], "questions": ["市场隔离池、预言机和价格冲击", "LP收益与交易者获客补贴"]},
+    {"id": "drift", "name": "Drift", "aliases": ["DriftProtocol"], "category": "perp-protocol", "sources": [], "questions": ["JIT、订单簿和AMM混合流动性", "保证金账户复用与交易入口"]},
+    {"id": "pacifica", "name": "Pacifica", "aliases": ["Pacifica perps"], "category": "perp-protocol", "sources": [], "questions": ["撮合与Solana结算边界", "积分、邀请和API交易质量"], "caution": "旧points-program文档入口本次404，需重新定位，不能照抄缓存规则。"},
+    {"id": "grvt", "name": "GRVT", "aliases": ["GRVT exchange"], "category": "perp-protocol", "sources": [], "questions": ["混合撮合、结算、托管权限", "机构做市和经纪分发"]},
+    {"id": "extended", "name": "Extended", "aliases": ["Extended exchange"], "category": "perp-protocol", "sources": [], "questions": ["当前结算链与流动性模式", "外部分发、移动端和用户迁移"]},
+    {"id": "paradex", "name": "Paradex", "aliases": ["tradeparadex"], "category": "perp-protocol", "sources": [], "questions": ["撮合、隐私与结算验证", "零费、积分和做市激励"]},
+    {"id": "edgex", "name": "edgeX", "aliases": ["edgeX exchange"], "category": "perp-protocol", "sources": [], "questions": ["执行与结算架构", "亚洲分发、专业交易和移动端"]}
+  ],
+  "discovery_queries": [
+    {"id": "builders", "query": "Hyperliquid builder mobile trading app Scout integration", "window_days": 30},
+    {"id": "sui-products", "query": "Sui DeepBook margin trading app ecosystem launch", "window_days": 30},
+    {"id": "rwa-distribution", "query": "HIP-3 Asian equities trading frontend wallet", "window_days": 30},
+    {"id": "early-traders", "query": "perp DEX early access trader review referral", "window_days": 30},
+    {"id": "bn-collateral", "query": "BNB prediction market yield collateral wallet integration", "window_days": 30},
+    {"id": "chinese-traders", "query": "永续 新平台 交易体验 积分 滑点 提现", "window_days": 30}
+  ]
+}

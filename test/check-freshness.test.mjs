@@ -1,9 +1,28 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { run, tmpJson, baseContent } from "./_helpers.mjs";
+import { researchContent } from "./_research-fixture.mjs";
 
 const TODAY = "2026-06-23";
 const cf = (content) => run(["lib/check-freshness.mjs", tmpJson(content), TODAY]);
+
+test("纯新闻报告也必须与核验日期一致，不能将前一天内容装入今天归档", () => {
+  const content = researchContent({ date: "2026-06-22" });
+  content.sections = content.sections.filter((section) => section.id === "ai");
+  const result = cf(content);
+  assert.equal(result.code, 1);
+  assert.match(result.out, /报告 date=2026-06-22 必须等于本次核验日期 2026-06-23/);
+
+  const future = baseContent({ date: "2026-06-24" });
+  assert.equal(cf(future).code, 1);
+});
+
+test("历史报告显式传入对应核验日期仍可通过", () => {
+  const content = researchContent({ date: "2026-06-22" });
+  content.sections = content.sections.filter((section) => section.id === "ai");
+  assert.equal(run(["lib/check-freshness.mjs", tmpJson(content), "2026-06-22"]).code, 0);
+  assert.equal(run(["lib/check-freshness.mjs", tmpJson(baseContent()), TODAY]).code, 0);
+});
 
 test("新闻 ≤72h → 通过(exit 0)", () => {
   const c = baseContent();

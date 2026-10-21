@@ -2,6 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { validateContent } from "../lib/validate-content.mjs";
 import { baseContent } from "./_helpers.mjs";
+import { researchContent } from "./_research-fixture.mjs";
 
 test("合法 content 无 error", () => {
   const { errors } = validateContent(baseContent());
@@ -102,6 +103,17 @@ test("lead 必须是一句话市场概括，product_view 已停用", () => {
   assert.ok(validateContent(legacy).errors.some((e) => /product_view 已停用/.test(e)));
 });
 
+test("v2摘要允许两句聚焦重点，不再强制把新闻拼成一句", () => {
+  const content = researchContent({ lead: "示例协议将开户和交易嵌入钱包，用户不必先访问独立网站。它缩短了交易路径，但补贴结束后的留存仍无公开数据，不能据此认定获客成功。" });
+  assert.deepEqual(validateContent(content).errors, []);
+});
+
+test("v2摘要限制总长度、单句长度及句数，避免冗长目录", () => {
+  for (const lead of ["事实".repeat(61), `${"事实".repeat(36)}。`, "第一条说明市场的新变化。第二条说明另一家机构的变化。第三条又加入一个无关产品。"] ) {
+    assert.ok(validateContent(researchContent({ lead })).errors.some((e) => /lead/.test(e)));
+  }
+});
+
 test("合法的数字量级说明通过校验", () => {
   const c = baseContent();
   c.sections[0].items[0].context = { label: "量级参照", text: "约为 DEX 永续日成交盘子的十分之一，属于头部梯队。" };
@@ -190,4 +202,47 @@ test("今日进展为空或超过四条会被阻断", () => {
   };
   const threads = Array.from({ length: 5 }, (_, i) => ({ ...item, title: `线${i}`, url: `${item.url}/${i}` }));
   assert.ok(validateContent(baseContent({ threads })).errors.some((e) => /最多 4 条/.test(e)));
+});
+
+test("v2 必须保留 AI 栏且恰好三条新闻，其他栏目仍可动态选择", () => {
+  const content = researchContent();
+  content.sections = content.sections.filter((section) => section.id === "ai");
+  assert.deepEqual(validateContent(content).errors, []);
+  content.sections[0].items.pop();
+  assert.ok(validateContent(content).errors.some((error) => /恰好 3 条/.test(error)));
+  content.sections[0].items.push(...researchContent().sections.find((section) => section.id === "ai").items.slice(1));
+  assert.ok(validateContent(content).errors.some((error) => /恰好 3 条/.test(error)));
+  content.sections = researchContent().sections.filter((section) => section.id !== "ai");
+  assert.ok(validateContent(content).errors.some((error) => /缺少必需 AI 栏/.test(error)));
+});
+
+test("v2 AI 栏只接受 AI 新闻，研究和跨栏 AI 条目会被阻断", () => {
+  const content = researchContent();
+  const ai = content.sections.find((section) => section.id === "ai").items;
+  ai[0].kind = "news";
+  ai[0].domain = "crypto-ai";
+  assert.deepEqual(validateContent(content).errors, []);
+  ai[0].kind = "research";
+  assert.ok(validateContent(content).errors.some((error) => /不能用研究填充/.test(error)));
+  ai[0].kind = "news";
+  ai[0].domain = "crypto";
+  assert.ok(validateContent(content).errors.some((error) => /AI 栏只接受 ai 或 crypto-ai/.test(error)));
+  ai[0].domain = "ai";
+  for (const domain of ["ai", "crypto-ai"]) {
+    content.sections[0].items[2].domain = domain;
+    assert.ok(validateContent(content).errors.some((error) => /只能放在 ai 栏/.test(error)));
+  }
+});
+
+test("v2 AI importance_score 必须为 75–100 整数且降序排列", () => {
+  const content = researchContent();
+  const ai = content.sections.find((section) => section.id === "ai").items;
+  for (const score of [undefined, 74, 101, 75.5, "90", NaN]) {
+    ai[0].importance_score = score;
+    assert.ok(validateContent(content).errors.some((error) => /75–100 的整数/.test(error)));
+  }
+  [100, 75, 75].forEach((score, index) => { ai[index].importance_score = score; });
+  assert.deepEqual(validateContent(content).errors, []);
+  ai[2].importance_score = 80;
+  assert.ok(validateContent(content).errors.some((error) => /降序排列/.test(error)));
 });

@@ -1,6 +1,8 @@
 {
-  "version": 5,
-  "updated": "2026-07-27",
+  "version": 6,
+  "updated": "2026-10-20",
+  "project_radar": "config/project-radar.json",
+  "research_playbook": "config/research-playbook.md",
   "_doc": "日报信源注册表。层级说明来源可信度，daily_scan 定义每天必须覆盖的竞争面。core_pool 只是高频入口，不代表固定报道对象；最终按当日变化和评分决定。verify:true 的账号 handle 待核实（先按 name 搜），status:watch 为有 ban/改名风险需备替补的账号。",
   "layers": {
     "official": "官方主号——发事实：上市、新功能、perp/衍生品、市场、治理公告",
@@ -11,13 +13,13 @@
   },
   "themes": ["perp", "launchpad", "exchange", "broker", "wallet", "prediction", "tradfi", "rwa", "infrastructure", "distribution", "chain", "onchain", "defi", "news", "meme", "ai"],
   "daily_scan": {
-    "_doc": "每天先按桶扫一遍，再深入当日命中的方向。每桶至少形成一个候选或在编辑自评不收录清单中说明为何无合格事件；不能只扫熟悉的 Perp DEX。",
+    "_doc": "先按project_radar做项目名、别名和讨论者定向搜索，再按六桶补漏。每桶记录候选或证据缺口；至少两条名单外发现查询，不能只扫熟悉的Perp DEX或媒体大新闻。",
     "buckets": [
       {
         "id": "direct_derivatives",
         "label": "直接衍生品竞品",
         "targets": ["Perp DEX", "链上订单簿", "RWA/股票永续", "期权 DEX"],
-        "queries": ["perpetual DEX launch upgrade volume", "onchain derivatives new market", "RWA equity perpetual"]
+        "queries": ["perpetual DEX RFQ OLP trader review", "onchain orderbook sequencer settlement liquidation", "RWA equity perpetual oracle market hours"]
       },
       {
         "id": "centralized_venues",
@@ -29,13 +31,13 @@
         "id": "distribution",
         "label": "分发入口",
         "targets": ["钱包", "经纪商", "超级 App", "聚合器", "嵌入式交易"],
-        "queries": ["wallet perpetual trading integration", "broker crypto derivatives", "embedded trading wallet"]
+        "queries": ["Hyperliquid builder mobile trading app Scout", "perpetual wallet integration referral builder fee", "Asia crypto trading app private community onboarding"]
       },
       {
         "id": "substitutes",
         "label": "替代型交易产品",
         "targets": ["预测市场", "受监管期货", "期权", "代币化证券", "现货杠杆"],
-        "queries": ["prediction market derivatives", "regulated perpetual futures", "tokenized stocks trading", "single stock futures crypto"]
+        "queries": ["prediction market yield collateral maker rewards", "DeepBook margin Predict liquidity pool", "tokenized stocks trading rights collateral"]
       },
       {
         "id": "infrastructure",
@@ -47,14 +49,13 @@
         "id": "emerging",
         "label": "新项目发现",
         "targets": ["近 30 天新上线", "融资", "测试网", "首次真实采用"],
-        "queries": ["new trading app launch funding", "new crypto exchange testnet", "onchain markets seed series launch"]
+        "queries": ["perp DEX early access trader review referral", "Hyperliquid ecosystem new frontend mobile app", "永续 新平台 交易体验 滑点 提现", "Sui BNB trading app ecosystem integration"]
       }
     ]
   },
   "core_pool": [
-    "CoinDesk", "TheBlock__", "WuBlockchain", "HyperliquidX", "GMX_IO",
-    "binance", "coinbase", "RobinhoodApp", "phantom", "CMEGroup",
-    "Kalshi", "PythNetwork"
+    "HyperliquidX", "Lighter_xyz", "variational_io", "trasiaxyz", "DeepBookonSui",
+    "predictdotfun", "phantom", "PythNetwork", "TheBlock__", "WuBlockchain"
   ],
   "core_pool_note": "核心池按直接竞品、CEX、分发入口、替代产品和基础设施做平衡，只是每日发现入口。不得因为进入核心池就固定出现在日报。",
   "data_pages": [
@@ -63,7 +64,7 @@
     "https://www.theblock.co/category/markets"
   ],
   "feeds": {
-    "_doc": "免费 RSS 实时源层——替代「读不到的原始推文」。无 X API，但这些媒体会在分钟级报道项目方在 X 发的重大动态，等于间接拿到推特实时面。generate.md 步骤1 先 WebFetch 这些 feed 拉近 24-72h 条目作为线索池，再按 sourcing_rule 回溯官方页核实。全部为 2026-06-22 实测可抓、内容新鲜。用 WebFetch 直接抓 url（勿写 node 脚本——云端沙箱对部分域名有出口白名单限制，WebFetch 工具不受限）。",
+    "_doc": "RSS用于项目定向研究后的补漏，不能替代社交讨论或新项目发现。条目回溯官方页核实，订阅源可用性与时效按本次读取判断，不沿用历史测试结论。",
     "rss": [
       { "name": "Cointelegraph", "url": "https://cointelegraph.com/rss", "region": "en", "layer": "media", "themes": ["news", "perp", "exchange"], "note": "快讯型新闻线，分钟级，覆盖项目方 X 动态" },
       { "name": "CoinDesk", "url": "https://www.coindesk.com/arc/outboundfeeds/rss/", "region": "en", "layer": "media", "themes": ["news", "exchange"], "note": "宏观/监管/ETF 资金流权威底料" },
@@ -78,8 +79,11 @@
       { "name": "CryptoPanic", "status": "dead", "note": "❌ 弃用：CryptoPanic 免费 Developer API 已于 2026-04-01 下线（2026-06-23 实测所有端点 404）。免费 token 不可用，要用需付费。CryptoCompare/CCData 新闻 API 也已改为需 key（401）。免费聚合新闻 API 这条路基本关闭——实时面继续靠 feeds.rss + WebSearch。" }
     ]
   },
-  "sourcing_rule": "优先一手源：① 数字先看本地 docs/market.json（fetch-data.mjs 拉的 CoinGecko 免费数据），再用 data_pages 网页交叉核对；② 事件以「事件主体的官方页面(blog/docs/governance/announcement)」为准，聚合站只用于发现线索；③ 无 X API，handle 仅作搜索线索，不能假装读到了原始推文；④ 以国外优质源和项目方官方为主，国内中文媒体只作辅助并回溯核实；⑤ 先完成 daily_scan 六桶覆盖，再按评分决定报道对象，core_pool 不享有固定版面；⑥ 竞品按用户任务和价值链定义，只要会拿走用户、保证金、订单流、资产供给、价格发现或分发入口，即使不是 Perp DEX 也纳入候选；⑦ 只收能改变判断的结构性事件，跳过喊单、纯价格评论、口水和日常小更新。",
+  "sourcing_rule": "先项目定向研究、讨论者和生态发现，再RSS补漏。机制与产品规则回溯官方原文；讨论记录作者、关系、日期和原链接，官方与推广不能冒充独立认可。无X API时使用公开可读网页与具名访谈，打不开就记缺口。市场数字只用当日快照和同口径数据。按独立永续协议、前端、现货基础设施、预测市场分类；小融资或低成交不能单独淘汰有机制或分发价值的新项目。研究保留来源真实发布日期并单列checked_at，不把旧文改成今日新闻。",
   "sources": [
+    { "handle": "trasiaxyz", "name": "Trasia", "region": "both", "layer": "official", "themes": ["perp", "distribution"], "core": true, "note": "Hyperliquid交易前端，追踪亚洲渠道、移动端、Scout、比赛与builder费；自有HIP-3状态单独核实" },
+    { "handle": "DeepBookonSui", "name": "DeepBook", "region": "en", "layer": "official", "themes": ["infrastructure", "defi", "distribution"], "core": true, "note": "Sui共享现货订单簿与第一方App；分别核实Margin/Predict，不按独立PerpDEX分类" },
+    { "handle": "predictdotfun", "name": "predict.fun", "region": "both", "layer": "official", "themes": ["prediction", "distribution"], "core": true, "note": "BNB预测市场，追踪Binance入口、生息抵押与做市激励；结算机制按具体市场版本核实" },
     { "handle": "binance", "name": "Binance", "region": "both", "layer": "official", "themes": ["exchange", "perp"], "core": false, "note": "全球+本地公告，perp/衍生品上市" },
     { "handle": "okx", "name": "OKX", "region": "both", "layer": "official", "themes": ["exchange", "perp"], "core": false, "note": "亚洲友好，中文内容多" },
     { "handle": "Bybit_Official", "name": "Bybit", "region": "both", "layer": "official", "themes": ["exchange", "perp"], "core": false },
