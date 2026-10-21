@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-10-20",
+  "updated": "2026-10-21",
   "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -403,7 +403,7 @@
       "first_seen": "2026-07-02",
       "last_update": "2026-10-18",
       "cadence_days": 3,
-      "next_check": "2026-10-21",
+      "next_check": "2026-10-24",
       "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
       "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
       "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -1161,10 +1161,10 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-09-18",
-      "last_update": "2026-10-19",
+      "last_update": "2026-10-20",
       "cadence_days": 6,
-      "next_check": "2026-10-26",
-      "thesis": "前沿模型评估正在从发布前测试推进到生产运行中的身份、授权与持续监督。新协议开始让高风险动作绑定真实身份和逐笔签名，但发行方可信度、跨站采用、责任归属与撤销标准仍未统一。",
+      "next_check": "2026-10-27",
+      "thesis": "前沿模型评估正在从发布前测试推进到生产运行中的身份、授权与持续监督。高风险动作的逐笔授权和推理前外部政策裁决开始进入正式企业产品，但跨产品覆盖、异常时放行或阻断、责任归属与实际采用仍需逐项核验。",
       "why_us": "HertzFlow若引入可调用交易、钱包或后台工具的智能体，需要把评估权限、真实系统隔离、异常停止、事件披露和评估方独立性写进上线流程，不能只看离线基准分数。",
       "watch_for": "嵌入式评估访问与报告标准 / 自动化研发共同测量与人类审查触发条件 / 评估方资金独立性 / 真实系统隔离规范 / 测试越界事件披露 / 高风险工具调用的阻断门槛",
       "log": [
@@ -1262,8 +1262,54 @@
           "date": "2026-10-19",
           "point": "OpenA2A在30天窗口记录420次外部工具调用、19种指纹、2495台公开MCP服务器与27247次A2A握手，并建议按真实工具调用而非连接告警。前沿评估新增外部可观察行为指标，但扫描覆盖与指纹归因仍有偏差。",
           "url": "https://research.opena2a.org/reports/state-of-ai-agent-security-2026-10"
+        },
+        {
+          "date": "2026-10-20",
+          "point": "Anthropic宣布Inference hooks面向Claude Enterprise组织结束beta，企业推理前外部政策裁决由测试阶段转为正式能力。该机制已于8月5日开放beta，本次新增事实仅为正式可用状态，不能把旧机制重新记为10月20日首次发布；跨产品覆盖、故障处理和真实部署效果仍需核验。",
+          "url": "https://platform.claude.com/docs/zh-CN/release-notes/overview"
         }
       ]
+    },
+    {
+      "id": "agent-model-cache-cost",
+      "title": "Agent模型与缓存成本：按任务验证降本",
+      "score": 91,
+      "tier": "S",
+      "status": "active",
+      "first_seen": "2026-10-21",
+      "last_update": "2026-10-20",
+      "cadence_days": 3,
+      "next_check": "2026-10-24",
+      "thesis": "Agent成本优化出现两种可实际评测的选择：更低单价的新模型，以及面向间隔数小时请求的长时提示缓存。MiniMax的模型定价和OpenAI的缓存计费改变了采购与复用参数，但低单价或更长缓存均不自动保证更低任务完成成本，仍取决于成功率、重复使用次数与写入费用。",
+      "why_us": "团队评估研究、客服、代码和定时Agent时，可以把任务成功率、工具调用次数、缓存命中与完整账单放在同一套真实任务中比较，避免只看每token单价或厂商基准决定模型和运行预算。",
+      "watch_for": "MiniMax M3.1 Flash在真实多步任务中的成功率与总成本 / 模型权重实际开放日期 / OpenAI 12小时缓存的写入成本、命中次数与节省幅度 / 两种优化路径的失败重试和工具成本是否抵消价格收益",
+      "log": [
+        {
+          "date": "2026-10-19",
+          "point": "MiniMax正式推出M3.1 Flash并在API、M Plan和MiniMax Code提供，每百万token输入、输出与缓存输入分别为0.15、0.60和0.015美元。官方称Agent任务成本较前代降低70%，但该结果仍为厂商评估，模型权重尚待后续发布，需用实际任务成功率和完整运行成本复测。",
+          "url": "https://www.minimax.io/blog/minimax-m31f"
+        },
+        {
+          "date": "2026-10-20",
+          "point": "OpenAI API新增12小时提示缓存，让共享指令、工具与上下文可在间隔数小时的请求间复用；缓存写入按普通输入token价格的2.5倍计费。成本优化从选择模型单价延伸到跨任务上下文复用，但净节省取决于命中次数及写入费用，不能仅凭保留时间推定账单下降。",
+          "url": "https://developers.openai.com/api/docs/changelog"
+        }
+      ]
+    },
+    {
+      "id": "collateral-reuse-exit-dependencies",
+      "title": "保证金复用与退出依赖",
+      "score": 84,
+      "tier": "A",
+      "status": "active",
+      "first_seen": "2026-10-21",
+      "last_update": "2026-10-21",
+      "cadence_days": 7,
+      "next_check": "2026-10-28",
+      "thesis": "首次研究建档，10月21日仅为本报核验与建立论点的日期，不代表项目当天上线或发生新事件，因此log暂空。DeepBook Margin复用现货深度但按单池隔离风险，predict.fun生息抵押依赖Venus取回资金；资本复用需要分别验证风险能否抵消、收益如何领取和退出是否受外部流动性限制。",
+      "why_us": "比较杠杆交易和生息抵押产品时，应分开说明交易流动性、保证金风险归属与提现结算依赖。共享订单簿不能自动推出跨市场保证金效率，获得借贷收益也不能自动承诺随时到账；这些差别会影响账户设计、风险提示和退出流程。",
+      "watch_for": "DeepBook Margin的实际主网单池参数、坏账与清算体验 / predict.fun生息市场具体版本、Venus利用率与赎回延迟 / 新机制或参数变更 / 独立交易者采用与退出证据 / 是否出现足以证伪现有比较的跨池抵消或即时赎回机制",
+      "log": []
     }
   ]
 }

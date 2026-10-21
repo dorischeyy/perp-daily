@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-10-21</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6; min-width:0; overflow-wrap:anywhere;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
+    white-space:nowrap; letter-spacing:0; line-height:1.5;}
+  .source-label{color:#a3987f; flex:none;}
+  .source-number{color:#8a7f66; text-decoration:underline; text-underline-offset:2px;
+    min-width:14px; padding:2px 0; text-align:center; flex:none; font-variant-numeric:tabular-nums;}
+  .source-number:hover,.source-number:focus-visible{color:#b03a2e;}
+  .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .research-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
+  .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
+  .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
+  .research-row + .research-row{border-top:1px dotted #e4ded0;}
+  .research-row dt{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dd{min-width:0; color:#403a2e;}
+  .research-inference{background:#f7f4ec; padding:10px;}
+  .research-discussions{list-style:none;}
+  .research-discussions li + li{margin-top:8px;}
+  .discussion-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 109 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 10 月 21 日 · 星期三</div>
+    </header>
+    <p class="lead">永续DEX的成交活跃度高于近一周平均水平，但一半成交仍集中在少数平台。成交放大说明交易更活跃，不能直接看成新资金流入。</p>
+
+
+      <section class="sec sec-market-data">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">市场成交</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">截至10月21日，永续DEX近24小时成交高于7日日均11%</h3>
+          <p class="item-b">北京时间10:10，arb.sh统计的45家永续DEX过去24小时成交244.1亿美元，前三家合计占51%。当前成交高于近一周平均水平，但一半仍集中在少数平台。数字来自交易所公开API，反映的是合约名义成交额，不是实际流入平台的资金。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://arb.sh/zh/stats" target="_blank" rel="noopener" title="arb.sh · 永续DEX成交量快照（2026-10-21 02:10 UTC） · 未标发布日期 · 核验 2026-10-21" aria-label="来源 1：arb.sh · 永续DEX成交量快照（2026-10-21 02:10 UTC） · 未标发布日期 · 核验 2026-10-21">1</a><a class="source-number" href="https://arb.sh/zh/about" target="_blank" rel="noopener" title="arb.sh · 数据来源与统计方法 · 未标发布日期 · 核验 2026-10-21" aria-label="来源 2：arb.sh · 数据来源与统计方法 · 未标发布日期 · 核验 2026-10-21">2</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-trading-products">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">交易产品扩展</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">10月20日，Kraken桌面端新增Prop多账户同步下单</h3>
+          <p class="item-b">桌面端新增多账户同步下单，覆盖自己的交易考核和获资助账户。选定主账户后，其他账户可复制相同数量，或按净值比例下单；止损、止盈、改单和撤单也同步。跟随账户不满足规则时会被跳过，主账户违规会停止复制；不能跟随其他交易者。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://blog.kraken.com/product/desktop/multi-account-trading-for-kraken-prop" target="_blank" rel="noopener" title="Kraken · Multi-account trading for Kraken Prop is live on Kraken Desktop · 发布 2026-10-20" aria-label="来源 1：Kraken · Multi-account trading for Kraken Prop is live on Kraken Desktop · 发布 2026-10-20">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Lighter于10月19日上线BTC与ETH涨跌合约，仓位采用全额抵押</h3>
+          <p class="item-b">用户买入上涨或下跌份额，判断正确时每份兑付1USDC，否则归零；持仓没有资金费或清算，也可在到期前反向交易退出。用户只需判断固定时段内的涨跌，但要全额支付仓位成本，收益也不会随涨幅继续增加。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://docs.lighter.xyz/trading/binary-options" target="_blank" rel="noopener" title="Lighter官方二元期权文档 · 未标发布日期 · 核验 2026-10-21" aria-label="来源 1：Lighter官方二元期权文档 · 未标发布日期 · 核验 2026-10-21">1</a><a class="source-number" href="https://www.gate.com/zh/news/detail/LIT/lighter-launches-bitcoin-and-ethereum-binary-options-on-october-19-25064365" target="_blank" rel="noopener" title="Gate转载Crypto Briefing：Lighter于10月19日推出二元期权 · 发布 2026-10-19 · 核验 2026-10-21" aria-label="来源 2：Gate转载Crypto Briefing：Lighter于10月19日推出二元期权 · 发布 2026-10-19 · 核验 2026-10-21">2</a><a class="source-number" href="https://docs.lighter.xyz/referral-program" target="_blank" rel="noopener" title="Lighter官方推荐计划 · 未标发布日期 · 核验 2026-10-21" aria-label="来源 3：Lighter官方推荐计划 · 未标发布日期 · 核验 2026-10-21">3</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-user-campaigns">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">用户活动</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">10月21日，币安Pick启动积分预测活动，将交易任务接入排行榜</h3>
+          <p class="item-b">活动于北京时间8点开始，用户通过签到、邀请或交易任务赚取积分，再用积分做预测，参与周榜和赛季榜。积分不能提现、转让或直接换成奖金，活动结束后会重置；USDC奖励按排名和参与条件发放，参加者需完成身份认证并符合地区要求。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en-IN/square/post/378914030437187" target="_blank" rel="noopener" title="Binance官方公告 · Binance Pick Is Here（10月19日发布，10月21日启动） · 发布 2026-10-19" aria-label="来源 1：Binance官方公告 · Binance Pick Is Here（10月19日发布，10月21日启动） · 发布 2026-10-19">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-margin-and-exit">
+        <div class="sec-head">
+          <span class="sec-no">04</span>
+          <div>
+            <h2 class="sec-title">保证金与退出规则</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">DeepBook Margin支持借币买卖现货，各市场单独管理保证金</h3>
+          <p class="item-b">用户先存入抵押物，再借币到现货盘口买卖，结束后归还本金和利息。它和币安逐仓杠杆一样，需要为各市场分别准备保证金；不同的是，借贷、交易和清算都在链上，其他应用也能接入这套现货盘口。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.docs.sui.io/onchain-finance/deepbook/deepbook-margin/" target="_blank" rel="noopener" title="Sui · DeepBook Margin 机制文档 · 未标发布日期 · 核验 2026-10-21" aria-label="来源 1：Sui · DeepBook Margin 机制文档 · 未标发布日期 · 核验 2026-10-21">1</a><a class="source-number" href="https://www.docs.sui.io/onchain-finance/deepbook/deepbook-margin/margin-integration" target="_blank" rel="noopener" title="Sui · Integrating DeepBook Margin · 未标发布日期 · 核验 2026-10-21" aria-label="来源 2：Sui · Integrating DeepBook Margin · 未标发布日期 · 核验 2026-10-21">2</a><a class="source-number" href="https://www.docs.sui.io/onchain-finance/deepbook/deepbook-margin/margin-risks" target="_blank" rel="noopener" title="Sui · Margin Risks · 未标发布日期 · 核验 2026-10-21" aria-label="来源 3：Sui · Margin Risks · 未标发布日期 · 核验 2026-10-21">3</a><a class="source-number" href="https://www.binance.com/en/support/faq/detail/b4e9e6ad70934bd082e8e09e33e69513" target="_blank" rel="noopener" title="Binance · 全仓与逐仓保证金的区别（更新于2025年11月28日） · 发布 2025-11-28 · 核验 2026-10-21" aria-label="来源 4：Binance · 全仓与逐仓保证金的区别（更新于2025年11月28日） · 发布 2025-11-28 · 核验 2026-10-21">4</a><a class="source-number" href="https://www.tokenomics.net/blog/deepbook-sui-order-book-deep-token/" target="_blank" rel="noopener" title="Tony Drummond（Tokenomics.net 创始人）（关系未确认） · 发布 2026-09-28" aria-label="来源 5：Tony Drummond（Tokenomics.net 创始人）（关系未确认） · 发布 2026-09-28">5</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">predict.fun让带Yield标记的持仓赚取利息，用户可按周领取</h3>
+          <p class="item-b">用户持有带Yield标记的预测份额时，背后的USDT抵押在借贷平台Venus赚取利息，每周可到资产页领取，扣除10%收益管理费。相比不生息的市场，用户等待结果时多一份利息，但若Venus可用资金不足，领取结算款也可能延迟。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://predict.fun/learn/how-yield-works" target="_blank" rel="noopener" title="predict.fun · How Yield Works on Open Positions（更新于7月15日） · 发布 2026-07-15 · 核验 2026-10-21" aria-label="来源 1：predict.fun · How Yield Works on Open Positions（更新于7月15日） · 发布 2026-07-15 · 核验 2026-10-21">1</a><a class="source-number" href="https://docs.predict.fun/developers/technical-overview" target="_blank" rel="noopener" title="predict.fun · Technical Overview · 未标发布日期 · 核验 2026-10-21" aria-label="来源 2：predict.fun · Technical Overview · 未标发布日期 · 核验 2026-10-21">2</a><a class="source-number" href="https://docs.predict.fun/the-basics/yields" target="_blank" rel="noopener" title="predict.fun · Yields · 未标发布日期 · 核验 2026-10-21" aria-label="来源 3：predict.fun · Yields · 未标发布日期 · 核验 2026-10-21">3</a><a class="source-number" href="https://predict.fun/news/predict-launches-its-binance-referral-program" target="_blank" rel="noopener" title="predict.fun · Binance Wallet 推荐计划（历史分发背景） · 发布 2026-09-14 · 核验 2026-10-21" aria-label="来源 4：predict.fun · Binance Wallet 推荐计划（历史分发背景） · 发布 2026-09-14 · 核验 2026-10-21">4</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">05</span>
+          <div>
+            <h2 class="sec-title">AI</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">MiniMax于10月19日上线M3.1 Flash并公布API价格</h3>
+          <p class="item-b">模型已通过API、M Plan和MiniMax Code提供，每百万token输入、输出和缓存输入分别为0.15、0.60和0.015美元。官方称Agent任务成本较前代低70%，但这是厂商评估，选型仍需复测任务成功率；模型权重尚待后续发布。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.minimax.io/blog/minimax-m31f" target="_blank" rel="noopener" title="MiniMax官方发布 · 发布 2026-10-19" aria-label="来源 1：MiniMax官方发布 · 发布 2026-10-19">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">OpenAI于10月20日为API新增12小时提示缓存</h3>
+          <p class="item-b">共享指令、工具和上下文可在间隔数小时的请求间复用，但缓存写入按普通输入价格的2.5倍计费。定时巡检和多轮研究可以因此重复利用先前输入；能否省钱，要看后续复用次数能否抵消较高的写入费用。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener" title="OpenAI API更新日志 · 发布 2026-10-20" aria-label="来源 1：OpenAI API更新日志 · 发布 2026-10-20">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Anthropic于10月20日将企业版推理钩子转为正式能力</h3>
+          <p class="item-b">这项能力已从企业版测试阶段转为正式提供。其原有方案会在模型读取提示和工具返回前，由企业安全服务器判定允许或拒绝，并支持影子模式与自定故障策略（背景，08-05）。团队接入前仍需测试正常请求是否被误拦截，以及安全服务器超时后如何处理。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://platform.claude.com/docs/zh-CN/release-notes/overview" target="_blank" rel="noopener" title="Anthropic Claude Platform发布说明 · 发布 2026-10-20" aria-label="来源 1：Anthropic Claude Platform发布说明 · 发布 2026-10-20">1</a><a class="source-number" href="https://claude.com/blog/claude-enterprise-inference-hooks" target="_blank" rel="noopener" title="Anthropic企业推理钩子测试版发布说明 · 发布 2026-08-05" aria-label="来源 2：Anthropic企业推理钩子测试版发布说明 · 发布 2026-08-05">2</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>

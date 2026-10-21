@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-10-20</title>
+<title>Perp DEX 日报 · 2026-10-21</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6; min-width:0; overflow-wrap:anywhere;}
   .item:last-child{border-bottom:none;}
   .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
   .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
@@ -69,144 +69,152 @@
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
   .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
     border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
-  .item-src{color:#8a7f66; text-decoration:none;}
+  .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
+    white-space:nowrap; letter-spacing:0; line-height:1.5;}
+  .source-label{color:#a3987f; flex:none;}
+  .source-number{color:#8a7f66; text-decoration:underline; text-underline-offset:2px;
+    min-width:14px; padding:2px 0; text-align:center; flex:none; font-variant-numeric:tabular-nums;}
+  .source-number:hover,.source-number:focus-visible{color:#b03a2e;}
+  .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
   .item-ref{color:#a3987f;}
   a.item-src:hover{color:#b03a2e;}
+  .research-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
+  .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
+  .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
+  .research-row + .research-row{border-top:1px dotted #e4ded0;}
+  .research-row dt{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dd{min-width:0; color:#403a2e;}
+  .research-inference{background:#f7f4ec; padding:10px;}
+  .research-discussions{list-style:none;}
+  .research-discussions li + li{margin-top:8px;}
+  .discussion-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
   .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
     letter-spacing:.06em; color:#a3987f; text-align:center;}
-  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} }
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
 </style>
 </head>
 <body>
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 108 期</span>
+        <span>每日链上观察</span><span>第 109 期</span>
       </div>
       <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 10 月 20 日 · 星期二</div>
+      <div class="mast-sub">2026 年 10 月 21 日 · 星期三</div>
     </header>
-    <p class="lead">CFTC以CME未证明实际竞争损害反驳其永续诉讼，JPMorgan把JPM Coin扩到Ethereum，Microsoft则把Agent权限改成随任务与风险动态收缩的独立控制面。</p>
+    <p class="lead">永续DEX的成交活跃度高于近一周平均水平，但一半成交仍集中在少数平台。成交放大说明交易更活跃，不能直接看成新资金流入。</p>
 
 
-      <section class="sec sec-perpdex">
+      <section class="sec sec-market-data">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">Perp DEX</h2>
+            <h2 class="sec-title">市场成交</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">CFTC称CME未证明永续产品造成实际竞争损害</h3>
-          <p class="item-b"><strong>事件</strong>：CFTC在10月19日提交的法庭文件中称，CME没有说明Kalshi比特币永续期货造成了实际或迫近的竞争损害，因此缺乏起诉资格。</p><p class="item-b"><strong>机制</strong>：CFTC仍把该产品按个案认证为期货，CME则坚持无到期日产品属于掉期，法院尚未对实体分类作出裁定，美国永续分类线因此从产品登记推进到诉讼资格争议。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>这是监管方的诉讼立场，不是法院对永续属于期货还是掉期的最终裁定。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-10-19</span>
-            <a class="item-src" href="https://www.coindesk.com/policy/2026/10/19/u-s-cftc-rebuffs-cme-legal-stance-in-consequential-fight-over-perpetual-futures" target="_blank" rel="noopener">CoinDesk ↗</a>
-          </div>
-        </article>
-        <article class="item">
-          <h3 class="item-h">TRUE把60个加密与非加密永续市场放进同一USDC余额</h3>
-          <p class="item-b"><strong>事件</strong>：TRUE文档列出60个永续市场，覆盖加密资产、美股、未上市公司、金属、原油、外汇和指数，并让同一USDC余额跨市场使用。</p><p class="item-b"><strong>机制</strong>：平台以自建排序器和订单簿撮合、在Solana结算，BTC最高50倍、非加密资产最高10倍、未上市公司最高5倍，但股票类产品只提供价格敞口，不代表实际股份。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>跨资产保证金入口已经形成，真实成交、未平仓量、点差与极端行情表现仍未披露。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-10-18</span>
-            <a class="item-src" href="https://docs.truefinance.ai/en/docs/perps" target="_blank" rel="noopener">TRUE Docs ↗</a>
-          </div>
-        </article>
-        <article class="item">
-          <h3 class="item-h">Lighter在10万美元BTC永续市价单快照中成本最低</h3>
-          <p class="item-b"><strong>事件</strong>：PerpFinder在10月20日02:34 UTC的快照中测得，10万美元BTC永续市价买单在Lighter的预估总成本为0.5个基点，约5美元。</p><p class="item-b"><strong>机制</strong>：该口径把吃单费、半个买卖价差与预估价格冲击相加，适合比较同一时点的可见执行成本，但不能外推全天、限价单或大额拆单结果。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>同页显示全市场24小时成交1789.4亿美元、DEX占9.5%，两者都是动态快照，不代表长期份额。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-10-20</span>
-            <a class="item-src" href="https://perpfinder.com/" target="_blank" rel="noopener">PerpFinder ↗</a>
+          <h3 class="item-h">截至10月21日，永续DEX近24小时成交高于7日日均11%</h3>
+          <p class="item-b">北京时间10:10，arb.sh统计的45家永续DEX过去24小时成交244.1亿美元，前三家合计占51%。当前成交高于近一周平均水平，但一半仍集中在少数平台。数字来自交易所公开API，反映的是合约名义成交额，不是实际流入平台的资金。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://arb.sh/zh/stats" target="_blank" rel="noopener" title="arb.sh · 永续DEX成交量快照（2026-10-21 02:10 UTC） · 未标发布日期 · 核验 2026-10-21" aria-label="来源 1：arb.sh · 永续DEX成交量快照（2026-10-21 02:10 UTC） · 未标发布日期 · 核验 2026-10-21">1</a><a class="source-number" href="https://arb.sh/zh/about" target="_blank" rel="noopener" title="arb.sh · 数据来源与统计方法 · 未标发布日期 · 核验 2026-10-21" aria-label="来源 2：arb.sh · 数据来源与统计方法 · 未标发布日期 · 核验 2026-10-21">2</a>
           </div>
         </article>
         </div>
       </section>
-      <section class="sec sec-launchpad">
+      <section class="sec sec-trading-products">
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <h2 class="sec-title">Launchpad</h2>
+            <h2 class="sec-title">交易产品扩展</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">FEAST公平发售以40.07 BNB完成结算</h3>
-          <p class="item-b">FEAST页面显示发售已结算，售出3亿枚代币并募集40.07 BNB，发售收取1%费用。</p><p class="item-b">合约只保留退款、结算和添加流动性路径，页面称已注入的流动性无法由所有者移除，但团队分配仍有36个月释放期。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>发售份额占10亿总供应的30%，另有30%用于流动性池，募资规模仍属早期样本。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-10-19</span>
-            <a class="item-src" href="https://feast.meme/sale" target="_blank" rel="noopener">FEAST ↗</a>
+          <h3 class="item-h">10月20日，Kraken桌面端新增Prop多账户同步下单</h3>
+          <p class="item-b">桌面端新增多账户同步下单，覆盖自己的交易考核和获资助账户。选定主账户后，其他账户可复制相同数量，或按净值比例下单；止损、止盈、改单和撤单也同步。跟随账户不满足规则时会被跳过，主账户违规会停止复制；不能跟随其他交易者。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://blog.kraken.com/product/desktop/multi-account-trading-for-kraken-prop" target="_blank" rel="noopener" title="Kraken · Multi-account trading for Kraken Prop is live on Kraken Desktop · 发布 2026-10-20" aria-label="来源 1：Kraken · Multi-account trading for Kraken Prop is live on Kraken Desktop · 发布 2026-10-20">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Debitum页面排定DEB发售价从4美元升至5美元</h3>
-          <p class="item-b">Debitum代币销售页把10月20日00:00 UTC列为单价从4美元上调至5美元的节点，销售额度为100万枚DEB。</p><p class="item-b">购买使用USDC、USDT、ETH、WETH或WBTC并在同一笔交易交付、无锁仓，Uniswap与Curve流动性仍只是后续计划。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>销售额度占1000万固定供应的10%，价格节点可查，但二级流动性尚未上线。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-10-19</span>
-            <a class="item-src" href="https://www.coingabbar.com/en/debitum-presale-update-deb-price-rises-to-5-stage-news" target="_blank" rel="noopener">CoinGabbar ↗</a><a class="item-src item-ref" href="https://debitum.app/token-sale" target="_blank" rel="noopener">补充：Debitum · 10-20 ↗</a>
-          </div>
-        </article>
-        <article class="item">
-          <h3 class="item-h">NEAR两大发射台24小时合计完成6464笔交换</h3>
-          <p class="item-b">NEAR Stats在10月19日快照中记录JustHoot完成3586笔交换、37.11万美元成交，Nearly完成2878笔交换、34.01万美元成交。</p><p class="item-b">Nearly同时披露13次发射和4400美元费用，JustHoot未披露同口径费用与发射数，因此只能比较活跃度，不能直接比较收入效率。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>数据是24小时快照，且两家披露字段不完整一致，无法判断自然留存与单次发射质量。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-10-19</span>
-            <a class="item-src" href="https://nearstats.org/launchpads" target="_blank" rel="noopener">NEAR Stats ↗</a>
+          <h3 class="item-h">Lighter于10月19日上线BTC与ETH涨跌合约，仓位采用全额抵押</h3>
+          <p class="item-b">用户买入上涨或下跌份额，判断正确时每份兑付1USDC，否则归零；持仓没有资金费或清算，也可在到期前反向交易退出。用户只需判断固定时段内的涨跌，但要全额支付仓位成本，收益也不会随涨幅继续增加。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://docs.lighter.xyz/trading/binary-options" target="_blank" rel="noopener" title="Lighter官方二元期权文档 · 未标发布日期 · 核验 2026-10-21" aria-label="来源 1：Lighter官方二元期权文档 · 未标发布日期 · 核验 2026-10-21">1</a><a class="source-number" href="https://www.gate.com/zh/news/detail/LIT/lighter-launches-bitcoin-and-ethereum-binary-options-on-october-19-25064365" target="_blank" rel="noopener" title="Gate转载Crypto Briefing：Lighter于10月19日推出二元期权 · 发布 2026-10-19 · 核验 2026-10-21" aria-label="来源 2：Gate转载Crypto Briefing：Lighter于10月19日推出二元期权 · 发布 2026-10-19 · 核验 2026-10-21">2</a><a class="source-number" href="https://docs.lighter.xyz/referral-program" target="_blank" rel="noopener" title="Lighter官方推荐计划 · 未标发布日期 · 核验 2026-10-21" aria-label="来源 3：Lighter官方推荐计划 · 未标发布日期 · 核验 2026-10-21">3</a>
           </div>
         </article>
         </div>
       </section>
-      <section class="sec sec-crypto">
+      <section class="sec sec-user-campaigns">
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <h2 class="sec-title">Crypto</h2>
+            <h2 class="sec-title">用户活动</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">JPMorgan把机构存款代币JPM Coin扩到Ethereum</h3>
-          <p class="item-b">JPMorgan面向机构客户把代表银行美元存款的JPM Coin扩到Ethereum，理由是客户与流动性已经聚集在该网络。</p><p class="item-b">代币仍是许可客户使用的银行负债，不是面向公众的稳定币；交易后台服务化线因此新增公共链结算样本，但跨行采用与链上规模尚未披露。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>其Kinexys平台现有日处理量超过70亿美元，相对该行每日约12万亿美元支付业务仍是小规模通道。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-10-19</span>
-            <a class="item-src" href="https://www.coindesk.com/markets/2026/10/19/jpmorgan-s-jpm-coin-representing-dollar-deposits-is-coming-to-ethereum-bloomberg" target="_blank" rel="noopener">CoinDesk ↗</a><a class="item-src item-ref" href="https://www.jpmorgan.com/payments/newsroom/jpm-coin-live-on-ethereum" target="_blank" rel="noopener">补充：JPMorgan · 10-19 ↗</a>
+          <h3 class="item-h">10月21日，币安Pick启动积分预测活动，将交易任务接入排行榜</h3>
+          <p class="item-b">活动于北京时间8点开始，用户通过签到、邀请或交易任务赚取积分，再用积分做预测，参与周榜和赛季榜。积分不能提现、转让或直接换成奖金，活动结束后会重置；USDC奖励按排名和参与条件发放，参加者需完成身份认证并符合地区要求。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en-IN/square/post/378914030437187" target="_blank" rel="noopener" title="Binance官方公告 · Binance Pick Is Here（10月19日发布，10月21日启动） · 发布 2026-10-19" aria-label="来源 1：Binance官方公告 · Binance Pick Is Here（10月19日发布，10月21日启动） · 发布 2026-10-19">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-margin-and-exit">
+        <div class="sec-head">
+          <span class="sec-no">04</span>
+          <div>
+            <h2 class="sec-title">保证金与退出规则</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">DeepBook Margin支持借币买卖现货，各市场单独管理保证金</h3>
+          <p class="item-b">用户先存入抵押物，再借币到现货盘口买卖，结束后归还本金和利息。它和币安逐仓杠杆一样，需要为各市场分别准备保证金；不同的是，借贷、交易和清算都在链上，其他应用也能接入这套现货盘口。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.docs.sui.io/onchain-finance/deepbook/deepbook-margin/" target="_blank" rel="noopener" title="Sui · DeepBook Margin 机制文档 · 未标发布日期 · 核验 2026-10-21" aria-label="来源 1：Sui · DeepBook Margin 机制文档 · 未标发布日期 · 核验 2026-10-21">1</a><a class="source-number" href="https://www.docs.sui.io/onchain-finance/deepbook/deepbook-margin/margin-integration" target="_blank" rel="noopener" title="Sui · Integrating DeepBook Margin · 未标发布日期 · 核验 2026-10-21" aria-label="来源 2：Sui · Integrating DeepBook Margin · 未标发布日期 · 核验 2026-10-21">2</a><a class="source-number" href="https://www.docs.sui.io/onchain-finance/deepbook/deepbook-margin/margin-risks" target="_blank" rel="noopener" title="Sui · Margin Risks · 未标发布日期 · 核验 2026-10-21" aria-label="来源 3：Sui · Margin Risks · 未标发布日期 · 核验 2026-10-21">3</a><a class="source-number" href="https://www.binance.com/en/support/faq/detail/b4e9e6ad70934bd082e8e09e33e69513" target="_blank" rel="noopener" title="Binance · 全仓与逐仓保证金的区别（更新于2025年11月28日） · 发布 2025-11-28 · 核验 2026-10-21" aria-label="来源 4：Binance · 全仓与逐仓保证金的区别（更新于2025年11月28日） · 发布 2025-11-28 · 核验 2026-10-21">4</a><a class="source-number" href="https://www.tokenomics.net/blog/deepbook-sui-order-book-deep-token/" target="_blank" rel="noopener" title="Tony Drummond（Tokenomics.net 创始人）（关系未确认） · 发布 2026-09-28" aria-label="来源 5：Tony Drummond（Tokenomics.net 创始人）（关系未确认） · 发布 2026-09-28">5</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">DTCC首批代币化服务只覆盖25只证券</h3>
-          <p class="item-b">DTCC的代币化服务计划先在Canton与许可Besu网络覆盖25只证券，并让链上记录与DTC托管证券保持一比一对应。</p><p class="item-b">约30万亿美元可用资产是潜在资格范围，不是首日代币化规模，Stellar与Arc接入、数字现金结算和抵押品用途仍在后续路线图。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>首发标的仅25只，30万亿美元代表可纳入范围，不能写成已经上链的资产规模。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-10-17</span>
-            <a class="item-src" href="https://tsnmedia.org/dtcc-tokenization-service-launch-scope/" target="_blank" rel="noopener">TSN Media ↗</a>
-          </div>
-        </article>
-        <article class="item">
-          <h3 class="item-h">BitTorrent用三季度服务收入回购并销毁21.621万亿枚BTT</h3>
-          <p class="item-b">BitTorrent称已把三季度去中心化服务收入全部用于回购，并在10月16日销毁21.621万亿枚BTT，按公告口径约760万美元。</p><p class="item-b">项目计划按季度继续执行，但收入基础、回购成交细节与效果均由项目方自报，销毁数量不能替代可审计的持续现金流。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>约760万美元价值和100%收入回购均来自项目公告，缺少独立审计与季度收入拆分。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-10-18</span>
-            <a class="item-src" href="https://www.globenewswire.com/news-release/2026/10/18/3382943/0/en/bittorrent-ushers-in-next-gen-web3-infrastructure-with-strategic-rebrand-and-inaugural-btt-burn.html" target="_blank" rel="noopener">GlobeNewswire ↗</a>
+          <h3 class="item-h">predict.fun让带Yield标记的持仓赚取利息，用户可按周领取</h3>
+          <p class="item-b">用户持有带Yield标记的预测份额时，背后的USDT抵押在借贷平台Venus赚取利息，每周可到资产页领取，扣除10%收益管理费。相比不生息的市场，用户等待结果时多一份利息，但若Venus可用资金不足，领取结算款也可能延迟。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://predict.fun/learn/how-yield-works" target="_blank" rel="noopener" title="predict.fun · How Yield Works on Open Positions（更新于7月15日） · 发布 2026-07-15 · 核验 2026-10-21" aria-label="来源 1：predict.fun · How Yield Works on Open Positions（更新于7月15日） · 发布 2026-07-15 · 核验 2026-10-21">1</a><a class="source-number" href="https://docs.predict.fun/developers/technical-overview" target="_blank" rel="noopener" title="predict.fun · Technical Overview · 未标发布日期 · 核验 2026-10-21" aria-label="来源 2：predict.fun · Technical Overview · 未标发布日期 · 核验 2026-10-21">2</a><a class="source-number" href="https://docs.predict.fun/the-basics/yields" target="_blank" rel="noopener" title="predict.fun · Yields · 未标发布日期 · 核验 2026-10-21" aria-label="来源 3：predict.fun · Yields · 未标发布日期 · 核验 2026-10-21">3</a><a class="source-number" href="https://predict.fun/news/predict-launches-its-binance-referral-program" target="_blank" rel="noopener" title="predict.fun · Binance Wallet 推荐计划（历史分发背景） · 发布 2026-09-14 · 核验 2026-10-21" aria-label="来源 4：predict.fun · Binance Wallet 推荐计划（历史分发背景） · 发布 2026-09-14 · 核验 2026-10-21">4</a>
           </div>
         </article>
         </div>
       </section>
       <section class="sec sec-ai">
         <div class="sec-head">
-          <span class="sec-no">04</span>
+          <span class="sec-no">05</span>
           <div>
             <h2 class="sec-title">AI</h2>
           </div>
@@ -214,30 +222,33 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Microsoft让Agent权限随任务与风险动态收缩</h3>
-          <p class="item-b">Microsoft提出Dynamic Permissions与Dynamic Agent Risk，让Agent按任务、时间和实时风险获得或收回权限，并由外部控制面执行条件访问。</p><p class="item-b">官方明确模型不能充当自身安全边界，前沿评估线因此从固定账号治理推进到任务级最小权限、持续风险评分与独立阻断。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>方案给出控制面与产品方向，跨租户覆盖、误判率和生产事故数据尚未披露。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-10-19</span>
-            <a class="item-src" href="https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/" target="_blank" rel="noopener">Microsoft Security Blog ↗</a>
+          <h3 class="item-h">MiniMax于10月19日上线M3.1 Flash并公布API价格</h3>
+          <p class="item-b">模型已通过API、M Plan和MiniMax Code提供，每百万token输入、输出和缓存输入分别为0.15、0.60和0.015美元。官方称Agent任务成本较前代低70%，但这是厂商评估，选型仍需复测任务成功率；模型权重尚待后续发布。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.minimax.io/blog/minimax-m31f" target="_blank" rel="noopener" title="MiniMax官方发布 · 发布 2026-10-19" aria-label="来源 1：MiniMax官方发布 · 发布 2026-10-19">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Notion称自动模型路由把平均成本降约90%</h3>
-          <p class="item-b">Notion称其自动模型路由在20多类任务上达到接近Opus 5.5与Astra的结果，同时把平均模型成本降低约90%，并让积分可用量扩大10倍。</p><p class="item-b">Notion Agent任务时长上限由5分钟提高到24小时以上，并增加MCP与连接器工具，但质量与成本结论来自厂商内部评估，缺少独立生产基准。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>成本下降来自20多类内部用例的平均值，未公开逐任务分布、失败率或长任务人工接管比例。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-10-19</span>
-            <a class="item-src" href="https://www.notion.com/blog/notion-ai-more-for-less" target="_blank" rel="noopener">Notion ↗</a>
+          <h3 class="item-h">OpenAI于10月20日为API新增12小时提示缓存</h3>
+          <p class="item-b">共享指令、工具和上下文可在间隔数小时的请求间复用，但缓存写入按普通输入价格的2.5倍计费。定时巡检和多轮研究可以因此重复利用先前输入；能否省钱，要看后续复用次数能否抵消较高的写入费用。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener" title="OpenAI API更新日志 · 发布 2026-10-20" aria-label="来源 1：OpenAI API更新日志 · 发布 2026-10-20">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">OpenA2A记录30天内420次外部工具调用</h3>
-          <p class="item-b">OpenA2A在9月19日至10月19日窗口记录420次工具调用，来自19种指纹；同期公开暴露的MCP服务器升至2495台，A2A握手达到27247次。</p><p class="item-b">报告建议把告警重点放在真实工具调用而非连接次数，前沿评估线新增外部可观察的Agent行为指标，但扫描覆盖和指纹归因仍有偏差。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>报告同时扫描到255582个公开AI服务，其中80.5%为OpenClaw，暴露面不等于已发生攻击。</p>
-          <div class="item-meta">
-            <span class="item-date">2026-10-19</span>
-            <a class="item-src" href="https://research.opena2a.org/reports/state-of-ai-agent-security-2026-10" target="_blank" rel="noopener">OpenA2A Research ↗</a>
+          <h3 class="item-h">Anthropic于10月20日将企业版推理钩子转为正式能力</h3>
+          <p class="item-b">这项能力已从企业版测试阶段转为正式提供。其原有方案会在模型读取提示和工具返回前，由企业安全服务器判定允许或拒绝，并支持影子模式与自定故障策略（背景，08-05）。团队接入前仍需测试正常请求是否被误拦截，以及安全服务器超时后如何处理。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://platform.claude.com/docs/zh-CN/release-notes/overview" target="_blank" rel="noopener" title="Anthropic Claude Platform发布说明 · 发布 2026-10-20" aria-label="来源 1：Anthropic Claude Platform发布说明 · 发布 2026-10-20">1</a><a class="source-number" href="https://claude.com/blog/claude-enterprise-inference-hooks" target="_blank" rel="noopener" title="Anthropic企业推理钩子测试版发布说明 · 发布 2026-08-05" aria-label="来源 2：Anthropic企业推理钩子测试版发布说明 · 发布 2026-08-05">2</a>
           </div>
         </article>
         </div>
