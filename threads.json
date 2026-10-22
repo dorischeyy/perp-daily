@@ -130,9 +130,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-10-18",
+      "last_update": "2026-10-21",
       "cadence_days": 6,
-      "next_check": "2026-10-26",
+      "next_check": "2026-10-27",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -391,6 +391,11 @@
           "date": "2026-10-18",
           "point": "TRUE文档列出60个永续市场，覆盖加密、美股、未上市公司、金属、原油、外汇和指数，并让同一USDC余额跨市场使用；平台以自建排序器和订单簿撮合、在Solana结算，但股票类产品只提供价格敞口，真实成交、OI和压力表现仍未披露。",
           "url": "https://docs.truefinance.ai/en/docs/perps"
+        },
+        {
+          "date": "2026-10-21",
+          "point": "Ripple Prime的RWA永续掉期已把RLUSD抵押和跨资产保证金带进机构主经纪账户，但HSBC指出周末订单簿深度仍限制大额头寸；传统市场休市时，近5200万美元芯片股杠杆仓位曾在十分钟内被强平。机构入口已经补齐，休市定价和真实深度开始成为规模化的主要约束。",
+          "url": "https://www.coindesk.com/markets/2026/10/21/ripple-brings-wall-street-into-24-7-stock-bets-but-hsbc-warns-markets-are-still-thin"
         }
       ]
     },
