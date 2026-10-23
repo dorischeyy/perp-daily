@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-10-23</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6; min-width:0; overflow-wrap:anywhere;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
+    white-space:nowrap; letter-spacing:0; line-height:1.5;}
+  .source-label{color:#a3987f; flex:none;}
+  .source-number{color:#8a7f66; text-decoration:underline; text-underline-offset:2px;
+    min-width:14px; padding:2px 0; text-align:center; flex:none; font-variant-numeric:tabular-nums;}
+  .source-number:hover,.source-number:focus-visible{color:#b03a2e;}
+  .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .research-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
+  .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
+  .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
+  .research-row + .research-row{border-top:1px dotted #e4ded0;}
+  .research-row dt{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dd{min-width:0; color:#403a2e;}
+  .research-inference{background:#f7f4ec; padding:10px;}
+  .research-discussions{list-style:none;}
+  .research-discussions li + li{margin-top:8px;}
+  .discussion-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 111 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 10 月 23 日 · 星期五</div>
+    </header>
+    <p class="lead">Variational把报价、保证金和对冲集中给单一OLP，零显式手续费实际由价差承担；若做市商资不抵债，用户盈利仍可能形成坏账。</p>
+
+
+      <section class="sec sec-derivatives-distribution">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">衍生品与分发</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">Variational用单一OLP承接报价、保证金和外部对冲</h3>
+          <p class="item-b">用户在Omni输入方向、数量和杠杆后，由唯一做市商OLP报价并保留最后确认权；成交后双方把保证金锁进独立结算池。平台不收显式手续费，而从买卖价差分成；OLP用自有资金去外部对冲，若其资不抵债，用户盈利仍可能形成坏账。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://docs.variational.io/variational-protocol/key-concepts/trading-via-rfq" target="_blank" rel="noopener" title="Variational Docs · 未标发布日期 · 核验 2026-10-23" aria-label="来源 1：Variational Docs · 未标发布日期 · 核验 2026-10-23">1</a><a class="source-number" href="https://docs.variational.io/omni/the-omni-liquidity-provider-olp" target="_blank" rel="noopener" title="Variational Docs · 未标发布日期 · 核验 2026-10-23" aria-label="来源 2：Variational Docs · 未标发布日期 · 核验 2026-10-23">2</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">10月20日，edgeX解释PAPER只由交易亏损与清算铸造</h3>
+          <p class="item-b">edgeX上线PAPERUSDC后说明，PAPER从零供给开始，只在Papertrade用户出现已实现亏损或清算时铸造，没有团队、融资或空投份额。代币目前不能在钱包间自由转账，价格发现主要依赖HIP-3和edgeX永续；供给因此直接绑定交易者亏损，但真实深度和退出能力仍待验证。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://pro.edgex.exchange/en-US/news/article/from-1000x-synthetics-to-token-perps-paper-is-live-on-edgex" target="_blank" rel="noopener" title="edgeX · 发布 2026-10-20" aria-label="来源 1：edgeX · 发布 2026-10-20">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">截至10月22日，Coinbase衍生品未平仓量仍集中在Deribit</h3>
+          <p class="item-b">Coinbase衍生品页显示总未平仓量402.3亿美元，其中Deribit占389.6亿，Coinbase Derivatives仅12.8亿；24小时成交量129.3亿，前者贡献114.3亿。统一品牌和账户已完成，但当前规模仍主要来自Deribit端，不能据此证明新增股票或商品永续已有独立深度。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.coinbase.com/en-gb/market-data/derivatives" target="_blank" rel="noopener" title="Coinbase Derivatives Data · 未标发布日期 · 核验 2026-10-23" aria-label="来源 1：Coinbase Derivatives Data · 未标发布日期 · 核验 2026-10-23">1</a><a class="source-number" href="https://www.coinbase.com/en-pt/blog/coinbase-is-building-the-most-complete-trading-platform" target="_blank" rel="noopener" title="Coinbase · 发布 2026-10-07 · 核验 2026-10-23" aria-label="来源 2：Coinbase · 发布 2026-10-07 · 核验 2026-10-23">2</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-rules-infrastructure">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">规则与基础设施</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">10月21日，英国FCA把DeFi运营韧性与金融犯罪控制纳入咨询</h3>
+          <p class="item-b">FCA拟要求受监管机构使用DeFi提供金融服务时，继续落实运营韧性、金融犯罪和反洗钱控制，并用案例说明可采取的措施。咨询11月18日结束，最终指引计划明年1月发布；它面向已受监管机构及相关参与者，不是对所有去中心化协议直接发牌。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.fca.org.uk/publications/guidance-consultations/gc26-7-decentralised-finance-guidance" target="_blank" rel="noopener" title="FCA · 发布 2026-10-21" aria-label="来源 1：FCA · 发布 2026-10-21">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">10月20日，tx用Brale基础设施推出RWA生态稳定币USTX</h3>
+          <p class="item-b">tx把USTX作为钱包、市场和RWA产品的统一美元余额，发行与储备管理由Brale基础设施承接。储备由现金、银行存款、政府货币基金和短期美债组成，用户无需自建稳定币系统即可接入；但赎回时效、审计频率和实际流通量尚未披露。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.globenewswire.com/news-release/2026/10/20/3384548/0/en/tx-launches-ustx-a-native-stablecoin-built-to-power-its-rwa-ecosystem.html" target="_blank" rel="noopener" title="tx · 发布 2026-10-20" aria-label="来源 1：tx · 发布 2026-10-20">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">AI</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">10月22日，Anthropic把Agent Skills标准捐给Linux基金会旗下AAIF</h3>
+          <p class="item-b">Anthropic把Agent Skills名称、规范、GitHub组织和域名交给Linux基金会旗下AAIF治理，后续由Anthropic、Google、OpenAI等工程师以个人身份维护。标准已接入70多个Agent平台；中立治理降低单一厂商控制，但版本兼容和技能供应链安全仍要等待正式路线图。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation" target="_blank" rel="noopener" title="Anthropic · 发布 2026-10-22" aria-label="来源 1：Anthropic · 发布 2026-10-22">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">10月21日，Claude Duet开放主动型工作Agent研究预览</h3>
+          <p class="item-b">美国Pro和Max用户可候补体验Claude Duet，它会在云端电脑持续处理连接应用中的任务，并在发送消息、付款、签署或删除前请求批准。后台检查同样消耗现有套餐额度，且目前不支持Team和Enterprise；主动提醒能减少人工追踪，也带来误判优先级的新风险。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://claude.com/resources/articles/claude-duet" target="_blank" rel="noopener" title="Claude · 发布 2026-10-21" aria-label="来源 1：Claude · 发布 2026-10-21">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">10月21日，NVIDIA扩展Agent Toolkit并加入企业数据知识层</h3>
+          <p class="item-b">NVIDIA把Agent Knowledge Foundation、Kumo结构化模型、OpenShell安全运行时和NemoClaw蓝图纳入同一套Agent工具链。Auto-Ontology可把原始企业数据映射为客户、产品和订单等业务关系；方案减少重建数据流程的需求，但效果与延迟主要来自合作方自报。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://blogs.nvidia.com/blog/enterprise-platforms-agent-toolkit/" target="_blank" rel="noopener" title="NVIDIA · 发布 2026-10-21" aria-label="来源 1：NVIDIA · 发布 2026-10-21">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>

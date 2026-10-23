@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-10-21",
+  "updated": "2026-10-23",
   "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -26,7 +26,7 @@
       "first_seen": "2026-07-24",
       "last_update": "2026-10-09",
       "cadence_days": 7,
-      "next_check": "2026-10-23",
+      "next_check": "2026-10-30",
       "thesis": "CFTC 正把预测市场从宽泛的产品模板推进到逐类合约的结算方法、数据源与公共利益审查，Hyperliquid 阵营则要求以实际结算结果划界、由联邦独家监管并公开允许合约的理由。谁能把这些要求变成可复用的合约准入与争议处理基础设施，谁才可能规模化扩列链上 outcome contracts。",
       "why_us": "预测市场与非标准标的会争夺同一批交易用户、抵押品和分发入口。HertzFlow 若扩展事件类市场，需要先建立逐合约可审计的结算源、异常处理、争议裁决与准入材料，不能把普通永续的参数化上币流程直接复用。",
       "watch_for": "CFTC 是否发布最终规则及逐类合约示例 / 是否公开允许合约的审查理由 / 州级赌博监管与联邦专属管辖的法院结果 / Hyperliquid outcome contracts 的 OI、争议事件与结算记录",
@@ -686,7 +686,7 @@
       "first_seen": "2026-06-19",
       "last_update": "2026-10-19",
       "cadence_days": 3,
-      "next_check": "2026-10-23",
+      "next_check": "2026-10-26",
       "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
       "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
       "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
@@ -1014,9 +1014,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-08-25",
-      "last_update": "2026-10-19",
+      "last_update": "2026-10-20",
       "cadence_days": 6,
-      "next_check": "2026-10-26",
+      "next_check": "2026-10-27",
       "thesis": "交易与资金后台正在从单一平台能力拆成可复用的撮合、清算、托管和结算服务。多家银行联合发行链上货币后，责任分工也从交易入口延伸到共同委托、信托托管与跨境支付；生产规模和故障责任仍需验证。",
       "why_us": "HertzFlow 研究外部分发或后台合作时，需要分开核验客户归属、风险责任、故障处置与执行兼容性；不可据公告性能直接替换现有 Keeper 与逐市场 LP 架构。",
       "watch_for": "正式推出时间 / 已上线合作方及真实订单流 / 生产延迟与故障恢复 / 风险与清算责任分配 / 开放及许可市场的隔离规则",
@@ -1085,6 +1085,11 @@
           "date": "2026-10-19",
           "point": "JPMorgan把代表银行美元存款的JPM Coin扩到Ethereum，面向许可机构客户使用。交易后台服务化由多行稳定币实证继续推进到银行负债接入公共链结算，但跨行采用、链上交易量与故障责任仍未披露。",
           "url": "https://www.coindesk.com/markets/2026/10/19/jpmorgan-s-jpm-coin-representing-dollar-deposits-is-coming-to-ethereum-bloomberg"
+        },
+        {
+          "date": "2026-10-20",
+          "point": "tx通过Brale发行USTX，把1:1储备美元余额接入钱包、市场与RWA产品。交易后台服务化从链上结算继续扩展到品牌稳定币发行和储备管理，但赎回时效、审计频率与实际流通量尚未披露。",
+          "url": "https://www.globenewswire.com/news-release/2026/10/20/3384548/0/en/tx-launches-ustx-a-native-stablecoin-built-to-power-its-rwa-ecosystem.html"
         }
       ]
     },
