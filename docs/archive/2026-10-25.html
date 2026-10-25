@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-10-25</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6; min-width:0; overflow-wrap:anywhere;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
+    white-space:nowrap; letter-spacing:0; line-height:1.5;}
+  .source-label{color:#a3987f; flex:none;}
+  .source-number{color:#8a7f66; text-decoration:underline; text-underline-offset:2px;
+    min-width:14px; padding:2px 0; text-align:center; flex:none; font-variant-numeric:tabular-nums;}
+  .source-number:hover,.source-number:focus-visible{color:#b03a2e;}
+  .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .research-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
+  .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
+  .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
+  .research-row + .research-row{border-top:1px dotted #e4ded0;}
+  .research-row dt{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dd{min-width:0; color:#403a2e;}
+  .research-inference{background:#f7f4ec; padding:10px;}
+  .research-discussions{list-style:none;}
+  .research-discussions li + li{margin-top:8px;}
+  .discussion-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 113 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 10 月 25 日 · 星期日</div>
+    </header>
+    <p class="lead">代币化股票的主要阻力已从技术上线转向发行人接受和统一价格发现。22家上市公司反对被纳入新场所，说明全天交易只有同时解决权利、流动性和定价，资产供给才可能规模化。</p>
+
+
+      <section class="sec sec-rwa-market-structure">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">RWA市场结构</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">10月24日，22家上市公司反对被纳入OKX与ICE代币化股票场所</h3>
+          <p class="item-b">微软、谷歌母公司、麦当劳等22家发行人反对其股票进入OKX与ICE拟设的代币化交易场所。纳斯达克同时警告，场外流动性若不接入统一报价和行情汇总，可能削弱价格发现；监管豁免允许发行人退出，资产供给仍取决于权利与定价安排。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.coindesk.com/business/2026/10/23/why-mcdonalds-microsoft-and-google-saying-no-to-tokenized-stocks-isn-t-a-dealbreaker" target="_blank" rel="noopener" title="CoinDesk · 发布 2026-10-24" aria-label="来源 1：CoinDesk · 发布 2026-10-24">1</a><a class="source-number" href="https://www.sec.gov/newsroom/speeches-statements/peirce-slumber-number-innovation-exemption-statement-091726" target="_blank" rel="noopener" title="美国证券交易委员会 · 发布 2026-09-17" aria-label="来源 2：美国证券交易委员会 · 发布 2026-09-17">2</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">10月23日，两家交易所同日新增十只美股与ETF永续</h3>
+          <p class="item-b">Biconomy新增埃森哲、CVNA等五只美股和ETF的USDT永续，Hotcoin同日再上五只美股永续，最高提供20倍杠杆。两批产品都只追踪价格，不传递股东权利；公告也未披露成交量、未平仓量和休市时的价差，扩列速度暂不能证明需求质量。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://biconomy.zendesk.com/hc/en-us/articles/63531200199833-Biconomy-com-Launches-Five-New-Futures-Trading-Pairs" target="_blank" rel="noopener" title="Biconomy · 发布 2026-10-23" aria-label="来源 1：Biconomy · 发布 2026-10-23">1</a><a class="source-number" href="https://www.hotcoin.com/en_US/support/notice/HotcoinWillLaunchMultiplePerpetualFutureson2026-10-23/" target="_blank" rel="noopener" title="Hotcoin · 发布 2026-10-23" aria-label="来源 2：Hotcoin · 发布 2026-10-23">2</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Ostium用原生交易时段和单一金库承接RWA永续</h3>
+          <p class="item-b">Ostium让用户用USDC交易股票、外汇和商品的合成永续。非加密市场休市时不能下市价单，限价与止损会排队至重开；交易盈亏由单一金库和缓冲层结算，流动性提供者赎回需等待24至48小时，因此全天账户并不代表每种标的都能随时成交或退出。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://ostium-labs.gitbook.io/ostium-docs/getting-started/ostium-explained-for-traders" target="_blank" rel="noopener" title="Ostium交易者文档 · 未标发布日期 · 核验 2026-10-25" aria-label="来源 1：Ostium交易者文档 · 未标发布日期 · 核验 2026-10-25">1</a><a class="source-number" href="https://ostium-labs.gitbook.io/ostium-docs/fee-breakdown" target="_blank" rel="noopener" title="Ostium费用文档 · 未标发布日期 · 核验 2026-10-25" aria-label="来源 2：Ostium费用文档 · 未标发布日期 · 核验 2026-10-25">2</a><a class="source-number" href="https://ostium-labs.gitbook.io/ostium-docs/vault/overview" target="_blank" rel="noopener" title="Ostium金库文档 · 未标发布日期 · 核验 2026-10-25" aria-label="来源 3：Ostium金库文档 · 未标发布日期 · 核验 2026-10-25">3</a><a class="source-number" href="https://pro.edgex.exchange/en-US/news/article/ostium-review-2026-stocks-forex-crypto-onchain" target="_blank" rel="noopener" title="CoinWy（关系未确认） · 发布 2026-10-23" aria-label="来源 4：CoinWy（关系未确认） · 发布 2026-10-23">4</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-collateral-security">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">抵押品与结算风险</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">10月23日，Stellar完成首笔连续滚动的机构回购交易</h3>
+          <p class="item-b">Ascend与M1X在Stellar上用短期美国国债一比一担保的USDM1完成机构回购，10月16日至19日连续执行72次按小时滚动，并以USDC结算。自动展期覆盖周末，但交易仍依赖许可名单、合规控制和抵押品法律文件，链上连续运行不等于无条件退出。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://stellar.org/press/ascend-and-m1x-global-complete-first-institutional-repo-on-stellar-using-usdm1-secured-sovereign-bond" target="_blank" rel="noopener" title="Stellar · 发布 2026-10-23" aria-label="来源 1：Stellar · 发布 2026-10-23">1</a><a class="source-number" href="https://m1xglobal.com/announcements/ascend-and-m1x-global-complete-first-institutional-repo-on-stellar-using-usdm1-secured-sovereign-bond" target="_blank" rel="noopener" title="M1X Global · 发布 2026-10-23" aria-label="来源 2：M1X Global · 发布 2026-10-23">2</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">10月22日，BitcoinZ修复伪造区块并回滚跨链铸币影响</h3>
+          <p class="item-b">BitcoinZ披露，10月21日的零值证明校验缺陷与整数溢出生成了伪造区块，部分假币随后进入跨链桥并铸成BSC资产，出售后获得约2892枚USDT。2.3.1版已拒绝该区块并清理影响，但事件说明桥若只信主链确认，底层共识漏洞会被直接放大。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://getbtcz.com/news/2026-10-22-counterfeit-block-1860181-every-coin-traced/" target="_blank" rel="noopener" title="BitcoinZ · 发布 2026-10-22" aria-label="来源 1：BitcoinZ · 发布 2026-10-22">1</a><a class="source-number" href="https://safeguard.sh/resources/blog/bitcoinz-counterfeit-block-105-billion-sprout-proof-bypass" target="_blank" rel="noopener" title="Safeguard · 发布 2026-10-24" aria-label="来源 2：Safeguard · 发布 2026-10-24">2</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">AI基础设施</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">10月22日，OpenAI将Decisions API转为正式可用</h3>
+          <p class="item-b">OpenAI将Decisions API正式开放，可让GPT-6 Luna一次回答最多400个文本、图片或结构化问题，定价为每百万输入token 0.10美元且不收输出费。官方称速度可达Responses API的十倍，但效果来自厂商测试，仍需按真实任务复核准确率与批量失败成本。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/decisions-api/" target="_blank" rel="noopener" title="OpenAI · 发布 2026-10-22" aria-label="来源 1：OpenAI · 发布 2026-10-22">1</a><a class="source-number" href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener" title="OpenAI API Changelog · 发布 2026-10-22" aria-label="来源 2：OpenAI API Changelog · 发布 2026-10-22">2</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">10月23日，Atlassian将新版MCP接入Agentic Pipelines</h3>
+          <p class="item-b">Atlassian把新版MCP服务器接入Agentic Pipelines，让Claude和Codex在同一流水线调用Jira、Confluence与Loom，并用短时、仓库级OAuth访问Bitbucket。管理员可设置细粒度权限和批准规则，但部分旧工具尚未迁移，上线前仍需逐项核对能力缺口。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.atlassian.com/blog/bitbucket/connect-the-redesigned-atlassian-mcp-server-to-your-agentic-pipelines" target="_blank" rel="noopener" title="Atlassian · 发布 2026-10-23" aria-label="来源 1：Atlassian · 发布 2026-10-23">1</a><a class="source-number" href="https://www.atlassian.com/blog/company-news/team26-europe-atlassian-mcp" target="_blank" rel="noopener" title="Atlassian MCP发布说明 · 发布 2026-10-06" aria-label="来源 2：Atlassian MCP发布说明 · 发布 2026-10-06">2</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">10月23日，Perplexity将4B决策模型带到Mac本地运行</h3>
+          <p class="item-b">Perplexity发布Mac版pplx-decider-flash-v1.2，4B模型可在本地接收文本或图片并返回概率，还提供无需API密钥的本机Decisions接口。敏感分类因此可以不经过厂商云端，但当前只覆盖Mac，准确率、内存占用和批量吞吐仍需用真实任务复测。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://community.perplexity.ai/t/you-can-now-run-pplx-decider-flash-v1-2-locally-on-your-mac-without-an-api-key/6413" target="_blank" rel="noopener" title="Perplexity Community · 发布 2026-10-23" aria-label="来源 1：Perplexity Community · 发布 2026-10-23">1</a><a class="source-number" href="https://community.perplexity.ai/c/announcements/9" target="_blank" rel="noopener" title="Perplexity公告索引 · 发布 2026-10-23" aria-label="来源 2：Perplexity公告索引 · 发布 2026-10-23">2</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>
