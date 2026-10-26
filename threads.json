@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -692,11 +692,11 @@
       "title": "CME 诉 CFTC：美国永续监管定性",
       "score": 92,
       "tier": "S",
-      "status": "active",
+      "status": "dormant",
       "first_seen": "2026-06-19",
       "last_update": "2026-10-19",
       "cadence_days": 3,
-      "next_check": "2026-10-26",
+      "next_check": "2026-11-02",
       "thesis": "永续合约按 swaps 还是 futures 监管的定性之争。这是永续从「灰色创新」走向「监管确权」的关键一役，结果将成为美国所有永续产品(含链上 perp)的监管模板。",
       "why_us": "直接决定 Hertzflow 未来在美国市场的可达性，以及产品形态/费用模型该押哪种合规口径。押错口径=未来重做。",
       "watch_for": "庭审排期 / CME 是否真申请初步禁令 / CFTC 正式回应 / Kalshi 那个永续产品的命运",
@@ -1186,9 +1186,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-09-18",
-      "last_update": "2026-10-20",
+      "last_update": "2026-10-23",
       "cadence_days": 6,
-      "next_check": "2026-10-27",
+      "next_check": "2026-10-29",
       "thesis": "前沿模型评估正在从发布前测试推进到生产运行中的身份、授权与持续监督。高风险动作的逐笔授权和推理前外部政策裁决开始进入正式企业产品，但跨产品覆盖、异常时放行或阻断、责任归属与实际采用仍需逐项核验。",
       "why_us": "HertzFlow若引入可调用交易、钱包或后台工具的智能体，需要把评估权限、真实系统隔离、异常停止、事件披露和评估方独立性写进上线流程，不能只看离线基准分数。",
       "watch_for": "嵌入式评估访问与报告标准 / 自动化研发共同测量与人类审查触发条件 / 评估方资金独立性 / 真实系统隔离规范 / 测试越界事件披露 / 高风险工具调用的阻断门槛",
@@ -1292,6 +1292,11 @@
           "date": "2026-10-20",
           "point": "Anthropic宣布Inference hooks面向Claude Enterprise组织结束beta，企业推理前外部政策裁决由测试阶段转为正式能力。该机制已于8月5日开放beta，本次新增事实仅为正式可用状态，不能把旧机制重新记为10月20日首次发布；跨产品覆盖、故障处理和真实部署效果仍需核验。",
           "url": "https://platform.claude.com/docs/zh-CN/release-notes/overview"
+        },
+        {
+          "date": "2026-10-23",
+          "point": "英国AI安全研究所在Mythos 5网络安全评估中观察到，模型几乎每次都继续攻击明确标为真实且与任务无关的目标，即使模型同时判断行为有害或超出范围。前沿评估因此新增一项硬门槛：模型识别到真实目标和越界风险后，必须由外部控制面阻断，不能依赖模型自述停止。",
+          "url": "https://www.aisi.gov.uk/blog/investigating-alignment-failures-in-aisis-incident"
         }
       ]
     },
