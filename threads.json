@@ -130,9 +130,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-10-24",
+      "last_update": "2026-10-26",
       "cadence_days": 6,
-      "next_check": "2026-10-30",
+      "next_check": "2026-11-01",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -401,6 +401,11 @@
           "date": "2026-10-24",
           "point": "微软、谷歌母公司、麦当劳等22家发行人反对其股票进入OKX与ICE拟设的代币化交易场所，纳斯达克同时担忧场外流动性脱离统一报价和行情汇总。RWA交易的规模化约束由产品扩列和周末深度继续推进到发行人接受、股东权利与统一价格发现。",
           "url": "https://www.coindesk.com/business/2026/10/23/why-mcdonalds-microsoft-and-google-saying-no-to-tokenized-stocks-isn-t-a-dealbreaker"
+        },
+        {
+          "date": "2026-10-26",
+          "point": "Binance一次上线印度尼西亚ETF、EQT、意法半导体和艾伯维四个USDT永续，全部支持24/7交易和最高20倍杠杆。TradFi永续的供给由美国科技股继续扩展到国家、能源、芯片和医药，但公告仍未披露成交、OI、休市定价或地区可用性，扩列不能替代真实采用。",
+          "url": "https://www.binance.com/en/support/announcement/detail/02d204fc963f4f8687599fc22a13d538"
         }
       ]
     },
@@ -1307,9 +1312,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-10-21",
-      "last_update": "2026-10-23",
+      "last_update": "2026-10-26",
       "cadence_days": 3,
-      "next_check": "2026-10-28",
+      "next_check": "2026-10-29",
       "thesis": "Agent成本优化出现两种可实际评测的选择：更低单价的新模型，以及面向间隔数小时请求的长时提示缓存。MiniMax的模型定价和OpenAI的缓存计费改变了采购与复用参数，但低单价或更长缓存均不自动保证更低任务完成成本，仍取决于成功率、重复使用次数与写入费用。",
       "why_us": "团队评估研究、客服、代码和定时Agent时，可以把任务成功率、工具调用次数、缓存命中与完整账单放在同一套真实任务中比较，避免只看每token单价或厂商基准决定模型和运行预算。",
       "watch_for": "MiniMax M3.1 Flash在真实多步任务中的成功率与总成本 / 模型权重实际开放日期 / OpenAI 12小时缓存的写入成本、命中次数与节省幅度 / 两种优化路径的失败重试和工具成本是否抵消价格收益",
@@ -1333,6 +1338,11 @@
           "date": "2026-10-23",
           "point": "Perplexity把4B的pplx-decider-flash-v1.2带到Mac本地运行，并提供无需API密钥的本机Decisions接口。成本与隐私比较新增了本地执行选项，但当前只覆盖Mac，任务准确率、内存占用和批量吞吐仍需与云端模型同题复测。",
           "url": "https://community.perplexity.ai/t/you-can-now-run-pplx-decider-flash-v1-2-locally-on-your-mac-without-an-api-key/6413"
+        },
+        {
+          "date": "2026-10-26",
+          "point": "OpenAI发布GPT-6.1 Terra，标准API定价为每百万输入1美元、缓存输入0.05美元、输出5美元，官方称较GPT-6.1 Sol便宜50%，并主打视觉推理与电脑操作。Agent模型比较新增了低价多模态选择，但工具调用依赖Responses API，厂商基准仍需用真实任务成功率、时延和完整账单复测。",
+          "url": "https://openai.com/index/introducing-gpt-6-1-terra/"
         }
       ]
     },
