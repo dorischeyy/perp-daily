@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-10-30</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6; min-width:0; overflow-wrap:anywhere;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
+    white-space:nowrap; letter-spacing:0; line-height:1.5;}
+  .source-label{color:#a3987f; flex:none;}
+  .source-number{color:#8a7f66; text-decoration:underline; text-underline-offset:2px;
+    min-width:14px; padding:2px 0; text-align:center; flex:none; font-variant-numeric:tabular-nums;}
+  .source-number:hover,.source-number:focus-visible{color:#b03a2e;}
+  .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .research-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
+  .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
+  .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
+  .research-row + .research-row{border-top:1px dotted #e4ded0;}
+  .research-row dt{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dd{min-width:0; color:#403a2e;}
+  .research-inference{background:#f7f4ec; padding:10px;}
+  .research-discussions{list-style:none;}
+  .research-discussions li + li{margin-top:8px;}
+  .discussion-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 117 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 10 月 30 日 · 星期五</div>
+    </header>
+    <p class="lead">ICE准备把Hyperliquid上的RWA永续搬入美国受监管市场，说明争论已从能否上市推进到谁负责产品、清算和零售分发。但新市场仍需监管批准，不能提前视为已上线。</p>
+
+
+      <section class="sec sec-regulated-derivatives">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">永续市场与监管落地</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">10月29日，ICE与Trade[XYZ]拟把Hyperliquid永续搬入美国</h3>
+          <p class="item-b">ICE将独家运营Trade[XYZ]拟设的美国受监管市场，并另建面向零售的市场与清算结构；Trade[XYZ]负责产品设计，Hyperliquid提供底层执行。计划覆盖加密、股票、商品和外汇，但杠杆交易仍取决于监管批准。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://ir.theice.com/press/news-details/2026/Intercontinental-Exchange-and-TradeXYZ-to-Bring-Hyperliquid-Based-Perpetual-Markets-Onshore/default.aspx" target="_blank" rel="noopener" title="ICE · 发布 2026-10-29" aria-label="来源 1：ICE · 发布 2026-10-29">1</a><a class="source-number" href="https://docs.trade.xyz/" target="_blank" rel="noopener" title="Trade[XYZ]文档 · 发布 2026-10-30 · 核验 2026-10-30" aria-label="来源 2：Trade[XYZ]文档 · 发布 2026-10-30 · 核验 2026-10-30">2</a><a class="source-number" href="https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/hip-3-builder-deployed-perpetuals" target="_blank" rel="noopener" title="Hyperliquid HIP-3文档 · 发布 2026-10-30 · 核验 2026-10-30" aria-label="来源 3：Hyperliquid HIP-3文档 · 发布 2026-10-30 · 核验 2026-10-30">3</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">10月29日，Coinbase披露衍生品滚动成交达4.34万亿美元</h3>
+          <p class="item-b">Coinbase三季度材料显示，过去12个月加密衍生品成交为4.341万亿美元，两年复合增速179%，市场份额连续四季上升；10月已完成INTX与Deribit整合。报告未披露具体份额，统一流动性的稳定性仍待后续季度验证。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://investor.coinbase.com/files/content_files/Q3_26-Earnings-Deck.pdf" target="_blank" rel="noopener" title="Coinbase Q3 2026 Earnings Deck · 发布 2026-10-29" aria-label="来源 1：Coinbase Q3 2026 Earnings Deck · 发布 2026-10-29">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">10月29日，Canton Strategic拟发行首只美国本土代币化股票</h3>
+          <p class="item-b">Canton Strategic与TSV、链上过户代理Fairmint达成协议，拟最早11月2日把CNTN股票接入许可制AMM。代币由发行人支持，保留与纳斯达克股票相同的权利，并支持全天交易和原子结算；当前仍是拟上线安排。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://cdn.kscope.io/dc0e64098326acbabd03582d31267a63.html" target="_blank" rel="noopener" title="Canton Strategic Holdings 8-K Exhibit · 发布 2026-10-29" aria-label="来源 1：Canton Strategic Holdings 8-K Exhibit · 发布 2026-10-29">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-collateral-distribution">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">资产、抵押与分发</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">10月29日，韩华证券与Chainlink启动RWA抵押标准工作组</h3>
+          <p class="item-b">韩华证券将采用Chainlink数据标准和CCIP建设全球RWA平台，并成立工作组研究估值、储备验证及RWA作为抵押品的标准。资产发行和跨链连接已有明确技术选择，但可抵押范围、折扣率、托管及真实上线时间仍未公布。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://chain.link/press-releases/hanwha-investment-securities-and-chainlink-form-strategic-partnership-to-tokenize-connect-and-collateralize-real-world-assets-worldwide" target="_blank" rel="noopener" title="Chainlink · 发布 2026-10-29" aria-label="来源 1：Chainlink · 发布 2026-10-29">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">10月29日，Ondo把七个代币化投资组合带到Solana</h3>
+          <p class="item-b">Ondo在Solana上线七个单代币组合，底层由代币化股票和ETF组成，按预设规则调整权重；此前Ethereum与BNB Chain版本数周内TVL超过4500万美元。代币可转移和组合使用，但作为借贷抵押品仍只是潜在用途。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://ondo.finance/blog/intelligent-portfolios-go-live-on-solana" target="_blank" rel="noopener" title="Ondo Finance · 发布 2026-10-29" aria-label="来源 1：Ondo Finance · 发布 2026-10-29">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">10月29日，MetaMask把Stellar设为默认网络</h3>
+          <p class="item-b">MetaMask已在移动端和扩展中默认启用Stellar，每个现有账户自动获得由同一恢复短语派生的Stellar地址，无需另装钱包。用户可持有、发送和跨网络兑换相关资产；这扩大了支付和RWA入口，但不代表衍生品深度同步迁入。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://stellar.org/press/metamask-makes-stellar-a-default-network-bringing-global-payments-into-the-open-money-platform" target="_blank" rel="noopener" title="Stellar Development Foundation · 发布 2026-10-29" aria-label="来源 1：Stellar Development Foundation · 发布 2026-10-29">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">AI产品与企业落地</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">10月28日，Kimi Code禁止Agent自行进入计划模式</h3>
+          <p class="item-b">Kimi Code 2.4.0要求计划模式只能由用户显式开启，每份计划都等待人工审阅，Never Ask也不能自动批准；同时可导入近15或30天的Claude Code与Codex会话。更新强化了授权边界，但跨工具导入后的权限继承仍需实测。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.kimi.com/code/docs/en/kimi-code/whats-new.html" target="_blank" rel="noopener" title="Kimi Code Docs · 发布 2026-10-28" aria-label="来源 1：Kimi Code Docs · 发布 2026-10-28">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">10月27日，Akamai推出Agent Sandbox与托管推理服务</h3>
+          <p class="item-b">Akamai推出兼容OpenAI API的托管推理和Agent Sandbox，首批支持12个开放模型；Agent运行在Functions上，生成代码进入独立WebAssembly环境，可限制计算、内存、外连和系统能力。两项服务仍处Beta，治理能力尚未全部交付。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://akamai.gcs-web.com/news-releases/news-release-details/akamai-launches-ai-inference-service-and-agent-execution" target="_blank" rel="noopener" title="Akamai · 发布 2026-10-27" aria-label="来源 1：Akamai · 发布 2026-10-27">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">10月28日，OpenAI向部分ChatGPT订阅提供API额度</h3>
+          <p class="item-b">OpenAI允许符合条件的ChatGPT Pro与Business订阅者绑定自有API组织，每月领取最高500美元API额度。新权益能降低团队从对话产品转向开发接口的试用成本，但额度取决于套餐和资格，不是所有API客户的价格下调。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener" title="OpenAI API Changelog · 发布 2026-10-28" aria-label="来源 1：OpenAI API Changelog · 发布 2026-10-28">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>
