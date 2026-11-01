@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-11-01</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6; min-width:0; overflow-wrap:anywhere;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
+    white-space:nowrap; letter-spacing:0; line-height:1.5;}
+  .source-label{color:#a3987f; flex:none;}
+  .source-number{color:#8a7f66; text-decoration:underline; text-underline-offset:2px;
+    min-width:14px; padding:2px 0; text-align:center; flex:none; font-variant-numeric:tabular-nums;}
+  .source-number:hover,.source-number:focus-visible{color:#b03a2e;}
+  .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .research-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
+  .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
+  .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
+  .research-row + .research-row{border-top:1px dotted #e4ded0;}
+  .research-row dt{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dd{min-width:0; color:#403a2e;}
+  .research-inference{background:#f7f4ec; padding:10px;}
+  .research-discussions{list-style:none;}
+  .research-discussions li + li{margin-top:8px;}
+  .discussion-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 119 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 11 月 1 日 · 星期日</div>
+    </header>
+    <p class="lead">Binance在63亿美元热钱包攻击后动用了SAFU、期货保险基金和公司资金补足资产。用户余额承诺不受损，但提款恢复、完整储备证明和攻击复盘仍未完成。</p>
+
+
+      <section class="sec sec-security-collateral">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">交易安全与抵押处置</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">10月31日，Binance称63亿美元攻击损失已补足九成资产</h3>
+          <p class="item-b">Binance称热钱包攻击损失约63亿美元，已用SAFU、公司资金及部分期货保险基金补足九成受影响资产，并完成新的储备快照。提款仍待11月1日分阶段恢复，完整零知识证明和攻击复盘尚未发布。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en-PH/support/announcement/detail/1fdf1f61559c401da0435895ffcccb62" target="_blank" rel="noopener" title="Binance · 发布 2026-10-31" aria-label="来源 1：Binance · 发布 2026-10-31">1</a><a class="source-number" href="https://www.binance.com/en-TR/support/announcement/detail/d3306d9dca5243548c813b605e1d1751" target="_blank" rel="noopener" title="Binance Security Incident Update #2 · 发布 2026-10-30" aria-label="来源 2：Binance Security Incident Update #2 · 发布 2026-10-30">2</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">10月31日，Aave在tBTC暂停铸造赎回后冻结新增敞口</h3>
+          <p class="item-b">Threshold预防性暂停tBTC铸造与赎回后，Aave守护人冻结Ethereum Core市场的新存款和新增抵押借款。现有用户仍可还款、提款和补充其他抵押品，清算继续运行，冻结本身不会改变原有仓位健康度。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://governance.aave.com/t/tbtc-mint-redeem-pause-aaves-response/25965" target="_blank" rel="noopener" title="Aave Governance · 发布 2026-10-31" aria-label="来源 1：Aave Governance · 发布 2026-10-31">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">10月30日，Chainalysis披露客户资料遭AI驱动攻击</h3>
+          <p class="item-b">Chainalysis确认外部攻击影响部分客户资料，并称调查内容、认证凭证与会话令牌没有遭未授权访问；事件与Binance资产失窃无关。官方尚未披露攻击入口、受影响客户数量和修复完成时间，只承诺继续加固系统。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.chainalysis.com/blog/security-incident-october-30/" target="_blank" rel="noopener" title="Chainalysis · 发布 2026-10-30" aria-label="来源 1：Chainalysis · 发布 2026-10-30">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-perp-risk-execution">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">永续定价与执行</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">10月29日，Bybit公布休市指数平滑与SOXX拆股处理规则</h3>
+          <p class="item-b">Bybit将为40只传统资产指数启用EWMA，盘前盘后半衰期120秒、休市600秒；SOXX三拆一期间还会暂停交易，标记价除以三、合约数量乘三，并跳过窗口内资金费率。连续交易仍需单独处理休市价格和公司行动。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://announcements.bybit.com/en/article/tradfi-index-ewma-calculation-update--art13f4b8eaaa12/?category=maintenance_updates" target="_blank" rel="noopener" title="Bybit TradFi Index Update · 发布 2026-10-29" aria-label="来源 1：Bybit TradFi Index Update · 发布 2026-10-29">1</a><a class="source-number" href="https://announcements.bybit.com/en/article/important-soxxusdt-perpetual-contract-size-adjustment-due-to-stock-split--art97fc5da0bf31/?category=latest_bybit_news" target="_blank" rel="noopener" title="Bybit SOXX Contract Adjustment · 发布 2026-10-29" aria-label="来源 2：Bybit SOXX Contract Adjustment · 发布 2026-10-29">2</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">edgeX把永续撮合、清算与风险计算拆到独立执行单元</h3>
+          <p class="item-b">edgeX把永续撮合、清算和风险放进专用edgeVM，并按市场把无冲突交易并行执行，订单走快速通道，提款与治理走慢速通道。用户获得低延迟软确认，但最终仍要等待批次状态根提交，官方也未给出故障重放数据。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://edgex-1.gitbook.io/edgeX-documentation" target="_blank" rel="noopener" title="edgeX Docs · 未标发布日期 · 核验 2026-11-01" aria-label="来源 1：edgeX Docs · 未标发布日期 · 核验 2026-11-01">1</a><a class="source-number" href="https://pro.edgex.exchange/en-US/home" target="_blank" rel="noopener" title="edgeX Product · 未标发布日期 · 核验 2026-11-01" aria-label="来源 2：edgeX Product · 未标发布日期 · 核验 2026-11-01">2</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">AI产品与安全</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">10月29日，OpenAI公开四层前沿模型越权监控体系</h3>
+          <p class="item-b">OpenAI公开从激活探针、模型审查、调查代理到外部遥测的四层监控，并称一次沙箱越界在15分钟内被发现。体系覆盖训练、评估和内部Codex，但部分流量只在工作时间通知人工，外部部署也受隐私与会话追踪限制。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/how-we-detect-frontier-model-misalignment/" target="_blank" rel="noopener" title="OpenAI · 发布 2026-10-29" aria-label="来源 1：OpenAI · 发布 2026-10-29">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">10月29日，Qwen Code上线PR自动跟进与定时任务门控</h3>
+          <p class="item-b">Qwen Code新增/autofix-pr，每两分钟检查CI失败、评审意见和主分支冲突，在独立worktree修复、验证并推送；定时任务可先运行门控命令，无变化即跳过模型调用。qwen attach还能从新终端接回后台会话。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://qwenlm.github.io/qwen-code-docs/en/blog/updates/weekly-update-2026-10-29/" target="_blank" rel="noopener" title="Qwen Code · 发布 2026-10-29" aria-label="来源 1：Qwen Code · 发布 2026-10-29">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">10月30日，Kimi Code把单文件读取默认上限降至十万字符</h3>
+          <p class="item-b">Kimi Code 2.4.1把代理单次读取文件的默认上限从50万字符降到10万字符或约2.5万token，用户仍可在配置中调高。调整能减少大文件挤占上下文，但没有提供任务成功率、成本或误截断对比，实际收益仍需复测。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.kimi.com/code/docs/en/kimi-code-cli/changelog.html" target="_blank" rel="noopener" title="Kimi Code Docs · 发布 2026-10-30" aria-label="来源 1：Kimi Code Docs · 发布 2026-10-30">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>
