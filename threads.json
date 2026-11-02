@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-10-30",
+  "updated": "2026-11-02",
   "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -421,9 +421,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-02",
-      "last_update": "2026-10-22",
+      "last_update": "2026-11-02",
       "cadence_days": 3,
-      "next_check": "2026-11-01",
+      "next_check": "2026-11-05",
       "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
       "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
       "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -603,10 +603,15 @@
           "point": "RobinSeed以Robinhood Chain首个预售发射台为定位上线，SEED早期链上样本约有3.2万美元流动性、54个持有人，前十地址持有58.7%。经纪商分发线新增预售入口，但薄流动性与地址集中度表明采用仍处早期。",
         "url": "https://dextape.com/launches/2026-10-15"
       },
-      {
-        "date": "2026-10-22",
-        "point": "Arcus在部分受支持的亚太市场开放iOS和Android早期访问，移动端与网页端共用同一自托管账户，未开放地区可预登记。Robinhood Wallet之外出现独立移动端入口，但具体国家、新增用户和移动成交占比尚未披露。",
-        "url": "https://x.com/arcus_xyz/status/2113080833456394361"
+        {
+          "date": "2026-10-22",
+          "point": "Arcus在部分受支持的亚太市场开放iOS和Android早期访问，移动端与网页端共用同一自托管账户，未开放地区可预登记。Robinhood Wallet之外出现独立移动端入口，但具体国家、新增用户和移动成交占比尚未披露。",
+          "url": "https://x.com/arcus_xyz/status/2113080833456394361"
+        },
+        {
+          "date": "2026-11-02",
+          "point": "Reisa与Real World Lending在Robinhood Chain补上股票代币的一体化借贷和点对点借贷入口：前者把发行、DEX、隔离借贷与RESD稳定币组合，后者让单一出借人逐单承接股票抵押违约风险。分发生态已从交易入口延伸到信贷，但主网利用率、清算和赎回深度仍未披露。",
+          "url": "https://reisa.fi/"
         }
       ]
     },
@@ -1320,11 +1325,11 @@
       "title": "Agent模型与缓存成本：按任务验证降本",
       "score": 91,
       "tier": "S",
-      "status": "active",
+      "status": "dormant",
       "first_seen": "2026-10-21",
       "last_update": "2026-10-26",
       "cadence_days": 3,
-      "next_check": "2026-11-01",
+      "next_check": "2026-11-08",
       "thesis": "Agent成本优化出现两种可实际评测的选择：更低单价的新模型，以及面向间隔数小时请求的长时提示缓存。MiniMax的模型定价和OpenAI的缓存计费改变了采购与复用参数，但低单价或更长缓存均不自动保证更低任务完成成本，仍取决于成功率、重复使用次数与写入费用。",
       "why_us": "团队评估研究、客服、代码和定时Agent时，可以把任务成功率、工具调用次数、缓存命中与完整账单放在同一套真实任务中比较，避免只看每token单价或厂商基准决定模型和运行预算。",
       "watch_for": "MiniMax M3.1 Flash在真实多步任务中的成功率与总成本 / 模型权重实际开放日期 / OpenAI 12小时缓存的写入成本、命中次数与节省幅度 / 两种优化路径的失败重试和工具成本是否抵消价格收益",
@@ -1363,7 +1368,7 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-10-21",
-      "last_update": "2026-10-23",
+      "last_update": "2026-11-02",
       "cadence_days": 7,
       "next_check": "2026-11-06",
       "thesis": "首次研究建档，10月21日仅为本报核验与建立论点的日期，不代表项目当天上线或发生新事件，因此log暂空。DeepBook Margin复用现货深度但按单池隔离风险，predict.fun生息抵押依赖Venus取回资金；资本复用需要分别验证风险能否抵消、收益如何领取和退出是否受外部流动性限制。",
@@ -1379,6 +1384,11 @@
           "date": "2026-10-29",
           "point": "韩华证券采用Chainlink数据标准和CCIP建设RWA平台，并成立工作组研究估值、储备验证以及RWA作为抵押品的标准。资本复用讨论推进到机构级抵押准入设计，但可抵押资产、折扣率、托管和上线时间仍未公布。",
           "url": "https://chain.link/press-releases/hanwha-investment-securities-and-chainlink-form-strategic-partnership-to-tokenize-connect-and-collateralize-real-world-assets-worldwide"
+        },
+        {
+          "date": "2026-11-02",
+          "point": "DeepBook Predict的共享USDC池成为全部预测仓位对手方，交易约800毫秒后按Pyth签名价格成交或退款，LP申购赎回也走异步队列并统一刷新净值。资本复用提高了流动性统一度，但退出仍依赖池内闲置现金与批次处理。",
+          "url": "https://www.docs.sui.io/onchain-finance/deepbook/deepbook-predict"
         }
       ]
     }

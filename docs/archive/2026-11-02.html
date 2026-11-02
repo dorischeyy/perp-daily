@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-11-02</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6; min-width:0; overflow-wrap:anywhere;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
+    white-space:nowrap; letter-spacing:0; line-height:1.5;}
+  .source-label{color:#a3987f; flex:none;}
+  .source-number{color:#8a7f66; text-decoration:underline; text-underline-offset:2px;
+    min-width:14px; padding:2px 0; text-align:center; flex:none; font-variant-numeric:tabular-nums;}
+  .source-number:hover,.source-number:focus-visible{color:#b03a2e;}
+  .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .research-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
+  .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
+  .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
+  .research-row + .research-row{border-top:1px dotted #e4ded0;}
+  .research-row dt{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dd{min-width:0; color:#403a2e;}
+  .research-inference{background:#f7f4ec; padding:10px;}
+  .research-discussions{list-style:none;}
+  .research-discussions li + li{margin-top:8px;}
+  .discussion-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 120 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 11 月 2 日 · 星期一</div>
+    </header>
+    <p class="lead">RWA全天交易的约束正在从有没有合约转到休市定价、分红处理和抵押退出。新预言机与交易所规则在补后台环节，但风险仍由不同系统分担。</p>
+
+
+      <section class="sec sec-perp-market-operations">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">永续合约与全天市场运行</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月1日，MEXC将ASTER/USD1资金费率改为每四小时结算</h3>
+          <p class="item-b">MEXC自11月1日02:15 UTC起将ASTER/USD1永续资金费率改为每四小时结算，单次费率上限和下限为正负3%。平台保留继续调整频率与上限的权利，持仓者需要重算日内资金成本。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.mexc.com/announcements/article/adjustment-to-aster-usd1-funding-rate-settlement-frequency-nov-1-2026-02-17827791539484" target="_blank" rel="noopener" title="MEXC · 发布 2026-11-01" aria-label="来源 1：MEXC · 发布 2026-11-01">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月1日，MEXC公布四只股票永续分红结算窗口</h3>
+          <p class="item-b">MEXC将在11月6日对PFE、WFC、CCL和HWM股票永续执行现金分红：00:30 UTC转为只减仓，01:00收取特别资金费，01:01恢复交易。多头收款、空头付款，空头需预留保证金。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.mexc.com/announcements/article/mexc-cash-dividend-settlement-for-pfe-wfc-and-2-other-stock-futures-17827791539483" target="_blank" rel="noopener" title="MEXC · 发布 2026-11-01" aria-label="来源 1：MEXC · 发布 2026-11-01">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">10月30日，Chainlink发布全天定价与托管同步方案</h3>
+          <p class="item-b">Chainlink在LinkNYC披露24/7与CustodySync：前者持续提供股票、商品和RWA价格，Aave计划采用；后者把合格托管人的状态同步到链上借贷流程，资产仍由托管人控制。覆盖资产和故障处置尚未完整公开。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://chain.link/blog/link-nyc-recap-2026" target="_blank" rel="noopener" title="Chainlink · 发布 2026-10-30" aria-label="来源 1：Chainlink · 发布 2026-10-30">1</a><a class="source-number" href="https://chain.link/blog/introducing-chainlink-24-7" target="_blank" rel="noopener" title="Chainlink 24/7 · 发布 2026-10-29" aria-label="来源 2：Chainlink 24/7 · 发布 2026-10-29">2</a><a class="source-number" href="https://chain.link/blog/introducing-chainlink-custodysync" target="_blank" rel="noopener" title="Chainlink CustodySync · 发布 2026-10-29" aria-label="来源 3：Chainlink CustodySync · 发布 2026-10-29">3</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-collateral-product-mechanics">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">链上抵押与产品机制</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">DeepBook Predict用共享USDC池承接到期型预测仓位</h3>
+          <p class="item-b">DeepBook Predict让共享USDC池成为所有交易的对手方，下单约800毫秒后按Pyth签名价格成交或退款。LP申购赎回也走异步队列并统一结算，协议能减少抢跑，但退出速度取决于闲置现金和批次处理。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.docs.sui.io/onchain-finance/deepbook/deepbook-predict" target="_blank" rel="noopener" title="Sui Docs · 未标发布日期 · 核验 2026-11-02" aria-label="来源 1：Sui Docs · 未标发布日期 · 核验 2026-11-02">1</a><a class="source-number" href="https://www.docs.sui.io/onchain-finance/deepbook/deepbook-predict/tutorial" target="_blank" rel="noopener" title="DeepBook Predict Tutorial · 未标发布日期 · 核验 2026-11-02" aria-label="来源 2：DeepBook Predict Tutorial · 未标发布日期 · 核验 2026-11-02">2</a><a class="source-number" href="https://suifoundation.ghost.io/introducing-deepbook-predict/" target="_blank" rel="noopener" title="Sui Foundation · 发布 2026-05-05 · 核验 2026-11-02" aria-label="来源 3：Sui Foundation · 发布 2026-05-05 · 核验 2026-11-02">3</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Reisa把股票代币发行、交易、借贷与稳定币放进同一入口</h3>
+          <p class="item-b">Reisa在Robinhood Chain提供联合曲线发行、DEX、农场和隔离借贷；代币毕业后流动性永久锁定，RESD由股票代币抵押。协议收入用于收益和回购，但资产白名单、清算参数与赎回深度仍待验证。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://reisa.fi/" target="_blank" rel="noopener" title="Reisa · 未标发布日期 · 核验 2026-11-02" aria-label="来源 1：Reisa · 未标发布日期 · 核验 2026-11-02">1</a><a class="source-number" href="https://reisa.fi/docs/developers" target="_blank" rel="noopener" title="Reisa Developer Docs · 未标发布日期 · 核验 2026-11-02" aria-label="来源 2：Reisa Developer Docs · 未标发布日期 · 核验 2026-11-02">2</a><a class="source-number" href="https://docs.robinhood.com/chain/" target="_blank" rel="noopener" title="Robinhood Chain Docs · 未标发布日期 · 核验 2026-11-02" aria-label="来源 3：Robinhood Chain Docs · 未标发布日期 · 核验 2026-11-02">3</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Real World Lending让出借人直接承接股票代币违约风险</h3>
+          <p class="item-b">Real World Lending允许借款人锁定白名单股票代币，自定USDG本金、利息和期限；出借人直接放款，按期还款后取回本息，违约则接收全部抵押物。没有共享池和统一利率，但订单成交与风险分散更弱。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.rwlcoin.tech/docs" target="_blank" rel="noopener" title="Real World Lending · 未标发布日期 · 核验 2026-11-02" aria-label="来源 1：Real World Lending · 未标发布日期 · 核验 2026-11-02">1</a><a class="source-number" href="https://docs.robinhood.com/chain/" target="_blank" rel="noopener" title="Robinhood Chain Docs · 未标发布日期 · 核验 2026-11-02" aria-label="来源 2：Robinhood Chain Docs · 未标发布日期 · 核验 2026-11-02">2</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">AI产品与代理运行</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">10月31日，Agno发布代理API部署范式</h3>
+          <p class="item-b">Agno展示如何把代理作为API服务，网页、后端和移动端可通过session_id复用会话，并统一查看运行轨迹。示例用SQLite和Chroma本地启动，生产环境建议切换Postgres与PgVector，权限和多租户仍需自行补齐。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.agno.com/blog/put-agents-to-work-with-an-api" target="_blank" rel="noopener" title="Agno · 发布 2026-10-31" aria-label="来源 1：Agno · 发布 2026-10-31">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">10月30日，endue开放MCP代理调用与异步会话</h3>
+          <p class="item-b">endue的MCP服务允许助手列出、调用代理并读取会话；任务超过约50秒会先返回session ID，供后续查询。外部调用不能改模型、步骤或记忆，连接器和输出默认关闭，发送或删除动作还需审批。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://endue.ai/blog/connect-your-assistant-to-endue-agents/" target="_blank" rel="noopener" title="endue · 发布 2026-10-30" aria-label="来源 1：endue · 发布 2026-10-30">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">10月30日，Tasklet推出iOS云端代理控制端</h3>
+          <p class="item-b">Tasklet推出iPhone和iPad应用，用户可连接工具、审批动作、查看代理浏览器并管理自动化，任务离开应用后仍在云端继续。官方称可接入三千多种应用，但未公布长任务成功率、延迟和移动端权限审计数据。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://tasklet.ai/blog/2026-10-29-tasklet-for-ios" target="_blank" rel="noopener" title="Tasklet · 发布 2026-10-30" aria-label="来源 1：Tasklet · 发布 2026-10-30">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>
