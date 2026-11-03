@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-11-03</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6; min-width:0; overflow-wrap:anywhere;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
+    white-space:nowrap; letter-spacing:0; line-height:1.5;}
+  .source-label{color:#a3987f; flex:none;}
+  .source-number{color:#8a7f66; text-decoration:underline; text-underline-offset:2px;
+    min-width:14px; padding:2px 0; text-align:center; flex:none; font-variant-numeric:tabular-nums;}
+  .source-number:hover,.source-number:focus-visible{color:#b03a2e;}
+  .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .research-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
+  .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
+  .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
+  .research-row + .research-row{border-top:1px dotted #e4ded0;}
+  .research-row dt{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dd{min-width:0; color:#403a2e;}
+  .research-inference{background:#f7f4ec; padding:10px;}
+  .research-discussions{list-style:none;}
+  .research-discussions li + li{margin-top:8px;}
+  .discussion-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 121 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 11 月 3 日 · 星期二</div>
+    </header>
+    <p class="lead">交易入口正在迅速扩充资产和前端形态，但真正决定可持续性的仍是公司行动、统一清算、收费授权与风险责任。</p>
+
+
+      <section class="sec sec-market-access-and-clearing">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">市场扩列与统一清算</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月2日，MEXC上线五只美股永续并保留公司行动处置权</h3>
+          <p class="item-b">MEXC于11月2日14:00 UTC上线GPN、NEE、NTRA、DLR和CVNA股票永续，最高20倍杠杆并支持全仓、逐仓。公告同时说明，公司行动可触发提前结算或仓位调整，熔断期间停止交易但不执行强平，现有挂单仍可撤销。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.mexc.com/announcements/article/mexc-to-list-gpn-nee-ntra-dlr-and-cvna-stock-futures-on-nov-2-17827791539512" target="_blank" rel="noopener" title="MEXC · 发布 2026-11-02" aria-label="来源 1：MEXC · 发布 2026-11-02">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月2日，Eurex Clearing宣布建设传统与原生数字证券的混合CCP</h3>
+          <p class="item-b">Eurex Clearing宣布把传统证券与原生数字证券纳入同一规则手册和风险模型。首批ESM数字工具计划在Eurex Repo交易、通过统一中央对手方清算，并可作为保证金抵押物。方案减少两套资金池，但正式上线时间和生产规模尚未披露。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.eurexgroup.com/dbg-en/media/news-stories/press-releases/Eurex-Clearing-to-Become-the-World-s-First-Hybrid-CCP--5678008" target="_blank" rel="noopener" title="Eurex · 发布 2026-11-02" aria-label="来源 1：Eurex · 发布 2026-11-02">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-distribution-and-brokerage-infrastructure">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">交易分发与经纪后台</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">Trasia用一个移动端连接HyperCore与HIP-3市场</h3>
+          <p class="item-b">用户可在Trasia手机端交易加密永续，以及HIP-3提供的股票、指数、商品和外汇市场，并使用限价、止损、TWAP等订单。账户仍为非托管，支持标准与统一账户切换；当前Google Play仅显示50多次下载，分发效果还不能据此确认。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://play.google.com/store/apps/details?id=xyz.trasia.app" target="_blank" rel="noopener" title="Google Play · 发布 2026-10-08 · 核验 2026-11-03" aria-label="来源 1：Google Play · 发布 2026-10-08 · 核验 2026-11-03">1</a><a class="source-number" href="https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-start-trading" target="_blank" rel="noopener" title="Hyperliquid Docs · 未标发布日期 · 核验 2026-11-03" aria-label="来源 2：Hyperliquid Docs · 未标发布日期 · 核验 2026-11-03">2</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Hypro用builder fee把Hyperliquid第三方前端收费写进订单</h3>
+          <p class="item-b">Hypro让用户交易Hyperliquid永续、现货和HIP-3市场；新用户经其推荐注册可免额外费，已有推荐关系的用户则需签署最高0.05%的builder fee授权，实际合格成交收0.01%。费用随订单在链上结算，现货买入不收费。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://hypro.one/" target="_blank" rel="noopener" title="Hypro · 未标发布日期 · 核验 2026-11-03" aria-label="来源 1：Hypro · 未标发布日期 · 核验 2026-11-03">1</a><a class="source-number" href="https://hyperliquid.gitbook.io/hyperliquid-docs/trading/builder-codes" target="_blank" rel="noopener" title="Hyperliquid Builder Codes · 未标发布日期 · 核验 2026-11-03" aria-label="来源 2：Hyperliquid Builder Codes · 未标发布日期 · 核验 2026-11-03">2</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Talos把白标经纪的定价、对冲与客户台账拆成可配置后台</h3>
+          <p class="item-b">机构使用Talos白标服务面向自己的客户报价并设置点差，订单可在100多家流动性提供方间自动对冲，客户余额由内部台账维护。相比直接调用交易所API，这套方案覆盖经纪前后台，但牌照、客户身份审查和合规责任仍由机构承担。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.talos.com/our-solutions/white-label" target="_blank" rel="noopener" title="Talos · 发布 2026-10-26 · 核验 2026-11-03" aria-label="来源 1：Talos · 发布 2026-10-26 · 核验 2026-11-03">1</a><a class="source-number" href="https://www.coinbase.com/developer-platform/products/exchange-api" target="_blank" rel="noopener" title="Coinbase Exchange API · 未标发布日期 · 核验 2026-11-03" aria-label="来源 2：Coinbase Exchange API · 未标发布日期 · 核验 2026-11-03">2</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">AI产品与开发工具</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月2日，OpenAI发布面向日常生活任务的LifeVal评测</h3>
+          <p class="item-b">OpenAI发布LifeVal，用时间使用研究和3995人调查筛选育儿、健康、教育、家庭管理、财务、购物与政务任务，并评估代理能否完成端到端操作。它把验收从知识问答转向真实行动，但公开结果主要来自官方模型，仍需外部复现。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/lifeval/" target="_blank" rel="noopener" title="OpenAI · 发布 2026-11-02" aria-label="来源 1：OpenAI · 发布 2026-11-02">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月2日，Vercel MCP在聊天中加入交互式部署卡片</h3>
+          <p class="item-b">Vercel MCP可在支持MCP Apps的聊天客户端显示部署状态、构建日志、源码与提交信息，部署完成后直接提供访问按钮。用户还能把日志送入对话排查错误；不支持交互卡片的客户端仍返回文本状态和预览链接。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://vercel.com/changelog/monitor-vercel-deployments-in-chatgpt" target="_blank" rel="noopener" title="Vercel · 发布 2026-11-02" aria-label="来源 1：Vercel · 发布 2026-11-02">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月2日，Vercel支持用vercel.toml配置项目</h3>
+          <p class="item-b">Vercel项目现在可用vercel.toml替代vercel.json或vercel.ts，支持相同配置项、注释和更扁平的结构，适合多服务项目表达根目录、入口与重写规则。每个项目只能保留一种配置文件，迁移时仍需先消除并存冲突。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://vercel.com/changelog/projects-can-now-be-configured-with-vercel-toml" target="_blank" rel="noopener" title="Vercel · 发布 2026-11-02" aria-label="来源 1：Vercel · 发布 2026-11-02">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>

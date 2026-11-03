@@ -1039,9 +1039,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-08-25",
-      "last_update": "2026-10-28",
+      "last_update": "2026-11-02",
       "cadence_days": 6,
-      "next_check": "2026-11-03",
+      "next_check": "2026-11-09",
       "thesis": "交易与资金后台正在从单一平台能力拆成可复用的撮合、清算、托管和结算服务。多家银行联合发行链上货币后，责任分工也从交易入口延伸到共同委托、信托托管与跨境支付；生产规模和故障责任仍需验证。",
       "why_us": "HertzFlow 研究外部分发或后台合作时，需要分开核验客户归属、风险责任、故障处置与执行兼容性；不可据公告性能直接替换现有 Keeper 与逐市场 LP 架构。",
       "watch_for": "正式推出时间 / 已上线合作方及真实订单流 / 生产延迟与故障恢复 / 风险与清算责任分配 / 开放及许可市场的隔离规则",
@@ -1125,6 +1125,11 @@
           "date": "2026-10-28",
           "point": "Coinbase公布首个全球衍生品竞赛，用户在Coinbase Advanced报名和查看榜单，但符合条件的永续、交割与期权交易实际由Deribit执行；客户入口、活动分发与撮合场所进一步分层。奖金池随成交扩大，活动后的自然留存和故障责任仍待验证。",
           "url": "https://www.coinbase.com/th/blog/coinbase-has-acquired-one-river-digital-asset-management%C2%A0"
+        },
+        {
+          "date": "2026-11-02",
+          "point": "Eurex Clearing宣布把传统证券与原生数字证券纳入同一规则手册和风险模型，首批ESM数字工具计划在Eurex Repo交易、通过统一中央对手方清算并可作为保证金。交易与清算后台进一步合流，但正式上线时间和生产规模仍未披露。",
+          "url": "https://www.eurexgroup.com/dbg-en/media/news-stories/press-releases/Eurex-Clearing-to-Become-the-World-s-First-Hybrid-CCP--5678008"
         }
       ]
     },
