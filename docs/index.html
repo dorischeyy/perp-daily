@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-11-03</title>
+<title>Perp DEX 日报 · 2026-11-04</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -100,82 +100,72 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 121 期</span>
+        <span>每日链上观察</span><span>第 122 期</span>
       </div>
       <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 11 月 3 日 · 星期二</div>
+      <div class="mast-sub">2026 年 11 月 4 日 · 星期三</div>
     </header>
-    <p class="lead">交易入口正在迅速扩充资产和前端形态，但真正决定可持续性的仍是公司行动、统一清算、收费授权与风险责任。</p>
+    <p class="lead">美国单股永续已从监管许可进入实际交易，但交易时段、预言机责任和流动性仍因场所而异。</p>
 
 
-      <section class="sec sec-market-access-and-clearing">
+      <section class="sec sec-regulated-perps-and-market-expansion">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">市场扩列与统一清算</h2>
+            <h2 class="sec-title">受监管永续与市场扩列</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月2日，MEXC上线五只美股永续并保留公司行动处置权</h3>
-          <p class="item-b">MEXC于11月2日14:00 UTC上线GPN、NEE、NTRA、DLR和CVNA股票永续，最高20倍杠杆并支持全仓、逐仓。公告同时说明，公司行动可触发提前结算或仓位调整，熔断期间停止交易但不执行强平，现有挂单仍可撤销。</p>
+          <h3 class="item-h">11月3日，CFTC放行单股永续后Kalshi开放首批股票合约</h3>
+          <p class="item-b">CFTC于11月3日确认单股永续可在同时注册于CFTC和SEC的交易所交易。Kalshi同日开放安进、好市多、麦当劳和高通合约，并提醒股票并非全天交易。规则入口已经打开，但可交易时段仍由标的市场约束，不能把股票永续等同于加密资产的全天体验。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.mexc.com/announcements/article/mexc-to-list-gpn-nee-ntra-dlr-and-cvna-stock-futures-on-nov-2-17827791539512" target="_blank" rel="noopener" title="MEXC · 发布 2026-11-02" aria-label="来源 1：MEXC · 发布 2026-11-02">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://www.cftc.gov/node" target="_blank" rel="noopener" title="CFTC · 发布 2026-11-03" aria-label="来源 1：CFTC · 发布 2026-11-03">1</a><a class="source-number" href="https://kalshi.com/pro/updates" target="_blank" rel="noopener" title="Kalshi Pro · 发布 2026-11-03" aria-label="来源 2：Kalshi Pro · 发布 2026-11-03">2</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月2日，Eurex Clearing宣布建设传统与原生数字证券的混合CCP</h3>
-          <p class="item-b">Eurex Clearing宣布把传统证券与原生数字证券纳入同一规则手册和风险模型。首批ESM数字工具计划在Eurex Repo交易、通过统一中央对手方清算，并可作为保证金抵押物。方案减少两套资金池，但正式上线时间和生产规模尚未披露。</p>
+          <h3 class="item-h">11月2日，OKX新增五只股票永续并保留小时级资金费切换</h3>
+          <p class="item-b">OKX在11月2日分批上线ADI、FLEX、MELI、PEP和UMC五只USDT本位股票永续，覆盖网页、App和API，支持全天交易。资金费常态每8小时结算，触及费率上下限时改为每小时；扩列速度继续提高，但地区可用性和休市深度仍需逐市场核验。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.eurexgroup.com/dbg-en/media/news-stories/press-releases/Eurex-Clearing-to-Become-the-World-s-First-Hybrid-CCP--5678008" target="_blank" rel="noopener" title="Eurex · 发布 2026-11-02" aria-label="来源 1：Eurex · 发布 2026-11-02">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://www.okx.com/en-eu/help/okx-to-list-tradfi-perpetual-futures-for-adi-flex-meli-pep-and-umc" target="_blank" rel="noopener" title="OKX · 发布 2026-11-02" aria-label="来源 1：OKX · 发布 2026-11-02">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Hyperliquid原生与HIP-3市场把预言机责任交给不同角色</h3>
+          <p class="item-b">Hyperliquid原生永续由验证者每3秒提交多家交易所加权中位价；HIP-3则把预言机定义、价格更新、杠杆和停盘结算交给部署者。用户看到同一套订单和保证金接口，不代表风险责任相同；部署者可按当前标记价停盘结算，质押罚没也不会补偿交易者。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/hip-3-builder-deployed-perpetuals" target="_blank" rel="noopener" title="Hyperliquid HIP-3 Docs · 未标发布日期 · 核验 2026-11-04" aria-label="来源 1：Hyperliquid HIP-3 Docs · 未标发布日期 · 核验 2026-11-04">1</a><a class="source-number" href="https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/oracle" target="_blank" rel="noopener" title="Hyperliquid Oracle Docs · 未标发布日期 · 核验 2026-11-04" aria-label="来源 2：Hyperliquid Oracle Docs · 未标发布日期 · 核验 2026-11-04">2</a>
           </div>
         </article>
         </div>
       </section>
-      <section class="sec sec-distribution-and-brokerage-infrastructure">
+      <section class="sec sec-dex-liquidity-design">
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <h2 class="sec-title">交易分发与经纪后台</h2>
+            <h2 class="sec-title">DEX流动性与费率设计</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Trasia用一个移动端连接HyperCore与HIP-3市场</h3>
-          <p class="item-b">用户可在Trasia手机端交易加密永续，以及HIP-3提供的股票、指数、商品和外汇市场，并使用限价、止损、TWAP等订单。账户仍为非托管，支持标准与统一账户切换；当前Google Play仅显示50多次下载，分发效果还不能据此确认。</p>
+          <h3 class="item-h">Reya把AMM换成订单簿后用吃单费补贴挂单</h3>
+          <p class="item-b">Reya从AMM转向订单簿，普通吃单费降至3个基点，随30日成交量最低可到2个基点，挂单当前零费并计划由吃单费补贴返佣。独立跟踪显示新订单簿只有五个市场，成交量较上线初期下降约23%；费率设计已成形，但深度扩张尚未被采用数据证明。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://play.google.com/store/apps/details?id=xyz.trasia.app" target="_blank" rel="noopener" title="Google Play · 发布 2026-10-08 · 核验 2026-11-03" aria-label="来源 1：Google Play · 发布 2026-10-08 · 核验 2026-11-03">1</a><a class="source-number" href="https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-start-trading" target="_blank" rel="noopener" title="Hyperliquid Docs · 未标发布日期 · 核验 2026-11-03" aria-label="来源 2：Hyperliquid Docs · 未标发布日期 · 核验 2026-11-03">2</a>
-          </div>
-        </article>
-        <article class="item">
-          <h3 class="item-h">Hypro用builder fee把Hyperliquid第三方前端收费写进订单</h3>
-          <p class="item-b">Hypro让用户交易Hyperliquid永续、现货和HIP-3市场；新用户经其推荐注册可免额外费，已有推荐关系的用户则需签署最高0.05%的builder fee授权，实际合格成交收0.01%。费用随订单在链上结算，现货买入不收费。</p>
-
-
-          <div class="item-meta compact-sources">
-
-            <span class="source-label">来源</span><a class="source-number" href="https://hypro.one/" target="_blank" rel="noopener" title="Hypro · 未标发布日期 · 核验 2026-11-03" aria-label="来源 1：Hypro · 未标发布日期 · 核验 2026-11-03">1</a><a class="source-number" href="https://hyperliquid.gitbook.io/hyperliquid-docs/trading/builder-codes" target="_blank" rel="noopener" title="Hyperliquid Builder Codes · 未标发布日期 · 核验 2026-11-03" aria-label="来源 2：Hyperliquid Builder Codes · 未标发布日期 · 核验 2026-11-03">2</a>
-          </div>
-        </article>
-        <article class="item">
-          <h3 class="item-h">Talos把白标经纪的定价、对冲与客户台账拆成可配置后台</h3>
-          <p class="item-b">机构使用Talos白标服务面向自己的客户报价并设置点差，订单可在100多家流动性提供方间自动对冲，客户余额由内部台账维护。相比直接调用交易所API，这套方案覆盖经纪前后台，但牌照、客户身份审查和合规责任仍由机构承担。</p>
-
-
-          <div class="item-meta compact-sources">
-
-            <span class="source-label">来源</span><a class="source-number" href="https://www.talos.com/our-solutions/white-label" target="_blank" rel="noopener" title="Talos · 发布 2026-10-26 · 核验 2026-11-03" aria-label="来源 1：Talos · 发布 2026-10-26 · 核验 2026-11-03">1</a><a class="source-number" href="https://www.coinbase.com/developer-platform/products/exchange-api" target="_blank" rel="noopener" title="Coinbase Exchange API · 未标发布日期 · 核验 2026-11-03" aria-label="来源 2：Coinbase Exchange API · 未标发布日期 · 核验 2026-11-03">2</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://blog.reya.network/pay-less-to-take-get-paid-to-make/" target="_blank" rel="noopener" title="Reya Labs · 发布 2026-08-13 · 核验 2026-11-04" aria-label="来源 1：Reya Labs · 发布 2026-08-13 · 核验 2026-11-04">1</a><a class="source-number" href="https://dexwatch.com/new-dexes/index.html" target="_blank" rel="noopener" title="dexwatch · 未标发布日期 · 核验 2026-11-04" aria-label="来源 2：dexwatch · 未标发布日期 · 核验 2026-11-04">2</a>
           </div>
         </article>
         </div>
@@ -190,33 +180,33 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月2日，OpenAI发布面向日常生活任务的LifeVal评测</h3>
-          <p class="item-b">OpenAI发布LifeVal，用时间使用研究和3995人调查筛选育儿、健康、教育、家庭管理、财务、购物与政务任务，并评估代理能否完成端到端操作。它把验收从知识问答转向真实行动，但公开结果主要来自官方模型，仍需外部复现。</p>
+          <h3 class="item-h">11月3日，Apple向所有开发者开放Siri AI动作预览</h3>
+          <p class="item-b">Apple在iOS 27.3等系统测试版开放Siri AI开发者预览，任何App可通过App Intents暴露内容和动作，并用skills组合多步操作。功能尚未正式面向用户，App Store提交要到春季才开放，欧盟移动系统暂不可用；开发者现在能先验证入口与行为边界。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/lifeval/" target="_blank" rel="noopener" title="OpenAI · 发布 2026-11-02" aria-label="来源 1：OpenAI · 发布 2026-11-02">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://developer.apple.com/news/?id=gdk2umrf" target="_blank" rel="noopener" title="Apple Developer · 发布 2026-11-03" aria-label="来源 1：Apple Developer · 发布 2026-11-03">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月2日，Vercel MCP在聊天中加入交互式部署卡片</h3>
-          <p class="item-b">Vercel MCP可在支持MCP Apps的聊天客户端显示部署状态、构建日志、源码与提交信息，部署完成后直接提供访问按钮。用户还能把日志送入对话排查错误；不支持交互卡片的客户端仍返回文本状态和预览链接。</p>
+          <h3 class="item-h">11月3日，Vercel把AI源码安全审查接入每次代码推送</h3>
+          <p class="item-b">Vercel Security Review进入公开测试，每次GitHub推送都会扫描源码并给出AI严重性评级；Vercel Agent可据此提出修复并开PR，仍需人工批准合并。它不做运行时或渗透测试，且按推送频率和代码变化计费，因此适合作为持续检查，不能替代正式安全审计。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://vercel.com/changelog/monitor-vercel-deployments-in-chatgpt" target="_blank" rel="noopener" title="Vercel · 发布 2026-11-02" aria-label="来源 1：Vercel · 发布 2026-11-02">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://vercel.com/changelog/vercel-security-review-public-beta" target="_blank" rel="noopener" title="Vercel · 发布 2026-11-03" aria-label="来源 1：Vercel · 发布 2026-11-03">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月2日，Vercel支持用vercel.toml配置项目</h3>
-          <p class="item-b">Vercel项目现在可用vercel.toml替代vercel.json或vercel.ts，支持相同配置项、注释和更扁平的结构，适合多服务项目表达根目录、入口与重写规则。每个项目只能保留一种配置文件，迁移时仍需先消除并存冲突。</p>
+          <h3 class="item-h">11月2日，Kimi Work补齐代理产物路径与离线网络诊断</h3>
+          <p class="item-b">Kimi Work 3.2.24为Markdown预览加入笔记属性，并让网络设置自动跟随系统代理、离线打开网络诊断；失效产物链接可回看原路径并打开父目录。更新主要减少本地文件与企业网络排障成本，没有新增模型能力，价值在于让代理产物更易恢复和检查。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://vercel.com/changelog/projects-can-now-be-configured-with-vercel-toml" target="_blank" rel="noopener" title="Vercel · 发布 2026-11-02" aria-label="来源 1：Vercel · 发布 2026-11-02">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://www.kimi.com/en/help/kimi-work/release-notes" target="_blank" rel="noopener" title="Kimi Help Center · 发布 2026-11-02" aria-label="来源 1：Kimi Help Center · 发布 2026-11-02">1</a>
           </div>
         </article>
         </div>

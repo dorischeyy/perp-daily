@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-11-04</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6; min-width:0; overflow-wrap:anywhere;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
+    white-space:nowrap; letter-spacing:0; line-height:1.5;}
+  .source-label{color:#a3987f; flex:none;}
+  .source-number{color:#8a7f66; text-decoration:underline; text-underline-offset:2px;
+    min-width:14px; padding:2px 0; text-align:center; flex:none; font-variant-numeric:tabular-nums;}
+  .source-number:hover,.source-number:focus-visible{color:#b03a2e;}
+  .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .research-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
+  .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
+  .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
+  .research-row + .research-row{border-top:1px dotted #e4ded0;}
+  .research-row dt{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dd{min-width:0; color:#403a2e;}
+  .research-inference{background:#f7f4ec; padding:10px;}
+  .research-discussions{list-style:none;}
+  .research-discussions li + li{margin-top:8px;}
+  .discussion-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 122 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 11 月 4 日 · 星期三</div>
+    </header>
+    <p class="lead">美国单股永续已从监管许可进入实际交易，但交易时段、预言机责任和流动性仍因场所而异。</p>
+
+
+      <section class="sec sec-regulated-perps-and-market-expansion">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">受监管永续与市场扩列</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月3日，CFTC放行单股永续后Kalshi开放首批股票合约</h3>
+          <p class="item-b">CFTC于11月3日确认单股永续可在同时注册于CFTC和SEC的交易所交易。Kalshi同日开放安进、好市多、麦当劳和高通合约，并提醒股票并非全天交易。规则入口已经打开，但可交易时段仍由标的市场约束，不能把股票永续等同于加密资产的全天体验。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.cftc.gov/node" target="_blank" rel="noopener" title="CFTC · 发布 2026-11-03" aria-label="来源 1：CFTC · 发布 2026-11-03">1</a><a class="source-number" href="https://kalshi.com/pro/updates" target="_blank" rel="noopener" title="Kalshi Pro · 发布 2026-11-03" aria-label="来源 2：Kalshi Pro · 发布 2026-11-03">2</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月2日，OKX新增五只股票永续并保留小时级资金费切换</h3>
+          <p class="item-b">OKX在11月2日分批上线ADI、FLEX、MELI、PEP和UMC五只USDT本位股票永续，覆盖网页、App和API，支持全天交易。资金费常态每8小时结算，触及费率上下限时改为每小时；扩列速度继续提高，但地区可用性和休市深度仍需逐市场核验。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.okx.com/en-eu/help/okx-to-list-tradfi-perpetual-futures-for-adi-flex-meli-pep-and-umc" target="_blank" rel="noopener" title="OKX · 发布 2026-11-02" aria-label="来源 1：OKX · 发布 2026-11-02">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Hyperliquid原生与HIP-3市场把预言机责任交给不同角色</h3>
+          <p class="item-b">Hyperliquid原生永续由验证者每3秒提交多家交易所加权中位价；HIP-3则把预言机定义、价格更新、杠杆和停盘结算交给部署者。用户看到同一套订单和保证金接口，不代表风险责任相同；部署者可按当前标记价停盘结算，质押罚没也不会补偿交易者。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/hip-3-builder-deployed-perpetuals" target="_blank" rel="noopener" title="Hyperliquid HIP-3 Docs · 未标发布日期 · 核验 2026-11-04" aria-label="来源 1：Hyperliquid HIP-3 Docs · 未标发布日期 · 核验 2026-11-04">1</a><a class="source-number" href="https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/oracle" target="_blank" rel="noopener" title="Hyperliquid Oracle Docs · 未标发布日期 · 核验 2026-11-04" aria-label="来源 2：Hyperliquid Oracle Docs · 未标发布日期 · 核验 2026-11-04">2</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-dex-liquidity-design">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">DEX流动性与费率设计</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">Reya把AMM换成订单簿后用吃单费补贴挂单</h3>
+          <p class="item-b">Reya从AMM转向订单簿，普通吃单费降至3个基点，随30日成交量最低可到2个基点，挂单当前零费并计划由吃单费补贴返佣。独立跟踪显示新订单簿只有五个市场，成交量较上线初期下降约23%；费率设计已成形，但深度扩张尚未被采用数据证明。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://blog.reya.network/pay-less-to-take-get-paid-to-make/" target="_blank" rel="noopener" title="Reya Labs · 发布 2026-08-13 · 核验 2026-11-04" aria-label="来源 1：Reya Labs · 发布 2026-08-13 · 核验 2026-11-04">1</a><a class="source-number" href="https://dexwatch.com/new-dexes/index.html" target="_blank" rel="noopener" title="dexwatch · 未标发布日期 · 核验 2026-11-04" aria-label="来源 2：dexwatch · 未标发布日期 · 核验 2026-11-04">2</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">AI产品与开发工具</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月3日，Apple向所有开发者开放Siri AI动作预览</h3>
+          <p class="item-b">Apple在iOS 27.3等系统测试版开放Siri AI开发者预览，任何App可通过App Intents暴露内容和动作，并用skills组合多步操作。功能尚未正式面向用户，App Store提交要到春季才开放，欧盟移动系统暂不可用；开发者现在能先验证入口与行为边界。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://developer.apple.com/news/?id=gdk2umrf" target="_blank" rel="noopener" title="Apple Developer · 发布 2026-11-03" aria-label="来源 1：Apple Developer · 发布 2026-11-03">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月3日，Vercel把AI源码安全审查接入每次代码推送</h3>
+          <p class="item-b">Vercel Security Review进入公开测试，每次GitHub推送都会扫描源码并给出AI严重性评级；Vercel Agent可据此提出修复并开PR，仍需人工批准合并。它不做运行时或渗透测试，且按推送频率和代码变化计费，因此适合作为持续检查，不能替代正式安全审计。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://vercel.com/changelog/vercel-security-review-public-beta" target="_blank" rel="noopener" title="Vercel · 发布 2026-11-03" aria-label="来源 1：Vercel · 发布 2026-11-03">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月2日，Kimi Work补齐代理产物路径与离线网络诊断</h3>
+          <p class="item-b">Kimi Work 3.2.24为Markdown预览加入笔记属性，并让网络设置自动跟随系统代理、离线打开网络诊断；失效产物链接可回看原路径并打开父目录。更新主要减少本地文件与企业网络排障成本，没有新增模型能力，价值在于让代理产物更易恢复和检查。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.kimi.com/en/help/kimi-work/release-notes" target="_blank" rel="noopener" title="Kimi Help Center · 发布 2026-11-02" aria-label="来源 1：Kimi Help Center · 发布 2026-11-02">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>
