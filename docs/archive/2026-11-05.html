@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-11-05</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6; min-width:0; overflow-wrap:anywhere;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
+    white-space:nowrap; letter-spacing:0; line-height:1.5;}
+  .source-label{color:#a3987f; flex:none;}
+  .source-number{color:#8a7f66; text-decoration:underline; text-underline-offset:2px;
+    min-width:14px; padding:2px 0; text-align:center; flex:none; font-variant-numeric:tabular-nums;}
+  .source-number:hover,.source-number:focus-visible{color:#b03a2e;}
+  .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .research-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
+  .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
+  .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
+  .research-row + .research-row{border-top:1px dotted #e4ded0;}
+  .research-row dt{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dd{min-width:0; color:#403a2e;}
+  .research-inference{background:#f7f4ec; padding:10px;}
+  .research-discussions{list-style:none;}
+  .research-discussions li + li{margin-top:8px;}
+  .discussion-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 123 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 11 月 5 日 · 星期四</div>
+    </header>
+    <p class="lead">传统资产永续竞争已从监管与扩列推进到费用补贴、跨资产覆盖和可验证执行，但低费与全天交易仍不能替代价格源、深度和退出机制的单独核验。</p>
+
+
+      <section class="sec sec-tradfi-perps-pricing-and-coverage">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">传统资产永续的供给与补贴</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月4日，Binance取消TradFi永续高等级VIP吃单折扣收紧</h3>
+          <p class="item-b">Binance撤回原定11月5日把VIP 4至9的TradFi永续吃单折扣从50%降至40%的调整，高等级用户继续享受50%折扣，普通至VIP 3维持20%，挂单仍为零费。平台在股票永续扩列后继续用费率补贴争夺订单流，但活动期没有结束日期。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/support/announcement/detail/e3424d3a781841eb8b507bc694c0ca3a" target="_blank" rel="noopener" title="Binance · 发布 2026-11-04" aria-label="来源 1：Binance · 发布 2026-11-04">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月4日，OKX同日扩充股票永续、到期型X-Perp与代币化现货</h3>
+          <p class="item-b">OKX同日上线MURATA、OXY和SMR三只USDT股票永续，另在欧洲增加GoPro与标普500到期型X-Perp，以及xIREN、xASML代币化现货。相似股票敞口被拆成连续合约、到期合约和现货代币，用户需分别核对资金费、到期日及股东权利。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.okx.com/en-br/help/okx-to-list-tradfi-perpetual-futures-for-murata-oxy-and-smr" target="_blank" rel="noopener" title="OKX · 发布 2026-11-04" aria-label="来源 1：OKX · 发布 2026-11-04">1</a><a class="source-number" href="https://www.okx.com/en-eu/help/okx-to-list-gprousd-and-us500usd-equity-x-perps" target="_blank" rel="noopener" title="OKX Europe Equity X-Perps · 发布 2026-11-04" aria-label="来源 2：OKX Europe Equity X-Perps · 发布 2026-11-04">2</a><a class="source-number" href="https://www.okx.com/en-br/help/okx-to-list-usdc-trading-pairs-for-tokenized-stocks-xiren-and-xasml" target="_blank" rel="noopener" title="OKX Tokenized Stocks · 发布 2026-11-04" aria-label="来源 3：OKX Tokenized Stocks · 发布 2026-11-04">3</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月3日，Bybit把美元兑巴西雷亚尔做成百倍全天永续</h3>
+          <p class="item-b">Bybit上线USDBRL/USDT TradFi永续，支持全天交易、最高100倍杠杆，资金费每8小时结算且上限为0.5%。这把外汇敞口接入统一保证金与交易机器人，但公告未给出价格源或休市异常处理；全天可下单不代表基础外汇市场始终有同等深度。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://announcements.bybit.com/en/article/new-listing-usdbrlusdt-tradfi-perpetual-contract-with-up-to-100x-leverage--artb0dba4bed69c/" target="_blank" rel="noopener" title="Bybit · 发布 2026-11-03" aria-label="来源 1：Bybit · 发布 2026-11-03">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-security-and-verifiable-execution">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">平台安全与可验证执行</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月4日，Binance将资产回填推进至98%并扩大储备快照</h3>
+          <p class="item-b">Binance称已用自有资源回填约98%的受影响资产，余下2%因流动性较低采购更慢；11月4日储备快照覆盖代币从10种增至44种。完整零知识证明仍需50至60小时生成，因此快照和回填声明是进展，用户可独立验证要等证明完成。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en-GB/support/announcement/security-incident-recovery-update-7-98-of-stolen-assets-replenished-and-new-por-snapshot-with-expanded-coverage-2026-11-04-c6ba9aa726974fc6b9332a2c8f63b405" target="_blank" rel="noopener" title="Binance · 发布 2026-11-04" aria-label="来源 1：Binance · 发布 2026-11-04">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Lighter用零知识证明约束撮合与清算，并保留紧急退出</h3>
+          <p class="item-b">Lighter把订单、持仓和市场状态批量提交至以太坊，再用证明校验价格时间优先撮合、清算和状态更新；证明用于验证执行，不提供交易隐私。若排序器长期不处理优先请求，合约冻结汇总状态并启动Escape Hatch，用户可直接取回资产。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://lighter.xyz/" target="_blank" rel="noopener" title="Lighter · 未标发布日期 · 核验 2026-11-05" aria-label="来源 1：Lighter · 未标发布日期 · 核验 2026-11-05">1</a><a class="source-number" href="https://assets.lighter.xyz/whitepaper.pdf" target="_blank" rel="noopener" title="Lighter Whitepaper · 未标发布日期 · 核验 2026-11-05" aria-label="来源 2：Lighter Whitepaper · 未标发布日期 · 核验 2026-11-05">2</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">AI产品与工程代理</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月4日，OpenAI收购Pierre补齐Codex的Git浏览与评审组件</h3>
+          <p class="item-b">OpenAI宣布收购Pierre Computer Company，其Trees与Diffs开源库已用于Codex的文件浏览和变更评审。交易把分支创建、代码理解、评审到部署的Git工作流纳入同一产品路线，但公告没有披露价格、完成时间或开源库后续治理安排。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/openai-to-acquire-pierre/" target="_blank" rel="noopener" title="OpenAI · 发布 2026-11-04" aria-label="来源 1：OpenAI · 发布 2026-11-04">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月4日，Kimi Code Desktop支持多目录项目与运行中会话分叉</h3>
+          <p class="item-b">Kimi Code Desktop 1.3.0允许一个项目加入多个工作目录，可从任意历史轮次甚至运行中分叉会话，并新增诊断包导出；子智能体经许可后可控制内置浏览器。更新把并行代理、排障和浏览器权限放进桌面工作流，但未公布稳定性或效率对比。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.kimi.com/code/docs/en/kimi-code-desktop/changelog.html" target="_blank" rel="noopener" title="Kimi Code Docs · 发布 2026-11-04" aria-label="来源 1：Kimi Code Docs · 发布 2026-11-04">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月3日，PagerDuty上线Paige SRE代理并整合事故处置平台</h3>
+          <p class="item-b">PagerDuty将Paige与新命名的PD Reliability Platform正式开放，用同一运行上下文串联信号检测、事件研判、自动修复和预防，人和代理共同处置。它能减少多工具交接，但官方发布没有给出误报率、自动执行边界和生产环境节省时长的独立数据。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.pagerduty.com/newsroom/pagerduty-2026-fall-launch/" target="_blank" rel="noopener" title="PagerDuty · 发布 2026-11-03" aria-label="来源 1：PagerDuty · 发布 2026-11-03">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>

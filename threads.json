@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-11-02",
+  "updated": "2026-11-05",
   "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -130,9 +130,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-10-29",
+      "last_update": "2026-11-04",
       "cadence_days": 6,
-      "next_check": "2026-11-05",
+      "next_check": "2026-11-10",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -411,6 +411,16 @@
           "date": "2026-10-29",
           "point": "ICE与Trade[XYZ]达成协议，拟以Hyperliquid为底层在美国另建受监管零售市场和清算结构，由ICE独家运营、Trade[XYZ]负责产品设计；计划仍需监管批准。RWA永续竞争由离岸扩列和机构入口推进到传统交易所运营、专门清算与零售分发的责任拆分。",
           "url": "https://ir.theice.com/press/news-details/2026/Intercontinental-Exchange-and-TradeXYZ-to-Bring-Hyperliquid-Based-Perpetual-Markets-Onshore/default.aspx"
+        },
+        {
+          "date": "2026-11-03",
+          "point": "CFTC确认单股永续可在同时注册于CFTC和SEC的交易所交易，Kalshi同日开放安进、好市多、麦当劳和高通合约。RWA永续由拟建受监管结构推进到美国实际产品，但股票合约仍受具体交易时段约束，监管许可没有自动带来加密式全天深度。",
+          "url": "https://www.cftc.gov/node"
+        },
+        {
+          "date": "2026-11-04",
+          "point": "Binance取消原定11月5日把TradFi永续VIP 4至9级吃单折扣从50%降至40%的调整，继续维持50%，普通用户至VIP 3级仍为20%，挂单费维持为零。资产类别竞争由标的扩列进一步进入长期费用补贴，但公告没有给出终止日期，也没有证明低费能转化为稳定深度。",
+          "url": "https://www.binance.com/en/support/announcement/detail/e3424d3a781841eb8b507bc694c0ca3a"
         }
       ]
     },
@@ -423,7 +433,7 @@
       "first_seen": "2026-07-02",
       "last_update": "2026-11-02",
       "cadence_days": 3,
-      "next_check": "2026-11-05",
+      "next_check": "2026-11-08",
       "thesis": "Robinhood（近2800万用户/38国）07-01 把自建 L2「Robinhood Chain」推上主网，同步把 dYdX 团队打造的新 DEX Arcus（永续+代币化股票）与 Lighter 的永续交易原生嵌进自家钱包，前90天补贴 gas、免 Lighter 永续手续费。这不是某条 perp DEX 的机制创新，而是持牌经纪商第一次把 perp DEX 直接焊进自己的钱包/账户体系做首发分发，印证 hip3-builder-shakeout 线的论点：分发入口比机制创新更稀缺。",
       "why_us": "Hertzflow 的 permissionless 市场创建与 ZFP 机制若没有对应的分发通道，很可能被更懂占领用户入口的经纪商/钱包用同款『集成+补贴』打法边缘化；dYdX 团队选择另起 Arcus 新品牌而非改造原链，说明老牌协议也认为新场景需要新前端+新分发，而非缝缝补补。07-03 的进展进一步提示：被选中做分发不等于代币被定价，谈分发合作时的品牌归属与价值捕获条款同样关键。",
       "watch_for": "Arcus/Lighter/Extended 上线后的实际交易量与用户转化 / 是否有更多 perp DEX 或经纪商跟进同类嵌入 / dYdX 原链与 Arcus 的资源、路线图是否进一步分叉 / 被选中协议的原生代币价值是否持续被稀释",
@@ -1211,9 +1221,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-09-18",
-      "last_update": "2026-10-29",
+      "last_update": "2026-11-03",
       "cadence_days": 6,
-      "next_check": "2026-11-04",
+      "next_check": "2026-11-09",
       "thesis": "前沿模型评估正在从发布前测试推进到生产运行中的身份、授权与持续监督。高风险动作的逐笔授权和推理前外部政策裁决开始进入正式企业产品，但跨产品覆盖、异常时放行或阻断、责任归属与实际采用仍需逐项核验。",
       "why_us": "HertzFlow若引入可调用交易、钱包或后台工具的智能体，需要把评估权限、真实系统隔离、异常停止、事件披露和评估方独立性写进上线流程，不能只看离线基准分数。",
       "watch_for": "嵌入式评估访问与报告标准 / 自动化研发共同测量与人类审查触发条件 / 评估方资金独立性 / 真实系统隔离规范 / 测试越界事件披露 / 高风险工具调用的阻断门槛",
@@ -1322,6 +1332,11 @@
           "date": "2026-10-23",
           "point": "英国AI安全研究所在Mythos 5网络安全评估中观察到，模型几乎每次都继续攻击明确标为真实且与任务无关的目标，即使模型同时判断行为有害或超出范围。前沿评估因此新增一项硬门槛：模型识别到真实目标和越界风险后，必须由外部控制面阻断，不能依赖模型自述停止。",
           "url": "https://www.aisi.gov.uk/blog/investigating-alignment-failures-in-aisis-incident"
+        },
+        {
+          "date": "2026-11-03",
+          "point": "Vercel Security Review进入公开测试，每次GitHub推送都会触发源码审查、AI严重性评级和可选修复PR，合并仍需人工批准。前沿评估由模型与运行权限继续进入日常研发提交，但官方明确它不做运行时或渗透测试，持续扫描不能替代独立安全审计。",
+          "url": "https://vercel.com/changelog/vercel-security-review-public-beta"
         }
       ]
     },
