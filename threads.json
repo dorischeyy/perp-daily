@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -130,9 +130,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-11-04",
+      "last_update": "2026-11-06",
       "cadence_days": 6,
-      "next_check": "2026-11-10",
+      "next_check": "2026-11-12",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -421,6 +421,11 @@
           "date": "2026-11-04",
           "point": "Binance取消原定11月5日把TradFi永续VIP 4至9级吃单折扣从50%降至40%的调整，继续维持50%，普通用户至VIP 3级仍为20%，挂单费维持为零。资产类别竞争由标的扩列进一步进入长期费用补贴，但公告没有给出终止日期，也没有证明低费能转化为稳定深度。",
           "url": "https://www.binance.com/en/support/announcement/detail/e3424d3a781841eb8b507bc694c0ca3a"
+        },
+        {
+          "date": "2026-11-06",
+          "point": "Binance通过特别资金费补记SAMSUNGUSDT股息，只认定9月28日23:00 UTC持有净仓位的账户，并在跨保证金期货账户记账。RWA永续竞争由标的、费用和监管入口继续推进到公司行动映射，但资格基准与11月6日记账相隔39天，经济权利仍依赖事后规则结算。",
+          "url": "https://www.binance.com/en/square/post/384904459802992"
         }
       ]
     },
@@ -1221,9 +1226,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-09-18",
-      "last_update": "2026-11-03",
+      "last_update": "2026-11-05",
       "cadence_days": 6,
-      "next_check": "2026-11-09",
+      "next_check": "2026-11-11",
       "thesis": "前沿模型评估正在从发布前测试推进到生产运行中的身份、授权与持续监督。高风险动作的逐笔授权和推理前外部政策裁决开始进入正式企业产品，但跨产品覆盖、异常时放行或阻断、责任归属与实际采用仍需逐项核验。",
       "why_us": "HertzFlow若引入可调用交易、钱包或后台工具的智能体，需要把评估权限、真实系统隔离、异常停止、事件披露和评估方独立性写进上线流程，不能只看离线基准分数。",
       "watch_for": "嵌入式评估访问与报告标准 / 自动化研发共同测量与人类审查触发条件 / 评估方资金独立性 / 真实系统隔离规范 / 测试越界事件披露 / 高风险工具调用的阻断门槛",
@@ -1337,6 +1342,16 @@
           "date": "2026-11-03",
           "point": "Vercel Security Review进入公开测试，每次GitHub推送都会触发源码审查、AI严重性评级和可选修复PR，合并仍需人工批准。前沿评估由模型与运行权限继续进入日常研发提交，但官方明确它不做运行时或渗透测试，持续扫描不能替代独立安全审计。",
           "url": "https://vercel.com/changelog/vercel-security-review-public-beta"
+        },
+        {
+          "date": "2026-11-04",
+          "point": "Sysdig AI Defense正式可用，将Agent框架里的工具、MCP、技能和参数与内核观测到的进程、网络和凭据范围对照，并可在执行前告警、请求人工或阻断。前沿评估由提交审查继续推进到生产运行时控制，但误报率、阻断延迟和大规模效果仍未披露。",
+          "url": "https://www.sysdig.com/press-releases/sysdig-launches-sysdig-ai-defense-bringing-runtime-security-to-every-action-ai-agents-take"
+        },
+        {
+          "date": "2026-11-05",
+          "point": "OpenAI将GPT-6 Cyber列为网络安全Critical级，只通过Daybreak Red向经身份验证的组织开放，并要求SSO、MFA和IP白名单；官方越界诱饵测试守界率为99.93%，但仍以外部访问控制限制高能力模型。评估治理由动作阻断继续推进到模型分发、组织身份和网络边界的组合门槛。",
+          "url": "https://openai.com/index/introducing-gpt-6-cyber/"
         }
       ]
     },
@@ -1388,9 +1403,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-10-21",
-      "last_update": "2026-11-02",
+      "last_update": "2026-11-05",
       "cadence_days": 7,
-      "next_check": "2026-11-06",
+      "next_check": "2026-11-12",
       "thesis": "首次研究建档，10月21日仅为本报核验与建立论点的日期，不代表项目当天上线或发生新事件，因此log暂空。DeepBook Margin复用现货深度但按单池隔离风险，predict.fun生息抵押依赖Venus取回资金；资本复用需要分别验证风险能否抵消、收益如何领取和退出是否受外部流动性限制。",
       "why_us": "比较杠杆交易和生息抵押产品时，应分开说明交易流动性、保证金风险归属与提现结算依赖。共享订单簿不能自动推出跨市场保证金效率，获得借贷收益也不能自动承诺随时到账；这些差别会影响账户设计、风险提示和退出流程。",
       "watch_for": "DeepBook Margin的实际主网单池参数、坏账与清算体验 / predict.fun生息市场具体版本、Venus利用率与赎回延迟 / 新机制或参数变更 / 独立交易者采用与退出证据 / 是否出现足以证伪现有比较的跨池抵消或即时赎回机制",
@@ -1409,6 +1424,11 @@
           "date": "2026-11-02",
           "point": "DeepBook Predict的共享USDC池成为全部预测仓位对手方，交易约800毫秒后按Pyth签名价格成交或退款，LP申购赎回也走异步队列并统一刷新净值。资本复用提高了流动性统一度，但退出仍依赖池内闲置现金与批次处理。",
           "url": "https://www.docs.sui.io/onchain-finance/deepbook/deepbook-predict"
+        },
+        {
+          "date": "2026-11-05",
+          "point": "Bitget上线Open Custody Network，用资产镜像让合格用户把资产留在参与银行或机构托管商，同时访问平台现货、保证金与期货。托管和执行被拆开，但首批托管方、镜像结算、追加保证金和异常退出时限未披露，资本复用的关键约束从池内流动性扩展到跨机构结算。",
+          "url": "https://www.bitget.com/blog/articles/bitget-open-custody-network-launch"
         }
       ]
     }
