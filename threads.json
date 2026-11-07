@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -130,9 +130,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-11-06",
+      "last_update": "2026-11-07",
       "cadence_days": 6,
-      "next_check": "2026-11-12",
+      "next_check": "2026-11-13",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -426,6 +426,16 @@
           "date": "2026-11-06",
           "point": "Binance通过特别资金费补记SAMSUNGUSDT股息，只认定9月28日23:00 UTC持有净仓位的账户，并在跨保证金期货账户记账。RWA永续竞争由标的、费用和监管入口继续推进到公司行动映射，但资格基准与11月6日记账相隔39天，经济权利仍依赖事后规则结算。",
           "url": "https://www.binance.com/en/square/post/384904459802992"
+        },
+        {
+          "date": "2026-11-07",
+          "point": "BingX为九类TradFi资产接入更多行情源，并把交易集中到北京时间周一22:30至周六05:00的分段时段；外部行情不稳、节假日或数据准备不足时仍可暂停或延迟开盘。资产扩列继续推进，但休市价格源与实际开放状态已成为必须单独管理的运行规则。",
+          "url": "https://bingx.com/en/support/articles/18278470981647"
+        },
+        {
+          "date": "2026-11-06",
+          "point": "Binance公布IBM、苹果、康宁和礼来bStocks股息处理：净股息扣税费后再投资为同一bStock，链上持有人通过乘数调整，相关转换与充提在记录日前后暂停。代币化现货的权利映射更具体，也显示交易连续性与资产服务连续性需要分开判断。",
+          "url": "https://www.binance.com/en/support/announcement/detail/f3b32b406278474ab27c02685b33540c"
         }
       ]
     },
@@ -1054,9 +1064,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-08-25",
-      "last_update": "2026-11-02",
+      "last_update": "2026-11-05",
       "cadence_days": 6,
-      "next_check": "2026-11-09",
+      "next_check": "2026-11-11",
       "thesis": "交易与资金后台正在从单一平台能力拆成可复用的撮合、清算、托管和结算服务。多家银行联合发行链上货币后，责任分工也从交易入口延伸到共同委托、信托托管与跨境支付；生产规模和故障责任仍需验证。",
       "why_us": "HertzFlow 研究外部分发或后台合作时，需要分开核验客户归属、风险责任、故障处置与执行兼容性；不可据公告性能直接替换现有 Keeper 与逐市场 LP 架构。",
       "watch_for": "正式推出时间 / 已上线合作方及真实订单流 / 生产延迟与故障恢复 / 风险与清算责任分配 / 开放及许可市场的隔离规则",
@@ -1145,6 +1155,11 @@
           "date": "2026-11-02",
           "point": "Eurex Clearing宣布把传统证券与原生数字证券纳入同一规则手册和风险模型，首批ESM数字工具计划在Eurex Repo交易、通过统一中央对手方清算并可作为保证金。交易与清算后台进一步合流，但正式上线时间和生产规模仍未披露。",
           "url": "https://www.eurexgroup.com/dbg-en/media/news-stories/press-releases/Eurex-Clearing-to-Become-the-World-s-First-Hybrid-CCP--5678008"
+        },
+        {
+          "date": "2026-11-05",
+          "point": "CFTC清算与风险部门表示，衍生品清算机构可把信托公司按结算银行要求用于与清算会员的每日结算。交易后台服务化由统一清算与外部托管继续推进到数字资产抵押品的资金流转，但该立场只是工作人员不采取行动意见，不是委员会规则或法律结论。",
+          "url": "https://www.cftc.gov/PressRoom/PressReleases/9322-26"
         }
       ]
     },
