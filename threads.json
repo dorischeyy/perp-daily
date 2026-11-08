@@ -130,9 +130,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-11-07",
+      "last_update": "2026-11-08",
       "cadence_days": 6,
-      "next_check": "2026-11-13",
+      "next_check": "2026-11-14",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -436,6 +436,11 @@
           "date": "2026-11-06",
           "point": "Binance公布IBM、苹果、康宁和礼来bStocks股息处理：净股息扣税费后再投资为同一bStock，链上持有人通过乘数调整，相关转换与充提在记录日前后暂停。代币化现货的权利映射更具体，也显示交易连续性与资产服务连续性需要分开判断。",
           "url": "https://www.binance.com/en/support/announcement/detail/f3b32b406278474ab27c02685b33540c"
+        },
+        {
+          "date": "2026-11-08",
+          "point": "Canton Strategic的CNTN在许可池完成首批链上交易，由注册过户代理维护所有权并保留与纳斯达克股票相同的权利；Bullish同期选定Solana、Aptos和以太坊承载发行人主导的代币化股票，法定股东名册仍留在过户代理。代币化现货开始同时竞争真实权利、交易时段和多链分发。",
+          "url": "https://www.prnewswire.com/news-releases/first-trades-of-tokenized-us-equity-under-sec-innovation-exemption-executed-on-the-canton-network-302929795.html"
         }
       ]
     },
@@ -444,7 +449,7 @@
       "title": "Robinhood Chain 上线：经纪商巨头直接下场做 perp 分发",
       "score": 93,
       "tier": "S",
-      "status": "active",
+      "status": "dormant",
       "first_seen": "2026-07-02",
       "last_update": "2026-11-02",
       "cadence_days": 3,
@@ -1444,6 +1449,27 @@
           "date": "2026-11-05",
           "point": "Bitget上线Open Custody Network，用资产镜像让合格用户把资产留在参与银行或机构托管商，同时访问平台现货、保证金与期货。托管和执行被拆开，但首批托管方、镜像结算、追加保证金和异常退出时限未披露，资本复用的关键约束从池内流动性扩展到跨机构结算。",
           "url": "https://www.bitget.com/blog/articles/bitget-open-custody-network-launch"
+        }
+      ]
+    },
+    {
+      "id": "mexc-us-access-and-exit-risk",
+      "title": "MEXC美国资金通道与用户退出风险",
+      "score": 96,
+      "tier": "S",
+      "status": "active",
+      "first_seen": "2026-11-08",
+      "last_update": "2026-11-08",
+      "cadence_days": 3,
+      "next_check": "2026-11-11",
+      "thesis": "FinCEN已下令禁止美国金融机构处理涉及MEXC的资金转移，措施在联邦公报发布30天后生效。MEXC目前称运营正常，但美国结算通道、机构对手方与用户退出路径会否收缩，需与平台可交易状态分开跟踪。",
+      "why_us": "大型交易所的美国资金通道被切断，会直接影响跨平台资金流、机构做市和用户提现预期。Hertzflow判断竞品流动性与资产安全时，不能把前端仍可交易等同于法币和机构结算链路未受影响。",
+      "watch_for": "联邦公报正式发布日期和生效日 / MEXC是否调整法币、托管或机构服务 / 做市商与银行对手方是否退出 / 用户充提延迟、价差和储备变化 / MEXC法律审查或申诉结果",
+      "log": [
+        {
+          "date": "2026-11-08",
+          "point": "新建线：FinCEN 11月6日认定MEXC涉及重大洗钱风险，下令美国金融机构不得处理涉及该平台的资金转移；措施待联邦公报发布30天后生效。MEXC回应称仍正常运营、用户资产安全，正由法律与合规团队审查命令。",
+          "url": "https://www.fincen.gov/news/news-releases/operation-economic-outcast-severs-mexc-globals-access-us-financial-system"
         }
       ]
     }
