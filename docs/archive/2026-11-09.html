@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-11-09</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6; min-width:0; overflow-wrap:anywhere;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
+    white-space:nowrap; letter-spacing:0; line-height:1.5;}
+  .source-label{color:#a3987f; flex:none;}
+  .source-number{color:#8a7f66; text-decoration:underline; text-underline-offset:2px;
+    min-width:14px; padding:2px 0; text-align:center; flex:none; font-variant-numeric:tabular-nums;}
+  .source-number:hover,.source-number:focus-visible{color:#b03a2e;}
+  .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .research-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
+  .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
+  .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
+  .research-row + .research-row{border-top:1px dotted #e4ded0;}
+  .research-row dt{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dd{min-width:0; color:#403a2e;}
+  .research-inference{background:#f7f4ec; padding:10px;}
+  .research-discussions{list-style:none;}
+  .research-discussions li + li{margin-top:8px;}
+  .discussion-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 127 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 11 月 9 日 · 星期一</div>
+    </header>
+    <p class="lead">Bybit在新增三只24小时交易的美股永续后，于11月9日收紧58只USDT永续的最大订单规模，传统资产合约扩列与单笔风险限额开始同步调整。</p>
+
+
+      <section class="sec sec-tradfi-perp-risk-controls">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">传统资产永续与风险限额</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月9日，Bybit收紧58只USDT永续的最大订单规模</h3>
+          <p class="item-b">Bybit把58只USDT永续的最大市价和限价订单规模下调，RIOT市价上限由2458降至541。平台三天前新增Fabrinet、Duolingo与Fiserv三只24小时交易、最高25倍杠杆的TradFi永续，扩列同时收紧单笔风险容量。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://announcements.bybit.com/en/article/changes-of-max-order-size-for-usdt-perpetual-contracts-nov-9-2026--art30ea1bf8d3b1/" target="_blank" rel="noopener" title="Bybit · 发布 2026-11-06" aria-label="来源 1：Bybit · 发布 2026-11-06">1</a><a class="source-number" href="https://announcements.bybit.com/en/article/new-listing-listing-of-fnusdt-on-bybit-tradfi-perpetual-on-nov-6-2026-11-00am-utc--artff454659fb47/" target="_blank" rel="noopener" title="Bybit · 发布 2026-11-06" aria-label="来源 2：Bybit · 发布 2026-11-06">2</a><a class="source-number" href="https://announcements.bybit.com/en/article/new-listing-listing-of-duolusdt-on-bybit-tradfi-perpetual-on-nov-6-2026-11-00am-utc--artde830783f6d5/" target="_blank" rel="noopener" title="Bybit · 发布 2026-11-06" aria-label="来源 3：Bybit · 发布 2026-11-06">3</a><a class="source-number" href="https://announcements.bybit.com/en/article/new-listing-listing-of-fisvusdt-on-bybit-tradfi-perpetual-on-nov-6-2026-11-00am-utc--art5e5431016814/" target="_blank" rel="noopener" title="Bybit · 发布 2026-11-06" aria-label="来源 4：Bybit · 发布 2026-11-06">4</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月9日，BingX将自动平掉DOPEUSDT剩余仓位后下架合约</h3>
+          <p class="item-b">BingX将于10:00 UTC停止DOPEUSDT开仓，11:00 UTC下架并自动平掉所有剩余仓位，范围覆盖永续、跟单与网格，现货不受影响。公告没有披露自动平仓的具体结算价和计算方法，持仓用户需在截止前自行处理。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://bingx.com/en/support/articles/18299493475983" target="_blank" rel="noopener" title="BingX · 发布 2026-11-08" aria-label="来源 1：BingX · 发布 2026-11-08">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-perp-mechanism-research">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">永续机制研究</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">Ostium的RWA订单在休市时排队，成交时才拉取价格报告</h3>
+          <p class="item-b">Ostium的RWA市价单在休市时不可用，限价和止损单可以排队，但只会在市场重开后执行。成交时由Stork运行的节点生成含市场时段、买卖价差与节假日状态的价格报告并写入链上；平仓不收费，部分平仓另收0.10美元预言机费。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://ostium-labs.gitbook.io/ostium-docs/supporting-infrastructure/price-oracle" target="_blank" rel="noopener" title="Ostium Docs · 未标发布日期 · 核验 2026-11-09" aria-label="来源 1：Ostium Docs · 未标发布日期 · 核验 2026-11-09">1</a><a class="source-number" href="https://ostium-labs.gitbook.io/ostium-docs/ostium-trading-engine/closing-trades" target="_blank" rel="noopener" title="Ostium Docs · 未标发布日期 · 核验 2026-11-09" aria-label="来源 2：Ostium Docs · 未标发布日期 · 核验 2026-11-09">2</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">AI工具与Agent运行时</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月8日，OpenAI Agents SDK预览持久根会话与严格写入策略</h3>
+          <p class="item-b">OpenAI发布Agents SDK 0.24.0 alpha.7，新增由应用持有的持久根会话、自定义存储与不确定工具副作用对账，并默认采用更严格的环境写入策略；同时加入运行预算和托管文件搜索、代码解释器等工具。该版本仍是预发布版。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.7" target="_blank" rel="noopener" title="OpenAI · 发布 2026-11-08" aria-label="来源 1：OpenAI · 发布 2026-11-08">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月7日，Qwen Code让托管Agent会话并行处理多个问题</h3>
+          <p class="item-b">Qwen Code 0.27.0允许托管Agent会话同时保留多个子问题，用户可乱序回复，每个问题拥有独立草稿和错误状态；Web Shell新增任务问答热力图和详情视图，并加入GitHub仓库允许与阻止过滤、换行和Unicode编辑保护。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://github.com/QwenLM/qwen-code/releases/tag/v0.27.0" target="_blank" rel="noopener" title="Qwen · 发布 2026-11-07" aria-label="来源 1：Qwen · 发布 2026-11-07">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月6日，Vercel AI Gateway接入群聊协作模型Ampersand</h3>
+          <p class="item-b">Vercel AI Gateway接入Humans&amp;的Ampersand v0.1，模型会在每轮群聊中选择发送消息或跳过，并要求调用方执行工具和持久化动作回执。模型提供100万token上下文，可通过AI SDK和OpenAI兼容接口调用，目前免费开放至11月13日。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://vercel.com/changelog/humans-and-ampersand-now-available-on-ai-gateway" target="_blank" rel="noopener" title="Vercel · 发布 2026-11-06" aria-label="来源 1：Vercel · 发布 2026-11-06">1</a><a class="source-number" href="https://vercel.com/ai-gateway/models/ampersand-v0.1" target="_blank" rel="noopener" title="Vercel · 发布 2026-11-06" aria-label="来源 2：Vercel · 发布 2026-11-06">2</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>

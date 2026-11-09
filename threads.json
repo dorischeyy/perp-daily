@@ -15,7 +15,7 @@
     "watch_for": "下一个关键节点/该盯的触发事件",
     "log": "[{date, point, url}] 按时间的进展日志，只记 delta 不复述"
   },
-  "updated": "2026-11-07",
+  "updated": "2026-11-09",
   "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -130,7 +130,7 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-11-08",
+      "last_update": "2026-11-09",
       "cadence_days": 6,
       "next_check": "2026-11-14",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
@@ -441,6 +441,11 @@
           "date": "2026-11-08",
           "point": "Canton Strategic的CNTN在许可池完成首批链上交易，由注册过户代理维护所有权并保留与纳斯达克股票相同的权利；Bullish同期选定Solana、Aptos和以太坊承载发行人主导的代币化股票，法定股东名册仍留在过户代理。代币化现货开始同时竞争真实权利、交易时段和多链分发。",
           "url": "https://www.prnewswire.com/news-releases/first-trades-of-tokenized-us-equity-under-sec-innovation-exemption-executed-on-the-canton-network-302929795.html"
+        },
+        {
+          "date": "2026-11-09",
+          "point": "Bybit在11月6日新增Fabrinet、Duolingo和Fiserv三只24小时交易、最高25倍杠杆的TradFi永续，并于11月9日下调58只USDT永续的最大市价和限价订单规模。供给继续扩列时，单笔风险容量被同步收紧。",
+          "url": "https://announcements.bybit.com/en/article/changes-of-max-order-size-for-usdt-perpetual-contracts-nov-9-2026--art30ea1bf8d3b1/"
         }
       ]
     },
