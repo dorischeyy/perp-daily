@@ -130,7 +130,7 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-11-09",
+      "last_update": "2026-11-10",
       "cadence_days": 6,
       "next_check": "2026-11-14",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
@@ -446,6 +446,11 @@
           "date": "2026-11-09",
           "point": "Bybit在11月6日新增Fabrinet、Duolingo和Fiserv三只24小时交易、最高25倍杠杆的TradFi永续，并于11月9日下调58只USDT永续的最大市价和限价订单规模。供给继续扩列时，单笔风险容量被同步收紧。",
           "url": "https://announcements.bybit.com/en/article/changes-of-max-order-size-for-usdt-perpetual-contracts-nov-9-2026--art30ea1bf8d3b1/"
+        },
+        {
+          "date": "2026-11-10",
+          "point": "OKX开始把多发行方的同一股票代币合并为统一平台资产、订单簿和公司行动规则，并公布SNDK八比一拆股时永续仓位先按旧标记价结算、再以新标记价重开的流程。RWA供给继续扩列时，权利映射、盈亏确认、保护单和API订单连续性已成为独立产品能力。",
+          "url": "https://www.okx.com/help/okx-to-list-unified-tokenized-stocks-xnvdl-xskdd-and-more-for-spot-trading"
         }
       ]
     },

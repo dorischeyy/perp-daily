@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-11-10</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6; min-width:0; overflow-wrap:anywhere;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
+    white-space:nowrap; letter-spacing:0; line-height:1.5;}
+  .source-label{color:#a3987f; flex:none;}
+  .source-number{color:#8a7f66; text-decoration:underline; text-underline-offset:2px;
+    min-width:14px; padding:2px 0; text-align:center; flex:none; font-variant-numeric:tabular-nums;}
+  .source-number:hover,.source-number:focus-visible{color:#b03a2e;}
+  .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .research-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
+  .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
+  .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
+  .research-row + .research-row{border-top:1px dotted #e4ded0;}
+  .research-row dt{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dd{min-width:0; color:#403a2e;}
+  .research-inference{background:#f7f4ec; padding:10px;}
+  .research-discussions{list-style:none;}
+  .research-discussions li + li{margin-top:8px;}
+  .discussion-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 128 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 11 月 10 日 · 星期二</div>
+    </header>
+    <p class="lead">OKX将八只代币化股票纳入统一订单簿，并为SNDK拆股规定永续仓位先结算再重开，公司行动已开始同时改写现货单位、衍生品入场价与保护单。</p>
+
+
+      <section class="sec sec-tokenized-stock-corporate-actions">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">代币化股票与公司行动</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月10日，OKX首批统一代币化股票开始交易</h3>
+          <p class="item-b">OKX把多发行方的同一股票代币合并为一个平台资产、一个订单簿和一套公司行动规则，首批xNVDL、xSKDD、xSKUU与xABBV于11月10日开放交易。产品由xStocks支持，可在Solana和X Layer充提，股息扣税后以份额增加形式再投资。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.okx.com/help/okx-to-list-unified-tokenized-stocks-xnvdl-xskdd-and-more-for-spot-trading" target="_blank" rel="noopener" title="OKX · 发布 2026-11-09" aria-label="来源 1：OKX · 发布 2026-11-09">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月9日，OKX公布SNDK拆股的永续仓位与订单处理规则</h3>
+          <p class="item-b">为处理SNDK八比一拆股，OKX将于11月20日暂停相关现货、永续和X-Perp交易，先按调整前标记价结算旧仓，再以调整后标记价开出八倍数量的新仓。未触发止盈止损会被取消，部分成交余单将获得新订单号，网格机器人需手动恢复。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.okx.com/help/okx-to-adjust-sndk-spot-perpetual-futures-and-x-perp-products-due-to-stock" target="_blank" rel="noopener" title="OKX · 发布 2026-11-09" aria-label="来源 1：OKX · 发布 2026-11-09">1</a><a class="source-number" href="https://www.okx.com/help/corporate-actions-handling-mechanism" target="_blank" rel="noopener" title="OKX · 发布 2026-06-23" aria-label="来源 2：OKX · 发布 2026-06-23">2</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-perp-mechanism-research">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">永续机制研究</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">Avantis用反向亏损返还来缓冲LP的单边敞口</h3>
+          <p class="item-b">Avantis的USDC金库是所有交易的对手方。市场多空偏斜超过55%后，站在较少一侧的新仓可锁定0%至20%的亏损返还，即使随后偏斜恢复也不重置；LP获得交易费，交易者盈利先由协议缓冲支付，反向激励用于降低金库的单边风险。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://docs.avantisfi.com/rewards/loss-rebates" target="_blank" rel="noopener" title="Avantis Docs · 未标发布日期 · 核验 2026-11-10" aria-label="来源 1：Avantis Docs · 未标发布日期 · 核验 2026-11-10">1</a><a class="source-number" href="https://docs.avantisfi.com/liquidity-providers/usdc-vault" target="_blank" rel="noopener" title="Avantis Docs · 未标发布日期 · 核验 2026-11-10" aria-label="来源 2：Avantis Docs · 未标发布日期 · 核验 2026-11-10">2</a><a class="source-number" href="https://docs.avantisfi.com/liquidity-providers/risk-management" target="_blank" rel="noopener" title="Avantis Docs · 未标发布日期 · 核验 2026-11-10" aria-label="来源 3：Avantis Docs · 未标发布日期 · 核验 2026-11-10">3</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">AI模型与Agent运行</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月9日，Anthropic发布Claude Fable 5.2与Mythos 5.2</h3>
+          <p class="item-b">Anthropic发布同一底层模型的Fable 5.2和受验证计划限制的Mythos 5.2，生成速度较5.1最高提升30%，标准价格为每百万输入和输出token 8与40美元。Fable面向通用高难度工作，Mythos开放更强的网络安全与生物研究能力。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener" title="Anthropic · 发布 2026-11-09" aria-label="来源 1：Anthropic · 发布 2026-11-09">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月9日，Cloudflare让Codex循环在Durable Object中恢复执行</h3>
+          <p class="item-b">Cloudflare发布实验性Codex Agent循环示例，把模型调用和工具执行写入任务日志，并持久化会话、事件流与工作区文件。已完成步骤在重启后复用记录结果，中断步骤可重新执行，使运行在Workers上的代码Agent能够跨故障恢复。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://developers.cloudflare.com/changelog/post/2026-11-09-codex-harness/" target="_blank" rel="noopener" title="Cloudflare · 发布 2026-11-09" aria-label="来源 1：Cloudflare · 发布 2026-11-09">1</a><a class="source-number" href="https://developers.cloudflare.com/agents/harnesses/container/" target="_blank" rel="noopener" title="Cloudflare · 发布 2026-11-09" aria-label="来源 2：Cloudflare · 发布 2026-11-09">2</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月9日，OpenAI多语言SDK加入Agent任务调度接口</h3>
+          <p class="item-b">OpenAI的Java、Go与Ruby SDK陆续加入Agent调度接口，可创建一次性或周期性任务，并查询、更新、删除、暂停和恢复计划；调用方还能创建与读取每次执行记录。该能力目前从SDK发布说明可核验，正式平台文档和稳定性边界仍待补充。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://github.com/openai/openai-java/releases/tag/v4.102.0" target="_blank" rel="noopener" title="OpenAI · 发布 2026-11-09" aria-label="来源 1：OpenAI · 发布 2026-11-09">1</a><a class="source-number" href="https://github.com/openai/openai-go/releases/tag/v3.97.0" target="_blank" rel="noopener" title="OpenAI · 发布 2026-11-08" aria-label="来源 2：OpenAI · 发布 2026-11-08">2</a><a class="source-number" href="https://github.com/openai/openai-ruby/releases/tag/v0.121.0" target="_blank" rel="noopener" title="OpenAI · 发布 2026-11-07" aria-label="来源 3：OpenAI · 发布 2026-11-07">3</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>
