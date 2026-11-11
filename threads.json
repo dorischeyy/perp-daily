@@ -1079,9 +1079,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-08-25",
-      "last_update": "2026-11-05",
+      "last_update": "2026-11-11",
       "cadence_days": 6,
-      "next_check": "2026-11-11",
+      "next_check": "2026-11-17",
       "thesis": "交易与资金后台正在从单一平台能力拆成可复用的撮合、清算、托管和结算服务。多家银行联合发行链上货币后，责任分工也从交易入口延伸到共同委托、信托托管与跨境支付；生产规模和故障责任仍需验证。",
       "why_us": "HertzFlow 研究外部分发或后台合作时，需要分开核验客户归属、风险责任、故障处置与执行兼容性；不可据公告性能直接替换现有 Keeper 与逐市场 LP 架构。",
       "watch_for": "正式推出时间 / 已上线合作方及真实订单流 / 生产延迟与故障恢复 / 风险与清算责任分配 / 开放及许可市场的隔离规则",
@@ -1175,6 +1175,11 @@
           "date": "2026-11-05",
           "point": "CFTC清算与风险部门表示，衍生品清算机构可把信托公司按结算银行要求用于与清算会员的每日结算。交易后台服务化由统一清算与外部托管继续推进到数字资产抵押品的资金流转，但该立场只是工作人员不采取行动意见，不是委员会规则或法律结论。",
           "url": "https://www.cftc.gov/PressRoom/PressReleases/9322-26"
+        },
+        {
+          "date": "2026-11-11",
+          "point": "DriveWealth欧洲实体取得立陶宛银行MiCA授权，并计划新年起向银行、金融科技公司、钱包和经纪商分阶段提供加密服务；同一主体已有MiFID II牌照，一次接入可覆盖证券、期权与加密资产，但具体上线范围、生产规模和故障责任仍未披露。",
+          "url": "https://www.drivewealth.com/2026/11/drivewealth-receives-mica-authorization-from-the-bank-of-lithuania-to-provide-crypto-asset-services-across-the-eu/"
         }
       ]
     },
@@ -1256,9 +1261,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-09-18",
-      "last_update": "2026-11-05",
+      "last_update": "2026-11-11",
       "cadence_days": 6,
-      "next_check": "2026-11-11",
+      "next_check": "2026-11-17",
       "thesis": "前沿模型评估正在从发布前测试推进到生产运行中的身份、授权与持续监督。高风险动作的逐笔授权和推理前外部政策裁决开始进入正式企业产品，但跨产品覆盖、异常时放行或阻断、责任归属与实际采用仍需逐项核验。",
       "why_us": "HertzFlow若引入可调用交易、钱包或后台工具的智能体，需要把评估权限、真实系统隔离、异常停止、事件披露和评估方独立性写进上线流程，不能只看离线基准分数。",
       "watch_for": "嵌入式评估访问与报告标准 / 自动化研发共同测量与人类审查触发条件 / 评估方资金独立性 / 真实系统隔离规范 / 测试越界事件披露 / 高风险工具调用的阻断门槛",
@@ -1382,6 +1387,11 @@
           "date": "2026-11-05",
           "point": "OpenAI将GPT-6 Cyber列为网络安全Critical级，只通过Daybreak Red向经身份验证的组织开放，并要求SSO、MFA和IP白名单；官方越界诱饵测试守界率为99.93%，但仍以外部访问控制限制高能力模型。评估治理由动作阻断继续推进到模型分发、组织身份和网络边界的组合门槛。",
           "url": "https://openai.com/index/introducing-gpt-6-cyber/"
+        },
+        {
+          "date": "2026-11-11",
+          "point": "Google与Artificial Analysis推出200项私有多模态工作任务基准，所有模型使用同一开源Agent框架、工具、沙箱与轮次预算，自动评分与专家判断一致率为96%；Gemini 4 Carbon在质量排名第二且官方称成本约为首名六分之一，评估开始同时约束任务真实性、工具环境与成本。",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/multimodal-knowledge-agent-benchmark/"
         }
       ]
     },
@@ -1469,10 +1479,10 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-11-08",
-      "last_update": "2026-11-08",
+      "last_update": "2026-11-11",
       "cadence_days": 3,
-      "next_check": "2026-11-11",
-      "thesis": "FinCEN已下令禁止美国金融机构处理涉及MEXC的资金转移，措施在联邦公报发布30天后生效。MEXC目前称运营正常，但美国结算通道、机构对手方与用户退出路径会否收缩，需与平台可交易状态分开跟踪。",
+      "next_check": "2026-11-14",
+      "thesis": "FinCEN已下令禁止美国金融机构处理涉及MEXC的资金转移，措施于11月10日刊登联邦公报并将在12月10日生效。Binance已先行拒绝向MEXC相关实体出金并暂扣来自这些实体的入金，跨平台资金通道收缩已从监管命令进入实际对手方限制。",
       "why_us": "大型交易所的美国资金通道被切断，会直接影响跨平台资金流、机构做市和用户提现预期。Hertzflow判断竞品流动性与资产安全时，不能把前端仍可交易等同于法币和机构结算链路未受影响。",
       "watch_for": "联邦公报正式发布日期和生效日 / MEXC是否调整法币、托管或机构服务 / 做市商与银行对手方是否退出 / 用户充提延迟、价差和储备变化 / MEXC法律审查或申诉结果",
       "log": [
@@ -1480,6 +1490,11 @@
           "date": "2026-11-08",
           "point": "新建线：FinCEN 11月6日认定MEXC涉及重大洗钱风险，下令美国金融机构不得处理涉及该平台的资金转移；措施待联邦公报发布30天后生效。MEXC回应称仍正常运营、用户资产安全，正由法律与合规团队审查命令。",
           "url": "https://www.fincen.gov/news/news-releases/operation-economic-outcast-severs-mexc-globals-access-us-financial-system"
+        },
+        {
+          "date": "2026-11-11",
+          "point": "FinCEN命令已于11月10日刊登联邦公报，生效日确定为12月10日；Binance同日起拒绝用户向MEXC相关实体转账，并把来自这些实体的入金暂扣合规审查。MEXC前端可交易状态未直接变化，但跨平台充提路径已先于法定期限收缩。",
+          "url": "https://www.binance.com/en/support/announcement/detail/9ef6e347da924cdc90f53577ab483b1f"
         }
       ]
     }

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-11-11</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6; min-width:0; overflow-wrap:anywhere;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
+    white-space:nowrap; letter-spacing:0; line-height:1.5;}
+  .source-label{color:#a3987f; flex:none;}
+  .source-number{color:#8a7f66; text-decoration:underline; text-underline-offset:2px;
+    min-width:14px; padding:2px 0; text-align:center; flex:none; font-variant-numeric:tabular-nums;}
+  .source-number:hover,.source-number:focus-visible{color:#b03a2e;}
+  .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .research-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
+  .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
+  .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
+  .research-row + .research-row{border-top:1px dotted #e4ded0;}
+  .research-row dt{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dd{min-width:0; color:#403a2e;}
+  .research-inference{background:#f7f4ec; padding:10px;}
+  .research-discussions{list-style:none;}
+  .research-discussions li + li{margin-top:8px;}
+  .discussion-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 129 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 11 月 11 日 · 星期三</div>
+    </header>
+    <p class="lead">Binance已停止处理与MEXC相关实体之间的转账，FinCEN禁令确定12月10日生效。MEXC的跨平台资金通道已先于法定期限收缩。</p>
+
+
+      <section class="sec sec-counterparty-and-capital-paths">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">资金通道与抵押效率</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月10日，Binance停止处理与MEXC相关实体之间的资金往来</h3>
+          <p class="item-b">Binance从11月10日起拒绝用户向MEXC相关实体转账，并把来自这些实体的入金暂扣审查；FinCEN命令同日刊登联邦公报，禁令将在12月10日生效。MEXC前端仍可交易，但跨平台资金退出已经先于监管生效日收缩。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/support/announcement/detail/9ef6e347da924cdc90f53577ab483b1f" target="_blank" rel="noopener" title="Binance · 发布 2026-11-10" aria-label="来源 1：Binance · 发布 2026-11-10">1</a><a class="source-number" href="https://www.govinfo.gov/content/pkg/FR-2026-11-10/pdf/2026-22962.pdf" target="_blank" rel="noopener" title="Federal Register · 发布 2026-11-10" aria-label="来源 2：Federal Register · 发布 2026-11-10">2</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月10日，Binance上调FIL与HBAR的组合保证金抵押率</h3>
+          <p class="item-b">Binance将于11月13日把FIL、HBAR在全仓借款和转出、组合保证金中的抵押率从50%提高到60%，并放宽专业账户分层上限。可借额度与统一维持保证金率会随之变化，资本效率改善的同时，用户仍需按新折算率重算强平余量。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/support/announcement/detail/6f1577ea7d824586a93cb721344c98e2" target="_blank" rel="noopener" title="Binance · 发布 2026-11-10" aria-label="来源 1：Binance · 发布 2026-11-10">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-embedded-market-distribution">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">嵌入式交易分发</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月10日，DriveWealth取得欧盟MiCA加密服务授权</h3>
+          <p class="item-b">DriveWealth欧洲实体获得立陶宛银行MiCA授权，将与既有MiFID II牌照放在同一主体内，计划新年起分阶段向银行、钱包和经纪商提供加密服务。合作方可通过一次接入覆盖美股、期权与加密资产，但具体上线时间和可用范围尚未公布。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.drivewealth.com/2026/11/drivewealth-receives-mica-authorization-from-the-bank-of-lithuania-to-provide-crypto-asset-services-across-the-eu/" target="_blank" rel="noopener" title="DriveWealth · 发布 2026-11-10" aria-label="来源 1：DriveWealth · 发布 2026-11-10">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-perp-mechanism-research">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">永续机制研究</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">GRVT把链下撮合与链上资金授权分开，并由保险基金接管强平仓位</h3>
+          <p class="item-b">GRVT在中心化服务中撮合订单，再把成交、转账与清算验证送上自有链并用零知识证明提交以太坊；用户每次影响资金的操作仍需登记钱包签名。触发强平后，整笔逐仓仓位或整个全仓账户会转给保险基金，执行速度与资金控制并未由同一层承担。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://api-docs.grvt.io/learn/" target="_blank" rel="noopener" title="GRVT API Docs · 未标发布日期 · 核验 2026-11-11" aria-label="来源 1：GRVT API Docs · 未标发布日期 · 核验 2026-11-11">1</a><a class="source-number" href="https://help.grvt.io/en/articles/10255070-what-s-the-liquidation-process-on-grvt" target="_blank" rel="noopener" title="GRVT Help Center · 发布 2025-12-24 · 核验 2026-11-11" aria-label="来源 2：GRVT Help Center · 发布 2025-12-24 · 核验 2026-11-11">2</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">04</span>
+          <div>
+            <h2 class="sec-title">AI模型、评估与运行效率</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月10日，Google推出多模态知识Agent基准与Gemini 4 Carbon</h3>
+          <p class="item-b">Google与Artificial Analysis推出200项多模态知识工作基准，所有模型使用同一开源Agent工具、沙箱与轮次预算，私有题集防止训练泄漏。Gemini 4 Carbon同步开放API，在该基准质量排名第二，官方称单任务平均成本约为第一名的六分之一。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/multimodal-knowledge-agent-benchmark/" target="_blank" rel="noopener" title="Google · 发布 2026-11-10" aria-label="来源 1：Google · 发布 2026-11-10">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月10日，Scale AI量化长时Agent训练中GRPO与PPO的分界</h3>
+          <p class="item-b">Scale AI发现，任务越长越复杂，GRPO要用更大批量才能追上带评论器的PPO；在千步Agent轨迹中，单一成败奖励会把信用分散到大量动作。研究建议把批量大小与评论器成本一起选择，小预算下PPO可用更少GPU时数达到相当结果。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://labs.scale.com/blog/to-critic-or-not-to-critic-grpo-vs-ppo" target="_blank" rel="noopener" title="Scale AI · 发布 2026-11-10" aria-label="来源 1：Scale AI · 发布 2026-11-10">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月9日，Vercel把Agent沙箱快照中位耗时降到0.4秒以内</h3>
+          <p class="item-b">Vercel用新的快照索引格式复用数据帧并并行读写，使Sandbox快照中位耗时从4.4秒降到0.4秒以内，恢复中位耗时由500毫秒降到250毫秒。持久沙箱停止时会自动保存，新快照无需配置即可采用，旧快照仍保留原格式。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://vercel.com/changelog/vercel-sandbox-snapshot-creation-is-now-up-to-10x-faster" target="_blank" rel="noopener" title="Vercel · 发布 2026-11-09" aria-label="来源 1：Vercel · 发布 2026-11-09">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>
