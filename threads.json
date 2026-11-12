@@ -130,7 +130,7 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-11-10",
+      "last_update": "2026-11-12",
       "cadence_days": 6,
       "next_check": "2026-11-14",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
@@ -451,6 +451,11 @@
           "date": "2026-11-10",
           "point": "OKX开始把多发行方的同一股票代币合并为统一平台资产、订单簿和公司行动规则，并公布SNDK八比一拆股时永续仓位先按旧标记价结算、再以新标记价重开的流程。RWA供给继续扩列时，权利映射、盈亏确认、保护单和API订单连续性已成为独立产品能力。",
           "url": "https://www.okx.com/help/okx-to-list-unified-tokenized-stocks-xnvdl-xskdd-and-more-for-spot-trading"
+        },
+        {
+          "date": "2026-11-12",
+          "point": "xStocks首批把200多只英国和欧盟股票代币带入Kraken、联盟平台及多条链，Pyth同时接入五家NYSE集团市场的实时报价、成交和停牌状态。RWA供给从美国资产扩展到英欧市场时，受监管托管与原始交易所数据开始同步补齐。",
+          "url": "https://www.payward.com/press-release/xstocks-uk-eu-equities"
         }
       ]
     },
@@ -1079,7 +1084,7 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-08-25",
-      "last_update": "2026-11-11",
+      "last_update": "2026-11-12",
       "cadence_days": 6,
       "next_check": "2026-11-17",
       "thesis": "交易与资金后台正在从单一平台能力拆成可复用的撮合、清算、托管和结算服务。多家银行联合发行链上货币后，责任分工也从交易入口延伸到共同委托、信托托管与跨境支付；生产规模和故障责任仍需验证。",
@@ -1180,6 +1185,11 @@
           "date": "2026-11-11",
           "point": "DriveWealth欧洲实体取得立陶宛银行MiCA授权，并计划新年起向银行、金融科技公司、钱包和经纪商分阶段提供加密服务；同一主体已有MiFID II牌照，一次接入可覆盖证券、期权与加密资产，但具体上线范围、生产规模和故障责任仍未披露。",
           "url": "https://www.drivewealth.com/2026/11/drivewealth-receives-mica-authorization-from-the-bank-of-lithuania-to-provide-crypto-asset-services-across-the-eu/"
+        },
+        {
+          "date": "2026-11-12",
+          "point": "Decrypt把Phoenix的100多个永续市场嵌入新闻页面，读者用同一自托管账户余额直接下单，媒体保留内容和用户入口，撮合、流动性与链上执行由Phoenix承接。交易后台服务化进一步进入内容分发场景，但地区可用性、生产订单流和故障责任仍待验证。",
+          "url": "https://decrypt.co/382992/decrypt-becomes-first-news-publisher-to-offer-perps-trading-powered-by-solanas-phoenix"
         }
       ]
     },
@@ -1445,7 +1455,7 @@
       "first_seen": "2026-10-21",
       "last_update": "2026-11-05",
       "cadence_days": 7,
-      "next_check": "2026-11-12",
+      "next_check": "2026-11-19",
       "thesis": "首次研究建档，10月21日仅为本报核验与建立论点的日期，不代表项目当天上线或发生新事件，因此log暂空。DeepBook Margin复用现货深度但按单池隔离风险，predict.fun生息抵押依赖Venus取回资金；资本复用需要分别验证风险能否抵消、收益如何领取和退出是否受外部流动性限制。",
       "why_us": "比较杠杆交易和生息抵押产品时，应分开说明交易流动性、保证金风险归属与提现结算依赖。共享订单簿不能自动推出跨市场保证金效率，获得借贷收益也不能自动承诺随时到账；这些差别会影响账户设计、风险提示和退出流程。",
       "watch_for": "DeepBook Margin的实际主网单池参数、坏账与清算体验 / predict.fun生息市场具体版本、Venus利用率与赎回延迟 / 新机制或参数变更 / 独立交易者采用与退出证据 / 是否出现足以证伪现有比较的跨池抵消或即时赎回机制",

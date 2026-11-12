@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-11-12</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6; min-width:0; overflow-wrap:anywhere;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
+    white-space:nowrap; letter-spacing:0; line-height:1.5;}
+  .source-label{color:#a3987f; flex:none;}
+  .source-number{color:#8a7f66; text-decoration:underline; text-underline-offset:2px;
+    min-width:14px; padding:2px 0; text-align:center; flex:none; font-variant-numeric:tabular-nums;}
+  .source-number:hover,.source-number:focus-visible{color:#b03a2e;}
+  .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .research-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
+  .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
+  .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
+  .research-row + .research-row{border-top:1px dotted #e4ded0;}
+  .research-row dt{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dd{min-width:0; color:#403a2e;}
+  .research-inference{background:#f7f4ec; padding:10px;}
+  .research-discussions{list-style:none;}
+  .research-discussions li + li{margin-top:8px;}
+  .discussion-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 130 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 11 月 12 日 · 星期四</div>
+    </header>
+    <p class="lead">xStocks一次把200多只英欧股票带上链，Pyth同时接入五家NYSE市场的实时行情。链上股票供给与官方价格数据正在同步扩张。</p>
+
+
+      <section class="sec sec-tokenized-equities-infrastructure">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">代币化股票与价格基础设施</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月11日，xStocks把200多只英国和欧盟股票带上链</h3>
+          <p class="item-b">Payward与GTN首批发行200多只英国和欧盟股票代币，每枚由受监管托管方持有的底层股票一比一支持，并从首日起进入Kraken、联盟平台及多条链。xStocks总资产数由此超过1500只，但英国和美国投资者仍不能使用。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.payward.com/press-release/xstocks-uk-eu-equities" target="_blank" rel="noopener" title="Payward · 发布 2026-11-11" aria-label="来源 1：Payward · 发布 2026-11-11">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月11日，Pyth接入五家NYSE市场的实时股票行情</h3>
+          <p class="item-b">Pyth成为NYSE BQT分发方，向获许可客户提供五家NYSE集团市场的最优买卖价、成交、官方收盘价及停牌恢复状态。股票永续和代币化平台可把原始市场状态与Pyth全天指数并列使用，但接入仍需直接取得NYSE许可。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.pyth.network/blog/pyth-network-adds-nyse-data-to-pyth-data-marketplace" target="_blank" rel="noopener" title="Pyth Network · 发布 2026-11-11" aria-label="来源 1：Pyth Network · 发布 2026-11-11">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-perp-products-and-distribution">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">永续产品与分发入口</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月11日，Decrypt把Phoenix永续交易嵌入新闻页面</h3>
+          <p class="item-b">Decrypt已把Phoenix的100多个永续市场接入站内，读者用同一自托管Solana账户余额即可交易加密、股票、商品和盘前标的，无需离开新闻页或另连钱包。媒体开始直接承接交易入口，撮合与流动性仍由Phoenix负责。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://decrypt.co/382992/decrypt-becomes-first-news-publisher-to-offer-perps-trading-powered-by-solanas-phoenix" target="_blank" rel="noopener" title="Decrypt · 发布 2026-11-11" aria-label="来源 1：Decrypt · 发布 2026-11-11">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月11日，Bybit上线Dangote盘前永续并预设股本重置</h3>
+          <p class="item-b">Bybit上线DANGOTEUSDT盘前永续，最高五倍杠杆，盘前阶段每四小时固定收取0.005%资金费。合约先按估算股本定价，正式股本披露后平台可按比例重置为一份合约对应一股；若IPO取消，结算价由平台规则决定。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://announcements.bybit.com/en/article/new-listing-listing-of-dangoteusdt-on-bybit-pre-ipo-tradfi-perpetual-on-nov-11-2026-11-00am-utc--art6ad921fb4a95/" target="_blank" rel="noopener" title="Bybit · 发布 2026-11-11" aria-label="来源 1：Bybit · 发布 2026-11-11">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月11日，Binance公布两只新的TradFi永续合约</h3>
+          <p class="item-b">Binance公布NUUSDT与FRHCUSDT，将于11月12日以USDT结算、最高20倍杠杆并支持多资产模式和全天交易。两只合约每八小时结算资金费，费率上限为正负2%；公告给出交易参数，但尚未提供深度、持仓或休市定价表现。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.bh/en/support/announcement/detail/e7a88ff576b541608d0845f3b666ec66" target="_blank" rel="noopener" title="Binance · 发布 2026-11-11" aria-label="来源 1：Binance · 发布 2026-11-11">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">AI模型与分发工具</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月11日，Qwen4-Max预览版开放多模态与Agent能力</h3>
+          <p class="item-b">QwenCloud开放Qwen4-Max-Preview，支持文本、图片和视频理解、深度推理、联网搜索、工具调用与结构化输出，并兼容OpenAI和Anthropic接口。当前仅通过Token Plan提供，仍属预览版，官方尚未给出独立基准和按量价格。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://docs.qwencloud.com/changelog/models" target="_blank" rel="noopener" title="QwenCloud · 发布 2026-11-11" aria-label="来源 1：QwenCloud · 发布 2026-11-11">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月10日，ChatGPT开放企业资料管理与Business Agent</h3>
+          <p class="item-b">OpenAI测试Businesses in ChatGPT，企业可认领资料、更新价格与库存并查看被提及和点击的聚合数据。符合条件的美国电商和在线服务商还能上线独立标注的Business Agent承接咨询，并可把它设为广告落地页。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/introducing-businesses-chatgpt/" target="_blank" rel="noopener" title="OpenAI · 发布 2026-11-10" aria-label="来源 1：OpenAI · 发布 2026-11-10">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月11日，Vercel AI Gateway接入Gemini Decision 1</h3>
+          <p class="item-b">Vercel AI Gateway接入Gemini Decision 1，可对文本、图片、音频、视频和PDF返回布尔概率、选项或评分，用于请求路由、策略检查和Agent工具过滤，不生成普通文本token。调用记录会与其他模型一起进入日志和预算。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://vercel.com/changelog/gemini-decision-1-now-available-on-ai-gateway" target="_blank" rel="noopener" title="Vercel · 发布 2026-11-11" aria-label="来源 1：Vercel · 发布 2026-11-11">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>
