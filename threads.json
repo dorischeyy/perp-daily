@@ -130,9 +130,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-11-12",
+      "last_update": "2026-11-13",
       "cadence_days": 6,
-      "next_check": "2026-11-14",
+      "next_check": "2026-11-19",
       "thesis": "虚拟和代币化非加密资产的永续交易已经从零散尝试变成独立资产类别。币安研究院统计 2026 上半年稳定币结算 TradFi 永续交易量超过 1.1 万亿美元；The Block 07-22 又给出更聚焦的月度口径：跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元，股票永续同期增长约 7 倍。但 Binance、Hyperliquid 与 OKX 合计占 6 月超过 80% 的成交；Hyperliquid 的 HIP-3 已贡献约一半成交，builder 分成与收入成本上升却使规模增长和协议净收入留存开始分离。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
       "watch_for": "7 月 RWA 永续月成交能否维持 6 月水平 / 4700 亿美元成交能否转化为持续 OI 与长期持仓 / Hyperliquid 以外的链上平台能否缩小与 CEX 的差距 / 订单流是否继续集中在少数事件型股票",
@@ -456,6 +456,11 @@
           "date": "2026-11-12",
           "point": "xStocks首批把200多只英国和欧盟股票代币带入Kraken、联盟平台及多条链，Pyth同时接入五家NYSE集团市场的实时报价、成交和停牌状态。RWA供给从美国资产扩展到英欧市场时，受监管托管与原始交易所数据开始同步补齐。",
           "url": "https://www.payward.com/press-release/xstocks-uk-eu-equities"
+        },
+        {
+          "date": "2026-11-13",
+          "point": "Kalshi把特定IPO股票永续的最早上市时间由IPO后至少一个月缩短到第二个交易日：要求IPO以来成交至少240万股、发行市值至少30亿美元，并保留当前市值至少1000亿美元等其他标准；规则11月19日生效。受监管股票永续开始追赶新股上市节奏，但不是所有IPO自动可交易。",
+          "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-12/pdf/FR-2026-11-12.pdf"
         }
       ]
     },
@@ -1271,9 +1276,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-09-18",
-      "last_update": "2026-11-11",
+      "last_update": "2026-11-13",
       "cadence_days": 6,
-      "next_check": "2026-11-17",
+      "next_check": "2026-11-19",
       "thesis": "前沿模型评估正在从发布前测试推进到生产运行中的身份、授权与持续监督。高风险动作的逐笔授权和推理前外部政策裁决开始进入正式企业产品，但跨产品覆盖、异常时放行或阻断、责任归属与实际采用仍需逐项核验。",
       "why_us": "HertzFlow若引入可调用交易、钱包或后台工具的智能体，需要把评估权限、真实系统隔离、异常停止、事件披露和评估方独立性写进上线流程，不能只看离线基准分数。",
       "watch_for": "嵌入式评估访问与报告标准 / 自动化研发共同测量与人类审查触发条件 / 评估方资金独立性 / 真实系统隔离规范 / 测试越界事件披露 / 高风险工具调用的阻断门槛",
@@ -1402,6 +1407,11 @@
           "date": "2026-11-11",
           "point": "Google与Artificial Analysis推出200项私有多模态工作任务基准，所有模型使用同一开源Agent框架、工具、沙箱与轮次预算，自动评分与专家判断一致率为96%；Gemini 4 Carbon在质量排名第二且官方称成本约为首名六分之一，评估开始同时约束任务真实性、工具环境与成本。",
           "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/multimodal-knowledge-agent-benchmark/"
+        },
+        {
+          "date": "2026-11-13",
+          "point": "Scale与新加坡IMDA用1860个本地法律场景测试19个模型，其中760个故意缺少关键事实；联网后平均得分由53.8%升至63.0%，但缺失事实场景仍约39%完全不追问。高风险评估必须同时测规则检索和模型是否知道何时补问。",
+          "url": "https://scale.com/blog/scale-imda-legal-reasoning-benchmark"
         }
       ]
     },

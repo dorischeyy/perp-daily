@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-11-13</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6; min-width:0; overflow-wrap:anywhere;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
+    white-space:nowrap; letter-spacing:0; line-height:1.5;}
+  .source-label{color:#a3987f; flex:none;}
+  .source-number{color:#8a7f66; text-decoration:underline; text-underline-offset:2px;
+    min-width:14px; padding:2px 0; text-align:center; flex:none; font-variant-numeric:tabular-nums;}
+  .source-number:hover,.source-number:focus-visible{color:#b03a2e;}
+  .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .research-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
+  .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
+  .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
+  .research-row + .research-row{border-top:1px dotted #e4ded0;}
+  .research-row dt{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dd{min-width:0; color:#403a2e;}
+  .research-inference{background:#f7f4ec; padding:10px;}
+  .research-discussions{list-style:none;}
+  .research-discussions li + li{margin-top:8px;}
+  .discussion-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 131 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 11 月 13 日 · 星期五</div>
+    </header>
+    <p class="lead">Kalshi拟把符合条件的IPO股票永续缩短至上市后第二个交易日，规则11月19日生效。KuCoin同日下调六只永续合约的最大杠杆并提高维持保证金。</p>
+
+
+      <section class="sec sec-regulated-equity-perps-and-tokenized-stocks">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">股票永续与代币化股票</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月12日，联邦公报公布Kalshi放宽IPO股票永续上市条件</h3>
+          <p class="item-b">Kalshi拟允许符合条件的IPO股票最早在上市后第二个交易日进入永续证券期货，不再统一等待至少一个月。标的需自IPO起成交至少240万股、发行市值至少30亿美元，并继续满足当前市值至少1000亿美元等标准；规则11月19日生效。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.govinfo.gov/content/pkg/FR-2026-11-12/pdf/FR-2026-11-12.pdf" target="_blank" rel="noopener" title="Federal Register · 发布 2026-11-12" aria-label="来源 1：Federal Register · 发布 2026-11-12">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月12日，KuCoin完成AAPLX公司行动并恢复交易</h3>
+          <p class="item-b">KuCoin完成Apple xStock的代币化股票分红调整，按新旧乘数换算用户余额并相应调整价格，随后恢复充提、划转和现货交易。平台在处理前取消全部挂单，并提醒API和网格用户重建策略；总价值目标不变，但仍受市场波动影响。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.kucoin.com/announcement/en-announcement-on-completion-of-apple-xstock-aaplx-tokenized-stock-dividend-and-services-resumption" target="_blank" rel="noopener" title="KuCoin · 发布 2026-11-12" aria-label="来源 1：KuCoin · 发布 2026-11-12">1</a><a class="source-number" href="https://www.kucoin.com/announcement/en-announcement-on-apple-xstock-aaplx-tokenized-stock-dividend" target="_blank" rel="noopener" title="KuCoin初始通知 · 发布 2026-11-12" aria-label="来源 2：KuCoin初始通知 · 发布 2026-11-12">2</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-perp-risk-and-execution">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">永续风控与执行</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月13日，KuCoin下调六只永续合约最大杠杆</h3>
+          <p class="item-b">KuCoin把APR、BANK、AEVO、MASK、NEIROCTO和B2六只逐仓永续的最高风险档最大杠杆由50倍降至20倍，并把维持保证金率由1.5%提高到2.5%，其他档位也同步调整。新参数于06:00至07:00 UTC切换，已有仓位需重新核对强平距离。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.kucoin.com/announcement/en-kucoin-futures-will-adjust-the-maximum-leverage-and-risk-limit-of-multiple-perpetual-contracts-2026-11-13" target="_blank" rel="noopener" title="KuCoin · 发布 2026-11-12" aria-label="来源 1：KuCoin · 发布 2026-11-12">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月11日，Paradex为RFQ接口补充未开户状态</h3>
+          <p class="item-b">Paradex v1.171.3让RFQ接口在账户仍处于开户流程时返回NOT_ONBOARDED，并在前端向未入金的新账户展示充值提示而非通用报错。版本还修正零价格期权组合的成交带显示，减少账户状态与真实报价异常被混为一类。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://docs.paradex.trade/releases/changelog" target="_blank" rel="noopener" title="Paradex · 发布 2026-11-11" aria-label="来源 1：Paradex · 发布 2026-11-11">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-trading-incentives">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">交易激励</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月12日，Backpack启动14天永续交易奖励</h3>
+          <p class="item-b">Backpack从11月12日至25日每天分配2500美元，14天总奖池3.5万美元，覆盖加密、股票与ETF永续且计入API成交。参与者需先报名并在每日快照时保持至少100美元余额；前20名分一半奖池，其余合格用户按成交量分另一半。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://learn.backpack.exchange/blog/the-perps-open-daily-rewards" target="_blank" rel="noopener" title="Backpack · 发布 2026-11-12" aria-label="来源 1：Backpack · 发布 2026-11-12">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">04</span>
+          <div>
+            <h2 class="sec-title">AI评估与Agent工具</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月12日，Scale与IMDA发布新加坡法律推理基准</h3>
+          <p class="item-b">SG-LegalClarify用1860个新加坡法律场景测试19个模型，其中760个故意缺少关键事实。联网后平均得分由53.8%升至63.0%，但面对缺失信息仍约39%完全不追问；即使发问，平均也只覆盖39%的相关缺口。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://scale.com/blog/scale-imda-legal-reasoning-benchmark" target="_blank" rel="noopener" title="Scale AI · 发布 2026-11-12" aria-label="来源 1：Scale AI · 发布 2026-11-12">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月12日，Kimi Code CLI加入持久权限规则与人工验收</h3>
+          <p class="item-b">Kimi Code CLI v2.6.0可自动加载用户与项目权限规则，并按拒绝、询问、允许的优先级处理。Tower同时新增artifact任务，要求关键产物先提交并经人工明确接受后才能合并；同名Skill也可按来源目录区分。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.kimi.com/code/docs/en/kimi-code/whats-new.html" target="_blank" rel="noopener" title="Kimi Code · 发布 2026-11-12" aria-label="来源 1：Kimi Code · 发布 2026-11-12">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月12日，Databricks拒绝策略覆盖Agent与MCP服务</h3>
+          <p class="item-b">Databricks把ABAC DENY策略扩展到模型服务、模型供应商服务、MCP服务、Agent服务和Skill，并允许策略直接绑定到具体对象。功能仍为Beta，但管理员已能用同一拒绝规则约束数据、密钥和多类AI可执行资产。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://docs.databricks.com/aws/en/release-notes/product/2026/november" target="_blank" rel="noopener" title="Databricks · 发布 2026-11-12" aria-label="来源 1：Databricks · 发布 2026-11-12">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>
