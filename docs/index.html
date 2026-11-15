@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-11-14</title>
+<title>Perp DEX 日报 · 2026-11-15</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -100,72 +100,92 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 132 期</span>
+        <span>每日链上观察</span><span>第 133 期</span>
       </div>
       <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 11 月 14 日 · 星期六</div>
+      <div class="mast-sub">2026 年 11 月 15 日 · 星期日</div>
     </header>
-    <p class="lead">KuCoin一次上线五只股票指数永续，并为SNDK拆股安排先平仓、再按新价格重开。BYDFi则因参数与Anthropic披露不一致，下架其盘前永续。</p>
+    <p class="lead">trade.xyz在英伟达财报前把NVDA永续最高杠杆临时减半，Aster与Ondo则把现货纳入永续策略和保证金。竞争焦点从扩列转向风险容量与资金复用。</p>
 
 
-      <section class="sec sec-equity-perp-lifecycle">
+      <section class="sec sec-risk-capital">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">股票永续与公司行动</h2>
+            <h2 class="sec-title">风险容量与资金复用</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月13日，KuCoin上线五只24小时股票指数永续</h3>
-          <p class="item-b">KuCoin上线DJT、eBay、Flex、Rumble和Twist Bioscience五只USDT股票指数永续，均支持24小时交易、最高20倍杠杆和每8小时资金费。这些合约只跟踪公开股票价格，不代表持有股份，也不会交付股票；可用地区仍受平台限制。</p>
+          <h3 class="item-h">11月15日，trade.xyz在英伟达财报前把NVDA杠杆减半</h3>
+          <p class="item-b">trade.xyz将在英伟达11月17日盘后财报前，把NVDA永续最高杠杆由20倍临时降至10倍，11月15日20:05美东时间生效，并计划在财报发布后恢复。公告未说明已有仓位是否同步降档，也未给出波动或深度恢复阈值。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.kucoin.com/announcement/en-kucoin-futures-will-list-multiple-stock-index-perpetual-contracts-2026-11-13" target="_blank" rel="noopener" title="KuCoin · 发布 2026-11-13" aria-label="来源 1：KuCoin · 发布 2026-11-13">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://teapawt.net/tradexyz?filter=posts" target="_blank" rel="noopener" title="trade.xyz官方X镜像 · 发布 2026-11-15" aria-label="来源 1：trade.xyz官方X镜像 · 发布 2026-11-15">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月13日，KuCoin公布SNDK拆股前后的永续重开流程</h3>
-          <p class="item-b">因SanDisk进行八比一拆股，KuCoin将在11月19日停止SNDKUSDT开仓，以最后30分钟平均指数价结算持仓并撤销挂单，次日再上线合约。最终标记价会先用180秒从旧公式平滑切换，跟单和交易机器人还将更早停止。</p>
+          <h3 class="item-h">11月14日，Ondo Perps新增五只可作永续保证金的现货资产</h3>
+          <p class="item-b">Ondo Perps把MSTRon、INTCon、COINon、MRVLon和BMNRon五只现货资产接入订单簿，并允许它们作为已有永续仓位的保证金，便于做基差策略。公告没有披露抵押折扣、集中度限额或现货下跌时的追加保证金规则。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.kucoin.com/sitemap/announcement/1" target="_blank" rel="noopener" title="KuCoin · 发布 2026-11-13" aria-label="来源 1：KuCoin · 发布 2026-11-13">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://x.com/OndoPerps/status/2121213991091585525" target="_blank" rel="noopener" title="Ondo Perps · 发布 2026-11-14" aria-label="来源 1：Ondo Perps · 发布 2026-11-14">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月13日，BYDFi因参数偏差下架Anthropic盘前永续</h3>
-          <p class="item-b">BYDFi称ANTHROPICUSDT上线时采用的合约参数与Anthropic近期公开信息存在差异，已停止新开仓，并要求用户在11月17日15:00前平仓。届时未平仓头寸将按下架规则统一结算，挂单自动取消；该合约未获Anthropic许可或背书。</p>
+          <h3 class="item-h">11月13日，Aster Vault支持同一金库交易现货与永续</h3>
+          <p class="item-b">Aster允许新建Vault时选择Perp + Spot，管理人可在同一金库运行现货与永续对冲或资金费中性策略。官方只确认创建入口和策略范围，尚未说明两类仓位是否共享保证金、现货资产折扣、清算顺序和赎回等待。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.bydfi.com/vi-VN/announcements/article/anthropicusdt-contract-delisting-notice-17827791534759" target="_blank" rel="noopener" title="BYDFi · 发布 2026-11-13" aria-label="来源 1：BYDFi · 发布 2026-11-13">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://nitter.rdrama.net/Aster_DEX" target="_blank" rel="noopener" title="Aster官方X镜像 · 发布 2026-11-13" aria-label="来源 1：Aster官方X镜像 · 发布 2026-11-13">1</a>
           </div>
         </article>
         </div>
       </section>
-      <section class="sec sec-perp-operations">
+      <section class="sec sec-perp-product-operations">
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <h2 class="sec-title">永续运行与状态管理</h2>
+            <h2 class="sec-title">永续产品与用户运营</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月13日，Paradex新增系统状态WebSocket通道</h3>
-          <p class="item-b">Paradex在v1.171.5新增system_status WebSocket通道，客户端可实时接收维护和系统状态变化，不必只靠请求失败判断平台是否可用。同日版本还把Paradex Bridge开放给邮箱和社交账号登录用户，用于处理提现。</p>
+          <h3 class="item-h">11月14日，Pacifica移动端上线OCO订单</h3>
+          <p class="item-b">Pacifica移动端新增OCO订单，用户可同时挂出两个互斥订单，其中一个成交后系统自动取消另一个，可用于突破、回撤和持仓退出。更新把组合退出带到移动端，但公告未披露网络延迟、部分成交或取消失败时的兜底顺序。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://docs.paradex.trade/releases/changelog" target="_blank" rel="noopener" title="Paradex · 发布 2026-11-13" aria-label="来源 1：Paradex · 发布 2026-11-13">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://x.com/pacifica_fi/status/2121234849659044023" target="_blank" rel="noopener" title="Pacifica · 发布 2026-11-14" aria-label="来源 1：Pacifica · 发布 2026-11-14">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月14日，Variational加入Scale Orders与Cancel All</h3>
+          <p class="item-b">Variational Omni新增Scale Orders，可按设定区间自动放置多笔限价单，并加入一键撤销全部挂单，订单面板也改进价差深度显示。功能适合分层建仓和快速收缩风险，但官方未披露批量订单上限与极端行情下的撤单延迟。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://x.com/variational_io/status/2121241706863751464" target="_blank" rel="noopener" title="Variational · 发布 2026-11-14" aria-label="来源 1：Variational · 发布 2026-11-14">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月13日，Nado结束持续51周的积分计划</h3>
+          <p class="item-b">Nado停止积分累计，并称51周内向超过4.5万名用户发放约3320万积分，现有余额锁定，后续处理另行公布。平台把退出积分计划与即将推出的机构大额交易产品PRIME和移动端Purps相连，但尚未给出上线日期或迁移权益。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://nitter.cf/NADOHQ" target="_blank" rel="noopener" title="Nado官方X镜像 · 发布 2026-11-13" aria-label="来源 1：Nado官方X镜像 · 发布 2026-11-13">1</a>
           </div>
         </article>
         </div>
@@ -174,39 +194,39 @@
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <h2 class="sec-title">AI评估与Agent工具</h2>
+            <h2 class="sec-title">AI模型与Agent基础设施</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月12日，Scale发布工作区Agent隐性边界基准</h3>
-          <p class="item-b">BARC-Bench用九个模拟工作区的110项日常任务测试Agent能否遵守未写进请求的安全边界。最佳模型GPT-6 Astra五次都安全完成的任务占72.7%，仍有27.3%的任务至少一次越界；通信任务比修改工作区更难稳定安全。</p>
+          <h3 class="item-h">11月12日，Google发布Gemini 4 Hydrogen与自动模型编排</h3>
+          <p class="item-b">Gemini 4 Hydrogen面向编码与Agent执行开放百万上下文，API每百万输入和输出分别为1.5美元、7.5美元。Google同时推出Orchestrator，在Carbon与Hydrogen间动态切换，官方测试称任务成功率接近Carbon，配额少24%、速度快19%。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://labs.scale.com/blog/barc-bench-when-benign-workplace-requests-lead-ai-agents-to-cause-harm" target="_blank" rel="noopener" title="Scale Labs · 发布 2026-11-12" aria-label="来源 1：Scale Labs · 发布 2026-11-12">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/" target="_blank" rel="noopener" title="Google · 发布 2026-11-12" aria-label="来源 1：Google · 发布 2026-11-12">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月12日，Scale量化System-1模型替代LLM裁判的条件</h3>
-          <p class="item-b">Scale比较14个System-1决策模型与四个生成式裁判，发现五个模型在五项成对和四选一基准上与无推理GPT-5.6无显著差异；加入参考答案后，best-of-16成本约为推理模型的十六分之一，但注入翻转率可从0%到49%。</p>
+          <h3 class="item-h">11月13日，OpenAI推出需逐笔生物验证的Agent钱包</h3>
+          <p class="item-b">ChatGPT Wallet先向美国ChatGPT Pro成年用户开放，用户逐笔核对商品、总额和卡片后，以面容或指纹批准；支付网络向Agent提供替代卡号，实际卡片信息不暴露。首阶段仅在dots内使用，网站风控仍可能误拒Agent订单。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://labs.scale.com/blog/to-jev-or-not-to-jev" target="_blank" rel="noopener" title="Scale Labs · 发布 2026-11-12" aria-label="来源 1：Scale Labs · 发布 2026-11-12">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/introducing-chatgpt-wallet/" target="_blank" rel="noopener" title="OpenAI · 发布 2026-11-13" aria-label="来源 1：OpenAI · 发布 2026-11-13">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月12日，Kimi Code Desktop补充多目录状态与一键诊断</h3>
-          <p class="item-b">Kimi Code Desktop v1.3.4在会话侧栏按目录展示分支、改动和PR，并支持一键导出日志与崩溃报告；截图工具新增像素放大和取色，项目也可更换主目录。更新强化多目录任务的状态定位，但没有新增模型能力。</p>
+          <h3 class="item-h">11月13日，DeepSeek开放完整应用能力API</h3>
+          <p class="item-b">DeepSeek把网页与图片搜索、深度检索、文件输入、URL读取和安全检查接入Messages、Responses与Chat Completions API，并另提供OCR、ASR和TTS。工具调用与上下文拼装由服务端处理，但工具费另计，公开应用仍须启用安全检查。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.kimi.com/code/docs/en/kimi-code/whats-new.html" target="_blank" rel="noopener" title="Kimi Code · 发布 2026-11-12" aria-label="来源 1：Kimi Code · 发布 2026-11-12">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://api-docs.deepseek.com/news/news261113/" target="_blank" rel="noopener" title="DeepSeek · 发布 2026-11-13" aria-label="来源 1：DeepSeek · 发布 2026-11-13">1</a>
           </div>
         </article>
         </div>

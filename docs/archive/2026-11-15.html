@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-11-15</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6; min-width:0; overflow-wrap:anywhere;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
+    white-space:nowrap; letter-spacing:0; line-height:1.5;}
+  .source-label{color:#a3987f; flex:none;}
+  .source-number{color:#8a7f66; text-decoration:underline; text-underline-offset:2px;
+    min-width:14px; padding:2px 0; text-align:center; flex:none; font-variant-numeric:tabular-nums;}
+  .source-number:hover,.source-number:focus-visible{color:#b03a2e;}
+  .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .research-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
+  .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
+  .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
+  .research-row + .research-row{border-top:1px dotted #e4ded0;}
+  .research-row dt{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dd{min-width:0; color:#403a2e;}
+  .research-inference{background:#f7f4ec; padding:10px;}
+  .research-discussions{list-style:none;}
+  .research-discussions li + li{margin-top:8px;}
+  .discussion-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 133 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 11 月 15 日 · 星期日</div>
+    </header>
+    <p class="lead">trade.xyz在英伟达财报前把NVDA永续最高杠杆临时减半，Aster与Ondo则把现货纳入永续策略和保证金。竞争焦点从扩列转向风险容量与资金复用。</p>
+
+
+      <section class="sec sec-risk-capital">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">风险容量与资金复用</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月15日，trade.xyz在英伟达财报前把NVDA杠杆减半</h3>
+          <p class="item-b">trade.xyz将在英伟达11月17日盘后财报前，把NVDA永续最高杠杆由20倍临时降至10倍，11月15日20:05美东时间生效，并计划在财报发布后恢复。公告未说明已有仓位是否同步降档，也未给出波动或深度恢复阈值。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://teapawt.net/tradexyz?filter=posts" target="_blank" rel="noopener" title="trade.xyz官方X镜像 · 发布 2026-11-15" aria-label="来源 1：trade.xyz官方X镜像 · 发布 2026-11-15">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月14日，Ondo Perps新增五只可作永续保证金的现货资产</h3>
+          <p class="item-b">Ondo Perps把MSTRon、INTCon、COINon、MRVLon和BMNRon五只现货资产接入订单簿，并允许它们作为已有永续仓位的保证金，便于做基差策略。公告没有披露抵押折扣、集中度限额或现货下跌时的追加保证金规则。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://x.com/OndoPerps/status/2121213991091585525" target="_blank" rel="noopener" title="Ondo Perps · 发布 2026-11-14" aria-label="来源 1：Ondo Perps · 发布 2026-11-14">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月13日，Aster Vault支持同一金库交易现货与永续</h3>
+          <p class="item-b">Aster允许新建Vault时选择Perp + Spot，管理人可在同一金库运行现货与永续对冲或资金费中性策略。官方只确认创建入口和策略范围，尚未说明两类仓位是否共享保证金、现货资产折扣、清算顺序和赎回等待。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://nitter.rdrama.net/Aster_DEX" target="_blank" rel="noopener" title="Aster官方X镜像 · 发布 2026-11-13" aria-label="来源 1：Aster官方X镜像 · 发布 2026-11-13">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-perp-product-operations">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">永续产品与用户运营</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月14日，Pacifica移动端上线OCO订单</h3>
+          <p class="item-b">Pacifica移动端新增OCO订单，用户可同时挂出两个互斥订单，其中一个成交后系统自动取消另一个，可用于突破、回撤和持仓退出。更新把组合退出带到移动端，但公告未披露网络延迟、部分成交或取消失败时的兜底顺序。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://x.com/pacifica_fi/status/2121234849659044023" target="_blank" rel="noopener" title="Pacifica · 发布 2026-11-14" aria-label="来源 1：Pacifica · 发布 2026-11-14">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月14日，Variational加入Scale Orders与Cancel All</h3>
+          <p class="item-b">Variational Omni新增Scale Orders，可按设定区间自动放置多笔限价单，并加入一键撤销全部挂单，订单面板也改进价差深度显示。功能适合分层建仓和快速收缩风险，但官方未披露批量订单上限与极端行情下的撤单延迟。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://x.com/variational_io/status/2121241706863751464" target="_blank" rel="noopener" title="Variational · 发布 2026-11-14" aria-label="来源 1：Variational · 发布 2026-11-14">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月13日，Nado结束持续51周的积分计划</h3>
+          <p class="item-b">Nado停止积分累计，并称51周内向超过4.5万名用户发放约3320万积分，现有余额锁定，后续处理另行公布。平台把退出积分计划与即将推出的机构大额交易产品PRIME和移动端Purps相连，但尚未给出上线日期或迁移权益。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://nitter.cf/NADOHQ" target="_blank" rel="noopener" title="Nado官方X镜像 · 发布 2026-11-13" aria-label="来源 1：Nado官方X镜像 · 发布 2026-11-13">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">AI模型与Agent基础设施</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月12日，Google发布Gemini 4 Hydrogen与自动模型编排</h3>
+          <p class="item-b">Gemini 4 Hydrogen面向编码与Agent执行开放百万上下文，API每百万输入和输出分别为1.5美元、7.5美元。Google同时推出Orchestrator，在Carbon与Hydrogen间动态切换，官方测试称任务成功率接近Carbon，配额少24%、速度快19%。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/" target="_blank" rel="noopener" title="Google · 发布 2026-11-12" aria-label="来源 1：Google · 发布 2026-11-12">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月13日，OpenAI推出需逐笔生物验证的Agent钱包</h3>
+          <p class="item-b">ChatGPT Wallet先向美国ChatGPT Pro成年用户开放，用户逐笔核对商品、总额和卡片后，以面容或指纹批准；支付网络向Agent提供替代卡号，实际卡片信息不暴露。首阶段仅在dots内使用，网站风控仍可能误拒Agent订单。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/introducing-chatgpt-wallet/" target="_blank" rel="noopener" title="OpenAI · 发布 2026-11-13" aria-label="来源 1：OpenAI · 发布 2026-11-13">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月13日，DeepSeek开放完整应用能力API</h3>
+          <p class="item-b">DeepSeek把网页与图片搜索、深度检索、文件输入、URL读取和安全检查接入Messages、Responses与Chat Completions API，并另提供OCR、ASR和TTS。工具调用与上下文拼装由服务端处理，但工具费另计，公开应用仍须启用安全检查。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://api-docs.deepseek.com/news/news261113/" target="_blank" rel="noopener" title="DeepSeek · 发布 2026-11-13" aria-label="来源 1：DeepSeek · 发布 2026-11-13">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>
