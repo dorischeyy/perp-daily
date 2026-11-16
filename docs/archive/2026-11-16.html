@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-11-16</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6; min-width:0; overflow-wrap:anywhere;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
+    white-space:nowrap; letter-spacing:0; line-height:1.5;}
+  .source-label{color:#a3987f; flex:none;}
+  .source-number{color:#8a7f66; text-decoration:underline; text-underline-offset:2px;
+    min-width:14px; padding:2px 0; text-align:center; flex:none; font-variant-numeric:tabular-nums;}
+  .source-number:hover,.source-number:focus-visible{color:#b03a2e;}
+  .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .research-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
+  .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
+  .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
+  .research-row + .research-row{border-top:1px dotted #e4ded0;}
+  .research-row dt{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dd{min-width:0; color:#403a2e;}
+  .research-inference{background:#f7f4ec; padding:10px;}
+  .research-discussions{list-style:none;}
+  .research-discussions li + li{margin-top:8px;}
+  .discussion-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 134 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 11 月 16 日 · 星期一</div>
+    </header>
+    <p class="lead">HRC三季度报告显示，股票永续成交额已超过商品，占HIP-3总额近六成。同期第三方交易应用手续费环比增长50%。</p>
+
+
+      <section class="sec sec-market-structure">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">股票永续与交易成本</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月13日，HRC报告显示股票已占HIP-3季度成交额近六成</h3>
+          <p class="item-b">HRC公布三季度报告：股票永续成交额环比增长161%至1538亿美元，占HIP-3总额58.8%，超过商品。第三方应用通过交易入口获得的手续费环比增长50%至2500万美元。与此同时，原生加密永续交易回升，HIP-3占全平台永续成交额的比例从7月51%降至9月25%。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://hyperliquidresearch.xyz/reporting/hyperliquid-2026-q3-report" target="_blank" rel="noopener" title="Hyperliquid Research Collective，独立研究报告 · 发布 2026-11-13" aria-label="来源 1：Hyperliquid Research Collective，独立研究报告 · 发布 2026-11-13">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月13日，Ondo Perps上线跨现货与永续的交易量费率等级</h3>
+          <p class="item-b">Ondo Perps按过去14天已成交量计算费率等级，每日零点UTC更新，主余额与子余额自动共用。永续、代币化股票和私募市场成交均计入等级，但现货与永续各有对应费率，私募市场仍按独立费表收费。用户可在Portfolio的Fee Schedule查看等级。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://teapawt.org/OndoPerps/status/2121270390110421393" target="_blank" rel="noopener" title="Ondo Perps官方帖，Teapawt可读镜像 · 发布 2026-11-13" aria-label="来源 1：Ondo Perps官方帖，Teapawt可读镜像 · 发布 2026-11-13">1</a><a class="source-number" href="https://teapawt.org/OndoPerps/status/2121270399123992970" target="_blank" rel="noopener" title="Ondo Perps费率规则续帖，Teapawt可读镜像 · 发布 2026-11-13" aria-label="来源 2：Ondo Perps费率规则续帖，Teapawt可读镜像 · 发布 2026-11-13">2</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月13日，MGBX宣布SNDK拆股期间强制结清永续仓位</h3>
+          <p class="item-b">MGBX将于11月19日把SNDK永续改为只可平仓，20日北京时间9时按最新标记价结清剩余仓位，并终止相关交易机器人，22时35分重新开放交易。现货持仓则按一股拆八股调整数量。永续持仓会被关闭，不能把现货的数量换算理解成合约仓位自动延续。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://support.mgbx.com/hc/en-gb/articles/18369678166159--Important-Notice-Announcement-on-MGBX-s-Updated-Handling-Plan-for-the-SNDK-SanDisk-Stock-Split-and-Spot-Perpetual-Futures-Trading-Arrangements" target="_blank" rel="noopener" title="MGBX拆股处理更新公告 · 发布 2026-11-13" aria-label="来源 1：MGBX拆股处理更新公告 · 发布 2026-11-13">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-trading-entry">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">交易入口与用户运营</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">Wealthsimple把永续接入原有保证金账户，盈亏影响全账户购买力</h3>
+          <p class="item-b">用户在Wealthsimple手机端完成适当性与产品教育后，可用原有保证金账户交易加密资产及金银永续，盈亏以美元现金结算。仓位与股票、期货共享购买力，永续亏损也可能触发出售账户内其他资产。当前分批开放，仅支持市价单，尚未开放网页端。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://help.wealthsimple.com/hc/en-ca/articles/58514414640923-Trade-perpetual-futures-on-Wealthsimple" target="_blank" rel="noopener" title="Wealthsimple永续交易帮助页 · 发布 2026-11-12 · 核验 2026-11-16" aria-label="来源 1：Wealthsimple永续交易帮助页 · 发布 2026-11-12 · 核验 2026-11-16">1</a><a class="source-number" href="https://help.wealthsimple.com/hc/en-ca/articles/28510862839323-Open-a-margin-account" target="_blank" rel="noopener" title="Wealthsimple保证金账户说明 · 发布 2026-11-10 · 核验 2026-11-16" aria-label="来源 2：Wealthsimple保证金账户说明 · 发布 2026-11-10 · 核验 2026-11-16">2</a><a class="source-number" href="https://help.wealthsimple.com/hc/en-ca/articles/33647420196379-Understanding-margin-calls" target="_blank" rel="noopener" title="Wealthsimple追保与资产出售规则 · 发布 2026-11-01 · 核验 2026-11-16" aria-label="来源 3：Wealthsimple追保与资产出售规则 · 发布 2026-11-01 · 核验 2026-11-16">3</a><a class="source-number" href="https://www.wealthsimple.com/en-ca/learn/wealthsimple-perpetual-futures" target="_blank" rel="noopener" title="Wealthsimple介绍文章，网页可用说法与帮助页冲突 · 发布 2026-11-11 · 核验 2026-11-16" aria-label="来源 4：Wealthsimple介绍文章，网页可用说法与帮助页冲突 · 发布 2026-11-11 · 核验 2026-11-16">4</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Trasia用移动交易、地址侦查与社区组队赛连接Hyperliquid用户</h3>
+          <p class="item-b">Trasia用户可在手机内交易HyperCore和HIP-3市场，使用TWAP、分层挂单及标准或统一账户，并通过侦查模式查看地址操作。其社区赛以十人组队、队长招募奖励和团队盈利排名引导参与，交易仍依托Hyperliquid，尚无激励结束后的留存数据。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://play.google.com/store/apps/details?id=xyz.trasia.app" target="_blank" rel="noopener" title="Trasia Google Play产品页 · 发布 2026-10-08 · 核验 2026-11-16" aria-label="来源 1：Trasia Google Play产品页 · 发布 2026-10-08 · 核验 2026-11-16">1</a><a class="source-number" href="https://xitter.gq/trasiaxyz" target="_blank" rel="noopener" title="Trasia官方账号公开镜像，社区赛及Scout帖子 · 未标发布日期 · 核验 2026-11-16" aria-label="来源 2：Trasia官方账号公开镜像，社区赛及Scout帖子 · 未标发布日期 · 核验 2026-11-16">2</a><a class="source-number" href="https://168xclub.substack.com/p/trasia-mable-multicoin-hyperliquid" target="_blank" rel="noopener" title="Mable创始人访谈，历史策略背景 · 发布 2026-07-18 · 核验 2026-11-16" aria-label="来源 3：Mable创始人访谈，历史策略背景 · 发布 2026-07-18 · 核验 2026-11-16">3</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">AI</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月16日，Qwen发布支持显式缓存与思维链摘要的Qwen4-Max正式版</h3>
+          <p class="item-b">Qwen4-Max正式版支持文本、图片和视频理解，覆盖推理、编码与Agent任务，并提供工具调用、结构化输出、显式缓存及思维链摘要。官方同时保留11月11日的预览型号，其入口仍注明仅限Token Plan；正式版与预览版需按不同型号核对接入范围。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://docs.qwencloud.com/changelog/models" target="_blank" rel="noopener" title="QwenCloud模型发布日志 · 发布 2026-11-16" aria-label="来源 1：QwenCloud模型发布日志 · 发布 2026-11-16">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月13日，Cursor披露供应商密钥泄露如何导致恶意扩展分发</h3>
+          <p class="item-b">Cursor公布10月安全事件调查：攻击者由Fireworks泄露的密钥取得历史非隐私模式训练记录，再利用未脱敏凭证进入内部工具并投毒扩展缓存。官方称不到0.01%客户的API凭证暴露，最多5000名用户可能收到恶意扩展；已撤销相关权限并迁出Fireworks。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://cursor.com/blog/security-incident-update" target="_blank" rel="noopener" title="Cursor安全事件调查更新 · 发布 2026-11-13" aria-label="来源 1：Cursor安全事件调查更新 · 发布 2026-11-13">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月15日，Seedance 2.5 Flash开放API，支持低成本视频生成</h3>
+          <p class="item-b">Seedance 2.5 Flash已可通过API调用，Runware提供4至30秒、480p或720p带音频视频生成，支持图片、视频及音轨参考。其无视频输入的720p生成标价每秒0.152美元，可用于反复制作预览；Flash不支持原生1080p，交付分辨率需另行选择。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://runware.ai/docs/models/bytedance-seedance-2-5-flash" target="_blank" rel="noopener" title="Runware Seedance 2.5 Flash上线页 · 发布 2026-11-15" aria-label="来源 1：Runware Seedance 2.5 Flash上线页 · 发布 2026-11-15">1</a><a class="source-number" href="https://docs.byteplus.com/en/docs/ModelArk/seedance-2-5" target="_blank" rel="noopener" title="BytePlus Seedance 2.5系列文档，11月15日更新 · 发布 2026-11-15" aria-label="来源 2：BytePlus Seedance 2.5系列文档，11月15日更新 · 发布 2026-11-15">2</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>
