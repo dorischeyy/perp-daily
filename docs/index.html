@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-11-16</title>
+<title>Perp DEX 日报 · 2026-11-17</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -100,82 +100,92 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 134 期</span>
+        <span>每日链上观察</span><span>第 135 期</span>
       </div>
       <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 11 月 16 日 · 星期一</div>
+      <div class="mast-sub">2026 年 11 月 17 日 · 星期二</div>
     </header>
-    <p class="lead">HRC三季度报告显示，股票永续成交额已超过商品，占HIP-3总额近六成。同期第三方交易应用手续费环比增长50%。</p>
+    <p class="lead">同一交易入口接入多个永续后台，不代表合约生命周期统一。Bitget Wallet披露的SNDK拆股安排显示，三家底层场所分别采用强制结算与仓位换算。</p>
 
 
-      <section class="sec sec-market-structure">
+      <section class="sec sec-contract-lifecycle">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">股票永续与交易成本</h2>
+            <h2 class="sec-title">合约生命周期与外部依赖</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月13日，HRC报告显示股票已占HIP-3季度成交额近六成</h3>
-          <p class="item-b">HRC公布三季度报告：股票永续成交额环比增长161%至1538亿美元，占HIP-3总额58.8%，超过商品。第三方应用通过交易入口获得的手续费环比增长50%至2500万美元。与此同时，原生加密永续交易回升，HIP-3占全平台永续成交额的比例从7月51%降至9月25%。</p>
+          <h3 class="item-h">11月16日，Bitget Wallet披露三家永续后台采用不同SNDK拆股方案</h3>
+          <p class="item-b">Bitget Wallet的SNDK拆股安排显示，PopDEX和Hyperliquid会暂停交易并强制结算剩余仓位，tatadex则保留仓位，把数量乘八、平均开仓价除以八。三家场所都会取消未成交单及止盈止损单，用户不能把同一钱包入口理解成统一的合约生命周期。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://hyperliquidresearch.xyz/reporting/hyperliquid-2026-q3-report" target="_blank" rel="noopener" title="Hyperliquid Research Collective，独立研究报告 · 发布 2026-11-13" aria-label="来源 1：Hyperliquid Research Collective，独立研究报告 · 发布 2026-11-13">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://web3.bitget.com/en/blog/articles/sndk-trading-adjustment-notice" target="_blank" rel="noopener" title="Bitget Wallet SNDK交易调整公告 · 发布 2026-11-16" aria-label="来源 1：Bitget Wallet SNDK交易调整公告 · 发布 2026-11-16">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月13日，Ondo Perps上线跨现货与永续的交易量费率等级</h3>
-          <p class="item-b">Ondo Perps按过去14天已成交量计算费率等级，每日零点UTC更新，主余额与子余额自动共用。永续、代币化股票和私募市场成交均计入等级，但现货与永续各有对应费率，私募市场仍按独立费表收费。用户可在Portfolio的Fee Schedule查看等级。</p>
+          <h3 class="item-h">11月16日，ApeX因外部指数成分变更暂停ANT永续并按标记价结算</h3>
+          <p class="item-b">ApeX将于11月17日8时UTC暂时下架ANT-USDT永续，并提前30分钟停止开新仓；原因是部分指数价格来源交易所调整相关合约的面值和代码。届时未成交单会取消，剩余仓位按标记价结算，待外部指数定价与流动性稳定后再重新上线。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://teapawt.org/OndoPerps/status/2121270390110421393" target="_blank" rel="noopener" title="Ondo Perps官方帖，Teapawt可读镜像 · 发布 2026-11-13" aria-label="来源 1：Ondo Perps官方帖，Teapawt可读镜像 · 发布 2026-11-13">1</a><a class="source-number" href="https://teapawt.org/OndoPerps/status/2121270399123992970" target="_blank" rel="noopener" title="Ondo Perps费率规则续帖，Teapawt可读镜像 · 发布 2026-11-13" aria-label="来源 2：Ondo Perps费率规则续帖，Teapawt可读镜像 · 发布 2026-11-13">2</a>
-          </div>
-        </article>
-        <article class="item">
-          <h3 class="item-h">11月13日，MGBX宣布SNDK拆股期间强制结清永续仓位</h3>
-          <p class="item-b">MGBX将于11月19日把SNDK永续改为只可平仓，20日北京时间9时按最新标记价结清剩余仓位，并终止相关交易机器人，22时35分重新开放交易。现货持仓则按一股拆八股调整数量。永续持仓会被关闭，不能把现货的数量换算理解成合约仓位自动延续。</p>
-
-
-          <div class="item-meta compact-sources">
-
-            <span class="source-label">来源</span><a class="source-number" href="https://support.mgbx.com/hc/en-gb/articles/18369678166159--Important-Notice-Announcement-on-MGBX-s-Updated-Handling-Plan-for-the-SNDK-SanDisk-Stock-Split-and-Spot-Perpetual-Futures-Trading-Arrangements" target="_blank" rel="noopener" title="MGBX拆股处理更新公告 · 发布 2026-11-13" aria-label="来源 1：MGBX拆股处理更新公告 · 发布 2026-11-13">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://www.apex.exchange/blog/detail/apex-omni-product-update-17-november-2026" target="_blank" rel="noopener" title="ApeX Omni产品更新公告 · 发布 2026-11-16" aria-label="来源 1：ApeX Omni产品更新公告 · 发布 2026-11-16">1</a>
           </div>
         </article>
         </div>
       </section>
-      <section class="sec sec-trading-entry">
+      <section class="sec sec-funding-and-tokenized-equity">
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <h2 class="sec-title">交易入口与用户运营</h2>
+            <h2 class="sec-title">资金入口与股票代币权利</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Wealthsimple把永续接入原有保证金账户，盈亏影响全账户购买力</h3>
-          <p class="item-b">用户在Wealthsimple手机端完成适当性与产品教育后，可用原有保证金账户交易加密资产及金银永续，盈亏以美元现金结算。仓位与股票、期货共享购买力，永续亏损也可能触发出售账户内其他资产。当前分批开放，仅支持市价单，尚未开放网页端。</p>
+          <h3 class="item-h">11月14日，MEXC因第三方发卡方调整暂停Global Card交易与充值</h3>
+          <p class="item-b">MEXC称因第三方发卡方服务调整，Global Card自11月14日15时30分UTC起维护，预计持续至18日；期间全部卡片交易和充值会被拒绝。用户仍可查看记录，并把剩余卡内余额转入MEXC法币账户。公告未说明此次维护与FinCEN命令存在因果关系。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://help.wealthsimple.com/hc/en-ca/articles/58514414640923-Trade-perpetual-futures-on-Wealthsimple" target="_blank" rel="noopener" title="Wealthsimple永续交易帮助页 · 发布 2026-11-12 · 核验 2026-11-16" aria-label="来源 1：Wealthsimple永续交易帮助页 · 发布 2026-11-12 · 核验 2026-11-16">1</a><a class="source-number" href="https://help.wealthsimple.com/hc/en-ca/articles/28510862839323-Open-a-margin-account" target="_blank" rel="noopener" title="Wealthsimple保证金账户说明 · 发布 2026-11-10 · 核验 2026-11-16" aria-label="来源 2：Wealthsimple保证金账户说明 · 发布 2026-11-10 · 核验 2026-11-16">2</a><a class="source-number" href="https://help.wealthsimple.com/hc/en-ca/articles/33647420196379-Understanding-margin-calls" target="_blank" rel="noopener" title="Wealthsimple追保与资产出售规则 · 发布 2026-11-01 · 核验 2026-11-16" aria-label="来源 3：Wealthsimple追保与资产出售规则 · 发布 2026-11-01 · 核验 2026-11-16">3</a><a class="source-number" href="https://www.wealthsimple.com/en-ca/learn/wealthsimple-perpetual-futures" target="_blank" rel="noopener" title="Wealthsimple介绍文章，网页可用说法与帮助页冲突 · 发布 2026-11-11 · 核验 2026-11-16" aria-label="来源 4：Wealthsimple介绍文章，网页可用说法与帮助页冲突 · 发布 2026-11-11 · 核验 2026-11-16">4</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://t.me/s/MEXCofficialNews?before=38820" target="_blank" rel="noopener" title="MEXC Global Card维护公告，官方新闻频道 · 发布 2026-11-14" aria-label="来源 1：MEXC Global Card维护公告，官方新闻频道 · 发布 2026-11-14">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Trasia用移动交易、地址侦查与社区组队赛连接Hyperliquid用户</h3>
-          <p class="item-b">Trasia用户可在手机内交易HyperCore和HIP-3市场，使用TWAP、分层挂单及标准或统一账户，并通过侦查模式查看地址操作。其社区赛以十人组队、队长招募奖励和团队盈利排名引导参与，交易仍依托Hyperliquid，尚无激励结束后的留存数据。</p>
+          <h3 class="item-h">11月16日，Bitget把20只股票代币加入统一交易账户保证金币种</h3>
+          <p class="item-b">Bitget宣布在统一交易账户新增20只股票代币作为保证金币种，包括rSPXL、rAAPU、rNVDX和rTSLL等杠杆或反向产品。持仓可用于账户内其他交易的保证金，但公告没有披露各资产折扣率、压力情景或异常行情下的退出顺序，不能按面值推断可用购买力。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://play.google.com/store/apps/details?id=xyz.trasia.app" target="_blank" rel="noopener" title="Trasia Google Play产品页 · 发布 2026-10-08 · 核验 2026-11-16" aria-label="来源 1：Trasia Google Play产品页 · 发布 2026-10-08 · 核验 2026-11-16">1</a><a class="source-number" href="https://xitter.gq/trasiaxyz" target="_blank" rel="noopener" title="Trasia官方账号公开镜像，社区赛及Scout帖子 · 未标发布日期 · 核验 2026-11-16" aria-label="来源 2：Trasia官方账号公开镜像，社区赛及Scout帖子 · 未标发布日期 · 核验 2026-11-16">2</a><a class="source-number" href="https://168xclub.substack.com/p/trasia-mable-multicoin-hyperliquid" target="_blank" rel="noopener" title="Mable创始人访谈，历史策略背景 · 发布 2026-07-18 · 核验 2026-11-16" aria-label="来源 3：Mable创始人访谈，历史策略背景 · 发布 2026-07-18 · 核验 2026-11-16">3</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://www.bitget.com/support/articles/12560603900680" target="_blank" rel="noopener" title="Bitget统一交易账户保证金币种公告 · 发布 2026-11-16" aria-label="来源 1：Bitget统一交易账户保证金币种公告 · 发布 2026-11-16">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月16日，Coinbase与Broadridge发布链上股东通信开放标准</h3>
+          <p class="item-b">Coinbase与Broadridge发布Onchain Rights Standard，供发行人、托管商和钱包把股东通信及公司行动传递给代币化股票持有人。该标准面向不同区块链开放采用，当前重点是通信基础；链上代理投票被列为下一阶段，不能写成持有人已经获得完整投票功能。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.coinbase.com/blog/expanding-trust%3A-a-privacy-first-network-for-global-crypto-compliance" target="_blank" rel="noopener" title="Coinbase与Broadridge标准发布说明 · 发布 2026-11-16" aria-label="来源 1：Coinbase与Broadridge标准发布说明 · 发布 2026-11-16">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月16日，Binance以追加bStocks单位发放微软和应用材料净股息</h3>
+          <p class="item-b">Binance将按11月19日1时UTC快照，为MSFTB和AMATB持有人分配股息；税费等扣除后的净额会再投资为同一bStock的新增或碎片单位，链上持有人通过乘数调整获得。现货交易继续，但充提及股票与代币的一比一转换会在分配前暂停。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/square/post/388708813293948" target="_blank" rel="noopener" title="Binance bStocks股息分配公告 · 发布 2026-11-16" aria-label="来源 1：Binance bStocks股息分配公告 · 发布 2026-11-16">1</a>
           </div>
         </article>
         </div>
@@ -190,33 +200,33 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月16日，Qwen发布支持显式缓存与思维链摘要的Qwen4-Max正式版</h3>
-          <p class="item-b">Qwen4-Max正式版支持文本、图片和视频理解，覆盖推理、编码与Agent任务，并提供工具调用、结构化输出、显式缓存及思维链摘要。官方同时保留11月11日的预览型号，其入口仍注明仅限Token Plan；正式版与预览版需按不同型号核对接入范围。</p>
+          <h3 class="item-h">11月16日，OpenAI开放医疗计算机操作Agent并公布安全与成本评测</h3>
+          <p class="item-b">OpenAI已开放医疗计算机操作，可通过API及医疗版ChatGPT跨EHR与保险门户执行多步流程。官方称GPT-6 Astra在325项任务中99%被评为安全；HealthAdminBench得94.3%，Luna得91.8%且每项0.085美元，部署仍需审批与审计。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://docs.qwencloud.com/changelog/models" target="_blank" rel="noopener" title="QwenCloud模型发布日志 · 发布 2026-11-16" aria-label="来源 1：QwenCloud模型发布日志 · 发布 2026-11-16">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/advancing-computer-use-for-healthcare-teams/" target="_blank" rel="noopener" title="OpenAI医疗计算机操作Agent发布说明 · 发布 2026-11-16" aria-label="来源 1：OpenAI医疗计算机操作Agent发布说明 · 发布 2026-11-16">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月13日，Cursor披露供应商密钥泄露如何导致恶意扩展分发</h3>
-          <p class="item-b">Cursor公布10月安全事件调查：攻击者由Fireworks泄露的密钥取得历史非隐私模式训练记录，再利用未脱敏凭证进入内部工具并投毒扩展缓存。官方称不到0.01%客户的API凭证暴露，最多5000名用户可能收到恶意扩展；已撤销相关权限并迁出Fireworks。</p>
+          <h3 class="item-h">11月16日，OpenAI发布面向平台的CSAM图像分类器与模型卡</h3>
+          <p class="item-b">OpenAI发布CSAM图像分类器，可识别哈希匹配可能漏掉的新图像或AI生成内容，并向经审核的机构免费提供API。模型只输出风险分数，用于排序和交由受训人员复核；分数本身不能确认图像违法或决定报告义务，仍需结合上下文和人工流程。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://cursor.com/blog/security-incident-update" target="_blank" rel="noopener" title="Cursor安全事件调查更新 · 发布 2026-11-13" aria-label="来源 1：Cursor安全事件调查更新 · 发布 2026-11-13">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://deploymentsafety.openai.com/csam-image-classifier/introduction" target="_blank" rel="noopener" title="OpenAI CSAM图像分类器模型卡 · 发布 2026-11-16" aria-label="来源 1：OpenAI CSAM图像分类器模型卡 · 发布 2026-11-16">1</a><a class="source-number" href="https://openai.com/index/strengthening-online-child-safety/" target="_blank" rel="noopener" title="OpenAI儿童安全能力发布说明 · 发布 2026-11-16" aria-label="来源 2：OpenAI儿童安全能力发布说明 · 发布 2026-11-16">2</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月15日，Seedance 2.5 Flash开放API，支持低成本视频生成</h3>
-          <p class="item-b">Seedance 2.5 Flash已可通过API调用，Runware提供4至30秒、480p或720p带音频视频生成，支持图片、视频及音轨参考。其无视频输入的720p生成标价每秒0.152美元，可用于反复制作预览；Flash不支持原生1080p，交付分辨率需另行选择。</p>
+          <h3 class="item-h">11月16日，Liquid AI发布支持音频与五类结构化任务的d1.2模型</h3>
+          <p class="item-b">Liquid AI发布d1.2和d1.2-ultra，新增音频输入及字段读取、区间定位、图像框选、数量估计和多选任务，并已在Liquid API开放。两款模型每百万输入Token分别收费0.02和0.042美元，只计输入；新增任务表现来自厂商内部评测，采购时仍需用自有数据复测。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://runware.ai/docs/models/bytedance-seedance-2-5-flash" target="_blank" rel="noopener" title="Runware Seedance 2.5 Flash上线页 · 发布 2026-11-15" aria-label="来源 1：Runware Seedance 2.5 Flash上线页 · 发布 2026-11-15">1</a><a class="source-number" href="https://docs.byteplus.com/en/docs/ModelArk/seedance-2-5" target="_blank" rel="noopener" title="BytePlus Seedance 2.5系列文档，11月15日更新 · 发布 2026-11-15" aria-label="来源 2：BytePlus Seedance 2.5系列文档，11月15日更新 · 发布 2026-11-15">2</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://www.liquid.ai/blog/d1-2" target="_blank" rel="noopener" title="Liquid AI d1.2发布说明 · 发布 2026-11-16" aria-label="来源 1：Liquid AI d1.2发布说明 · 发布 2026-11-16">1</a>
           </div>
         </article>
         </div>

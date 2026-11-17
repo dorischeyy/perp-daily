@@ -1114,9 +1114,9 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-08-25",
-      "last_update": "2026-11-12",
+      "last_update": "2026-11-17",
       "cadence_days": 6,
-      "next_check": "2026-11-17",
+      "next_check": "2026-11-23",
       "thesis": "交易与资金后台正在从单一平台能力拆成可复用的撮合、清算、托管和结算服务。多家银行联合发行链上货币后，责任分工也从交易入口延伸到共同委托、信托托管与跨境支付；生产规模和故障责任仍需验证。",
       "why_us": "HertzFlow 研究外部分发或后台合作时，需要分开核验客户归属、风险责任、故障处置与执行兼容性；不可据公告性能直接替换现有 Keeper 与逐市场 LP 架构。",
       "watch_for": "正式推出时间 / 已上线合作方及真实订单流 / 生产延迟与故障恢复 / 风险与清算责任分配 / 开放及许可市场的隔离规则",
@@ -1220,6 +1220,11 @@
           "date": "2026-11-12",
           "point": "Decrypt把Phoenix的100多个永续市场嵌入新闻页面，读者用同一自托管账户余额直接下单，媒体保留内容和用户入口，撮合、流动性与链上执行由Phoenix承接。交易后台服务化进一步进入内容分发场景，但地区可用性、生产订单流和故障责任仍待验证。",
           "url": "https://decrypt.co/382992/decrypt-becomes-first-news-publisher-to-offer-perps-trading-powered-by-solanas-phoenix"
+        },
+        {
+          "date": "2026-11-17",
+          "point": "Bitget Wallet披露同一SNDK拆股在PopDEX、Hyperliquid和tatadex采用不同处理：前两者强制结算，后者按一拆八换算仓位，三者均取消未成交单和止盈止损。统一入口不等于统一合约生命周期，前端必须按底层场所提示持仓与订单后果。",
+          "url": "https://web3.bitget.com/en/blog/articles/sndk-trading-adjustment-notice"
         }
       ]
     },
@@ -1503,7 +1508,7 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-10-21",
-      "last_update": "2026-11-15",
+      "last_update": "2026-11-17",
       "cadence_days": 7,
       "next_check": "2026-11-22",
       "thesis": "首次研究建档，10月21日仅为本报核验与建立论点的日期，不代表项目当天上线或发生新事件，因此log暂空。DeepBook Margin复用现货深度但按单池隔离风险，predict.fun生息抵押依赖Venus取回资金；资本复用需要分别验证风险能否抵消、收益如何领取和退出是否受外部流动性限制。",
@@ -1534,6 +1539,11 @@
           "date": "2026-11-15",
           "point": "Ondo Perps把MSTRon、INTCon、COINon、MRVLon和BMNRon五只现货资产接入订单簿，并允许其作为已有永续仓位的保证金。资本复用由外部托管镜像继续推进到同一交易账户内的现货与永续交叉使用，但折扣率、压力情景与退出时的保证金占用仍未披露。",
           "url": "https://x.com/OndoPerps/status/2121213991091585525"
+        },
+        {
+          "date": "2026-11-17",
+          "point": "Bitget把20只股票代币加入统一交易账户保证金币种，资本复用从普通股票代币扩展到杠杆和反向产品；公告未披露折扣率、压力情景或退出顺序，不能把名义余额直接视为等额购买力。",
+          "url": "https://www.bitget.com/support/articles/12560603900680"
         }
       ]
     },
@@ -1544,9 +1554,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-11-08",
-      "last_update": "2026-11-11",
+      "last_update": "2026-11-17",
       "cadence_days": 3,
-    "next_check": "2026-11-17",
+    "next_check": "2026-11-20",
       "thesis": "FinCEN已下令禁止美国金融机构处理涉及MEXC的资金转移，措施于11月10日刊登联邦公报并将在12月10日生效。Binance已先行拒绝向MEXC相关实体出金并暂扣来自这些实体的入金，跨平台资金通道收缩已从监管命令进入实际对手方限制。",
       "why_us": "大型交易所的美国资金通道被切断，会直接影响跨平台资金流、机构做市和用户提现预期。Hertzflow判断竞品流动性与资产安全时，不能把前端仍可交易等同于法币和机构结算链路未受影响。",
       "watch_for": "联邦公报正式发布日期和生效日 / MEXC是否调整法币、托管或机构服务 / 做市商与银行对手方是否退出 / 用户充提延迟、价差和储备变化 / MEXC法律审查或申诉结果",
@@ -1560,6 +1570,11 @@
           "date": "2026-11-11",
           "point": "FinCEN命令已于11月10日刊登联邦公报，生效日确定为12月10日；Binance同日起拒绝用户向MEXC相关实体转账，并把来自这些实体的入金暂扣合规审查。MEXC前端可交易状态未直接变化，但跨平台充提路径已先于法定期限收缩。",
           "url": "https://www.binance.com/en/support/announcement/detail/9ef6e347da924cdc90f53577ab483b1f"
+        },
+        {
+          "date": "2026-11-17",
+          "point": "MEXC Global Card因第三方发卡方服务调整，自11月14日起暂停全部卡片交易和充值，用户可把剩余卡内余额转入MEXC法币账户。该变化新增了外部卡片资金入口中断证据，但官方未说明与FinCEN命令存在因果关系。",
+          "url": "https://t.me/s/MEXCofficialNews?before=38820"
         }
       ]
     }
