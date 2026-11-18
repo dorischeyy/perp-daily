@@ -130,12 +130,12 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-11-16",
+      "last_update": "2026-11-18",
       "cadence_days": 6,
-      "next_check": "2026-11-22",
-      "thesis": "股票永续已成为HIP-3的重要成交类别。HRC于11月13日公布的三季度报告显示，股票成交额占HIP-3的58.8%，但原生加密交易恢复使HIP-3占全平台永续成交额的月度比例回落。扩列同时伴随跨产品费率等级和拆股结算安排，规模、用户成本及持仓连续性需要分别核验。",
+      "next_check": "2026-11-24",
+      "thesis": "TradFi永续已从股票扩列进入资金费来源、交易时段和上市前参数迁移的产品分化。GRVT用传统市场对冲成本报价商品永续资金费，Binance与KuCoin则因Anthropic拟发行股数变化采用不同的仓位重建方式；规模、持仓成本与生命周期连续性需要分别核验。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
-      "watch_for": "四季度股票永续成交、持仓与费用的同口径变化 / 第三方前端收入和市场运营集中度 / Ondo费率等级对现货和永续成交的影响 / SNDK拆股强制结算和恢复交易后的实际用户结果",
+      "watch_for": "GRVT实际点差、资金费和休市清算结果 / Anthropic上市后股数与ANT仓位迁移结果 / 四季度股票永续成交、持仓与费用的同口径变化 / 补贴活动结束后的自然成交与持仓",
       "log": [
         {
           "date": "2026-07-09",
@@ -486,6 +486,16 @@
           "date": "2026-11-16",
           "point": "MGBX 11月13日更新SNDK拆股安排：11月19日永续只可平仓，20日北京时间9时按最新标记价结清剩余仓位并终止机器人，22时35分恢复交易；现货按1拆8调整，永续旧仓关闭。",
           "url": "https://support.mgbx.com/hc/en-gb/articles/18369678166159--Important-Notice-Announcement-on-MGBX-s-Updated-Handling-Plan-for-the-SNDK-SanDisk-Stock-Split-and-Spot-Perpetual-Futures-Trading-Arrangements"
+        },
+        {
+          "date": "2026-11-18",
+          "point": "GRVT于11月17日上线七种Stable Funding Perps，以USDC结算，资金费由做市商按传统CFD对冲成本报价、每个工作日收取，周末前按三天计提；合约只在对应传统市场时段交易，但休市期间仍可能清算。商品永续由全天加密式合约分化出新的资金费和时段设计。",
+          "url": "https://help.grvt.io/en/articles/18186504-stable-funding-perps-sfp-the-complete-product-guide"
+        },
+        {
+          "date": "2026-11-18",
+          "point": "Binance与KuCoin按Anthropic修订版S-1的131.16亿拟发行股数重置上市前永续。Binance按13.116倍换算仓位并重开ANTUSDT，但不恢复交易机器人；KuCoin下架旧合约并上线每张0.01股的新合约。同一参数修订继续暴露订单、仓位和自动化工具迁移差异。",
+          "url": "https://www.binance.com/en/support/announcement/detail/0dc9c6bdb729413ba54ba68ca83403e1"
         }
       ]
     },
@@ -1114,12 +1124,12 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-08-25",
-      "last_update": "2026-11-17",
+      "last_update": "2026-11-18",
       "cadence_days": 6,
-      "next_check": "2026-11-23",
-      "thesis": "交易与资金后台正在从单一平台能力拆成可复用的撮合、清算、托管和结算服务。多家银行联合发行链上货币后，责任分工也从交易入口延伸到共同委托、信托托管与跨境支付；生产规模和故障责任仍需验证。",
+      "next_check": "2026-11-24",
+      "thesis": "交易与资金后台正在拆成可复用的撮合、清算、托管和结算服务，但Lighter事故说明签名软件、API密钥和公共资金池权限会重新连接这些分层。后台复用必须同时定义客户入口、密钥权限、转池授权和事故恢复责任。",
       "why_us": "HertzFlow 研究外部分发或后台合作时，需要分开核验客户归属、风险责任、故障处置与执行兼容性；不可据公告性能直接替换现有 Keeper 与逐市场 LP 架构。",
-      "watch_for": "正式推出时间 / 已上线合作方及真实订单流 / 生产延迟与故障恢复 / 风险与清算责任分配 / 开放及许可市场的隔离规则",
+      "watch_for": "Lighter IP白名单与API权限上线结果 / 非官方签名软件与官方SDK的隔离 / 已上线合作方及真实订单流 / 生产延迟、资金返还和故障恢复责任",
       "log": [
         {
           "date": "2026-08-25",
@@ -1225,6 +1235,11 @@
           "date": "2026-11-17",
           "point": "Bitget Wallet披露同一SNDK拆股在PopDEX、Hyperliquid和tatadex采用不同处理：前两者强制结算，后者按一拆八换算仓位，三者均取消未成交单和止盈止损。统一入口不等于统一合约生命周期，前端必须按底层场所提示持仓与订单后果。",
           "url": "https://web3.bitget.com/en/blog/articles/sndk-trading-adjustment-notice"
+        },
+        {
+          "date": "2026-11-18",
+          "point": "Lighter在一名交易者因非官方签名软件nonce复用泄露API私钥后暂停提币，安全委员会返还约500万USDC并重开。协议新增转入公共池的钱包签名要求并隐藏API签名，显示后台服务化的故障边界不仅在撮合与清算，也在客户端密钥、资金池授权和恢复机制。",
+          "url": "https://www.theblock.co/news/defi/2026-11-17-lighter-reopens-withdrawals-after-traders-api-key-leak-returns-about-5-million-in-usdc-442113"
         }
       ]
     },
