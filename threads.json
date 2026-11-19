@@ -130,12 +130,12 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-11-18",
+      "last_update": "2026-11-19",
       "cadence_days": 6,
       "next_check": "2026-11-24",
-      "thesis": "TradFi永续已从股票扩列进入资金费来源、交易时段和上市前参数迁移的产品分化。GRVT用传统市场对冲成本报价商品永续资金费，Binance与KuCoin则因Anthropic拟发行股数变化采用不同的仓位重建方式；规模、持仓成本与生命周期连续性需要分别核验。",
+      "thesis": "TradFi永续已从股票扩列进入资金费来源、结算频率、交易时段和上市前参数迁移的产品分化。Binance与OKX为同一SOXX永续采用不同的极端资金费切换规则，Kalshi又一次扩列36只受监管单股永续；规模、持仓成本与生命周期连续性需要分别核验。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
-      "watch_for": "GRVT实际点差、资金费和休市清算结果 / Anthropic上市后股数与ANT仓位迁移结果 / 四季度股票永续成交、持仓与费用的同口径变化 / 补贴活动结束后的自然成交与持仓",
+      "watch_for": "SOXX在Binance与OKX的实际资金费结算 / Kalshi新增合约成交、持仓和中介可用范围 / GRVT实际点差、资金费和休市清算结果 / 四季度股票永续成交、持仓与费用的同口径变化",
       "log": [
         {
           "date": "2026-07-09",
@@ -496,6 +496,11 @@
           "date": "2026-11-18",
           "point": "Binance与KuCoin按Anthropic修订版S-1的131.16亿拟发行股数重置上市前永续。Binance按13.116倍换算仓位并重开ANTUSDT，但不恢复交易机器人；KuCoin下架旧合约并上线每张0.01股的新合约。同一参数修订继续暴露订单、仓位和自动化工具迁移差异。",
           "url": "https://www.binance.com/en/support/announcement/detail/0dc9c6bdb729413ba54ba68ca83403e1"
+        },
+        {
+          "date": "2026-11-19",
+          "point": "Binance与OKX于11月18日同时扩列SOXX永续，但Binance明确资金费触及上下限仍保持八小时结算，OKX则自动切换至每小时；Kalshi同日起连续上市36只新增单股永续。RWA永续的比较进一步由标的覆盖进入同标的资金费路径和受监管产品规模。",
+          "url": "https://www.binance.com/en/support/announcement/detail/e881bca4de484755b172ec53141bd422"
         }
       ]
     },
@@ -1321,9 +1326,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-09-18",
-      "last_update": "2026-11-16",
+      "last_update": "2026-11-19",
       "cadence_days": 6,
-      "next_check": "2026-11-19",
+      "next_check": "2026-11-24",
       "thesis": "前沿模型评估正在从发布前测试推进到生产运行中的身份、授权与持续监督。高风险动作的逐笔授权和推理前外部政策裁决开始进入正式企业产品，但跨产品覆盖、异常时放行或阻断、责任归属与实际采用仍需逐项核验。",
       "why_us": "HertzFlow若引入可调用交易、钱包或后台工具的智能体，需要把评估权限、真实系统隔离、异常停止、事件披露和评估方独立性写进上线流程，不能只看离线基准分数。",
       "watch_for": "嵌入式评估访问与报告标准 / 自动化研发共同测量与人类审查触发条件 / 评估方资金独立性 / 真实系统隔离规范 / 测试越界事件披露 / 高风险工具调用的阻断门槛",
@@ -1462,6 +1467,11 @@
           "date": "2026-11-16",
           "point": "Cursor 11月13日披露10月事件新调查：Fireworks暴露的访问密钥使历史非隐私模式训练记录外泄，其中未脱敏凭证进一步导致内部工具和扩展缓存受影响。官方称不足0.01%客户的API凭证暴露、最多5000用户可能收到恶意扩展，已切断供应商访问并迁出推理流量。",
           "url": "https://cursor.com/blog/security-incident-update"
+        },
+        {
+          "date": "2026-11-19",
+          "point": "Meta把Loblaw购物篮与结账接入Muse，并称密码和支付方式只保存在Muse Secure VM、不向模型暴露；用户选择连接权限，购买等敏感动作仍需确认。生产零售Agent把执行能力、凭证隔离和逐笔授权放入同一可核验流程。",
+          "url": "https://about.fb.com/news/2026/11/meta-welcomes-loblaw-as-first-canadian-retail-partner-to-muse/"
         }
       ]
     },
@@ -1474,7 +1484,7 @@
       "first_seen": "2026-10-21",
       "last_update": "2026-11-16",
       "cadence_days": 3,
-      "next_check": "2026-11-19",
+      "next_check": "2026-11-22",
       "thesis": "模型选型新增Qwen4-Max正式版的显式缓存与思维链摘要，以及Seedance 2.5 Flash可调用的视频API。文本Agent和视频生产分别出现新的复用及成本参数，仍需按任务成功率、重复调用和完整账单比较。",
       "why_us": "团队评估研究、客服、代码和定时Agent时，可以把任务成功率、工具调用次数、缓存命中与完整账单放在同一套真实任务中比较，避免只看每token单价或厂商基准决定模型和运行预算。",
       "watch_for": "Qwen4-Max正式版与preview的接入及真实任务表现 / 显式缓存命中、写入和完整账单 / Seedance Flash试片成功率、分辨率与重试成本",

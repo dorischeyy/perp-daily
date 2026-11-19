@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-11-18</title>
+<title>Perp DEX 日报 · 2026-11-19</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -100,82 +100,72 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 136 期</span>
+        <span>每日链上观察</span><span>第 137 期</span>
       </div>
       <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 11 月 18 日 · 星期三</div>
+      <div class="mast-sub">2026 年 11 月 19 日 · 星期四</div>
     </header>
-    <p class="lead">GRVT将商品永续的资金费改成传统市场成本报价，并限制在对应市场时段交易。它补上了全天加密永续与可对冲RWA合约之间的另一种产品形态。</p>
+    <p class="lead">Binance与OKX同日上线SOXX永续，却分别固定八小时资金费和在触及上下限时切换至每小时结算。相同标的在不同场所仍会形成不同的持仓成本。</p>
 
 
-      <section class="sec sec-rwa-perps-and-preipo">
+      <section class="sec sec-funding-and-tradfi-perps">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">RWA永续与上市前合约</h2>
+            <h2 class="sec-title">永续资金费与传统资产扩列</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月17日，GRVT上线按传统市场资金成本结算的七种商品永续</h3>
-          <p class="item-b">GRVT上线黄金、白银、铂金、钯金、WTI、布伦特和天然气七种Stable Funding Perps，以USDC结算并由做市商按传统CFD对冲成本报价。资金费每个工作日收取一次，周末前一天按三天计提；合约仅在对应市场时段开放，休市期间仓位仍可能被清算。</p>
+          <h3 class="item-h">11月19日，Bybit把短周期永续资金费改为按实际结算间隔缩放</h3>
+          <p class="item-b">Bybit将从11月24日起分三批调整永续资金费公式，先按合约实际结算间隔N将八小时基准乘以N/8，再套用费率上下限。短于八小时的合约预计资金费与实际收付可能变化；仓位、默认结算间隔和既有已结算费用不变，最后一批计划12月1日完成。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.theblock.co/news/ecosystems/2026-11-17-grvt-launches-rwa-perpetuals-with-funding-tied-to-traditional-markets-442089" target="_blank" rel="noopener" title="The Block GRVT商品永续发布报道 · 发布 2026-11-17" aria-label="来源 1：The Block GRVT商品永续发布报道 · 发布 2026-11-17">1</a><a class="source-number" href="https://help.grvt.io/en/articles/18186504-stable-funding-perps-sfp-the-complete-product-guide" target="_blank" rel="noopener" title="GRVT Stable Funding Perps产品指南 · 发布 2026-11-17" aria-label="来源 2：GRVT Stable Funding Perps产品指南 · 发布 2026-11-17">2</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://announcements.bybit.com/en/article/update-to-funding-rate-calculation-formula-for-perpetual-contracts--art9f3b40f8766e/" target="_blank" rel="noopener" title="Bybit永续资金费公式更新公告 · 发布 2026-11-19" aria-label="来源 1：Bybit永续资金费公式更新公告 · 发布 2026-11-19">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月17日，Binance与KuCoin按131.16亿股重置Anthropic上市前永续</h3>
-          <p class="item-b">Binance依据Anthropic修订版S-1把拟发行股数从10亿调至131.16亿，停止旧合约并按13.116倍换算仓位后重开ANTUSDT，交易机器人不会恢复。KuCoin则下架旧合约并上线每张代表0.01股的新合约，显示同一股数更新会触发不同的订单与仓位迁移。</p>
+          <h3 class="item-h">11月18日，Binance与OKX为同一SOXX标的采用不同资金费切换规则</h3>
+          <p class="item-b">Binance新增SOXX、IGV、ARTY、IBIT、CCJ和ETN六只24小时TradFi永续，OKX同期上线SOXX、XLF和杠杆ETF SSPC。两者都以USDT结算，但Binance明确触及费率上下限仍保持八小时结算，OKX则会自动改为每小时结算；同一SOXX仓位的成本路径并不一致。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/support/announcement/detail/0dc9c6bdb729413ba54ba68ca83403e1" target="_blank" rel="noopener" title="Binance Anthropic上市前永续调整公告 · 发布 2026-11-15" aria-label="来源 1：Binance Anthropic上市前永续调整公告 · 发布 2026-11-15">1</a><a class="source-number" href="https://www.kucoin.com/announcement/en-kucoin-futures-new-listing-antusdt-pre-ipo-stock-index-perpetual-contract-pre-market-trading-2026-11-17" target="_blank" rel="noopener" title="KuCoin ANTUSDT上市前永续上线公告 · 发布 2026-11-17" aria-label="来源 2：KuCoin ANTUSDT上市前永续上线公告 · 发布 2026-11-17">2</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/support/announcement/detail/e881bca4de484755b172ec53141bd422" target="_blank" rel="noopener" title="Binance六只TradFi永续上线公告 · 发布 2026-11-18" aria-label="来源 1：Binance六只TradFi永续上线公告 · 发布 2026-11-18">1</a><a class="source-number" href="https://www.okx.com/help/okx-to-list-tradfi-perpetual-futures-for-soxx-xlf-and-sspc" target="_blank" rel="noopener" title="OKX SOXX、XLF与SSPC永续上线公告 · 发布 2026-11-18" aria-label="来源 2：OKX SOXX、XLF与SSPC永续上线公告 · 发布 2026-11-18">2</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月18日，Kalshi开始连续上市36只新增单股永续</h3>
+          <p class="item-b">Kalshi向CFTC认证36只新增单股永续，其中33只跟踪普通股，3只跟踪ADR，并计划自11月18日起连续上市。合约沿用已获批产品条款，以现金结算、每日资金费维持价格锚定，并按美国现货市场假日与提前收市时间调整；客户交易仍需经受适当性规则约束的中介。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.cftc.gov/filings/ptc/ptc11172653873.pdf" target="_blank" rel="noopener" title="Kalshi提交CFTC的单股永续上市认证 · 发布 2026-11-17" aria-label="来源 1：Kalshi提交CFTC的单股永续上市认证 · 发布 2026-11-17">1</a>
           </div>
         </article>
         </div>
       </section>
-      <section class="sec sec-risk-and-distribution">
+      <section class="sec sec-tokenized-equity-infrastructure">
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <h2 class="sec-title">账户安全与交易分发</h2>
+            <h2 class="sec-title">代币化股票权利与基础设施</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月17日，Lighter重开提币并收紧API签名与公共池转账权限</h3>
-          <p class="item-b">Lighter在一名交易者使用非官方签名软件导致nonce复用、API私钥可被推导后暂停提币，安全委员会返还约500万USDC并已重开。协议随后要求转入公共池必须用钱包签名，并把API签名改为不可公开；官方称合约和官方SDK未受影响，但账户权限与密钥隔离已成为实际损失边界。</p>
+          <h3 class="item-h">11月17日，Bullish与Equiniti的发行人代币联盟扩至12家</h3>
+          <p class="item-b">DRW、Flow Traders、SoFi和Superstate加入Bullish与Equiniti发起的发行人代币联盟，使成员在两个月内增至12家，覆盖转让代理、经纪、交易所、做市与代币化基础设施。下一阶段将制定流动性机制和技术架构标准，但成员关系不具约束力，也不代表已承诺发行、上市或提供流动性。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.theblock.co/news/defi/2026-11-17-lighter-reopens-withdrawals-after-traders-api-key-leak-returns-about-5-million-in-usdc-442113" target="_blank" rel="noopener" title="The Block Lighter提币恢复报道 · 发布 2026-11-17" aria-label="来源 1：The Block Lighter提币恢复报道 · 发布 2026-11-17">1</a><a class="source-number" href="https://www.bitquery.io/investigations/lighter-hack" target="_blank" rel="noopener" title="Bitquery Lighter链上事故分析 · 发布 2026-11-16" aria-label="来源 2：Bitquery Lighter链上事故分析 · 发布 2026-11-16">2</a>
-          </div>
-        </article>
-        <article class="item">
-          <h3 class="item-h">11月17日，Backtrade上线由亏损补充资金池的HyperEVM永续产品</h3>
-          <p class="item-b">Backtrade在HyperEVM上线由交易者亏损补充的USDC资金池，外部LP不能存款；每亏损1美元铸造100枚不可转让BACK，并把50%费用按代币分配。若资金池不足，盈利提现按先到先得排队；产品最高1000倍杠杆且尚未审计，收益兑现直接受制于对手方余额。</p>
-
-
-          <div class="item-meta compact-sources">
-
-            <span class="source-label">来源</span><a class="source-number" href="https://www.globenewswire.com/news-release/2026/11/17/3404311/0/en/backtrade-launches-on-hyperliquid-with-a-token-minted-from-every-losing-trade.html" target="_blank" rel="noopener" title="Backtrade上线公告 · 发布 2026-11-17" aria-label="来源 1：Backtrade上线公告 · 发布 2026-11-17">1</a>
-          </div>
-        </article>
-        <article class="item">
-          <h3 class="item-h">11月17日，Binance以成交倍率和阶梯奖池推广TradFi永续</h3>
-          <p class="item-b">Binance为ANT、NVDA及多类TradFi永续启动两周交易赛，新用户首笔至少1000美元即可参赛，ANT与NVDA交易量按3.5倍计入排名。总奖池随活动成交从40亿到60亿美元门槛扩大至17.5万USDC，API成交不计入；活动数据不能直接当作自然需求基线。</p>
-
-
-          <div class="item-meta compact-sources">
-
-            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/square/post/389180676758501" target="_blank" rel="noopener" title="Binance TradFi永续交易活动公告 · 发布 2026-11-17" aria-label="来源 1：Binance TradFi永续交易活动公告 · 发布 2026-11-17">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://investors.bullish.com/node/8541/pdf" target="_blank" rel="noopener" title="Bullish发行人代币联盟扩员公告 · 发布 2026-11-17" aria-label="来源 1：Bullish发行人代币联盟扩员公告 · 发布 2026-11-17">1</a>
           </div>
         </article>
         </div>
@@ -190,33 +180,33 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月17日，OpenAI发布GPT-6.2 Astra与Sol并开放折扣后台完成窗口</h3>
-          <p class="item-b">OpenAI发布GPT-6.2 Astra与Sol，分别面向高难推理编码和日常代理工作流，并把两小时、八小时后台完成窗口开放测试，模型费率较标准档低30%和40%。工具调用需使用Responses API；系统卡把Astra列入高等级AI自我改进风险，部署需结合更严的网络安全限制。</p>
+          <h3 class="item-h">11月18日，Meta把Loblaw结账接入Muse并隔离支付凭证</h3>
+          <p class="item-b">Loblaw成为Muse首个加拿大零售合作方，用户可在智能体内规划餐食、组建购物篮并结账。Meta称密码和支付方式保存在Muse Secure VM中，不向模型暴露；用户自行选择连接权限，购买等敏感动作前仍需确认。该设计把零售代理的执行能力与凭证隔离、逐笔授权同时落到生产流程。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener" title="OpenAI API更新日志 · 发布 2026-11-17" aria-label="来源 1：OpenAI API更新日志 · 发布 2026-11-17">1</a><a class="source-number" href="https://deploymentsafety.openai.com/gpt-6-2-astra-sol/safety-evaluations-for-users-under-18" target="_blank" rel="noopener" title="OpenAI GPT-6.2 Astra与Sol系统卡 · 发布 2026-11-17" aria-label="来源 2：OpenAI GPT-6.2 Astra与Sol系统卡 · 发布 2026-11-17">2</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://about.fb.com/news/2026/11/meta-welcomes-loblaw-as-first-canadian-retail-partner-to-muse/" target="_blank" rel="noopener" title="Meta Muse与Loblaw合作公告 · 发布 2026-11-18" aria-label="来源 1：Meta Muse与Loblaw合作公告 · 发布 2026-11-18">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月17日，Microsoft发布Code 2系列并接入Copilot与Foundry</h3>
-          <p class="item-b">Microsoft发布Code 2与Code 2 Flash，前者面向多文件实现、深度调试和仓库级推理，后者面向高频解释与小改动；两款已在GitHub Copilot模型选择器、Copilot Fusion和Foundry上线。同期Cyber 2 Flash进入安全场景，厂商强调成本性能，但仍需用自有代码库验证。</p>
+          <h3 class="item-h">11月18日，Kimi Work加入项目级AGENTS.md与企业SSO</h3>
+          <p class="item-b">Kimi Work 3.2.28允许在项目摘要面板新增或编辑AGENTS.md，并让规则作用于项目内全部对话；同时加入企业SSO、任务与产物总览，以及带来源、时间和上下文预览的全局搜索。更新前会检查正在运行的任务并提示中断风险，降低桌面Agent升级时丢失工作状态的概率。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://blogs.microsoft.com/blog/2026/11/17/ignite-2026-building-the-frontier-ecosystem/" target="_blank" rel="noopener" title="Microsoft Ignite 2026发布说明 · 发布 2026-11-17" aria-label="来源 1：Microsoft Ignite 2026发布说明 · 发布 2026-11-17">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://www.kimi.com/en/help/kimi-work/release-notes?lang=en" target="_blank" rel="noopener" title="Kimi Work发布说明 · 发布 2026-11-18" aria-label="来源 1：Kimi Work发布说明 · 发布 2026-11-18">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月17日，Google向六国免费用户推出可代办电话与付款的Gemini Tasks</h3>
-          <p class="item-b">Google开始向美国、日本、韩国、加拿大、澳大利亚和印度免费用户推出Gemini Tasks，可在隔离虚拟机中替用户打电话、付款并执行多步任务，关键步骤会暂停确认，执行中也可追加指令。高级功能先在美国上线，产品使用Gemini 4 Hydrogen；地区、权限与人工确认决定实际可用范围。</p>
+          <h3 class="item-h">11月17日，Mistral上线可并行本地与云端任务的Vibe Desktop</h3>
+          <p class="item-b">Vibe Desktop在macOS和Windows正式可用，把本地仓库、云端沙箱、Work和Code放进同一桌面端。它支持Git worktree隔离并行改动、委派子任务、持续运行构建命令，并在应用内查看文件、差异和PR状态；Linux仍未开放，实际权限和提示也可与Vibe CLI不同。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/" target="_blank" rel="noopener" title="Google Gemini Tasks发布说明 · 发布 2026-11-17" aria-label="来源 1：Google Gemini Tasks发布说明 · 发布 2026-11-17">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://docs.mistral.ai/resources/release-notes" target="_blank" rel="noopener" title="Mistral产品发布记录 · 发布 2026-11-17" aria-label="来源 1：Mistral产品发布记录 · 发布 2026-11-17">1</a>
           </div>
         </article>
         </div>
