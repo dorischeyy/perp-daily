@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-11-20</title>
+<title>Perp DEX 日报 · 2026-11-21</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -100,82 +100,92 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 138 期</span>
+        <span>每日链上观察</span><span>第 139 期</span>
       </div>
       <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 11 月 20 日 · 星期五</div>
+      <div class="mast-sub">2026 年 11 月 21 日 · 星期六</div>
     </header>
-    <p class="lead">Anthropic上市首日，Binance延续原永续仓位，Securitize发行1比1股票支持的链上权益。围绕同一IPO，杠杆敞口与股东权利已走向两套产品路径。</p>
+    <p class="lead">CFTC明确Hyperliquid等链上场所进入美国零售衍生品市场只能自持牌或接入持牌交易所，技术架构不改变交易所义务。</p>
 
 
-      <section class="sec sec-ipo-derivatives-and-tokenized-rights">
+      <section class="sec sec-regulation-and-shared-infrastructure">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">IPO衍生品与代币化权利</h2>
+            <h2 class="sec-title">监管准入与共享交易后台</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月19日，Binance让ANT盘前永续原仓位连续过渡到标准合约</h3>
-          <p class="item-b">Anthropic上市后，Binance用最长三小时把ANT标记价从盘前算法平滑切换至标准指数，期间交易继续，挂单和仓位不取消，每秒价格变动限制为1%。转换后资金费按标准规则计算，但触及上下限仍保持八小时结算。</p>
+          <h3 class="item-h">11月19日，CFTC明确Hyperliquid进入美国零售市场的两条持牌路径</h3>
+          <p class="item-b">CFTC主席Michael Selig表示，Hyperliquid等链上场所若向美国零售用户提供衍生品，必须自行注册为交易所或与已注册交易所合作；他同时称单股永续按结构可被视为期货，日度资金费类似期货变动保证金。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/square/post/390005413051512" target="_blank" rel="noopener" title="Binance ANT盘前永续转换公告 · 发布 2026-11-19" aria-label="来源 1：Binance ANT盘前永续转换公告 · 发布 2026-11-19">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://www.theblock.co/news/regulation/2026-11-19-cftc-chair-selig-hyperliquid-onchain-venues-the-us-444106" target="_blank" rel="noopener" title="The Block对CFTC主席访谈的报道 · 发布 2026-11-19" aria-label="来源 1：The Block对CFTC主席访谈的报道 · 发布 2026-11-19">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月19日，Securitize在Anthropic上市首日发行1比1支持的链上权益</h3>
-          <p class="item-b">Securitize在Solana上线ANT证券权益，底层由Anthropic股票1比1支持，并按产品条款传递经济利益和投票权益；持有人不是登记股东，Anthropic也未授权该产品。交易以USDC结算，当前先覆盖延长时段，24小时交易仍只是计划。</p>
+          <h3 class="item-h">11月18日，Pyth确认LayerZero ATLAS将以共享数据层上线无前端交易引擎</h3>
+          <p class="item-b">LayerZero的无前端交易引擎ATLAS将于11月30日上线，统一处理撮合、清算、风控和即时结算，接入方保留前端与客户关系。Pyth将把股票、ETF、外汇、商品、利率和公司行动数据一次接入共享引擎，公告称初始容量超过每秒25万笔。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://investors.securitize.io/news/news-details/2026/Securitize-Tokenizes-Anthropic-Stock-Onchain-on-First-Day-of-Public-Trading/default.aspx" target="_blank" rel="noopener" title="Securitize ANT链上权益公告 · 发布 2026-11-19" aria-label="来源 1：Securitize ANT链上权益公告 · 发布 2026-11-19">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://www.pyth.network/blog/pyth-market-data-comes-to-layerzero-atlas" target="_blank" rel="noopener" title="Pyth对LayerZero ATLAS数据接入的说明 · 发布 2026-11-18" aria-label="来源 1：Pyth对LayerZero ATLAS数据接入的说明 · 发布 2026-11-18">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月18日，Binance开放美股期权API但保留人工开户与行权边界</h3>
-          <p class="item-b">Binance股票期权REST API现可查合约、下撤单、提交多头行权并读取成交和结算事件，但账户仍须在App内完成问卷、知识测试和协议，无法用API开通。订单由Nest转交Alpaca执行清算，用户到期前不主动行权时不会自动获配股票。</p>
+          <h3 class="item-h">11月20日，Pyth把Anthropic股票ANT价格源切换为正式运行</h3>
+          <p class="item-b">Pyth于11月20日把Anthropic PBC的ANT/USD股票价格源从已添加切换为正式运行，同日停用BTF ETF和11月WTI期货两个旧源。ANT相关永续和代币化产品因此多了可接入的价格基础设施，但公告没有披露接入场所和实际调用量。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/square/post/389468420886516" target="_blank" rel="noopener" title="Binance股票期权API公告 · 发布 2026-11-18" aria-label="来源 1：Binance股票期权API公告 · 发布 2026-11-18">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://docs.pyth.network/release-notes/market-data" target="_blank" rel="noopener" title="Pyth市场数据状态更新 · 发布 2026-11-20" aria-label="来源 1：Pyth市场数据状态更新 · 发布 2026-11-20">1</a>
           </div>
         </article>
         </div>
       </section>
-      <section class="sec sec-regulation-and-market-structure">
+      <section class="sec sec-tradfi-product-operations">
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <h2 class="sec-title">监管与市场结构</h2>
+            <h2 class="sec-title">股票产品与公司行动</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月17日，CFTC把24小时衍生品评审拆成资产、清算与周末风控</h3>
-          <p class="item-b">CFTC公布12月15日圆桌议程，将24小时衍生品拆成三道评审：哪些资产适合持续交易，清算资本、保证金和代币化抵押如何运作，以及周末流动性、价格发现、熔断、人员与系统维护如何覆盖。议程是监管讨论，不代表已批准新产品。</p>
+          <h3 class="item-h">11月20日，Binance提前完成SNDK永续拆股并分阶段恢复标准标记价</h3>
+          <p class="item-b">Binance提前在北京时间10:30完成SNDK永续八比一拆股调整，先结算未实现盈亏再恢复仓位，并设置最长15分钟只撤单期。恢复后先用正负10%最新价保护，18:00起在第三方指数稳定后逐步切回标准标记价，交易不中断。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.cftc.gov/PressRoom/PressReleases/9327-26" target="_blank" rel="noopener" title="CFTC全天交易圆桌议程 · 发布 2026-11-17" aria-label="来源 1：CFTC全天交易圆桌议程 · 发布 2026-11-17">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/square/post/390143778147449" target="_blank" rel="noopener" title="Binance SNDK合约规模调整完成公告 · 发布 2026-11-20" aria-label="来源 1：Binance SNDK合约规模调整完成公告 · 发布 2026-11-20">1</a><a class="source-number" href="https://www.binance.com/en/square/post/390250429434521" target="_blank" rel="noopener" title="Binance SNDK最新价保护结束公告 · 发布 2026-11-20" aria-label="来源 2：Binance SNDK最新价保护结束公告 · 发布 2026-11-20">2</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月17日，CFTC暂停Kalshi总统提词市场并审查操纵风险</h3>
-          <p class="item-b">Kalshi按CFTC要求下线押注总统会说哪些词的合约，监管方暂停相关自认证并启动程序，理由是平台尚未证明这类合约不易被操纵。Kalshi称已设置监控并反对决定，但调查仍需时间；事件合约能否上市开始取决于逐合约的防操纵证据。</p>
+          <h3 class="item-h">11月20日，Binance把每日2倍AMD ETF接入最高20倍永续</h3>
+          <p class="item-b">Binance上线JNJ、NIO和AMDL三只USDT永续，均支持24小时交易、最高20倍杠杆和八小时资金费。AMDL本身是每日2倍做多AMD的ETF，外层永续可再加杠杆；平台即使资金费触顶也不自动切换为每小时结算。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.axios.com/2026/11/17/tarek-mansour-kalshi-axios-bfd" target="_blank" rel="noopener" title="Axios对Kalshi与CFTC争议的报道 · 发布 2026-11-17" aria-label="来源 1：Axios对Kalshi与CFTC争议的报道 · 发布 2026-11-17">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/square/post/390202022161053" target="_blank" rel="noopener" title="Binance多只TradFi永续上线公告 · 发布 2026-11-20" aria-label="来源 1：Binance多只TradFi永续上线公告 · 发布 2026-11-20">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月20日，Bybit为股票、ETF和ADR开放全额持仓出借</h3>
+          <p class="item-b">Bybit为符合条件的股票用户开放全额持仓出借，覆盖美股、ETF和ADR。证券按机构借贷需求出借，费用按证券市值、借贷利率和用户分成逐日累计，再按自然月以USDC结算；加入计划不保证证券会被借出或产生收益。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://announcements.bybit.com/en/article/fully-paid-securities-lending-fpsl-is-now-available-on-bybit-stocks--art1bc2caf65bc3/" target="_blank" rel="noopener" title="Bybit全额证券借贷上线公告 · 发布 2026-11-20" aria-label="来源 1：Bybit全额证券借贷上线公告 · 发布 2026-11-20">1</a>
           </div>
         </article>
         </div>
@@ -190,33 +200,33 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月18日，Google以四档思考强度和95%缓存折扣上线Gemini 4 Neon</h3>
-          <p class="item-b">Gemini 4 Neon已进入Gemini API、企业版、Antigravity和付费App，提供四档思考强度、100万Token上下文，输入、缓存输入和输出分别为每百万3、0.15和15美元。Google称默认high档较Carbon单任务成本低32%，实际优势仍需用自有长任务复测。</p>
+          <h3 class="item-h">11月20日，OpenAI开放GPT-Live-1.1并把静默待机降至每分钟0.02美元</h3>
+          <p class="item-b">OpenAI在API开放GPT-Live-1.1，改善多语种发音、口音一致性和转写，并支持边说边听及后台任务委派。新增待机模式可在静默5至60秒后暂停推理但保持WebRTC连接，计费从活跃每分钟0.05美元降至0.02美元。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://blog.google/intl/en-in/products/introducing-gemini-4-neon/" target="_blank" rel="noopener" title="Google Gemini 4 Neon发布公告 · 发布 2026-11-18" aria-label="来源 1：Google Gemini 4 Neon发布公告 · 发布 2026-11-18">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://community.openai.com/t/gpt-live-1-1-has-arrived-in-the-api/1418537" target="_blank" rel="noopener" title="OpenAI GPT-Live-1.1 API公告 · 发布 2026-11-20" aria-label="来源 1：OpenAI GPT-Live-1.1 API公告 · 发布 2026-11-20">1</a><a class="source-number" href="https://developers.openai.com/api/docs/models/gpt-live-1.1" target="_blank" rel="noopener" title="OpenAI GPT-Live-1.1模型与价格文档 · 发布 2026-11-19" aria-label="来源 2：OpenAI GPT-Live-1.1模型与价格文档 · 发布 2026-11-19">2</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月19日，OpenAI披露Codex性能工厂三个月完成1700次自动调查</h3>
-          <p class="item-b">OpenAI把性能告警、根因定位、修复建议和部署后复核串成有状态工作流，三个月追踪1700多次调查并定位600多起根因，平均每天17次。任务会在代码审查或部署后由事件重新唤醒；修复合并仍需工程师审批，当前瓶颈已从调查转向审查。</p>
+          <h3 class="item-h">11月19日，Google把Genie 4交互世界模型接入Gemini API</h3>
+          <p class="item-b">Google把Genie 4接入Gemini API和AI Studio，可用文本或参考图生成带原生音频的连续720p、24帧交互世界，并通过键盘与实时文本修改天气、光照、物体和事件。输出带SynthID水印，现已可供开发者试用。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/" target="_blank" rel="noopener" title="OpenAI性能工厂技术说明 · 发布 2026-11-19" aria-label="来源 1：OpenAI性能工厂技术说明 · 发布 2026-11-19">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/" target="_blank" rel="noopener" title="Google Genie 4 API发布公告 · 发布 2026-11-19" aria-label="来源 1：Google Genie 4 API发布公告 · 发布 2026-11-19">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月19日，阿里披露AI云收入增长53%并把Qwen Agent接入商家运营</h3>
-          <p class="item-b">阿里季度披露AI云与计算服务收入609.73亿元，同比增长53%，外部客户收入增长64%，AI产品连续13个季度三位数增长。QwenWork已用企业文档和会议记录执行任务，电商版接入店铺运营；数据证明商业采用扩大，但未拆出各Agent的独立收入。</p>
+          <h3 class="item-h">11月19日，Kimi Code支持离线续跑远程项目并接入Amazon Bedrock</h3>
+          <p class="item-b">Kimi Code Desktop 1.4.0支持SSH远程项目，文件、工具和会话在远端运行，本机离线后任务仍可继续；CLI 2.7.0新增Amazon Bedrock连接，可按模型选择Anthropic Messages或OpenAI兼容协议，并允许运行中立即改变Agent方向。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://home.alibabagroup.com/en-US/document-2060213191907999744" target="_blank" rel="noopener" title="阿里巴巴季度业绩与AI采用说明 · 发布 2026-11-19" aria-label="来源 1：阿里巴巴季度业绩与AI采用说明 · 发布 2026-11-19">1</a><a class="source-number" href="https://www.sec.gov/Archives/edgar/data/1577552/000110465926130115/tm2630263d1_ex99-1.htm" target="_blank" rel="noopener" title="阿里巴巴向SEC提交的季度业绩附件 · 发布 2026-11-19" aria-label="来源 2：阿里巴巴向SEC提交的季度业绩附件 · 发布 2026-11-19">2</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://www.kimi.com/code/docs/en/kimi-code/whats-new.html" target="_blank" rel="noopener" title="Kimi Code更新日志 · 发布 2026-11-19" aria-label="来源 1：Kimi Code更新日志 · 发布 2026-11-19">1</a>
           </div>
         </article>
         </div>

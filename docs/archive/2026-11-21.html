@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-11-21</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6; min-width:0; overflow-wrap:anywhere;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
+    white-space:nowrap; letter-spacing:0; line-height:1.5;}
+  .source-label{color:#a3987f; flex:none;}
+  .source-number{color:#8a7f66; text-decoration:underline; text-underline-offset:2px;
+    min-width:14px; padding:2px 0; text-align:center; flex:none; font-variant-numeric:tabular-nums;}
+  .source-number:hover,.source-number:focus-visible{color:#b03a2e;}
+  .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .research-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
+  .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
+  .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
+  .research-row + .research-row{border-top:1px dotted #e4ded0;}
+  .research-row dt{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dd{min-width:0; color:#403a2e;}
+  .research-inference{background:#f7f4ec; padding:10px;}
+  .research-discussions{list-style:none;}
+  .research-discussions li + li{margin-top:8px;}
+  .discussion-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 139 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 11 月 21 日 · 星期六</div>
+    </header>
+    <p class="lead">CFTC明确Hyperliquid等链上场所进入美国零售衍生品市场只能自持牌或接入持牌交易所，技术架构不改变交易所义务。</p>
+
+
+      <section class="sec sec-regulation-and-shared-infrastructure">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">监管准入与共享交易后台</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月19日，CFTC明确Hyperliquid进入美国零售市场的两条持牌路径</h3>
+          <p class="item-b">CFTC主席Michael Selig表示，Hyperliquid等链上场所若向美国零售用户提供衍生品，必须自行注册为交易所或与已注册交易所合作；他同时称单股永续按结构可被视为期货，日度资金费类似期货变动保证金。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.theblock.co/news/regulation/2026-11-19-cftc-chair-selig-hyperliquid-onchain-venues-the-us-444106" target="_blank" rel="noopener" title="The Block对CFTC主席访谈的报道 · 发布 2026-11-19" aria-label="来源 1：The Block对CFTC主席访谈的报道 · 发布 2026-11-19">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月18日，Pyth确认LayerZero ATLAS将以共享数据层上线无前端交易引擎</h3>
+          <p class="item-b">LayerZero的无前端交易引擎ATLAS将于11月30日上线，统一处理撮合、清算、风控和即时结算，接入方保留前端与客户关系。Pyth将把股票、ETF、外汇、商品、利率和公司行动数据一次接入共享引擎，公告称初始容量超过每秒25万笔。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.pyth.network/blog/pyth-market-data-comes-to-layerzero-atlas" target="_blank" rel="noopener" title="Pyth对LayerZero ATLAS数据接入的说明 · 发布 2026-11-18" aria-label="来源 1：Pyth对LayerZero ATLAS数据接入的说明 · 发布 2026-11-18">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月20日，Pyth把Anthropic股票ANT价格源切换为正式运行</h3>
+          <p class="item-b">Pyth于11月20日把Anthropic PBC的ANT/USD股票价格源从已添加切换为正式运行，同日停用BTF ETF和11月WTI期货两个旧源。ANT相关永续和代币化产品因此多了可接入的价格基础设施，但公告没有披露接入场所和实际调用量。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://docs.pyth.network/release-notes/market-data" target="_blank" rel="noopener" title="Pyth市场数据状态更新 · 发布 2026-11-20" aria-label="来源 1：Pyth市场数据状态更新 · 发布 2026-11-20">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-tradfi-product-operations">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">股票产品与公司行动</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月20日，Binance提前完成SNDK永续拆股并分阶段恢复标准标记价</h3>
+          <p class="item-b">Binance提前在北京时间10:30完成SNDK永续八比一拆股调整，先结算未实现盈亏再恢复仓位，并设置最长15分钟只撤单期。恢复后先用正负10%最新价保护，18:00起在第三方指数稳定后逐步切回标准标记价，交易不中断。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/square/post/390143778147449" target="_blank" rel="noopener" title="Binance SNDK合约规模调整完成公告 · 发布 2026-11-20" aria-label="来源 1：Binance SNDK合约规模调整完成公告 · 发布 2026-11-20">1</a><a class="source-number" href="https://www.binance.com/en/square/post/390250429434521" target="_blank" rel="noopener" title="Binance SNDK最新价保护结束公告 · 发布 2026-11-20" aria-label="来源 2：Binance SNDK最新价保护结束公告 · 发布 2026-11-20">2</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月20日，Binance把每日2倍AMD ETF接入最高20倍永续</h3>
+          <p class="item-b">Binance上线JNJ、NIO和AMDL三只USDT永续，均支持24小时交易、最高20倍杠杆和八小时资金费。AMDL本身是每日2倍做多AMD的ETF，外层永续可再加杠杆；平台即使资金费触顶也不自动切换为每小时结算。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/square/post/390202022161053" target="_blank" rel="noopener" title="Binance多只TradFi永续上线公告 · 发布 2026-11-20" aria-label="来源 1：Binance多只TradFi永续上线公告 · 发布 2026-11-20">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月20日，Bybit为股票、ETF和ADR开放全额持仓出借</h3>
+          <p class="item-b">Bybit为符合条件的股票用户开放全额持仓出借，覆盖美股、ETF和ADR。证券按机构借贷需求出借，费用按证券市值、借贷利率和用户分成逐日累计，再按自然月以USDC结算；加入计划不保证证券会被借出或产生收益。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://announcements.bybit.com/en/article/fully-paid-securities-lending-fpsl-is-now-available-on-bybit-stocks--art1bc2caf65bc3/" target="_blank" rel="noopener" title="Bybit全额证券借贷上线公告 · 发布 2026-11-20" aria-label="来源 1：Bybit全额证券借贷上线公告 · 发布 2026-11-20">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2 class="sec-title">AI</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月20日，OpenAI开放GPT-Live-1.1并把静默待机降至每分钟0.02美元</h3>
+          <p class="item-b">OpenAI在API开放GPT-Live-1.1，改善多语种发音、口音一致性和转写，并支持边说边听及后台任务委派。新增待机模式可在静默5至60秒后暂停推理但保持WebRTC连接，计费从活跃每分钟0.05美元降至0.02美元。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://community.openai.com/t/gpt-live-1-1-has-arrived-in-the-api/1418537" target="_blank" rel="noopener" title="OpenAI GPT-Live-1.1 API公告 · 发布 2026-11-20" aria-label="来源 1：OpenAI GPT-Live-1.1 API公告 · 发布 2026-11-20">1</a><a class="source-number" href="https://developers.openai.com/api/docs/models/gpt-live-1.1" target="_blank" rel="noopener" title="OpenAI GPT-Live-1.1模型与价格文档 · 发布 2026-11-19" aria-label="来源 2：OpenAI GPT-Live-1.1模型与价格文档 · 发布 2026-11-19">2</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月19日，Google把Genie 4交互世界模型接入Gemini API</h3>
+          <p class="item-b">Google把Genie 4接入Gemini API和AI Studio，可用文本或参考图生成带原生音频的连续720p、24帧交互世界，并通过键盘与实时文本修改天气、光照、物体和事件。输出带SynthID水印，现已可供开发者试用。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/" target="_blank" rel="noopener" title="Google Genie 4 API发布公告 · 发布 2026-11-19" aria-label="来源 1：Google Genie 4 API发布公告 · 发布 2026-11-19">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月19日，Kimi Code支持离线续跑远程项目并接入Amazon Bedrock</h3>
+          <p class="item-b">Kimi Code Desktop 1.4.0支持SSH远程项目，文件、工具和会话在远端运行，本机离线后任务仍可继续；CLI 2.7.0新增Amazon Bedrock连接，可按模型选择Anthropic Messages或OpenAI兼容协议，并允许运行中立即改变Agent方向。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.kimi.com/code/docs/en/kimi-code/whats-new.html" target="_blank" rel="noopener" title="Kimi Code更新日志 · 发布 2026-11-19" aria-label="来源 1：Kimi Code更新日志 · 发布 2026-11-19">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>

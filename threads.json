@@ -130,12 +130,12 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-11-20",
+      "last_update": "2026-11-21",
       "cadence_days": 6,
       "next_check": "2026-11-24",
-      "thesis": "TradFi永续已从股票扩列进入资金费、交易时段和IPO生命周期竞争。Anthropic上市首日，Binance让盘前永续原仓位连续转换，Securitize则发行1比1股票支持并传递经济和投票权益的链上证券；杠杆连续性与持有权利需要分别核验。",
+      "thesis": "TradFi永续已从股票扩列进入监管分类、叠加杠杆和公司行动竞争。CFTC主席把单股永续按结构归为期货，Binance同时完成SNDK拆股迁移并把每日2倍ETF接入最高20倍永续；合规入口、底层路径依赖与仓位生命周期需要一起核验。",
       "why_us": "Hertzflow 的核心差异化正是虚拟 RWA/Forex/美股指数/贵金属标的，这条线的每次数据更新都是验证或证伪『这是真实需求还是叙事泡沫』的关键锚点，直接影响产品路线图优先级判断。",
-      "watch_for": "ANT永续首周成交、OI、实际资金费与转换滑点 / Securitize ANT二级市场深度和权益执行 / SOXX在Binance与OKX的实际资金费结算 / 四季度股票永续成交、持仓与费用的同口径变化",
+      "watch_for": "CFTC对单股永续的正式规则文本 / AMDL永续的实际杠杆、资金费与清算样本 / SNDK拆股后仓位恢复和标记价偏差 / 四季度股票永续成交、持仓与费用的同口径变化",
       "log": [
         {
           "date": "2026-07-09",
@@ -511,6 +511,16 @@
           "date": "2026-11-20",
           "point": "Securitize同日发行由Anthropic股票1比1支持的链上证券权益，并按产品条款传递经济与投票权益，但持有人不是登记股东。围绕同一IPO，RWA产品已分化为连续杠杆敞口和带权利映射的代币化持有。",
           "url": "https://investors.securitize.io/news/news-details/2026/Securitize-Tokenizes-Anthropic-Stock-Onchain-on-First-Day-of-Public-Trading/default.aspx"
+        },
+        {
+          "date": "2026-11-21",
+          "point": "CFTC主席Michael Selig表示，单股永续是否属于期货取决于合约结构，并把日度资金费与期货变动保证金类比。监管分类开始从是否到期推进到具体结算结构，但仍是主席访谈表态，不是正式规则文本。",
+          "url": "https://www.theblock.co/news/regulation/2026-11-19-cftc-chair-selig-hyperliquid-onchain-venues-the-us-444106"
+        },
+        {
+          "date": "2026-11-21",
+          "point": "Binance完成SNDK永续八比一拆股迁移，先结算未实现盈亏再恢复仓位，并经过只撤单、最新价保护和标记价平滑阶段；同日上线以每日2倍AMD ETF为底层、最高20倍杠杆的AMDL永续。公司行动连续性与叠加杠杆已成为股票永续的独立风险维度。",
+          "url": "https://www.binance.com/en/square/post/390143778147449"
         }
       ]
     },
@@ -1135,16 +1145,16 @@
     {
       "id": "headless-exchange-infrastructure",
       "title": "交易后台服务化：分发与执行责任拆分",
-      "score": 85,
-      "tier": "A",
+      "score": 94,
+      "tier": "S",
       "status": "active",
       "first_seen": "2026-08-25",
-      "last_update": "2026-11-20",
+      "last_update": "2026-11-21",
       "cadence_days": 6,
-      "next_check": "2026-11-24",
-      "thesis": "交易与资金后台正在拆成可复用的撮合、清算、托管和结算服务，但Lighter事故说明签名软件、API密钥和公共资金池权限会重新连接这些分层。后台复用必须同时定义客户入口、密钥权限、转池授权和事故恢复责任。",
+      "next_check": "2026-11-27",
+      "thesis": "交易后台正在拆成共享撮合、清算、风控、数据与结算服务，ATLAS进一步让多个前端复用同一引擎并保留客户关系；CFTC同时明确链上架构不改变美国零售衍生品的交易所注册义务。技术分层与持牌责任必须同时设计。",
       "why_us": "HertzFlow 研究外部分发或后台合作时，需要分开核验客户归属、风险责任、故障处置与执行兼容性；不可据公告性能直接替换现有 Keeper 与逐市场 LP 架构。",
-      "watch_for": "Lighter IP白名单与API权限上线结果 / 非官方签名软件与官方SDK的隔离 / 已上线合作方及真实订单流 / 生产延迟、资金返还和故障恢复责任",
+      "watch_for": "ATLAS 11月30日实际上线、合作前端与真实订单流 / CFTC注册或持牌合作的正式规则 / Pyth共享数据的故障责任 / 生产延迟、资金返还和事故恢复责任",
       "log": [
         {
           "date": "2026-08-25",
@@ -1260,6 +1270,16 @@
           "date": "2026-11-20",
           "point": "Binance开放美股期权REST API查询、下撤单、行权和结算事件，但开户仍须在App完成，订单由Nest转交Alpaca执行、清算和托管，价内合约也不会自动行权。交易入口自动化继续扩张，但客户准入和后台责任仍分层。",
           "url": "https://www.binance.com/en/square/post/389468420886516"
+        },
+        {
+          "date": "2026-11-21",
+          "point": "LayerZero ATLAS计划11月30日上线无前端交易引擎，统一撮合、清算、风控和即时结算，由接入场所保留前端与客户关系；Pyth将把多资产行情、指数和公司行动数据一次接入共享引擎，公告称初始容量超过每秒25万笔。",
+          "url": "https://www.pyth.network/blog/pyth-market-data-comes-to-layerzero-atlas"
+        },
+        {
+          "date": "2026-11-21",
+          "point": "CFTC主席表示，Hyperliquid等链上场所向美国零售用户提供衍生品仍须自行注册为交易所或接入已注册交易所。后台可以技术拆分，但链上执行本身不会取消交易所层的持牌责任。",
+          "url": "https://www.theblock.co/news/regulation/2026-11-19-cftc-chair-selig-hyperliquid-onchain-venues-the-us-444106"
         }
       ]
     },
@@ -1548,12 +1568,12 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-10-21",
-      "last_update": "2026-11-17",
+      "last_update": "2026-11-21",
       "cadence_days": 7,
-      "next_check": "2026-11-22",
-      "thesis": "首次研究建档，10月21日仅为本报核验与建立论点的日期，不代表项目当天上线或发生新事件，因此log暂空。DeepBook Margin复用现货深度但按单池隔离风险，predict.fun生息抵押依赖Venus取回资金；资本复用需要分别验证风险能否抵消、收益如何领取和退出是否受外部流动性限制。",
+      "next_check": "2026-11-28",
+      "thesis": "资本复用正在从保证金和生息抵押扩展到股票持仓出借。Bybit允许符合条件的美股、ETF和ADR按机构需求出借并以USDC按月结算收益，但加入不保证成交或收益；复用价值必须与借出概率、费率分成和退出条件一起核验。",
       "why_us": "比较杠杆交易和生息抵押产品时，应分开说明交易流动性、保证金风险归属与提现结算依赖。共享订单簿不能自动推出跨市场保证金效率，获得借贷收益也不能自动承诺随时到账；这些差别会影响账户设计、风险提示和退出流程。",
-      "watch_for": "DeepBook Margin的实际主网单池参数、坏账与清算体验 / predict.fun生息市场具体版本、Venus利用率与赎回延迟 / 新机制或参数变更 / 独立交易者采用与退出证据 / 是否出现足以证伪现有比较的跨池抵消或即时赎回机制",
+      "watch_for": "Bybit股票出借的实际借出率、费率分成和召回时效 / DeepBook Margin坏账与清算体验 / predict.fun赎回延迟 / 独立交易者采用与退出证据",
       "log": [
         {
           "date": "2026-10-23",
@@ -1584,6 +1604,11 @@
           "date": "2026-11-17",
           "point": "Bitget把20只股票代币加入统一交易账户保证金币种，资本复用从普通股票代币扩展到杠杆和反向产品；公告未披露折扣率、压力情景或退出顺序，不能把名义余额直接视为等额购买力。",
           "url": "https://www.bitget.com/support/articles/12560603900680"
+        },
+        {
+          "date": "2026-11-21",
+          "point": "Bybit为符合条件的美股、ETF和ADR开放全额证券出借，费用按证券市值、借贷利率和用户分成逐日累计，并按自然月以USDC结算。加入计划不保证证券被借出或产生收益，持仓利用率需要与实际借出需求和退出条件一起评估。",
+          "url": "https://announcements.bybit.com/en/article/fully-paid-securities-lending-fpsl-is-now-available-on-bybit-stocks--art1bc2caf65bc3/"
         }
       ]
     },
