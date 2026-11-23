@@ -1361,10 +1361,10 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-09-18",
-      "last_update": "2026-11-19",
+      "last_update": "2026-11-22",
       "cadence_days": 6,
-      "next_check": "2026-11-24",
-      "thesis": "前沿模型评估正在从发布前测试推进到生产运行中的身份、授权与持续监督。高风险动作的逐笔授权和推理前外部政策裁决开始进入正式企业产品，但跨产品覆盖、异常时放行或阻断、责任归属与实际采用仍需逐项核验。",
+      "next_check": "2026-11-28",
+      "thesis": "前沿模型评估正在从任务分数扩展到训练进度、能力阈值和生产运行监督。OpenAI公开内部代码数据集困惑度并提出共同减速区间，同时MedChemBench显示结构理解高分仍不能替代选择与数值预测能力，跨实验室口径和真实任务验证仍需并行。",
       "why_us": "HertzFlow若引入可调用交易、钱包或后台工具的智能体，需要把评估权限、真实系统隔离、异常停止、事件披露和评估方独立性写进上线流程，不能只看离线基准分数。",
       "watch_for": "嵌入式评估访问与报告标准 / 自动化研发共同测量与人类审查触发条件 / 评估方资金独立性 / 真实系统隔离规范 / 测试越界事件披露 / 高风险工具调用的阻断门槛",
       "log": [
@@ -1507,6 +1507,16 @@
           "date": "2026-11-19",
           "point": "Meta把Loblaw购物篮与结账接入Muse，并称密码和支付方式只保存在Muse Secure VM、不向模型暴露；用户选择连接权限，购买等敏感动作仍需确认。生产零售Agent把执行能力、凭证隔离和逐笔授权放入同一可核验流程。",
           "url": "https://about.fb.com/news/2026/11/meta-welcomes-loblaw-as-first-canadian-retail-partner-to-muse/"
+        },
+        {
+          "date": "2026-11-20",
+          "point": "OpenAI发布MedChemBench，从117篇论文和专利整理99项药物化学任务与761个结构；GPT-6.2 Astra在无工具单次作答中得84.5%，但分子选择和数值预测只取得约一半分数，说明结构理解高分不能替代端到端研发判断。",
+          "url": "https://openai.com/index/introducing-medchembench/"
+        },
+        {
+          "date": "2026-11-22",
+          "point": "OpenAI披露内部代码数据集上GPT-3.5、GPT-4和最新模型的对数困惑度约为0.99、0.91和0.76，并提议在约0.68至0.70附近完成共同监测里程碑前限制推进；该指标可追踪训练进度，但跨实验室数据集仍不可直接横比。",
+          "url": "https://openai.com/index/perplexity-and-intelligence/"
         }
       ]
     },
@@ -1517,10 +1527,10 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-10-21",
-      "last_update": "2026-11-16",
+      "last_update": "2026-11-20",
       "cadence_days": 3,
-      "next_check": "2026-11-22",
-      "thesis": "模型选型新增Qwen4-Max正式版的显式缓存与思维链摘要，以及Seedance 2.5 Flash可调用的视频API。文本Agent和视频生产分别出现新的复用及成本参数，仍需按任务成功率、重复调用和完整账单比较。",
+      "next_check": "2026-11-26",
+      "thesis": "模型选型新增Qwen4-Max正式版的显式缓存、思维链摘要和美国区域部署，以及Seedance 2.5 Flash可调用的视频API。文本Agent和视频生产分别出现新的复用、驻留及成本参数，仍需按任务成功率、重复调用和完整账单比较。",
       "why_us": "团队评估研究、客服、代码和定时Agent时，可以把任务成功率、工具调用次数、缓存命中与完整账单放在同一套真实任务中比较，避免只看每token单价或厂商基准决定模型和运行预算。",
       "watch_for": "Qwen4-Max正式版与preview的接入及真实任务表现 / 显式缓存命中、写入和完整账单 / Seedance Flash试片成功率、分辨率与重试成本",
       "log": [
@@ -1558,6 +1568,11 @@
           "date": "2026-11-16",
           "point": "Seedance 2.5 Flash于11月15日进入API可用阶段，Runware上线页列出4至30秒、480p/720p与参考图视频音频输入，无视频输入的720p生成标价0.152美元每秒。",
           "url": "https://runware.ai/docs/models/bytedance-seedance-2-5-flash"
+        },
+        {
+          "date": "2026-11-20",
+          "point": "QwenCloud把Qwen4-Max加入美国弗吉尼亚部署范围，继续提供多模态、网页搜索、工具调用、结构化输出以及OpenAI和Anthropic兼容接口；区域接入和数据驻留选择增加，但价格、基准和美国区域服务级别没有新增披露。",
+          "url": "https://docs.qwencloud.com/changelog/models"
         }
       ]
     },
@@ -1621,7 +1636,7 @@
       "first_seen": "2026-11-08",
       "last_update": "2026-11-17",
       "cadence_days": 3,
-    "next_check": "2026-11-23",
+      "next_check": "2026-11-27",
       "thesis": "FinCEN已下令禁止美国金融机构处理涉及MEXC的资金转移，措施于11月10日刊登联邦公报并将在12月10日生效。Binance已先行拒绝向MEXC相关实体出金并暂扣来自这些实体的入金，跨平台资金通道收缩已从监管命令进入实际对手方限制。",
       "why_us": "大型交易所的美国资金通道被切断，会直接影响跨平台资金流、机构做市和用户提现预期。Hertzflow判断竞品流动性与资产安全时，不能把前端仍可交易等同于法币和机构结算链路未受影响。",
       "watch_for": "联邦公报正式发布日期和生效日 / MEXC是否调整法币、托管或机构服务 / 做市商与银行对手方是否退出 / 用户充提延迟、价差和储备变化 / MEXC法律审查或申诉结果",

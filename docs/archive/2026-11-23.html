@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-11-23</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6; min-width:0; overflow-wrap:anywhere;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
+    white-space:nowrap; letter-spacing:0; line-height:1.5;}
+  .source-label{color:#a3987f; flex:none;}
+  .source-number{color:#8a7f66; text-decoration:underline; text-underline-offset:2px;
+    min-width:14px; padding:2px 0; text-align:center; flex:none; font-variant-numeric:tabular-nums;}
+  .source-number:hover,.source-number:focus-visible{color:#b03a2e;}
+  .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .research-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
+  .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
+  .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
+  .research-row + .research-row{border-top:1px dotted #e4ded0;}
+  .research-row dt{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dd{min-width:0; color:#403a2e;}
+  .research-inference{background:#f7f4ec; padding:10px;}
+  .research-discussions{list-style:none;}
+  .research-discussions li + li{margin-top:8px;}
+  .discussion-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 140 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 11 月 23 日 · 星期一</div>
+    </header>
+    <p class="lead">永续DEX供给继续扩张，但11月22日未平仓仍有57.2%集中在Hyperliquid；竞争差异更多落在休市执行、价格影响和资金退出规则。</p>
+
+
+      <section class="sec sec-market-concentration-and-execution">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">市场集中与执行边界</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">截至11月22日，Hyperliquid仍占永续DEX未平仓的57.2%</h3>
+          <p class="item-b">PerpsAtlas记录50家永续DEX合计91.8亿美元未平仓，Hyperliquid占57.2%；Aster、Variational、Lighter和GRVT合计约27.1%。前五家近30日未平仓均未达到该站增长阈值，平台数量增加尚未明显松动头部集中度。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://perpsatlas.com/" target="_blank" rel="noopener" title="PerpsAtlas永续DEX排名 · 未标发布日期 · 核验 2026-11-23" aria-label="来源 1：PerpsAtlas永续DEX排名 · 未标发布日期 · 核验 2026-11-23">1</a><a class="source-number" href="https://perpsatlas.com/perp-dex/methodology/" target="_blank" rel="noopener" title="PerpsAtlas排名方法说明 · 未标发布日期 · 核验 2026-11-23" aria-label="来源 2：PerpsAtlas排名方法说明 · 未标发布日期 · 核验 2026-11-23">2</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Ostium把休市状态和订单簿深度写进价格报告</h3>
+          <p class="item-b">Ostium的RWA价格报告同时携带交易时段、节假日和买卖盘深度；休市期间可挂限价或止损单，但不能提交市价单，条件单需等开盘后执行。每次外部取价收取0.10美元，开仓因滑点失败时该费用仍会消耗。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://ostium-labs.gitbook.io/ostium-docs/supporting-infrastructure/price-oracle" target="_blank" rel="noopener" title="Ostium价格预言机文档 · 未标发布日期 · 核验 2026-11-23" aria-label="来源 1：Ostium价格预言机文档 · 未标发布日期 · 核验 2026-11-23">1</a><a class="source-number" href="https://ostium-labs.gitbook.io/ostium-docs/fee-breakdown" target="_blank" rel="noopener" title="Ostium费用拆解文档 · 未标发布日期 · 核验 2026-11-23" aria-label="来源 2：Ostium费用拆解文档 · 未标发布日期 · 核验 2026-11-23">2</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">GMX把价格影响、滑点和LP退出拆成三套约束</h3>
+          <p class="item-b">GMX预估成交会同时计入费用与未平仓失衡产生的价格影响，用户设置的滑点只保护提交到Keeper执行之间的预言机移动。部分池即使仍有资产，也会在可用流动性为零或交易者盈利占池规模超过上限时阻止LP提取。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://docs.gmx.io/docs/trading/fees/" target="_blank" rel="noopener" title="GMX交易费用与价格影响文档 · 未标发布日期 · 核验 2026-11-23" aria-label="来源 1：GMX交易费用与价格影响文档 · 未标发布日期 · 核验 2026-11-23">1</a><a class="source-number" href="https://docs.gmx.io/docs/providing-liquidity/" target="_blank" rel="noopener" title="GMX流动性提供与提取文档 · 未标发布日期 · 核验 2026-11-23" aria-label="来源 2：GMX流动性提供与提取文档 · 未标发布日期 · 核验 2026-11-23">2</a><a class="source-number" href="https://docs.gmx.io/" target="_blank" rel="noopener" title="GMX产品与市场说明 · 未标发布日期 · 核验 2026-11-23" aria-label="来源 3：GMX产品与市场说明 · 未标发布日期 · 核验 2026-11-23">3</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">AI</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月22日，OpenAI提议用对数困惑度设置前沿模型共同减速区间</h3>
+          <p class="item-b">OpenAI披露内部代码数据集上GPT-3.5、GPT-4和最新模型的对数困惑度约为0.99、0.91和0.76，并提议实验室在约0.68至0.70附近完成共同监测里程碑前限制推进。该指标可跨规模追踪训练进度，但不同数据集仍不能直接横比。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/perplexity-and-intelligence/" target="_blank" rel="noopener" title="OpenAI前沿模型困惑度与治理提议 · 发布 2026-11-22" aria-label="来源 1：OpenAI前沿模型困惑度与治理提议 · 发布 2026-11-22">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月20日，OpenAI发布包含99项任务的MedChemBench</h3>
+          <p class="item-b">MedChemBench从117篇论文和专利整理99个药物化学问题与761个结构，GPT-6.2 Astra在无工具单次作答中得84.5%。模型的结构理解达到95.4%，但分子选择与数值预测仅取得约一半分数，基准也不能证明端到端药物研发能力。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/introducing-medchembench/" target="_blank" rel="noopener" title="OpenAI MedChemBench发布说明 · 发布 2026-11-20" aria-label="来源 1：OpenAI MedChemBench发布说明 · 发布 2026-11-20">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月20日，Qwen4-Max在美国弗吉尼亚区域开放部署</h3>
+          <p class="item-b">QwenCloud于11月20日把Qwen4-Max加入美国弗吉尼亚部署范围，继续支持多模态理解、网页搜索、工具调用、结构化输出及OpenAI和Anthropic兼容接口。此次变化扩大了区域接入与数据驻留选择，但没有新增价格、基准或美国区域服务级别数据。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://docs.qwencloud.com/changelog/models" target="_blank" rel="noopener" title="QwenCloud模型更新记录 · 发布 2026-11-20" aria-label="来源 1：QwenCloud模型更新记录 · 发布 2026-11-20">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-11-21</title>
+<title>Perp DEX 日报 · 2026-11-23</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -100,99 +100,58 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 139 期</span>
+        <span>每日链上观察</span><span>第 140 期</span>
       </div>
       <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 11 月 21 日 · 星期六</div>
+      <div class="mast-sub">2026 年 11 月 23 日 · 星期一</div>
     </header>
-    <p class="lead">CFTC明确Hyperliquid等链上场所进入美国零售衍生品市场只能自持牌或接入持牌交易所，技术架构不改变交易所义务。</p>
+    <p class="lead">永续DEX供给继续扩张，但11月22日未平仓仍有57.2%集中在Hyperliquid；竞争差异更多落在休市执行、价格影响和资金退出规则。</p>
 
 
-      <section class="sec sec-regulation-and-shared-infrastructure">
+      <section class="sec sec-market-concentration-and-execution">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">监管准入与共享交易后台</h2>
+            <h2 class="sec-title">市场集中与执行边界</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月19日，CFTC明确Hyperliquid进入美国零售市场的两条持牌路径</h3>
-          <p class="item-b">CFTC主席Michael Selig表示，Hyperliquid等链上场所若向美国零售用户提供衍生品，必须自行注册为交易所或与已注册交易所合作；他同时称单股永续按结构可被视为期货，日度资金费类似期货变动保证金。</p>
+          <h3 class="item-h">截至11月22日，Hyperliquid仍占永续DEX未平仓的57.2%</h3>
+          <p class="item-b">PerpsAtlas记录50家永续DEX合计91.8亿美元未平仓，Hyperliquid占57.2%；Aster、Variational、Lighter和GRVT合计约27.1%。前五家近30日未平仓均未达到该站增长阈值，平台数量增加尚未明显松动头部集中度。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.theblock.co/news/regulation/2026-11-19-cftc-chair-selig-hyperliquid-onchain-venues-the-us-444106" target="_blank" rel="noopener" title="The Block对CFTC主席访谈的报道 · 发布 2026-11-19" aria-label="来源 1：The Block对CFTC主席访谈的报道 · 发布 2026-11-19">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://perpsatlas.com/" target="_blank" rel="noopener" title="PerpsAtlas永续DEX排名 · 未标发布日期 · 核验 2026-11-23" aria-label="来源 1：PerpsAtlas永续DEX排名 · 未标发布日期 · 核验 2026-11-23">1</a><a class="source-number" href="https://perpsatlas.com/perp-dex/methodology/" target="_blank" rel="noopener" title="PerpsAtlas排名方法说明 · 未标发布日期 · 核验 2026-11-23" aria-label="来源 2：PerpsAtlas排名方法说明 · 未标发布日期 · 核验 2026-11-23">2</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月18日，Pyth确认LayerZero ATLAS将以共享数据层上线无前端交易引擎</h3>
-          <p class="item-b">LayerZero的无前端交易引擎ATLAS将于11月30日上线，统一处理撮合、清算、风控和即时结算，接入方保留前端与客户关系。Pyth将把股票、ETF、外汇、商品、利率和公司行动数据一次接入共享引擎，公告称初始容量超过每秒25万笔。</p>
+          <h3 class="item-h">Ostium把休市状态和订单簿深度写进价格报告</h3>
+          <p class="item-b">Ostium的RWA价格报告同时携带交易时段、节假日和买卖盘深度；休市期间可挂限价或止损单，但不能提交市价单，条件单需等开盘后执行。每次外部取价收取0.10美元，开仓因滑点失败时该费用仍会消耗。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.pyth.network/blog/pyth-market-data-comes-to-layerzero-atlas" target="_blank" rel="noopener" title="Pyth对LayerZero ATLAS数据接入的说明 · 发布 2026-11-18" aria-label="来源 1：Pyth对LayerZero ATLAS数据接入的说明 · 发布 2026-11-18">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://ostium-labs.gitbook.io/ostium-docs/supporting-infrastructure/price-oracle" target="_blank" rel="noopener" title="Ostium价格预言机文档 · 未标发布日期 · 核验 2026-11-23" aria-label="来源 1：Ostium价格预言机文档 · 未标发布日期 · 核验 2026-11-23">1</a><a class="source-number" href="https://ostium-labs.gitbook.io/ostium-docs/fee-breakdown" target="_blank" rel="noopener" title="Ostium费用拆解文档 · 未标发布日期 · 核验 2026-11-23" aria-label="来源 2：Ostium费用拆解文档 · 未标发布日期 · 核验 2026-11-23">2</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月20日，Pyth把Anthropic股票ANT价格源切换为正式运行</h3>
-          <p class="item-b">Pyth于11月20日把Anthropic PBC的ANT/USD股票价格源从已添加切换为正式运行，同日停用BTF ETF和11月WTI期货两个旧源。ANT相关永续和代币化产品因此多了可接入的价格基础设施，但公告没有披露接入场所和实际调用量。</p>
+          <h3 class="item-h">GMX把价格影响、滑点和LP退出拆成三套约束</h3>
+          <p class="item-b">GMX预估成交会同时计入费用与未平仓失衡产生的价格影响，用户设置的滑点只保护提交到Keeper执行之间的预言机移动。部分池即使仍有资产，也会在可用流动性为零或交易者盈利占池规模超过上限时阻止LP提取。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://docs.pyth.network/release-notes/market-data" target="_blank" rel="noopener" title="Pyth市场数据状态更新 · 发布 2026-11-20" aria-label="来源 1：Pyth市场数据状态更新 · 发布 2026-11-20">1</a>
-          </div>
-        </article>
-        </div>
-      </section>
-      <section class="sec sec-tradfi-product-operations">
-        <div class="sec-head">
-          <span class="sec-no">02</span>
-          <div>
-            <h2 class="sec-title">股票产品与公司行动</h2>
-          </div>
-        </div>
-        <div class="sec-body">
-
-        <article class="item">
-          <h3 class="item-h">11月20日，Binance提前完成SNDK永续拆股并分阶段恢复标准标记价</h3>
-          <p class="item-b">Binance提前在北京时间10:30完成SNDK永续八比一拆股调整，先结算未实现盈亏再恢复仓位，并设置最长15分钟只撤单期。恢复后先用正负10%最新价保护，18:00起在第三方指数稳定后逐步切回标准标记价，交易不中断。</p>
-
-
-          <div class="item-meta compact-sources">
-
-            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/square/post/390143778147449" target="_blank" rel="noopener" title="Binance SNDK合约规模调整完成公告 · 发布 2026-11-20" aria-label="来源 1：Binance SNDK合约规模调整完成公告 · 发布 2026-11-20">1</a><a class="source-number" href="https://www.binance.com/en/square/post/390250429434521" target="_blank" rel="noopener" title="Binance SNDK最新价保护结束公告 · 发布 2026-11-20" aria-label="来源 2：Binance SNDK最新价保护结束公告 · 发布 2026-11-20">2</a>
-          </div>
-        </article>
-        <article class="item">
-          <h3 class="item-h">11月20日，Binance把每日2倍AMD ETF接入最高20倍永续</h3>
-          <p class="item-b">Binance上线JNJ、NIO和AMDL三只USDT永续，均支持24小时交易、最高20倍杠杆和八小时资金费。AMDL本身是每日2倍做多AMD的ETF，外层永续可再加杠杆；平台即使资金费触顶也不自动切换为每小时结算。</p>
-
-
-          <div class="item-meta compact-sources">
-
-            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/square/post/390202022161053" target="_blank" rel="noopener" title="Binance多只TradFi永续上线公告 · 发布 2026-11-20" aria-label="来源 1：Binance多只TradFi永续上线公告 · 发布 2026-11-20">1</a>
-          </div>
-        </article>
-        <article class="item">
-          <h3 class="item-h">11月20日，Bybit为股票、ETF和ADR开放全额持仓出借</h3>
-          <p class="item-b">Bybit为符合条件的股票用户开放全额持仓出借，覆盖美股、ETF和ADR。证券按机构借贷需求出借，费用按证券市值、借贷利率和用户分成逐日累计，再按自然月以USDC结算；加入计划不保证证券会被借出或产生收益。</p>
-
-
-          <div class="item-meta compact-sources">
-
-            <span class="source-label">来源</span><a class="source-number" href="https://announcements.bybit.com/en/article/fully-paid-securities-lending-fpsl-is-now-available-on-bybit-stocks--art1bc2caf65bc3/" target="_blank" rel="noopener" title="Bybit全额证券借贷上线公告 · 发布 2026-11-20" aria-label="来源 1：Bybit全额证券借贷上线公告 · 发布 2026-11-20">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://docs.gmx.io/docs/trading/fees/" target="_blank" rel="noopener" title="GMX交易费用与价格影响文档 · 未标发布日期 · 核验 2026-11-23" aria-label="来源 1：GMX交易费用与价格影响文档 · 未标发布日期 · 核验 2026-11-23">1</a><a class="source-number" href="https://docs.gmx.io/docs/providing-liquidity/" target="_blank" rel="noopener" title="GMX流动性提供与提取文档 · 未标发布日期 · 核验 2026-11-23" aria-label="来源 2：GMX流动性提供与提取文档 · 未标发布日期 · 核验 2026-11-23">2</a><a class="source-number" href="https://docs.gmx.io/" target="_blank" rel="noopener" title="GMX产品与市场说明 · 未标发布日期 · 核验 2026-11-23" aria-label="来源 3：GMX产品与市场说明 · 未标发布日期 · 核验 2026-11-23">3</a>
           </div>
         </article>
         </div>
       </section>
       <section class="sec sec-ai">
         <div class="sec-head">
-          <span class="sec-no">03</span>
+          <span class="sec-no">02</span>
           <div>
             <h2 class="sec-title">AI</h2>
           </div>
@@ -200,33 +159,33 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月20日，OpenAI开放GPT-Live-1.1并把静默待机降至每分钟0.02美元</h3>
-          <p class="item-b">OpenAI在API开放GPT-Live-1.1，改善多语种发音、口音一致性和转写，并支持边说边听及后台任务委派。新增待机模式可在静默5至60秒后暂停推理但保持WebRTC连接，计费从活跃每分钟0.05美元降至0.02美元。</p>
+          <h3 class="item-h">11月22日，OpenAI提议用对数困惑度设置前沿模型共同减速区间</h3>
+          <p class="item-b">OpenAI披露内部代码数据集上GPT-3.5、GPT-4和最新模型的对数困惑度约为0.99、0.91和0.76，并提议实验室在约0.68至0.70附近完成共同监测里程碑前限制推进。该指标可跨规模追踪训练进度，但不同数据集仍不能直接横比。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://community.openai.com/t/gpt-live-1-1-has-arrived-in-the-api/1418537" target="_blank" rel="noopener" title="OpenAI GPT-Live-1.1 API公告 · 发布 2026-11-20" aria-label="来源 1：OpenAI GPT-Live-1.1 API公告 · 发布 2026-11-20">1</a><a class="source-number" href="https://developers.openai.com/api/docs/models/gpt-live-1.1" target="_blank" rel="noopener" title="OpenAI GPT-Live-1.1模型与价格文档 · 发布 2026-11-19" aria-label="来源 2：OpenAI GPT-Live-1.1模型与价格文档 · 发布 2026-11-19">2</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/perplexity-and-intelligence/" target="_blank" rel="noopener" title="OpenAI前沿模型困惑度与治理提议 · 发布 2026-11-22" aria-label="来源 1：OpenAI前沿模型困惑度与治理提议 · 发布 2026-11-22">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月19日，Google把Genie 4交互世界模型接入Gemini API</h3>
-          <p class="item-b">Google把Genie 4接入Gemini API和AI Studio，可用文本或参考图生成带原生音频的连续720p、24帧交互世界，并通过键盘与实时文本修改天气、光照、物体和事件。输出带SynthID水印，现已可供开发者试用。</p>
+          <h3 class="item-h">11月20日，OpenAI发布包含99项任务的MedChemBench</h3>
+          <p class="item-b">MedChemBench从117篇论文和专利整理99个药物化学问题与761个结构，GPT-6.2 Astra在无工具单次作答中得84.5%。模型的结构理解达到95.4%，但分子选择与数值预测仅取得约一半分数，基准也不能证明端到端药物研发能力。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/" target="_blank" rel="noopener" title="Google Genie 4 API发布公告 · 发布 2026-11-19" aria-label="来源 1：Google Genie 4 API发布公告 · 发布 2026-11-19">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/introducing-medchembench/" target="_blank" rel="noopener" title="OpenAI MedChemBench发布说明 · 发布 2026-11-20" aria-label="来源 1：OpenAI MedChemBench发布说明 · 发布 2026-11-20">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月19日，Kimi Code支持离线续跑远程项目并接入Amazon Bedrock</h3>
-          <p class="item-b">Kimi Code Desktop 1.4.0支持SSH远程项目，文件、工具和会话在远端运行，本机离线后任务仍可继续；CLI 2.7.0新增Amazon Bedrock连接，可按模型选择Anthropic Messages或OpenAI兼容协议，并允许运行中立即改变Agent方向。</p>
+          <h3 class="item-h">11月20日，Qwen4-Max在美国弗吉尼亚区域开放部署</h3>
+          <p class="item-b">QwenCloud于11月20日把Qwen4-Max加入美国弗吉尼亚部署范围，继续支持多模态理解、网页搜索、工具调用、结构化输出及OpenAI和Anthropic兼容接口。此次变化扩大了区域接入与数据驻留选择，但没有新增价格、基准或美国区域服务级别数据。</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.kimi.com/code/docs/en/kimi-code/whats-new.html" target="_blank" rel="noopener" title="Kimi Code更新日志 · 发布 2026-11-19" aria-label="来源 1：Kimi Code更新日志 · 发布 2026-11-19">1</a>
+            <span class="source-label">来源</span><a class="source-number" href="https://docs.qwencloud.com/changelog/models" target="_blank" rel="noopener" title="QwenCloud模型更新记录 · 发布 2026-11-20" aria-label="来源 1：QwenCloud模型更新记录 · 发布 2026-11-20">1</a>
           </div>
         </article>
         </div>
