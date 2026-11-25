@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perp DEX 日报 · 2026-11-25</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+  /* 报头 */
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+  /* 导语 */
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+  /* 今日进展：只展示有来源的新 delta */
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+  /* 章节 */
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6; min-width:0; overflow-wrap:anywhere;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
+    white-space:nowrap; letter-spacing:0; line-height:1.5;}
+  .source-label{color:#a3987f; flex:none;}
+  .source-number{color:#8a7f66; text-decoration:underline; text-underline-offset:2px;
+    min-width:14px; padding:2px 0; text-align:center; flex:none; font-variant-numeric:tabular-nums;}
+  .source-number:hover,.source-number:focus-visible{color:#b03a2e;}
+  .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .research-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
+  .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
+  .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
+  .research-row + .research-row{border-top:1px dotted #e4ded0;}
+  .research-row dt{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dd{min-width:0; color:#403a2e;}
+  .research-inference{background:#f7f4ec; padding:10px;}
+  .research-discussions{list-style:none;}
+  .research-discussions li + li{margin-top:8px;}
+  .discussion-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#a3987f; text-align:center;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>每日链上观察</span><span>第 142 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026 年 11 月 25 日 · 星期三</div>
+    </header>
+    <p class="lead">CFTC把事件合约报送从临时不行动函改成分阶段规则，同时允许交易与清算场所在折扣和流动性约束下把部分加密资产计入运营资源。</p>
+
+
+      <section class="sec sec-market-infrastructure-and-risk-controls">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">市场基础设施与风险控制</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月23日，CFTC为全额抵押事件合约建立分阶段报送规则</h3>
+          <p class="item-b">CFTC于11月23日通过终稿，把符合条件的全额抵押事件合约从部分掉期报送与不行动函安排，转入期货和期权的第15至18部分框架，并新增16.03条。市场、期货佣金商、清算会员和外国经纪商将分60天、最晚2027年7月26日及12个月三档完成报送切换。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.cftc.gov/PressRoom/PressReleases/9330-26" target="_blank" rel="noopener" title="CFTC事件合约报送终稿公告 · 发布 2026-11-23" aria-label="来源 1：CFTC事件合约报送终稿公告 · 发布 2026-11-23">1</a><a class="source-number" href="https://www.cftc.gov/media/15026/FinalRule_EventContractReporting112326/download" target="_blank" rel="noopener" title="CFTC事件合约报送终稿 · 发布 2026-11-23" aria-label="来源 2：CFTC事件合约报送终稿 · 发布 2026-11-23">2</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月24日，Binance把Cboe三大美股指数接入平台与Binance AI</h3>
+          <p class="item-b">Binance于11月24日接入Cboe Global Indices Feed，网页、App和Binance AI首批获得标普500、道琼斯工业平均与纳斯达克100的实时基准，后续还将扩充指数。公告确认AI会据此解释跨市场波动和个性化背景，但未说明数据授权地区、刷新延迟或是否用于下单定价。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/support/announcement/detail/2b1c265568194d4ebb1832002d818414" target="_blank" rel="noopener" title="Binance接入Cboe指数源公告 · 发布 2026-11-24" aria-label="来源 1：Binance接入Cboe指数源公告 · 发布 2026-11-24">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">CFTC给加密资产作为场所运营资源设定折扣与流动性边界</h3>
+          <p class="item-b">CFTC工作人员认为，SEF、DCM和DCO可把BTC、ETH及支付稳定币计入覆盖至少12个月运营成本的财务资源，参考最低折扣分别为20%、20%和2%。但这些资产不算现金或高流动性证券，不能替代另行要求的3个月或6个月流动资源；该意见也不是新规则或不执法承诺。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.cftc.gov/PressRoom/PressReleases/9331-26" target="_blank" rel="noopener" title="CFTC加密资产财务资源公告 · 发布 2026-11-23 · 核验 2026-11-25" aria-label="来源 1：CFTC加密资产财务资源公告 · 发布 2026-11-23 · 核验 2026-11-25">1</a><a class="source-number" href="https://www.cftc.gov/csl/26-31/download" target="_blank" rel="noopener" title="CFTC工作人员第26-31号意见 · 发布 2026-11-23 · 核验 2026-11-25" aria-label="来源 2：CFTC工作人员第26-31号意见 · 发布 2026-11-23 · 核验 2026-11-25">2</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">Pacifica把清算结果拆成市价、接管与自动减仓三层</h3>
+          <p class="item-b">Pacifica先用市价单减仓，深度不足时把剩余仓位转给清算金库，最后才对盈利对手方执行自动减仓；账户余额历史还把三类结果分别记为market、backstop和ADL事件。市场接口同时暴露逐标的最高杠杆、最小订单和小时资金费，便于前端呈现实际风险路径。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://pacifica.gitbook.io/docs/other/faqs" target="_blank" rel="noopener" title="Pacifica常见问题与清算说明 · 未标发布日期 · 核验 2026-11-25" aria-label="来源 1：Pacifica常见问题与清算说明 · 未标发布日期 · 核验 2026-11-25">1</a><a class="source-number" href="https://pacifica.gitbook.io/docs/api-documentation/api/rest-api/account/get-account-balance-history" target="_blank" rel="noopener" title="Pacifica账户余额历史接口 · 未标发布日期 · 核验 2026-11-25" aria-label="来源 2：Pacifica账户余额历史接口 · 未标发布日期 · 核验 2026-11-25">2</a><a class="source-number" href="https://pacifica.gitbook.io/docs/api-documentation/api/rest-api/markets/get-market-info" target="_blank" rel="noopener" title="Pacifica市场信息接口 · 未标发布日期 · 核验 2026-11-25" aria-label="来源 3：Pacifica市场信息接口 · 未标发布日期 · 核验 2026-11-25">3</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">AI</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月24日，Claude把工作回顾与生成成品推进桌面工作流</h3>
+          <p class="item-b">Anthropic于11月24日把月度回顾推向免费、Pro、Max和Ultra，并允许纳入Claude Code会话与云端Cowork任务；同日开放把Claude生成的成品安装为Mac或Windows应用测试版，成品拥有独立窗口、图标和系统交互。前者整合工作历史，后者把一次性产出变成可运行工具。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://support.claude.com/zh-TW/articles/12138966-%E7%99%BC%E8%A1%8C%E8%AA%AA%E6%98%8E" target="_blank" rel="noopener" title="Claude产品发布说明 · 发布 2026-11-24" aria-label="来源 1：Claude产品发布说明 · 发布 2026-11-24">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月23日，Claude企业安全测试版把零留存证据写入客户云桶</h3>
+          <p class="item-b">Anthropic于11月23日推出Enterprise Frontier Safeguards测试版，覆盖Claude Platform、AWS和Google Cloud。合格组织可启用零数据保留，提示和响应不由Anthropic保存；加密安全数据写入客户自有云桶，存储异常与恢复会触发Webhook。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://platform.claude.com/docs/zh-CN/release-notes/overview" target="_blank" rel="noopener" title="Claude Platform发布说明 · 发布 2026-11-23" aria-label="来源 1：Claude Platform发布说明 · 发布 2026-11-23">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月23日，俄勒冈与弗吉尼亚分别起诉Grok运营方</h3>
+          <p class="item-b">俄勒冈与弗吉尼亚于11月23日分别起诉Grok运营方，指控其对非自愿性图像保护不足并误导用户。诉状援引研究估算，2025年12月29日至2026年1月8日约生成300万张性化图像，其中约2.3万张疑似涉及儿童；SpaceXSI称会调整防护、处置账户并报送执法，指控尚待法院审理。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.doj.state.or.us/media-home/news-media-releases/ag-rayfield-takes-legal-action-against-grok-for-failing-to-block-child-exploitation/" target="_blank" rel="noopener" title="俄勒冈州司法部Grok诉讼公告 · 发布 2026-11-23" aria-label="来源 1：俄勒冈州司法部Grok诉讼公告 · 发布 2026-11-23">1</a><a class="source-number" href="https://apnews.com/article/grok-lawsuit-elon-musk-ai-abuse-images-452cc64e7169a55868f797982d0e8238" target="_blank" rel="noopener" title="美联社Grok诉讼报道与运营方回应 · 发布 2026-11-23" aria-label="来源 2：美联社Grok诉讼报道与运营方回应 · 发布 2026-11-23">2</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+  </main>
+</body>
+</html>
