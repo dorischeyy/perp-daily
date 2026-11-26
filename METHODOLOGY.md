@@ -1,14 +1,14 @@
 # Editorial Methodology
 
-> This document explains **why the daily reads the way it does**. The core stance: a daily is not a re-statement of today's headlines — it is **an analyst tracking a set of narratives**, intimately familiar with the arc of each important story, weaving developments scattered across days into a single line of judgment. The mechanisms below exist to support that stance.
+> Perp DEX Daily is a Chinese-language research publication covering perpetual futures, trading infrastructure and selected AI developments. This document explains how editors select stories, verify evidence and follow changes across editions.
 
 ---
 
-## 0. One-line positioning
+## 0. Editorial scope
 
-> **Not day-by-day reporting, and not a fixed-story diary.** What the reader should take away is which structural shifts actually moved today, what they mean for us, and what to watch next.
+> Each edition identifies a verified change, explains how it affects a market or product, and records the evidence readers can use to follow it.
 
-To deliver that, the system does more than generate content. It **maintains state** (a cross-day story ledger), **scores signal** (to drive selection and tracking), and **enforces integrity mechanically** (freshness, anti-fabrication, de-duplication, missed-run alerting). Remove any one and it degrades into "a daily produced from a one-line prompt."
+Editors score candidates, record significant developments in a public story ledger, and check dates, source links and duplication before publication.
 
 The lead directly states one evidence-backed conclusion or analytical result and its necessary boundary, not a reading guide, research plan or compressed table of contents. Version 2 uses one or two short sentences, 20–120 characters total and at most 70 per sentence. Avoid “更值得研究的是”, “更值得关注的是”, “这期先看”, “这一期先看”, “今天先看”, “本文将”, “让我们来看看” and similar introductory promises. Do not cram multiple institutions, unexplained terms, or unrelated Crypto and AI developments into a synthetic theme. Supporting detail stays in the body; historical research is not presented as a new event.
 
@@ -38,14 +38,14 @@ An app chain, an order book, and an oracle describe different layers and may coe
 
 ## 1. Signal scoring
 
-Every candidate story is scored across five dimensions (0–100 total). Scoring is not decoration — it **forces selection, ordering, and the "track it long-term?" decision to be defensible**, and surfaces what genuinely matters.
+Editors score each candidate across five dimensions for a total of 100 points. The score informs selection, placement and ongoing coverage.
 
 | Dimension | Max | What it measures |
 |-----------|-----|------------------|
 | Structural | 30 | Does it reveal a consequential mechanism, product choice, or distribution model? Sector-wide disruption is not required. |
-| Relevance | 25 | Does it touch the project's core, compete for the same users, collateral, order flow, asset supply, price discovery, liquidity or distribution, or change a concrete product/tool decision through AI capability, access, pricing, safety or adoption? |
+| Relevance | 25 | Does the change affect how people access a market, trade, use collateral or choose an AI tool? Consider order flow, liquidity, pricing, distribution, safety and documented adoption. |
 | Durability | 20 | A one-off event, or the head of a multi-week narrative? |
-| Actionability | 15 | Can it become a concrete opportunity / decision / risk for us? |
+| Actionability | 15 | Does the evidence inform a specific trading, product or research decision? |
 | Evidence quality | 10 | Verifiable mechanics, readable primary evidence, clear separation of claims and inference; early scale alone is not a penalty. |
 
 **Tiers**: S (≥90) opens a tracked story thread · A (75–89) priority item, threaded if durable · B (60–74) eligible only for non-AI coverage · <60 cut.
@@ -56,10 +56,10 @@ Each edition's scoring detail is recorded in that day's *Editor's Self-Review* (
 
 ## 2. Story ledger & threading
 
-This is what separates the daily from a news relay. **Important information must not break just because a reader missed one day, but a thread does not earn page space merely by remaining open.**
+The ledger connects developments across editions and records the evidence that would change an earlier assessment.
 
 ### 2.1 The ledger (persistent state)
-`threads.json` holds every story currently being tracked. Each entry carries: the thesis, the implication for us (`why_us`), the trigger to watch (`watch_for`), a review cadence, the next review date (`next_check`), and a time-ordered development log (deltas only). It is public — anyone can see which threads the daily is tracking and where each one stands.
+`threads.json` records the thesis for each story, its implications for readers (`why_us`), the next observable development (`watch_for`), review dates and a chronological log of new evidence.
 
 ### 2.2 Lifecycle
 ```
@@ -91,7 +91,7 @@ The operative question is not “is this another perp DEX?” It is “can this 
 
 ## 3. Integrity gates
 
-Mechanisms run on scripts, not good intentions.
+The following checks run during research, validation and publication.
 
 | Gate | File | Function |
 |------|------|----------|

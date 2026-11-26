@@ -57,11 +57,11 @@
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
   /* 「产品判断」做成醒目的决策拆解卡片 */
-  .sec-hertzflow{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
+  .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
-  .sec-hertzflow .sec-title{color:#9a7b1f;}
-  .sec-hertzflow .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
-  .sec-hertzflow .item-b{color:#3a3322;}
+  .sec-product-notes .sec-title{color:#9a7b1f;}
+  .sec-product-notes .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
+  .sec-product-notes .item-b{color:#3a3322;}
   .decision-area{display:inline-block; margin-bottom:5px; padding:1px 7px; border-radius:10px;
     background:#efe5ca; color:#8a6c19; font-family:-apple-system,"PingFang SC",sans-serif;
     font-size:10.5px; letter-spacing:.04em;}
@@ -141,7 +141,7 @@
         </article>
         </div>
       </section>
-      <section class="sec sec-hertzflow">
+      <section class="sec sec-product-notes">
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
@@ -153,7 +153,7 @@
         <article class="item">
           <div class="decision-area">风控与清算</div>
           <h3 class="item-h">多家报价商不能替代对同源异常成交的识别</h3>
-          <p class="item-b"><strong>判断变化</strong>：从“多家数据商给出一致价格即可提高标记价置信度”更新为“必须先确认报价是否来自彼此独立的原始市场，同一异常成交被多路转发不能算多重确认”。</p><p class="item-b"><strong>证据与边界</strong>：SKHYNIX 的预言机按规格运行，异常外部成交仍穿透多家数据商并触发近 19% 标记价下跌；单一个案不能证明某个数据商或盘前市场长期失真，赔付规模也尚未披露。</p><p class="item-b"><strong>对 HertzFlow</strong>：不应把增加 Feed 数量当成充分修复，价格管线需要记录上游场所、对同源报价去重，并在单一原始市场出现极端成交时把订单执行与清算验证分开，按既有价格偏离规则触发降杠杆、暂停清算或人工复核。</p>
+          <p class="item-b"><strong>判断变化</strong>：从“多家数据商给出一致价格即可提高标记价置信度”更新为“必须先确认报价是否来自彼此独立的原始市场，同一异常成交被多路转发不能算多重确认”。</p><p class="item-b"><strong>证据与边界</strong>：SKHYNIX 的预言机按规格运行，异常外部成交仍穿透多家数据商并触发近 19% 标记价下跌；单一个案不能证明某个数据商或盘前市场长期失真，赔付规模也尚未披露。</p>
 
           <div class="item-meta">
 

@@ -57,11 +57,11 @@
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
   /* 「产品判断」做成醒目的决策拆解卡片 */
-  .sec-hertzflow{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
+  .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
-  .sec-hertzflow .sec-title{color:#9a7b1f;}
-  .sec-hertzflow .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
-  .sec-hertzflow .item-b{color:#3a3322;}
+  .sec-product-notes .sec-title{color:#9a7b1f;}
+  .sec-product-notes .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
+  .sec-product-notes .item-b{color:#3a3322;}
   .decision-area{display:inline-block; margin-bottom:5px; padding:1px 7px; border-radius:10px;
     background:#efe5ca; color:#8a6c19; font-family:-apple-system,"PingFang SC",sans-serif;
     font-size:10.5px; letter-spacing:.04em;}
@@ -263,7 +263,7 @@
         </article>
         </div>
       </section>
-      <section class="sec sec-hertzflow">
+      <section class="sec sec-product-notes">
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
@@ -275,7 +275,7 @@
         <article class="item">
           <div class="decision-area">风控与清算</div>
           <h3 class="item-h">总 OI 不能再脱离周转率单独决定风险容量</h3>
-          <p class="item-b"><strong>判断变化</strong>：从“用总 OI 和成交量分别判断场所规模”更新为“把 OI 与日成交比及其趋势纳入风险密度判断，再决定杠杆、OI 上限与储备需求”。</p><p class="item-b"><strong>证据与边界</strong>：Hyperliquid 与 Bybit 总 OI 近乎相同，但 OI 与日成交比分别约 6.98 和 2.94；这是周末单日全平台快照，没有资产级深度和清算数据，不能直接证明前者风险更高。</p><p class="item-b"><strong>对 HertzFlow</strong>：在现有隔离市场与动态仓位限制基础上，为每个市场增加 OI 与可执行成交的滚动比值作为复核信号；只在比值持续抬升且深度恶化时收紧参数，不用一天快照自动触发。</p>
+          <p class="item-b"><strong>判断变化</strong>：从“用总 OI 和成交量分别判断场所规模”更新为“把 OI 与日成交比及其趋势纳入风险密度判断，再决定杠杆、OI 上限与储备需求”。</p><p class="item-b"><strong>证据与边界</strong>：Hyperliquid 与 Bybit 总 OI 近乎相同，但 OI 与日成交比分别约 6.98 和 2.94；这是周末单日全平台快照，没有资产级深度和清算数据，不能直接证明前者风险更高。</p>
 
           <div class="item-meta">
 

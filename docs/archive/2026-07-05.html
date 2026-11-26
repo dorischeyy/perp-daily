@@ -54,12 +54,12 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「对 Hertzflow 的启发」做成醒目的主编批注卡片 */
-  .sec-hertzflow{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
+  /* 「产品观察」做成醒目的主编批注卡片 */
+  .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
-  .sec-hertzflow .sec-title{color:#9a7b1f;}
-  .sec-hertzflow .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
-  .sec-hertzflow .item-b{color:#3a3322;}
+  .sec-product-notes .sec-title{color:#9a7b1f;}
+  .sec-product-notes .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
+  .sec-product-notes .item-b{color:#3a3322;}
   .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6;}
   .item:last-child{border-bottom:none;}
   .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
@@ -118,7 +118,7 @@
           
         <article class="item">
           <h3 class="item-h">Robinhood 把永续期货扩展到欧洲零售，覆盖大宗商品/外汇/ETF</h3>
-          <p class="item-b"><strong>事件</strong>：Robinhood 07-02 宣布把永续期货产品从加密货币扩展到大宗商品（黄金、白银、原油）、ETF 与外汇（欧元/美元）等品类，面向欧洲投资者开放，最高 10 倍杠杆、7x24 小时交易；同批公告还包括面向美元稳定币的约 7% 年化理财产品「Robinhood Earn」，以及加拿大、新加坡、英国的加密业务扩张计划。</p><p class="item-b"><strong>机制</strong>：这是 Robinhood 自家传统经纪商牌照下的永续期货产品线，与它同期在 Robinhood Chain 上焊入 Arcus/Lighter 的链上分发是两条并行的轨道，一条走持牌中心化产品，一条走链上原生集成，本质都是把永续合约当作覆盖全资产类别的统一杠杆入口。</p><p class="item-b"><strong>二阶效应</strong>：（Robinhood Chain 线·自 07-02·第 4 个进展）把这条和链上的 Arcus/Lighter 分发放在一起看，能看出 Robinhood 对永续合约的野心是双线下注，而不是一次孤立的公关动作；对 Hertzflow 这类以 forex/commodities 虚拟标的为差异化卖点的 perp DEX，意味着传统经纪商正用持牌身份 + 更低杠杆(10倍)的稳健打法，在同一批标的上和链上高杠杆玩家抢同一群零售用户。</p>
+          <p class="item-b"><strong>事件</strong>：Robinhood 07-02 宣布把永续期货产品从加密货币扩展到大宗商品（黄金、白银、原油）、ETF 与外汇（欧元/美元）等品类，面向欧洲投资者开放，最高 10 倍杠杆、7x24 小时交易；同批公告还包括面向美元稳定币的约 7% 年化理财产品「Robinhood Earn」，以及加拿大、新加坡、英国的加密业务扩张计划。</p><p class="item-b"><strong>机制</strong>：这是 Robinhood 自家传统经纪商牌照下的永续期货产品线，与它同期在 Robinhood Chain 上焊入 Arcus/Lighter 的链上分发是两条并行的轨道，一条走持牌中心化产品，一条走链上原生集成，本质都是把永续合约当作覆盖全资产类别的统一杠杆入口。</p><p class="item-b"><strong>二阶效应</strong>：（Robinhood Chain 线·自 07-02·第 4 个进展）把这条和链上的 Arcus/Lighter 分发放在一起看，能看出 Robinhood 对永续合约的野心是双线下注，而不是一次孤立的公关动作。</p>
           <div class="item-meta">
             <span class="item-date">2026-07-02</span>
             <a class="item-src" href="https://www.investing.com/news/stock-market-news/robinhood-expands-perpetual-futures-offering-in-europe-plans-crypto-launch-in-uk-4773916" target="_blank" rel="noopener">Investing.com (Reuters) ↗</a>
@@ -154,19 +154,19 @@
         </article>
         </div>
       </section>
-      <section class="sec sec-hertzflow">
+      <section class="sec sec-product-notes">
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
             <div class="sec-kicker">机会与打法</div>
-            <h2 class="sec-title">对 Hertzflow 的启发</h2>
+            <h2 class="sec-title">产品观察</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
           <h3 class="item-h">持牌经纪商在用更低杠杆抢同一批 forex/commodities 用户</h3>
-          <p class="item-b">Robinhood 把永续期货扩展到欧洲零售时选择的是 10 倍杠杆，明显低于链上平台常见的 50-200 倍。这不是保守，而是持牌身份换来的信任溢价：更低杠杆配合合规身份，反而可能吸引风险偏好更保守、但资金量更大的那批用户。Hertzflow 的 ZFP 高杠杆是差异化利器，但也值得评估是否需要为 forex/贵金属这类波动率较低的标的提供一档「更低杠杆、更长持仓周期」的产品线，覆盖被高杠杆吓退的那部分潜在用户，而不是把所有标的都用同一套杠杆逻辑覆盖。</p>
+          <p class="item-b">Robinhood 把永续期货扩展到欧洲零售时选择的是 10 倍杠杆，明显低于链上平台常见的 50-200 倍。这不是保守，而是持牌身份换来的信任溢价：更低杠杆配合合规身份，反而可能吸引风险偏好更保守、但资金量更大的那批用户。</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://www.investing.com/news/stock-market-news/robinhood-expands-perpetual-futures-offering-in-europe-plans-crypto-launch-in-uk-4773916" target="_blank" rel="noopener">Investing.com (Reuters) ↗</a>
@@ -174,7 +174,7 @@
         </article>
         <article class="item">
           <h3 class="item-h">把虚拟资产变成抵押品，而不只是可交易标的</h3>
-          <p class="item-b">Kraken 让代币化美股/ETF 同时充当杠杆抵押品，提升了资金效率。Hertzflow 的虚拟 RWA、美股指数、贵金属标的目前主要作为可交易标的，若能让用户持仓同时抵押开新仓，可以减少资金被交易和抵押两头占用的摩擦，对提升留存有直接价值。建议评估让波动率较低的贵金属/forex 类标的率先具备抵押品功能的可行性，作为差异化方向纳入评估。</p>
+          <p class="item-b">Kraken 让代币化美股/ETF 同时充当杠杆抵押品，提升了资金效率。</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://blog.kraken.com/product/xstocks/eligible-as-collateral-for-futures-and-margin" target="_blank" rel="noopener">Kraken Blog ↗</a>
@@ -182,7 +182,7 @@
         </article>
         <article class="item">
           <h3 class="item-h">分发热闹不等于产品交付，是能抢的窗口期</h3>
-          <p class="item-b">Robinhood 与 dYdX 团队高调宣布的 Arcus，一周后核实发现真正开放的只有股票代币现货，被称为核心产品的 RWA 永续仍卡在候补名单。经纪商巨头的分发能力毋庸置疑，但把复杂的永续保证金/结算体系接进新链、新钱包，所需时间比公关稿暗示的更长。在巨头们还停留在候补名单阶段时，Hertzflow 已上线的 forex/美股指数/贵金属虚拟标的有一段实打实的窗口期去抢用户心智和真实交易量，建议评估是否值得针对性提速相关市场动作。</p>
+          <p class="item-b">Robinhood 与 dYdX 团队高调宣布的 Arcus，一周后核实发现真正开放的只有股票代币现货，被称为核心产品的 RWA 永续仍卡在候补名单。经纪商巨头的分发能力毋庸置疑，但把复杂的永续保证金/结算体系接进新链、新钱包，所需时间比公关稿暗示的更长。</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://www.dydx.xyz/blog/a-new-arc" target="_blank" rel="noopener">dYdX Blog ↗</a>

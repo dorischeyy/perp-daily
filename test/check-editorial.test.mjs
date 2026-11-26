@@ -6,8 +6,15 @@ import { researchContent } from "./_research-fixture.mjs";
 
 test("已取消的产品判断栏会被阻断", () => {
   const content = baseContent();
-  content.sections.push({ id: "hertzflow", title: "产品判断", items: [] });
-  assert.ok(auditEditorial(content).errors.some((e) => /产品判断栏已取消/.test(e)));
+  for (const section of [
+    { title: "对交易产品的启发", kicker: "机会与打法", items: [] },
+    { title: "机会与打法", items: [] },
+    { title: "产品判断", items: [{ decision_area: "战略优先级" }] },
+  ]) {
+    content.sections = [{ id: "archived-column", ...section }];
+    assert.ok(auditEditorial(content).errors.some((e) => /产品判断栏已取消/.test(e)));
+    assert.ok(!auditEditorial({ ...content, editorial_version: 2 }).errors.some((e) => /产品判断栏已取消/.test(e)));
+  }
 });
 
 test("已取消的二阶效应段会被阻断", () => {

@@ -54,12 +54,12 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「对 Hertzflow 的启发」做成醒目的主编批注卡片 */
-  .sec-hertzflow{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
+  /* 「产品观察」做成醒目的主编批注卡片 */
+  .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
-  .sec-hertzflow .sec-title{color:#9a7b1f;}
-  .sec-hertzflow .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
-  .sec-hertzflow .item-b{color:#3a3322;}
+  .sec-product-notes .sec-title{color:#9a7b1f;}
+  .sec-product-notes .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
+  .sec-product-notes .item-b{color:#3a3322;}
   .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6;}
   .item:last-child{border-bottom:none;}
   .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
@@ -148,27 +148,27 @@
         </article>
         </div>
       </section>
-      <section class="sec sec-hertzflow">
+      <section class="sec sec-product-notes">
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
             <div class="sec-kicker">机会与打法</div>
-            <h2 class="sec-title">对 Hertzflow 的启发</h2>
+            <h2 class="sec-title">产品观察</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
           <h3 class="item-h">MAS 警告 Hyperliquid 的逻辑：「可能被误认为受监管」，比实际违规更难辩驳，提前定位比事后解释便宜</h3>
-          <p class="item-b">MAS 把 Hyperliquid 列入 IAL 的理由不是它做错了什么，而是「用户可能误以为它受 MAS 监管」。这套逻辑对任何在新加坡有用户的链上 perp 都适用。建议评估：HertzFlow 当前是否在新加坡、日本、韩国等高敏区有实质用户流量；若有，建议提前准备一套标准法律声明，核心要点参照 Hyperliquid 的回应话术：「非托管协议、从未申请本地牌照、不面向特定地区居民接受服务」，在产品主页和 Docs 明确置顶。</p><p class="item-b">比对行动项：对照 Hyperliquid 的官方声明逐点核查，哪几条我们已有，哪几条缺失，缺失的优先补，这套准备的边际成本极低但预防价值大。</p>
+          <p class="item-b">MAS 把 Hyperliquid 列入 IAL 的理由不是它做错了什么，而是「用户可能误以为它受 MAS 监管」。这套逻辑对任何在新加坡有用户的链上 perp 都适用。</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://cointelegraph.com/features/singapores-hyperliquid-warning-indonesias-finfluencer-licence-asia-express" target="_blank" rel="noopener">Cointelegraph ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">JPMorgan 12 钱包问题是链上 perp 的隐性时间炸弹，BSC 上的 HertzFlow 值得主动拉一次集中度审计</h3>
-          <p class="item-b">Hyperliquid 50% 量来自 12 个钱包，外部观察者看到的是「深度好」，实际上是清算时的尾部流动性极度脆弱。BSC 上的 HertzFlow 若主要 maker/LP 高度集中，同类隐患同样存在。建议拉一次近 30 天 maker 成交量的地址去中心化报表：若前 10 地址占比超过 30%，需制定梯级激励计划（如对中小 maker 给更高的费率返还），主动稀释集中度。这不只是流动性问题，也是对机构级合作方说「我们的市场深度不依赖单一大户」时的基础数据支撑。</p>
+          <h3 class="item-h">Hyperliquid 十二个钱包的成交集中度</h3>
+          <p class="item-b">Hyperliquid 50% 量来自 12 个钱包，外部观察者看到的是「深度好」，实际上是清算时的尾部流动性极度脆弱。</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://www.coindesk.com/business/2026/06/29/jpmorgan-sees-limited-institutional-demand-for-perpetual-futures" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -176,7 +176,7 @@
         </article>
         <article class="item">
           <h3 class="item-h">Aster AOS-1 的设计逻辑值得移植：permissionless 上架费可以自带代币经济正循环，而非单纯运营成本</h3>
-          <p class="item-b">Aster 的 AOS-1 上架费（5 万 USDT）并非运营收入，而是直接并入代币回购资金池，让「品种扩张」行为本身驱动代币通缩。HertzFlow 的 permissionless 市场创建是差异化卖点，当前若对创建者收一笔「市场创建押金/保证金」，并在产品运营满足条件后将该笔费用并入 ZFP 代币回购（一旦代币经济成型），可复现同款正循环，且该机制的设计逻辑比 Aster 更简洁。建议将这个联动方案纳入 H2 代币经济评估的备选清单。</p>
+          <p class="item-b">Aster 的 AOS-1 上架费（5 万 USDT）并非运营收入，而是直接并入代币回购资金池，让「品种扩张」行为本身驱动代币通缩。</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://www.cryptotimes.io/2026/06/29/aster-burns-2-9m-tokens-in-first-buyback-under-new-tokenomics/" target="_blank" rel="noopener">CryptoTimes ↗</a>

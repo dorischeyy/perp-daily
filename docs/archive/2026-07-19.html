@@ -53,11 +53,11 @@
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
   /* 「机会与打法」做成醒目的产品判断卡片 */
-  .sec-hertzflow{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
+  .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
-  .sec-hertzflow .sec-title{color:#9a7b1f;}
-  .sec-hertzflow .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
-  .sec-hertzflow .item-b{color:#3a3322;}
+  .sec-product-notes .sec-title{color:#9a7b1f;}
+  .sec-product-notes .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
+  .sec-product-notes .item-b{color:#3a3322;}
   .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6;}
   .item:last-child{border-bottom:none;}
   .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
@@ -150,7 +150,7 @@
         </article>
         </div>
       </section>
-      <section class="sec sec-hertzflow">
+      <section class="sec sec-product-notes">
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
@@ -160,8 +160,8 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">盘前股票永续先不扩列，用 07-27 收敛结果做准入试验</h3>
-          <p class="item-b"><strong>判断</strong>：先验证。CXMT 证明盘前敞口有需求，但上市前缺少可套利现货锚点，暂不进入 HertzFlow 标的候选。</p><p class="item-b"><strong>机制对照</strong>：HertzFlow 已有 Pyth 主价格源、多源回退、价格偏离校验和按资产配置的市场时间；真正缺口是盘前指数的可审计性、人民币汇率转换、公司行动规则与上市切换期间的连续报价。</p><p class="item-b"><strong>动作与验收</strong>：记录 07-27 上市前后 60 分钟的现货、Hyperliquid 与 CEX 合约价差、深度、资金费率和暂停情况；只有两份独立实时源可用，且最剧烈时段仍能满足现有偏离拒单与清算参数，才进入 Feed 和市场参数评审。</p>
+          <h3 class="item-h">CXMT 盘前合约缺少现货套利锚点</h3>
+          <p class="item-b">CXMT 上市前缺少可套利的现货价格。评估其盘前合约需要核对指数来源、汇率转换及切换至公开市场报价时的价差。</p>
 
           <div class="item-meta">
 
@@ -169,8 +169,8 @@
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">分发合作验收拆开路由量与本地市场量</h3>
-          <p class="item-b"><strong>判断</strong>：现在做。以后评估钱包或超级应用分发时，不再把入口访问量、外部路由量和 HertzFlow 原生市场量合成一个增长指标。</p><p class="item-b"><strong>机制对照</strong>：HertzFlow 的 OI、隔离池储备和 LP 收益只会被实际落到本地市场的订单改变，路由到第三方交易场的成交只能证明入口有需求，不能证明本地深度成立。</p><p class="item-b"><strong>动作与验收</strong>：为分发合作固定记录外部路由成交、本地 OI、本地 LP 深度和 7 日复交易率；只有本地指标同步增长，才把合作判定为市场扩张，而不是流量转售。</p>
+          <h3 class="item-h">钱包入口的成交归属</h3>
+          <p class="item-b">钱包可以把订单路由到第三方交易场所。入口访问量可衡量分发覆盖，订单的执行场所才决定成交和持仓计入哪个市场。</p>
 
           <div class="item-meta">
 

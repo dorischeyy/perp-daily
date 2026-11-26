@@ -83,7 +83,7 @@ test("产品判断栏和二阶效应已取消，所有栏目都禁用 kicker", (
   assert.ok(validateContent(ordinary).errors.some((e) => /只保留一级标题/.test(e)));
 
   const c = baseContent();
-  c.sections.push({ id: "hertzflow", title: "产品判断", items: [] });
+  c.sections.push({ id: "legacy-product-view", title: "产品判断", items: [] });
   assert.ok(validateContent(c).errors.some((e) => /产品判断栏已取消/.test(e)));
 
   const withSecondOrder = baseContent();

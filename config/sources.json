@@ -3,17 +3,17 @@
   "updated": "2026-10-20",
   "project_radar": "config/project-radar.json",
   "research_playbook": "config/research-playbook.md",
-  "_doc": "日报信源注册表。层级说明来源可信度，daily_scan 定义每天必须覆盖的竞争面。core_pool 只是高频入口，不代表固定报道对象；最终按当日变化和评分决定。verify:true 的账号 handle 待核实（先按 name 搜），status:watch 为有 ban/改名风险需备替补的账号。",
+  "_doc": "日报信源目录按来源类型登记线索。daily_scan 定义每日检索范围，core_pool 记录常用入口。verify 为 true 的账号需按名称核实身份，status 为 watch 的账号需定期核对名称及可访问性。",
   "layers": {
-    "official": "官方主号——发事实：上市、新功能、perp/衍生品、市场、治理公告",
-    "founder": "创始人/核心角色——常先于官方爆料，提前信号",
-    "media": "媒体——覆盖面与行业大事件",
-    "kol": "KOL——解读、情绪、叙事扩散（避坑视角）",
-    "data": "链上数据/分析——whale、DEX 流量、资金流，用于交叉验证"
+    "official": "官方渠道发布的上市、新功能、衍生品市场及治理公告",
+    "founder": "创始人与核心成员公开披露的产品进展和计划",
+    "media": "新闻机构与行业媒体的报道",
+    "kol": "独立作者的分析、市场观点与讨论线索",
+    "data": "用于交叉核验的大额交易、交易所成交与资金流数据"
   },
   "themes": ["perp", "launchpad", "exchange", "broker", "wallet", "prediction", "tradfi", "rwa", "infrastructure", "distribution", "chain", "onchain", "defi", "news", "meme", "ai"],
   "daily_scan": {
-    "_doc": "先按project_radar做项目名、别名和讨论者定向搜索，再按六桶补漏。每桶记录候选或证据缺口；至少两条名单外发现查询，不能只扫熟悉的Perp DEX或媒体大新闻。",
+    "_doc": "先按项目名、别名和讨论来源检索，再核对六类研究对象。逐类记录候选项目或证据缺口，另执行至少两条名单外检索。",
     "buckets": [
       {
         "id": "direct_derivatives",
@@ -106,7 +106,7 @@
     { "handle": "OndoFinance", "name": "Ondo Finance", "region": "en", "layer": "official", "themes": ["rwa", "tradfi", "distribution"], "core": false, "note": "代币化证券与链上资产供给" },
     { "handle": "Securitize", "name": "Securitize", "region": "en", "layer": "official", "themes": ["rwa", "tradfi", "infrastructure"], "core": false, "note": "受监管代币化证券发行、经纪与资产基础设施" },
 
-    { "handle": "PythNetwork", "name": "Pyth Network", "region": "en", "layer": "official", "themes": ["infrastructure", "perp", "rwa"], "core": true, "note": "HertzFlow 主要价格源，重点看新 Feed、延迟、市场时间与事故" },
+    { "handle": "PythNetwork", "name": "Pyth Network", "region": "en", "layer": "official", "themes": ["infrastructure", "perp", "rwa"], "core": true, "note": "价格预言机。跟踪新增价格源、报价延迟、市场交易时间与事故通报" },
     { "handle": "chainlink", "name": "Chainlink", "region": "en", "layer": "official", "themes": ["infrastructure", "rwa", "defi"], "core": false, "note": "价格源、跨链与机构数据基础设施" },
     { "handle": "circle", "name": "Circle", "region": "en", "layer": "official", "themes": ["infrastructure", "exchange", "distribution"], "core": false, "note": "USDC 抵押、结算与跨链流动性标准" },
 

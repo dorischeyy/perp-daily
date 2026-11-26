@@ -53,11 +53,11 @@
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
   /* 「机会与打法」做成醒目的产品判断卡片 */
-  .sec-hertzflow{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
+  .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
-  .sec-hertzflow .sec-title{color:#9a7b1f;}
-  .sec-hertzflow .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
-  .sec-hertzflow .item-b{color:#3a3322;}
+  .sec-product-notes .sec-title{color:#9a7b1f;}
+  .sec-product-notes .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
+  .sec-product-notes .item-b{color:#3a3322;}
   .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6;}
   .item:last-child{border-bottom:none;}
   .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
@@ -151,7 +151,7 @@
         </article>
         </div>
       </section>
-      <section class="sec sec-hertzflow">
+      <section class="sec sec-product-notes">
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
@@ -162,7 +162,7 @@
 
         <article class="item">
           <h3 class="item-h">事故重启：先恢复保护性动作，再开放新风险</h3>
-          <p class="item-b"><strong>好处</strong>：先让用户减仓、补保证金和处理挂单，再开放新仓，可以把暂停期间积累的风险按可解释顺序释放。</p><p class="item-b"><strong>限制</strong>：重开顺序只能降低恢复阶段的二次伤害，不能替代对签名密钥、价格发布权限和 LP 赔付的根因处理。</p><p class="item-b"><strong>对 HertzFlow</strong>：适合把“只认重开实时价、保护性动作优先”写进事故恢复规则，并与现有暂停、价格偏离和清算机制联动。</p>
+          <p class="item-b"><strong>好处</strong>：先让用户减仓、补保证金和处理挂单，再开放新仓，可以把暂停期间积累的风险按可解释顺序释放。</p><p class="item-b"><strong>限制</strong>：重开顺序只能降低恢复阶段的二次伤害，不能替代对签名密钥、价格发布权限和 LP 赔付的根因处理。</p>
 
           <div class="item-meta">
 
@@ -171,7 +171,7 @@
         </article>
         <article class="item">
           <h3 class="item-h">能源永续：价格连续与实物交割不能混为一谈</h3>
-          <p class="item-b"><strong>好处</strong>：24/7 商品价格能覆盖周末事件，给链上用户提供传统场所休市时的连续风险表达。</p><p class="item-b"><strong>限制</strong>：原油等实物商品有仓储、交割和区域现货约束，链上指数连续不代表底层可交割市场也连续。</p><p class="item-b"><strong>对 HertzFlow</strong>：现有预言机定价商品市场可以保留连续交易优势，但若面向美国或扩大能源标的，应把合规可达性、周末价格源和市场时间作为同一项上线条件。</p>
+          <p class="item-b"><strong>好处</strong>：24/7 商品价格能覆盖周末事件，给链上用户提供传统场所休市时的连续风险表达。</p><p class="item-b"><strong>限制</strong>：原油等实物商品有仓储、交割和区域现货约束，链上指数连续不代表底层可交割市场也连续。</p>
 
           <div class="item-meta">
 
@@ -180,7 +180,7 @@
         </article>
         <article class="item">
           <h3 class="item-h">到期型 X-Perp：当前架构不适合照搬</h3>
-          <p class="item-b"><strong>好处</strong>：远期到期和最终指数结算给合约明确终点，能限制无限期持仓并提供强制价格收敛机制。</p><p class="item-b"><strong>限制</strong>：新旧合约并行会拆分深度，用户还要承担移仓、长期资金费和最终结算窗口的额外复杂度。</p><p class="item-b"><strong>对 HertzFlow</strong>：现有产品围绕无到期、预言机定价和隔离池配置，照搬会新增远月管理与交割风险；只需借鉴终止市场时的最终标记价规则。</p>
+          <p class="item-b"><strong>好处</strong>：远期到期和最终指数结算给合约明确终点，能限制无限期持仓并提供强制价格收敛机制。</p><p class="item-b"><strong>限制</strong>：新旧合约并行会拆分深度，用户还要承担移仓、长期资金费和最终结算窗口的额外复杂度。</p>
 
           <div class="item-meta">
 

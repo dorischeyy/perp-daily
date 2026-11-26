@@ -54,12 +54,12 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「对 Hertzflow 的启发」做成醒目的主编批注卡片 */
-  .sec-hertzflow{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
+  /* 「产品观察」做成醒目的主编批注卡片 */
+  .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
-  .sec-hertzflow .sec-title{color:#9a7b1f;}
-  .sec-hertzflow .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
-  .sec-hertzflow .item-b{color:#3a3322;}
+  .sec-product-notes .sec-title{color:#9a7b1f;}
+  .sec-product-notes .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
+  .sec-product-notes .item-b{color:#3a3322;}
   .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6;}
   .item:last-child{border-bottom:none;}
   .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
@@ -210,27 +210,27 @@
         </article>
         </div>
       </section>
-      <section class="sec sec-hertzflow">
+      <section class="sec sec-product-notes">
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
             <div class="sec-kicker">机会与打法</div>
-            <h2 class="sec-title">对 Hertzflow 的启发</h2>
+            <h2 class="sec-title">产品观察</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
           <h3 class="item-h">permissionless 市场的护城河是『结算标准加分发』，不是『能否上市』</h3>
-          <p class="item-b">HIP-3 退场潮给我们的 permissionless 市场创建差异化上了直接一课：Ventuals 团队被钱包收编、Dreamcash 死于 USDT 与 USDC 的标准之争，说明建市容易、留量难。</p><p class="item-b">建议评估三件事：① Hertzflow 全 USDT 抵押要主动审视结算币标准变更风险（若生态未来转向其他稳定币标准，单押 USDT 的市场会否重演 Dreamcash）；② 补齐僵尸/低质市场的退场与下架机制；③ 把分发/流量入口当作与『可上市』同等重要的护城河来建，而非默认上市即有量。</p>
+          <p class="item-b">HIP-3 开放建市后，Ventuals 团队被钱包方收编，Dreamcash 的 USDT 市场则受到交易者转用 USDC 的影响。两者反映了分发渠道与结算资产对市场存续的作用。</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://www.coindesk.com/business/2026/06/30/phantom-doubles-down-on-perpetual-futures-with-hire-of-hyperliquid-market-builders" target="_blank" rel="noopener">CoinDesk ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">费用→通缩飞轮成新锐 perp DEX 标配，ZFP 抽成的代币回流设计有现成参照</h3>
-          <p class="item-b">Aster（99% 手续费回购销毁）与 Lighter（100% 费用回购转永久销毁加 6% 质押）两周内先后落地，费用→通缩已从个案变趋势。</p><p class="item-b">Hertzflow ZFP 用盈利抽成替代手续费，若未来做代币经济，抽成现金流如何回流代币（回购/销毁/质押分红）可直接借鉴这套飞轮；但要重点评估去杠杆、量能收缩期回购力度的可持续性，别把币价托底绑死在牛市级手续费上。</p>
+          <h3 class="item-h">Aster 与 Lighter 的费用回购机制</h3>
+          <p class="item-b">Aster（99% 手续费回购销毁）与 Lighter（100% 费用回购转永久销毁加 6% 质押）两周内先后落地，费用→通缩已从个案变趋势。</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://www.cryptotimes.io/2026/07/01/lighter-updates-tokenomics-with-lit-burns-and-6-staking-target/" target="_blank" rel="noopener">The Crypto Times ↗</a>
@@ -238,7 +238,7 @@
         </article>
         <article class="item">
           <h3 class="item-h">CEX 抢建 AI agent 交易入口，DEX 侧的 agent 友好接口会成为竞争点</h3>
-          <p class="item-b">OKX 把 AI agent 做成可自主交易、可结算、有链上信誉的主体，头部交易所正卡位 agent 订单流入口。</p><p class="item-b">对 Hertzflow 值得跟踪：链上永续天然适合 agent 无许可接入，可评估是否提供 agent 友好的下单/风控接口（限额、身份、清算归属）作为差异化流量来源，而非等 CEX 定义标准后再跟。</p>
+          <p class="item-b">OKX 把 AI agent 做成可自主交易、可结算、有链上信誉的主体，头部交易所正卡位 agent 订单流入口。</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://cointelegraph.com/news/okx-ai-marketplace-autonomous-agent-economy" target="_blank" rel="noopener">Cointelegraph ↗</a>

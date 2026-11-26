@@ -40,12 +40,12 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「对 Hertzflow 的启发」做成醒目的主编批注卡片 */
-  .sec-hertzflow{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
+  /* 「产品观察」做成醒目的主编批注卡片 */
+  .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
-  .sec-hertzflow .sec-title{color:#9a7b1f;}
-  .sec-hertzflow .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
-  .sec-hertzflow .item-b{color:#3a3322;}
+  .sec-product-notes .sec-title{color:#9a7b1f;}
+  .sec-product-notes .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
+  .sec-product-notes .item-b{color:#3a3322;}
   .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6;}
   .item:last-child{border-bottom:none;}
   .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
@@ -123,35 +123,35 @@
         </article>
         </div>
       </section>
-      <section class="sec sec-hertzflow">
+      <section class="sec sec-product-notes">
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
             <div class="sec-kicker">机会与打法</div>
-            <h2 class="sec-title">对 Hertzflow 的启发</h2>
+            <h2 class="sec-title">产品观察</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">AI 巨头 Pre-IPO perp 浪潮已来，HertzFlow 虚拟美股标的面临打法升级窗口</h3>
-          <p class="item-b">Coinbase 的 OpenAI/Anthropic Pre-IPO perp 上线，加上此前 Hyperliquid SPCX perp 在 SpaceX IPO 当天成交 $14 亿，清晰验证了「科技独角兽 IPO 前价格发现」是有真实需求的产品方向。HertzFlow 已有美股指数标的（SPX/NDX 等），缺少的是「单只科技股 Pre-IPO perp」这一层。建议评估在监管允许的范围内（非美市场优先）新增 AI 科技股 Pre-IPO perp 标的：Anthropic/OpenAI 均锁定 Q4 2026 上市，时间窗口具体且临近，ZFP 零开平仓费可作为与 Coinbase 竞价的差异化优势；Coinbase 美国用户须等至7/21，非美市场的竞争先机在窗口期内更大。</p><p class="item-b">来源：CryptoTimes · Coinbase Markets 公告（6/22），Hyperliquid SPCX perp 6/12 案例</p>
+          <h3 class="item-h">未上市科技公司的永续合约提供盘前价格参考</h3>
+          <p class="item-b">Coinbase 的 OpenAI/Anthropic Pre-IPO perp 上线，加上此前 Hyperliquid SPCX perp 在 SpaceX IPO 当天成交 $14 亿，清晰验证了「科技独角兽 IPO 前价格发现」是有真实需求的产品方向。</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://www.cryptotimes.io/2026/06/22/coinbase-brings-openai-anthropic-pre-ipo-futures-to-traders/" target="_blank" rel="noopener">CryptoTimes ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">合规永续监管结果未定期间，非美链上 perp DEX 处于相对自由的竞争窗口</h3>
-          <p class="item-b">CME 诉讼若按常规司法节奏拖延数月，Coinbase 和 Kalshi 的合规 perp 产品在此期间处于不确定状态，美国用户可达性存疑；链上 perp DEX 则不受这场 CME 对 CFTC 诉讼的直接约束，非美市场的交易者反而处于更低摩擦的环境。HertzFlow 的核心用户群在亚洲，BSC 链上运营，这一窗口期尤其具有价值。建议将「监管不确定期间的链上 perp 优势」纳入下半年用户增长叙事，特别面向此前使用 Coinbase 国际账户的非美用户，提供更低滑点、ZFP 零费的替代路径。</p><p class="item-b">来源：US News 报道 CME 诉 CFTC 同时点名 Coinbase（6/18起诉）</p>
+          <h3 class="item-h">CME 诉讼期间的美国永续合约市场</h3>
+          <p class="item-b">CME 诉讼若按常规司法节奏拖延数月，Coinbase 和 Kalshi 的合规 perp 产品在此期间处于不确定状态，美国用户可达性存疑；链上 perp DEX 则不受这场 CME 对 CFTC 诉讼的直接约束，非美市场的交易者反而处于更低摩擦的环境。</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://money.usnews.com/investing/news/articles/2026-06-18/cme-sues-us-cftc-over-letting-kalshi-coinbase-offer-perpetual-futures" target="_blank" rel="noopener">US News ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Taiko 桥事故说明：单链无桥风险是可以显式宣传的安全卖点</h3>
-          <p class="item-b">Taiko 的 $170 万损失，根因是私钥提交到公开代码库，说明跨链桥的安全风险不仅来自协议层，也来自开发流程的任何一个弱环节；今年跨链桥事故损失已超 $3.4 亿。HertzFlow 作为 BSC 原生单链 perp DEX，天然规避了跨链桥风险，建议在产品页面、社区通报和融资材料中把「无跨链桥风险」明确写出来，而不是假设用户自行理解，这是低成本、高可信度的安全差异化叙事。</p>
+          <h3 class="item-h">Taiko 跨链桥事故涉及密钥管理</h3>
+          <p class="item-b">Taiko 的 $170 万损失，根因是私钥提交到公开代码库，说明跨链桥的安全风险不仅来自协议层，也来自开发流程的任何一个弱环节；今年跨链桥事故损失已超 $3.4 亿。</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://www.coindesk.com/tech/2026/06/22/taiko-halts-its-ethereum-layer-2-network-after-a-bridge-exploit-token-dives-10" target="_blank" rel="noopener">CoinDesk ↗</a>

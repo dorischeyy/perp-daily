@@ -54,12 +54,12 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「对 Hertzflow 的启发」做成醒目的主编批注卡片 */
-  .sec-hertzflow{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
+  /* 「产品观察」做成醒目的主编批注卡片 */
+  .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
-  .sec-hertzflow .sec-title{color:#9a7b1f;}
-  .sec-hertzflow .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
-  .sec-hertzflow .item-b{color:#3a3322;}
+  .sec-product-notes .sec-title{color:#9a7b1f;}
+  .sec-product-notes .sec-no{color:#9a7b1f; border-color:#9a7b1f;}
+  .sec-product-notes .item-b{color:#3a3322;}
   .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6;}
   .item:last-child{border-bottom:none;}
   .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
@@ -222,19 +222,19 @@
         </article>
         </div>
       </section>
-      <section class="sec sec-hertzflow">
+      <section class="sec sec-product-notes">
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
             <div class="sec-kicker">机会与打法</div>
-            <h2 class="sec-title">对 Hertzflow 的启发</h2>
+            <h2 class="sec-title">产品观察</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
           <h3 class="item-h">预言机签名密钥托管值得一次独立审计，而不是等出事才发现</h3>
-          <p class="item-b">Ostium 被攻破的不是智能合约漏洞，而是预言机签名密钥的托管权限，攻击者拿到私钥后可以让协议『合法地』相信一个伪造价格；这类攻击对任何依赖链下报价驱动链上结算的虚拟资产（RWA/Forex/美股指数/贵金属）perp 平台都是通用风险，Hertzflow 的 ZFP 定价机制同属这一架构。建议评估自身预言机签名密钥的托管方式（多签/HSM/权限分离）与价格偏离熔断机制是否经过独立第三方安全审计，尤其是自动化价格更新流程的调用权限范围是否被过度授权。</p>
+          <p class="item-b">Ostium 的预言机签名密钥遭到攻击，导致合约接受异常价格。链上结算除了验证签名，还依赖链下报价方对签名密钥的保管。</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://www.coindesk.com/business/2026/07/15/ostium-suffers-usd18-million-exploit-as-oracle-attack-wave-continues-to-hit-defi" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -250,7 +250,7 @@
         </article>
         <article class="item">
           <h3 class="item-h">permissionless 建市门槛可能被资本中介化，需要提前设计防集中度机制</h3>
-          <p class="item-b">Hyperion 把自己囤的 HYPE 出租给没有资本但有能力的团队上新市场，让 HIP-3 的建市门槛从『自己攒质押』变成『找金主』，permissionless 的准入门槛出现了金融中介化的可能。值得评估 Hertzflow 的 permissionless 市场创建机制是否也会走向类似的资本中介化路径（例如允许第三方为新市场创建者提供质押担保服务）：这既可能加速市场供给，也可能让资本供给方比产品能力更重要，建议在设计阶段就纳入防集中度的考量。</p>
+          <p class="item-b">Hyperion 把自己囤的 HYPE 出租给没有资本但有能力的团队上新市场，让 HIP-3 的建市门槛从『自己攒质押』变成『找金主』，permissionless 的准入门槛出现了金融中介化的可能。</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://www.theblock.co/post/408538/hyperliquid-treasury-firm-hyperion-new-500k-hype-bond-skew" target="_blank" rel="noopener">The Block ↗</a>
