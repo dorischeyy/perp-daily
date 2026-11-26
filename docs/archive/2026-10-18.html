@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-10-18</title>
+<title>Perp DEX Daily · 2026-10-18</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -82,12 +82,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 107 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 107</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 10 月 18 日 · 星期日</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">October 18, 2026 · Sunday</div>
     </header>
-    <p class="lead">OKX把链上永续清算拆成三层资金池，SBI与Startale启动日元、美元稳定币互操作验证，微软则让组织级Agent拥有独立账号、记忆和触发器。</p>
+    <p class="lead">OKX divided onchain perpetual liquidations across three pools. SBI and Startale began testing interoperability between yen and dollar stablecoins. Microsoft gave organization-level agents their own accounts, memory and triggers.</p>
 
 
       <section class="sec sec-perpdex">
@@ -100,27 +100,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">OKX把链上永续清算拆成三层资金池</h3>
-          <p class="item-b"><strong>事件</strong>：OKX公布链上永续的安全基金架构，按市场分别设置安全基金、金库和补充资金池，余额及市场映射可公开查询。</p><p class="item-b"><strong>机制</strong>：安全基金先接管并平掉穿仓仓位，金库由团队人工再平衡，补充池自动补足安全基金；三层资金仍不足时才可能进入自动减仓。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>页面披露了资金池职责和查询入口，但没有给出历史穿仓规模、补充频率或压力情景下的覆盖率。</p>
+          <h3 class="item-h">OKX divides onchain perpetual liquidation across three pools</h3>
+          <p class="item-b"><strong>Event</strong>: OKX published the safety fund architecture for its onchain perpetuals. Each market maps to a safety fund, a vault and a replenishment pool. Balances and market mappings are publicly available.</p><p class="item-b"><strong>Mechanism</strong>: The safety fund first takes over and closes positions with a deficit. The team manually rebalances the vault, and the replenishment pool automatically tops up the safety fund. Auto-deleveraging is a possible last resort if all three are insufficient.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The page discloses information about the fund pool responsibilities and access points, but it does not provide historical storage sizes, replenishment frequencies, or coverage rates under stress scenarios.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-15</span>
             <a class="item-src" href="https://www.okx.com/en-us/help/how-does-security-fund-work-for-on-chain-perpetual-trading" target="_blank" rel="noopener">OKX ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Bybit给10份永续合约设置风险参数迁移缓冲期</h3>
-          <p class="item-b"><strong>事件</strong>：Bybit于10月16日调整ENA、SUI、WLD、TAO等10份USDT永续的风险限额，未满足新保证金要求的仓位先被限制增加风险。</p><p class="item-b"><strong>机制</strong>：缓冲期内只能减仓，相关交易机器人也不能新开仓；11月2日迁移结束后仍不合规的仓位可能被强平。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>公告覆盖10份合约并给出迁移时点，但没有披露受影响仓位、未平仓量或各档参数变化的实际分布。</p>
+          <h3 class="item-h">Bybit gives ten perpetual contracts a transition period for new risk parameters</h3>
+          <p class="item-b"><strong>Event</strong>: On October 16, Bybit adjusted risk limits for ten USDT perpetuals including ENA, SUI, WLD and TAO. Positions below the new margin requirement were initially restricted from taking on additional risk.</p><p class="item-b"><strong>Mechanism</strong>: During the buffer period, positions can only be reduced. Related trading robots cannot open new positions. Positions that are still non-compliant after the migration on November 2nd may be liquidated.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The announcement covers 10 contracts and provides a migration date, but it does not disclose the actual distribution of affected positions, open interest, or changes in parameters for each category.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-15</span>
             <a class="item-src" href="https://announcements.bybit.com/en/article/risk-limit-adjustment-for-selected-perpetual-contracts-enausdt-suiusdt-oct-16-2026--artd87870c45c1f/?category=maintenance_updates" target="_blank" rel="noopener">Bybit ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Lighter在单次快照中拿下中小额BTC永续最低成本</h3>
-          <p class="item-b"><strong>事件</strong>：PerpFinder在10月18日02:33 UTC的订单簿快照中测得，Lighter买入10万美元与100万美元BTC永续的综合成本分别为0.3和1.0个基点。</p><p class="item-b"><strong>机制</strong>：该口径合并Taker费、半点差和冲击成本；订单扩大到1000万美元时，MEXC以2.2个基点领先，说明成本优势会随规模和深度变化。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>这是单次公开订单簿快照，不代表全天平均执行质量，也未计入资金费、提现和跨平台资金占用。</p>
+          <h3 class="item-h">Lighter offers the lowest cost for small and midsize BTC perpetual trades in one snapshot</h3>
+          <p class="item-b"><strong>Event</strong>: PerpFinder measured in its order book snapshot on October 18th at 02:33 UTC that the combined costs for Lighter’s purchases of 100,000 USD and 1 million USD in BTC were 0.3 and 1.0 basis points, respectively.</p><p class="item-b"><strong>Mechanism</strong>: The cost estimate includes the taker fee, half the spread and price impact. At a $10 million order size, MEXC led at 2.2 basis points. The lowest-cost venue can change with order size and available depth.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>This is a snapshot of a single public order book, not representing the average execution quality throughout the day. It also does not include funding payments, withdrawals, or cross-platform fund usage.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-18</span>
             <a class="item-src" href="https://perpfinder.com/" target="_blank" rel="noopener">PerpFinder ↗</a>
@@ -138,27 +138,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">RobinSeed把预售入口带上Robinhood Chain</h3>
-          <p class="item-b">RobinSeed于10月15日以Robinhood Chain首个预售发射台为定位上线，Dextape把SEED标记为当日新项目。</p><p class="item-b">DexBrief同期记录SEED约3.2万美元流动性、54个持有人且前十地址持有58.7%，入口已经出现，但集中度和薄流动性仍限制价格发现。（Robinhood Chain分发线，自07-02起第35个进展）</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>首发定位来自项目页面，链上样本仍很早期；持有人数、流动性与地址集中度不能证明发射台已有持续采用。</p>
+          <h3 class="item-h">RobinSeed brings presales to Robinhood Chain</h3>
+          <p class="item-b">On October 15th, RobinSeed launched its first pre-sale platform on the Robinhood Chain. Dextape labeled SEED as a new project for that day.</p><p class="item-b">DexBrief recorded about $32,000 of SEED liquidity and 54 holders. The ten largest addresses held 58.7%. Although a trading venue is now available, concentrated holdings and thin liquidity limit price discovery. This is the 35th development in Robinhood Chain distribution tracked since July 2.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The initial positioning comes from the project page. Chain-on-chain samples are still in the early stages. The number of holders, liquidity, and address concentration do not indicate that the launch has been widely adopted.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-15</span>
-            <a class="item-src" href="https://dextape.com/launches/2026-10-15" target="_blank" rel="noopener">Dextape ↗</a><a class="item-src item-ref" href="https://dexbrief.com/coins/robinseed/" target="_blank" rel="noopener">补充：DexBrief · 10-15 ↗</a>
+            <a class="item-src" href="https://dextape.com/launches/2026-10-15" target="_blank" rel="noopener">Dextape ↗</a><a class="item-src item-ref" href="https://dexbrief.com/coins/robinseed/" target="_blank" rel="noopener">Additional source: DexBrief · 10-15 ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">yore.fun用无预售公平发射登陆Injective</h3>
-          <p class="item-b">yore.fun于10月17日16:00 UTC正式上线，代币经联合曲线发行，不设预售或团队分配，达到条件后迁移到Choice交易。</p><p class="item-b">首批持有至少0.5 INJ并完成交互的300个钱包可获OG标记，平台把早期身份权益与链上参与绑定，而不是按私募额度分配。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>上线规则和钱包门槛可核验，但页面未提供毕业项目、独立交易量、留存或创建者收益数据。</p>
+          <h3 class="item-h">yore.fun launches on Injective without a presale</h3>
+          <p class="item-b">yore.fun officially launched at 16:00 UTC on October 17th. The tokens were issued through a joint issuance process, with no pre-sale or team distribution. Once the conditions were met, the tokens were transferred to Choice trading.</p><p class="item-b">The first 300 wallets that hold at least 0.5 INJ and have completed interactions will receive the OG label. The platform binds early identity rights with blockchain participation, rather than distributing them based on private placement amounts.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The launch rules and wallet thresholds are verifiable, but the page does not provide data on graduation projects, independent transaction volumes, retention rates, or creator revenues.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-17</span>
-            <a class="item-src" href="https://yore.fun/og" target="_blank" rel="noopener">yore.fun ↗</a><a class="item-src item-ref" href="https://yore.fun/" target="_blank" rel="noopener">补充：yore.fun产品页 · 10-17 ↗</a>
+            <a class="item-src" href="https://yore.fun/og" target="_blank" rel="noopener">yore.fun ↗</a><a class="item-src item-ref" href="https://yore.fun/" target="_blank" rel="noopener">Additional source: yore.fun product page · 10-17 ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Sikka.fun用多币种交易次数筛选短周期奖励</h3>
-          <p class="item-b">Sikka.fun于10月15日启动第36期24小时交易赛，前十名共享250万枚SHM，参与者需要交易至少50种不同代币。</p><p class="item-b">排名先按合格买卖次数，再以成交额、币种数和达标时间破同分；平台因此奖励覆盖广度和频次，而不是只奖励单一大额成交。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>奖池按代币数量披露，缺少法币价值、参与人数、交易成本和赛后留存，短周期活跃不能等同自然需求。</p>
+          <h3 class="item-h">Sikka.fun uses trade counts across multiple tokens to determine short-term rewards</h3>
+          <p class="item-b">On October 15, Sikka.fun began its 36th trading competition, lasting 24 hours. The top ten share 2.5 million SHM. Participants must trade at least 50 different tokens.</p><p class="item-b">Rankings are determined first based on the number of qualified transactions, followed by turnover, the number of currencies involved, and the time required to meet the criteria. The platform rewards both the breadth and frequency of transactions, rather than just large transactions.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The prize pool is disclosed based on the number of tokens. Information on fiat value, number of participants, transaction costs, and post-competition retention is missing. Short-term activity cannot be equated with natural demand.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-15</span>
             <a class="item-src" href="https://shardeum.org/blog/sikka-fun-trading-contest-36-is-live/" target="_blank" rel="noopener">Shardeum ↗</a>
@@ -176,27 +176,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">SBI与Startale验证日元、美元稳定币互操作</h3>
-          <p class="item-b">SBI Holdings、SBI Shinsei Bank与Startale加入Open Standard，计划验证信托型日元稳定币JPYSC与美元稳定币OUSD之间的互操作。</p><p class="item-b">试点重点是跨发行方的转换与结算路径，而非再建一条孤立支付轨道；公告明确这不是商业服务或生产部署。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>三方已加入联盟并探索试点，但尚未披露上线时间、交易金额、兑换机制或真实企业客户。</p>
+          <h3 class="item-h">SBI and Startale test interoperability between yen and dollar stablecoins</h3>
+          <p class="item-b">SBI Holdings, SBI Shinsei Bank, and Startale have joined the Open Standard. They plan to verify the interoperability between the trust-based yen stablecoin JPYSC and the US dollar stablecoin OUSD.</p><p class="item-b">The focus of the pilot project is on converting and settling transactions across different issuers, rather than creating an isolated payment track. The announcement clearly states that this is not a commercial service or production deployment.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Third parties have joined the alliance and are exploring pilot projects, but the launch time, transaction amounts, exchange mechanisms, or actual corporate customers have not been disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-16</span>
             <a class="item-src" href="https://www.startale.com/en/blog/openstandard-startale-sbi" target="_blank" rel="noopener">Startale ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Cross River把RLUSD接进核心银行基础设施</h3>
-          <p class="item-b">Cross River将Ripple USD接入自有核心银行系统COS，企业客户可通过单一API在美元与RLUSD之间转换，并连接ACH、电汇和实时支付。</p><p class="item-b">银行负责法币轨道和合规基础设施，XRPL承载稳定币转移，组合目标是把全天候链上结算嵌入现有企业资金流。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>集成和API入口已经公布，但首批客户、生产交易量、覆盖地区及稳定币余额没有披露。</p>
+          <h3 class="item-h">Cross River integrates RLUSD with its core banking infrastructure</h3>
+          <p class="item-b">Cross River has integrated Ripple USD into its own core banking system, COS. Corporate clients can convert between USD and RLUSD using a single API. It also supports ACH, wire transfers, and real-time payments.</p><p class="item-b">The bank supplies fiat rails and compliance infrastructure, while XRPL carries stablecoin transfers. The goal is to bring round-the-clock onchain settlement into existing corporate treasury flows.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Integration and API access have been disclosed, but details about the first batch of customers, production transaction volumes, coverage areas, and stablecoin balances remain undisclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-15</span>
             <a class="item-src" href="https://www.crossriver.com/newsroom/cross-river-embeds-ripple-usd-stablecoin-on-the-xrp-ledger-into-its-core-banking-infrastructure-expanding-faster-payment-capabilities-for-businesses" target="_blank" rel="noopener">Cross River ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Token Terminal为逾万种代币化资产统一披露字段</h3>
-          <p class="item-b">Token Terminal于10月16日上线Fact Sheets，为逾1万种代币化资产提供标准化资料页，覆盖发行人、司法辖区、托管和代币代表权利。</p><p class="item-b">统一字段降低跨发行方比较成本，但披露来自平台汇总，不替代底层法律文件、资产证明或持续审计。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>平台首页口径为超过1万种资产，具体覆盖量仍会变化；资料标准化不代表每项字段都由独立第三方验证。</p>
+          <h3 class="item-h">Token Terminal standardizes disclosure fields for over 10,000 tokenized assets</h3>
+          <p class="item-b">Token Terminal launched Fact Sheets on October 16, providing standardized information for over 10,000 tokenized assets. This information includes details about issuers, jurisdictions, custody, and token representation rights.</p><p class="item-b">Unified fields reduce the cost of comparing data across different issuers. However, the information comes from the platform’s aggregation and does not replace underlying legal documents, asset proofs, or ongoing audits.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The platform’s homepage lists over 10,000 assets, though the actual number of assets may change over time. Standardization of data does not mean that each field has been independently verified by third parties.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-16</span>
             <a class="item-src" href="https://tokenterminal.com/resources/newsletter" target="_blank" rel="noopener">Token Terminal ↗</a>
@@ -214,27 +214,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">微软让组织级Agent拥有独立账号、记忆和触发器</h3>
-          <p class="item-b">Microsoft Copilot Studio开始通过Frontier推出持久型Agent，可使用组织所有的独立账号和受限凭证，并在业务流程中保留上下文。</p><p class="item-b">Agent可由事件触发、在Office协作中被提及，并由管理员统一治理，生产评估因此需要同时覆盖身份、权限、长期记忆和自动启动条件。（前沿模型评估线，自09-18起第17个进展）</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>能力正通过Frontier分批开放，独立云端电脑仍属后续计划；公告没有披露生产客户规模或异常率。</p>
+          <h3 class="item-h">Microsoft gives organization-wide agents separate accounts, memory and triggers</h3>
+          <p class="item-b">Microsoft Copilot Studio has begun to deploy persistent agents through Frontier. These agents can use all independent accounts and restricted credentials within organizations, while maintaining context during business processes.</p><p class="item-b">Events can trigger agents, colleagues can mention them in Office and administrators can govern them centrally. Production evaluation must therefore cover identity, permissions, long-term memory and automatic start conditions. This is the 17th development in frontier-model evaluation tracked since September 18.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Capabilities are being rolled out in batches through Frontier. Independent cloud computers are still part of the future plan. The announcement does not disclose the scale of production customers or the rate of anomalies.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-15</span>
             <a class="item-src" href="https://www.microsoft.com/en-us/copilot/blog/copilot-studio/delegate-shared-business-processes-to-agents-that-are-more-persistent-and-proactive-with-microsoft-copilot-studio/" target="_blank" rel="noopener">Microsoft ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Tasklet用1Password维持跨线程浏览器登录</h3>
-          <p class="item-b">Tasklet于10月16日更新浏览器登录能力，用户可把凭证保存在1Password保险库，让Agent在不同线程中继续使用已登录会话。</p><p class="item-b">凭证保管与Agent执行被拆开，减少重复输入密码，但长期会话也要求独立核验授权范围、撤销速度和敏感动作确认。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>更新已列入产品日志，但页面没有披露支持站点、会话有效期、企业采用或安全事件数据。</p>
+          <h3 class="item-h">Tasklet uses 1Password to retain browser sign-in across threads</h3>
+          <p class="item-b">Tasklet updated its browser login capabilities on October 16th. Users can save credentials in 1Password’s vault, allowing Agents to continue using the logged-in session across different threads.</p><p class="item-b">The custody of vouchers and agent execution are separated to reduce the need for repeated password entries. However, long-term sessions still require independent verification of authorization scope, revocation speed, and confirmation of sensitive actions.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Updates have been included in the product logs, but the page does not disclose information on support sites, session validity periods, corporate adoption, or security event data.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-16</span>
             <a class="item-src" href="https://tasklet.ai/blog" target="_blank" rel="noopener">Tasklet ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">HireFoundry把单一面试Agent拆成招聘Agent套件</h3>
-          <p class="item-b">Fusemachines于10月15日发布HireFoundry AI，把原有面试Agent扩展为覆盖筛选、面试和候选人沟通的专用Agent套件。</p><p class="item-b">平台可连接30多种招聘管理系统，并保留招聘人员审批，产品重心从单点自动化转向跨招聘流程编排。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>连接数量和产品能力由厂商自报，公告没有披露上线客户、招聘结果改善或人工复核率。</p>
+          <h3 class="item-h">HireFoundry expands one interview agent into a suite of recruiting agents</h3>
+          <p class="item-b">Fusemachines released HireFoundry AI on October 15th. This tool expands the existing interview agents to include specialized tools for screening, interviewing, and candidate communication.</p><p class="item-b">The platform can connect to more than 30 recruitment management systems. Recruitment approval processes are retained, but the focus of the product has shifted from single-point automation to cross-process orchestration.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The number of connections and product capabilities are reported by the manufacturers themselves. The announcement does not disclose information about customers, improvements in recruitment results, or the rate of manual review.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-15</span>
             <a class="item-src" href="https://rss.globenewswire.com/news-release/2026/10/15/3381550/0/en/fusemachines-unveils-hirefoundry-ai-evolving-from-a-single-interview-agent-to-a-growing-platform-of-ai-agents-for-enterprise-hiring.html" target="_blank" rel="noopener">Fusemachines via GlobeNewswire ↗</a>
@@ -242,7 +242,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

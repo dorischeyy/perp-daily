@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-10-23</title>
+<title>Perp DEX Daily · 2026-10-23</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -100,51 +100,51 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 111 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 111</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 10 月 23 日 · 星期五</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">October 23, 2026 · Friday</div>
     </header>
-    <p class="lead">Variational把报价、保证金和对冲集中给单一OLP，零显式手续费实际由价差承担；若做市商资不抵债，用户盈利仍可能形成坏账。</p>
+    <p class="lead">Variational concentrates quoting, margin and hedging in one OLP. Traders pay through the spread despite zero explicit trading fees. If the market maker becomes insolvent, traders may be unable to collect their gains.</p>
 
 
       <section class="sec sec-derivatives-distribution">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">衍生品与分发</h2>
+            <h2 class="sec-title">Derivatives and distribution</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Variational用单一OLP承接报价、保证金和外部对冲</h3>
-          <p class="item-b">用户在Omni输入方向、数量和杠杆后，由唯一做市商OLP报价并保留最后确认权；成交后双方把保证金锁进独立结算池。平台不收显式手续费，而从买卖价差分成；OLP用自有资金去外部对冲，若其资不抵债，用户盈利仍可能形成坏账。</p>
+          <h3 class="item-h">Variational uses one OLP for quoting, margin and external hedges</h3>
+          <p class="item-b">An Omni trader chooses direction, size and leverage. The sole market maker, OLP, quotes the trade and retains last look. Upon execution, both sides lock collateral in an isolated settlement pool. The platform shares in the bid-ask spread rather than charging an explicit fee. OLP hedges externally with its own funds. If it becomes insolvent, traders’ profits may remain unpaid.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://docs.variational.io/variational-protocol/key-concepts/trading-via-rfq" target="_blank" rel="noopener" title="Variational Docs · 未标发布日期 · 核验 2026-10-23" aria-label="来源 1：Variational Docs · 未标发布日期 · 核验 2026-10-23">1</a><a class="source-number" href="https://docs.variational.io/omni/the-omni-liquidity-provider-olp" target="_blank" rel="noopener" title="Variational Docs · 未标发布日期 · 核验 2026-10-23" aria-label="来源 2：Variational Docs · 未标发布日期 · 核验 2026-10-23">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://docs.variational.io/variational-protocol/key-concepts/trading-via-rfq" target="_blank" rel="noopener" title="Variational Docs · Publication date not listed · Verified 2026-10-23" aria-label="Source 1: Variational Docs · Publication date not listed · Verified 2026-10-23">1</a><a class="source-number" href="https://docs.variational.io/omni/the-omni-liquidity-provider-olp" target="_blank" rel="noopener" title="Variational Docs · Publication date not listed · Verified 2026-10-23" aria-label="Source 2: Variational Docs · Publication date not listed · Verified 2026-10-23">2</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">10月20日，edgeX解释PAPER只由交易亏损与清算铸造</h3>
-          <p class="item-b">edgeX上线PAPERUSDC后说明，PAPER从零供给开始，只在Papertrade用户出现已实现亏损或清算时铸造，没有团队、融资或空投份额。代币目前不能在钱包间自由转账，价格发现主要依赖HIP-3和edgeX永续；供给因此直接绑定交易者亏损，但真实深度和退出能力仍待验证。</p>
+          <h3 class="item-h">October 20: edgeX explains that only trading losses and liquidations mint PAPER</h3>
+          <p class="item-b">Following the PAPERUSDC listing, edgeX said PAPER started with zero supply and is minted only when a Papertrade user incurs a realized loss or liquidation. There is no allocation for the team, financing or airdrops. Free wallet-to-wallet transfers remain disabled. HIP-3 and edgeX perpetuals provide most price discovery. Supply tracks trader losses, while market depth and exit capacity remain unverified.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://pro.edgex.exchange/en-US/news/article/from-1000x-synthetics-to-token-perps-paper-is-live-on-edgex" target="_blank" rel="noopener" title="edgeX · 发布 2026-10-20" aria-label="来源 1：edgeX · 发布 2026-10-20">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://pro.edgex.exchange/en-US/news/article/from-1000x-synthetics-to-token-perps-paper-is-live-on-edgex" target="_blank" rel="noopener" title="edgeX · Published 2026-10-20" aria-label="Source 1: edgeX · Published 2026-10-20">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">截至10月22日，Coinbase衍生品未平仓量仍集中在Deribit</h3>
-          <p class="item-b">Coinbase衍生品页显示总未平仓量402.3亿美元，其中Deribit占389.6亿，Coinbase Derivatives仅12.8亿；24小时成交量129.3亿，前者贡献114.3亿。统一品牌和账户已完成，但当前规模仍主要来自Deribit端，不能据此证明新增股票或商品永续已有独立深度。</p>
+          <h3 class="item-h">As of October 22, Deribit still accounts for most of Coinbase’s derivatives open interest</h3>
+          <p class="item-b">Coinbase’s derivatives page showed $40.23 billion in total open interest, with $38.96 billion at Deribit and $1.28 billion at Coinbase Derivatives. Deribit also supplied $11.43 billion of the $12.93 billion in 24-hour volume. Branding and accounts have been unified, but Deribit still accounts for most activity. The aggregate figures do not establish independent depth for the new equity or commodity perpetuals.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.coinbase.com/en-gb/market-data/derivatives" target="_blank" rel="noopener" title="Coinbase Derivatives Data · 未标发布日期 · 核验 2026-10-23" aria-label="来源 1：Coinbase Derivatives Data · 未标发布日期 · 核验 2026-10-23">1</a><a class="source-number" href="https://www.coinbase.com/en-pt/blog/coinbase-is-building-the-most-complete-trading-platform" target="_blank" rel="noopener" title="Coinbase · 发布 2026-10-07 · 核验 2026-10-23" aria-label="来源 2：Coinbase · 发布 2026-10-07 · 核验 2026-10-23">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.coinbase.com/en-gb/market-data/derivatives" target="_blank" rel="noopener" title="Coinbase Derivatives Data · Publication date not listed · Verified 2026-10-23" aria-label="Source 1: Coinbase Derivatives Data · Publication date not listed · Verified 2026-10-23">1</a><a class="source-number" href="https://www.coinbase.com/en-pt/blog/coinbase-is-building-the-most-complete-trading-platform" target="_blank" rel="noopener" title="Coinbase · Published 2026-10-07 · Verified 2026-10-23" aria-label="Source 2: Coinbase · Published 2026-10-07 · Verified 2026-10-23">2</a>
           </div>
         </article>
         </div>
@@ -153,29 +153,29 @@
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <h2 class="sec-title">规则与基础设施</h2>
+            <h2 class="sec-title">Rules and infrastructure</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">10月21日，英国FCA把DeFi运营韧性与金融犯罪控制纳入咨询</h3>
-          <p class="item-b">FCA拟要求受监管机构使用DeFi提供金融服务时，继续落实运营韧性、金融犯罪和反洗钱控制，并用案例说明可采取的措施。咨询11月18日结束，最终指引计划明年1月发布；它面向已受监管机构及相关参与者，不是对所有去中心化协议直接发牌。</p>
+          <h3 class="item-h">October 21: UK FCA consults on DeFi operational resilience and financial crime controls</h3>
+          <p class="item-b">The FCA proposes that regulated firms using DeFi to provide financial services continue to meet operational resilience, financial crime and anti-money-laundering requirements. The consultation gives examples, closes November 18 and targets final guidance for January. It addresses regulated firms and relevant participants. It does not directly license every decentralized protocol.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.fca.org.uk/publications/guidance-consultations/gc26-7-decentralised-finance-guidance" target="_blank" rel="noopener" title="FCA · 发布 2026-10-21" aria-label="来源 1：FCA · 发布 2026-10-21">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.fca.org.uk/publications/guidance-consultations/gc26-7-decentralised-finance-guidance" target="_blank" rel="noopener" title="FCA · Published 2026-10-21" aria-label="Source 1: FCA · Published 2026-10-21">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">10月20日，tx用Brale基础设施推出RWA生态稳定币USTX</h3>
-          <p class="item-b">tx把USTX作为钱包、市场和RWA产品的统一美元余额，发行与储备管理由Brale基础设施承接。储备由现金、银行存款、政府货币基金和短期美债组成，用户无需自建稳定币系统即可接入；但赎回时效、审计频率和实际流通量尚未披露。</p>
+          <h3 class="item-h">October 20: tx launches USTX for its real-world asset ecosystem using Brale infrastructure</h3>
+          <p class="item-b">tx uses USTX as a common dollar balance across its wallets, markets, and real-world asset products. Brale provides issuance and reserve management. Reserves consist of cash, bank deposits, government money market funds, and short-term US Treasuries. Users can integrate without building a stablecoin system. Redemption time, audit frequency, and circulating supply had not been disclosed.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.globenewswire.com/news-release/2026/10/20/3384548/0/en/tx-launches-ustx-a-native-stablecoin-built-to-power-its-rwa-ecosystem.html" target="_blank" rel="noopener" title="tx · 发布 2026-10-20" aria-label="来源 1：tx · 发布 2026-10-20">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.globenewswire.com/news-release/2026/10/20/3384548/0/en/tx-launches-ustx-a-native-stablecoin-built-to-power-its-rwa-ecosystem.html" target="_blank" rel="noopener" title="tx · Published 2026-10-20" aria-label="Source 1: tx · Published 2026-10-20">1</a>
           </div>
         </article>
         </div>
@@ -190,38 +190,38 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">10月22日，Anthropic把Agent Skills标准捐给Linux基金会旗下AAIF</h3>
-          <p class="item-b">Anthropic把Agent Skills名称、规范、GitHub组织和域名交给Linux基金会旗下AAIF治理，后续由Anthropic、Google、OpenAI等工程师以个人身份维护。标准已接入70多个Agent平台；中立治理降低单一厂商控制，但版本兼容和技能供应链安全仍要等待正式路线图。</p>
+          <h3 class="item-h">October 22: Anthropic donates the Agent Skills standard to the Linux Foundation’s AAIF</h3>
+          <p class="item-b">Anthropic has handed over the names, specifications, GitHub organizations, and domain names of the Agent Skills to the AAIF governance under the Linux Foundation. Subsequently, these skills are maintained by engineers from Anthropic, Google, OpenAI, and other organizations on an individual basis. These standards have been adopted by over 70 agent platforms. Neutral governance reduces the control of a single vendor, but version compatibility and the security of the skill supply chain still require a formal roadmap.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation" target="_blank" rel="noopener" title="Anthropic · 发布 2026-10-22" aria-label="来源 1：Anthropic · 发布 2026-10-22">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation" target="_blank" rel="noopener" title="Anthropic · Published 2026-10-22" aria-label="Source 1: Anthropic · Published 2026-10-22">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">10月21日，Claude Duet开放主动型工作Agent研究预览</h3>
-          <p class="item-b">美国Pro和Max用户可候补体验Claude Duet，它会在云端电脑持续处理连接应用中的任务，并在发送消息、付款、签署或删除前请求批准。后台检查同样消耗现有套餐额度，且目前不支持Team和Enterprise；主动提醒能减少人工追踪，也带来误判优先级的新风险。</p>
+          <h3 class="item-h">October 21: Claude Duet opens a research preview of its proactive work agent</h3>
+          <p class="item-b">U.S. Pro and Max users can join the waitlist for Claude Duet. It runs tasks continuously in connected apps on a cloud computer and asks for approval before sending, paying, signing or deleting. Background checks consume existing plan allowances. Team and Enterprise are not yet supported. Proactive reminders may reduce manual follow-up but can still give the wrong task priority.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://claude.com/resources/articles/claude-duet" target="_blank" rel="noopener" title="Claude · 发布 2026-10-21" aria-label="来源 1：Claude · 发布 2026-10-21">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://claude.com/resources/articles/claude-duet" target="_blank" rel="noopener" title="Claude · Published 2026-10-21" aria-label="Source 1: Claude · Published 2026-10-21">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">10月21日，NVIDIA扩展Agent Toolkit并加入企业数据知识层</h3>
-          <p class="item-b">NVIDIA把Agent Knowledge Foundation、Kumo结构化模型、OpenShell安全运行时和NemoClaw蓝图纳入同一套Agent工具链。Auto-Ontology可把原始企业数据映射为客户、产品和订单等业务关系；方案减少重建数据流程的需求，但效果与延迟主要来自合作方自报。</p>
+          <h3 class="item-h">October 21: NVIDIA expands Agent Toolkit with a knowledge layer for enterprise data</h3>
+          <p class="item-b">NVIDIA has integrated Agent Knowledge Foundation, Kumo structured models, OpenShell security runtime, and NemoClaw blueprints into a single agent toolkit. Auto-Ontology can map raw enterprise data into business relationships such as customers, products, and orders. This solution reduces the need to reconstruct data processes, but the effectiveness and latency depend mainly on the feedback from partners.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://blogs.nvidia.com/blog/enterprise-platforms-agent-toolkit/" target="_blank" rel="noopener" title="NVIDIA · 发布 2026-10-21" aria-label="来源 1：NVIDIA · 发布 2026-10-21">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://blogs.nvidia.com/blog/enterprise-platforms-agent-toolkit/" target="_blank" rel="noopener" title="NVIDIA · Published 2026-10-21" aria-label="Source 1: NVIDIA · Published 2026-10-21">1</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

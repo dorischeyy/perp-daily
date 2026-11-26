@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-08-26</title>
+<title>Perp DEX Daily · 2026-08-26</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 59 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 59</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 8 月 26 日 · 星期三</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">August 26, 2026 · Wednesday</div>
     </header>
-    <p class="lead">Arcus 将永续头寸包装为可转让代币，LayerZero 计划向券商提供交易后台，Bitwise 则把自动调仓放进用户自托管钱包。</p>
+    <p class="lead">Arcus packaged perpetual positions as transferable tokens. LayerZero announced plans to provide brokers with trading back-office infrastructure, and Bitwise brought automated rebalancing into users’ self-custody wallets.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,9 +110,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Arcus 把永续头寸做成可转让的 pTokens</h3>
-          <p class="item-b"><strong>事件</strong>：据 The Block 引述团队说明，Robinhood Chain 上的 Arcus 推出 pTokens，将托管于策略账户的永续头寸份额包装为 ERC-20，覆盖加密资产及 HOOD 等股票敞口。</p><p class="item-b"><strong>机制</strong>：每种代币对应特定市场与杠杆策略，持有人转让的是账户份额，而非直接移交个人保证金账户，因此钱包可转让性与底层资金费、清算风险必须分开理解。</p><p class="item-b"><strong>二阶效应</strong>：自 7 月 9 日追踪的 RWA 永续故事线由标的扩列延伸到持仓的分发形式，现货式入口可能降低操作门槛，但外部协议能否接受这些份额仍取决于净值、赎回及风险披露。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>媒体报道确认包装方式及产品示例，不等于已获借贷协议接纳；本文不采用该页不同抓取版本中不一致的成交数据。</p>
+          <h3 class="item-h">Arcus makes shares in perpetual strategies transferable as pTokens</h3>
+          <p class="item-b"><strong>Event</strong>: The Block, citing the team, reported that Arcus on Robinhood Chain introduced pTokens. These ERC-20 tokens represent shares in perpetual positions held in strategy accounts, with exposure to crypto and stocks including HOOD.</p><p class="item-b"><strong>Mechanism</strong>: Each token corresponds to a particular market and leverage strategy. A transfer moves a share of the strategy account rather than the holder’s own margin account. Funding and liquidation risk remain with the underlying strategy even though the token can move between wallets.</p><p class="item-b"><strong>Second-order effects</strong>: The product changes how positions can be distributed. A spot-style interface may simplify access, but adoption as collateral elsewhere will depend on how the shares are valued, redeemed and disclosed.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The report established the token structure and gave product examples. It did not establish acceptance by lending protocols. Trading figures varied between versions of the source and are excluded here.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-25</span>
             <a class="item-src" href="https://www.theblock.co/news/defi/2026-08-25-robinhood-chain-dex-arcus-ptokens-perps-erc-20s-412696" target="_blank" rel="noopener">The Block ↗</a>
@@ -120,22 +120,22 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">LayerZero 宣布 ATLAS，计划输出交易后台</h3>
-          <p class="item-b"><strong>事件</strong>：LayerZero Labs 宣布 ATLAS，计划于今年晚些时候推出面向经纪商和平台的交易基础设施，由合作方保留应用界面与客户关系。</p><p class="item-b"><strong>机制</strong>：ATLAS 拟将撮合、清算、结算和风控整合进同一引擎，并借 Zero 的验证能力同时承载开放市场与有准入要求的机构市场。</p><p class="item-b"><strong>二阶效应</strong>：若正式落地，新增交易入口可采购整套后台能力，竞争会进一步分成客户分发与交易基础设施两层，但性能、稳定性和责任分工仍需生产环境验证。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>这是产品发布计划，尚非已上线交易场所；公告中的压测延迟不能替代真实负载、故障恢复及机构采用数据。</p>
+          <h3 class="item-h">LayerZero announces ATLAS and plans trading back-office services for brokers</h3>
+          <p class="item-b"><strong>Event</strong>: LayerZero Labs announced ATLAS, trading infrastructure for brokers and platforms planned for later this year. Partners would retain their own applications and customer relationships.</p><p class="item-b"><strong>Mechanism</strong>: ATLAS would combine matching, clearing, settlement and risk controls in one engine. Zero would supply verification for both open markets and institutional markets with admission requirements.</p><p class="item-b"><strong>Second-order effects</strong>: If ATLAS goes live, new trading interfaces could buy an integrated backend, further separating customer distribution from trading infrastructure. Performance, reliability and the division of responsibilities still require production evidence.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The announcement describes a planned launch. The venue is not yet live. Stress-test latency cannot establish performance under real loads, recovery from failures, or institutional adoption.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-25</span>
-            <a class="item-src" href="https://www.prnewswire.com/news-releases/layerzero-announces-atlas-a-headless-exchange-for-the-future-of-global-markets-302859062.html" target="_blank" rel="noopener">LayerZero Labs（PR Newswire） ↗</a>
+            <a class="item-src" href="https://www.prnewswire.com/news-releases/layerzero-announces-atlas-a-headless-exchange-for-the-future-of-global-markets-302859062.html" target="_blank" rel="noopener">LayerZero Labs (PR Newswire)↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">四家衍生品场所成交与 OI 同步回落</h3>
-          <p class="item-b"><strong>事件</strong>：北京时间 8 月 26 日 07:47 快照中，Binance、Hyperliquid、Bybit 与 Gate 的 24 小时成交合计由约 162.24 万 BTC 降至 151.41 万 BTC，下降 6.7%，OI 由约 86.37 万 BTC 降至 85.09 万 BTC，下降 1.5%。</p><p class="item-b"><strong>机制</strong>：总量较昨日降温，但 Hyperliquid 成交小幅增加而其余三家下降，因此汇总成交回落不能直接解释为链上场所需求同步收缩。</p><p class="item-b"><strong>二阶效应</strong>：昨日成交反弹未在这组样本中延续，后续需分开跟踪场所迁移与存量仓位变化，不能仅凭 BTC 计价的 OI 下行判断美元风险敞口或清算规模。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>同一四家样本、同一 BTC 计价口径；CEX 数据包含衍生品合约，并非纯永续或全 DEX 份额，两次采样相隔约 24 小时。</p>
+          <h3 class="item-h">Volume and open interest decline across four derivatives venues</h3>
+          <p class="item-b"><strong>Event</strong>: In the August 26 snapshot at 07:47 Beijing time, combined 24-hour volume across Binance, Hyperliquid, Bybit and Gate fell 6.7%, from about 1,622,400 BTC to 1,514,100 BTC. Open interest fell 1.5%, from roughly 863,700 BTC to 850,900 BTC.</p><p class="item-b"><strong>Mechanism</strong>: Hyperliquid volume rose slightly while volume at the other three venues declined. The lower overall figure therefore does not establish a corresponding fall in demand at the onchain venue.</p><p class="item-b"><strong>Second-order effects</strong>: The previous day’s volume rebound did not persist across this sample. Venue migration and changes to outstanding positions need separate tracking. Falling BTC-denominated open interest alone cannot establish dollar exposure or the amount liquidated.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Both observations use the same four venues and BTC units, about 24 hours apart. Centralized venue figures include derivatives beyond perpetuals, and the sample does not represent all DEXs.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-26</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/b3b4c5c92d91929e2e0aed6c6369cd9f23ea99ed/docs/market.json" target="_blank" rel="noopener">CoinGecko / 固定版本快照 ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/496f0d1068950ed93d43da1f12a28b107513170b/docs/market.json" target="_blank" rel="noopener">补充：前一日同口径快照 · 08-25 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/b3b4c5c92d91929e2e0aed6c6369cd9f23ea99ed/docs/market.json" target="_blank" rel="noopener">CoinGecko / archived snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/496f0d1068950ed93d43da1f12a28b107513170b/docs/market.json" target="_blank" rel="noopener">Additional source: Previous day&#x27;s snapshot on the same basis · 08-25 ↗</a>
           </div>
         </article>
         </div>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Toobit 为 HALLU 预售加入上市后价格保护</h3>
-          <p class="item-b">Toobit 宣布 HALLU 将于 8 月 31 日至 9 月 1 日开展 Launchpad 预售，并称上市后三天内若价格跌破初始售价，符合规则的用户可申请退款，随后还有交易及新用户活动。</p><p class="item-b">这一安排把获客承诺从认购资格延伸到上市初期价格风险，但申请条件、退款计算与履约流程仍需按完整活动规则核验，不能理解为自动赔付全部交易损失。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>72 小时是保护观察窗口，不是保本期限无限延长；预售尚未开始，本文不采用宣传页中的历史收益率。</p>
+          <h3 class="item-h">Toobit adds post-listing price protection to the HALLU presale</h3>
+          <p class="item-b">Toobit scheduled HALLU’s Launchpad presale for August 31 through September 1. It said eligible users could request a refund if the price fell below the initial sale price within three days of listing. Trading and new-user campaigns would follow.</p><p class="item-b">The offer extends beyond subscription access to some early listing-price risk. Eligibility, calculations and fulfillment depend on the full campaign rules. It is not an automatic reimbursement for all trading losses.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The 72 hours define the protection observation window. They do not extend capital protection indefinitely. The presale has not opened. The report omits historical returns from the promotional page.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-25</span>
             <a class="item-src" href="https://www.toobit.com/vi-VN/blog/welcome-hallu-to-toobit-launchpad" target="_blank" rel="noopener">Toobit ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Kylie Jenner 账号疑遭入侵，Pump 导流暴露授权断层</h3>
-          <p class="item-b">IBTimes 8 月 25 日报道，Kylie Jenner 的 X 账号于 24 日短暂发布 Pump 主页和 Solana 地址后删帖，疑似账号被入侵；本人及团队尚未公开确认攻击方式或操作者。</p><p class="item-b">名人账号认证只能验证账号身份，不能证明某次代币推广获得本人授权，发行门槛很低时，这一差距会迅速传导为假代言、跟风发行与流量误导。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>疑似盗号并非已确认的攻击归因；不把删帖、价格下跌或代币地址直接当作名人参与骗局的证据。</p>
+          <h3 class="item-h">Suspected compromise of Kylie Jenner’s account exposes gaps in verification of Pump referrals</h3>
+          <p class="item-b">IBTimes reported on August 25 that Kylie Jenner’s X account briefly posted and then removed a Pump page and a Solana address on August 24. An account compromise was suspected. Neither Jenner nor her team had publicly confirmed the cause or operator.</p><p class="item-b">A verified account establishes identity but does not show that its owner authorized a particular token promotion. When tokens are easy to launch, that gap can generate false endorsements, copycat launches and misleading traffic.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The suspected account takeover has not been confirmed. A deleted post, price decline, or token address is not sufficient evidence that a celebrity took part in a scam.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-25</span>
             <a class="item-src" href="https://www.ibtimes.co.uk/kylie-jenner-x-account-hacked-crypto-scam-1816195" target="_blank" rel="noopener">IBTimes UK ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">本周主线 ｜Flap 与 Four.meme 用不同指标分配激励</h3>
-          <p class="item-b">BNB Chain 8 月 21 日公告列出两段活动：Flap 的 8 月 19 至 28 日活动按交易门槛参与抽奖，Four.meme 的 8 月 24 日至 9 月 2 日活动则按每日 PnL 排名分奖。</p><p class="item-b">同一轮获客把交易量资格与盈亏排名并置，前者奖励参与，后者偏向收益竞争，但 PnL 排名不等于风险调整后回报，两种机制是否留下真实用户仍要看活动结束后的留存。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>这是本周两项活动机制的对照，不是今天新发布的公告，也不声称已核验奖池发放、排名结果或反刷量效果。</p>
+          <h3 class="item-h">Weekly theme | Flap and Four.meme use different metrics to allocate incentives</h3>
+          <p class="item-b">BNB Chain’s August 21 announcement listed two campaigns. Flap’s August 19–28 campaign uses trading thresholds for prize-draw eligibility. Four.meme’s August 24–September 2 campaign awards prizes based on daily P&amp;L rankings.</p><p class="item-b">One mechanism rewards participation and the other competition on profit and loss. A P&amp;L ranking does not adjust for risk. Retention after each campaign will indicate whether either mechanism attracted lasting users.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The comparison covers two campaign designs from the week. Neither is presented as a new announcement today. Prize payments, final rankings, and controls against artificial volume have not been verified.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-21</span>
             <a class="item-src" href="https://www.bnbchain.org/en/blog/bnb-trenching-szn-is-back-win-a-share-of-200k-on-flap-and-four-meme" target="_blank" rel="noopener">BNB Chain ↗</a>
@@ -192,19 +192,19 @@
 
         <article class="item">
 
-          <h3 class="item-h">Bitwise 发布自托管自动组合，首批产品待推出</h3>
-          <p class="item-b">Bitwise 宣布 Automated Token Portfolios，由 Coinbase 提供代币化股票、Glider 执行规则化再平衡，资产留在用户自托管钱包中，首批主题组合计划未来数周推出。</p><p class="item-b">这把组合管理从统一基金载体拆成钱包内的执行服务，但只面向获准地区的非美国投资者，可组合性并不消除地区限制、智能合约风险或再平衡交易成本。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>公告确认产品结构及推出计划，不能把发布声明写成全部可交易；本文不将未标明周期的方法费解释为年费。</p>
+          <h3 class="item-h">Bitwise announces automated self-custody portfolios ahead of its first product launches</h3>
+          <p class="item-b">Bitwise announced Automated Token Portfolios. Coinbase supplies the tokenized equities and Glider performs rules-based rebalancing, while assets stay in users’ self-custody wallets. The first thematic portfolios are planned for the coming weeks.</p><p class="item-b">The service executes portfolio management within individual wallets instead of pooling assets in a fund. It is open only to non-U.S. investors in approved regions and remains subject to geographic restrictions, smart contract risk and rebalancing costs.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The announcement confirms the product structure and rollout plan. It does not establish that all products are tradable. The methodology fee has no stated period and is not presented as annual.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-25</span>
-            <a class="item-src" href="https://www.prnewswire.com/news-releases/bitwise-launches-automated-token-portfolios-atps-powered-by-coinbase-and-glider-302858808.html" target="_blank" rel="noopener">Bitwise（PR Newswire） ↗</a>
+            <a class="item-src" href="https://www.prnewswire.com/news-releases/bitwise-launches-automated-token-portfolios-atps-powered-by-coinbase-and-glider-302858808.html" target="_blank" rel="noopener">Bitwise (PR Newswire)↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">BNB Chain 流动性盘点提示代币股票的时段约束</h3>
-          <p class="item-b">BNB Chain 新发布的做市版图称，bStocks 累计成交超过 190 亿美元、覆盖逾 67 项资产，并介绍公开 AMM、专业做市与 RFQ 的不同接入路径。</p><p class="item-b">同一份资料提醒，部分代币股票 RFQ 在美股交易时段外可能没有报价，因此资产可持有、预言机可查价与真实可执行流动性，是三件不同的事。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>190 亿美元是官方披露的累计成交，不是日成交或永续成交；本文引用新盘点，不把既有聚合 API 写成今日新上线。</p>
+          <h3 class="item-h">BNB Chain liquidity review highlights trading-hour constraints on tokenized stocks</h3>
+          <p class="item-b">A BNB Chain survey of market making said bStocks had recorded over $19 billion in cumulative volume across more than 67 assets. It outlined distinct access through public automated market makers, professional market makers and requests for quote.</p><p class="item-b">The survey cautioned that some tokenized equity RFQs may receive no quote outside U.S. stock market hours. Holding the asset, observing an oracle price and obtaining an executable quote are distinct capabilities.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The operator reported $19 billion in cumulative volume. It is neither daily nor perpetuals-only volume. The new development is the published review. The aggregation API already existed.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-25</span>
             <a class="item-src" href="https://www.bnbchain.org/en/blog/bnb-chain-market-making-landscape-liquidity-venues-how-to-integrate" target="_blank" rel="noopener">BNB Chain ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Grayscale Zcash ETF 从申请预期走到上市</h3>
-          <p class="item-b">The Block 报道，Grayscale 将既有 Zcash 信托转换为 ETF，ZCSH 于 8 月 25 日在 NYSE Arca 上市，较 8 月 23 日日报中的上市预期推进到实际交易入口。</p><p class="item-b">证券账户因此获得新的 ZEC 价格敞口渠道，但 ETF 份额不承接链上隐私支付功能，也不能仅凭产品上市就推断链上交易量或杠杆需求会同步增长。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>这里的增量是信托转 ETF 并上市，未采用币价涨幅或把原信托存量资产当作 ETF 新流入。</p>
+          <h3 class="item-h">Grayscale Zcash ETF moves from filing expectations to listing</h3>
+          <p class="item-b">The Block reported that Grayscale converted its existing Zcash trust into an ETF. ZCSH began trading on NYSE Arca on August 25, turning the anticipated listing covered on August 23 into actual exchange access.</p><p class="item-b">Brokerage accounts now have an additional route to ZEC price exposure. ETF shares do not confer onchain private payment functionality, and a listing alone does not establish increased onchain trading or demand for leverage.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The development is the trust&#x27;s conversion to an ETF and its listing. The report excludes token price gains and does not count the trust&#x27;s existing assets as new ETF inflows.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-25</span>
             <a class="item-src" href="https://www.theblock.co/news/regulation/2026-08-25-grayscale-debuts-zcash-etf-412654" target="_blank" rel="noopener">The Block ↗</a>
@@ -233,9 +233,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Claude 统一聊天与 Cowork 记忆，并开放逐项管理</h3>
-          <p class="item-b">Anthropic 宣布 Claude 的记忆可在聊天与 Cowork 之间共享，随对话更新，并允许用户按主题查看、编辑、删除或暂停记忆。</p><p class="item-b">跨工作方式的持续上下文减少反复交代背景的成本，但记忆的使用边界同样重要：敏感主题默认不纳入，企业环境还受管理员及个人启用设置约束。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>个人版和组织版的默认设置不同；统一记忆不表示所有历史内容都会保存，也不意味着团队成员间共享私人记忆。</p>
+          <h3 class="item-h">Claude unifies chat and Cowork memory and adds individual record controls</h3>
+          <p class="item-b">Anthropic announced that Claude can share memory between chat and Cowork, updating it as conversations progress. Users can inspect memories by topic, edit or delete them, or pause memory.</p><p class="item-b">Shared context reduces the need to repeat background across work modes. Sensitive topics are excluded by default. Enterprise availability also depends on administrator settings and each user’s own choice.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Default settings differ between personal and organization accounts. Unified memory does not store every past item or share private memories with teammates.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-25</span>
             <a class="item-src" href="https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it" target="_blank" rel="noopener">Anthropic ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Stability AI 获 7600 万美元融资，版权方继续入场</h3>
-          <p class="item-b">Stability AI 宣布完成 7600 万美元 B 轮融资，投资方包括 EA、Sony Music、Universal Music Group、Warner Music Group 及 AMD Ventures，方向覆盖专业音乐与游戏创作。</p><p class="item-b">版权方同时作为资本与合作方参与，可能帮助模型进入创作软件和内容生产流程，但投资关系不能替代具体训练数据授权，也不代表所有输出的版权争议已经解决。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>7600 万美元是本轮新增资本；公司另称新管理层以来累计筹资 2.32 亿美元，二者不是同一轮融资。</p>
+          <h3 class="item-h">Stability AI raises $76 million as copyright holders continue investing</h3>
+          <p class="item-b">Stability AI announced a $76 million Series B with investors including EA, Sony Music, Universal Music Group, Warner Music Group and AMD Ventures. The funding targets professional music and game creation.</p><p class="item-b">Rights holders participating as investors and partners could bring models into creative software and production workflows. Their investments do not grant specific training-data licenses or resolve all disputes over the copyright status of outputs.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The round raised $76 million in new capital. The company separately reported $232 million in cumulative financing under the new management. The figures describe different periods.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-25</span>
             <a class="item-src" href="https://stability.ai/news-updates/stability-ai-latest-funding-backed-by-entertainment-industry-biggest-names" target="_blank" rel="noopener">Stability AI ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Bain 加入 Claude 伙伴网络，交付重点转向组织采用</h3>
-          <p class="item-b">Anthropic 宣布 Bain 成为 Claude Partner Network 的 Global Premier Partner；Bain 此前已向约 1.9 万名员工开放 Claude，此次合作进一步覆盖企业部署、培训及流程改造。</p><p class="item-b">大规模席位采购之后，持续使用依赖权限、治理和岗位工作流，合作声明能确认交付方向，却不能替代客户付费转化或长期生产率数据。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>1.9 万是已获访问权限的员工范围，不是月活；本文不把不同阶段的试点活跃人数与现有席位数混算。</p>
+          <h3 class="item-h">Bain joins the Claude partner network to support organizational adoption</h3>
+          <p class="item-b">Anthropic named Bain a Global Premier Partner in the Claude Partner Network. Bain had already made Claude available to roughly 19,000 employees. The agreement extends into enterprise deployments, training and workflow redesign.</p><p class="item-b">Following a large seat purchase, continued use depends on permissions, governance and fit with job-specific workflows. The partnership sets a delivery direction but supplies no figures on paying customer conversion or long-term productivity.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The 19,000 figure counts employees granted access, not monthly active users. Active pilot users from different stages are not added to current seats.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-25</span>
             <a class="item-src" href="https://claude.com/blog/bain-company-joins-the-claude-partner-network-as-a-global-premier-partner" target="_blank" rel="noopener">Anthropic ↗</a>
@@ -267,15 +267,15 @@
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product assessment</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">分发与增长</div>
-          <h3 class="item-h">将可转让杠杆份额纳入竞品跟踪，暂不纳入抵押资产</h3>
-          <p class="item-b"><strong>判断变化</strong>：分发研究从只比较永续下单入口，扩展到钱包可直接持有和转让的杠杆份额，因为相同方向性需求可能由另一种资产形态承接。</p><p class="item-b"><strong>证据与边界</strong>：Arcus 的 pTokens 对应交易头寸份额，与承担交易对手方风险的 LP 份额不同，包装为 ERC-20 也没有消除净值偏离、赎回与底层清算风险。</p>
+          <div class="decision-area">Distribution and growth</div>
+          <h3 class="item-h">Transferable leveraged strategy shares still require scrutiny before acceptance as collateral</h3>
+          <p class="item-b"><strong>Revised assessment</strong>: A distribution comparison should include transferable leveraged shares held in wallets as well as the interfaces where users place perpetual orders.</p><p class="item-b"><strong>Evidence and limits</strong>: Arcus pTokens represent shares in trading positions, distinct from liquidity-provider shares bearing counterparty risk. ERC-20 wrapping leaves risks of NAV divergence, redemption and liquidation.</p>
 
           <div class="item-meta">
 
@@ -284,7 +284,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

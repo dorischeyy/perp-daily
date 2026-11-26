@@ -2,107 +2,107 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { auditReview } from "../lib/check-review.mjs";
 
-const validReview = `# 编辑自评
+const validReview = `# Editorial self-assessment
 
-## A0 读者价值自问
+## A0 Reader value
 
-1. **为什么今天值得点开？**：Lighter 的抵押品变化正在改写用户迁移与资金效率判断。
-2. **最值得看的是什么？**：股票代币开始从交易标的转向可复用抵押品，这会改变产品边界。
-3. **哪项原有判断被更新？**：从优先扩充标的数量，转向优先验证跨资产抵押的真实需求。
-4. **看完后能做出什么更好的决定？**：决定先验证抵押品复用与隔离池，再投入股票永续开发资源。
-5. **什么证据会推翻今天的结论？**：若新增抵押品采用率低于现有资产，或清算损失明显上升，该结论失效。
-6. **哪条内容只是新闻复述？**：已删除仅罗列上线日期、没有机制变化的旧闻段落。
+1. **Why open this edition today?**: A new margin policy changes the assets traders can pledge.
+2. **What is the most important finding?**: Stock tokens can now fund a perpetual futures position.
+3. **Which prior assessment changed?**: We raised the priority of checking collateral reuse across markets.
+4. **What decision can readers make?**: Assess liquidation risks before adding volatile assets as collateral.
+5. **What evidence would overturn the conclusion?**: Lower adoption or higher liquidation losses would reverse the assessment.
+6. **Which news recap was removed?**: Removed a launch notice with no change to the trading rules.
 
-## A 体检报告
-### 时效自查
-### 六视角找茬
-### 十维度打分
-### 今天必须改的 Top 3
-## A1 数字量级检查
-## A2 评分表
-## A3 故事线连续性检查
-## B 不收录清单
-## C changelog
+## A Editorial review
+### Freshness audit
+### Six reader perspectives
+### Ten-dimension assessment
+### Top three revisions
+## A1 Metric context
+## A2 Candidate scores
+## A3 Story continuity
+## B Excluded items
+## C Changelog
 `;
 
-test("完整且具体的读者价值自评通过", () => {
+test("Accepts a complete review", () => {
   assert.deepEqual(auditReview(validReview).errors, []);
 });
 
-const a4 = `## A4 项目发现与证据
-### 检索覆盖
-已检索Trasia的Scout、builder和移动端，并用生态目录、交易员体验两类名单外查询补漏。
-### 项目分类
-Trasia是交易前端，复用Hyperliquid的撮合和结算，不能算独立永续协议。
-### 讨论证据
-读取创始人访谈作为历史策略依据，近期独立交易员原帖仍有访问缺口，未夸大热度。
-### 研究增量与待查
-新增了移动端分发与复用既有流动性的策略判断，下次需验证自有市场和激励后留存。
+const a4 = `## A4 Project discovery and evidence
+### Search coverage
+We searched Trasia Scout, builder resources and mobile product pages, then checked ecosystem directories and trader accounts for projects outside the registry.
+### Project classification
+Trasia is a trading frontend. Hyperliquid provides matching and settlement.
+### Discussion evidence
+A founder interview documents the original distribution strategy. We found no independent trader account confirming adoption.
+### New findings and open questions
+Trasia distributes existing liquidity through a mobile app. Its market share and retention after incentives end still need verification.
 `;
-const a5 = `## A5 AI候选筛选
-### 厂商覆盖
-已逐一检查 Anthropic、OpenAI、Scale AI、xAI、Kimi、DeepSeek、Qwen 的官方更新与交叉来源；未找到新事件的厂商保留检索日期和访问缺口，不以旧文补数。
-### 前三条与取舍
-按模型能力变化、用户覆盖与可核验证据给候选排序，选择三条超过高权重门槛的新闻，剔除仅有社交预告、没有实际开放范围的内容。
+const a5 = `## A5 AI candidate selection
+### Vendor coverage
+We checked official announcements from Anthropic, OpenAI, Scale AI, xAI, Kimi, DeepSeek and Qwen against independent sources. For vendors with no new event, we recorded the date searched and any access restrictions.
+### Top three and exclusions
+We ranked candidates by changes in model capabilities, user access and supporting evidence. Three cleared the threshold. We excluded a social post that announced no change in access.
 `;
 
-test("v2必须留下具体项目发现记录，旧自评不能直接冒充研究", () => {
+test("Requires a project discovery audit in v2", () => {
   const content = { editorial_version: 2, sections: [{ items: [{ kind: "research", research: { project: "Trasia" } }] }] };
   assert.ok(auditReview(validReview, content).errors.some((error) => /A4/.test(error)));
-  const review = validReview.replace("## B 不收录清单", `${a4}${a5}## B 不收录清单`);
+  const review = validReview.replace("## B Excluded items", `${a4}${a5}## B Excluded items`);
   assert.deepEqual(auditReview(review, content).errors, []);
-  assert.ok(auditReview(review.replaceAll("Trasia", "其他项目"), content).errors.some((error) => /缺少研究项目/.test(error)));
+  assert.ok(auditReview(review.replaceAll("Trasia", "Other projects"), content).errors.some((error) => /missing research project/.test(error)));
 });
 
-test("v2 必须在 A4 后 B 前记录 A5 的厂商覆盖与前三条取舍", () => {
+test("Requires the A5 selection record between A4 and B", () => {
   const content = { editorial_version: 2 };
-  const review = validReview.replace("## B 不收录清单", `${a4}${a5}## B 不收录清单`);
+  const review = validReview.replace("## B Excluded items", `${a4}${a5}## B Excluded items`);
   assert.deepEqual(auditReview(review, content).errors, []);
   assert.ok(auditReview(review.replace(a5, ""), content).errors.some((error) => /A5/.test(error)));
-  assert.ok(auditReview(review.replace(`${a4}${a5}`, `${a5}${a4}`), content).errors.some((error) => /段落顺序错误/.test(error)));
-  const emptySelection = review.replace(/### 前三条与取舍\n[^\n]+/, "### 前三条与取舍\n暂无。");
-  assert.ok(auditReview(emptySelection, content).errors.some((error) => /A5.前三条与取舍/.test(error)));
+  assert.ok(auditReview(review.replace(`${a4}${a5}`, `${a5}${a4}`), content).errors.some((error) => /sections are out of order/.test(error)));
+  const emptySelection = review.replace(/### Top three and exclusions\n[^\n]+/, "### Top three and exclusions\nPending.");
+  assert.ok(auditReview(emptySelection, content).errors.some((error) => /A5.Top three and exclusions/.test(error)));
 });
 
-test("A5 必须覆盖七个标准厂商名，且不能只罗列名称", () => {
+test("Requires results for all seven vendors", () => {
   const content = { editorial_version: 2 };
-  const review = validReview.replace("## B 不收录清单", `${a4}${a5}## B 不收录清单`);
+  const review = validReview.replace("## B Excluded items", `${a4}${a5}## B Excluded items`);
   for (const vendor of ["Anthropic", "OpenAI", "Scale AI", "xAI", "Kimi", "DeepSeek", "Qwen"]) {
-    assert.ok(auditReview(review.replace(vendor, "其他厂商"), content).errors.some((error) => error.includes(`标准厂商名：${vendor}`)));
+    assert.ok(auditReview(review.replace(vendor, "Another vendor"), content).errors.some((error) => error.includes(`missing vendor: ${vendor}`)));
   }
-  const namesOnly = review.replace(/### 厂商覆盖\n[^\n]+/, "### 厂商覆盖\nAnthropic / OpenAI / Scale AI / xAI / Kimi / DeepSeek / Qwen");
-  assert.ok(auditReview(namesOnly, content).errors.some((error) => /不能只列厂商名称/.test(error)));
+  const namesOnly = review.replace(/### Vendor coverage\n[^\n]+/, "### Vendor coverage\nAnthropic / OpenAI / Scale AI / xAI / Kimi / DeepSeek / Qwen");
+  assert.ok(auditReview(namesOnly, content).errors.some((error) => /beyond vendor names/.test(error)));
 });
 
-test("缺少 A0 或固定审计段落会被阻断", () => {
-  const review = validReview.replace("## A0 读者价值自问", "## 开场").replace("## A2 评分表", "");
+test("Requires each fixed review section", () => {
+  const review = validReview.replace("## A0 Reader value", "## Start").replace("## A2 Candidate scores", "");
   const { errors } = auditReview(review);
-  assert.ok(errors.some((error) => /A0 读者价值自问/.test(error)));
-  assert.ok(errors.some((error) => /A2 评分表/.test(error)));
+  assert.ok(errors.some((error) => /A0 Reader value/.test(error)));
+  assert.ok(errors.some((error) => /A2 Candidate scores/.test(error)));
 });
 
-test("空泛答案和不可证伪结论会被阻断", () => {
+test("Rejects generic and unfalsifiable answers", () => {
   const review = validReview
-    .replace("Lighter 的抵押品变化正在改写用户迁移与资金效率判断。", "值得关注。")
-    .replace("若新增抵押品采用率低于现有资产，或清算损失明显上升，该结论失效。", "需要继续观察后续情况。");
+    .replace("A new margin policy changes the assets traders can pledge.", "Unknown.")
+    .replace("Lower adoption or higher liquidation losses would reverse the assessment.", "There is more to study tomorrow.");
   const { errors } = auditReview(review);
-  assert.ok(errors.some((error) => /不能用空泛答案|回答过短/.test(error)));
-  assert.ok(errors.some((error) => /可观察事件或数据阈值/.test(error)));
+  assert.ok(errors.some((error) => /generic answer|answer too short/.test(error)));
+  assert.ok(errors.some((error) => /observable event or data threshold/.test(error)));
 });
 
-test("必须明确写出被删除的新闻复述", () => {
-  const review = validReview.replace("已删除仅罗列上线日期、没有机制变化的旧闻段落。", "没有需要删除的内容。");
-  assert.ok(auditReview(review).errors.some((error) => /已删除/.test(error)));
+test("Requires a specific excluded recap", () => {
+  const review = validReview.replace("Removed a launch notice with no change to the trading rules.", "Nothing to remove.");
+  assert.ok(auditReview(review).errors.some((error) => /Removed/.test(error)));
 });
 
-test("自评段落与六问顺序错误会被阻断", () => {
+test("Checks section and question order", () => {
   const review = validReview
-    .replace("## A1 数字量级检查\n## A2 评分表", "## A2 评分表\n## A1 数字量级检查")
+    .replace("## A1 Metric context\n## A2 Candidate scores", "## A2 Candidate scores\n## A1 Metric context")
     .replace(
-      "1. **为什么今天值得点开？**：Lighter 的抵押品变化正在改写用户迁移与资金效率判断。\n2. **最值得看的是什么？**：股票代币开始从交易标的转向可复用抵押品，这会改变产品边界。",
-      "2. **最值得看的是什么？**：股票代币开始从交易标的转向可复用抵押品，这会改变产品边界。\n1. **为什么今天值得点开？**：Lighter 的抵押品变化正在改写用户迁移与资金效率判断。"
+      /(1\. \*\*Why open[^\n]+)\n(2\. \*\*What is the most[^\n]+)/,
+      "$2\n$1"
     );
   const { errors } = auditReview(review);
-  assert.ok(errors.some((error) => /段落顺序错误/.test(error)));
-  assert.ok(errors.some((error) => /六问必须按固定顺序/.test(error)));
+  assert.ok(errors.some((error) => /sections are out of order/.test(error)));
+  assert.ok(errors.some((error) => /answers are out of order/.test(error)));
 });

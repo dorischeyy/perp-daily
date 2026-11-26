@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-11-20</title>
+<title>Perp DEX Daily · 2026-11-20</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -100,51 +100,51 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 138 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 138</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 11 月 20 日 · 星期五</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">November 20, 2026 · Friday</div>
     </header>
-    <p class="lead">Anthropic上市首日，Binance延续原永续仓位，Securitize发行1比1股票支持的链上权益。围绕同一IPO，杠杆敞口与股东权利已走向两套产品路径。</p>
+    <p class="lead">On the first day of Anthropic’s listing, Binance continued the original perpetual positions, while Securitize issued 1:1 stock-backed on-chain rights. Around the same IPO, leverage exposure and shareholder rights were directed towards two different product paths.</p>
 
 
       <section class="sec sec-ipo-derivatives-and-tokenized-rights">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">IPO衍生品与代币化权利</h2>
+            <h2 class="sec-title">IPO derivatives and token holder rights</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月19日，Binance让ANT盘前永续原仓位连续过渡到标准合约</h3>
-          <p class="item-b">Anthropic上市后，Binance用最长三小时把ANT标记价从盘前算法平滑切换至标准指数，期间交易继续，挂单和仓位不取消，每秒价格变动限制为1%。转换后资金费按标准规则计算，但触及上下限仍保持八小时结算。</p>
+          <h3 class="item-h">November 19: Binance carries open ANT premarket perpetual positions into its standard contract</h3>
+          <p class="item-b">Following Anthropic’s listing, Binance allowed up to three hours to transition the ANT mark price from the premarket algorithm to its standard index. Trading continued, open orders and positions stayed in place, and price changes were capped at 1% per second. Standard funding rules apply after the transition, with eight-hour settlement even if the rate hits its cap or floor.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/square/post/390005413051512" target="_blank" rel="noopener" title="Binance ANT盘前永续转换公告 · 发布 2026-11-19" aria-label="来源 1：Binance ANT盘前永续转换公告 · 发布 2026-11-19">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.binance.com/en/square/post/390005413051512" target="_blank" rel="noopener" title="Binance notice on conversion of ANT pre-market perpetuals · Published 2026-11-19" aria-label="Source 1: Binance notice on conversion of ANT pre-market perpetuals · Published 2026-11-19">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月19日，Securitize在Anthropic上市首日发行1比1支持的链上权益</h3>
-          <p class="item-b">Securitize在Solana上线ANT证券权益，底层由Anthropic股票1比1支持，并按产品条款传递经济利益和投票权益；持有人不是登记股东，Anthropic也未授权该产品。交易以USDC结算，当前先覆盖延长时段，24小时交易仍只是计划。</p>
+          <h3 class="item-h">November 19: Securitize issues onchain interests backed 1:1 by shares on Anthropic’s listing day</h3>
+          <p class="item-b">Securitize launched ANT security entitlements on Solana, backed 1:1 by Anthropic shares. The product terms pass through economic benefits and voting rights. Holders are not registered shareholders, and Anthropic did not authorize the product. Trades settle in USDC. The initial service covers extended hours, with round-the-clock trading still planned.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://investors.securitize.io/news/news-details/2026/Securitize-Tokenizes-Anthropic-Stock-Onchain-on-First-Day-of-Public-Trading/default.aspx" target="_blank" rel="noopener" title="Securitize ANT链上权益公告 · 发布 2026-11-19" aria-label="来源 1：Securitize ANT链上权益公告 · 发布 2026-11-19">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://investors.securitize.io/news/news-details/2026/Securitize-Tokenizes-Anthropic-Stock-Onchain-on-First-Day-of-Public-Trading/default.aspx" target="_blank" rel="noopener" title="Securitize announcement on ANT onchain equity rights · Published 2026-11-19" aria-label="Source 1: Securitize announcement on ANT onchain equity rights · Published 2026-11-19">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月18日，Binance开放美股期权API但保留人工开户与行权边界</h3>
-          <p class="item-b">Binance股票期权REST API现可查合约、下撤单、提交多头行权并读取成交和结算事件，但账户仍须在App内完成问卷、知识测试和协议，无法用API开通。订单由Nest转交Alpaca执行清算，用户到期前不主动行权时不会自动获配股票。</p>
+          <h3 class="item-h">On November 18th, Binance launched the US stock option API, but retained the manual account opening and exercise boundaries.</h3>
+          <p class="item-b">Binance’s equity options REST API supports contract lookup, placing and canceling orders, submitting exercise instructions for long positions, and reading trade and settlement events. Users must still complete the questionnaire, knowledge test and agreements in the app to open an account. Nest routes orders to Alpaca for execution and clearing. Shares are not delivered automatically when a holder fails to exercise before expiry.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/square/post/389468420886516" target="_blank" rel="noopener" title="Binance股票期权API公告 · 发布 2026-11-18" aria-label="来源 1：Binance股票期权API公告 · 发布 2026-11-18">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.binance.com/en/square/post/389468420886516" target="_blank" rel="noopener" title="Binance equity options API announcement · Published 2026-11-18" aria-label="Source 1: Binance equity options API announcement · Published 2026-11-18">1</a>
           </div>
         </article>
         </div>
@@ -153,29 +153,29 @@
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <h2 class="sec-title">监管与市场结构</h2>
+            <h2 class="sec-title">Regulation and market structure</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月17日，CFTC把24小时衍生品评审拆成资产、清算与周末风控</h3>
-          <p class="item-b">CFTC公布12月15日圆桌议程，将24小时衍生品拆成三道评审：哪些资产适合持续交易，清算资本、保证金和代币化抵押如何运作，以及周末流动性、价格发现、熔断、人员与系统维护如何覆盖。议程是监管讨论，不代表已批准新产品。</p>
+          <h3 class="item-h">November 17: CFTC sets out asset, clearing and weekend risk questions for round-the-clock derivatives trading</h3>
+          <p class="item-b">The CFTC’s December 15 roundtable agenda sets out three questions about round-the-clock derivatives. Which assets suit continuous trading? How would clearing capital, margin and tokenized collateral work? How would venues handle weekend liquidity, price discovery, circuit breakers, staffing and systems maintenance? The agenda sets up a regulatory discussion and grants no new product approvals.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.cftc.gov/PressRoom/PressReleases/9327-26" target="_blank" rel="noopener" title="CFTC全天交易圆桌议程 · 发布 2026-11-17" aria-label="来源 1：CFTC全天交易圆桌议程 · 发布 2026-11-17">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.cftc.gov/PressRoom/PressReleases/9327-26" target="_blank" rel="noopener" title="CFTC agenda for its roundtable on round-the-clock trading · Published 2026-11-17" aria-label="Source 1: CFTC agenda for its roundtable on round-the-clock trading · Published 2026-11-17">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月17日，CFTC暂停Kalshi总统提词市场并审查操纵风险</h3>
-          <p class="item-b">Kalshi按CFTC要求下线押注总统会说哪些词的合约，监管方暂停相关自认证并启动程序，理由是平台尚未证明这类合约不易被操纵。Kalshi称已设置监控并反对决定，但调查仍需时间；事件合约能否上市开始取决于逐合约的防操纵证据。</p>
+          <h3 class="item-h">November 17: CFTC pauses Kalshi contracts on words the president will say amid manipulation review</h3>
+          <p class="item-b">Kalshi has removed contracts that involve predicting what the president will say, as required by the CFTC. Regulators have suspended related self-certifications and initiated procedures, stating that the platform has not proven that such contracts are not susceptible to manipulation. Kalshi claims it has set up monitoring systems and opposes the decision, but further investigation is still needed. Whether these event-based contracts can be listed depends on evidence of anti-manipulation measures for each contract.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.axios.com/2026/11/17/tarek-mansour-kalshi-axios-bfd" target="_blank" rel="noopener" title="Axios对Kalshi与CFTC争议的报道 · 发布 2026-11-17" aria-label="来源 1：Axios对Kalshi与CFTC争议的报道 · 发布 2026-11-17">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.axios.com/2026/11/17/tarek-mansour-kalshi-axios-bfd" target="_blank" rel="noopener" title="Axios report on the dispute between Kalshi and the CFTC · Published 2026-11-17" aria-label="Source 1: Axios report on the dispute between Kalshi and the CFTC · Published 2026-11-17">1</a>
           </div>
         </article>
         </div>
@@ -190,38 +190,38 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月18日，Google以四档思考强度和95%缓存折扣上线Gemini 4 Neon</h3>
-          <p class="item-b">Gemini 4 Neon已进入Gemini API、企业版、Antigravity和付费App，提供四档思考强度、100万Token上下文，输入、缓存输入和输出分别为每百万3、0.15和15美元。Google称默认high档较Carbon单任务成本低32%，实际优势仍需用自有长任务复测。</p>
+          <h3 class="item-h">On November 18th, Google launched Gemini 4 Neon with a thinking intensity of four levels and a 95% cache discount.</h3>
+          <p class="item-b">Gemini 4 Neon is available through the Gemini API, the enterprise offering, Antigravity and the paid app. It offers four reasoning levels and a million-token context window. Per million tokens, input costs $3, cached input $0.15 and output $15. Google reported that the default high setting cut cost per task by 32% versus Carbon. Users still need to test the comparison on their own long-running tasks.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://blog.google/intl/en-in/products/introducing-gemini-4-neon/" target="_blank" rel="noopener" title="Google Gemini 4 Neon发布公告 · 发布 2026-11-18" aria-label="来源 1：Google Gemini 4 Neon发布公告 · 发布 2026-11-18">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://blog.google/intl/en-in/products/introducing-gemini-4-neon/" target="_blank" rel="noopener" title="Google Gemini 4 Neon announcement · Published 2026-11-18" aria-label="Source 1: Google Gemini 4 Neon announcement · Published 2026-11-18">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月19日，OpenAI披露Codex性能工厂三个月完成1700次自动调查</h3>
-          <p class="item-b">OpenAI把性能告警、根因定位、修复建议和部署后复核串成有状态工作流，三个月追踪1700多次调查并定位600多起根因，平均每天17次。任务会在代码审查或部署后由事件重新唤醒；修复合并仍需工程师审批，当前瓶颈已从调查转向审查。</p>
+          <h3 class="item-h">November 19: OpenAI reports 1,700 automated performance investigations in three months</h3>
+          <p class="item-b">OpenAI linked performance alerts, root-cause analysis, suggested fixes and post-deployment checks in a stateful workflow. Over three months it tracked more than 1,700 investigations and identified more than 600 root causes, averaging 17 investigations per day. Events can reactivate a task after code review or deployment. Engineers still approve fixes before merging, and review has replaced investigation as the bottleneck.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/" target="_blank" rel="noopener" title="OpenAI性能工厂技术说明 · 发布 2026-11-19" aria-label="来源 1：OpenAI性能工厂技术说明 · 发布 2026-11-19">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/" target="_blank" rel="noopener" title="OpenAI technical note on its performance factory · Published 2026-11-19" aria-label="Source 1: OpenAI technical note on its performance factory · Published 2026-11-19">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月19日，阿里披露AI云收入增长53%并把Qwen Agent接入商家运营</h3>
-          <p class="item-b">阿里季度披露AI云与计算服务收入609.73亿元，同比增长53%，外部客户收入增长64%，AI产品连续13个季度三位数增长。QwenWork已用企业文档和会议记录执行任务，电商版接入店铺运营；数据证明商业采用扩大，但未拆出各Agent的独立收入。</p>
+          <h3 class="item-h">On November 19, Alibaba revealed a 53% increase in AI cloud revenue, and Qwen Agent was integrated into merchant operations.</h3>
+          <p class="item-b">Alibaba reported quarterly revenue from AI cloud and computing services at 60.973 billion yuan, a 53% increase from the previous year. Revenue from external customers increased by 64%. AI product revenue has been growing at a triple-digit rate for 13 consecutive quarters. QwenWork has been used for tasks using corporate documents and meeting records. The e-commerce version has been integrated into store operations. Data shows that commercial adoption is increasing, but individual revenue from each agent has not been disclosed.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://home.alibabagroup.com/en-US/document-2060213191907999744" target="_blank" rel="noopener" title="阿里巴巴季度业绩与AI采用说明 · 发布 2026-11-19" aria-label="来源 1：阿里巴巴季度业绩与AI采用说明 · 发布 2026-11-19">1</a><a class="source-number" href="https://www.sec.gov/Archives/edgar/data/1577552/000110465926130115/tm2630263d1_ex99-1.htm" target="_blank" rel="noopener" title="阿里巴巴向SEC提交的季度业绩附件 · 发布 2026-11-19" aria-label="来源 2：阿里巴巴向SEC提交的季度业绩附件 · 发布 2026-11-19">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://home.alibabagroup.com/en-US/document-2060213191907999744" target="_blank" rel="noopener" title="Alibaba quarterly results and AI adoption update · Published 2026-11-19" aria-label="Source 1: Alibaba quarterly results and AI adoption update · Published 2026-11-19">1</a><a class="source-number" href="https://www.sec.gov/Archives/edgar/data/1577552/000110465926130115/tm2630263d1_ex99-1.htm" target="_blank" rel="noopener" title="Alibaba quarterly results exhibit filed with the SEC · Published 2026-11-19" aria-label="Source 2: Alibaba quarterly results exhibit filed with the SEC · Published 2026-11-19">2</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-09-08</title>
+<title>Perp DEX Daily · 2026-09-08</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 71 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 71</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 9 月 8 日 · 星期二</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">September 8, 2026 · Tuesday</div>
     </header>
-    <p class="lead">Lighter集成商累计永续成交突破100亿美元，MEXC开放SOL申购，Harmony则提出关闭L1并迁移ONE至Ethereum。</p>
+    <p class="lead">Integrators on Lighter surpassed $10 billion in cumulative perpetual trading volume. MEXC opened SOL subscriptions, while Harmony proposed shutting down its layer 1 and migrating ONE to Ethereum.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,9 +110,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Lighter集成商累计永续成交突破100亿美元</h3>
-          <p class="item-b"><strong>事件</strong>：Lighter称采用其合作方归因系统的集成商累计永续成交已超过100亿美元，Pear、Lighthouse、Algola和Atoma等入口被列为贡献方。</p><p class="item-b"><strong>机制</strong>：成交从第三方前端或策略工具进入Lighter订单簿，并通过合作方归因记录来源，集成商可以在不自建撮合和结算层的情况下分发交易。</p><p class="item-b"><strong>二阶效应</strong>：Perp DEX竞争开始从单一官网获客转向可衡量的分发网络，但累计归因成交不能直接证明单个入口的留存或增量。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>这是合作方归因口径的累计值，缺少同期全站成交和各集成商拆分，不能据此计算分发占比。</p>
+          <h3 class="item-h">Integrators on Lighter surpass $10 billion in cumulative perpetual volume</h3>
+          <p class="item-b"><strong>Event</strong>: Lighter said integrators using its partner attribution system had generated more than $10 billion in cumulative perpetual volume. It named Pear, Lighthouse, Algola and Atoma among the contributing interfaces.</p><p class="item-b"><strong>Mechanism</strong>: Transactions enter the Lighter order book from third-party frontends or strategic tools. The source is recorded through partner attribution. Integrators can distribute transactions without creating their own matching and settlement layers.</p><p class="item-b"><strong>Second-order effects</strong>: Competition in Perp DEX is shifting from direct access through a single website to a measurable distribution network. However, cumulative attribution of transactions cannot directly prove the retention or increase of individual entry points.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>This is the cumulative value attributed to partners. Without data on total transactions across the platform and individual integrators, it’s not possible to calculate the distribution ratio.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-05</span>
             <a class="item-src" href="https://telemetr.io/en/channels/2282601783-lighter_announcements/posts" target="_blank" rel="noopener">Lighter Announcements ↗</a>
@@ -120,9 +120,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">七家头部Perp DEX占样本成交约四分之三</h3>
-          <p class="item-b"><strong>事件</strong>：perps.info的9月7日快照覆盖35家永续场所，24小时成交为132.3亿美元；榜单前七家合计约99.7亿美元。</p><p class="item-b"><strong>机制</strong>：头部场所通过独立L1、L2和应用链承接订单簿，排名按各平台公开接口的名义成交汇总。</p><p class="item-b"><strong>二阶效应</strong>：成交仍向少数场所集中，但第二至第七名已形成多平台分布，单看第一名份额不足以描述竞争强度。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>各场所公开接口的24小时窗口与刷量过滤可能不同，聚合榜单适合看结构，不适合做审计级横比。</p>
+          <h3 class="item-h">Seven leading perpetual DEXs account for about three-quarters of volume in the sample</h3>
+          <p class="item-b"><strong>Event</strong>: In perps.info’s September 7 snapshot, 35 perpetual venues recorded $13.23 billion in 24-hour volume. The seven highest-ranked venues accounted for about $9.97 billion.</p><p class="item-b"><strong>Mechanism</strong>: Leading venues run their order books on independent layer-1 networks, layer-2 networks or application chains. The ranking aggregates notional trading volume from each platform’s public interfaces.</p><p class="item-b"><strong>Second-order effects</strong>: Transactions still concentrate in a few locations. However, the top seven positions show a multi-platform distribution. Just looking at the top position is insufficient to describe the intensity of competition.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The 24-hour window for public interfaces at each location may differ from the volume filtering. Aggregated lists are suitable for analyzing structures, but not for auditing comparisons.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-07</span>
             <a class="item-src" href="https://perps.info/" target="_blank" rel="noopener">perps.info ↗</a>
@@ -130,9 +130,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">本周主线 ｜ 七家Perp DEX覆盖649个市场</h3>
-          <p class="item-b"><strong>事件</strong>：PerpDexGuide在9月2日快照中统计Hyperliquid、dYdX、Aster、Lighter、edgeX、Paradex和Pacifica，共覆盖649种不同资产。</p><p class="item-b"><strong>机制</strong>：同一资产在不同场所可能使用不同代码和合约乘数，页面按资产去重，并单列各场所原始规格。</p><p class="item-b"><strong>二阶效应</strong>：标的扩张已经进入跨场所映射和规格一致性阶段，聚合交易与风险系统需要先解决代码、乘数和价格源差异。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>649是七家场所去重后的资产覆盖，不代表所有市场都有持续成交、充足深度或可比较的合约规格。</p>
+          <h3 class="item-h">Weekly theme | Seven perpetual DEXs cover 649 markets</h3>
+          <p class="item-b"><strong>Event</strong>: In the snapshot dated September 2nd, PerpDexGuide counted Hyperliquid, dYdX, Aster, Lighter, edgeX, Paradex, and Pacifica, covering a total of 649 different assets.</p><p class="item-b"><strong>Mechanism</strong>: The same asset may use different codes and contract multipliers in different locations. The page sorts by asset and lists the original specifications for each location.</p><p class="item-b"><strong>Second-order effects</strong>: The expansion of assets has reached the stage of cross-platform mapping and consistency in specifications. Aggregated transactions and risk systems need to address differences in code, multipliers, and price sources.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The figure of 649 represents the assets covered by seven platforms after deduplication. This does not mean that all markets have continuous transactions, sufficient depth, or comparable contract specifications.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-02</span>
             <a class="item-src" href="https://perpdexguide.com/markets/" target="_blank" rel="noopener">PerpDexGuide ↗</a>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">MEXC开放SOL Launchpad申购</h3>
-          <p class="item-b">MEXC从9月7日起开放SOL Launchpad，用户以USDT申购270枚SOL，分为新用户与现有用户池，并按超额申购比例分配。</p><p class="item-b">活动只向指定中东和北非地区开放，现有用户还需满足入金与合约成交任务，超出最终分配的申购额将退回。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>总池为270枚SOL，其中新用户70枚、现有用户200枚；地域、KYC和任务门槛限制了可参与人群。</p>
+          <h3 class="item-h">MEXC opens SOL Launchpad subscriptions</h3>
+          <p class="item-b">MEXC launched the SOL Launchpad on September 7. Users could purchase 270 SOLs using USDT. These tokens were allocated to both new users and existing users, based on the proportion of over-subscribed tokens.</p><p class="item-b">The event is only available to users in the Middle East and North Africa regions. Existing users must also complete tasks related to deposits and contract transactions. Any excess requests will be refunded.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The total pool consists of 270 SOL tokens. Of these, 70 are for new users, and 200 are for existing users. Geographic restrictions, KYC requirements, and task thresholds limit who can participate.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-07</span>
             <a class="item-src" href="https://www.mexc.com/announcements/tag/launchpad-27" target="_blank" rel="noopener">MEXC ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Pons代币进入HTX现货</h3>
-          <p class="item-b">HTX在9月7日开放PONS/USDT现货交易，PONS对应Robinhood Chain上的非托管固定供应量代币发射平台。</p><p class="item-b">这次变化扩大的是平台代币分发，并不等于Pons上发行的项目自动获得HTX流动性或审核背书。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>已确认PONS现货交易开放，公告未披露Pons发射项目的跨平台分发安排或采用数据。</p>
+          <h3 class="item-h">Pons token joins HTX’s spot market</h3>
+          <p class="item-b">HTX opened PONS/USDT spot trading on September 7. PONS is associated with a noncustodial platform for launching fixed-supply tokens on Robinhood Chain.</p><p class="item-b">This change expands the distribution of platform tokens. However, it does not mean that projects listed on Pons automatically gain HTX liquidity or approval from the platform.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>It has been confirmed that PONS spot trading is available. The announcement does not disclose any cross-platform distribution arrangements or data usage for Pons’ projects.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-07</span>
             <a class="item-src" href="https://www.newsfilecorp.com/release/313236/HTX-Opens-Trading-for-PONS-Pons" target="_blank" rel="noopener">HTX via Newsfile ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">BNB Chain发射平台转向自定义配对资产</h3>
-          <p class="item-b">Brew与Sock Market近期在BNB Chain上线，前者取消绑定曲线和毕业迁移，创建后直接进入PancakeSwap V3；后者把2至10种bStocks组合成配对篮子。</p><p class="item-b">Flap随后开放Permissionless Launch，让创建者自选RWA、主流币或Meme作为报价资产，竞争焦点从毕业机制转向配对资产和费用分配。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>Brew与Sock均未披露团队身份，当前热度集中在少数平台代币，持续流动性和合约风险尚未验证。</p>
+          <h3 class="item-h">BNB Chain launchpads move toward custom quote assets</h3>
+          <p class="item-b">Brew and Sock Market recently launched on the BNB Chain. Brew eliminated the binding curve and graduation migration, while Sock Market directly entered PancakeSwap V3. Sock Market also combines 2 to 10 bStocks into paired baskets.</p><p class="item-b">Flap has subsequently launched a Permissionless Launch, allowing creators to choose RWA, mainstream coins, or Memes as quoted assets. The focus of competition has shifted from the graduation mechanism to asset pairing and fee distribution.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Neither Brew nor Sock has disclosed their team identities. The focus is currently on a few platform tokens. The liquidity and contract risks have not yet been verified.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-07</span>
             <a class="item-src" href="https://www.coinlive.com/news/bnb-chain-kicks-off-a-chaotic-launchpad-battle-is-the" target="_blank" rel="noopener">Foresight News via Coinlive ↗</a>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Harmony提出关闭L1并迁移ONE至Ethereum</h3>
-          <p class="item-b">Harmony提出结束自有L1运行，在最终区块快照钱包、质押和交易所余额，并在Ethereum上空投同供应与发行节奏的ERC-20 ONE。</p><p class="item-b">提案仍不具约束力，智能合约、流动性池和链上应用不能自动迁移，官方要求用户在9月10日前退出相关合约。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>节点可从9月10日起停机，但最终区块、治理程序和交易所迁移细节尚未确定。</p>
+          <h3 class="item-h">Harmony proposes closing its layer 1 and migrating ONE to Ethereum</h3>
+          <p class="item-b">Harmony proposed shutting down its own layer-1 chain, taking a final-block snapshot of wallet balances, staked balances and exchange balances, and airdropping ERC-20 ONE on Ethereum with the same supply and issuance schedule.</p><p class="item-b">The proposal remains non-binding. Smart contracts, liquidity pools, and on-chain applications cannot be automatically migrated. Users are required to exit related contracts by September 10th.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Nodes can be shut down starting from September 10th. However, details regarding the migration of the final block, governance procedures, and exchanges have not been determined yet.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-06</span>
             <a class="item-src" href="https://www.theblock.co/news/web3/2026-09-06-harmony-sunset-network-413635" target="_blank" rel="noopener">The Block ↗</a>
@@ -202,9 +202,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">DBS与Citi完成周末跨境美元付款</h3>
-          <p class="item-b">DBS与Citi纽约办公室在9月5日通过Swift Digital Ledger和代币化存款，完成新加坡至美国的首笔周末美元付款。</p><p class="item-b">交易在数分钟内完成，展示的是两家银行间的全天候结算能力，尚未披露客户开放范围、费用或大规模处理量。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>已完成真实周末付款，但当前证据仍是单笔机构交易，不能外推为全面商业化服务。</p>
+          <h3 class="item-h">DBS and Citi complete a weekend cross-border dollar payment</h3>
+          <p class="item-b">DBS and Citi’s New York offices completed the first weekend USD payment from Singapore to the United States on September 5th, using Swift Digital Ledger and tokenized deposits.</p><p class="item-b">The transaction settled in minutes, demonstrating that the two banks could settle around the clock. They have not disclosed which customers would have access, what fees would apply or how much volume they could process at scale.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Real-world weekend payments have been completed, but current evidence indicates that these are individual institutional transactions and cannot be extrapolated to full commercial services.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-07</span>
             <a class="item-src" href="https://www.dbs.com/newsroom/DBS_and_Citi_partner_to_enable_instant_247_cross_border_USD_payments_with_tokenised_deposits" target="_blank" rel="noopener">DBS ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">韩华完成Avalanche代币化证券平台</h3>
-          <p class="item-b">韩华投资证券据报已完成支持Avalanche和Hyperledger Besu的代币化证券平台，韩国证券存托结算院也在准备可连接多种分布式账本的基础设施。</p><p class="item-b">韩国相关修法计划于2027年2月生效，首阶段可覆盖私募货币市场基金、债券、信托包装的非上市股票和碎片化投资证券。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>技术平台已完成，但正式发行、投资者准入与稳定币结算仍取决于后续监管实施和业务上线。</p>
+          <h3 class="item-h">Hanwha completes an Avalanche platform for tokenized securities</h3>
+          <p class="item-b">According to reports, Hanwha Investment Securities has completed the development of a tokenized securities platform that supports Avalanche and Hyperledger Besu. The Korea Securities Depository and Settlement Corporation is also preparing infrastructure that can connect to various distributed ledgers.</p><p class="item-b">South Korean legislation is scheduled to take effect in February 2027. The initial phase will cover private money market funds, bonds, trust packaging, non-listed stocks, and fragmented investment securities.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The technical platform is complete, but official issuance, investor access, and stablecoin settlement still depend on subsequent regulatory implementation and business launch.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-06</span>
             <a class="item-src" href="https://en.sedaily.com/finance/2026/09/06/hanwha-securities-builds-avalanche-based-token-securities" target="_blank" rel="noopener">Seoul Economic Daily ↗</a>
@@ -233,9 +233,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">OpenAI称思维链监控可靠性正在下降</h3>
-          <p class="item-b">OpenAI首席科学家Jakub Pachocki称，模型在更复杂环境中与人和工具交互、操纵自身推理过程，以及不依赖语言化推理的能力增强，正在削弱思维链监控的可靠性。</p><p class="item-b">他认为当前没有实验室已把对齐和监控解决到足以长期保持最高速度扩展的程度，并主张建立共享安全门槛与必要的自愿放缓。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>这是OpenAI首席科学家的判断与内部评估总结，页面没有公开可独立复现的完整监控数据。</p>
+          <h3 class="item-h">OpenAI reports declining reliability of chain-of-thought monitoring</h3>
+          <p class="item-b">Jakub Pachocki, Chief Scientist at OpenAI, stated that the model’s ability to interact with humans and tools in more complex environments, to manipulate its own reasoning processes, and to operate without relying on verbal reasoning is enhancing the reliability of monitoring thought chains.</p><p class="item-b">He believes that current laboratories have not yet solved alignment and monitoring issues sufficiently to maintain high-speed expansion over the long term. He advocates for establishing shared security thresholds and necessary voluntary slowdown measures.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>This is a summary of judgments and internal evaluations by OpenAI’s chief scientist. The page does not contain publicly available monitoring data that can be reproduced independently.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-06</span>
             <a class="item-src" href="https://openai.com/index/an-alien-mind/" target="_blank" rel="noopener">OpenAI ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">本周主线 ｜ 视觉注入可诱导恶意工具调用</h3>
-          <p class="item-b">一项黑盒自适应视觉提示注入研究，在无关且未授权的正常任务中，通过图片诱导模型输出可解析工具调用；GPT-5.5测试攻击成功率超过47%。</p><p class="item-b">研究还在默认OpenClaw Discord部署中展示了覆盖工具配置的路径，但结果来自特定模型、代理和攻击预算，不能外推到全部多模态系统。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>成功率依赖攻击优化、代理权限和评测任务；论文提供方法与样本，但不是线上事故统计。</p>
+          <h3 class="item-h">Weekly theme | Visual inputs can trigger unauthorized tool use in agents</h3>
+          <p class="item-b">A study of visual input security found that models sometimes proposed tool calls outside the scope of an ordinary user task. In the researchers’ tests, this occurred in over 47% of attempts against GPT-5.5.</p><p class="item-b">The study also found that a tested OpenClaw integration with Discord failed to protect its tool configuration. The findings depend on the specific models, agents and testing budget and do not establish the risk across all multimodal systems.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Success rate depends on attack optimization, proxy permissions, and evaluation tasks. The paper provides methods and samples, but these are not online accident statistics.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-03</span>
             <a class="item-src" href="https://arxiv.org/abs/2609.04533v1" target="_blank" rel="noopener">arXiv ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">本周主线 ｜ Agent不可逆决策需要终局门控</h3>
-          <p class="item-b">FinalityBench用321个付款异常任务测试消息延迟、重复和乱序下的Agent决策，按最终经济结果而非单步答案评分。</p><p class="item-b">在其设定中，等待权威终局信号再执行不可逆动作的策略达到85.4%，说明支付Agent的正确率不能替代对退款、发货和重复扣款的结果约束。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>结果来自可执行仿真基准，覆盖特定付款故障模型，尚未证明同一策略能直接迁移到真实企业系统。</p>
+          <h3 class="item-h">Weekly theme | Irreversible agent decisions need a final approval step</h3>
+          <p class="item-b">FinalityBench tested Agent decisions under message delays, repetitions, and disorder using 321 payment anomalies. The evaluation was based on the final economic outcome rather than individual answers.</p><p class="item-b">In its settings, 85.4% of strategies wait for authoritative final signals before taking irreversible actions. This indicates that the accuracy of payment agents cannot replace the constraints on refunds, deliveries, and duplicate charges.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The results come from executable simulation benchmarks, covering specific payment failure models. It has not been proven that the same strategy can be directly applied to real enterprise systems.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-04</span>
             <a class="item-src" href="https://arxiv.org/abs/2609.04706" target="_blank" rel="noopener">arXiv ↗</a>
@@ -263,7 +263,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

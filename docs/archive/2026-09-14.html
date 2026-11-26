@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-09-14</title>
+<title>Perp DEX Daily · 2026-09-14</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 77 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 77</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 9 月 14 日 · 星期一</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">September 14, 2026 · Monday</div>
     </header>
-    <p class="lead">Aster把16个永续市场的资金费周期从1小时拉长到4小时，Pons在最新完整日仍占受追踪发射台手续费过半，欧洲监管者则开始把预测合约按产品特征拆分定性。</p>
+    <p class="lead">Aster extended funding intervals from one hour to four across 16 perpetual markets. Pons still accounted for over half of tracked launchpad fees on the latest complete day. European regulators began classifying prediction contracts according to their product features.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,9 +110,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Aster把16个市场的资金费周期拉长到4小时</h3>
-          <p class="item-b"><strong>事件</strong>：Aster自9月13日16:00 UTC起，把KAITO、FOLKS、UAI、ZKC、KITE、LIT、MAGMA、SKR、BULLA、TST、HUMA、LUMI、AGT、BTW、COTI和PONS永续的资金费结算周期从1小时改为4小时。</p><p class="item-b"><strong>机制</strong>：结算频率下降不会自动改变累计资金费，但会把费用实现和持仓调节集中到更少的时间点，短周期套利者需要重新评估跨平台对冲与离场节奏。</p><p class="item-b"><strong>二阶效应</strong>：批量调整说明低流动性或波动型市场正在分层管理资金费节奏；公告未披露费率上限、触发条件或调整前后的异常数据，不能直接判断风险已经下降。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>覆盖16个永续市场，参数已生效，但风险改善效果尚无数据。</p>
+          <h3 class="item-h">Aster extends funding intervals to four hours on 16 markets</h3>
+          <p class="item-b"><strong>Event</strong>: At 16:00 UTC on September 13, Aster extended the funding interval from one hour to four on the KAITO, FOLKS, UAI, ZKC, KITE, LIT, MAGMA, SKR, BULLA, TST, HUMA, LUMI, AGT, BTW, COTI and PONS perpetuals.</p><p class="item-b"><strong>Mechanism</strong>: Fewer settlements do not automatically change total funding. They concentrate payments and position adjustments at fewer points in time, affecting the timing of cross-venue hedges and exits for short-horizon arbitrage traders.</p><p class="item-b"><strong>Second-order effects</strong>: The batch adjustment indicates that low liquidity or volatile markets are being managed in a hierarchical manner for funding payments. The announcement does not disclose the rate cap, triggering conditions, or abnormal data before and after the adjustment. Therefore, it cannot be concluded that risks have decreased.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>It covers 16 perpetual futures markets. The parameters have taken effect, but there is no data to show the effectiveness of the risk improvement measures.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-13</span>
             <a class="item-src" href="https://perpdexwars.com/en/perpdex-news" target="_blank" rel="noopener">PerpDEX Wars ↗</a>
@@ -120,9 +120,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Extended用5万美元竞赛放大RWA订单流</h3>
-          <p class="item-b"><strong>事件</strong>：Extended宣布9月15日至29日举办RWA交易竞赛，以5万美元USDC奖励排名前100的交易者。</p><p class="item-b"><strong>机制</strong>：竞赛把奖励集中到两周窗口和头部名次，能在费率调整之外继续降低RWA市场的短期获客成本，但排名规则会影响刷量、持仓风险和真实流动性的比例。</p><p class="item-b"><strong>二阶效应</strong>：活动可能帮助新标的更快形成盘口，也可能让成交在奖励结束后回落；公告未给出评分公式、反刷量规则和自然成交基线。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>5万美元是两周奖池，不是平台收入或持续流动性承诺。</p>
+          <h3 class="item-h">Extended uses a $50,000 competition to drive real-world asset order flow</h3>
+          <p class="item-b"><strong>Event</strong>: Extended announced a real-world asset trading competition for September 15–29, offering $50,000 in USDC to the top 100 traders.</p><p class="item-b"><strong>Mechanism</strong>: The competition focuses rewards on a two-week window and top rankings. This can continue to reduce the short-term customer acquisition costs in the RWA market, but the ranking rules will affect the risk of spamming, holding risks, and the proportion of real liquidity.</p><p class="item-b"><strong>Second-order effects</strong>: The campaign may help new listings build order-book liquidity, but activity could fall when the rewards end. The announcement omitted the scoring formula, anti-wash-trading rules and the baseline for organic volume.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>50,000 USD is the two-week prize pool, not platform revenue or ongoing liquidity commitments.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-12</span>
             <a class="item-src" href="https://perpdexwars.com/en/perpdex-news" target="_blank" rel="noopener">PerpDEX Wars ↗</a>
@@ -130,9 +130,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">TxFlow上线TWLO股票永续并给到20倍杠杆</h3>
-          <p class="item-b"><strong>事件</strong>：TxFlow上线Twilio股票永续TWLO，最高杠杆20倍。</p><p class="item-b"><strong>机制</strong>：产品把美股价格敞口接入全链订单簿，在不交割股票的情况下提供全天候方向交易；20倍杠杆会同步放大休市跳空、指数偏离和清算风险。</p><p class="item-b"><strong>二阶效应</strong>：股票永续继续从大型科技股扩展到中等市值软件公司，但来源未披露预言机、交易时段、盘口深度与地区限制，目前只能确认标的已上线。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>市场已上线，深度、指数与可用地区尚未披露。</p>
+          <h3 class="item-h">TxFlow lists a TWLO equity perpetual with up to 20x leverage</h3>
+          <p class="item-b"><strong>Event</strong>: TxFlow listed a Twilio equity perpetual under the ticker TWLO with up to 20× leverage.</p><p class="item-b"><strong>Mechanism</strong>: The product brings U.S. equity price exposure to an omnichain order book. Traders can take a directional position around the clock without taking delivery of shares. At 20× leverage, price gaps while the cash market is closed, index deviations and liquidation carry greater risk.</p><p class="item-b"><strong>Second-order effects</strong>: Equity perpetual futures continue to expand from large technology companies to mid-cap software companies. However, the source of these futures does not disclose information such as the oracle, trading hours, order book depth, or regional restrictions. Currently, only the fact that the product is available can be confirmed.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The market has been launched, but details such as depth, indices, and available regions remain undisclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-13</span>
             <a class="item-src" href="https://perpdexwars.com/en/perpdex-news" target="_blank" rel="noopener">PerpDEX Wars ↗</a>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Pons完整日手续费升至640万美元</h3>
-          <p class="item-b"><strong>事件</strong>：9月13日Pons录得639.55万美元手续费、1.1319亿美元V2曲线成交和21,304次以上发射，在MemeFees样本中占55.8%的24小时手续费份额。（Robinhood分发线 · 自07-02 · 新增完整日规模）</p><p class="item-b"><strong>机制与影响</strong>：同日106.82万美元计入协议收入、529.37万美元流向创建者等供给侧，说明分发流量继续转成链上费用分配；最近7日手续费较前7日仍下降26.9%，高份额不等于增长已恢复。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>成交仅含V2曲线swap，份额只对应MemeFees样本，发射数带不完整标记。</p>
+          <h3 class="item-h">Pons fees rise to $6.4 million over a complete day</h3>
+          <p class="item-b"><strong>Event</strong>: On September 13, Pons recorded $6.3955 million in fees, $113.19 million in V2 bonding-curve volume and more than 21,304 launches. It accounted for 55.8% of 24-hour fees in the MemeFees sample. This adds a full day of data to the Robinhood distribution story tracked since July 2.</p><p class="item-b"><strong>Mechanism and impact</strong>: On that day, $1.0682 million was recorded as protocol revenue, and $5.2937 million flowed to creators and other supply-side parties. This indicates that distribution traffic continues to be converted into on-chain fees. The fees for the past 7 days have decreased by 26.9% compared to the previous 7 days. A high share does not necessarily mean that growth has recovered.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The transaction only includes the V2 curve swap. The shares correspond only to the MemeFees sample. The number of launches is marked as incomplete.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-13</span>
             <a class="item-src" href="https://memefees.com/launchpads/pons" target="_blank" rel="noopener">MemeFees ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Raydium LaunchLab从低基数跃至33万美元日费</h3>
-          <p class="item-b"><strong>事件</strong>：Raydium LaunchLab在9月12日录得32.84万美元手续费和794.16万美元曲线成交，滚动7日手续费增幅为6,573.4%，受追踪手续费份额约3.0%。</p><p class="item-b"><strong>机制与影响</strong>：LaunchLab同时承接Raydium自有发射和白标平台，曲线手续费可拆给协议、平台与创建者；同日协议收入只有6.53万美元，说明总手续费不能直接等同于Raydium收入，且超高增幅主要受低基数影响。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>7日增幅来自低基数，当前样本份额仅3.0%，协议收入低于总手续费。</p>
+          <h3 class="item-h">Raydium LaunchLab’s daily fees jump from a low base to $330,000</h3>
+          <p class="item-b"><strong>Event</strong>: On September 12, Raydium LaunchLab recorded $328,400 in fees and $7.9416 million in bonding-curve trading volume. Fees rose 6,573.4% on a rolling seven-day basis. The platform accounted for about 3.0% of tracked fees.</p><p class="item-b"><strong>Mechanism and impact</strong>: LaunchLab handles both Raydium’s own token issuance and third-party platforms. The fees can be allocated to protocols, platforms, and creators. On that day, the protocol revenue was only $65,300, indicating that total fees cannot be directly equated to Raydium’s revenue. The high increase is mainly due to a low base.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The 7-day increase comes from a low base. The current sample share is only 3.0%. Agreement revenue is lower than total fees.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-12</span>
             <a class="item-src" href="https://memefees.com/launchpads/raydium-launchlab" target="_blank" rel="noopener">MemeFees ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">pump.fun单日仍承载265万笔交易</h3>
-          <p class="item-b"><strong>事件</strong>：9月12日pump.fun录得10.62万个活跃钱包、265.15万笔交易、140.00万美元手续费和5,370.09万美元曲线成交。</p><p class="item-b"><strong>机制与影响</strong>：单个钱包一天可多次交易，因此交易笔数反映交互密度而非独立用户规模；活跃钱包较9月11日的11.32万个下降约6.2%，但完整日交易量仍显示成熟发射台有持续的高频使用。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>活跃钱包按日去重但可跨日重复，交易笔数不等于用户数。</p>
+          <h3 class="item-h">Pump.fun still processes 2.65 million transactions in a day</h3>
+          <p class="item-b"><strong>Event</strong>: On September 12th, pump.fun recorded 106,200 active wallets, 2.6515 million transactions, 1.4 million USD in fees, and 53.7009 million USD in curve transactions.</p><p class="item-b"><strong>Mechanism and impact</strong>: A single wallet can trade multiple times in a day. Therefore, the number of transactions reflects the interaction density, rather than the number of individual users. The number of active wallets decreased by approximately 6.2% compared to September 11, when there were 113,200 wallets. However, the total transaction volume still indicates that mature launchpad platforms continue to be used frequently.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Active wallets are deduplicated by day, but they can be duplicated across days. The number of transactions does not equal the number of users.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-12</span>
             <a class="item-src" href="https://memefees.com/launchpads/pump-fun" target="_blank" rel="noopener">MemeFees ↗</a>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Revolut因伪造政府请求泄露客户资料</h3>
-          <p class="item-b"><strong>事件</strong>：Revolut确认攻击者通过一个真实政府机构域名发出欺诈性信息请求，可能取得部分客户的KYC文件、账户流水、IBAN、提现记录和包含比特币交易的完整历史。</p><p class="item-b"><strong>机制与影响</strong>：攻击绕过的不是Revolut核心系统，而是平台对执法和政府数据请求的信任流程；资金和系统未受影响，但合法域名本身不再足以作为披露客户数据的授权证明。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>受影响人数未披露，已确认是有限客户，资金与核心系统未被攻破。</p>
+          <h3 class="item-h">Revolut discloses customer data after a forged government request</h3>
+          <p class="item-b"><strong>Event</strong>: Revolut said a fraudulent government information request might have exposed some customers’ identity-verification documents, account statements, IBANs, withdrawal records and transaction histories, including bitcoin transactions.</p><p class="item-b"><strong>Mechanism and impact</strong>: The failure involved verification of government and law-enforcement requests. Revolut said customer funds and core systems were unaffected. Verifying the sender’s domain alone was insufficient to establish authority to release customer records.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The number of affected individuals is undisclosed. It has been confirmed that this affects a limited number of customers. Neither the funds nor the core system have been compromised.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-12</span>
             <a class="item-src" href="https://www.theblock.co/news/business/2026-09-12-revolut-says-customer-kyc-bitcoin-transaction-data-exposed-after-fake-request-from-govt-domain-414516" target="_blank" rel="noopener">The Block ↗</a>
@@ -202,9 +202,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">ESMA质疑预测平台在欧盟的授权与封锁</h3>
-          <p class="item-b"><strong>事件</strong>：欧洲证券及市场管理局表示，主要预测平台普遍没有欧盟授权，并点名关注Polymarket和Kalshi仅做部分地理封锁的做法。（预测市场规则线 · 自07-24 · 新增欧盟定性）</p><p class="item-b"><strong>机制与影响</strong>：事件合约可能按具体特征被归为MiFID金融衍生品、MiCA加密资产或博彩产品，监管责任不由平台自称决定；VPN绕过、内幕交易和刷量会进一步抬高跨境分发的合规成本。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>这是监管立场与质询，不是对单个平台的最终执法裁定。</p>
+          <h3 class="item-h">ESMA questions authorization and access blocking for prediction platforms in the EU</h3>
+          <p class="item-b"><strong>Event</strong>: The European Securities and Markets Authority said major prediction platforms generally lacked EU authorization. It singled out Polymarket and Kalshi for applying only partial geographic restrictions. This adds an EU regulatory assessment to the prediction-market rules story tracked since July 24.</p><p class="item-b"><strong>Mechanism and impact</strong>: Event contracts may be classified as MiFID financial derivatives, MiCA crypto assets, or gambling products based on specific characteristics. Regulatory responsibilities are not determined by the platform itself. VPN bypasses, insider trading, and manipulation of data will further increase the compliance costs of cross-border distribution.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>This is a regulatory stance and inquiry, not a final ruling on individual platforms.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-11</span>
             <a class="item-src" href="https://www.theblock.co/news/regulation/2026-09-11-esma-says-major-prediction-platforms-lack-eu-authorization-questions-polymarket-and-kalshis-partial-geo-blocks-414239" target="_blank" rel="noopener">The Block ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Blockstream拒付剩余598.5枚BTC赎金</h3>
-          <p class="item-b"><strong>事件</strong>：Liquid漏洞攻击者在归还约3,400枚BTC后仍持有598.5枚，并要求10%赏金；Blockstream拒绝付款，表示不会用赎金换回剩余资产。</p><p class="item-b"><strong>机制与影响</strong>：漏洞来自range proof验证缓存问题，曾生成约4,000枚无足额支持的L-BTC；区块和交易虽已恢复，peg-out仍关闭，拒付赎金把恢复重点重新压回储备补足、退出安排和责任追索。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>598.5枚BTC是攻击后未归还余额，交易恢复不代表peg-out与储备问题已解决。</p>
+          <h3 class="item-h">Blockstream refuses to pay the remaining 598.5 BTC ransom</h3>
+          <p class="item-b"><strong>Event</strong>: After returning approximately 3,400 BTC, the Liquid vulnerability attacker still held 598.5 BTC and demanded a 10% reward. Blockstream refused to pay, stating that they would not exchange the remaining assets for ransom.</p><p class="item-b"><strong>Mechanism and impact</strong>: The vulnerability stems from a problem with the range proof verification cache. Approximately 4,000 L-BTC tokens were generated without sufficient support. Although the blocks and transactions have been restored, the peg-out mechanism remains closed. The focus of recovery efforts is on replenishing reserves and arranging for exit procedures and liability claims.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>598.5 BTC are balances that were not returned after the attack. The recovery of transactions does not mean that the peg-out and reserve issues have been resolved.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-11</span>
             <a class="item-src" href="https://www.theblock.co/news/ecosystems/2026-09-11-return-the-bitcoin-blockstream-refuses-ransom-demand-for-remaining-600-btc-from-liquid-exploit-414247" target="_blank" rel="noopener">The Block ↗</a>
@@ -226,16 +226,16 @@
         <div class="sec-head">
           <span class="sec-no">04</span>
           <div>
-            <h2 class="sec-title">AI 相关</h2>
+            <h2 class="sec-title">AI</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
 
-          <h3 class="item-h">Claude Code把插件评测做成可复现命令</h3>
-          <p class="item-b"><strong>事件</strong>：Claude Code v2.1.269新增claude plugin eval，可运行插件评测集并输出带评分的JSON和HTML报告，同时增加输出风格切换、Bash改动diff和仓库级遥测标签。</p><p class="item-b"><strong>机制与影响</strong>：插件作者可以把评测从手工试用变成版本化测试资产，直接比较提示词、工具和运行配置的变化；评分质量仍取决于评测集覆盖和grader设计，命令存在不代表结果客观。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>命令已随v2.1.269发布，评测质量仍由插件作者负责。</p>
+          <h3 class="item-h">Claude Code makes plugin evaluations reproducible through a command</h3>
+          <p class="item-b"><strong>Event</strong>: Claude Code v2.1.269 added the claude plugin eval command, which runs plugin evaluation suites and generates scored JSON and HTML reports. The release also added output-style switching, diffs for Bash changes and repository-level telemetry tags.</p><p class="item-b"><strong>Mechanism and impact</strong>: Plugin developers can transform manual testing into versioned testing assets, allowing for direct comparison of changes in prompts, tools, and operating configurations. The quality of scoring still depends on the coverage of the testing set and the design of the grader. The existence of commands does not mean that the results are objective.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The commands were released with version 2.1.269. The quality of the evaluations remains the responsibility of the plugin developers.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-11</span>
             <a class="item-src" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.269" target="_blank" rel="noopener">Anthropic GitHub ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">澳大利亚把Agent风险定位到模型外的执行层</h3>
-          <p class="item-b"><strong>事件</strong>：澳大利亚网络安全中心发布Agentic AI Harness指南，把模型与数据、工具、系统之间的执行层单独列为安全与治理对象。</p><p class="item-b"><strong>机制与影响</strong>：指南将权限、配置、行为、结构和问责风险放到同一运行边界中，意味着企业采购和审计不能只看模型安全卡，还要检查工具权限、身份、日志和人工批准点。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>政府指南已发布，但不是强制认证标准。</p>
+          <h3 class="item-h">Australian assessment locates key agent risks in the execution layer outside the model</h3>
+          <p class="item-b"><strong>Event</strong>: The Australian Cybersecurity Center released a guide on Agentic AI Harnessing, which separates the execution layers between models, data, tools, and systems as separate security and governance targets.</p><p class="item-b"><strong>Mechanism and impact</strong>: The guidelines place risks related to permissions, configurations, behaviors, structures, and accountability within the same operational boundaries. This means that companies’ procurement and auditing processes cannot rely solely on model security cards. Instead, they must also check tool permissions, identities, logs, and manual approval points.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Government guidelines have been issued, but they are not mandatory certification standards.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-11</span>
             <a class="item-src" href="https://www.cyber.gov.au/business-government/secure-design/artificial-intelligence/agentic-ai-harnesses" target="_blank" rel="noopener">Australian Signals Directorate ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Anthropic CEO公开要求放慢前沿模型节奏</h3>
-          <p class="item-b"><strong>事件</strong>：Anthropic CEO Dario Amodei表示前沿模型开发需要给安全措施留出时间，并把自主Agent失控列为需要提前防范的情景。</p><p class="item-b"><strong>机制与影响</strong>：把开发节奏与外部评估、监控和防护成熟度绑定，会把竞争从单纯发布时间扩展到可验证的发布门槛；目前仍是企业主张，缺少跨实验室共同指标和执行约束。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>公开立场已经形成，统一行业门槛和约束机制尚不存在。</p>
+          <h3 class="item-h">Anthropic CEO publicly calls for slower frontier model development</h3>
+          <p class="item-b"><strong>Event</strong>: Dario Amodei, CEO of Anthropic, stated that developing advanced models requires sufficient time for security measures. He also identified the risk of autonomous agents becoming uncontrollable as a scenario that needs to be anticipated in advance.</p><p class="item-b"><strong>Mechanism and impact</strong>: By tying the development pace to external evaluations, monitoring, and protection levels, competition can be extended from simply focusing on the release time to verifiable release thresholds. Currently, this is still a proposition made by companies, lacking cross-laboratory metrics and execution constraints.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Public positions have been established, but unified industry thresholds and constraints still do not exist.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-12</span>
             <a class="item-src" href="https://apnews.com/article/d59552edcb27892d8ee4d98a48397706" target="_blank" rel="noopener">Associated Press ↗</a>
@@ -263,7 +263,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

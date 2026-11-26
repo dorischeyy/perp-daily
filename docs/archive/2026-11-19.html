@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-11-19</title>
+<title>Perp DEX Daily · 2026-11-19</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -100,51 +100,51 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 137 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 137</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 11 月 19 日 · 星期四</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">November 19, 2026 · Thursday</div>
     </header>
-    <p class="lead">Binance与OKX同日上线SOXX永续，却分别固定八小时资金费和在触及上下限时切换至每小时结算。相同标的在不同场所仍会形成不同的持仓成本。</p>
+    <p class="lead">Binance and OKX listed SOXX perpetuals on the same day. Binance keeps eight-hour funding intervals even when rates hit a limit. OKX then switches to hourly settlement, so the same underlying exposure can carry different holding costs.</p>
 
 
       <section class="sec sec-funding-and-tradfi-perps">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">永续资金费与传统资产扩列</h2>
+            <h2 class="sec-title">Perpetuals funding and new traditional-asset markets</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月19日，Bybit把短周期永续资金费改为按实际结算间隔缩放</h3>
-          <p class="item-b">Bybit将从11月24日起分三批调整永续资金费公式，先按合约实际结算间隔N将八小时基准乘以N/8，再套用费率上下限。短于八小时的合约预计资金费与实际收付可能变化；仓位、默认结算间隔和既有已结算费用不变，最后一批计划12月1日完成。</p>
+          <h3 class="item-h">November 19: Bybit announces funding rates scaled to each perpetual’s actual settlement interval</h3>
+          <p class="item-b">Starting November 24, Bybit will update its perpetual funding formula in three batches. It will multiply the eight-hour base rate by N/8, where N is the actual interval in hours, and then apply the rate caps. Estimated rates and payments may change for contracts with intervals shorter than eight hours. Positions, default intervals and previously settled fees are unaffected. The final batch is scheduled for December 1.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://announcements.bybit.com/en/article/update-to-funding-rate-calculation-formula-for-perpetual-contracts--art9f3b40f8766e/" target="_blank" rel="noopener" title="Bybit永续资金费公式更新公告 · 发布 2026-11-19" aria-label="来源 1：Bybit永续资金费公式更新公告 · 发布 2026-11-19">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://announcements.bybit.com/en/article/update-to-funding-rate-calculation-formula-for-perpetual-contracts--art9f3b40f8766e/" target="_blank" rel="noopener" title="Bybit update to its perpetual funding rate formula · Published 2026-11-19" aria-label="Source 1: Bybit update to its perpetual funding rate formula · Published 2026-11-19">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月18日，Binance与OKX为同一SOXX标的采用不同资金费切换规则</h3>
-          <p class="item-b">Binance新增SOXX、IGV、ARTY、IBIT、CCJ和ETN六只24小时TradFi永续，OKX同期上线SOXX、XLF和杠杆ETF SSPC。两者都以USDT结算，但Binance明确触及费率上下限仍保持八小时结算，OKX则会自动改为每小时结算；同一SOXX仓位的成本路径并不一致。</p>
+          <h3 class="item-h">November 18: Binance and OKX set different funding rules for their SOXX perpetuals</h3>
+          <p class="item-b">Binance added round-the-clock TradFi perpetuals on SOXX, IGV, ARTY, IBIT, CCJ and ETN. OKX listed SOXX, XLF and the leveraged ETF SSPC. Both venues settle in USDT. If funding reaches its ceiling or floor, Binance keeps eight-hour settlement while OKX automatically switches to hourly settlement. That difference changes how a SOXX position accrues funding costs.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/support/announcement/detail/e881bca4de484755b172ec53141bd422" target="_blank" rel="noopener" title="Binance六只TradFi永续上线公告 · 发布 2026-11-18" aria-label="来源 1：Binance六只TradFi永续上线公告 · 发布 2026-11-18">1</a><a class="source-number" href="https://www.okx.com/help/okx-to-list-tradfi-perpetual-futures-for-soxx-xlf-and-sspc" target="_blank" rel="noopener" title="OKX SOXX、XLF与SSPC永续上线公告 · 发布 2026-11-18" aria-label="来源 2：OKX SOXX、XLF与SSPC永续上线公告 · 发布 2026-11-18">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.binance.com/en/support/announcement/detail/e881bca4de484755b172ec53141bd422" target="_blank" rel="noopener" title="Binance notice listing six TradFi perpetuals · Published 2026-11-18" aria-label="Source 1: Binance notice listing six TradFi perpetuals · Published 2026-11-18">1</a><a class="source-number" href="https://www.okx.com/help/okx-to-list-tradfi-perpetual-futures-for-soxx-xlf-and-sspc" target="_blank" rel="noopener" title="OKX listing notice for SOXX, XLF, and SSPC perpetuals · Published 2026-11-18" aria-label="Source 2: OKX listing notice for SOXX, XLF, and SSPC perpetuals · Published 2026-11-18">2</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月18日，Kalshi开始连续上市36只新增单股永续</h3>
-          <p class="item-b">Kalshi向CFTC认证36只新增单股永续，其中33只跟踪普通股，3只跟踪ADR，并计划自11月18日起连续上市。合约沿用已获批产品条款，以现金结算、每日资金费维持价格锚定，并按美国现货市场假日与提前收市时间调整；客户交易仍需经受适当性规则约束的中介。</p>
+          <h3 class="item-h">November 18: Kalshi begins a rolling listing of 36 new single-stock perpetuals</h3>
+          <p class="item-b">Kalshi certified 36 new single-stock perpetuals with the CFTC, covering 33 common stocks and three ADRs, and planned to list them on a rolling basis from November 18. They use existing approved product terms, cash settlement and daily funding to keep prices aligned with the underlying. Trading hours reflect U.S. cash-market holidays and early closes. Customers access the contracts through intermediaries subject to suitability rules.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.cftc.gov/filings/ptc/ptc11172653873.pdf" target="_blank" rel="noopener" title="Kalshi提交CFTC的单股永续上市认证 · 发布 2026-11-17" aria-label="来源 1：Kalshi提交CFTC的单股永续上市认证 · 发布 2026-11-17">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.cftc.gov/filings/ptc/ptc11172653873.pdf" target="_blank" rel="noopener" title="Kalshi self-certification filing with the CFTC for single-stock perpetuals · Published 2026-11-17" aria-label="Source 1: Kalshi self-certification filing with the CFTC for single-stock perpetuals · Published 2026-11-17">1</a>
           </div>
         </article>
         </div>
@@ -153,19 +153,19 @@
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <h2 class="sec-title">代币化股票权利与基础设施</h2>
+            <h2 class="sec-title">Tokenized equity rights and infrastructure</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月17日，Bullish与Equiniti的发行人代币联盟扩至12家</h3>
-          <p class="item-b">DRW、Flow Traders、SoFi和Superstate加入Bullish与Equiniti发起的发行人代币联盟，使成员在两个月内增至12家，覆盖转让代理、经纪、交易所、做市与代币化基础设施。下一阶段将制定流动性机制和技术架构标准，但成员关系不具约束力，也不代表已承诺发行、上市或提供流动性。</p>
+          <h3 class="item-h">November 17: Bullish and Equiniti’s issuer-token consortium grows to 12 members</h3>
+          <p class="item-b">DRW, Flow Traders, SoFi, and Superstate joined the issuer token alliance initiated by Bullish and Equiniti. This brought the number of members to 12 within two months, covering transfer agents, brokers, exchanges, market makers, and tokenization infrastructure. The next step will be to establish liquidity mechanisms and technical standards. However, the membership relationship is not binding, and it does not represent any commitment to issuance, listing, or providing liquidity.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://investors.bullish.com/node/8541/pdf" target="_blank" rel="noopener" title="Bullish发行人代币联盟扩员公告 · 发布 2026-11-17" aria-label="来源 1：Bullish发行人代币联盟扩员公告 · 发布 2026-11-17">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://investors.bullish.com/node/8541/pdf" target="_blank" rel="noopener" title="Bullish issuer token alliance expansion announcement · Published 2026-11-17" aria-label="Source 1: Bullish issuer token alliance expansion announcement · Published 2026-11-17">1</a>
           </div>
         </article>
         </div>
@@ -180,38 +180,38 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月18日，Meta把Loblaw结账接入Muse并隔离支付凭证</h3>
-          <p class="item-b">Loblaw成为Muse首个加拿大零售合作方，用户可在智能体内规划餐食、组建购物篮并结账。Meta称密码和支付方式保存在Muse Secure VM中，不向模型暴露；用户自行选择连接权限，购买等敏感动作前仍需确认。该设计把零售代理的执行能力与凭证隔离、逐笔授权同时落到生产流程。</p>
+          <h3 class="item-h">On November 18th, Meta integrated Loblaw payments into Muse and isolated payment credentials.</h3>
+          <p class="item-b">Loblaw became Muse’s first Canadian retail partner. Users can plan meals, build a basket and check out within the agent. Meta said that passwords and payment methods stay in the Muse Secure VM, outside the model’s view. Users choose which connections to authorize and must confirm sensitive actions such as purchases. The retail integration pairs checkout with isolated credentials and transaction-level approval.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://about.fb.com/news/2026/11/meta-welcomes-loblaw-as-first-canadian-retail-partner-to-muse/" target="_blank" rel="noopener" title="Meta Muse与Loblaw合作公告 · 发布 2026-11-18" aria-label="来源 1：Meta Muse与Loblaw合作公告 · 发布 2026-11-18">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://about.fb.com/news/2026/11/meta-welcomes-loblaw-as-first-canadian-retail-partner-to-muse/" target="_blank" rel="noopener" title="Meta announcement on the Muse and Loblaw partnership · Published 2026-11-18" aria-label="Source 1: Meta announcement on the Muse and Loblaw partnership · Published 2026-11-18">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月18日，Kimi Work加入项目级AGENTS.md与企业SSO</h3>
-          <p class="item-b">Kimi Work 3.2.28允许在项目摘要面板新增或编辑AGENTS.md，并让规则作用于项目内全部对话；同时加入企业SSO、任务与产物总览，以及带来源、时间和上下文预览的全局搜索。更新前会检查正在运行的任务并提示中断风险，降低桌面Agent升级时丢失工作状态的概率。</p>
+          <h3 class="item-h">November 18: Kimi Work adds project-wide AGENTS.md rules and enterprise single sign-on</h3>
+          <p class="item-b">Kimi Work 3.2.28 allows for the addition or editing of AGENTS.md in the project summary panel. Rules can be applied to all conversations within the project. Additionally, it includes enterprise SSO, task and product overview, as well as global search capabilities that provide source, time, and context information. Before updates, running tasks are checked for potential interruptions, reducing the risk of losing the working state when the desktop agent is upgraded.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.kimi.com/en/help/kimi-work/release-notes?lang=en" target="_blank" rel="noopener" title="Kimi Work发布说明 · 发布 2026-11-18" aria-label="来源 1：Kimi Work发布说明 · 发布 2026-11-18">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.kimi.com/en/help/kimi-work/release-notes?lang=en" target="_blank" rel="noopener" title="Kimi Work release notes · Published 2026-11-18" aria-label="Source 1: Kimi Work release notes · Published 2026-11-18">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月17日，Mistral上线可并行本地与云端任务的Vibe Desktop</h3>
-          <p class="item-b">Vibe Desktop在macOS和Windows正式可用，把本地仓库、云端沙箱、Work和Code放进同一桌面端。它支持Git worktree隔离并行改动、委派子任务、持续运行构建命令，并在应用内查看文件、差异和PR状态；Linux仍未开放，实际权限和提示也可与Vibe CLI不同。</p>
+          <h3 class="item-h">On November 17, Mistral launched Vibe Desktop, which allows parallel local and cloud-based tasks.</h3>
+          <p class="item-b">Vibe Desktop is now available for macOS and Windows. It integrates local repositories, cloud sandboxes, Work, and Code into a single desktop interface. It supports Git worktree isolation for parallel changes, delegation of sub-tasks, continuous execution of build commands, and viewing of files, differences, and PR statuses within the app. Linux is not yet available, and the actual permissions and prompts may differ from those provided by the Vibe CLI.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://docs.mistral.ai/resources/release-notes" target="_blank" rel="noopener" title="Mistral产品发布记录 · 发布 2026-11-17" aria-label="来源 1：Mistral产品发布记录 · 发布 2026-11-17">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://docs.mistral.ai/resources/release-notes" target="_blank" rel="noopener" title="Mistral product release history · Published 2026-11-17" aria-label="Source 1: Mistral product release history · Published 2026-11-17">1</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

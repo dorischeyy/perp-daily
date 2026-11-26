@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-09-25</title>
+<title>Perp DEX Daily · 2026-09-25</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -82,12 +82,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 87 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 87</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 9 月 25 日 · 星期五</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">September 25, 2026 · Friday</div>
     </header>
-    <p class="lead">OKX把股票永续拆股写进持仓与订单生命周期，CFTC补齐代币化客户资金和链上记账口径，Google则把实时数字人接入企业级代理。</p>
+    <p class="lead">OKX set rules for handling orders and positions during stock splits on equity perpetuals. The CFTC clarified treatment of tokenized customer funds and onchain records, and Google integrated live digital avatars into enterprise agents.</p>
 
 
       <section class="sec sec-perpdex">
@@ -100,27 +100,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">OKX把拆股写进股票永续生命周期</h3>
-          <p class="item-b"><strong>事件</strong>：OKX将于9月28日配合Kioxia三比一拆股，短暂停止KIOXIA股票永续交易，并把标记价与指数价调整到约三分之一、持仓数量放大三倍。</p><p class="item-b"><strong>机制</strong>：平台会先按拆股前标记价关闭旧持仓，再按调整后价格重开等值仓位并重算强平价；普通挂单同步换算，止盈止损、条件单和策略单则取消或暂停。（可机读市场生命周期线，自08-28，本次从下线与迁移状态推进到公司行动）</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>这是现金结算的USDT永续，不赋予股票所有权；账户权益与保证金原则上近似不变，但重新开仓后强平价会按新参数计算。</p>
+          <h3 class="item-h">OKX defines how stock splits affect the lifecycle of equity perpetuals</h3>
+          <p class="item-b"><strong>Event</strong>: For Kioxia’s 3-for-1 split on September 28, OKX will briefly suspend the KIOXIA equity perpetual, reduce mark and index prices to roughly one-third and triple position quantities.</p><p class="item-b"><strong>Mechanism</strong>: OKX will close old positions at the pre-split mark, reopen equal-value positions at the adjusted price and recalculate liquidation prices. It will convert ordinary resting orders but cancel or suspend take-profit, stop-loss, conditional and strategy orders. The machine-readable market lifecycle story tracked since August 28 now extends from delistings and migrations to corporate actions.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>This is USDT perpetual coin with cash settlement. It does not grant stock ownership. Account equity and margin remain essentially unchanged, but the liquidation price will be calculated based on new parameters after reopening positions.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-24</span>
             <a class="item-src" href="https://www.okx.com/help/okx-to-adjust-kioxia-equity-perpetual-futures-due-to-corporate-action" target="_blank" rel="noopener">OKX ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Variational把全部未来收入交给回购销毁</h3>
-          <p class="item-b"><strong>事件</strong>：Variational于9月24日公布VAR代币安排，计划在第四季度上线，创世空投占32%，生态储备占18%，团队与投资者合计占50%。</p><p class="item-b"><strong>机制</strong>：空投在代币生成时全额解锁并按积分分配，未领取部分销毁；协议未来全部经营收入进入金库，用于在公开市场回购VAR并销毁，把交易收入直接绑定到流通量收缩。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>回购比例和空投规则已经公布，但代币尚未上线，未来收入规模、执行频率和链上销毁记录仍待验证。</p>
+          <h3 class="item-h">Variational commits all future revenue to buybacks and burns</h3>
+          <p class="item-b"><strong>Event</strong>: On September 24, Variational announced plans to launch VAR in the fourth quarter. It earmarked 32% of supply for the genesis airdrop, 18% for ecosystem reserves and a combined 50% for the team and investors.</p><p class="item-b"><strong>Mechanism</strong>: Airdrops unlock tokens fully at the time of creation and are distributed based on points. Unclaimed portions are destroyed. All future operating revenues go into a treasury, which is used to repurchase VARs in the market and destroy tokens. Trading revenues are directly linked to the reduction in circulating tokens.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The buyback percentage and airdrop rules are public. VAR has yet to launch. Future revenue, buyback frequency and onchain burns still require verification.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-24</span>
             <a class="item-src" href="https://coinness.com/en/news/1169743" target="_blank" rel="noopener">CoinNess ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Bybit给短期限权增加动态最低卖价</h3>
-          <p class="item-b"><strong>事件</strong>：Bybit于9月24日调整剩余期限不超过两天的期权最低卖价，覆盖全部加密期权和TradFi永续期权。</p><p class="item-b"><strong>机制</strong>：新下限取固定底价、短期限底价和动态风险底价三者的最大值，其中短期限底价等于期权标记价的10%，以限制临近到期时过低卖价穿透风控。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>规则只约束卖单最低报价，不改变标记价、指数价、Delta、现有仓位或保证金计算。</p>
+          <h3 class="item-h">Bybit adds a dynamic minimum ask for short-dated options</h3>
+          <p class="item-b"><strong>Event</strong>: On September 24, Bybit adjusted the minimum ask price for contracts with two days or less until expiry. The change covers all crypto options and TradFi perpetual options.</p><p class="item-b"><strong>Mechanism</strong>: The new lower limit is the maximum of a fixed floor price, short-term floor price, and dynamic risk floor price. The short-term floor price is 10% of the option’s mark price, to prevent low selling prices from breaking through risk controls near expiration.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The rules only constrain the lowest bid for sell orders. The mark price, index price, Delta, current positions, and margin calculations remain unchanged.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-24</span>
             <a class="item-src" href="https://announcements.bybit.com/en/article/announcement-on-adjustment-of-minimum-ask-price-mechanism-for-short-dated-options--art21ac9f14b83c/" target="_blank" rel="noopener">Bybit ↗</a>
@@ -138,27 +138,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Launchpad.meme把社区直播纳入发射边界</h3>
-          <p class="item-b"><strong>事件</strong>：Launchpad.meme于9月24日更新服务条款，明确平台同时提供代币创建、联合曲线交易、发现页、社区、直播、毕业和流动性迁移。</p><p class="item-b"><strong>机制</strong>：平台把发射、内容传播和交易入口放进同一产品，但不为用户创建的代币或内容背书，也不能恢复钱包、撤销授权或逆转链上交易，验证责任仍留给用户。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>这是条款层面对现有功能与责任的统一描述，不等于9月24日当天新增了全部功能，也不代表平台验证过展示资产。</p>
+          <h3 class="item-h">Launchpad.meme adds community livestreams to its launch process</h3>
+          <p class="item-b"><strong>Event</strong>: Launchpad.meme updated its terms of service on September 24 to cover token creation, bonding-curve trading, discovery, community features, livestreaming, graduation and liquidity migration.</p><p class="item-b"><strong>Mechanism</strong>: The platform combines the functions of launching, content distribution, and trading into a single product. However, it does not endorse any tokens or content created by users. It also cannot restore wallets, revoke authorizations, or reverse transactions on the blockchain. The responsibility for verification remains with the users.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>This is a unified description of existing functions and responsibilities at the clause level. It does not mean that all functions were added on September 24th, nor does it indicate that the platform has verified the displayed assets.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-24</span>
             <a class="item-src" href="https://launchpad.meme/terms" target="_blank" rel="noopener">Launchpad.meme ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Raydium LaunchLab单日向供给侧分出近52万美元</h3>
-          <p class="item-b"><strong>事件</strong>：MemeFees记录Raydium LaunchLab在9月23日完整UTC日产生64.49万美元费用，其中12.63万美元计入协议收入，51.86万美元流向供给侧。</p><p class="item-b"><strong>机制</strong>：约80%的当日费用被分给创建者、流动性与其他供给参与者，协议只保留剩余部分，发射台竞争因此同时取决于总费用和费用在平台与供给侧之间的分配。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>页面注明数据取自DefiLlama，7794多个发射为不完整计数；单日分配不能直接推导用户留存或毕业资产质量。</p>
+          <h3 class="item-h">Raydium LaunchLab distributes nearly $520,000 to the supply side in one day</h3>
+          <p class="item-b"><strong>Event</strong>: MemeFees recorded fees generated by Raydium LaunchLab on September 23rd, totaling 644,900 USD. Of this amount, 126,300 USD was recorded as revenue under the agreement, while 518,600 USD flowed to the supply side.</p><p class="item-b"><strong>Mechanism</strong>: Approximately 80% of the fees incurred that day were distributed to creators, liquidity providers, and other participants. The protocol retained only the remaining amount. Therefore, competition among launch platforms depends on both the total fees and the distribution of fees between the platform and the supply side.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The data on the page is sourced from DefiLlama. More than 7,794 transactions are incomplete counts. The daily distribution data cannot be used to determine user retention or the quality of assets that have been retired.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-23</span>
             <a class="item-src" href="https://memefees.com/launchpads/raydium-launchlab" target="_blank" rel="noopener">MemeFees ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Pintu把PONS接入印尼合规交易入口</h3>
-          <p class="item-b"><strong>事件</strong>：受印尼金融服务管理局监管的Pintu于9月24日上线PONS，为Robinhood Chain发射平台增加新的中心化交易入口。</p><p class="item-b"><strong>机制</strong>：Pons让新币直接进入锁定的Uniswap V3池而不经过联合曲线，并把大部分协议费用用于PONS自动回购销毁；外部上币把这套价值捕获扩展到印尼本地分发。（Robinhood Chain分发线，自07-02，本次从Bybit扩展到印尼合规入口）</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>现货交易入口已经开放，但公告没有披露PONS新增用户、成交量或Robinhood Chain资金回流，分发效果仍待观察。</p>
+          <h3 class="item-h">Pintu brings PONS to a regulated Indonesian trading platform</h3>
+          <p class="item-b"><strong>Event</strong>: Pintu, regulated by the Indonesian Financial Services Authority, launched PONS on September 24th. This adds a new centralized trading platform for the Robinhood Chain.</p><p class="item-b"><strong>Mechanism</strong>: Pons sends new tokens directly to a locked Uniswap V3 pool, bypassing a bonding curve. Most protocol fees fund automatic PONS buybacks and burns. The external listing extends distribution from Bybit to a regulated Indonesian venue in the Robinhood Chain story tracked since July 2.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Spot trading is open. The announcement provided no figures for new PONS users, trading volume or capital flowing back to Robinhood Chain, leaving the impact of the listing unknown.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-24</span>
             <a class="item-src" href="https://www.pintu.co.id/blog/pintu-listing-2-token-baru-24sep26" target="_blank" rel="noopener">Pintu ↗</a>
@@ -176,27 +176,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">CFTC补齐代币化客户资金与链上记账口径</h3>
-          <p class="item-b"><strong>事件</strong>：CFTC三个业务部门于9月24日更新加密与区块链常见问题，补充客户资金投资于代币化合资格资产，以及注册机构用区块链满足记账要求的处理方式。</p><p class="item-b"><strong>机制</strong>：更新把代币化资产能否进入客户资金管理，与数字资产能否充当保证金拆开说明，并把链上记录纳入既有注册机构责任框架，而不是为代币化形式另建一套豁免。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>这是工作人员常见问题更新，围绕既有指引与不行动立场展开，不是新的委员会规则或对所有代币化抵押品的全面批准。</p>
+          <h3 class="item-h">CFTC clarifies treatment of tokenized customer funds and onchain recordkeeping</h3>
+          <p class="item-b"><strong>Event</strong>: On September 24th, three departments of the CFTC updated their guidelines on cryptocurrencies and blockchain, including information on the qualifications for investing customer funds in tokenized assets, as well as how registered institutions can meet accounting requirements using blockchain technology.</p><p class="item-b"><strong>Mechanism</strong>: Updates were made regarding whether tokenized assets can be included in customer fund management, and whether digital assets can serve as collateral. Additionally, blockchain records were incorporated into the framework for registered institutions’ responsibilities, rather than creating a separate exemption for tokenized forms of assets.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>This is an update to common issues faced by staff. It relates to existing guidelines and inaction. It is not a new committee rule or a comprehensive approval for all tokenized collateral.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-24</span>
             <a class="item-src" href="https://www.cftc.gov/PressRoom/PressReleases/9303-26" target="_blank" rel="noopener">CFTC ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Ondo把BlackRock策略封装成单一链上代币</h3>
-          <p class="item-b"><strong>事件</strong>：Ondo于9月24日推出三只Intelligent Portfolios，分别覆盖高收益、多元增长和高增长策略，底层配置基于BlackRock为Ondo开发的组合方案。</p><p class="item-b"><strong>机制</strong>：目标权重、定期再平衡和费用逻辑由智能合约执行，用户通过一个可铸造、赎回和转让的代币持有整篮子代币化股票与ETF，该代币还可进入借贷或永续抵押场景。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>产品面向获准且非受限司法辖区的用户；BlackRock提供策略，不等于承担代币发行、链上执行或流动性风险。</p>
+          <h3 class="item-h">Ondo packages a BlackRock strategy into a single onchain token</h3>
+          <p class="item-b"><strong>Event</strong>: On September 24th, Ondo launched three Intelligent Portfolios, each targeting high returns, diversified growth, and high-growth strategies. These portfolios are based on portfolio solutions developed by BlackRock for Ondo.</p><p class="item-b"><strong>Mechanism</strong>: The logic for target weights, periodic rebalancing, and fees is executed by smart contracts. Users hold a basket of tokenized stocks and ETFs through tokens that can be minted, redeemed, and transferred. These tokens can also be used for lending or perpetual collateralization.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The product is intended for users in approved and non-restricted jurisdictions. BlackRock provides strategies, but this does not mean that the platform assumes responsibility for token issuance, on-chain execution, or liquidity risks.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-24</span>
             <a class="item-src" href="https://ondo.finance/blog/introducing-ondo-intelligent-portfolios" target="_blank" rel="noopener">Ondo Finance ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">IBM用ISO 20022接入Swift代币化存款账本</h3>
-          <p class="item-b"><strong>事件</strong>：IBM于9月24日为Digital Asset Haven开放连接Swift区块链共享账本的测试版，并新增可部署在IBM Z和LinuxONE上的本地版本。</p><p class="item-b"><strong>机制</strong>：银行可继续用ISO 20022消息发起代币化存款交易，在共享账本上全天候移动资产，再通过既有系统完成最终结算，同时把密钥和操作栈留在自己的数据中心。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>Swift账本首批由17家机构试点，本地部署仍是测试版；全天候资产移动不等于最终结算也已全天候完成。</p>
+          <h3 class="item-h">IBM uses ISO 20022 to connect to Swift’s tokenized deposit ledger</h3>
+          <p class="item-b"><strong>Event</strong>: On September 24th, IBM opened up a test version of the Swift blockchain shared ledger for Digital Asset Haven. A local version of this system can be deployed on IBM Z and LinuxONE.</p><p class="item-b"><strong>Mechanism</strong>: Banks can continue to use ISO 20022 messages to initiate tokenized deposit transactions. Assets can be moved around the clock on a shared ledger, and final settlements can be completed through existing systems. Keys and operation stacks remain in their own data centers.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The first batch of Swift transactions was piloted by 17 institutions. Local deployment is still in the testing phase. Asset transfers occur around the clock, and final settlements are also completed around the clock.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-24</span>
             <a class="item-src" href="https://newsroom.ibm.com/2026-09-24-ibm-expands-its-digital-banking-infrastructure-with-swift-integration-and-digital-asset-haven-on-prem" target="_blank" rel="noopener">IBM ↗</a>
@@ -214,27 +214,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Gemini让数字人在工具调用时持续对话</h3>
-          <p class="item-b"><strong>事件</strong>：Google于9月24日在Gemini Enterprise推出Gemini 3.8 Live with Live Avatar，把低延迟视频生成、语音和视觉输入合并为实时数字人。</p><p class="item-b"><strong>机制</strong>：代理可在后台异步调用工具和读取数据，同时维持前台对话与视觉呈现，并在97种语言间切换口型和表情，减少工具等待对交互连续性的打断。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>功能当前位于Gemini Enterprise，自定义数字人还需企业白名单；音视频输出带SynthID水印。</p>
+          <h3 class="item-h">Gemini lets a digital avatar keep talking while calling tools</h3>
+          <p class="item-b"><strong>Event</strong>: On September 24th, Google launched Gemini 3.8 Live with Live Avatar in Gemini Enterprise. This feature combines low-latency video generation with voice and visual input to create real-time digital humans.</p><p class="item-b"><strong>Mechanism</strong>: Agents can call tools and read data asynchronously in the background, while maintaining front-end conversations and visual presentations. They can switch between 97 languages, reducing interruptions to the interaction continuity.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>This feature is currently available in Gemini Enterprise. Custom digital humans require an enterprise whitelist. Audio and video outputs carry SynthID watermarks.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-24</span>
             <a class="item-src" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/" target="_blank" rel="noopener">Google ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Meta把眼镜云端推理锁进可验证机密环境</h3>
-          <p class="item-b"><strong>事件</strong>：Meta于9月23日披露为AI眼镜扩展Private Processing，让需要长期个人上下文的大模型任务在云端机密虚拟机中运行。</p><p class="item-b"><strong>机制</strong>：CPU与GPU内存都留在可信执行环境，客户端先校验远程证明和公开透明账本中的软件测量值再发送数据；运维只能看到汇总资源与故障信号，不能读取模型输入输出。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>架构让Meta运维人员无法直接读取处理中的数据，但安全仍依赖硬件可信根、远程证明、客户端校验和发布二进制的一致性。</p>
+          <h3 class="item-h">Meta confines its glasses’ cloud inference to a verifiable confidential environment</h3>
+          <p class="item-b"><strong>Event</strong>: On September 23, Meta revealed that it is expanding Private Processing for AI glasses, allowing large models to run in confidential virtual machines in the cloud for tasks that require long-term personal context.</p><p class="item-b"><strong>Mechanism</strong>: Both CPU and GPU memory remain in a trusted execution environment. Clients verify software measurements in remote proofs and transparent ledgers before sending data. Operations can only access aggregated resources and fault signals; they cannot read model inputs and outputs.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The architecture prevents Meta’s operations team from directly accessing the data processed. However, security still depends on hardware trust, remote verification, client validation, and consistency in binary releases.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-23</span>
             <a class="item-src" href="https://engineering.fb.com/2026/09/23/security/private-processing-meta-ai-glasses/" target="_blank" rel="noopener">Meta Engineering ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Ringg用生产评估把客服模型成本降九成</h3>
-          <p class="item-b"><strong>事件</strong>：OpenAI于9月23日披露，Ringg的多语言客服代理每月处理超过700万次接通通话，最多解决65%的请求，客户平均满意度为4.8。</p><p class="item-b"><strong>机制</strong>：平台按实时对话、通话后分析和模型评审分配不同模型，再用历史对话与模拟流程持续评估；部分实时任务从GPT-4.1迁移后，模型成本约降低90%。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>解决率和成本降幅来自Ringg与OpenAI案例页，分别是最高值与部分工作负载结果，不能外推到全部客户或全部请求。</p>
+          <h3 class="item-h">Ringg uses production evaluations to lower customer service model costs by 90%</h3>
+          <p class="item-b"><strong>Event</strong>: On September 23, OpenAI revealed that Ringg’s multilingual customer service agents handle over 7 million calls per month, resolving up to 65% of requests. The average customer satisfaction rate is 4.8.</p><p class="item-b"><strong>Mechanism</strong>: The platform allocates different models based on real-time conversations, post-conversation analysis, and model evaluation. Historical conversations and simulation processes are used for continuous evaluation. Some real-time tasks have reduced costs by approximately 90% after being migrated from GPT-4.1.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Solution rates and cost reductions come from Ringg and OpenAI case pages. These are the highest values and results for certain workloads. They cannot be generalized to all customers or all requests.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-23</span>
             <a class="item-src" href="https://openai.com/index/ringg/" target="_blank" rel="noopener">OpenAI ↗</a>
@@ -242,7 +242,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

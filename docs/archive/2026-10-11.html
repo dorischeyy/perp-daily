@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-10-11</title>
+<title>Perp DEX Daily · 2026-10-11</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -82,12 +82,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 100 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 100</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 10 月 11 日 · 星期日</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">October 11, 2026 · Sunday</div>
     </header>
-    <p class="lead">Blockchain.com申请美国衍生品双牌照，CFTC把事件合约纳入swap规则讨论，Extended则准备把永续结算迁往Circle Arc。</p>
+    <p class="lead">Blockchain.com applied for two U.S. derivatives licenses. The CFTC opened discussion of event contracts under swap rules, and Extended is preparing to move perpetual settlement to Circle’s Arc.</p>
 
 
       <section class="sec sec-perpdex">
@@ -100,27 +100,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Blockchain.com申请美国衍生品双牌照</h3>
-          <p class="item-b"><strong>事件</strong>：Blockchain.com于10月9日确认已向CFTC申请指定合约市场（DCM）与期货佣金商（FCM）牌照。该公司已在美国以外接入Polymarket预测市场和Hyperliquid永续交易，若获批，可把衍生品撮合与客户中介能力带入美国合规框架。</p><p class="item-b"><strong>机制</strong>：DCM决定平台能否经营受监管合约市场，FCM则覆盖客户资金与订单中介。两类牌照同时申请，说明入口、撮合和客户资产路径正被放进同一合规设计，但申请尚未等于获批或上线。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>DCM与FCM申请已提交，审批结果、具体产品和美国上线时间仍未公布。</p>
+          <h3 class="item-h">Blockchain.com applies for two U.S. derivatives licenses</h3>
+          <p class="item-b"><strong>Event</strong>: On October 9, Blockchain.com confirmed applications to the CFTC for designated contract market (DCM) and futures commission merchant (FCM) registration. Outside the U.S. it already connects users to Polymarket and Hyperliquid perpetuals. Approval would bring derivatives matching and customer intermediation under a U.S. regulatory framework.</p><p class="item-b"><strong>Mechanism</strong>: DCM status would permit operation of a regulated contract market, while FCM registration covers customer funds and order intermediation. The filings address distribution, matching and custody together. Neither approval nor a U.S. product launch had occurred.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Applications for DCM and FCM have been submitted. The approval results, specific products, and launch time in the United States have not yet been announced.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-09</span>
             <a class="item-src" href="https://www.theblock.co/news/business/2026-10-09-blockchain-com-cftc-license-prediction-markets-derivatives-418192" target="_blank" rel="noopener">The Block ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Extended将永续结算迁往Circle Arc</h3>
-          <p class="item-b"><strong>事件</strong>：Extended宣布计划在10月19日当周迁往Circle Arc。现有账户、仓位和订单将自动带入新环境，但持有USDT或wBTC的用户需在10月21日前完成转换。该变化延续了交易后台服务化线，自08-25起对前端、撮合和结算分层的观察。</p><p class="item-b"><strong>机制</strong>：迁移保留交易状态，却替换底层结算网络与部分抵押资产兼容性。Arc主打亚秒级终局和稳定币计费，若迁移顺利，交易前端可以减少用户对链和gas资产的感知；实际稳定性仍需上线后验证。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>当前是已公布的迁移计划，不是已完成的主网切换；仓位、订单与资产转换结果待上线验证。</p>
+          <h3 class="item-h">Extended plans to migrate perpetual settlement to Circle’s Arc</h3>
+          <p class="item-b"><strong>Event</strong>: Extended announced plans to migrate to Circle’s Arc in the week of October 19. Existing accounts, positions and orders will carry over automatically, but users holding USDT or wBTC must convert by October 21. The change extends the trading infrastructure story tracked since August 25 on separating front ends, matching and settlement.</p><p class="item-b"><strong>Mechanism</strong>: Migration preserves the transaction status, but it replaces the underlying settlement network and some collateral assets. Arc focuses on sub-second finalization and stablecoin billing. If the migration goes smoothly, the transaction front end can reduce users’ awareness of the chain and gas assets. Actual stability still needs to be verified after launch.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>This is currently a published migration plan, not a completed mainnet switch. The results of position, orders, and asset conversions are still pending verification.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-08</span>
             <a class="item-src" href="https://www.kcex.com/en-US/news/132465?handleDefaultLocale=keep" target="_blank" rel="noopener">KCEX ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Bybit一日新增六只美股TradFi永续</h3>
-          <p class="item-b"><strong>事件</strong>：Bybit公告页显示，10月9日集中上线VKTX、BMNU、MP、UMC、BWE和USDEX六只股票标的USDT永续合约。该批量上新延续TradFi/RWA永续线，自07-09起从少量测试标的向更宽股票供给扩张。</p><p class="item-b"><strong>机制</strong>：交易所用统一保证金和永续合约外壳，把不同股票标的变成全天候杠杆产品。供给端扩张已确认，但公告未披露成交量、持仓量、盘口深度或实际交易时段限制，暂不能判断需求质量。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>确认的是六个上新公告，不包含成交量、持仓量、价差和用户规模。</p>
+          <h3 class="item-h">Bybit adds six U.S. equity perpetuals in one day</h3>
+          <p class="item-b"><strong>Event</strong>: Bybit’s announcements show six USDT equity perpetuals listed on October 9: VKTX, BMNU, MP, UMC, BWE and USDEX. The listings extend the traditional-asset perpetuals coverage tracked since July 9 from a small test set to a wider range of equities.</p><p class="item-b"><strong>Mechanism</strong>: The exchange uses a unified margin and perpetual futures contract framework to turn different stocks into 24/7 leveraged products. Expansion on the supply side is confirmed, but the announcement does not disclose information about trading volume, positions, order book depth, or actual trading hours. Therefore, it is not possible to assess the quality of demand at this time.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Six new announcements have been confirmed, without any information on trading volume, positions, price differences, or user size.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-09</span>
             <a class="item-src" href="https://announcements.bybit.com/en/" target="_blank" rel="noopener">Bybit Announcements ↗</a>
@@ -138,27 +138,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Pons披露累计1.97亿美元费用分配</h3>
-          <p class="item-b"><strong>事件</strong>：Pons Analytics截至10月11日显示，平台累计产生1.972亿美元费用，其中协议保留3610万美元，占18%；创作者获得1.469亿美元，占83%。页面同时记录95.83万枚代币和49.31万名创作者。</p><p class="item-b"><strong>机制</strong>：费用分配把发币平台的收入重心直接让给创作者，协议以较低留存换取发行供给和持续交易。数据来自平台自身看板，可用于观察激励结构，但不等于第三方审计后的净收入。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>创作者约83%，协议约18%；百分比为页面展示口径，存在四舍五入。</p>
+          <h3 class="item-h">Pons reports $197 million in cumulative fee distributions</h3>
+          <p class="item-b"><strong>Event</strong>: According to Pons Analytics’ data as of October 11th, the platform has incurred total costs of $197.2 million. Of this, $36.1 million was retained as fees, accounting for 18%. Creators received $146.9 million, accounting for 83%. The platform also recorded 958,300 tokens and 493,100 creators.</p><p class="item-b"><strong>Mechanism</strong>: The cost allocation shifts the revenue of the coin issuance platform directly to the creators. The agreement involves a lower retention rate in exchange for issuing supply and continuous trading. The data comes from the platform’s own dashboard, which can be used to observe the incentive structure. However, it does not equal the net revenue as determined by third-party audits.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Approximately 83% of the creators involved, and about 18% of the agreements. The percentages are based on page display standards, with rounding applied.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-11</span>
             <a class="item-src" href="https://ponsfamily.com/analytics" target="_blank" rel="noopener">Pons Analytics ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">pump.fun在Top60发行平台中份额降至47.7%</h3>
-          <p class="item-b"><strong>事件</strong>：Uncle Onchain的10月9日榜单显示，Top60发行平台当日成交额为460万美元，pump.fun占47.7%，Flap占19.7%，Pons V2占11.9%，Pons V1占0.3%。</p><p class="item-b"><strong>机制</strong>：前三个平台合计约79.3%，头部集中仍高，但第一名已低于一半。榜单以单日成交额切片衡量分发热度，适合观察份额变化，不代表长期留存、发行质量或平台收入。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>460万美元是10月9日Top60平台单日成交额，前三名份额合计约79.3%。</p>
+          <h3 class="item-h">Pump.fun’s share among the top 60 launch platforms falls to 47.7%</h3>
+          <p class="item-b"><strong>Event</strong>: According to Uncle Onchain’s October 9th ranking, the Top 60 platforms had a daily transaction volume of 4.6 million USD on that day. Pump.fun accounted for 47.7%, Flap for 19.7%, Pons V2 for 11.9%, and Pons V1 for 0.3%.</p><p class="item-b"><strong>Mechanism</strong>: The top three platforms account for approximately 79.3% of the total. The concentration among the top platforms remains high, but the first-ranked platform now accounts for less than half of the total. The ranking is based on daily transaction volume, which is useful for observing changes in share distribution. However, it does not represent long-term retention, issuance quality, or platform revenue.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>$4.6 million was the daily turnover of the Top 60 platforms on October 9. The combined share of the top three platforms was approximately 79.3%.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-09</span>
             <a class="item-src" href="https://uncleonchain.com/en/journal/2026-10-10/" target="_blank" rel="noopener">Uncle Onchain ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Robinhood Chain发行平台出现六种LP锁定设计</h3>
-          <p class="item-b"><strong>事件</strong>：HoodLock对Robinhood Chain六个发行平台的10月10日对比显示，Pons、hood.fun、ArrowPad、Robinlaunch和Openfair采用永久LP锁定，Robinfun采用LP销毁；不同平台对曲线买入和创作者费用的控制权也不同。</p><p class="item-b"><strong>机制</strong>：永久锁定与销毁都能降低LP被直接撤走的风险，但不能约束创作者卖出曲线买入份额或提取费用。评估发行安全时，需要把LP控制、创作者持仓和费用权限拆开，而不是只看“锁池”标签。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>页面确认LP处理方式，但明确指出没有平台锁定创作者的曲线买入或费用。</p>
+          <h3 class="item-h">Robinhood Chain launchpads show six designs for locking liquidity</h3>
+          <p class="item-b"><strong>Event</strong>: A comparison of October 10th for HoodLock’s six platforms on the Robinhood Chain shows that Pons, hood.fun, ArrowPad, Robinlaunch, and Openfair use permanent LP locking, while Robinfun uses LP termination. Different platforms also have different control over curve buying and creator fees.</p><p class="item-b"><strong>Mechanism</strong>: Both permanent locking and destruction reduce the risk of LP funds being withdrawn directly. However, they do not restrict creators from selling shares or withdrawing fees. When assessing issuance security, it is necessary to separate LP control, creator holdings, and fee permissions, rather than just looking at the “locked pool” label.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The page confirms the handling of LP funds. However, it is clearly stated that the platform does not lock in creators’ buying curves or fees.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-10</span>
             <a class="item-src" href="https://hoodlock.tech/blog/robinhood-chain-launchpads-compared" target="_blank" rel="noopener">HoodLock ↗</a>
@@ -176,27 +176,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">CFTC拟把体育与政治事件合约纳入swap定义</h3>
-          <p class="item-b"><strong>事件</strong>：CFTC于10月9日发布拟议规则，计划明确体育、政治、文化和天气事件合约可落入swap定义；配套临时最终规则则把赌场式赌博排除在swap之外。该进展更新预测市场联邦规则线，自07-24起从监管预告进入正式文本。</p><p class="item-b"><strong>机制</strong>：若事件合约被纳入swap定义，联邦衍生品监管边界将更清晰，但拟议规则仍有30天评论期，州级赌博监管与联邦商品法之间的冲突尚未结束。配套规则已进入生效流程，两份文件的法律状态不同。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>事件合约纳入swap是拟议规则；赌场式赌博排除来自配套临时最终规则，二者不能混为已完成立法。</p>
+          <h3 class="item-h">CFTC proposes including sports and political event contracts in the definition of a swap</h3>
+          <p class="item-b"><strong>Event</strong>: On October 9, the CFTC proposed clarifying that event contracts on sports, politics, culture and weather may fall within the definition of a swap. A related interim final rule excludes casino-style gambling from that definition. The federal prediction market story tracked since July 24 now has formal text to examine.</p><p class="item-b"><strong>Mechanism</strong>: If swap-related contracts are included in the definition, the boundaries of federal derivatives regulation will become clearer. However, the proposed rule still has a 30-day comment period. The conflict between state-level gambling regulations and federal commodity laws has not yet been resolved. The accompanying rules are in the process of becoming effective, and the legal status of these two documents differs.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Event contracts are included in swaps as proposed rules. Casino-style gambling is excluded from the accompanying temporary final rules. Neither can be considered completed legislation.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-09</span>
-            <a class="item-src" href="https://www.cftc.gov/PressRoom/PressReleases/9310-26" target="_blank" rel="noopener">CFTC ↗</a><a class="item-src item-ref" href="https://www.cftc.gov/PressRoom/PressReleases/9309-26" target="_blank" rel="noopener">补充：CFTC · 10-09 ↗</a>
+            <a class="item-src" href="https://www.cftc.gov/PressRoom/PressReleases/9310-26" target="_blank" rel="noopener">CFTC ↗</a><a class="item-src item-ref" href="https://www.cftc.gov/PressRoom/PressReleases/9309-26" target="_blank" rel="noopener">Additional source: CFTC · 10-09 ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Ledger暂停CryptoBilis销售并调查潜在损失</h3>
-          <p class="item-b"><strong>事件</strong>：Ledger在CryptoBilis硬件钱包事件后暂停该产品销售，并提醒过去90天内购买的用户停止使用。外部研究者分别估算潜在损失超过7200万美元和8600万美元，但受影响钱包数量、两组统计是否重叠及根因仍未确认。</p><p class="item-b"><strong>机制</strong>：硬件钱包风险不仅来自私钥存储，也来自固件、供应链和恢复流程。暂停销售能阻断新增暴露，却不能自动界定已发生损失；在官方取证完成前，损失数字只能作为未核实估计。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>暂停销售和90天购买提醒已确认；7200万至8600万美元为外部估算，不能视为官方损失。</p>
+          <h3 class="item-h">Ledger suspends sales through CryptoBilis and investigates potential losses</h3>
+          <p class="item-b"><strong>Event</strong>: After the CryptoBilis hardware wallet incident, Ledger suspended the sale of this product and reminded users who purchased it within the past 90 days to stop using it. External researchers estimated potential losses of over $72 million and $86 million, but the number of wallets affected, whether these two estimates overlap, and the root cause remain unknown.</p><p class="item-b"><strong>Mechanism</strong>: The risks associated with hardware wallets stem not only from the storage of private keys but also from firmware, supply chains, and recovery processes. Suspending sales can prevent new exposures, but it cannot automatically determine losses that have already occurred. Until official investigations are completed, the losses can only be estimated.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The suspension of sales and 90-day purchase reminders have been confirmed. The estimated losses of $72 million to $86 million are external estimates and should not be considered as official losses.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-09</span>
             <a class="item-src" href="https://www.theblock.co/news/business/2026-10-09-ledger-cryptobilis-fund-losses-418163" target="_blank" rel="noopener">The Block ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">比特币寿险公司Meanwhile再融资3750万美元</h3>
-          <p class="item-b"><strong>事件</strong>：Meanwhile宣布完成3750万美元融资，累计融资超过1.8亿美元，并称已建立15家经纪合作伙伴。其面向美国以外市场的BTC Life 1-Pay允许保单生效一年后借出最高90%的保单价值，且不设追加保证金机制。</p><p class="item-b"><strong>机制</strong>：产品把比特币计价寿险、保单借款和长期资产管理组合在一起，借款由保单价值而非交易保证金支撑。融资和渠道数量证明资本与分销投入，并不代表保单规模、理赔表现或承保利润已得到验证。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>已披露融资额、累计融资和经纪伙伴数，未披露保单量、承保利润或理赔数据。</p>
+          <h3 class="item-h">Bitcoin life insurer Meanwhile raises another $37.5 million</h3>
+          <p class="item-b"><strong>Event</strong>: Meanwhile, it was announced that the company has completed financing of $37.5 million, bringing the total financing to over $180 million. It was also mentioned that the company has established 15 brokerage partners. Its BTC Life 1-Pay platform, available in markets outside the United States, allows for the lending of up to 90% of the policy value after one year has passed, with no margin call mechanism.</p><p class="item-b"><strong>Mechanism</strong>: The product combines Bitcoin-based life insurance, policy loans, and long-term asset management. Loans are supported by policy value rather than transaction margins. The number of financers and channels proves capital and distribution investments, but it does not indicate that policy size, claims performance, or underwriting profits have been verified.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The amount of financing, total financing, and number of broker partners have been disclosed. However, the number of insurance policies, underwriting profits, or claims data has not been disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-09</span>
             <a class="item-src" href="https://www.theblock.co/news/deals/2026-10-09-sam-altman-backed-bitcoin-life-insurer-meanwhile-raises-37-5-million-round-led-by-bain-capital-crypto-418131" target="_blank" rel="noopener">The Block ↗</a>
@@ -214,27 +214,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">汇丰与蚂蚁数科测试AI代理链上支付</h3>
-          <p class="item-b"><strong>事件</strong>：汇丰与蚂蚁数科完成AI代理使用汇丰代币化存款的技术验证。测试通过Anvita Flow和Jovay测试网执行，覆盖通常低于2美元的微支付，并加入实时风险检查。</p><p class="item-b"><strong>机制</strong>：代理先在授权规则内决定付款，再调用代币化存款完成结算，银行风险控制仍保留在交易路径中。当前成果是技术验证，不是面向客户的商业服务，也未证明大规模并发、争议处理或生产环境稳定性。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>已完成技术验证，尚未成为正式客户产品；生产规模和真实资金风险控制仍待验证。</p>
+          <h3 class="item-h">HSBC and Ant Digital Technologies test onchain payments for AI agents</h3>
+          <p class="item-b"><strong>Event</strong>: HSBC and Ant Financial completed the technical validation of using HSBC’s tokenized deposits for AI agents. The testing was carried out using Anvita Flow and Jovay test networks. The testing covered micro payments with amounts typically below $2, and real-time risk checks were included.</p><p class="item-b"><strong>Mechanism</strong>: Agents first decide on payments within authorized rules, then use tokenized deposits to complete settlements. Bank risk control is still retained throughout the transaction process. The current result is a technical verification, not a commercial service for customers. It has not been proven to handle large-scale concurrency, dispute resolution, or stability in production environments.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Technical validation has been completed, but the product has not yet become a formal product for customers. The production scale and real-world capital risk control still need to be verified.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-09</span>
             <a class="item-src" href="https://cointelegraph.com/news/hsbc-ant-digital-test-ai-agent-payments-using-tokenized-deposits" target="_blank" rel="noopener">Cointelegraph ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Nethermind与ZEUS申请Anthropic开源安全扫描</h3>
-          <p class="item-b"><strong>事件</strong>：Nethermind和ZEUS Network向Anthropic新推出的开源软件安全扫描服务提交申请。该动作更新前沿模型评估线，自09-18起从模型能力声明进入真实加密项目的接入尝试。</p><p class="item-b"><strong>机制</strong>：扫描服务以代理方式检查开源代码并提交修复建议，但目前相关申请PR尚未合并，服务也按个案选择项目。申请本身不能证明扫描已执行，更不能证明漏洞发现、修复或上线结果。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>两个项目已申请，但PR尚未合并，未见扫描报告或修复结果。</p>
+          <h3 class="item-h">Nethermind and ZEUS apply for Anthropic’s open-source security scans</h3>
+          <p class="item-b"><strong>Event</strong>: Nethermind and ZEUS Network applied to Anthropic’s newly announced security scanning service for open-source software. The frontier-model evaluation story tracked since September 18 now includes actual crypto projects seeking access to test the service.</p><p class="item-b"><strong>Mechanism</strong>: The scanning service checks open-source code and provides suggestions for fixes. However, the related PRs have not yet been merged, and the service only processes projects on a case-by-case basis. The application itself cannot prove that the scanning has been executed, nor can it prove that vulnerabilities have been identified, fixed, or the results of the launch have been achieved.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Two projects have been applied for, but PRs have not been merged yet; no scan reports or repair results have been reported.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-09</span>
-            <a class="item-src" href="https://cointelegraph.com/news/crypto-projects-apply-for-anthropics-new-frontier-ai-security-scanner" target="_blank" rel="noopener">Cointelegraph ↗</a><a class="item-src item-ref" href="https://www.anthropic.com/news/anthropic-cyber-mission" target="_blank" rel="noopener">补充：Anthropic · 10-08 ↗</a>
+            <a class="item-src" href="https://cointelegraph.com/news/crypto-projects-apply-for-anthropics-new-frontier-ai-security-scanner" target="_blank" rel="noopener">Cointelegraph ↗</a><a class="item-src item-ref" href="https://www.anthropic.com/news/anthropic-cyber-mission" target="_blank" rel="noopener">Additional source: Anthropic · 10-08 ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">AWS展示12个专业代理协同罕见病诊断</h3>
-          <p class="item-b"><strong>事件</strong>：AWS公布RareDx原型，由1个协调代理、12个专业代理和30个MCP工具组成，并保留医生复核。团队称两周完成原型，初步测试把行政工作量降低60%至70%。</p><p class="item-b"><strong>机制</strong>：协调代理拆分任务，专业代理分别处理文献、遗传、影像和病例信息，工具层负责检索与数据访问，最终判断仍交给医生。效率数字来自项目方初步测试，生产验证仍在进行，不能等同临床效果或普遍部署结果。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>60%至70%是项目方初步测试结果，生产验证尚未完成，也不是受控临床结论。</p>
+          <h3 class="item-h">AWS demonstrates 12 specialist agents collaborating on rare-disease diagnosis</h3>
+          <p class="item-b"><strong>Event</strong>: AWS announced the prototype of RareDx, which consists of 1 coordinator, 12 professionals, and 30 MCP tools. It also includes a mechanism for doctors to review the results. The team claims that the prototype was completed in two weeks, and preliminary tests showed a reduction of administrative workload by 60% to 70%.</p><p class="item-b"><strong>Mechanism</strong>: The coordination agents handle tasks such as splitting documents, while professional agents handle genetic, imaging, and case information. The tool layer is responsible for retrieving and accessing data. The final decision still lies with doctors. The efficiency figures come from preliminary tests conducted by the project team. Production validation is still ongoing, and these results cannot be considered equivalent to clinical outcomes or widespread deployment results.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>60% to 70% are preliminary test results from the project parties. Production validation has not yet been completed, and these results are not controlled clinical conclusions.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-09</span>
             <a class="item-src" href="https://aws.amazon.com/blogs/publicsector/raredx-building-a-multi-agent-ai-system-to-transform-rare-disease-diagnosis/" target="_blank" rel="noopener">AWS ↗</a>
@@ -242,7 +242,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

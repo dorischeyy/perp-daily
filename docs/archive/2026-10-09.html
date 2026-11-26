@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-10-09</title>
+<title>Perp DEX Daily · 2026-10-09</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -82,12 +82,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 98 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 98</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 10 月 9 日 · 星期五</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">October 9, 2026 · Friday</div>
     </header>
-    <p class="lead">OKX继续扩列股票与指数X-Perp、ESMA要求平台清退不合规稳定币服务，而Google把可连接企业系统的通用Agent推入统一工作入口。</p>
+    <p class="lead">OKX is expanding its equity and index X-Perps. ESMA called for platforms to phase out services for noncompliant stablecoins, and Google introduced a general-purpose agent that can connect to enterprise systems through one workplace interface.</p>
 
 
       <section class="sec sec-perpdex">
@@ -100,27 +100,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">OKX同日上线指数、流媒体与科技股X-Perp</h3>
-          <p class="item-b"><strong>事件</strong>：OKX在10月8日依次上线PENG、纳斯达克100指数和Netflix三只USD到期型X-Perp，并同步开放网页、App与API交易入口。</p><p class="item-b"><strong>机制</strong>：产品把指数与单股敞口纳入同一保证金和执行界面，但公告没有披露指数成分、到期切换、休市定价、初始深度与地区可用范围，扩列本身不能证明连续交易质量。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>三只合约已按时开放，但公告只确认交易入口与时间，没有成交、OI、价格带和跨时段清算表现。</p>
+          <h3 class="item-h">OKX lists index, streaming and technology equity X-Perps on the same day</h3>
+          <p class="item-b"><strong>Event</strong>: On October 8, OKX listed USD-denominated X-Perps with expiry dates on PENG, the Nasdaq-100 index and Netflix in succession, opening trading on the website, app and API.</p><p class="item-b"><strong>Mechanism</strong>: The products place index and single-stock exposure under a common margin and execution interface. OKX did not disclose index constituents, expiry transitions, closed-market pricing, initial depth or regional access. The listings alone do not establish the quality of continuous execution.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Three contracts have been launched on time. However, the announcement only confirms the trading channels and timing, without details on transactions, OIs, price ranges, or cross-time period settlement performance.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-08</span>
             <a class="item-src" href="https://www.okx.com/en-us/help/okx-to-list-pengusd-us100usd-and-nflxusd-equity-x-perps" target="_blank" rel="noopener">OKX ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Bitwise统计链上永续OI在三季度逼近260亿美元</h3>
-          <p class="item-b"><strong>事件</strong>：Bitwise在10月8日发布的三季度市场复盘中称，去中心化永续交易所未平仓量创下接近260亿美元的新高，股票、商品、外汇与未上市公司敞口占比继续上升。</p><p class="item-b"><strong>机制</strong>：OI比单日成交更接近持续占用的保证金，但报告只给出跨平台总量，没有拆分协议、资产类别、持仓期限和激励贡献，因此能确认资产类别扩张，不能确认增长是否均匀或自然。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>接近260亿美元是报告给出的三季度峰值，不是10月8日实时快照；本期未使用陈旧的docs/market.json数字。</p>
+          <h3 class="item-h">Bitwise puts third-quarter onchain perpetual open interest at nearly $26 billion</h3>
+          <p class="item-b"><strong>Event</strong>: In its third-quarter market review released on October 8, Bitwise said open interest on decentralized perpetual exchanges reached a record of nearly $26 billion. The share attributable to equities, commodities, foreign exchange and private companies continued to rise.</p><p class="item-b"><strong>Mechanism</strong>: OI is more closely related to continuously occupied margin than daily transactions. However, the report only provides total amounts across platforms, without breaking down protocols, asset categories, holding periods, and incentive contributions. Therefore, it can be confirmed that asset categories are expanding, but it cannot be determined whether the growth is uniform or natural.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The nearly $26 billion figure is the report’s third-quarter peak, not a live October 8 snapshot. This edition excludes the stale figures in docs/market.json.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-08</span>
             <a class="item-src" href="https://bitwiseinvestments.com/crypto-market-insights/crypto-market-review-q4-2026" target="_blank" rel="noopener">Bitwise ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Binance把四只bStocks接入跨仓与组合保证金</h3>
-          <p class="item-b"><strong>事件</strong>：Binance把Securitize、StablecoinX、摩根大通和礼来四只bStocks加入跨仓、组合保证金与组合保证金Pro的合格抵押品，并同步开放对应杠杆交易对。</p><p class="item-b"><strong>机制</strong>：代币化股票由可交易资产进一步变成跨产品保证金，资金效率随之上升；但这些资产仅面向许可地区，暂不支持借币，且指数价格、质押率和风险限制会直接决定真实可用额度。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>公告确认的是抵押资格，不代表四只资产可无限借出或等同现金；普通与低级别VIP用户还需完成适当性评估。</p>
+          <h3 class="item-h">Binance adds four bStocks as cross-margin and portfolio-margin collateral</h3>
+          <p class="item-b"><strong>Event</strong>: Binance added four bStocks, representing Securitize, StablecoinX, JPMorgan and Eli Lilly, as eligible collateral for Cross Margin, Portfolio Margin and Portfolio Margin Pro. It also opened the corresponding margin trading pairs.</p><p class="item-b"><strong>Mechanism</strong>: Tokenized stocks transform tradable assets into cross-product collateral, thereby improving capital efficiency. However, these assets are only available in licensed regions. Currently, borrowing tokens is not supported. Index prices, pledge ratios, and risk limits directly determine the actual available amount.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The announcement confirms eligibility as collateral. Borrowing limits still apply, and the assets are not equivalent to cash. Regular users and lower VIP tiers must also complete a suitability assessment.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-07</span>
             <a class="item-src" href="https://www.binance.com/ru-UA/support/announcement/detail/a1a7996170f246da90ea49f199a61bcd" target="_blank" rel="noopener">Binance ↗</a>
@@ -138,30 +138,30 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Solana发射量增长与Pons收缩同时出现</h3>
-          <p class="item-b">Freefloat在10月7日发布的完整日摘要显示，Solana受追踪发射计划一周新币数增长22.9%，Robinhood Chain下降17.9%；其中Pons V2单日发射3525次，较前一日下降22.6%、较前周下降32.3%。</p><p class="item-b">同一页面仍显示Pons V2曲线成交约1200万美元，说明发射数量、成交与费用不能互相替代；平台活跃度需要分开看供给、换手和毕业后流动性。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>摘要覆盖的是10月6日完整UTC日，Pons只统计V2映射部署者，Solana也不是全链所有mint的穷举。</p>
+          <h3 class="item-h">Solana token launches grow as Pons activity contracts</h3>
+          <p class="item-b">The full daily summary published by Freefloat on October 7 shows that Solana’s tracked token issuance increased by 22.9% during the week, while Robinhood Chain saw a decrease of 17.9%. In particular, Pons V2 had 3525 launches per day, a decrease of 22.6% compared to the previous day and 32.3% compared to the previous week.</p><p class="item-b">The same page showed about $12 million in trading volume on the Pons V2 bonding curve. Launch count, turnover and fee revenue measure different things. Assessing activity also requires a separate look at liquidity after graduation.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The summary covers the entire UTC date on October 6th. Pons only counts V2 mapped deployers. Solana is not a comprehensive list of all mints in the chain.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-07</span>
             <a class="item-src" href="https://freefloat.io/launchpads" target="_blank" rel="noopener">Freefloat ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Pons进入Upbit韩元、BTC与USDT三类现货市场</h3>
-          <p class="item-b">Upbit在10月8日为PONS开放韩元、BTC与USDT三个现货市场，并只接受Robinhood Chain网络充提，把发射台代币接入新的本地法币入口。</p><p class="item-b">这条进展把Pons的外部分发从Bybit和地区平台继续扩到韩国头部交易所，但上币只证明入口增加，不能替代平台发射质量、毕业率与新增链上用户证据。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>三类交易市场和Robinhood Chain充提已开放；报道引用Upbit公告，但没有披露上币后的独立用户和回流链上资金。</p>
+          <h3 class="item-h">Pons enters Upbit spot markets quoted in KRW, BTC and USDT</h3>
+          <p class="item-b">On October 8th, Upbit opened three spot markets for PONS: KRW, BTC, and USDT. Only Robinhood Chain networks were accepted for deposits and withdrawals. Launch pad tokens were integrated into new local fiat entry points.</p><p class="item-b">This extends Pons distribution beyond Bybit and regional platforms to a major South Korean exchange. A listing adds another route to the token but does not establish launch quality, graduation rates or growth in new onchain users.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>All three types of trading markets and Robinhood Chain’s deposit and withdrawal functions are now available. Reports cite Upbit’s announcements, but no information is provided about the number of independent users or the funds flowing back to the blockchain after the listing.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-08</span>
             <a class="item-src" href="https://www.cryptocompass.com/articles/upbit-pons-token-launch-today-price-rally-meets-fresh-liquidity" target="_blank" rel="noopener">CryptoCompass ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Aspecta把盘前交易延长到TGE后结算窗口</h3>
-          <p class="item-b">Aspecta在10月8日把Predict Pre-Market升级到V3，新增限价单、较低手续费与TGE后继续交易，并暂停V2新增仓位。</p><p class="item-b">V3把生命周期拆成TGE前交易、TGE后72小时边交易边结算、最终交付与共享剩余资产三段；若多头结算请求无法全部满足还会产生资金费，价格发现与交付风险被放进同一池子。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>TGE按Binance Alpha、可提现CEX上币或链上交易对三者最早发生者认定，最终规则仍可能在上线日调整。</p>
+          <h3 class="item-h">Aspecta extends premarket trading into the post-TGE settlement window</h3>
+          <p class="item-b">On October 8th, Aspecta upgraded Predict Pre-Market to version V3. New features include limit orders, lower transaction fees, and continued trading after TGE. V2 features were temporarily suspended.</p><p class="item-b">V3 has three phases: trading before the token generation event, 72 hours of concurrent trading and settlement afterward, then final delivery and sharing of the remaining assets. Funding applies if long holders’ settlement requests cannot all be met, putting price discovery and delivery risk in the same pool.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The token generation event is deemed to occur at the earliest of a Binance Alpha listing, a centralized exchange listing with withdrawals enabled, or an onchain trading pair. Final rules may still change on launch day.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-08</span>
-            <a class="item-src" href="https://www.coindar.org/en/event/aspecta-upgraded-predict-premarket-to-v3-154930" target="_blank" rel="noopener">Coindar ↗</a><a class="item-src item-ref" href="https://docs.aspecta.ai/premarket-v3/overview" target="_blank" rel="noopener">补充：Aspecta Docs · 10-08 ↗</a>
+            <a class="item-src" href="https://www.coindar.org/en/event/aspecta-upgraded-predict-premarket-to-v3-154930" target="_blank" rel="noopener">Coindar ↗</a><a class="item-src item-ref" href="https://docs.aspecta.ai/premarket-v3/overview" target="_blank" rel="noopener">Additional source: Aspecta Docs · 10-08 ↗</a>
           </div>
         </article>
         </div>
@@ -176,27 +176,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">ESMA要求欧盟平台停止扩大不合规稳定币敞口</h3>
-          <p class="item-b">ESMA要求MiCA授权服务商停止向欧盟客户提供不合规资产参考代币与电子货币代币相关服务，范围覆盖交易、换汇、执行、转账、托管、投资建议与组合管理。</p><p class="item-b">既有敞口应尽快、最迟在意见发布后三个月内完成处置；期间只能有限支持清算、转换、提取、转账或保管，稳定币合规不再只是上币审核，而是贯穿账户与交易全链路。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>意见面向欧盟主管机关与MiCA授权服务商，不等于所有不合规代币立即冻结，也不改变欧盟以外地区的法律状态。</p>
+          <h3 class="item-h">ESMA tells EU platforms to stop increasing exposure to noncompliant stablecoins</h3>
+          <p class="item-b">ESMA requires MiCA authorized service providers to stop providing services related to non-compliant asset reference tokens and electronic currency tokens to EU customers. This includes services related to trading, exchange, execution, transfer, custody, investment advice, and portfolio management.</p><p class="item-b">Existing exposures should be unwound as soon as possible and no later than three months after publication of the opinion. During that period only limited liquidation, conversion, withdrawal, transfer or custody services are permitted. Stablecoin compliance therefore extends beyond listing review to accounts and transactions.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The opinions are directed to EU regulatory authorities and MiCA authorized service providers. This does not mean that all non-compliant tokens will be immediately frozen, nor does it change the legal status in regions outside of the EU.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-08</span>
             <a class="item-src" href="https://www.esma.europa.eu/press-news/esma-news/esma-sets-out-supervisory-expectations-services-related-unauthorised" target="_blank" rel="noopener">ESMA ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Samsung Wallet把USDC设为默认美元稳定币</h3>
-          <p class="item-b">Coinbase与Samsung宣布10月最后一周起为美国合资格Galaxy用户提供Samsung Wallet稳定币功能，USDC将作为默认美元稳定币，由持牌合作方提供账户服务、Coinbase Prime负责次级托管。</p><p class="item-b">消费级钱包把跨境转账、银行出金与托管入口合在原生系统里，减少另装钱包和管理私钥的门槛；但当前是美国首发计划，实际活跃用户、支持链和费用尚未披露。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>功能计划在10月最后一周推出，可向兼容钱包转账并向60多个国家的合资格银行账户汇款，仍需等待生产开放。</p>
+          <h3 class="item-h">Samsung Wallet makes USDC its default dollar stablecoin</h3>
+          <p class="item-b">Coinbase and Samsung said eligible U.S. Galaxy users would gain stablecoin features in Samsung Wallet starting in the last week of October. USDC will be the default dollar stablecoin. Licensed partners will provide account services, with Coinbase Prime acting as subcustodian.</p><p class="item-b">Consumer-grade wallets combine cross-border transfers, bank withdrawals, and custody services into a single system, reducing the need for separate wallets and managing private keys. However, this is currently a U.S.-only initiative, with actual active users, supported chains, and fees yet to be disclosed.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The feature is planned to be launched in the last week of October. It can transfer funds to compatible wallets and send money to qualified bank accounts in over 60 countries. However, the actual launch is still pending.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-08</span>
-            <a class="item-src" href="https://www.coinbase.com/blog/coinbase-and-samsung-bring-usdc-to-samsung-wallet" target="_blank" rel="noopener">Coinbase ↗</a><a class="item-src item-ref" href="https://news.samsung.com/us/samsung-wallet-bring-stablecoin-access-eligible-galaxy-users-us/" target="_blank" rel="noopener">补充：Samsung · 10-07 ↗</a>
+            <a class="item-src" href="https://www.coinbase.com/blog/coinbase-and-samsung-bring-usdc-to-samsung-wallet" target="_blank" rel="noopener">Coinbase ↗</a><a class="item-src item-ref" href="https://news.samsung.com/us/samsung-wallet-bring-stablecoin-access-eligible-galaxy-users-us/" target="_blank" rel="noopener">Additional source: Samsung · 10-07 ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Securitize在Solana上线带证券权利的美股代币</h3>
-          <p class="item-b">Securitize面向美国、欧盟和其他许可地区的合资格投资者推出12只美股代币，首发在Solana和其注册经纪交易平台交易。</p><p class="item-b">每枚代币由底层股票1:1支持，并以UCC Article 8证券权利结构保留股息与适用的投票权，未来还计划接入NYSE与OKXICE数字场所；现阶段的24/7场所连接仍取决于新平台上线和监管条件。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>产品不出借底层股票，并允许在条件满足时转换为发行人登记册中的直接持股；计划接入的外部场所尚未等同已开放交易。</p>
+          <h3 class="item-h">Securitize launches U.S. equity tokens with securities entitlements on Solana</h3>
+          <p class="item-b">Securitize has launched 12 US stock tokens targeting qualified investors in the United States, the European Union, and other licensed regions. These tokens are traded on Solana and through its registered brokerage platforms.</p><p class="item-b">Each token is backed by a 1:1 ratio of underlying stocks. Dividends and voting rights are retained according to UCC Article 8 securities rights structures. In the future, plans are to integrate with NYSE and OKXICE digital platforms. The 24/7 connectivity of these platforms still depends on the launch of new platforms and regulatory conditions.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The product does not lend underlying stocks and allows conversion into direct holdings in the issuer’s register under certain conditions. The external venues that will be integrated have not yet been fully opened for trading.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-08</span>
             <a class="item-src" href="https://www.prnewswire.com/news-releases/securitize-launches-global-onchain-trading-of-us-stocks-with-security-entitlements-302902107.html" target="_blank" rel="noopener">Securitize ↗</a>
@@ -214,27 +214,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Google Cloud发布连接企业系统的通用Gemini Agent</h3>
-          <p class="item-b">Google Cloud发布面向工作的通用Gemini Agent，可读取组织业务上下文、规划任务、调用技能与工具，并把结果写回文档、邮箱和开发环境。</p><p class="item-b">系统会按任务选择模型并提供成本、管理与治理控制，企业Agent竞争由单点助手推进到统一工作入口；公告没有披露具体可用地区、连接器清单与生产评测。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>Google确认产品发布与核心能力，但页面主要是发布摘要，真实权限边界、失败处理和跨系统完成率仍待产品文档验证。</p>
+          <h3 class="item-h">Google Cloud introduces a general-purpose Gemini agent that connects to enterprise systems</h3>
+          <p class="item-b">Google Cloud has released a universal Gemini Agent for work-related tasks. This agent can read organizational context, plan tasks, call skills and tools, and write results back into documents, emails, and development environments.</p><p class="item-b">The system provides cost management and governance controls based on task selection models. Enterprise agents can be managed through a unified interface, rather than separate assistants. The announcement does not disclose specific regions, a list of connectors, or production evaluations.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Google has confirmed the product’s capabilities, but the page mainly serves as a summary of the product’s features. The actual boundaries of permissions, handling of failures, and performance across systems still need to be verified through product documentation.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-08</span>
             <a class="item-src" href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-at-work/" target="_blank" rel="noopener">Google ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Anthropic把高风险Agent的人类复核写入使用政策</h3>
-          <p class="item-b">Anthropic更新2026年使用政策，针对影响健康、法律权利、财务、就业与基本服务的场景，要求由有权改变建议的合格人员复核，并向受影响者披露AI参与。</p><p class="item-b">新政策还补充自主物理行动、欺骗活动与滥用模型的边界，说明Agent能力增强后，治理要求正在从禁止用途推进到具体的人工责任与告知机制。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>这是Anthropic产品使用政策，不是普遍法律；合格复核者的资质与各行业实施方式仍需由部署方具体定义。</p>
+          <h3 class="item-h">Anthropic adds human review requirements for high-risk agents to its usage policy</h3>
+          <p class="item-b">Anthropic updated its policy for 2026, requiring qualified personnel to review recommendations that affect health, legal rights, finances, employment, and basic services. It also requires disclosure of AI involvement to affected parties.</p><p class="item-b">The new policy also clarifies the boundaries between autonomous physical actions, fraudulent activities, and model abuse. This indicates that as agents become more capable, governance requirements shift from prohibitive measures to specific human responsibilities and notification mechanisms.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>This is a policy for Anthropic products, not a general law. The qualifications of qualified reviewers and the methods used by various industries must be defined by the deploying party.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-08</span>
             <a class="item-src" href="https://www.anthropic.com/news/2026-usage-policy-update" target="_blank" rel="noopener">Anthropic ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Coinbase用领域后训练的9B模型替代通用前沿基线</h3>
-          <p class="item-b">Coinbase用历史欺诈结果和可验证奖励后训练Qwen3.5-9B，在自有Onramp基准上相对Opus 4.5提高9.6个百分点F1和35.4个百分点金额加权召回。</p><p class="item-b">团队把模型以单GPU可训练、2至8个副本自动扩缩的方式部署到线上，P50端到端延迟从1.515秒降至0.683秒；结果来自单一反欺诈任务，不能外推到通用Agent能力。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>检测质量与延迟在不同评估中测量，百分比为百分点差异；模型只输出风险分类，最终决策仍由外部规则层完成。</p>
+          <h3 class="item-h">Coinbase replaces a general frontier baseline with a domain-adapted 9B model</h3>
+          <p class="item-b">Coinbase post-trained Qwen3.5-9B using historical fraud outcomes and verifiable rewards. On its own Onramp benchmark, the result exceeded Opus 4.5 by 9.6 percentage points on F1 and 35.4 percentage points on value-weighted recall.</p><p class="item-b">The team deployed the model online, allowing it to be trained using a single GPU. The P50 end-to-end latency was reduced from 1.515 seconds to 0.683 seconds. These results come from a single anti-fraud task and cannot be generalized to general agent capabilities.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The quality of detection and latency are measured in different evaluations. The percentage represents the difference in points. The model only outputs risk categories, and the final decision is still made by external rules.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-08</span>
             <a class="item-src" href="https://www.coinbase.com/blog/part-three-owning-intelligence-series" target="_blank" rel="noopener">Coinbase ↗</a>
@@ -242,7 +242,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

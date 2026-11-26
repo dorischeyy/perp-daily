@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-08-21</title>
+<title>Perp DEX Daily · 2026-08-21</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 54 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 54</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 8 月 21 日 · 星期五</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">August 21, 2026 · Friday</div>
     </header>
-    <p class="lead">主要永续场所成交回落而 OI 仅小幅收缩，代币化股票与永续产品披露规模化进展，AI 交易代理则开始从行情读取走向直接执行。</p>
+    <p class="lead">Trading volume fell at major perpetual venues and open interest edged lower. Tokenized stock and perpetual products reported progress in scaling, while AI trading agents began moving from reading market data to executing trades.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,29 +110,29 @@
 
         <article class="item">
 
-          <h3 class="item-h">四场所成交回落 20.3%，OI 仅降 2.6%</h3>
-          <p class="item-b"><strong>事件</strong>：8 月 21 日远端快照中，Binance、Hyperliquid、Bybit 与 Gate 合计日成交由约 2448392 BTC 降至 1951487 BTC，减少 20.3%；合计 OI 由约 905050 BTC 降至 881684 BTC，减少 2.6%。</p><p class="item-b"><strong>机制</strong>：成交降幅显著大于仓位存量降幅，四场所 OI 与成交比由 0.37 升至 0.45，说明退出与换手速度放慢，而不是杠杆仓位同步释放。</p><p class="item-b"><strong>二阶效应</strong>：若成交继续收缩而 OI 保持黏性，薄时段的清算承接和做市库存压力会更快上升；容量判断仍需结合资产级深度、资金费率和清算分布。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>汇总只覆盖四个场所并以 BTC 计价，不含交易对深度、激励成交、资金费率和清算方向。</p>
+          <h3 class="item-h">Daily volume falls 20.3% across four venues while open interest slips 2.6%</h3>
+          <p class="item-b"><strong>Event</strong>: In the August 21 snapshot, combined daily volume at Binance, Hyperliquid, Bybit and Gate fell 20.3%, from about 2,448,392 BTC to 1,951,487 BTC. Open interest fell 2.6%, from about 905,050 BTC to 881,684 BTC.</p><p class="item-b"><strong>Mechanism</strong>: The ratio of open interest to volume rose from 0.37 to 0.45. Positions were changing hands more slowly than the decline in turnover might suggest.</p><p class="item-b"><strong>Second-order effects</strong>: If volume continues to fall while positions remain open, thin sessions could put more pressure on liquidation capacity and market-maker inventory. Asset-level depth, funding and liquidation distributions would help test that assessment.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The BTC-denominated aggregate covers four venues and omits pair depth, trading incentives, funding rates and liquidation direction.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-21</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/05014a17dda3b336b91ee7339c6dc7bc91e1115e/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/92d3d46a7ce4c9a5fa8ae63732391e950531e8df/docs/market.json" target="_blank" rel="noopener">补充：前一日市场快照 · 08-20 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/05014a17dda3b336b91ee7339c6dc7bc91e1115e/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/92d3d46a7ce4c9a5fa8ae63732391e950531e8df/docs/market.json" target="_blank" rel="noopener">Additional source: Previous day&#x27;s market snapshot · 08-20 ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">Hyperliquid 周转放慢，OI 仍最稳定</h3>
-          <p class="item-b"><strong>事件</strong>：Hyperliquid 日成交由约 251673 BTC 降至 182147 BTC，减少 27.6%，OI 仅由约 172814 BTC 降至 171921 BTC，减少 0.5%；OI 与成交比由 0.69 升至 0.94。</p><p class="item-b"><strong>机制</strong>：其 OI 降幅小于 Binance、Bybit 与 Gate 的 2.4% 至 4.5%，但成交降幅接近 Gate 的 27.0%，显示仓位存量稳定与周转变慢同时发生。</p><p class="item-b"><strong>二阶效应</strong>：稳定 OI 不能单独解释为需求更强；若成交深度未同步恢复，高 OI 与低周转的组合会放大大额减仓对价格和保险机制的冲击。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>同日 Binance、Bybit 与 Gate 的 OI 与成交比分别约为 0.32、0.54 和 0.72，Hyperliquid 为 0.94。</p>
+          <h3 class="item-h">Hyperliquid turnover slows while its open interest remains the most stable among peers</h3>
+          <p class="item-b"><strong>Event</strong>: Hyperliquid’s daily volume fell 27.6%, from about 251,673 BTC to 182,147 BTC. Open interest fell only 0.5%, from 172,814 BTC to 171,921 BTC. Its open-interest-to-volume ratio rose from 0.69 to 0.94.</p><p class="item-b"><strong>Mechanism</strong>: Its open interest fell less than the 2.4% to 4.5% declines at Binance, Bybit and Gate, while its volume decline was close to Gate’s 27.0%. Outstanding positions remained relatively stable as turnover slowed.</p><p class="item-b"><strong>Second-order effects</strong>: Stable open interest alone does not establish stronger demand. Without a recovery in depth, high exposure combined with low turnover can magnify the price and insurance impact of large position reductions.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>That day, open-interest-to-volume ratios were about 0.32 at Binance, 0.54 at Bybit, and 0.72 at Gate, against 0.94 at Hyperliquid.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-21</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/05014a17dda3b336b91ee7339c6dc7bc91e1115e/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/92d3d46a7ce4c9a5fa8ae63732391e950531e8df/docs/market.json" target="_blank" rel="noopener">补充：前一日市场快照 · 08-20 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/05014a17dda3b336b91ee7339c6dc7bc91e1115e/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/92d3d46a7ce4c9a5fa8ae63732391e950531e8df/docs/market.json" target="_blank" rel="noopener">Additional source: Previous day&#x27;s market snapshot · 08-20 ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">OKX 把杠杆 ETF SOXS 做成 X-Perp</h3>
-          <p class="item-b"><strong>事件</strong>：OKX 于 8 月 19 日上线 SOXSUSD 与 DELLUSD Equity X-Perp，其中 SOXS 本身是做空半导体指数的杠杆 ETF，用户可继续叠加永续合约杠杆。</p><p class="item-b"><strong>机制</strong>：标的内置的每日杠杆再与永续保证金、资金费率和强平规则组合，使路径依赖、波动损耗与清算风险同时放大，风险不能只按普通股票永续处理。</p><p class="item-b"><strong>二阶效应</strong>：证券类永续正在从单股扩展到复杂 ETF，平台需要把标的结构风险写入保证金、适当性和风险提示，而不是只复用合约层限额。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>公告确认两个产品上线，但可用地区受当地规则限制，也未披露初始成交、OI 或用户采用量。</p>
+          <h3 class="item-h">OKX introduces an X-Perp on leveraged ETF SOXS</h3>
+          <p class="item-b"><strong>Event</strong>: On August 19, OKX listed SOXSUSD and DELLUSD Equity X-Perps. SOXS is itself a leveraged inverse semiconductor-index ETF. Users can add perpetual contract leverage on top of the fund’s embedded leverage.</p><p class="item-b"><strong>Mechanism</strong>: The underlying fund’s daily leverage interacts with margin, funding and liquidation rules on the perpetual, increasing path dependence, volatility drag and liquidation risk. Ordinary single-stock perpetual risk assumptions do not capture the combination.</p><p class="item-b"><strong>Second-order effects</strong>: As securities-linked perpetuals extend beyond individual stocks to complex ETFs, venues need asset-specific margin, suitability and risk disclosures that account for the underlying structure as well as contract-level limits.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The announcement confirms both products are live, subject to local availability rules. It gives no initial volume, open interest, or adoption figures.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-19</span>
             <a class="item-src" href="https://www.okx.com/en-au/help/okx-to-list-soxsusd-and-dellusd-equity-x-perps" target="_blank" rel="noopener">OKX ↗</a>
@@ -140,9 +140,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">CFTC 预告调整事件合约上市与客户保护</h3>
-          <p class="item-b"><strong>事件</strong>：CME CEO Terrence Duffy 公开质疑预测市场的操纵与自我认证，CFTC 主席 Mike Selig 回应称部分案例来自离岸平台或假新闻，并表示将提出事件合约上市规则和客户保护修订。（预测市场联邦规则线 · 自 07-24 · 新增上市审查信号）</p><p class="item-b"><strong>机制</strong>：争论焦点从联邦与州的抽象管辖，进一步落到合约能否自我认证、证据如何验证、操纵由谁调查以及客户损失由谁承担。</p><p class="item-b"><strong>二阶效应</strong>：若修订提高上市证据和保护要求，合规预测市场的新品速度可能下降，但规则清晰度会提升机构分发与做市方的可评估性。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>CFTC 仅预告拟议修订，尚无正式文本、表决时间、适用合约边界或生效日期。</p>
+          <h3 class="item-h">CFTC signals changes to event-contract listing and customer protection</h3>
+          <p class="item-b"><strong>Event</strong>: CME CEO Terrence Duffy challenged prediction-market manipulation controls and self-certification. CFTC Chair Mike Selig said some examples came from offshore venues or false reports and said he would propose changes to event-contract listing rules and customer protections. This adds listing review to the federal rules story tracked since July 24.</p><p class="item-b"><strong>Mechanism</strong>: The dispute now concerns which contracts can self-certify, how evidence is verified, who investigates manipulation and who bears customer losses, in addition to the division of federal and state authority.</p><p class="item-b"><strong>Second-order effects</strong>: Stronger listing evidence and customer protections could slow new contracts at regulated venues. Clear requirements would also help institutional distributors and market makers assess them.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The CFTC indicated that it intends to propose amendments. No formal text, vote schedule, definition of contracts in scope, or effective date was available.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-20</span>
             <a class="item-src" href="https://www.theblock.co/news/regulation/2026-08-20-cme-ceo-terrence-duffy-trades-barbs-with-cftcs-selig-and-kalshis-coo-over-prediction-market-oversight-412397" target="_blank" rel="noopener">The Block ↗</a>
@@ -161,9 +161,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">MaxQ 融资 3150 万美元推进前列腺诊疗</h3>
-          <p class="item-b">医疗设备公司 MaxQ Medical 完成 3150 万美元 A 轮融资，由 Olympus Innovation Ventures 领投，资金用于推进把经尿道成像与治疗合并的平台和临床项目；产品仍处于研究阶段，尚未在美国获准商业销售。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>本轮融资和临床推进计划已确认，但监管路径、试验结果、上市时间和商业采购均未披露。</p>
+          <h3 class="item-h">MaxQ raises $31.5 million for prostate diagnostics and treatment</h3>
+          <p class="item-b">Medical device company MaxQ Medical raised $31.5 million in a Series A led by Olympus Innovation Ventures. It will advance a platform combining transurethral imaging and treatment and its clinical program. The device remains investigational and is not authorized for commercial sale in the United States.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The round and plans for clinical development are confirmed. The regulatory pathway, trial results, launch date, and commercial procurement remain undisclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-20</span>
             <a class="item-src" href="https://www.prnewswire.com/news-releases/maxq-medical-raises-31-5-million-series-a-backed-by-olympus-to-advance-its-prostate-care-platform-302855815.html" target="_blank" rel="noopener">PR Newswire ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Math Magic 半年内两轮融资近 5000 万美元</h3>
-          <p class="item-b">AI 3D 公司 Math Magic 在六个月内完成 A 轮与 A+ 轮，合计融资近 5000 万美元；公司称 Hi3D V3.0 可生成 2048 立方体素资产，并用 Builda 把手机拍摄、下单和实体模型制造串联，但生产成本与交付规模仍未披露。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>融资将用于 3D 模型研发和制造履约网络，产品指标、订单规模和商业转化来自公司披露。</p>
+          <h3 class="item-h">Math Magic raises nearly $50 million across two rounds in six months</h3>
+          <p class="item-b">AI 3D company Math Magic raised nearly $50 million across Series A and A+ rounds within six months. It says Hi3D V3.0 generates assets at 2,048-cubed voxel resolution, and its Builda product connects phone capture, ordering and physical model manufacturing. Production costs and delivery volumes remain undisclosed.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The funding will support 3D model development and a manufacturing and fulfillment network. Product metrics, order size, and commercial conversion figures come from the company.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-20</span>
             <a class="item-src" href="https://www.prnewswire.com/news-releases/math-magic-closes-series-a-raising-nearly-50-million-across-two-rounds-in-six-months-302856530.html" target="_blank" rel="noopener">PR Newswire ↗</a>
@@ -181,9 +181,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">TravelX 完成 A 轮，把机票库存转成动态资产</h3>
-          <p class="item-b">航空科技公司 TravelX 完成金额未披露的 A 轮融资，累计融资达到 4500 万美元，计划扩展用 AI 管理航空库存与收入的基础设施；资本继续押注可动态重售和重定价的机票，但航空公司采用与增量收入尚无统一口径。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>本轮金额和投资条款未披露，累计融资不代表产品收入，现有航空公司部署规模也未量化。</p>
+          <h3 class="item-h">TravelX closes Series A to turn ticket inventory into a dynamically managed asset</h3>
+          <p class="item-b">Aviation technology company TravelX raised an undisclosed Series A, taking total funding to $45 million. It plans to expand AI infrastructure for airline inventory and revenue management. The financing backs dynamic ticket resale and repricing, while airline adoption and incremental revenue lack comparable figures.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The round size and investment terms remain undisclosed. Total funding is distinct from product revenue, and the scale of existing airline deployments has not been quantified.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-19</span>
             <a class="item-src" href="https://www.phocuswire.com/news/finance/travelx-closes-series-a-round-capital-product-innovation-ai-expansion" target="_blank" rel="noopener">PhocusWire ↗</a>
@@ -202,9 +202,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Kraken 母公司探索在美国以外申请银行牌照</h3>
-          <p class="item-b">Kraken 母公司 Payward 正研究在美国以外成为全功能银行，把交易、支付、借贷、收益、托管与传统银行服务放到同一平台；公司未披露申请司法辖区或牌照路径，因此目前是战略探索而非获批计划。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>探索范围包含银行、资产管理和按揭等业务，但没有牌照申请、监管批复、资本安排或上线时间。</p>
+          <h3 class="item-h">Kraken parent explores bank charters outside the United States</h3>
+          <p class="item-b">Kraken parent Payward is exploring a full-service bank outside the U.S. that would combine trading, payments, lending, yield, custody and traditional banking. It disclosed no target jurisdiction or license pathway. This remains a strategic exploration.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The business is exploring banking, asset management, and mortgages, among other areas. There is no license application, regulatory approval, capital plan, or launch date.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-20</span>
             <a class="item-src" href="https://www.theblock.co/news/business/2026-08-20-kraken-parent-payward-explores-becoming-a-full-bank-outside-us-412390" target="_blank" rel="noopener">The Block ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Ondo 股票资产 TVL 达 10 亿美元，永续累计 90 亿美元</h3>
-          <p class="item-b">Ondo 披露其代币化股票产品在八个月内达到 10 亿美元 TVL，代币化美债达到 20 亿美元，其永续平台在七周内累计名义成交约 90 亿美元，并计划推出组合型产品；规模信号增强，但累计成交不能替代持续 OI、深度和持有人权利验证。（TradFi/RWA 永续线 · 自 07-09 · 新增规模数据）</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>数据来自公司高管披露，股票产品不面向美国用户，永续只披露累计名义成交，未披露持续 OI、活跃用户或净收入。</p>
+          <h3 class="item-h">Ondo’s stock-linked asset TVL reaches $1 billion and cumulative perpetual volume reaches $9 billion</h3>
+          <p class="item-b">Ondo said its tokenized equities reached $1 billion TVL in eight months, its tokenized U.S. Treasuries reached $2 billion, and its perpetual venue recorded about $9 billion of cumulative notional volume in seven weeks. It also plans portfolio products. This updates the TradFi and RWA story tracked since July 9. Persistent open interest, depth and holder rights still require separate evidence.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The figures come from a company executive. The equity product is unavailable to US users. The perpetuals disclosure gives cumulative notional volume without sustained open interest, active users, or net revenue.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-20</span>
             <a class="item-src" href="https://www.theblock.co/news/business/2026-08-20-ondo-executive-says-tokenization-following-same-path-as-early-etfs-412346" target="_blank" rel="noopener">The Block ↗</a>
@@ -222,9 +222,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">GSR 推动代币化短债成为机构交易抵押品</h3>
-          <p class="item-b">GSR 正把代币化短期固定收益产品用于期货和 OTC 交易抵押，让机构在维持交易保证金时继续获得美债收益；这种安排可降低闲置资金成本，但抵押品折扣、托管、赎回和压力期流动性仍决定实际资本效率。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>公司描述了产品方向和机构需求，尚未披露采用客户、抵押规模、折扣率、违约处置或压力期表现。</p>
+          <h3 class="item-h">GSR seeks to use tokenized short-term debt as collateral for institutional trading</h3>
+          <p class="item-b">GSR is using tokenized short-duration fixed income as collateral for futures and OTC trades, allowing institutions to continue earning Treasury yields on trading margin. Actual capital efficiency depends on haircuts, custody, redemption and liquidity under stress.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The company described the product direction and institutional demand. It did not disclose customers using it, collateral balances, haircuts, default handling, or performance under stress.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-20</span>
             <a class="item-src" href="https://www.theblock.co/news/business/2026-08-20-gsr-baehr-tokenized-institutional-collateral-412302" target="_blank" rel="noopener">The Block ↗</a>
@@ -243,9 +243,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Prem AI 为比特币基础设施提供持续代码审计</h3>
-          <p class="item-b">Prem AI 推出 CyberScan，为比特币生产代码提供可暂停、恢复和持续更新的 AI 安全审查，早期合作方包括 Ark Labs 与 Breez；它缩短了版本间审计周期，但定位是补充正式审计，不能替代人工验证和责任归属。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>已有早期合作和产品发布，但未披露漏洞召回率、误报率、独立评测、定价或生产环境避免损失的数据。</p>
+          <h3 class="item-h">Prem AI offers continuous code auditing for bitcoin infrastructure</h3>
+          <p class="item-b">Prem AI introduced CyberScan for ongoing AI-assisted review of production Bitcoin code. Reviews can be paused, resumed and updated as code changes. Early partners include Ark Labs and Breez. The service shortens review cycles between versions and supplements formal audits. Human verification and accountability remain necessary.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Early partnerships and a product release are confirmed. Vulnerability detection coverage, false-positive rates, independent evaluations, pricing, and measured losses prevented in production were not disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-20</span>
             <a class="item-src" href="https://decrypt.co/376056/prem-ai-launches-cyberscan-for-continuous-ai-security-audits-of-bitcoin-infrastructure" target="_blank" rel="noopener">Decrypt ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">KTX 把 AI 代理接入行情、组合与订单执行</h3>
-          <p class="item-b">KTX 推出 Skills Kit，让 Claude、ChatGPT、Codex 与 Cursor 等代理调用市场数据、组合分析、订单执行和预测市场能力；代理从研究界面进入交易执行链路，但公告未披露权限隔离、失败恢复、采用量或实际成交。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>产品能力由公司发布稿披露，直接执行会把模型错误转化为资产风险，仍需硬限额、审批、撤销和全链路审计。</p>
+          <h3 class="item-h">KTX connects AI agents to market data, portfolios and order execution</h3>
+          <p class="item-b">KTX launched Skills Kit, giving agents including Claude, ChatGPT, Codex and Cursor access to market data, portfolio analysis, order execution and prediction markets. The announcement expanded the tools from research into execution but disclosed no permission isolation, recovery process, adoption or realized volume.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The company described the features in a release. Direct execution turns model mistakes into asset risk, making hard limits, approvals, revocation, and end-to-end auditing important.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-18</span>
             <a class="item-src" href="https://decrypt.co/375864/ktx-launches-skills-kit-to-connect-ai-agents-with-trading-intelligence-and-execution" target="_blank" rel="noopener">Decrypt ↗</a>
@@ -263,9 +263,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">行业警告 AI 代理会降低加密攻击门槛</h3>
-          <p class="item-b">加密安全从业者警告，获得钱包和协议权限的 AI 代理可能因权限过宽、提示注入、幻觉或元数据泄露放大攻击，且责任归属尚不清晰；这是风险判断而非已发生损失统计，但指向执行型代理必须先约束权限边界。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>结论来自行业讨论，未提供代理攻击的历史损失样本、发生率或统一责任框架，不能外推为已验证趋势。</p>
+          <h3 class="item-h">Industry participants warn of growing crypto security risks from AI agents</h3>
+          <p class="item-b">Crypto security practitioners warned that agents with wallet or protocol permissions could increase risk through overly broad access, prompt injection, hallucination or metadata exposure. Responsibility remains unclear. This is a risk assessment rather than a loss estimate and underscores the need to constrain execution permissions.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The conclusion comes from industry discussion. It gives no historical sample of losses from agent attacks, incidence rate, or common liability framework. It does not establish a verified trend.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-19</span>
             <a class="item-src" href="https://www.theblock.co/news/ecosystems/2026-08-19-ai-agents-todays-billion-dollar-crypto-hacks-look-like-pennies-industry-leaders-412278" target="_blank" rel="noopener">The Block ↗</a>
@@ -277,24 +277,24 @@
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product assessment</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">风控与清算</div>
-          <h3 class="item-h">把代理交易权限拆成可撤销的风险预算</h3>
-          <p class="item-b"><strong>判断变化</strong>：从把代理可调用交易接口视为分发能力，收紧为先按代理分配独立风险预算、允许的市场和订单类型，再决定是否开放执行。</p><p class="item-b"><strong>证据与边界</strong>：KTX 已把行情、组合和订单执行接入通用 AI 代理，行业讨论同时警告权限过宽、幻觉和责任不清；但产品采用、代理导致的实际损失和独立安全评测均未披露。</p>
+          <div class="decision-area">Risk Control and Settlement</div>
+          <h3 class="item-h">Trading permissions for agents require revocable risk limits</h3>
+          <p class="item-b"><strong>Revised assessment</strong>: Before enabling execution, a venue can give each agent its own risk budget, permitted markets and order types. Access to an API alone measures distribution rather than controlled trading capability.</p><p class="item-b"><strong>Evidence and limits</strong>: KTX connected agents to market data, portfolios and execution. Industry discussion identified broad permissions, hallucinations and unclear accountability. Adoption figures, agent-related losses and independent security evaluations were not disclosed.</p>
 
           <div class="item-meta">
 
-            <a class="item-src" href="https://decrypt.co/375864/ktx-launches-skills-kit-to-connect-ai-agents-with-trading-intelligence-and-execution" target="_blank" rel="noopener">Decrypt ↗</a><a class="item-src item-ref" href="https://www.theblock.co/news/ecosystems/2026-08-19-ai-agents-todays-billion-dollar-crypto-hacks-look-like-pennies-industry-leaders-412278" target="_blank" rel="noopener">补充：The Block · 08-19 ↗</a>
+            <a class="item-src" href="https://decrypt.co/375864/ktx-launches-skills-kit-to-connect-ai-agents-with-trading-intelligence-and-execution" target="_blank" rel="noopener">Decrypt ↗</a><a class="item-src item-ref" href="https://www.theblock.co/news/ecosystems/2026-08-19-ai-agents-todays-billion-dollar-crypto-hacks-look-like-pennies-industry-leaders-412278" target="_blank" rel="noopener">Additional source: The Block · 08-19 ↗</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

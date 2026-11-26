@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-09-02</title>
+<title>Perp DEX Daily · 2026-09-02</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -64,12 +64,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 66 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 66</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 9 月 2 日 · 星期三</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">September 2, 2026 · Wednesday</div>
     </header>
-    <p class="lead">Aster 和 GMTrade 扩展链上 RWA 永续，Payward 与伦交所推进百只英股代币化，OpenAI 和 Anthropic 同步为高能力模型设置分级访问与安全边界。</p>
+    <p class="lead">Aster and GMTrade are expanding onchain real-world asset perpetuals. Payward and the London Stock Exchange are pursuing tokenization of 100 UK equities. OpenAI and Anthropic are setting access tiers and safeguards for highly capable models.</p>
 
       <section class="sec sec-perpdex">
         <div class="sec-head">
@@ -81,27 +81,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Aster 用链上提案开放永续市场创建</h3>
-          <p class="item-b">Aster 发布 AOS-2 永续上币框架，申请方需锁定 100 万枚 ASTER 四年并交由验证者投票，通过后由风险团队配置参数，最快可在 T+1 上线。</p><p class="item-b">首期 USD1 RWA 活动覆盖股票、黄金、能源等六个市场，并按成交量和持仓发放 USD1 与 WLFI 奖励。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>提案规则和首批六个市场已公布，杠杆与其他交易参数仍由 Aster 风险团队配置。</p>
+          <h3 class="item-h">Aster opens perpetual market creation through onchain proposals</h3>
+          <p class="item-b">Aster released its AOS-2 perpetual listing framework. Applicants must lock 1 million ASTER for four years and obtain a validator vote. After approval, the risk team sets the parameters. A market can launch as early as T+1.</p><p class="item-b">The first USD1 RWA event covers six markets, including stocks, gold, and energy. Awards are given based on trading volume and positions, along with WLFI rewards.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The rules for the proposal and the first six markets have been announced. Leverage and other trading parameters are still determined by the Aster risk team.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-01</span>
             <a class="item-src" href="https://chainwire.org/2026/09/01/aster-and-world-liberty-financial-launch-usd1-rwa-boost-phase-1-offering-125m-wlfi-6-25m-usd1-in-rewards/" target="_blank" rel="noopener">Chainwire ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">GMTrade 上线黄金、白银与原油永续</h3>
-          <p class="item-b">GMTrade 在 Solana 上线黄金、白银和 WTI 原油合成永续，使用 USDC 保证金与结算，并通过 Chainlink Data Streams 在成交时拉取价格。</p><p class="item-b">三个市场支持全天交易，GMTrade 的市场总数由此超过 60 个。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>报道列出的平台累计成交为 1420 亿美元，5 月单月峰值 517.3 亿美元，但同时提示激励可能放大成交。</p>
+          <h3 class="item-h">GMTrade launches gold, silver and crude oil perpetuals</h3>
+          <p class="item-b">GMTrade launched synthetic gold, silver and WTI crude oil perpetuals on Solana. They use USDC as margin and settlement currency, with prices retrieved from Chainlink Data Streams at execution.</p><p class="item-b">All three markets trade around the clock, bringing the total number of GMTrade markets above 60.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The report indicates that the platform has accumulated transactions worth 142 billion USD. The peak volume in May was 51.73 billion USD. However, the report also notes that incentives may amplify trading volume.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-01</span>
             <a class="item-src" href="https://solanacompass.com/news/gmtrade-opens-gold-silver-and-wti-crude-oil-perpetuals-on-solana-with-247-trading" target="_blank" rel="noopener">Solana Compass ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Robinhood Chain 永续日成交达 3.54 亿美元</h3>
-          <p class="item-b">DefiLlama 经 Decrypt 报道显示，Robinhood Chain 9 月 1 日链上永续日成交为 3.5396 亿美元，同日全链 DEX 日成交升至 15.95 亿美元。</p><p class="item-b">全链 DEX 成交较 8 月 28 日增长 61%，链上 DeFi 存款与稳定币余额分别接近 7.38 亿和 7.97 亿美元。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>15.95 亿美元是全链 DEX 现货口径，永续为另一项 3.5396 亿美元数据，报道未拆分具体协议与用户留存。</p>
+          <h3 class="item-h">Robinhood Chain’s daily perpetual volume reaches $354 million</h3>
+          <p class="item-b">Decrypt, citing DefiLlama, reported $353.96 million in onchain perpetual volume on Robinhood Chain on September 1. Chain-wide spot DEX volume rose to $1.595 billion that day.</p><p class="item-b">On-chain DEX transactions increased by 61% compared to August 28th. On-chain DeFi deposits and stablecoin balances reached approximately 738 million and 797 million USD, respectively.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The $1.595 billion represents chain-wide spot DEX volume. Perpetuals accounted for a separate $353.96 million. The report did not break out individual protocols or user retention.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-01</span>
             <a class="item-src" href="https://decrypt.co/377126/robinhood-chain-dex-volume-jumps?amp=1" target="_blank" rel="noopener">Decrypt ↗</a>
@@ -119,36 +119,36 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Payward 将伦交所百强股票纳入 xStocks</h3>
-          <p class="item-b">Payward 与伦敦证券交易所合作，计划在未来数周把伦交所最大的 100 家公司做成 1:1 支持的 xStocks，并探索原生链上股票发行。</p><p class="item-b">伦交所拟在监管批准后让 xStocks 进入 LSE 24 交易，首批产品暂不向英国投资者开放。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>Payward 称 xStocks 累计成交超过 400 亿美元、链上结算超过 200 亿美元；百只英股与 LSE 24 仍处于计划及审批阶段。</p>
+          <h3 class="item-h">Payward brings the London Stock Exchange’s top 100 equities into xStocks</h3>
+          <p class="item-b">Payward is working with the London Stock Exchange to turn the top 100 companies on the LSE into xStocks that support 1:1 ratios. The platform is also exploring issuance of stocks directly on the blockchain.</p><p class="item-b">LSE plans to allow xStocks to be traded on LSE 24 after regulatory approval. The first batch of products will not be available to British investors for now.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Payward claims that xStocks have generated transactions worth over 40 billion USD, with on-chain settlements exceeding 20 billion USD. Hundreds of British stocks are still in the planning and approval phase with LSE24.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-01</span>
             <a class="item-src" href="https://www.payward.com/press-release/payward-lseg-tokenization-partnership" target="_blank" rel="noopener">Payward ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Zoomex 将股票永续扩至 50 多只</h3>
-          <p class="item-b">Zoomex 将 USDT 保证金股票永续扩展到 50 多只美国及全球股票，覆盖大型科技、半导体、加密概念、医疗与消费公司。</p><p class="item-b">多数合约支持全天交易和最高 25 倍杠杆，平台同时启动限时 TradFi 零手续费活动。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>公告披露了合约数量、杠杆和活动规则，没有披露成交量、OI、做市深度或零费率结束后的留存。</p>
+          <h3 class="item-h">Zoomex expands its equity perpetual offering to more than 50 stocks</h3>
+          <p class="item-b">Zoomex will expand USDT margined equity perpetual futures to more than 50 US and global stocks, covering large technology companies, semiconductors, crypto-related companies, healthcare, and consumer goods companies.</p><p class="item-b">Most contracts offer round-the-clock trading and up to 25× leverage. The platform also launched a limited-time zero-fee promotion for TradFi products.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The announcement gave the contract count, leverage and campaign terms. It provided no volume, open interest, depth supplied by market makers or data on retention after the zero-fee period.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-01</span>
             <a class="item-src" href="https://www.globenewswire.com/news-release/2026/09/01/3354425/0/en/zoomex-deepens-tradfi-push-with-50-stock-perpetuals-and-zero-fee-tradfi.html" target="_blank" rel="noopener">Zoomex ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">21 家金融机构筹建多币种稳定币公司</h3>
-          <p class="item-b">包括美国银行、花旗、德银、瑞银和三菱日联在内的 21 家机构承诺于 2026 年下半年组建稳定币公司，首期聚焦美元，欧元为下一优先币种。</p><p class="item-b">该项目计划覆盖跨境支付与数字资产结算，并以 2027 年上半年进入市场为目标。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>参与方已承诺组建公司，但公司名称、发行链、储备安排和具体上线时间尚未公布。</p>
+          <h3 class="item-h">Twenty-one financial institutions plan a multicurrency stablecoin company</h3>
+          <p class="item-b">Twenty-one institutions, including Bank of America, Citigroup, Deutsche Bank, UBS, and Mitsubishi UFJ, have pledged to establish stablecoin companies by the second half of 2026. The initial focus will be on the US dollar, with the euro being the next priority.</p><p class="item-b">The project plans to cover cross-border payments and digital asset settlement. The goal is to launch the product in the first half of 2027.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The participants have committed to forming a company, but the company’s name, the blockchain used for issuance, the reserve arrangements, and the exact launch date have not been announced yet.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-01</span>
             <a class="item-src" href="https://newsroom.wf.com/news-releases/news-details/2026/Group-of-leading-international-financial-institutions-to-establish-stablecoin-enterprise/default.aspx" target="_blank" rel="noopener">Wells Fargo ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">SEC 提议更新链上证券过户规则</h3>
-          <p class="item-b">美国 SEC 提议更新注册过户代理规则，使其覆盖电子和区块链记账环境，并计划新增两项规则、废止一项旧规则。</p><p class="item-b">提案涉及登记、报告、风险管理和限制性图例，公众意见期为联邦公报发布后 60 天。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>文件编号为 S7-2026-30，目前仍是拟议规则，尚未形成最终生效要求。</p>
+          <h3 class="item-h">SEC proposes updated transfer rules for onchain securities</h3>
+          <p class="item-b">The US SEC proposes updating registration and transfer agent rules to cover electronic and blockchain accounting environments. Two new rules will be introduced, while one old rule will be abolished.</p><p class="item-b">The proposal involves registration, reporting, risk management, and restrictive legends. Public comment period lasts for 60 days after the proposal is published in the federal gazette.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The document number is S7-2026-30. It remains a proposed rule and has not yet become final regulations.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-01</span>
             <a class="item-src" href="https://www.sec.gov/rules-regulations/2026/09/s7-2026-30" target="_blank" rel="noopener">U.S. SEC ↗</a>
@@ -166,27 +166,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">OpenAI 将 Astra 列为关键网络安全能力模型</h3>
-          <p class="item-b">OpenAI 认定 Astra 达到准备框架中的关键网络安全能力门槛，可在较少人工引导下发现并利用高防护系统中的未知漏洞。</p><p class="item-b">公司曾延后部分开发与发布以加强防滥用和越权监控，并计划先限制最先进网络安全能力的访问范围。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>Astra 尚未正式发布；高级网络安全能力将先向测试者开放，后续再通过 Daybreak Blue 扩大防御用途访问。</p>
+          <h3 class="item-h">OpenAI classifies Astra as having critical cybersecurity capabilities</h3>
+          <p class="item-b">OpenAI has determined that Astra meets the critical network security capability requirements in the framework. It can identify and exploit unknown vulnerabilities in highly secure systems with minimal human intervention.</p><p class="item-b">The company has delayed some development and release times to strengthen anti-abuse measures and oversight. It also plans to restrict access to the most advanced network security capabilities.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Astra has not yet been officially released. Advanced network security capabilities will be available to testers first, and later, access to these capabilities will be expanded through Daybreak Blue.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-01</span>
             <a class="item-src" href="https://openai.com/index/path-to-astra/" target="_blank" rel="noopener">OpenAI ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Anthropic 发布 Fable 5.1 与 Mythos 5.1</h3>
-          <p class="item-b">Anthropic 发布面向编码和知识工作的 Claude Fable 5.1，并把同一底层模型的 Mythos 5.1 限定给经过审核的网络安全和生命科学机构。</p><p class="item-b">Fable 5.1 已向 Pro、Max、Team、Enterprise 和 API 用户开放，默认要求保留 30 天数据用于安全监控。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>Fable 5.1 已普遍可用；触发网络安全或生物风险防护的请求会转交较低风险模型，Mythos 5.1 仍为审核制访问。</p>
+          <h3 class="item-h">Anthropic releases Fable 5.1 and Mythos 5.1</h3>
+          <p class="item-b">Anthropic releases Claude Fable 5.1 for coding and knowledge-based tasks. Mythos 5.1, which uses the same underlying model, is restricted to approved cybersecurity and life sciences organizations.</p><p class="item-b">Fable 5.1 has been made available to Pro, Max, Team, Enterprise, and API users. By default, data is retained for 30 days for security monitoring purposes.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Fable 5.1 is now widely available. Requests that trigger network security or biometric risk protection will be directed to lower-risk models. Mythos 5.1 remains under review and is only accessible through approved channels.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-01</span>
             <a class="item-src" href="https://www.anthropic.com/claude/fable" target="_blank" rel="noopener">Anthropic ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Google 用多 Agent 团队完成长周期工程任务</h3>
-          <p class="item-b">Google 更新 Antigravity Teamwork，让 Gemini 3.7 Flash Agent 团队在数小时至数天内协作、批评和迭代复杂研究及工程任务。</p><p class="item-b">官方案例包括解决七个开放问题、构建可启动 xv6 的 RISC-V 模拟器，以及向 Eigen 与 ParlayHash 提交性能优化。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>这些是 Google 公布的精选研究与工程结果，页面未给出日常软件项目中的平均成本、失败率或外部复现范围。</p>
+          <h3 class="item-h">Google uses a team of agents to complete long-running engineering tasks</h3>
+          <p class="item-b">Google updates Antigravity Teamwork, enabling the Gemini 3.7 Flash Agent team to collaborate, critique, and iterate on complex research and engineering tasks over hours or days.</p><p class="item-b">The official plan includes addressing seven open issues, building an RISC-V simulator that can execute xv6, and submitting performance optimizations to Eigen and ParlayHash.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>These are selected research and engineering results published by Google. The page does not provide average costs, failure rates, or external reproducibility ranges for daily software projects.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-31</span>
             <a class="item-src" href="https://blog.google/innovation-and-ai/technology/developers-tools/antigravity-teamwork-multi-agent/" target="_blank" rel="noopener">Google ↗</a>
@@ -194,7 +194,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

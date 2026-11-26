@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-09-17</title>
+<title>Perp DEX Daily · 2026-09-17</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -82,12 +82,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 80 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 80</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 9 月 17 日 · 星期四</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">September 17, 2026 · Thursday</div>
     </header>
-    <p class="lead">Reya把订单簿迁移落到可机读API，Circle把Arc正式推上主网，FCA则把英国加密业务的授权边界推进到9月底申请窗口。</p>
+    <p class="lead">Reya made its order book migration accessible through a machine-readable API. Circle launched Arc mainnet, while the FCA clarified the scope of UK crypto authorization ahead of the late-September application window.</p>
 
 
       <section class="sec sec-perpdex">
@@ -100,27 +100,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Reya为9月28日订单簿迁移开放新API</h3>
-          <p class="item-b"><strong>事件</strong>：Reya确认v2订单簿将于9月28日上线，并发布新的REST端点、签名方式、请求响应结构与WebSocket接口，要求程序化交易接入提前迁移；App用户不受影响。（可机读市场生命周期线 · 自08-28 · 新增迁移日期与接口）</p><p class="item-b"><strong>机制</strong>：把上线日期与接口变更同时公开，让做市商和交易机器人能在撮合架构切换前重建连接；但公告仍未披露v1头寸迁移、最终关闭时间和切换失败时的回退规则。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>上线日与新接口已公布，v1头寸处置和异常回退仍待确认。</p>
+          <h3 class="item-h">Reya opens a new API ahead of its September 28 order book migration</h3>
+          <p class="item-b"><strong>Event</strong>: Reya confirmed a September 28 launch for its v2 order book. It released new REST endpoints, signing conventions, request and response formats, and WebSocket interfaces. Programmatic traders must migrate in advance. App users are unaffected. The dates and interfaces update the machine-readable market lifecycle story tracked since August 28.</p><p class="item-b"><strong>Mechanism</strong>: Publishing the interfaces alongside a launch date lets market makers and bots rebuild their connections before the matching architecture changes. The notice did not explain how v1 positions migrate, when v1 closes or what happens if the transition fails.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The launch date and new interfaces have been announced. V1 position disposal and abnormal backoffs remain to be confirmed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-16</span>
             <a class="item-src" href="https://perpdexwars.com/en/perpdex-news" target="_blank" rel="noopener">PerpDEX Wars ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Phoenix允许SOL直接充当全市场保证金</h3>
-          <p class="item-b"><strong>事件</strong>：Phoenix开始接受SOL直接作为保证金，用于其加密、股票和商品永续市场，用户不再需要先把资产换成USDC。</p><p class="item-b"><strong>机制</strong>：原生资产抵押减少换汇步骤，却把保证金价值波动与仓位风险叠加在同一账户；来源没有披露SOL抵押折扣、强平阈值、利率和极端行情下的风险上限。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>功能已开放，抵押折扣、强平参数和资产集中风险尚未公开。</p>
+          <h3 class="item-h">Phoenix accepts SOL directly as collateral across its markets</h3>
+          <p class="item-b"><strong>Event</strong>: Phoenix begins accepting SOL as a collateral for its crypto, stock, and commodity perpetual futures markets. Users no longer need to convert their assets into USDC first.</p><p class="item-b"><strong>Mechanism</strong>: The reduction in native asset collateral reduces the steps involved in currency exchange, but it also combines the volatility of collateral values with the risks associated with positions within the same account. The source does not disclose information such as SOL collateral discounts, liquidation thresholds, interest rates, or risk limits in extreme market conditions.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Features are available, but mortgage discounts, liquidation parameters, and asset concentration risks have not been disclosed yet.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-16</span>
             <a class="item-src" href="https://perpdexwars.com/en/perpdex-news" target="_blank" rel="noopener">PerpDEX Wars ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Aster把MEMEUSDT最高杠杆从10倍降至5倍</h3>
-          <p class="item-b"><strong>事件</strong>：Aster宣布自9月18日15:00 UTC起把MEMEUSDT最高杠杆由10倍降至5倍，并同步调整各档名义价值上限和维持保证金率。</p><p class="item-b"><strong>机制</strong>：降低最高杠杆和收紧风险档位会减少新增仓位可承载的名义规模，也可能让已有高杠杆账户更接近新的保证金边界；公告未说明存量仓位是否豁免。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>参数将于9月18日生效，存量仓位的具体处理仍需核对。</p>
+          <h3 class="item-h">Aster cuts maximum leverage on MEMEUSDT from 10x to 5x</h3>
+          <p class="item-b"><strong>Event</strong>: Aster announced that at 15:00 UTC on September 18 it would cut maximum leverage for MEMEUSDT from 10× to 5× and adjust the notional caps and maintenance margin rates for each tier.</p><p class="item-b"><strong>Mechanism</strong>: Reducing the maximum leverage and tightening risk levels will reduce the nominal size that new positions can hold. This could also bring high-leverage accounts closer to the new margin limits. The announcement does not specify whether existing positions are exempt from these changes.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Parameters will take effect on September 18th; specific handling of existing positions still needs to be verified.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-16</span>
             <a class="item-src" href="https://perpdexwars.com/en/perpdex-news" target="_blank" rel="noopener">PerpDEX Wars ↗</a>
@@ -138,27 +138,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Pons完整日手续费409.6万美元</h3>
-          <p class="item-b"><strong>事件</strong>：MemeFees回填后的9月15日完整数据显示，Pons手续费409.6万美元，其中66.3万美元计入协议收入、343.3万美元流向供给侧；其9月16日发射数量从前一日31,170多个降至10,830多个。（Robinhood Chain分发线 · 自07-02 · 新增收入拆分与供给回落）</p><p class="item-b"><strong>机制与影响</strong>：Pons约把84%的手续费分给供给侧，说明高费用份额并不等于同等比例的平台收入；近七日仍未报告毕业项目，发射数量、协议收入和迁移质量需要分开观察。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>收入拆分来自9月15日完整日，发射数量为9月16日更新，毕业仍为零。</p>
+          <h3 class="item-h">Pons collects $4.096 million in fees over a complete day</h3>
+          <p class="item-b"><strong>Event</strong>: After MemeFees backfilled September 15, Pons showed $4.096 million in fees for the full day. Protocol revenue was $663,000 and the supply side received $3.433 million. Token launches fell from over 31,170 to over 10,830 on September 16. This updates the Robinhood Chain distribution story tracked since July 2.</p><p class="item-b"><strong>Mechanism and impact</strong>: Pons allocated approximately 84% of the fees to the supply side. This suggests that the high fee share does not equal the same proportion of the platform’s revenue. There have been no reports of projects graduating in the past seven days. It is necessary to separately evaluate the number of launches, agreement revenues, and migration quality.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The revenue breakdown is based on the complete data from September 15th. The number of launches was updated on September 16th. The number of graduates remains zero.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-16</span>
             <a class="item-src" href="https://memefees.com/launchpads/pons" target="_blank" rel="noopener">MemeFees ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">FOMO占过半成交却只拿到8%费用</h3>
-          <p class="item-b"><strong>事件</strong>：MemeFees滚动24小时快照显示，FOMO成交2.676亿美元，占受追踪总成交约52%，但费用只有64.6万美元，占总费用7.6%。</p><p class="item-b"><strong>机制与影响</strong>：成交份额与费用份额明显错位，说明发射台竞争不能只看交易额，还要看费率、交易阶段与可归属收入；该平台口径包含交易与发射活动，不能直接推算单笔费率。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>滚动快照覆盖受追踪平台，成交口径包含交易与发射，不能等同曲线成交。</p>
+          <h3 class="item-h">FOMO accounts for more than half of trading volume but just 8% of fees</h3>
+          <p class="item-b"><strong>Event</strong>: In MemeFees’ rolling 24-hour snapshot, FOMO recorded $267.6 million in volume, about 52% of the tracked total. It generated only $646,000 in fees, or 7.6% of tracked fees.</p><p class="item-b"><strong>Mechanism and impact</strong>: There is a clear mismatch between the trading share and the fee share. This indicates that platform competition cannot be judged solely by trading volume. Other factors such as fees, trading stages, and attributable revenues must also be considered. The platform’s definitions include both trading and launching activities, so it is not possible to directly calculate individual fees.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Rolling snapshots cover the platforms being tracked. Transactions include both trades and launches. This cannot be equated with curve-based transactions.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-17</span>
             <a class="item-src" href="https://memefees.com/" target="_blank" rel="noopener">MemeFees ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Meteora连续七天承载74%的代币毕业</h3>
-          <p class="item-b"><strong>事件</strong>：MemeFees统计最近七个完整UTC日共有31,049个代币毕业，其中Meteora Dynamic Bonding Curve为22,916个，占73.8%；9月16日单日占比同样为73.8%。</p><p class="item-b"><strong>机制与影响</strong>：单日集中延续到七日窗口，说明曲线结束后的流动性迁移持续依赖少数基础设施；毕业只代表进入后续市场，不代表代币留存、成交或项目质量。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>七日数据覆盖已报告平台，毕业数量不能替代毕业后的流动性和留存。</p>
+          <h3 class="item-h">Meteora accounts for 74% of token graduations over seven consecutive days</h3>
+          <p class="item-b"><strong>Event</strong>: MemeFees counted 31,049 token graduations across the last seven complete UTC days. Meteora Dynamic Bonding Curve accounted for 22,916, or 73.8%. Its share on September 16 alone was also 73.8%.</p><p class="item-b"><strong>Mechanism and impact</strong>: The single-day concentration continues for seven days, indicating that the migration of liquidity after the curve ends relies on a few key infrastructures. Graduation only signifies entry into the subsequent market, not the retention of tokens, transactions, or the quality of projects.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The seven-day data covers the reported platform; the number of graduations cannot replace liquidity and retention after graduation.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-16</span>
             <a class="item-src" href="https://memefees.com/stats/graduations" target="_blank" rel="noopener">MemeFees ↗</a>
@@ -176,27 +176,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Circle把Arc主网开放给公共使用</h3>
-          <p class="item-b"><strong>事件</strong>：Circle正式上线Arc公共主网，网络以USDC支付Gas并提供亚秒级确定性，首批已有100多个应用和建设方，隐私功能仍在开发中。</p><p class="item-b"><strong>机制与影响</strong>：用USDC承担Gas消除了单独持有原生Gas代币的步骤，并让本地稳定币与StableFX共享结算层；当前验证者仍为许可制，Circle只表示探索2027年转向权益证明。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>公共主网已上线，隐私和开放验证仍是后续计划。</p>
+          <h3 class="item-h">Circle opens Arc mainnet for public use</h3>
+          <p class="item-b"><strong>Event</strong>: Circle officially launched its Arc public network. This network uses USDC to pay for GAs and provides sub-second certainty. More than 100 applications and developers have already joined the network, and privacy features are still being developed.</p><p class="item-b"><strong>Mechanism and impact</strong>: Using USDC to pay for Gas eliminates the need to hold native Gas tokens. Local stablecoins can share the settlement layer with StableFX. Currently, validators are still a licensed system. Circle only indicates that they are exploring transitioning to proof-of-stake in 2027.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The public main network has been launched. Privacy and open verification remain part of the future plans.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-16</span>
             <a class="item-src" href="https://www.circle.com/pressroom/circle-launches-arc-mainnet-an-economic-operating-system-for-the-internet" target="_blank" rel="noopener">Circle ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">英国加密授权申请窗口9月30日开放</h3>
-          <p class="item-b"><strong>事件</strong>：英国FCA发布新加密监管制度适用指引，覆盖合资格稳定币发行、交易场所、交易与撮合、托管和质押；申请窗口将于9月30日开放，新制度于2027年10月25日生效。</p><p class="item-b"><strong>机制与影响</strong>：指引把不同业务活动映射到独立许可边界，并为部分纯技术服务商设置针对性排除；10月仍将继续咨询，现阶段不能把指引理解为全部实施细则已经定案。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>申请窗口即将开放，正式生效在2027年10月，后续咨询仍会补充细则。</p>
+          <h3 class="item-h">UK crypto authorization application window opens September 30</h3>
+          <p class="item-b"><strong>Event</strong>: The UK FCA published guidance on the scope of its new crypto regime, including qualifying stablecoin issuance, trading venues, trading and matching, custody and staking. The application window opens September 30. The regime takes effect on October 25, 2027.</p><p class="item-b"><strong>Mechanism and impact</strong>: The guidelines map different business activities to separate licenses. Some pure technical service providers were excluded from the guidelines. Further consultations will continue in October. At this stage, it cannot be assumed that all the rules have been finalized.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The application window is about to open, and it will officially take effect in October 2027. Further details will be provided in subsequent consultations.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-16</span>
             <a class="item-src" href="https://www.fca.org.uk/news/press-releases/crypto-firms-get-guidance-how-new-regime-applies" target="_blank" rel="noopener">Financial Conduct Authority ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">美国数字资产税法案以38比5通过委员会</h3>
-          <p class="item-b"><strong>事件</strong>：美国众议院筹款委员会以38比5通过H.R. 10357，内容包括小额交易申报减免、交易商按市值计税、洗售规则以及挖矿和质押税务处理。</p><p class="item-b"><strong>机制与影响</strong>：法案试图把数字资产纳入更明确的所得确认和反避税规则，同时提供自愿披露路径；这只是委员会审议通过，仍需众议院全院、参议院和总统程序。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>38比5仅为委员会表决，法案尚未成为法律。</p>
+          <h3 class="item-h">U.S. digital asset tax bill passes committee by 38 votes to 5</h3>
+          <p class="item-b"><strong>Event</strong>: The House Committee on Ways and Means passed H.R. 10357 by a vote of 38 to 5. The bill includes provisions for reducing the reporting requirements for small transactions, taxing traders based on market value, rules for wash trading, and tax treatments for mining and pledge activities.</p><p class="item-b"><strong>Mechanism and impact</strong>: The bill attempts to include digital assets in clearer rules for income recognition and tax avoidance. It also provides a voluntary disclosure path. However, this is just a committee approval. It still requires approval from both the House and the Senate, as well as the President.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>A vote of 38 to 5 by the committee means that the bill has not yet become law.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-16</span>
             <a class="item-src" href="https://waysandmeans.house.gov/2026/09/16/historic-digital-asset-tax-legislation-advances-to-keep-america-the-crypto-capital-of-the-world/" target="_blank" rel="noopener">U.S. House Committee on Ways and Means ↗</a>
@@ -208,33 +208,33 @@
         <div class="sec-head">
           <span class="sec-no">04</span>
           <div>
-            <h2 class="sec-title">AI 相关</h2>
+            <h2 class="sec-title">AI</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">OpenAI开始测试可直接行动的赞助Agent</h3>
-          <p class="item-b"><strong>事件</strong>：OpenAI在美国与部分广告主测试Sponsored Agents，并推出可在ChatGPT Work中创建、更新和分析广告活动的Ads Manager插件；HubSpot集成已开放，Shopify美国版也于当天上线。</p><p class="item-b"><strong>机制与影响</strong>：赞助Agent把广告从静态展示变成可对话、可执行的任务入口，同时与ChatGPT独立回答和原始对话明确分离；目前仍是小范围测试，国际版计划9月23日开放。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>美国广告主小范围测试已开始，国际开放与实际转化仍待验证。</p>
+          <h3 class="item-h">OpenAI begins testing sponsored agents that can take action directly</h3>
+          <p class="item-b"><strong>Event</strong>: OpenAI is testing Sponsored Agents with some advertisers in the United States. The Ads Manager plugin, which allows for the creation, updating, and analysis of advertising campaigns within ChatGPT Work, was also launched. Integration with HubSpot is now available, and the Shopify US version was also launched on that day.</p><p class="item-b"><strong>Mechanism and impact</strong>: The sponsored agent transforms advertisements from static displays into interactive tasks that can be executed. This process is clearly separated from ChatGPT’s independent responses and original conversations. Currently, this is still in a limited testing phase, and the international version is scheduled to be available on September 23rd.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Small-scale tests with American advertisers have begun, while international availability and actual conversions remain to be verified.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-16</span>
             <a class="item-src" href="https://openai.com/index/reimagining-advertising-with-ai/" target="_blank" rel="noopener">OpenAI ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Cohesity把Agent记忆纳入备份与恢复</h3>
-          <p class="item-b"><strong>事件</strong>：Cohesity推出Agent Resilience，可对AI Agent的记忆、配置及其管理资源建立拓扑、快照和恢复；首发支持Amazon Bedrock，面向部分客户开放，计划2026年底正式可用。</p><p class="item-b"><strong>机制与影响</strong>：产品把Agent故障处理从检测和观测扩展到状态恢复，减少配置损坏或误操作后的重建成本；Microsoft与Google平台支持仍在路线图中，当前能力和正式版范围可能变化。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>当前仅向部分客户开放，正式可用目标为2026年底。</p>
+          <h3 class="item-h">Cohesity adds agent memory to backup and recovery</h3>
+          <p class="item-b"><strong>Event</strong>: Cohesity has launched Agent Resilience, which allows for the establishment of topologies, snapshots, and recoveries for AI agents’ memories, configurations, and resource management. It initially supports Amazon Bedrock, and is available to some customers. It is planned to be officially available by the end of 2026.</p><p class="item-b"><strong>Mechanism and impact</strong>: The product has expanded agent fault handling from detection and observation to state recovery. This reduces the cost of rebuilding the system after configuration errors or misoperations. Support from Microsoft and Google platforms is still on the roadmap. Current capabilities and the scope of official versions may change.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Currently, access is limited to certain customers. The official launch is scheduled for the end of 2026.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-16</span>
             <a class="item-src" href="https://www.cohesity.com/newsroom/press/cohesity-introduces-agent-resilience-to-protect-ai-agent-infrastructure/" target="_blank" rel="noopener">Cohesity ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">DigiCert给AI Agent加入可撤销身份</h3>
-          <p class="item-b"><strong>事件</strong>：DigiCert正式发布AI Trust Manager，以加密签名的AI Passport记录Agent身份、所有者和授权动作，并允许通过策略签证限制跨组织权限。</p><p class="item-b"><strong>机制与影响</strong>：当Agent越权或凭证失效时，管理员可撤销身份或隔离Agent，把控制点从应用提示扩展到可验证身份层；官方调查称78%的受访组织经历过相关事件或漏洞，但这是供应商调查而非独立市场统计。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>产品已正式可用，78%来自供应商调查，不能外推全部企业。</p>
+          <h3 class="item-h">DigiCert introduces revocable identities for AI agents</h3>
+          <p class="item-b"><strong>Event</strong>: DigiCert released AI Trust Manager. Its cryptographically signed AI Passport records an agent’s identity, owner and authorized actions. Policy-based visas can limit the agent’s permissions across organizations.</p><p class="item-b"><strong>Mechanism and impact</strong>: When an agent acts beyond their authority or their credentials become invalid, administrators can revoke the agent’s identity or isolate them. This allows control to be transferred from application-level prompts to a verifiable identity layer. Official surveys show that 78% of surveyed organizations have experienced such incidents or vulnerabilities. However, this is a supplier survey, not an independent market statistics.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The product is officially available. 78% of data comes from supplier surveys; it cannot be generalized to all enterprises.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-15</span>
             <a class="item-src" href="https://www.digicert.com/news/every-ai-agent-needs-a-kill-switch-digicert-launches-ai-trust-manager" target="_blank" rel="noopener">DigiCert ↗</a>
@@ -242,7 +242,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

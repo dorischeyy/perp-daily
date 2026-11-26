@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-11-02</title>
+<title>Perp DEX Daily · 2026-11-02</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -100,51 +100,51 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 120 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 120</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 11 月 2 日 · 星期一</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">November 2, 2026 · Monday</div>
     </header>
-    <p class="lead">RWA全天交易的约束正在从有没有合约转到休市定价、分红处理和抵押退出。新预言机与交易所规则在补后台环节，但风险仍由不同系统分担。</p>
+    <p class="lead">Round-the-clock real-world asset markets face questions about prices while underlying venues are closed, dividends and collateral withdrawals. New oracles and exchange rules address some of these operations, with risk still split across several systems.</p>
 
 
       <section class="sec sec-perp-market-operations">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">永续合约与全天市场运行</h2>
+            <h2 class="sec-title">Perpetual futures and round-the-clock market operations</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月1日，MEXC将ASTER/USD1资金费率改为每四小时结算</h3>
-          <p class="item-b">MEXC自11月1日02:15 UTC起将ASTER/USD1永续资金费率改为每四小时结算，单次费率上限和下限为正负3%。平台保留继续调整频率与上限的权利，持仓者需要重算日内资金成本。</p>
+          <h3 class="item-h">November 1: MEXC moves ASTER/USD1 perpetual funding to four-hour settlement</h3>
+          <p class="item-b">At 02:15 UTC on November 1, MEXC moved ASTER/USD1 perpetual funding to four-hour settlement. The cap and floor per interval are +3% and −3%. MEXC retains discretion to change the interval and limits again. Traders holding positions need to recalculate their intraday funding costs.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.mexc.com/announcements/article/adjustment-to-aster-usd1-funding-rate-settlement-frequency-nov-1-2026-02-17827791539484" target="_blank" rel="noopener" title="MEXC · 发布 2026-11-01" aria-label="来源 1：MEXC · 发布 2026-11-01">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.mexc.com/announcements/article/adjustment-to-aster-usd1-funding-rate-settlement-frequency-nov-1-2026-02-17827791539484" target="_blank" rel="noopener" title="MEXC · Published 2026-11-01" aria-label="Source 1: MEXC · Published 2026-11-01">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月1日，MEXC公布四只股票永续分红结算窗口</h3>
-          <p class="item-b">MEXC将在11月6日对PFE、WFC、CCL和HWM股票永续执行现金分红：00:30 UTC转为只减仓，01:00收取特别资金费，01:01恢复交易。多头收款、空头付款，空头需预留保证金。</p>
+          <h3 class="item-h">November 1: MEXC announces dividend settlement windows for four equity perpetuals</h3>
+          <p class="item-b">MEXC plans to process cash dividends on PFE, WFC, CCL, and HWM equity perpetuals on November 6. Contracts switch to reduce-only at 00:30 UTC, a special funding payment settles at 01:00, and trading resumes at 01:01. Longs receive the payment and shorts pay it. Shorts must reserve sufficient margin.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.mexc.com/announcements/article/mexc-cash-dividend-settlement-for-pfe-wfc-and-2-other-stock-futures-17827791539483" target="_blank" rel="noopener" title="MEXC · 发布 2026-11-01" aria-label="来源 1：MEXC · 发布 2026-11-01">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.mexc.com/announcements/article/mexc-cash-dividend-settlement-for-pfe-wfc-and-2-other-stock-futures-17827791539483" target="_blank" rel="noopener" title="MEXC · Published 2026-11-01" aria-label="Source 1: MEXC · Published 2026-11-01">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">10月30日，Chainlink发布全天定价与托管同步方案</h3>
-          <p class="item-b">Chainlink在LinkNYC披露24/7与CustodySync：前者持续提供股票、商品和RWA价格，Aave计划采用；后者把合格托管人的状态同步到链上借贷流程，资产仍由托管人控制。覆盖资产和故障处置尚未完整公开。</p>
+          <h3 class="item-h">October 30: Chainlink presents a plan for round-the-clock pricing and custody synchronization</h3>
+          <p class="item-b">At LinkNYC, Chainlink presented 24/7 and CustodySync. The former supplies continuous equity, commodity and real-world asset prices, and Aave plans to use it. CustodySync passes a qualified custodian’s asset status into onchain lending workflows while the assets remain under the custodian’s control. Full asset coverage and failure-handling procedures have yet to be disclosed.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://chain.link/blog/link-nyc-recap-2026" target="_blank" rel="noopener" title="Chainlink · 发布 2026-10-30" aria-label="来源 1：Chainlink · 发布 2026-10-30">1</a><a class="source-number" href="https://chain.link/blog/introducing-chainlink-24-7" target="_blank" rel="noopener" title="Chainlink 24/7 · 发布 2026-10-29" aria-label="来源 2：Chainlink 24/7 · 发布 2026-10-29">2</a><a class="source-number" href="https://chain.link/blog/introducing-chainlink-custodysync" target="_blank" rel="noopener" title="Chainlink CustodySync · 发布 2026-10-29" aria-label="来源 3：Chainlink CustodySync · 发布 2026-10-29">3</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://chain.link/blog/link-nyc-recap-2026" target="_blank" rel="noopener" title="Chainlink · Published 2026-10-30" aria-label="Source 1: Chainlink · Published 2026-10-30">1</a><a class="source-number" href="https://chain.link/blog/introducing-chainlink-24-7" target="_blank" rel="noopener" title="Chainlink 24/7 · Published 2026-10-29" aria-label="Source 2: Chainlink 24/7 · Published 2026-10-29">2</a><a class="source-number" href="https://chain.link/blog/introducing-chainlink-custodysync" target="_blank" rel="noopener" title="Chainlink CustodySync · Published 2026-10-29" aria-label="Source 3: Chainlink CustodySync · Published 2026-10-29">3</a>
           </div>
         </article>
         </div>
@@ -153,39 +153,39 @@
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <h2 class="sec-title">链上抵押与产品机制</h2>
+            <h2 class="sec-title">Onchain collateral and product design</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">DeepBook Predict用共享USDC池承接到期型预测仓位</h3>
-          <p class="item-b">DeepBook Predict让共享USDC池成为所有交易的对手方，下单约800毫秒后按Pyth签名价格成交或退款。LP申购赎回也走异步队列并统一结算，协议能减少抢跑，但退出速度取决于闲置现金和批次处理。</p>
+          <h3 class="item-h">DeepBook Predict uses a shared USDC pool for prediction positions with a fixed expiry</h3>
+          <p class="item-b">A shared USDC pool is the counterparty to every trade on DeepBook Predict. Roughly 800 milliseconds after submission, the order either fills at a Pyth-signed price or is refunded. LP subscriptions and redemptions also enter an asynchronous queue for batch settlement. The design can reduce front-running, while exit speed depends on idle cash and batch processing.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.docs.sui.io/onchain-finance/deepbook/deepbook-predict" target="_blank" rel="noopener" title="Sui Docs · 未标发布日期 · 核验 2026-11-02" aria-label="来源 1：Sui Docs · 未标发布日期 · 核验 2026-11-02">1</a><a class="source-number" href="https://www.docs.sui.io/onchain-finance/deepbook/deepbook-predict/tutorial" target="_blank" rel="noopener" title="DeepBook Predict Tutorial · 未标发布日期 · 核验 2026-11-02" aria-label="来源 2：DeepBook Predict Tutorial · 未标发布日期 · 核验 2026-11-02">2</a><a class="source-number" href="https://suifoundation.ghost.io/introducing-deepbook-predict/" target="_blank" rel="noopener" title="Sui Foundation · 发布 2026-05-05 · 核验 2026-11-02" aria-label="来源 3：Sui Foundation · 发布 2026-05-05 · 核验 2026-11-02">3</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.docs.sui.io/onchain-finance/deepbook/deepbook-predict" target="_blank" rel="noopener" title="Sui Docs · Publication date not listed · Verified 2026-11-02" aria-label="Source 1: Sui Docs · Publication date not listed · Verified 2026-11-02">1</a><a class="source-number" href="https://www.docs.sui.io/onchain-finance/deepbook/deepbook-predict/tutorial" target="_blank" rel="noopener" title="DeepBook Predict Tutorial · Publication date not listed · Verified 2026-11-02" aria-label="Source 2: DeepBook Predict Tutorial · Publication date not listed · Verified 2026-11-02">2</a><a class="source-number" href="https://suifoundation.ghost.io/introducing-deepbook-predict/" target="_blank" rel="noopener" title="Sui Foundation · Published 2026-05-05 · Verified 2026-11-02" aria-label="Source 3: Sui Foundation · Published 2026-05-05 · Verified 2026-11-02">3</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Reisa把股票代币发行、交易、借贷与稳定币放进同一入口</h3>
-          <p class="item-b">Reisa在Robinhood Chain提供联合曲线发行、DEX、农场和隔离借贷；代币毕业后流动性永久锁定，RESD由股票代币抵押。协议收入用于收益和回购，但资产白名单、清算参数与赎回深度仍待验证。</p>
+          <h3 class="item-h">Reisa combines equity token issuance, trading, lending and stablecoins in one interface</h3>
+          <p class="item-b">Reisa offers bonding-curve token launches, a DEX, farms and isolated lending on Robinhood Chain. Liquidity is locked permanently after a token graduates. Equity tokens collateralize RESD. Protocol revenue funds yield and buybacks, while the asset allowlist, liquidation parameters and redemption depth still need verification.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://reisa.fi/" target="_blank" rel="noopener" title="Reisa · 未标发布日期 · 核验 2026-11-02" aria-label="来源 1：Reisa · 未标发布日期 · 核验 2026-11-02">1</a><a class="source-number" href="https://reisa.fi/docs/developers" target="_blank" rel="noopener" title="Reisa Developer Docs · 未标发布日期 · 核验 2026-11-02" aria-label="来源 2：Reisa Developer Docs · 未标发布日期 · 核验 2026-11-02">2</a><a class="source-number" href="https://docs.robinhood.com/chain/" target="_blank" rel="noopener" title="Robinhood Chain Docs · 未标发布日期 · 核验 2026-11-02" aria-label="来源 3：Robinhood Chain Docs · 未标发布日期 · 核验 2026-11-02">3</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://reisa.fi/" target="_blank" rel="noopener" title="Reisa · Publication date not listed · Verified 2026-11-02" aria-label="Source 1: Reisa · Publication date not listed · Verified 2026-11-02">1</a><a class="source-number" href="https://reisa.fi/docs/developers" target="_blank" rel="noopener" title="Reisa Developer Docs · Publication date not listed · Verified 2026-11-02" aria-label="Source 2: Reisa Developer Docs · Publication date not listed · Verified 2026-11-02">2</a><a class="source-number" href="https://docs.robinhood.com/chain/" target="_blank" rel="noopener" title="Robinhood Chain Docs · Publication date not listed · Verified 2026-11-02" aria-label="Source 3: Robinhood Chain Docs · Publication date not listed · Verified 2026-11-02">3</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Real World Lending让出借人直接承接股票代币违约风险</h3>
-          <p class="item-b">Real World Lending允许借款人锁定白名单股票代币，自定USDG本金、利息和期限；出借人直接放款，按期还款后取回本息，违约则接收全部抵押物。没有共享池和统一利率，但订单成交与风险分散更弱。</p>
+          <h3 class="item-h">Real World Lending leaves lenders directly exposed to defaults on equity-token loans</h3>
+          <p class="item-b">On Real World Lending, borrowers lock approved equity tokens and specify the USDG principal, interest and term. Lenders fund individual loans directly. They receive principal and interest on timely repayment or the entire collateral on default. There is no pooled capital or common rate, which also limits the ease of matching orders and diversifying risk.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.rwlcoin.tech/docs" target="_blank" rel="noopener" title="Real World Lending · 未标发布日期 · 核验 2026-11-02" aria-label="来源 1：Real World Lending · 未标发布日期 · 核验 2026-11-02">1</a><a class="source-number" href="https://docs.robinhood.com/chain/" target="_blank" rel="noopener" title="Robinhood Chain Docs · 未标发布日期 · 核验 2026-11-02" aria-label="来源 2：Robinhood Chain Docs · 未标发布日期 · 核验 2026-11-02">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.rwlcoin.tech/docs" target="_blank" rel="noopener" title="Real World Lending · Publication date not listed · Verified 2026-11-02" aria-label="Source 1: Real World Lending · Publication date not listed · Verified 2026-11-02">1</a><a class="source-number" href="https://docs.robinhood.com/chain/" target="_blank" rel="noopener" title="Robinhood Chain Docs · Publication date not listed · Verified 2026-11-02" aria-label="Source 2: Robinhood Chain Docs · Publication date not listed · Verified 2026-11-02">2</a>
           </div>
         </article>
         </div>
@@ -194,44 +194,44 @@
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <h2 class="sec-title">AI产品与代理运行</h2>
+            <h2 class="sec-title">AI products and agent operations</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">10月31日，Agno发布代理API部署范式</h3>
-          <p class="item-b">Agno展示如何把代理作为API服务，网页、后端和移动端可通过session_id复用会话，并统一查看运行轨迹。示例用SQLite和Chroma本地启动，生产环境建议切换Postgres与PgVector，权限和多租户仍需自行补齐。</p>
+          <h3 class="item-h">October 31: Agno outlines a deployment pattern for agent APIs</h3>
+          <p class="item-b">Agno demonstrates serving an agent through an API. Web, backend and mobile clients can reuse a session through session_id and inspect its execution trace. The example starts locally with SQLite and Chroma. Agno recommends Postgres and PgVector for production. Implementers must add authorization and tenant isolation themselves.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.agno.com/blog/put-agents-to-work-with-an-api" target="_blank" rel="noopener" title="Agno · 发布 2026-10-31" aria-label="来源 1：Agno · 发布 2026-10-31">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.agno.com/blog/put-agents-to-work-with-an-api" target="_blank" rel="noopener" title="Agno · Published 2026-10-31" aria-label="Source 1: Agno · Published 2026-10-31">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">10月30日，endue开放MCP代理调用与异步会话</h3>
-          <p class="item-b">endue的MCP服务允许助手列出、调用代理并读取会话；任务超过约50秒会先返回session ID，供后续查询。外部调用不能改模型、步骤或记忆，连接器和输出默认关闭，发送或删除动作还需审批。</p>
+          <h3 class="item-h">October 30: endue opens MCP agent calls and asynchronous sessions</h3>
+          <p class="item-b">endue’s MCP service allows assistants to list, call agents, and read sessions. If a task takes more than about 50 seconds, the session ID is returned first for subsequent queries. External calls cannot modify models, steps, or memories. Connectors and outputs are disabled by default, and sending or deleting actions requires approval.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://endue.ai/blog/connect-your-assistant-to-endue-agents/" target="_blank" rel="noopener" title="endue · 发布 2026-10-30" aria-label="来源 1：endue · 发布 2026-10-30">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://endue.ai/blog/connect-your-assistant-to-endue-agents/" target="_blank" rel="noopener" title="endue · Published 2026-10-30" aria-label="Source 1: endue · Published 2026-10-30">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">10月30日，Tasklet推出iOS云端代理控制端</h3>
-          <p class="item-b">Tasklet推出iPhone和iPad应用，用户可连接工具、审批动作、查看代理浏览器并管理自动化，任务离开应用后仍在云端继续。官方称可接入三千多种应用，但未公布长任务成功率、延迟和移动端权限审计数据。</p>
+          <h3 class="item-h">October 30: Tasklet releases an iOS interface for controlling cloud agents</h3>
+          <p class="item-b">Tasklet has launched applications for iPhone and iPad. Users can connect tools, approve actions, view agent browsers, and manage automation. Tasks continue in the cloud even after the application is closed. The official claims that it can integrate over 3,000 applications, but no data on success rates, delays, or mobile permissions has been published.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://tasklet.ai/blog/2026-10-29-tasklet-for-ios" target="_blank" rel="noopener" title="Tasklet · 发布 2026-10-30" aria-label="来源 1：Tasklet · 发布 2026-10-30">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://tasklet.ai/blog/2026-10-29-tasklet-for-ios" target="_blank" rel="noopener" title="Tasklet · Published 2026-10-30" aria-label="Source 1: Tasklet · Published 2026-10-30">1</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

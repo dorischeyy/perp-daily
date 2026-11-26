@@ -1,319 +1,211 @@
-# Perp DEX 日报 · 每日生成流程（Codex 定时任务执行）
+# Perp DEX Daily publishing guide
 
-> Codex 定时任务按北京时间执行的完整指令，全程中文。
+Produce one English-language edition for the current date in Beijing. Write headlines, body copy, section labels, summaries, editorial reviews, and ledger commentary in English. Preserve source URLs, API identifiers, numbers, dates, and attributed meaning. Research may use sources in other languages.
 
-## 编辑职责与读者
+Perp DEX Daily serves traders, product builders, and market researchers. Cover perpetual futures, crypto trading infrastructure, and material AI developments. Verify what changed, when it happened, who can use it, and what decision it affects. Use `editorial_version: 2` for current editions. Read [the research playbook](config/research-playbook.md) with [the project radar](config/project-radar.json).
 
-《Perp DEX 日报》面向交易者、产品开发者和市场研究者，以中文报道永续合约市场、交易基础设施与 AI 的最新进展。
-编辑需核实每项变化的来源、时间与适用范围，并说明它如何影响交易、产品使用或市场运行。
+## 1. Preflight and prior coverage
 
-2026-10-21 起使用 `editorial_version: 2`。选题与写作同时依据 `config/research-playbook.md` 和 `config/project-radar.json`。
-
-- **调研深入，呈现简洁**：机制、GTM、产品策略和讨论证据继续核验，底稿保留；页面每条仅为“一句完整标题 + 一段70至150字正文 + 来源”。不逐项铺开研究过程。
-- **先讲发生了什么，再解释怎么运作**：新闻先交代真实变化，机制说明放在后面；没有新事件的研究直接介绍规则，不给核验日期制造新闻意义。用用户怎么操作、资金怎么用和同类产品的具体差别解释特点，不靠抽象对仗或夸大复杂性。
-- **非AI动态分类，AI固定精选**：非AI栏目按当天真实材料归组，不固定名称、每栏条数或研究配额，无内容就不设。AI使用唯一`id: "ai"`栏目，恰好3条真实`kind: "news"`；`domain: "ai"`和`"crypto-ai"`都归此栏。3条按整数`importance_score`从高到低排列，分数均为75至100；不足3条就继续查证，不降分、不用旧研究或假日期补位。
-- **相关性硬边界**：每条必须与Crypto或AI强相关，并对产品、交易、获客、风控或工具选择提供具体信息。与这两个领域无关，或仅有泛宏观、名人和融资热闹的内容不收；不能借换栏目扩大到泛资讯。
-- **品类与新鲜度**：以2026-10-21确认的约9条篇幅为参考，其中AI固定3条，非AI约6条随有效材料浮动，不是凑数配额。非AI同时寻找当日合约成交走势、产品增删改和用户活动等新信息，不能整份只剩常青机制介绍。数据须标实际快照时间，以同指标、同窗口、同范围比较；没有可靠新变化就不硬凑栏目或把旧数据换日期。
-- **砍内容永远比加内容更重要。**
-
-### 交易机制比较
-
-比较交易平台时，分别核对流动性来源、交易对手方、成交定价、风险参考价、执行、结算、市场创建和分发。自建交易链与外部预言机可以并存。费率、服务商和风控参数须引用公开资料，并注明适用市场与日期。
-
-## 步骤 -1 · 运行前止损（必须先于联网调研）
-
-先取系统的北京日期并运行：
+Determine the report date with `TZ=Asia/Shanghai date +%F`. Before starting online research, run:
 
 ```bash
 node lib/check-run-state.mjs YYYY-MM-DD
 ```
 
-- 退出码 `10` / 输出 `ALREADY_PUBLISHED`：`docs/latest.json` 已是今天，立即停止，不调研、不生成、不渲染、不发布。
-- 退出码 `1`：暂停研究，诊断并修复可恢复的状态文件或日期问题，再重跑预检；只有无法在授权边界内解决时才报告精确阻断和恢复点。
-- 退出码 `0`：可以继续。若提示行情快照陈旧或缺失，仍可出报，但整份报告不得使用 `docs/market.json` 的数字。
+An exit code of 10 (`ALREADY_PUBLISHED`) means the date is already in `docs/latest.json`. End the run without duplicating an edition or notification. Exit 1 means the state or date needs investigation. Repair a recoverable issue and retry preflight. Exit 0 means research can proceed. A stale or missing market snapshot precludes its use in the report.
 
-这一步是昂贵研究前的机械幂等检查，不能等写完内容后才发现今天已经发布。
+Read the three most recent published reports, A4 and A5 in the last seven editorial reviews, the current ledger, and the files listed in [the operations guide](OPERATIONS.md). With no archive, begin with verified developments from the normal reporting window. In subsequent editions:
 
-## 步骤 0 · 加载信源注册表
+- Follow up only with a verified change. State the new fact and add its first-coverage date if a reader needs context. Rechecking an existing rule does not create a new event.
+- Avoid repeating the same project and research thesis within seven editions. Record what the new research adds in `research.why_now`.
+- Run `node lib/threads.mjs`. Review every active story's thesis, reader relevance (`why_us`), next observation (`watch_for`), and due date. Resolve each due review even if the result stays in the ledger.
 
-读 `config/sources.json`，按**四层架构**组织监控账号：
-- `official` 官方主号 → 事实（上市/新功能/perp/市场/治理）
-- `founder` 创始人/核心角色 → **提前信号**（常先于官方爆料）
-- `media` 媒体 → 覆盖面与大事件
-- `kol` → 解读、情绪、避坑、叙事扩散
-- `data` 链上数据 → whale/DEX 流量，**交叉验证**
+## 2. Build the research plan
 
-优先级：先用 `node lib/research-plan.mjs YYYY-MM-DD` 生成项目定向搜索，再按 `daily_scan.buckets` 六类竞争面补漏；`verify:true` 先按 `name` 搜索定位；`status:"watch"` 找不到时启用同类替补。每次至少两条名单外发现搜索，不能只围着名单打转。
+Run `node lib/research-plan.mjs YYYY-MM-DD`. Use the registry in `config/sources.json` to distinguish official announcements and protocol documents, founder or core-team signals, press coverage, commentator interpretations, and independent data. Locate `verify: true` accounts by the listed name. If a watch-list source is unavailable, try a comparable source. Treat social handles as leads until the actual statements are readable.
 
-同时执行计划中的`ai_daily_scan`：Anthropic、OpenAI、Scale AI、xAI、Kimi、DeepSeek、Qwen七家每天全部扫描，不参与Perp项目轮换，也不是每家每天输出一条。按精确名称与别名进行中英检索，窗口为3天，分别查“发布、模型能力、API可用性”和“定价、安全、真实采用”。Claude、Grok、Moonshot/月之暗面、Alibaba/通义千问等别名用于发现；先搜索定位真实官方页，实际读过再引用，不凭记忆拼官方URL。具体覆盖结果和取舍写入A5。
+Start with reader leads, unresolved questions, and rotating projects. Follow aliases, ecosystem integrations, developers, traders, and named commentators. Search at least twice outside the registry. Apply the playbook's four groups of questions on discussion, acquisition and retention, product flows, and mechanisms. Check RSS and media last for omissions. A coverage outage or inaccessible post is an evidence gap.
 
-`core_pool` 不是固定主角名单，更不能每天优先写同一家。它只是高频线索入口。每天必须完成六类竞争扫描：
-1. 直接竞品：Perp DEX、链上订单簿、RWA/股票永续；
-2. 中心化交易场所：CEX 的合约、统一保证金、经纪与做市基础设施；
-3. 分发入口：钱包、经纪商、超级 App、聚合器和嵌入式交易；
-4. 替代产品：预测市场、期权、受监管期货、代币化证券与现货杠杆；
-5. 关键基础设施：预言机、清算、稳定币、跨链、托管与风控；
-6. 新项目发现：近 30 天新上线、融资、测试网或首次出现真实采用的交易产品。
+Scan six competitive areas on each run:
 
-评估竞争关系时，核实不同产品服务哪些交易需求，以及它们如何影响保证金、订单流、价格发现、流动性或分发渠道。
+1. Perpetuals DEXs, onchain order books, and real-world-asset or stock perpetuals.
+2. Centralized derivatives exchanges, unified margin, brokers, and market-making infrastructure.
+3. Wallets, brokers, super-apps, aggregators, and embedded trading.
+4. Prediction markets, options, regulated futures, tokenized securities, and leveraged spot trading.
+5. Oracles, clearing, stablecoin collateral, bridging, custody, and risk controls.
+6. Discoveries from the past 30 days, including launches, testnets, financing with a concrete product purpose, and first documented use.
 
-## 步骤 0.5 · 去重（不与近几天重复）
+Search the last 24 to 48 hours for changes in products, listings, governance, access, distribution, and clearing as well as conventional perpetuals terms. Identify which trading need a competing product serves and how it changes access, collateral, order flow, price discovery, liquidity, or distribution. Registering a project as a lead does not guarantee coverage.
 
-发布前读最近 3 期正文和最近 7 期编辑自评中的 A4 项目发现与 A5 AI候选筛选记录，明确已经写过什么及有哪些待查项目。规则：
-- **同一件事不重复报**：昨天写过的发展，今天只在**有实质新进展**时才再提，且只写"新增了什么"，不复述旧内容。
-- **持续叙事也必须有新变化**：同一故事线只有出现可核验的新事实时才再次进入页面，并只写 delta；不能因为“仍然重要”就重复展示。需要交代上下文时，在新进展里用一句话标注首次提及日。
-- 既无新进展又不重要的，**直接不写**。
-- 项目研究不把“今天重新读文档”当新事件；同项目同论点 7 期内不重复，首次研究或新机制/新产品/新讨论证据须写进 `research.why_now`。
-> 注：今天若是第一期（无存档）则跳过去重，可适度覆盖近几天的重大新闻。
+Run the separate `ai_daily_scan` for Anthropic, OpenAI, Scale AI, xAI, Kimi, DeepSeek, and Qwen every day. For each, search exact names and aliases in English and Chinese over three days. Submit `query_en` in English. The plan supplies the `query_zh` search intent in English and sets `ai_query_localization.target_language` to `zh`. Translate the search terms into Chinese before issuing the second search, add verified Chinese names alongside the original brand, and preserve search operators. Apply the same procedure to Chinese official-source discovery and any discovery entry marked `target_language: zh`. Record the sources returned by both searches. Cover releases, capabilities, and API availability, then pricing, safety, and evidence of adoption. Include aliases such as Claude, Grok, Moonshot, and Alibaba Qwen. Find and read the actual official page before citing a URL. Log findings for each company in A5. Also consider qualifying candidates from outside these seven.
 
-## 步骤 0.6 · 读故事线台账（跨日叙事的状态核心）
+Global primary materials and specialist outlets provide broad coverage. Chinese-language sources including BlockBeats, Odaily, PANews, TechFlow, Foresight News, ChainCatcher, Jinse, Wu Blockchain, and BlockTempo can surface Asia-specific regulation, local launches, or original announcements. Follow leads to the original material and verify dates there. Use reviews, posts, interviews, forums, and app stores for evidence about slippage, funding, withdrawals, incentives, or mobile distribution. Identify the author and their relationship to the project.
 
-读 `threads.json`（故事线台账），并跑一次：
-```bash
-node lib/threads.mjs   # 校验台账结构 + 打印"今天到期该复盘的活跃线 / 该转 dormant 的线"
+## 3. Verify evidence, freshness, and scale
+
+Open every cited page. A search-result snippet, crawl time, or a recollection of a URL cannot establish an event, date, or rule. If a source returns a 403, is unavailable, or gives no publication date for news, find a readable dated account or omit it. Prefer an exchange announcement, protocol document, regulatory filing, attributed original post, or original paper. Keep claims by the operator distinct from independent evidence of adoption.
+
+Use the four date fields for their specific purposes:
+
+| Field | Meaning and use |
+| --- | --- |
+| `date` | Actual publication date of the cited source, confirmed on the page. News requires a date. Undated research documents may use null. |
+| `event_date` | Verified date of the event itself. Include it in news headlines. A later reprint does not renew an event. For an announcement of future implementation, distinguish the announcement from its effective date. |
+| `snapshot_date` | Actual observation date of a data study. Use it only on research and with a matching “As of” headline, no later than the report date. It is mutually exclusive with `event_date`. |
+| `checked_at` | Day the source was read. For studies, set it to the report date on the primary source and each reference. Keep it out of undated mechanism headlines. |
+
+Check embedded source URL dates against the source's real date. An unexplained difference of more than two days blocks publication. In a prior edition, articles published on December 19, 2025, January 29, March 18, and June 3, 2026 were assigned June 20 or 21 dates. Keep an older article's true date even when that removes a candidate.
+
+**News.** A standalone news item's source and event must meet the 72-hour window. Older evidence needed for context can appear briefly in a current item, clearly dated as background. A seven-day exception is available for one or two genuine multi-event weekly trends. Consolidate related developments into a chronological account, prefix the headline with `Weekly theme |`, use the latest relevant source date, and explain the change over the week. A single old announcement cannot use this exception. AI news follows the same rule. Reject future and invalid dates.
+
+**Research.** Use `kind: "research"` for a substantive non-AI study with full evidence. Require at least two distinct URLs, including an official mechanism document or product page, and reread all sources on the report date. Preserve known dates even when old. Document which rule, application, comparison, or evidence is new to the publication. Search current discussion over seven days where possible, up to 30 days. Mechanism documents have no age limit. Older interviews can serve as references. Record specific discussion gaps if original observations are unavailable.
+
+**Figures.** Inspect `docs/market.json` before using its CoinGecko derivatives, price, market-cap, or dominance figures. The existing market-data workflow is scheduled for 07:30 Beijing time. Use a group of figures only when `fetched_at` falls on the current Beijing date and that group has no error flag. Use the workflow's snapshot when cloud research cannot reach the data provider directly. Cross-check with the registry's data pages, such as DefiLlama Perps or CoinGecko Derivatives. Use [the benchmarks](config/benchmarks.md) as dated historical context. Compare matching metrics, windows, assets, and venues. Name the missing denominator when a ranking or share cannot be checked. Distinguish daily volume, open interest, fees, net deposits, and user retention.
+
+**Mechanisms and product adoption.** Classify each trading product as an independent protocol, trading frontend, spot venue or infrastructure, prediction market, or other relevant product. Check execution, source of depth, counterparties and P&L, execution and risk prices, settlement, custody, market creation, and distribution independently. An application chain may use both an order book and an external oracle. Cite market-specific fee schedules, provider names, and risk parameters with their dates. Identify how a user discovers, funds, trades on, and returns to the product, and who pays the incentives. Verify AI candidates against their actual model, API, product, tool, or adoption changes.
+
+## 4. Select candidates
+
+Score all candidates. Record the five components, total, tier, kind, selection, and decision on ledger tracking in A2. Use the same score for AI candidates in A5.
+
+| Dimension | Points | Evidence guiding the score |
+| --- | ---: | --- |
+| Structural impact | 30 | Consequential execution, liquidity, distribution, or product choices. A documented new mechanism can qualify at an early stage. |
+| Relevance | 25 | Effect on access, collateral, trading, exits, or selection of a product, route, or AI tool. A concrete decision earns more than a general comparison. |
+| Durability | 20 | Likelihood that observable developments will continue over several weeks. A one-off event earns few points. |
+| Actionability | 15 | Evidence enabling a reader to change a decision or verify a specific risk. |
+| Evidence quality | 10 | Readable, attributable evidence of the rules, actual product, or observation. State the boundary between fact and inference. |
+
+An S candidate scores at least 90 and opens or updates a story thread, usually reviewed about every three days. An A candidate scores 75 to 89 and receives priority. If durability is at least 15, track it on a roughly five-to-seven-day cadence. A B candidate scores 60 to 74 and is eligible for non-AI coverage. Exclude lower scores except for necessary, clearly attributed background. A low funding amount or early trading volume is insufficient by itself to discard a useful mechanism or acquisition finding.
+
+Build non-AI sections around the selected stories. Each item must show a concrete connection to crypto or AI and help the reader understand product use, trading, risk, distribution, or tool selection. Screen out unrelated macro commentary, celebrity news, raw price moves, unsupported predictions, and statements that repeat public announcements without useful new information. For financing or regulation, identify the product use of funds, access restriction, rule, or execution choice that changes. Consider current volume, product changes, and user campaigns as well as mechanism studies.
+
+Consolidate reports of the same AI event before scoring. Publish exactly the three highest qualifying news items in a single `ai` section, with integer `importance_score` values from 75 to 100 in descending order. Explain ties, direct sources, and exclusions in A5. When fewer than three qualify, continue researching without lowering the standard. The approved October 21, 2026 edition had around nine items overall, including three AI items. Non-AI counts depend on the available evidence.
+
+## 5. Maintain the story ledger
+
+For an S-tier event or durable A-tier change, update an existing thread if it matches the thesis. Append the dated new fact and URL, update `last_update`, and set `next_check` according to cadence. Otherwise open a thread with an ID, title, score, tier, thesis, relevance to readers, next observation, status, cadence, dates, and evidence log. Preserve the existing schema and status values.
+
+For each due active thread, check for new evidence. A verified change earns a new log entry. Without one, advance the review date without adding a repeated status line or a public item. Two review cycles without a change move the thread to `dormant`. A resolved matter becomes `closed` with a final factual line. Rerun `node lib/threads.mjs` after editing.
+
+A qualifying development appears in one normal report item. Use a short sentence of prior context where needed. Keep review reminders, status cards, and a separate `content.json.threads` snapshot out of v2 editions.
+
+## 6. Write the public edition
+
+- **Lead.** State one supported finding and any necessary limit in one or two sentences. Use 8 to 55 words overall and at most 32 words per sentence. Prefer the concrete change and its consequence over phrases such as “This edition will explore” or “Let's look at.” Keep detailed numbers and mechanics in the body. A regulatory or funding announcement earns the lead only if its effect warrants it.
+- **Headlines.** Use 3 to 25 words in a complete statement. News headlines name the real event date, project, and change. Use ISO dates or English month-and-day dates. Mechanism studies have undated headlines unless tied to a verified event. Snapshot studies use “As of” and the matching data date.
+- **Body.** Write a single paragraph of 30 to 100 English words in a single string. Omit bullets, stacked subheads, and separate context cards. The public headline and numbered source row are outside the body word count. Use plain prose or the renderer's supported bold markers and place URLs in their dedicated fields.
+- **News.** Begin with what was added, changed, or withdrawn. Give the affected users and scope, including region or effective date where material. Compare with the previous rule only if documented. Explain the mechanism after the event itself.
+- **Studies.** Describe what users deposit, borrow, trade, or withdraw. Compare a documented equivalent mode. For instance, if each pair needs separate collateral, say that the balance assigned to one pair cannot cover a loss in another. Explain the actual account behavior before calling a rule unusual.
+- **Navigation and evidence.** Use one section heading. Keep `kicker`, `product_view`, separate developments, retired product-assessment sections, item `context`, and internal research labels off the current page. Let the lead summarize the main change and use the body for detail. A finding can draw on the internal notes without duplicating a visible paragraph. Avoid repeating a project study or the same event in multiple sections.
+- **Style.** Write for an informed colleague. Define a term when it changes how the reader interprets the rule. Give figures a useful comparison. Avoid invented industry-wide implications, long dashes, unexplained jargon, and routine closing disclaimers. Distinguish planned, tested, and live features. Describe uncertainty in the relevant sentence.
+
+## 7. Complete the editorial review
+
+Review the working draft, revise the edition, and save the audit to `review.draft.md` in the repository root. Render archives it as `docs/archive/YYYY-MM-DD-review.md`. The audit is a separate published artifact. Use the following headings and order exactly.
+
+```markdown
+## A0 Reader value
+**Why open this edition today?**: ...
+**What is the most important finding?**: ...
+**Which prior assessment changed?**: ...
+**What decision can readers make?**: ...
+**What evidence would overturn the conclusion?**: ...
+**Which news recap was removed?**: Removed ...
+
+## A Editorial review
+### Freshness audit
+### Six reader perspectives
+### Ten-dimension assessment
+### Top three revisions
+## A1 Metric context
+## A2 Candidate scores
+## A3 Story continuity
+## A4 Project discovery and evidence
+### Search coverage
+### Project classification
+### Discussion evidence
+### New findings and open questions
+## A5 AI candidate selection
+### Vendor coverage
+### Top three and exclusions
+## B Excluded items
+## C Changelog
 ```
-台账记录了所有**正在追踪的重要故事线**（S 级≥90 或有多周叙事潜力的事件，见步骤 1.3）。它的意义：让重要信息**不因读者漏看某天而断裂**——把分散在各天的进展串成一条连续叙事。今天的报告必须：
-- 查看仍在跟踪的故事线（`status=active`），核对核心论点（`thesis`）、与读者的关系（`why_us`）和下一项观察指标（`watch_for`）。
-- 知道**哪些线今天 next_check 到期**（lib/threads.mjs 会列出）——这些线今天必须主动复盘：有新进展就更新并 recall；没有新进展只在台账内推进复盘或转 dormant，**不得为了交作业占用日报版面**（见步骤 1.4）。
 
-## 步骤 0.7 · 读数据快照（数字参照系，免费无需 key）
+Fill every section with actual observations. In A0, give a concrete subject, change in judgment, decision, and observable falsifier. State which prior conclusion changed or why confidence changed. Explain the basis and limits of the lead and why it outranked other candidates. Begin the final answer with `Removed` and identify an actual removal. Revise the draft if it offers no specific reader benefit.
 
-**读 `docs/market.json`**（CoinGecko 免费：各家 perp OI/量、BTC/ETH/SOL/HYPE 价与24h、全市场市值与BTC占比）。
-这个文件由 **`market-data` GitHub Action 在出报前(北京 07:30)预拉提交**——因为云端沙箱出口白名单挡了 api.coingecko.com，**你（云端 agent）自己跑 `node lib/fetch-data.mjs` 会被墙、拉不到，不要在云端跑它**（本机测试才跑）。
-> ⚠️ **防陈旧（重要）**：用之前先看 `docs/market.json` 的 `fetched_at`——**若不是今天（北京）**，说明预拉那次失败、数字是旧的，则**该批数字一律按"待核实"处理，绝不拿昨天的数字当今天报**。文件里带 `*_error` 字段的那组也按待核实。
-报告里**任何量级数字优先用 docs/market.json 的真实值**（且 fetched_at 为今天），并给参照系（谁第几、24h/7d 怎么变、创纪录还是常态），
-再用 config/sources.json 的 `data_pages`（DefiLlama perps / CoinGecko derivatives 网页）交叉核对。**不要凭印象编数字。**
-**同时读 `config/benchmarks.md`**：其中历史量级只作认知锚点，不代替当前同口径数据。对影响判断的数字，将必要参照或口径限制自然并入70至150字正文，不再使用单独的 `context` 提示块。
+In the freshness audit, list every headline, section, kind, source date, event date, snapshot date, check date, body word count, and disposition. Mark inapplicable fields explicitly. Check source and event freshness for news, source-level verification for studies, matching snapshot headlines, and the multi-event basis for any weekly trend. In the six perspectives, give one or two item-specific observations for each reader:
 
-## 步骤 1 · 联网调研
+1. A trader checks positions, margin, exits, and comparable figures.
+2. A product lead checks implementation status and a comparable user action.
+3. A strategist identifies a development with evidence for a resource or product decision.
+4. A fact-checker separates independently verifiable evidence from a single party's assertion.
+5. An editor checks ordering, the lead, and duplicated details.
+6. A first-time reader identifies any missing background, unclear language, or unsupported claim of novelty.
 
-**先项目研究，后 RSS 补漏**：执行 `config/research-playbook.md` 的四组搜索，沿用户线索、轮换项目、讨论者与生态集成发现新名称。新闻搜近 3 天，讨论优先近 7 天且最多 30 天，发现搜近 30 天，机制文档不限时间。没有 X API 时仍可检索公开帖子、官方文档、访谈、论坛和应用商店；访问不到就记录缺口，不能把 RSS 当完整的社交讨论覆盖。
+Record the ten-dimension quality assessment with reasons for material deductions. Include accuracy, freshness, traceable sources, research depth, trading relevance, product value, mechanism clarity, numerical comparability, deduplication, and readability. List the three most important changes actually made.
 
-交易项目先确认“独立永续协议 / 交易前端 / 现货基础设施 / 预测市场 / 其他”，再核验机制、GTM与产品；AI候选按模型、API、工具或采用变化核实，不强套交易协议分类。RSS 和媒体只用于最后补漏及交叉核实，不以媒体是否报道决定项目是否值得研究。不要申请 API key 或改动凭证；本流程能以公开页面执行。
+In A1, record the headline, figure and unit, window, comparator, treatment in the paragraph, and conclusion. Identify missing data. Dates and identifiers may be exempt. In A2, score selected and rejected candidates and explain ledger decisions. In A3, record due-thread reviews, evidence added, status decisions, and whether each public development appears once.
 
-再用 WebSearch / WebFetch，按 config/sources.json 的 `daily_scan.buckets`、账号与关键词补检索过去 24-48h 动态。除 "perp"、"new feature"、"launch"、"testnet"、"governance"、"buyback"、"early access" 外，必须覆盖 "wallet trading"、"broker crypto"、"prediction market"、"regulated futures"、"tokenized stocks"、"unified margin"、"oracle"、"clearing"、"stablecoin collateral"、"new trading app" 等替代型竞争词。
+In A4, give exact queries, dates and windows, at least two outside-registry discovery queries, classifications, coverage gaps, attributed discussion, and what changed relative to the past seven editions. Include every selected research project. Even an edition without research items requires an actual discovery and exclusion record.
 
-**国外为主、国内为辅（主辅原则）**：信息源**以国外优质源为主**（CoinDesk / The Block / Cointelegraph / Decrypt / The Defiant + 项目方官方页）；**国内中文媒体仅作辅助补充**——律动 BlockBeats / Odaily / PANews / 深潮 TechFlow / Foresight News / 链捕手 / 金色 / 吴说 / 动区（见 config/sources.json `region:zh`）。它们多无稳定 RSS，**用 WebSearch 按名字搜当日要闻当线索**，命中后回溯官方/外媒核实日期与事实。国内源的价值主要在：亚洲监管动态、项目方中文首发的上线/融资、中文区竞品动作。
-**筛具体研究价值**：交易员、开发者和研究者对交易体验、定价、滑点、提现、激励、移动端与分发的具名讨论是核心素材；必须核实观点和作者关系。跳过无依据喊单、价格预测和没有新信息的转发。融资或监管消息只有改变具体市场准入、产品或执行选择时才优先。
+In A5, record actual bilingual queries, three-day windows, sources, results, and any access gaps for all seven canonical company names. Then list candidate subscores and totals, merge duplicate events, rank the remainder, explain ties and exclusions, and reconcile the published top three with their integer scores. In B, name three to five excluded candidates and give their reasons. In C, list three to five revisions from the working draft and why they improved the edition.
 
-**收录门槛：这条是否与Crypto或AI强相关，并能改变一个判断或更新一个有用认知？不能就不收。** 非AI先研究筛选再按主题分组，无栏目或条数配额；机制资料旧但当日核实、研究问题新，可以作为非AI研究收录。AI合并同事件后按五维总分选最高的3条75分以上真实新闻，候选不足就继续搜索和核实，不能用低价值内容、旧研究或改日期补数。
+## 8. Write content.json
 
-扫描面不等于最终栏目：可以收独立协议、前端、钱包、交易所、预测市场、交易玩法、Crypto或AI项目融资、AI产品与工具链等。融资需说清资金用途或具体产品方向；监管需关联具体交易准入或产品规则。可收同口径合约成交趋势、持仓与集中度变化，不收没有参照的价格播报或泛宏观。AI及Crypto-AI交叉内容全部归`ai`，其余按主题动态归组；同一事件合并为一条，不能拆成多条或跨栏重复。
-
-**硬规则**：
-- 每条必须有实际读取的来源 URL。新闻必须有真实 `date`；项目研究允许无发布日期文档的 `date: null`，但主源与每条补充源都须有当天 `checked_at`，且完整填写研究字段。
-- **一条新闻用了多份材料时必须拆清出处**：`source/url/date`只写主来源；背景事实或交叉验证写进`references`，每条含`source/url/date`。主来源、补充来源和讨论原文的所有URL合并去重，页面只呈现一行“来源 1 2 3…”，不另显示“补充”行。完整来源名称、真实发布日期或未标日期、核验日及已有作者关系保留在链接`title`和`aria-label`中；未核实的作者关系不能编造。禁止在`source`里写“A / B”却只挂一个URL。
-- **新闻的 `date` 必须经来源页核实，研究则另按研究规则允许无日期文档，严禁凭印象或为通过时效门槛编造日期**：
-  - 写每条新闻前，**WebFetch 它的 source url，从页面读到真实发布日期**（byline / pubDate / "published on"），`date` 字段 = 这个真实日期，一字不改。
-  - **来源页打不开 / 403 / 读不到明确发布日 → 这条直接不收**，绝不蒙一个日期顶上。可换一个能打开的同事件来源（feeds.rss 里的、或官方页），核实到真实日期再收。
-  - URL 自带日期的（如 `/2026/01/29/`、`/2026-01-29-`），`date` 必须与之一致；`lib/check-freshness.mjs` 会做 url 内嵌日期 vs date 字段的交叉校验，差 >2 天直接判「造假」阻断发布。
-  - ⚠️ 反面教训（真实事故）：把 The Block 2025-12-19、CCN 2026-03-18、BlockEden 2026-01-29、Investing 2026-06-03 的旧文统统标成 2026-06-20/21 当新闻发，这是最严重的事故，比漏发还糟。**非AI宁可少收或省略栏目；AI不足3条继续查证，不能用假日期或旧闻补数量。**
-- **日期按用途区分**：`date` 是主来源实际发布日期，`event_date` 是真实事件日，两者不能默认相同；转载不能让旧事件重新获得时效。`checked_at` 只记录查证时间，留在底稿或来源元数据，不写进机制介绍的标题。无新事件的研究标题不加日期；只有真正的数据快照才使用“截至某日”，并以独立的 `snapshot_date` 记录数据所属日期，不能拿查证日代替数据日。
-- **时效门槛（混合制，最重要）**：
-  - **非AI项目研究**：显式 `kind: "research"`，须满足完整研究结构，至少两条不同来源并当日重读；已知发布日期原样保留，未知用 `null`，来源链接元数据区分核验日与发布日期。机制资料可旧，真实讨论最多 30 天。单条旧新闻不得靠改 kind 绕过研究要求；AI固定3条不能由研究条目替代。
-  - **新闻条目**：`date` 必须在**最近 72 小时内**。更早的不单独成条；仅当是理解今天某条的必要背景，才在该条 body 里**一句话带过并标「(背景，MM-DD)」**。
-  - **本周主线（趋势例外）**：每期可有 **≤ 1–2 条**「本周主线」条目，把**近 7 天**的一组相关发展**归并成趋势综述**——条件：① body 写成趋势演化（不是单一旧事件复述）② headline 前缀标「本周主线 ｜」③ `date` 取这组最新一笔且 ≤7 天 ④ body 点出"这周在发生什么结构性变化"。此既有例外也适用于AI，但必须是真实多事件综述，不能把单一旧事件或研究改名补足3条；仍须满足AI评分和排序要求。
-  - 发布前逐条查新闻 date：>72h 且非「本周主线」的新闻一律砍；>7 天的新闻一律砍。研究不适用这条删除规则，按完整研究结构、真实来源日期、当天 `checked_at` 与讨论30天窗口审查。
-  - **机械关卡兜底**：`bash publish.sh validate` 会跑 `lib/check-freshness.mjs`。任意栏目中的新闻都按真实来源日期和事件日期审查；`kind: "research"` 另校验底稿结构、逐源日期与当日核验，不能只改kind绕过新闻时效。
-  - **今天 = 系统权威日期**：以 `publish.sh` 的 `TZ=Asia/Shanghai date +%F` 为唯一"今天"。新闻搜索带当前年月和近期窗口，旧事件不能靠重新索引获得时效；机制研究不强加近3天限制，保留文档真实发布日期，近期讨论单独检索。
-- **数字判读（对照 config/benchmarks.md）**：只保留影响判断的数字和必要参照，写进正文，不生成 `context` 或“影响范围”等小抬头。同指标、同时间窗、同范围才能比较；无可靠比较时自然说明缺口。标题给核心动作，正文补新信息，不反复重述同一数字。
-- **一手优先**（见 config/sources.json `sourcing_rule`）：机制以官方文档与产品规则核实；讨论以作者可读原帖/原文核实。官方声明和独立采用证据分开标注，聚合站只作发现入口。
-- **无 X API**：handle 只是搜索线索，**不能假装读到原始推文**；无可引用网页出处的观点标"待核实"或不收。
-- 客观克制，不喊单、不做投资建议。中英文信源并用。
-
-## 步骤 1.3 · 重要性评分（评分机制 · 决定取舍/排序/是否建线）
-
-对每条**候选**新闻按下面 5 维打分（合计 0-100），分数决定它**收不收、放多前、要不要建成持续追踪的故事线**。这不是走形式——它逼你对"重要"给出可解释的判断，并把真正重磅的事识别出来长期追踪。
-
-| 维度 | 满分 | 怎么打 |
-|------|------|--------|
-| **结构性 Structural** | 30 | 是否揭示值得比较的执行/流动性/分发/产品选择。新项目的有效机制或获客路线可高分，不要求先改变全行业格局；泛监管与融资不自动得高分。 |
-| **相关度 Relevance** | 25 | 是否影响交易者获取市场、配置抵押品、成交或退出，或影响开发者选择交易机制、分发渠道与 AI 工具。25 分表示可能改变具体决策，12 分表示提供可比较的案例，0 分表示与这些决策无关。 |
-| **持续性 Durability** | 20 | 一次性事件还是多周叙事的线头。20=明显会演化数周；10=可能有后续；0=一次性 |
-| **可行动性 Actionability** | 15 | 读者能否据此调整具体决策或核查一项风险。15 分表示有明确行动依据，7 分表示值得进一步评估，0 分表示仅提供背景。 |
-| **证据质量 Evidence** | 10 | 规则可复核、实际产品/原文可读、事实与推断分清则高分；宣传、传言、证据矛盾则低分。融资小或成交早期不能单独扣至0分；必要体量参照并入正文。 |
-
-**分级与处理**：
-- **S 级（≥90）**：立即在 `threads.json` **建故事线**并持续追踪（cadence≈3 天）。这是"重要到读者漏看会损失"的信息，必须跨日串联。
-- **A 级（75-89）**：重点条目，放栏目前位；若**持续性≥15** 也建线（cadence≈5-7 天）。
-- **B 级（60-74）**：仅非AI内容可正常收录，AI不收。
-- **<60**：砍掉（除非作为某条的一句话背景）。
-
-> 评分要诚实、可解释，**每条的 5 维分数 + 合计 + 级别必须写进《编辑自评》的评分表**（步骤 1.8），供审计。分数不是为了精确到个位，是为了强制排序与建线判断有据可依。
-
-AI先合并同一事件，再按上述30/25/20/15/10五维评分，在A5人工审计全部候选排序与排除理由。入选恰好3条最高分的真实新闻，`importance_score`写五维合计的75至100整数，按降序排列；同分说明取舍。不按厂商平均分配，七家每日必扫不等于七家每日各发一条；不足3条继续检索，不降低门槛。
-
-## 步骤 1.4 · 故事线维护与串联（threading · 本日报的"高级感"来源）
-
-读者要的体感是：**这不是一个每天孤立报道的机器人，而是一个对每条重要线索如数家珍、能把跨日信息串成连续叙事的分析者。** 这一步就是兑现它。基于步骤 0.6 读到的台账 + 步骤 1.3 的评分，做三件事：
-
-**A. 更新台账 `threads.json`（写状态）**
-- 今天的 S 级新闻（或 A 级且持续性高）→ 命中已有线就 `log` 追加一条 delta(只记新增，不复述) + 更新 `last_update`/`next_check`(=今天+cadence)；否则**新建一条线**(id/title/score/tier/thesis/why_us/watch_for/log)。
-- `lib/threads.mjs` 列出的**到期线**(next_check≤今天)：核实有无新进展。有则更新；没有则只推进 `next_check`，不向公开 log 追加“仍无进展”，也不进入页面；**连续两个 cadence 无进展→转 `dormant`**；已了结(裁定出了/事件落地)→转 `closed` 并写一句收尾。
-- 改完 `threads.json` 后**务必再跑一次 `node lib/threads.mjs` 确认结构合法**（publish.sh 也会卡）。
-
-**B. 串进当天报告**：新进展只进入一条正常新闻。需要历史背景时，在70至150字正文中用一句话连接前因，不增加线名、级别或“今日进展”卡片。v2不生成 `content.json.threads` 展示快照，台账仍正常维护。
-
-**C. 反冗余**：到期提醒和无变化状态只留在底稿。同一故事线只有新事实才再次入选；lead只概括主线，正文承载细节，不让同一进展跨栏或跨卡重复。
-
-## 步骤 1.5 · 已取消的版式
-
-不生成顶部 `product_view`、`threads` 展示块、末尾「产品判断」栏目、条目 `context`，或“事件、机制、影响、GTM、产品策略”等小抬头。`research` 字段仅作底稿，不渲染。正文需要判断时自然写“据此可推测”等并保留边界，不强行给研发动作。
-
-## 步骤 1.8 · 自检 + 升级（发布前质检，写成可审计的《编辑自评》）
-
-写 content.json 前，对脑中草稿做一轮真实自检，再据此重写。
-**日报正文只放升级后的结果；但自检过程必须落成一份可审计的《编辑自评》文件**（见本步骤末尾），不可省略——
-没有自评文件 = 视为没做自检。
-
-**六类读者视角**。在自评的 `### 六视角找茬` 小节中，每项选择一至两个能够定位到条目的具体问题。
-1. 交易者：哪些变化影响开仓、保证金或退出？引用的指标与什么基准比较？
-2. 产品负责人：哪些机制已经落地？与同类产品相比，它改变了哪一步用户操作？
-3. 战略研究者：本周哪项市场变化可能影响产品或资源配置？有哪些支持证据？
-4. 事实核查者：哪些数据能够复核？哪些结论仍来自单一机构声明？
-5. 编辑：最重要的消息是否优先呈现？导语是否说明本期最重要的发现？哪些细节重复？
-6. 初次阅读者：理解这项变化还需要了解哪些背景或术语？
-
-**重写约束**：
-- **lead 直接给结论，不写导读**：围绕一个主重点，用1至2个短句直接陈述事实支撑的结论或分析结果，并保留必要边界。总长20至120字，单句不超过70字；不写“接下来研究什么”或“建议先看什么”，不要求每栏都露出。
-- **像向同事说明重点一样写**：优先用自然中文和读者能理解的动作；有中文常用名称就不要连续堆英文机构与缩写。避免“X把A扩到B，Y把C推进D，Z则……”式平铺，以及“独立控制面、叙事升级”等没有解释的术语。
-- **先有取舍，再下结论**：融资、监管或知名机构不自动占首位。选择最能更新产品、交易或竞争认知的一件事；最多补充一个确有必要的相关点，不强连Crypto与AI，不用单个项目动作推导全行业趋势。
-- **lead不复述正文，不承诺分析过程**：保留结论所需的具体主体与事实，详细数字、时间和机制留给正文。研究旧机制不包装成今日上线，推断和待核实事项不写成已发生事实。禁用“更值得研究的是”“更值得关注的是”“这期先看”“这一期先看”“今天先看”“本文将”“让我们来看看”等导读、研究计划或空泛引导；读完仍不知道已经得出什么判断，就重写。
-- **完整标题，时间必须有内容意义**：12至90字的一句完整陈述。真实新闻按“时间、项目、具体事件”交代发生了什么，日期对应已核实 `event_date`，不只写“再升级”等空泛动作。机制研究直接写主体与规则或特点，不强加“截至今天”“今天研究”；真正的数据快照才写“截至某日”并填写 `snapshot_date`。不能把查证日改叫事件日或数据日来通过校验。
-- **统一正文**：每条仅一个字符串、一段70至150字，交代核心事实和最有用的机制、策略或背景，不能在短段落内塞完所有调研字段。不使用项目符号、分段或“影响：”“机制：”等标签式小标题。
-- **新闻事实在前**：先说新增、取消或调整了什么，谁能用、何时生效及必要适用范围；有已核实旧规则时才写“从什么改为什么”，不能猜前态。读者先看懂新闻本身，后面再用一两句解释必要机制或差别。不用“机制复杂”“重塑格局”等评价代替事实，也不靠抽象意义收尾。
-- **机制讲人和钱怎么动**：先说明用户存什么、借什么、在哪里交易或怎样取回钱，再选最有用的一处解释。比较主流平台时写清同类产品和模式，例如某平台的全仓杠杆或逐仓杠杆；不能把一个模式说成整个平台，更不能默认所有主流平台相同。独特之处必须有证据；同类已有的规则就说相似，不强造特殊性。若缺可靠对照，只介绍已确认规则，底稿保留待核实项。
-- **像读者会说的话**：用具体句子解释，不用“共享流动性不等于共享保证金”这类概念对仗替代说明。例如直接说“不同交易对分别放抵押物，一边资金不足时，另一边的余额不能补过来”。这不是全面禁用“不等于”三个字，真实数量或规则纠错仍可用；要删的是没有交代操作和结果的口号。不要强行罗列所有技术环节或给每条补一段风险免责声明。
-- **字数口径**：标题与来源行不计入正文长度；正文去掉空白和渲染器支持的`**粗体**`标记后按Unicode可见字符计数，汉字、英文字母、数字和标点各计1。其他Markdown不会渲染，应写纯正文，链接放来源字段。目标接近100至120字，不靠空话凑字。
-- **串主线**：把零散条目归进本周趋势叙事，不是 N 条互不相干 bullet。
-- **统一口吻 + house view**：有观点有立场，去掉八股套话。
-- **栏目只保留一级标题**：sections 不写 `kicker`。栏目标题负责导航，条目标题负责信息，不再叠加一个会复述条目内容的主题副标题。
-- **调研底稿与成稿分离**：`research` 与 `relevance` 是内部证据，不复制到页面；正文可以提炼其中事实。重要事实不能仅藏在不会展示的字段里。
-
-**发布前重复性检查**：对照 `lead → 栏目标题 → item headline/body`。摘要共享主体合理，细节不能重复。v2允许正文提炼内部研究底稿，不将未展示的字段与正文误判为页面重复；同一期仍不能重复收录同一项目研究。
-
-将本轮编辑自评保存为仓库根目录的 `review.draft.md`。`publish.sh` 按报告日期归档为 `docs/archive/<date>-review.md`。请按下列顺序填写。
-- **A0 读者价值自问**：必须使用以下六个固定问题和格式，每个答案至少给出一个具体主体、判断变化或可观察证据，不能写“值得关注、继续观察、暂无”：
-  1. `**为什么今天值得点开？**：...`
-  2. `**最值得看的是什么？**：...`
-  3. `**哪项原有判断被更新？**：...`
-  4. `**看完后能做出什么更好的决定？**：...`
-  5. `**什么证据会推翻今天的结论？**：...`
-  6. `**哪条内容只是新闻复述？**：已删除……`
-  第二问同时交代lead的结论、事实依据与必要边界，以及为何优先于其他候选；不以“覆盖三个栏目”为理由。
-  若前四问无法给出具体答案，说明本期还不值得读，应继续删改，而不是发布一份“正确但没用”的日报。
-- **A 体检报告**：时效表覆盖所有item，每行列`headline / 栏目 / kind / date / event_date / snapshot_date / checked_at / 正文字数 / 处理`，未使用的日期字段写“无”。新闻检查真实事件日与变化、机制研究检查无强塞核验日、数据快照检查实际数据日与“截至”对应。正文70至150字且无小抬头；新闻先说变化，再补必要机制。所有新闻含AI按72小时或真实多事件本周主线7天例外审查，不能靠单一旧事件或研究补AI3条；研究逐源保留真实日期或null及当天checked_at，不伪造事件。再写六视角、十维评分和Top 3实改项；新人视角必须检查是否用简单的动作、同类对照和实际结果说明特点，而非概念对仗或夸大独特性。
-- **A1 数字量级检查**：列`headline / 数字与单位 / 时间窗 / 参照对象 / 正文如何交代 / 结论`。无可靠比较就写缺失数据；日期、编号等写“豁免”。不生成页面context。
-- **A2 评分表**：逐条列所有候选的`结构性/相关度/持续性/可行动性/证据质量 → 合计 → 级别`，注明新闻或研究及是否建线。不能以小融资、低成交、无今日公告为由单独淘汰新项目。
-- **A3 故事线连续性检查**：交代到期线更新、推进或转dormant；入选进展是否有新事实与来源、只进入一条正常正文；有无漏建线或重复。`threads.json` 改后重跑校验，不生成额外展示块。
-- **A4 项目发现与证据**：使用 `config/research-playbook.md` 四个小节，记录实际查询、名单外发现、动态栏目依据、每条Crypto/AI相关性、项目类型、讨论者及缺口、相对近7期研究增量。必须包含所有研究项目；本期未收研究也须记录检索与排除理由，不设研究条数配额。
-- **A5 AI候选筛选**：必须使用精确标题`## A5 AI候选筛选`，位于A4之后、B之前。包含`### 厂商覆盖`与`### 前三条与取舍`。前者以Anthropic、OpenAI、Scale AI、xAI、Kimi、DeepSeek、Qwen七个标准名称逐家记录实际中英查询、3天窗口、读到的来源和结果；没找到合格新闻也要写具体结果与排除理由，不能只打勾。后者列候选五维30/25/20/15/10得分、整数总分、同事件合并关系与排序，说明最终3条为何胜出及其余候选为何排除，并核对AI栏目`importance_score`和降序一致。
-- **B 不收录清单**：今天砍掉/没收的素材 3-5 条，每条一句话说明为什么砍（砍 > 加，要有取舍痕迹）。
-- **C changelog**：相对初稿改了什么、为什么，3-5 条。
-
-publish.sh 会把 `review.draft.md` 改名为 `docs/archive/<权威date>-review.md` 并一并提交。**正文 HTML 不含这些，自评只在 review 文件里。**
-
-## 步骤 2 · 产出内容 JSON
-
-写成 `content.json`，结构如下（字段名不可改）：
+Preserve the field names. The following illustration shows one non-AI news item, with example-only values. A publishable edition also requires the AI section, real verified source URLs, and complete evidence.
 
 ```json
 {
-  "date": "YYYY-MM-DD",
+  "date": "2026-11-26",
   "editorial_version": 2,
-  "edition": <期数，整数，每天+1，从 1 开始>,
-  "lead": "直接给出事实支撑的结论或分析结果及必要边界，1至2短句共20至120字；不写导读或研究计划",
-  "sections": [
-    { "id": "order-flow", "title": "订单流与交易入口",
-      "items": [{
-        "kind": "news",
-        "domain": "crypto",
-        "relevance": "仅供编辑审计：说明与Crypto或AI及实际产品、交易决策的具体关联，不展示到页面。",
-        "event_date": "YYYY-MM-DD",
-        "headline": "M月D日，项目新增或调整了什么具体功能",
-        "body": "一个自然段，70至150字。先说真实变化、适用用户或生效范围，有证据才对比原规则；再用简单语言解释必要机制与同类差别，不先评价机制多复杂，不拆成小抬头。",
-        "source": "主来源名", "url": "https://...", "date": "YYYY-MM-DD",
-        "references": [{"source": "补充来源名", "url": "https://...", "date": "YYYY-MM-DD"}]
-      }]
-    }
-  ]
-}
-```
-> **栏目结构**：上例仅展示非AI条目字段，完整报告还必须包含下面的AI栏目。非AI栏目名称、条数和研究数量随材料决定，无有效条目就省略；`id`为唯一英文slug，数组顺序就是页面顺序。`domain`只能为`crypto/ai/crypto-ai`，`relevance`至少12字；`ai/crypto-ai`只能归AI栏，其余栏目只含`crypto`。
-
-AI模板约束如下，实际写入3条核实后的新闻，不用占位符冒充成稿：
-
-```text
-section.id = "ai"
-section.title = "AI"
-section.items = [新闻1, 新闻2, 新闻3]  // 恰好3条，合并同事件后按总分降序
-每条.kind = "news"
-每条.domain = "ai" 或 "crypto-ai"
-每条.importance_score = 75至100的整数，与A5五维合计一致
-每条其余字段 = relevance、event_date、headline、body、source、url、date，可附references
-```
-
-项目研究沿用同一标题与正文格式，额外保留以下内部底稿，不能只把新闻改kind绕过时效：
-
-```json
-{
-  "kind": "research",
-  "domain": "crypto",
-  "relevance": "仅作内部审计，说明这项研究如何更新具体产品或交易判断。",
-  "headline": "项目如何让用户交易或使用资金，以及最具体的特点",
-  "body": "70至150字的完整自然段，先说明用户怎么操作，再解释与有证据的主流同类模式有什么差别。用具体行为和结果说明特点，不把核验日写成新闻，也不逐项铺开所有底稿。",
-  "source": "官方产品或机制文档",
-  "url": "https://实际读取的主来源",
-  "date": null,
-  "checked_at": "YYYY-MM-DD",
-  "references": [{"source": "策略访谈或交叉核验", "url": "https://另一实际来源", "date": null, "checked_at": "YYYY-MM-DD"}],
-  "research": {
-    "project": "项目名",
-    "category": "perp-protocol",
-    "why_now": "首次深挖或相对近七期新增的认知，不能只是仍然重要。",
-    "mechanism": "撮合、流动性和盈亏、价格用途、结算与风险承担，未知的部分明确写未知。",
-    "gtm": "目标用户、入口、激励、首次转化与留存证据，缺数据不能宣称成功。",
-    "product": "解决的用户任务、一个具体功能取舍及其代价。",
-    "discussions": [],
-    "discussion_gap": "未找到可读原帖时写实际检索过的范围和访问缺口，不编造讨论者。",
-    "implication": "内部比较判断与适用条件；成稿采用时须在正文自然说明是推断。",
-    "unknowns": "未披露的机制或采用证据，以及什么证据会推翻判断。"
-  }
+  "edition": 143,
+  "lead": "The exchange extended collateral eligibility to five tokenized securities.",
+  "sections": [{
+    "id": "collateral",
+    "title": "Collateral and margin",
+    "items": [{
+      "kind": "news",
+      "domain": "crypto",
+      "relevance": "Eligibility affects which assets traders can post as margin.",
+      "event_date": "2026-11-25",
+      "headline": "November 25: Binance adds five tokenized securities as collateral",
+      "body": "Binance added five tokenized securities to its eligible collateral list. Eligible users can trade these instruments on the spot market and use them as collateral under the applicable margin program.",
+      "source": "Illustrative exchange announcement",
+      "url": "https://example.com/announcement",
+      "date": "2026-11-25"
+    }]
+  }]
 }
 ```
 
-`category`可选`perp-protocol/trading-frontend/spot-infrastructure/prediction-market/other`，仅用于明确项目类型，不决定栏目。每个研究底稿字段至少12字。具名讨论放入`research.discussions`，最多4条，每条`{speaker,affiliation,summary,url,date}`；关系为`official/independent/sponsored/unknown`，日期在近30天。老访谈作背景references，不冒充当下讨论。内部字段不渲染，相关原文仍可从来源行核查。
-> **body 格式**：新闻与研究统一为单个字符串、一个自然段、70至150字，无标签式小抬头。不用数组、不放 `context`。底稿可以详细，成稿只保留最重要的内容。
-> **标题时间**：新闻必须有真实`event_date`，标题包含对应M月D日或YYYY-MM-DD；研究若确有事件日也照此填。无新事件的机制研究省略`event_date`和`snapshot_date`，标题不带日期。真正的数据快照研究可填`snapshot_date: "YYYY-MM-DD"`，标题用“截至”及对应日期，且不晚于报告日；该字段仅用于研究，与`event_date`互斥。`date`、`event_date`、`snapshot_date`、`checked_at`分别表示来源发布、事件发生、数据所属和查证时间，不混用。脚本只验证格式及对应关系，数据日期和比较口径仍须实际核实。
-> **references 格式**：新闻可选1至3条`{source,url,date}`；研究必须有1至3条`{source,url,date,checked_at}`，与主来源组成至少两个不同URL。研究无日期文档可填null，但URL含日期时不能隐去它，所有checked_at须等于报告日。
-> **来源呈现**：主来源、references与讨论原文的所有URL去重后只显示一行“来源 1 2 3…”。每个编号对应真实链接，完整名称、日期、已有作者及关系保留在`title`与`aria-label`，不另显示“补充”行，也不删出处来缩短页面。
-> **顶部格式**：不写`product_view`或`threads`展示块，lead之后直接进入动态栏目。
-> **取消项**：不生成独立二阶效应、产品判断栏和条目小抬头；必要分析融入正文。纯行情复述不收。
-> **全文禁用破折号** `——`（及 `—`、`–`）：该用的地方一律换成逗号、冒号或句号。这是硬性文风要求。
+Give each section a unique English slug. Array order is display order. Use `domain: "crypto"` outside the AI section. Use `domain: "ai"` or `"crypto-ai"` only inside it. Every item needs a substantive `relevance` statement of at least 12 characters after trimming. For the AI section set `id: "ai"` and `title: "AI"`. Each of its three news items has `kind`, `domain`, `relevance`, `importance_score`, `event_date`, `headline`, `body`, `source`, `url`, and `date`, with references where needed.
 
-## 步骤 3 · 发布（机械阶段，零 token，可插拔）
+News may include one to three supplementary references in `references`, each with `source`, `url`, and `date`. Use one primary source per URL. Assign background or corroborating facts to their own references. The renderer combines and deduplicates primary, supplementary, and discussion URLs into a single numbered source row. Each link preserves source names, actual publication dates or undated status, check dates, and known author relationships in its title and accessible label.
 
-写好 `content.json` / `threads.json` 后只跑廉价机械阶段：
+For non-AI research, retain these extra fields:
+
+| Field | What to record |
+| --- | --- |
+| `date`, `checked_at`, `references` | Actual primary publication date or null. Same-day primary check. One to three supplementary sources with their own name, URL, actual date or null, and same-day check. At least two distinct URLs overall. Do not hide a known date embedded in a URL. |
+| `research.project`, `research.category` | Named project and one of `perp-protocol`, `trading-frontend`, `spot-infrastructure`, `prediction-market`, or `other`. |
+| `research.why_now` | First substantial investigation or new evidence relative to recent coverage. |
+| `research.mechanism` | Matching, liquidity, counterparties, risk prices, settlement, and the risk bearer. Identify material gaps. |
+| `research.gtm`, `research.product` | Target user, acquisition, incentives, activation, retention evidence, user task, and a real product choice and its cost. |
+| `research.discussions`, `research.discussion_gap` | Up to four readable observations, each with `speaker`, `affiliation`, `summary`, `url`, and `date`. Use `official`, `independent`, `sponsored`, or `unknown`. When there are none, use an empty array and state which searches and access gaps prevented verification. |
+| `research.implication`, `research.unknowns` | Inference and the conditions under which it holds, missing mechanism or adoption evidence, and the observation that would change the assessment. |
+
+Each substantive research field and any required discussion-gap explanation must contain at least 12 characters after trimming. Keep substantive descriptions in the evidence record. Select the most useful facts for the public paragraph and label an inference when including it. A research label alone cannot convert stale news into a study.
+
+## 9. Validate, release, and recover
+
 ```bash
-cd ~/perp-daily
 bash publish.sh validate
 bash publish.sh render
 bash publish.sh manifest
 ```
-Codex 定时任务在全部关卡通过后，执行 `OPERATIONS.md` 的 Git 连接器对象 API 协议，不依赖 staging 分支：读取当前远端 `main` commit和tree，只为manifest固定五文件创建并核验blob，以远端tree为基线创建tree，再创建唯一父提交为当前main、信息为 `report: YYYY-MM-DD` 的单一提交。完整字节数、base64长度及blob SHA均须匹配，比较只能包含这五文件；复核父SHA未变化后，用 `force:false` 和 `expected_sha` 将main快进一次。若有竞态，读取新main后复用blob重建，不覆盖其他路径。禁止从本地根tree重建远端，禁止上传截断内容；不用本地Git凭证、PAT、`gh`或`.env`。回读远端五blob和今日latest日期全部一致后，只把本轮已发布文件创建同名本地镜像提交，不推送镜像。既有未授权改动可恢复地隔离，不混入报告。现有GitHub工作流处理Pages、飞书和Slack，任务不访问渠道webhook。
 
-`bash publish.sh` 的无参数 `all` / `push` 仅保留给 GitHub Actions 内的手动 Legacy fallback，不是 Codex 日常发布路径。
+Run the checks, tests, local mirror verification, and recovery steps in [the operations guide](OPERATIONS.md). Confirm that the homepage and dated archive match. Publish exactly the five manifest paths through the GitHub connector against the current remote tree. Match byte counts, base64 lengths, and blob SHAs. Compare the parent and candidate commit, recheck the parent, then fast-forward `main` with `force: false` and `expected_sha`. A race requires checking the new head and rebuilding the candidate on that tree. Read back all five hashes and today's latest date before making the local mirror commit. GitHub Pages, Feishu, and Slack use existing repository workflows.
 
-> 🔌 **解耦/原子性铁律（重要，省 token）**：步骤 0-2 的"调研+评分+建线+写作"是昂贵的 LLM 阶段，产出 `content.json` / `threads.json` / `review.draft.md` 这三个**持久交接物**。步骤 3 起全是廉价机械步骤，**只消费交接物、零 token、可单独重跑**。所以**下游任何一步失败，绝不要从头重新调研**，只跑坏掉的那一阶段：
-> - 校验没过(结构/编辑去重/时效/防造假/台账)：**只修 content.json 或 threads.json 的对应条目**，再 `bash publish.sh validate`，过了再 `bash publish.sh render`。不重新调研。
-> - 渲染报错：`bash publish.sh render`。
-> - GitHub 连接器发布失败：保留产物与恢复记录，先回读远端状态判断超时写入是否生效，再修复准确的失败阶段。可恢复问题本轮继续，不因单次超时、20分钟预算或本地无关改动停止；只有安全边界内已无可行恢复路径的外部阻断才报告。不得重复生效的写入，也不重做有效研究。
-> - 飞书/Slack 没收到：是交付层(Action)的事，去仓库 Actions 页 "Run workflow" 重发，**不碰生成**。
-> 只有当 `content.json` 本身没产出/被判作废，才需要回到步骤 1 重做内容。
-
-## 每日铁律
-- 找茬要狠、能指到具体条目，不笼统。
-- 不确定的事实标"待核实"，绝不编造数字或出处。
-- 优先一手信源（官方公告、协议数据、SEC 文件），少用聚合站。
-- 非AI栏目跟随内容，无条数配额；AI必须完成七家扫描并精选3条75分以上真实新闻，不足继续查证。每条正文70至150字，删除低分、重复、不可核验或与Crypto/AI无关的内容，不为补数编造日期。
-- 2026-10-20的日报升级仅本地维护和预览，不向Slack发送新消息，不重发当日日报，不触发通知工作流；不因此关闭后续正常日报投递。
+Keep the research inputs, report, ledger, review, and recovery point if a downstream step fails. Correct the particular item, evidence, ledger record, render, object transfer, or delivery stage. Read remote state after a timeout before repeating a write. Retry recoverable failures without repeating completed research or delivering a second card. If the generation input itself is missing or invalid, return to the affected research stage. The manual legacy GitHub Actions fallback retains separate shell publication modes. Its credentials and commands are outside the scheduled connector flow.

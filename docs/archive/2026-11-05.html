@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-11-05</title>
+<title>Perp DEX Daily · 2026-11-05</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -100,51 +100,51 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 123 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 123</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 11 月 5 日 · 星期四</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">November 5, 2026 · Thursday</div>
     </header>
-    <p class="lead">传统资产永续竞争已从监管与扩列推进到费用补贴、跨资产覆盖和可验证执行，但低费与全天交易仍不能替代价格源、深度和退出机制的单独核验。</p>
+    <p class="lead">Traditional-asset perpetuals are competing on fee subsidies, cross-asset coverage and verifiable execution. Low fees and round-the-clock trading still leave traders to assess the price feed, market depth and exit rules for each product.</p>
 
 
       <section class="sec sec-tradfi-perps-pricing-and-coverage">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">传统资产永续的供给与补贴</h2>
+            <h2 class="sec-title">Traditional-asset perpetual listings and incentives</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月4日，Binance取消TradFi永续高等级VIP吃单折扣收紧</h3>
-          <p class="item-b">Binance撤回原定11月5日把VIP 4至9的TradFi永续吃单折扣从50%降至40%的调整，高等级用户继续享受50%折扣，普通至VIP 3维持20%，挂单仍为零费。平台在股票永续扩列后继续用费率补贴争夺订单流，但活动期没有结束日期。</p>
+          <h3 class="item-h">November 4: Binance reverses a planned reduction in high-tier VIP taker discounts for TradFi perpetuals</h3>
+          <p class="item-b">Binance canceled its plan to reduce the TradFi perpetual taker discount for VIP 4–9 from 50% to 40% on November 5. Those tiers keep their 50% discount. Regular traders through VIP 3 keep 20%, and maker fees remain zero. Binance continues to subsidize order flow after expanding its equity perpetuals. It has published no end date for the promotion.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/support/announcement/detail/e3424d3a781841eb8b507bc694c0ca3a" target="_blank" rel="noopener" title="Binance · 发布 2026-11-04" aria-label="来源 1：Binance · 发布 2026-11-04">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.binance.com/en/support/announcement/detail/e3424d3a781841eb8b507bc694c0ca3a" target="_blank" rel="noopener" title="Binance · Published 2026-11-04" aria-label="Source 1: Binance · Published 2026-11-04">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月4日，OKX同日扩充股票永续、到期型X-Perp与代币化现货</h3>
-          <p class="item-b">OKX同日上线MURATA、OXY和SMR三只USDT股票永续，另在欧洲增加GoPro与标普500到期型X-Perp，以及xIREN、xASML代币化现货。相似股票敞口被拆成连续合约、到期合约和现货代币，用户需分别核对资金费、到期日及股东权利。</p>
+          <h3 class="item-h">November 4: OKX expands equity perpetuals, expiring X-Perps and tokenized spot assets</h3>
+          <p class="item-b">OKX listed USDT perpetuals on MURATA, OXY and SMR on the same day. In Europe it also added GoPro and S&amp;P 500 X-Perps with expiry dates, plus xIREN and xASML spot tokens. These products offer related equity exposure through perpetuals, dated contracts and spot tokens. Users must check funding, expiry and shareholder rights for each instrument.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.okx.com/en-br/help/okx-to-list-tradfi-perpetual-futures-for-murata-oxy-and-smr" target="_blank" rel="noopener" title="OKX · 发布 2026-11-04" aria-label="来源 1：OKX · 发布 2026-11-04">1</a><a class="source-number" href="https://www.okx.com/en-eu/help/okx-to-list-gprousd-and-us500usd-equity-x-perps" target="_blank" rel="noopener" title="OKX Europe Equity X-Perps · 发布 2026-11-04" aria-label="来源 2：OKX Europe Equity X-Perps · 发布 2026-11-04">2</a><a class="source-number" href="https://www.okx.com/en-br/help/okx-to-list-usdc-trading-pairs-for-tokenized-stocks-xiren-and-xasml" target="_blank" rel="noopener" title="OKX Tokenized Stocks · 发布 2026-11-04" aria-label="来源 3：OKX Tokenized Stocks · 发布 2026-11-04">3</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.okx.com/en-br/help/okx-to-list-tradfi-perpetual-futures-for-murata-oxy-and-smr" target="_blank" rel="noopener" title="OKX · Published 2026-11-04" aria-label="Source 1: OKX · Published 2026-11-04">1</a><a class="source-number" href="https://www.okx.com/en-eu/help/okx-to-list-gprousd-and-us500usd-equity-x-perps" target="_blank" rel="noopener" title="OKX Europe Equity X-Perps · Published 2026-11-04" aria-label="Source 2: OKX Europe Equity X-Perps · Published 2026-11-04">2</a><a class="source-number" href="https://www.okx.com/en-br/help/okx-to-list-usdc-trading-pairs-for-tokenized-stocks-xiren-and-xasml" target="_blank" rel="noopener" title="OKX Tokenized Stocks · Published 2026-11-04" aria-label="Source 3: OKX Tokenized Stocks · Published 2026-11-04">3</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月3日，Bybit把美元兑巴西雷亚尔做成百倍全天永续</h3>
-          <p class="item-b">Bybit上线USDBRL/USDT TradFi永续，支持全天交易、最高100倍杠杆，资金费每8小时结算且上限为0.5%。这把外汇敞口接入统一保证金与交易机器人，但公告未给出价格源或休市异常处理；全天可下单不代表基础外汇市场始终有同等深度。</p>
+          <h3 class="item-h">November 3: Bybit adds a round-the-clock USD/BRL perpetual with up to 100x leverage</h3>
+          <p class="item-b">Bybit launched the USDBRL/USDT TradFi perpetual with round-the-clock trading and up to 100x leverage. Funding settles every eight hours, with a 0.5% cap. The contract brings foreign-exchange exposure to unified margin and trading bots. The notice did not identify the price source or how exceptions are handled when the underlying market is closed. Continuous order entry does not guarantee continuous underlying market depth.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://announcements.bybit.com/en/article/new-listing-usdbrlusdt-tradfi-perpetual-contract-with-up-to-100x-leverage--artb0dba4bed69c/" target="_blank" rel="noopener" title="Bybit · 发布 2026-11-03" aria-label="来源 1：Bybit · 发布 2026-11-03">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://announcements.bybit.com/en/article/new-listing-usdbrlusdt-tradfi-perpetual-contract-with-up-to-100x-leverage--artb0dba4bed69c/" target="_blank" rel="noopener" title="Bybit · Published 2026-11-03" aria-label="Source 1: Bybit · Published 2026-11-03">1</a>
           </div>
         </article>
         </div>
@@ -153,29 +153,29 @@
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <h2 class="sec-title">平台安全与可验证执行</h2>
+            <h2 class="sec-title">Platform security and verifiable execution</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月4日，Binance将资产回填推进至98%并扩大储备快照</h3>
-          <p class="item-b">Binance称已用自有资源回填约98%的受影响资产，余下2%因流动性较低采购更慢；11月4日储备快照覆盖代币从10种增至44种。完整零知识证明仍需50至60小时生成，因此快照和回填声明是进展，用户可独立验证要等证明完成。</p>
+          <h3 class="item-h">November 4: Binance reports 98% of affected assets replaced and expands its reserves snapshot</h3>
+          <p class="item-b">Binance said it had replaced about 98% of the affected assets with its own resources. Lower liquidity was slowing procurement of the remaining 2%. Its November 4 reserves snapshot expanded from 10 tokens to 44. The complete zero-knowledge proof would take another 50 to 60 hours to generate. Users must wait for that proof to verify the claim independently.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en-GB/support/announcement/security-incident-recovery-update-7-98-of-stolen-assets-replenished-and-new-por-snapshot-with-expanded-coverage-2026-11-04-c6ba9aa726974fc6b9332a2c8f63b405" target="_blank" rel="noopener" title="Binance · 发布 2026-11-04" aria-label="来源 1：Binance · 发布 2026-11-04">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.binance.com/en-GB/support/announcement/security-incident-recovery-update-7-98-of-stolen-assets-replenished-and-new-por-snapshot-with-expanded-coverage-2026-11-04-c6ba9aa726974fc6b9332a2c8f63b405" target="_blank" rel="noopener" title="Binance · Published 2026-11-04" aria-label="Source 1: Binance · Published 2026-11-04">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Lighter用零知识证明约束撮合与清算，并保留紧急退出</h3>
-          <p class="item-b">Lighter把订单、持仓和市场状态批量提交至以太坊，再用证明校验价格时间优先撮合、清算和状态更新；证明用于验证执行，不提供交易隐私。若排序器长期不处理优先请求，合约冻结汇总状态并启动Escape Hatch，用户可直接取回资产。</p>
+          <h3 class="item-h">Lighter uses zero-knowledge proofs to constrain matching and liquidations and retains an emergency exit</h3>
+          <p class="item-b">Lighter batches orders, positions and market state to Ethereum. Proofs verify price-time priority in matching, liquidations and state updates. They validate execution and do not provide transaction privacy. If the sequencer leaves priority requests unprocessed for an extended period, the contract freezes the rollup state and activates an Escape Hatch so users can recover assets directly.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://lighter.xyz/" target="_blank" rel="noopener" title="Lighter · 未标发布日期 · 核验 2026-11-05" aria-label="来源 1：Lighter · 未标发布日期 · 核验 2026-11-05">1</a><a class="source-number" href="https://assets.lighter.xyz/whitepaper.pdf" target="_blank" rel="noopener" title="Lighter Whitepaper · 未标发布日期 · 核验 2026-11-05" aria-label="来源 2：Lighter Whitepaper · 未标发布日期 · 核验 2026-11-05">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://lighter.xyz/" target="_blank" rel="noopener" title="Lighter · Publication date not listed · Verified 2026-11-05" aria-label="Source 1: Lighter · Publication date not listed · Verified 2026-11-05">1</a><a class="source-number" href="https://assets.lighter.xyz/whitepaper.pdf" target="_blank" rel="noopener" title="Lighter Whitepaper · Publication date not listed · Verified 2026-11-05" aria-label="Source 2: Lighter Whitepaper · Publication date not listed · Verified 2026-11-05">2</a>
           </div>
         </article>
         </div>
@@ -184,44 +184,44 @@
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <h2 class="sec-title">AI产品与工程代理</h2>
+            <h2 class="sec-title">AI products and engineering agents</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月4日，OpenAI收购Pierre补齐Codex的Git浏览与评审组件</h3>
-          <p class="item-b">OpenAI宣布收购Pierre Computer Company，其Trees与Diffs开源库已用于Codex的文件浏览和变更评审。交易把分支创建、代码理解、评审到部署的Git工作流纳入同一产品路线，但公告没有披露价格、完成时间或开源库后续治理安排。</p>
+          <h3 class="item-h">November 4: OpenAI acquires Pierre to add Git browsing and review components to Codex</h3>
+          <p class="item-b">OpenAI announced its acquisition of Pierre Computer Company. The company’s Trees and Diffs open-source libraries are now used for file browsing and code review in Codex. This acquisition integrates Git workflows for branch creation, code understanding, review, and deployment into the same product. However, the announcement did not disclose the purchase price, completion time, or arrangements for the open-source libraries’ future governance.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/openai-to-acquire-pierre/" target="_blank" rel="noopener" title="OpenAI · 发布 2026-11-04" aria-label="来源 1：OpenAI · 发布 2026-11-04">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://openai.com/index/openai-to-acquire-pierre/" target="_blank" rel="noopener" title="OpenAI · Published 2026-11-04" aria-label="Source 1: OpenAI · Published 2026-11-04">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月4日，Kimi Code Desktop支持多目录项目与运行中会话分叉</h3>
-          <p class="item-b">Kimi Code Desktop 1.3.0允许一个项目加入多个工作目录，可从任意历史轮次甚至运行中分叉会话，并新增诊断包导出；子智能体经许可后可控制内置浏览器。更新把并行代理、排障和浏览器权限放进桌面工作流，但未公布稳定性或效率对比。</p>
+          <h3 class="item-h">November 4: Kimi Code Desktop supports multi-directory projects and branching a running session</h3>
+          <p class="item-b">Kimi Code Desktop 1.3.0 supports multiple working directories in one project. Users can fork from any previous turn or branch a running session, and export a diagnostic bundle. Subagents may control the built-in browser with permission. The release brings parallel agents, troubleshooting and browser controls into the desktop workflow. Kimi published no comparative stability or efficiency results.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.kimi.com/code/docs/en/kimi-code-desktop/changelog.html" target="_blank" rel="noopener" title="Kimi Code Docs · 发布 2026-11-04" aria-label="来源 1：Kimi Code Docs · 发布 2026-11-04">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.kimi.com/code/docs/en/kimi-code-desktop/changelog.html" target="_blank" rel="noopener" title="Kimi Code Docs · Published 2026-11-04" aria-label="Source 1: Kimi Code Docs · Published 2026-11-04">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月3日，PagerDuty上线Paige SRE代理并整合事故处置平台</h3>
-          <p class="item-b">PagerDuty将Paige与新命名的PD Reliability Platform正式开放，用同一运行上下文串联信号检测、事件研判、自动修复和预防，人和代理共同处置。它能减少多工具交接，但官方发布没有给出误报率、自动执行边界和生产环境节省时长的独立数据。</p>
+          <h3 class="item-h">November 3: PagerDuty launches its Paige SRE agent and integrates incident response tools</h3>
+          <p class="item-b">PagerDuty has officially launched Paige, along with the newly named PD Reliability Platform. This platform combines signal detection, event analysis, automatic repair, and prevention capabilities within the same operating context. It allows for joint handling by humans and agents. This platform helps reduce the number of tools required for task management. However, the official announcement does not provide data on false positives rates, automatic execution boundaries, or time savings in the production environment.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.pagerduty.com/newsroom/pagerduty-2026-fall-launch/" target="_blank" rel="noopener" title="PagerDuty · 发布 2026-11-03" aria-label="来源 1：PagerDuty · 发布 2026-11-03">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.pagerduty.com/newsroom/pagerduty-2026-fall-launch/" target="_blank" rel="noopener" title="PagerDuty · Published 2026-11-03" aria-label="Source 1: PagerDuty · Published 2026-11-03">1</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

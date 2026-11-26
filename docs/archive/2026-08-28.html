@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-08-28</title>
+<title>Perp DEX Daily · 2026-08-28</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 61 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 61</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 8 月 28 日 · 星期五</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">August 28, 2026 · Friday</div>
     </header>
-    <p class="lead">KuCoin 把盘前、交易、结算和关闭状态写进统一合约 API，Bitrue 的硬下架与 MEXC 的 SHEIN 镜像认购则同时提醒市场扩列必须配套完整生命周期和权利边界。</p>
+    <p class="lead">KuCoin added pre-market, trading, settlement and closed states to its unified contract API. Bitrue’s abrupt delisting and MEXC’s SHEIN mirror subscription highlighted the need to define how products end and what rights holders receive.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,9 +110,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">KuCoin UTA V2 把合约生命周期改成可机读状态</h3>
-          <p class="item-b"><strong>事件</strong>：KuCoin 宣布 UTA API V2 于 8 月 27 日生效，V1 将继续可用但不再增加功能，并预计在 12 月 31 日下线；WebSocket 鉴权由连接令牌改为签名。</p><p class="item-b"><strong>机制</strong>：V2 为合约接口增加盘前转永续日期、到期与结算时间、最大市价单、最大杠杆、资金费和末次费率，并把交易状态细分为初始化、开放、仅撤单、准备结算、结算中、已结算、暂停和关闭等状态。</p><p class="item-b"><strong>二阶效应</strong>：交易前端、订单系统与风控可以围绕同一状态机协作，减少把暂停或结算误当成普通报错；但这只是 KuCoin 的接口迁移，不证明其状态枚举能直接覆盖链上 Keeper、LP 或清算架构。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>V2 已生效，V1 下线日为预计安排；接口字段可用于集成设计，但不等于迁移和异常状态处理已经由各接入方完成。</p>
+          <h3 class="item-h">KuCoin UTA API V2 exposes machine-readable contract lifecycle states</h3>
+          <p class="item-b"><strong>Event</strong>: KuCoin said UTA API V2 took effect on August 27. V1 would remain available without new features until its expected retirement on December 31. WebSocket authentication moved from connection tokens to signatures.</p><p class="item-b"><strong>Mechanism</strong>: V2 adds the pre-market conversion date, expiry and settlement times, maximum market-order size and leverage, funding data and the last rate. It distinguishes initialization, open trading, cancellation only, preparation for settlement, settling, settled, suspended and closed states.</p><p class="item-b"><strong>Second-order effects</strong>: Trading interfaces, order systems and risk checks can use the same state definitions to distinguish halts and settlement from routine errors. These are KuCoin’s integration states. Onchain keeper, LP and liquidation systems may require different states.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>V2 had taken effect. V1’s retirement date remained a plan, and the migration status of individual integrators was not disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-27</span>
             <a class="item-src" href="https://www.kucoin.com/announcement/en-announcement-of-kucoin-uta-api-v1-to-v2-upgrade" target="_blank" rel="noopener">KuCoin ↗</a>
@@ -120,9 +120,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">HTX 同日上线 WMT 与 SHEIN 股票永续</h3>
-          <p class="item-b"><strong>事件</strong>：HTX 于 8 月 27 日上线 WMT/USDT 与 SHEIN/USDT 永续合约，均支持最高 20 倍杠杆，把已上市零售股和临近上市服饰公司纳入同一全天候衍生品入口。</p><p class="item-b"><strong>机制</strong>：股票永续提供价格敞口而非底层股份，现货休市或尚未上市时，指数、资金费、风险限额与平台流动性共同承担价格锚定。</p><p class="item-b"><strong>二阶效应</strong>：CEX 正把成熟股票和 IPO 事件型标的并排扩列，但上线公告没有披露指数构成、OI、成交或地区可用性，不能据最高杠杆推断真实容量。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>永续合约不是股票认购，也不赋予股东权利；20 倍为最高杠杆，未披露的成交和 OI 不作推断。</p>
+          <h3 class="item-h">HTX lists WMT and SHEIN stock perpetuals on the same day</h3>
+          <p class="item-b"><strong>Event</strong>: On August 27, HTX listed WMT/USDT and SHEIN/USDT perpetuals with up to 20× leverage. The same round-the-clock derivatives interface now covers an established listed retailer and an apparel company approaching its IPO.</p><p class="item-b"><strong>Mechanism</strong>: Equity perpetuals confer price exposure without underlying shares. When the cash market is closed or the underlying has yet to list, price anchoring depends on the index, funding, risk limits and venue liquidity.</p><p class="item-b"><strong>Second-order effects</strong>: Centralized exchanges are listing established stocks alongside IPO-linked assets. The announcement omitted index constituents, open interest, trading volume and geographic availability. The leverage cap says little about executable capacity.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The perpetual is neither a stock subscription nor a grant of shareholder rights. Maximum leverage is 20x. Trading volume and open interest were not disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-27</span>
             <a class="item-src" href="https://www.htx.com/en-us/support/35042153265926" target="_blank" rel="noopener">HTX ↗</a>
@@ -130,9 +130,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Bitrue 下架 ASTEROID 永续并按市价处理剩余仓位</h3>
-          <p class="item-b"><strong>事件</strong>：Bitrue 宣布于 8 月 28 日 08:00 UTC 下架 ASTEROID/USDT 永续，届时停止交易，并对仍未关闭的仓位按市场价处理。</p><p class="item-b"><strong>机制</strong>：硬下架把用户主动平仓窗口、订单撤销、仓位结算和最终价格来源压缩到固定时点；若前端只展示不可交易而不展示处理规则，用户会把制度性结算误判为异常强平。</p><p class="item-b"><strong>二阶效应</strong>：长尾合约的风险不只在上线后的深度，也在退场时能否提前暴露时间、价格和仓位处置路径；单一标的下架仍不足以证明行业出现集中退潮。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>公告只覆盖 ASTEROID/USDT；市价处理是平台下架规则，不等同于用户保证金不足触发的常规清算。</p>
+          <h3 class="item-h">Bitrue delists its ASTEROID perpetual and settles remaining positions at market prices</h3>
+          <p class="item-b"><strong>Event</strong>: Bitrue scheduled the ASTEROID/USDT perpetual for delisting at 08:00 UTC on August 28. Trading will stop and any positions still open will be processed at the market price.</p><p class="item-b"><strong>Mechanism</strong>: A fixed delisting time concentrates the deadline for voluntary closure, order cancellation, settlement and final price determination. Showing only that trading has stopped can cause users to mistake scheduled settlement for an unexpected liquidation.</p><p class="item-b"><strong>Second-order effects</strong>: For smaller contracts, market quality includes advance notice of the time, pricing and treatment of positions on exit as well as depth after launch. One delisting cannot establish an industry-wide retreat.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The notice applies only to ASTEROID/USDT. Market-price settlement follows the venue&#x27;s delisting rules and is distinct from a normal liquidation caused by insufficient margin.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-27</span>
             <a class="item-src" href="https://support.bitrue.com/hc/en-001/articles/61618380211865-Bitrue-Futures-to-Delist-USDT-Based-Perpetual-Pairs-ASTEROID" target="_blank" rel="noopener">Bitrue ↗</a>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">MEXC 用 100 万美元额度开放 SHEIN 镜像认购</h3>
-          <p class="item-b">MEXC 开启 SHEIN IPO Express，认购期为 8 月 27 日至 31 日，总额度 100 万美元，单用户可投入 100 至 1 万 USDT，并按新用户、普通用户和 VVIP 分池。</p><p class="item-b">用户获得的是按首日收盘价结算的镜像额度，不直接持有 SHEIN 股份或股东权利；未获分配资金退回，认购与卖出还分别涉及约 1.0085% 和 0.5% 费用，因此额度和曝光不能等同于低成本现货申购。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>100 万美元是活动总额度，不是平台购买的底层股票规模；镜像额度按规则结算，不赋予所有权、投票权或股息。</p>
+          <h3 class="item-h">MEXC opens SHEIN mirror subscriptions with a $1 million allocation</h3>
+          <p class="item-b">MEXC opened its SHEIN IPO Express subscription from August 27 to 31 with a $1 million allocation. Users can commit 100 to 10,000 USDT each, with separate pools for new, standard and VVIP users.</p><p class="item-b">Users receive a mirrored allocation settled at the first-day closing price, without ownership of SHEIN shares or shareholder rights. Unallocated funds are returned. Subscription and sale fees are about 1.0085% and 0.5%, respectively, so the terms differ from a low-cost spot share subscription.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The $1 million is the campaign allocation, not the value of underlying shares the platform purchased. The mirrored allocation settles under the campaign rules and confers no ownership, voting rights, or dividends.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-27</span>
             <a class="item-src" href="https://blog.mexc.com/press-release/mexc-launches-shein-subscription-with-1m-quota/" target="_blank" rel="noopener">MEXC ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">KuCoin 把 LOBSTER 从 Alpha 自动迁移到现货</h3>
-          <p class="item-b">KuCoin 宣布将 BNB Chain 上的 LOBSTER 从 Alpha 迁移到现货市场，Alpha 交易于 8 月 27 日 09:00 UTC 关闭，资产自动转移，并在 11:00 开放 LOBSTER/USDT 现货。</p><p class="item-b">自动迁移把实验性发现入口、资产托管与主市场流动性接成一段产品流程，减少用户手动划转；但进入现货只证明渠道升级，不能证明代币质量、成交留存或价格稳定。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>关闭和迁移时间均由平台公告给出；自动转移不改变代币本身风险，也不代表每个 Alpha 项目都会进入现货。</p>
+          <h3 class="item-h">KuCoin automatically migrates LOBSTER from Alpha to its spot market</h3>
+          <p class="item-b">KuCoin announced that BNB Chain token LOBSTER would move from Alpha to its spot market. Alpha trading closed at 09:00 UTC on August 27, assets transferred automatically and LOBSTER/USDT spot trading opened at 11:00.</p><p class="item-b">Automatic migration connects experimental discovery, asset custody and main-market liquidity without requiring a manual transfer. Spot admission expands distribution but does not establish token quality, sustained trading or price stability.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The platform announced the shutdown and migration dates. Automatic transfers do not change token risk or guarantee that every Alpha project will receive a spot listing.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-27</span>
             <a class="item-src" href="https://www.kucoin.com/announcement/en-kucoin-alpha-token-migration-to-spot-trading" target="_blank" rel="noopener">KuCoin ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">KuCoin DIAM 活动用双倍成交权重和推荐倍率分奖</h3>
-          <p class="item-b">KuCoin 为 DIAM 上线配置 862.755 万枚代币奖池，活动持续至 9 月 3 日，包含抽奖和交易池，并让 DIAM 成交量按两倍计入任务。</p><p class="item-b">推荐、KCS 持仓和 GemSlot 可继续提高权重，单用户奖励上限为 10 万枚 DIAM；多层倍率能集中早期订单流，也让活动成交更难代表无补贴需求。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>862.755 万枚为多任务合计奖池，双倍成交量只用于活动计分；两者都不能解释为用户确定收益或自然成交。</p>
+          <h3 class="item-h">KuCoin’s DIAM campaign weights trading volume twice and applies referral multipliers</h3>
+          <p class="item-b">KuCoin allocated 8,627,550 DIAM to a listing campaign running through September 3. It includes a prize draw and a trading pool, with DIAM volume counting double toward tasks.</p><p class="item-b">Referrals, KCS holdings and GemSlot can increase the weighting further. Rewards are capped at 100,000 DIAM per user. Multiple incentives can concentrate early order flow and make campaign volume a poor measure of unsubsidized demand.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The 8,627,550 tokens are the combined prize pool across several tasks. Double volume counts only toward campaign scores. Neither figure measures an assured user return or organic volume.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-27</span>
             <a class="item-src" href="https://www.kucoin.com/announcement/en-diam-listing-campaign-8627550-diam-to-giveaway" target="_blank" rel="noopener">KuCoin ↗</a>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Schwab 计划把 SOL、AVAX 和 LINK 加入加密交易</h3>
-          <p class="item-b">The Block 报道，Charles Schwab 计划在未来数月把 Solana、Avalanche 和 Chainlink 加入其加密交易平台；该平台 5 月先上线 BTC 与 ETH，费率为 75 个基点。</p><p class="item-b">Schwab 拥有约 12 万亿美元客户资产和 3900 万账户，新增资产可把大型经纪商分发从两种主流币推进到智能合约与预言机资产；但计划尚未上线，账户规模也不等于潜在买盘。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>新增三种资产是未来数月计划，尚无上线日或成交数据；12 万亿美元和 3900 万是 Schwab 客户基盘，不是加密资产配置额。</p>
+          <h3 class="item-h">Schwab plans to add SOL, AVAX and LINK to crypto trading</h3>
+          <p class="item-b">The Block reported that Charles Schwab plans to add Solana, Avalanche and Chainlink to its crypto trading platform in the coming months. It launched BTC and ETH in May with a fee of 75 basis points.</p><p class="item-b">Schwab has about $12 trillion in client assets and 39 million accounts. Adding smart contract and oracle assets would broaden the brokerage’s distribution beyond two major cryptocurrencies. The products were not yet live, and the account count cannot establish buying demand.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Three additional assets are planned for the coming months. There are no launch dates or volume figures. The $12 trillion and 39 million figures describe Schwab&#x27;s client base, not allocations to crypto.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-27</span>
             <a class="item-src" href="https://www.theblock.co/news/business/2026-08-27-charles-schwab-add-solana-avalanche-chainlink-to-crypto-trading-platform-412923" target="_blank" rel="noopener">The Block ↗</a>
@@ -202,9 +202,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Ethena 费率开关提案把回购与 USDe 规模挂钩</h3>
-          <p class="item-b">Ethena 基金会发起 ENA 费率开关投票，拟在 USDe 供应达到分档门槛后启动回购；官方分析显示当前约 40.7 亿美元供应尚未达到首档 75 亿美元。</p><p class="item-b">门槛机制避免在规模不足时立刻抽走收益，但回购占比会随供应提高，并与 sUSDe、合作方和借贷市场激励争夺协议收入；当前只是治理提案，最终参数、投票结果和真实收入影响仍待确认。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>40.7 亿与 75 亿美元分别是提案分析中的当前供应和首档门槛；投票不等于回购已开始，收入分配仍受最终治理结果约束。</p>
+          <h3 class="item-h">Ethena fee-switch proposal ties buybacks to the size of USDe</h3>
+          <p class="item-b">The Ethena Foundation opened a vote on an ENA fee switch that would begin buybacks when USDe supply meets tiered thresholds. Its analysis put current supply at about $4.07 billion, below the initial $7.5 billion threshold.</p><p class="item-b">The threshold preserves revenue while supply remains small. As supply grows, the buyback share would increase and compete for protocol income with sUSDe returns, partners and lending incentives. This remains a governance proposal. Final parameters, the vote and the revenue impact are pending.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The proposal analysis gives $4.07 billion as the current supply and $7.5 billion as the first threshold. A vote does not show that buybacks have started. Revenue allocation depends on the governance outcome.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-27</span>
             <a class="item-src" href="https://gov.ethenafoundation.com/t/ena-fee-switch-activation/830" target="_blank" rel="noopener">Ethena Foundation ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Moonwell 因 MAMO 抵押品异常把借款上限降至 1 wei</h3>
-          <p class="item-b">Moonwell 调查 Base 上 MAMO Core Market 异常后，把全部 Core Markets 的借款上限降至 1 wei，并把 MAMO 与 WELL 的供应上限同样降至 1 wei；安全机构估计损失约 870 万美元。</p><p class="item-b">初步分析指向低流动性 MAMO 抵押品的价格操纵，攻击者借出 cbBTC；紧急限额能阻断新增风险，却不能替代价格源、抵押因子、流动性和坏账归属的完整事故报告。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>约 870 万美元来自安全机构初步估计；Moonwell 已实施紧急限额，但原因、最终损失和赔付尚未形成完整官方结论。</p>
+          <h3 class="item-h">Moonwell cuts its borrowing cap to 1 wei following a MAMO collateral anomaly</h3>
+          <p class="item-b">After investigating an incident in the MAMO Core Market on Base, Moonwell lowered borrowing caps across all Core Markets to one wei and the supply caps for MAMO and WELL to one wei. Security firms estimated losses of about $8.7 million.</p><p class="item-b">Preliminary analysis identified pricing risk in thinly traded collateral. The emergency caps limit additional exposure. A full report still needs to address pricing, collateral factors, liquidity and responsibility for bad debt.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The roughly $8.7 million is a security firm&#x27;s preliminary estimate. Moonwell imposed emergency caps, but had not issued a final account of the cause, losses, or compensation.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-27</span>
             <a class="item-src" href="https://www.theblock.co/news/defi/2026-08-27-moonwell-investigates-base-lending-market-issue-412913" target="_blank" rel="noopener">The Block ↗</a>
@@ -233,9 +233,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">AccuKnox AgentZ 把代理、沙箱和权限放进同一平台</h3>
-          <p class="item-b">AccuKnox 发布 AgentZ，以组织、工作区、代理、工作流和沙箱为统一模型，支持 OpenAI、Claude、Grok 等模型，并提供 SaaS、本地和隔离部署。</p><p class="item-b">每个代理可使用独立计算机与文件系统，限制网络、软件包、凭证和工具权限，并保留执行图、追踪和审计日志；这解决的是生产治理栈拼装问题，但主体公告未给出客户规模、失败率或节省数据。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>产品与开源仓库已发布，并提供免费方案；采用、可靠性和企业治理效果仍只有产品方描述。</p>
+          <h3 class="item-h">AccuKnox AgentZ combines agents, isolated execution and permission controls in one platform</h3>
+          <p class="item-b">AccuKnox launched AgentZ, organizing deployments by organization, workspace, agent, workflow and sandbox. It supports models including OpenAI, Claude and Grok and offers SaaS, on-premises and isolated deployments.</p><p class="item-b">Each agent can have its own computer and file system, with restrictions on networks, packages, credentials and tools. Execution graphs, traces and audit logs are retained. The product brings production controls together, but the announcement gave no customer count, failure rate or measured savings.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The product and open-source repository are available, with a free plan. The provider remains the sole source for claims about adoption, reliability, and enterprise governance.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-27</span>
             <a class="item-src" href="https://www.globenewswire.com/news-release/2026/08/27/3351759/0/en/accuknox-launches-agentz-to-help-enterprises-build-run-and-govern-ai-agents-at-scale.html" target="_blank" rel="noopener">AccuKnox ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Operant 用语义防火墙内联拦截代理越权动作</h3>
-          <p class="item-b">Operant AI 发布 Semantic Firewall，在提示、模型响应、命令、工具调用与数据流动之间实时返回允许、阻断或脱敏决定，并支持 VPC、本地和隔离部署。</p><p class="item-b">它把策略从关键词匹配推进到工具、代码、数据与任务范围的意图判断，试图在动作执行前阻止越权；但语义分类本身可能误拦或漏判，公告没有披露延迟、准确率或生产攻击样本。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>内联策略和部署方式来自产品方公告；没有公开误报、漏报、吞吐或独立红队数据，不能据功能列表判断防护强度。</p>
+          <h3 class="item-h">Operant introduces an inline semantic firewall to block unauthorized agent actions</h3>
+          <p class="item-b">Operant AI launched Semantic Firewall to allow, block or redact interactions in real time across prompts, model responses, commands, tool calls and data flows. It supports VPC, on-premises and isolated deployments.</p><p class="item-b">The firewall evaluates intent in the context of tools, code, data and task scope to prevent unauthorized actions before execution. Semantic classification can produce both false positives and false negatives. The announcement disclosed no latency, accuracy or production incident sample.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The vendor describes the inline policies and deployment options. It has not published false-positive or false-negative rates, throughput, or independent adversarial evaluation results. The feature list does not quantify protection.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-27</span>
             <a class="item-src" href="https://www.globenewswire.com/de/news-release/2026/08/27/3351884/0/en/operant-ai-launches-semantic-firewall-to-enforce-ai-agent-intent-in-real-time.html" target="_blank" rel="noopener">Operant AI ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">QuEra 让 Claude 在安全边界内自动恢复量子激光</h3>
-          <p class="item-b">QuEra 披露在 Model Hardware Standard 研究预览中，让 Claude 为量子计算机激光系统开发并验证控制逻辑，失锁后恢复由专家数分钟缩短到数秒，并保持更稳定。</p><p class="item-b">代理在人工设定的安全边界内控制约 70 万美元精密硬件，说明工具代理开始进入高成本物理反馈环；当前仍是专用测试台结果，尚不能外推到整机无人运维或商业规模可靠性。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>数秒恢复、专家数分钟和约 70 万美元硬件均来自 QuEra 测试描述；适用范围是特定激光子系统，不是整台量子计算机。</p>
+          <h3 class="item-h">QuEra uses Claude to restore a quantum laser within defined safety limits</h3>
+          <p class="item-b">In a Model Hardware Standard research preview, QuEra reported that Claude developed and verified control logic for a quantum computer’s laser system. Recovery after loss of lock fell from minutes with an expert to seconds and was more stable.</p><p class="item-b">The agent controlled precision equipment worth about $700,000 within human-defined safety limits. The dedicated test bench demonstrates a physical feedback loop, but provides no evidence of unattended operation of a complete machine or commercial-scale reliability.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Recovery within seconds, several minutes for an expert, and about $700,000 of hardware are figures from QuEra&#x27;s test. It concerned one laser subsystem, not an entire quantum computer.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-27</span>
             <a class="item-src" href="https://www.quera.com/press-releases/quera-computing-uses-ai-to-automate-a-critical-quantum-computer-subsystem-enabling-the-acceleration-of-commercial-grade-quantum-computing-deployments-from-quera" target="_blank" rel="noopener">QuEra Computing ↗</a>
@@ -267,15 +267,15 @@
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product assessment</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">基础设施</div>
-          <h3 class="item-h">市场生命周期要成为交易集成层的一等状态</h3>
-          <p class="item-b"><strong>判断变化</strong>：从把盘前、开放、暂停和下架主要当成前端运营配置，更新为要求市场接口提供统一、可机读且能驱动订单与风控的生命周期状态。</p><p class="item-b"><strong>证据与边界</strong>：KuCoin UTA V2 已增加盘前转永续日期、结算时间、资金费和多阶段状态枚举，证明中心化交易栈开始把生命周期接口化；但其枚举能否用于链上执行、流动性池与结算仍需验证。</p>
+          <div class="decision-area">Infrastructure</div>
+          <h3 class="item-h">Contract lifecycle states need explicit representation in trading integrations</h3>
+          <p class="item-b"><strong>Revised assessment</strong>: Pre-market, open, suspended and delisted states should be machine-readable at the market interface so order handling and risk checks use the same lifecycle.</p><p class="item-b"><strong>Evidence and limits</strong>: KuCoin UTA V2 added conversion dates, settlement times, funding and staged status values. Their suitability for onchain execution, liquidity pools and settlement remains to be tested.</p>
 
           <div class="item-meta">
 
@@ -284,7 +284,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-07-20</title>
+<title>Perp DEX Daily · 2026-07-20</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 持续追踪：跨日叙事线的"当前进展地图" */
+  /* Ongoing coverage of developing stories */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -41,7 +41,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -52,7 +52,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「机会与打法」做成醒目的产品判断卡片 */
+  /* Product analysis card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -84,12 +84,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 29 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 29</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 7 月 20 日 · 星期一</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">July 20, 2026 · Monday</div>
     </header>
-    <p class="lead">永续竞争开始从上新速度转向底层基础设施，撮合、保证金与费用归属都在被统一重写。</p>
+    <p class="lead">Perpetual exchanges are competing on infrastructure as well as listing speed. Changes to matching, margin and fee allocation are reshaping how trades are executed and who receives the revenue.</p>
 
 
       <section class="sec sec-perpdex">
@@ -102,21 +102,21 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Coinbase 与 Deribit 的统一撮合今日进入全量生产，125+ 永续将迁入同一订单簿</h3>
-          <p class="item-b"><strong>事件</strong>：（TradFi/RWA 永续线，自 07-09，第 12 天）Coinbase International Exchange 与 Deribit 的 Direct Gateways 今日进入全量生产；后续将把 Coinbase 的交易量迁到 Deribit，覆盖 125 个以上加密与股票、商品永续，客户持仓和订单簿的完整迁移计划在 09-09 完成。</p><p class="item-b"><strong>机制</strong>：这不是再增加一个交易前端，而是把订单流、统一风险管理、组合保证金与保险基金集中到同一套撮合和清算基础设施；新标的可以复用存量流动性网络，不必逐市场从零建立深度。</p><p class="item-b"><strong>二阶效应</strong>：平台合并会进一步压低复制新标的的门槛，单纯比上新数量更难形成差异；对 DEX 而言，真正的竞争点会落到跨品种资金效率、执行深度和异常行情下的清算连续性。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>今日只是撮合引擎全量生产；账户、持仓与订单簿完整迁移排在 09-09，125 个以上市场尚不能按统一深度验收。</p>
+          <h3 class="item-h">Coinbase and Deribit put direct gateways into full production ahead of a planned migration of over 125 markets</h3>
+          <p class="item-b"><strong>Event</strong>: Coinbase International Exchange and Deribit put Direct Gateways into full production. Coinbase volume was scheduled to move to Deribit across more than 125 crypto, equity and commodity perpetuals. Full migration of positions and order books was planned for September 9. This was day 12 of coverage since July 9.</p><p class="item-b"><strong>Mechanism</strong>: The integration brings order flow, risk management, portfolio margin and insurance funds into common matching and clearing infrastructure. New listings can draw on an established liquidity network.</p><p class="item-b"><strong>Second-order effects</strong>: Shared infrastructure lowers the cost of adding markets. Exchanges competing on execution will need to demonstrate capital efficiency across assets, executable depth and continuity of liquidation in volatile markets.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Only the gateways were in full production. The account, position and order-book migration was scheduled for September 9, so shared liquidity across more than 125 markets had yet to be demonstrated.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-20</span>
             <a class="item-src" href="https://help.coinbase.com/en/international-exchange/deribit/what-you-need-to-know" target="_blank" rel="noopener">Coinbase International Exchange ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">本周主线 ｜ 受监管衍生品同时改造保证金轨道与永续持仓成本</h3>
-          <p class="item-b"><strong>事件</strong>：Marex 已完成首笔以 USDC 支付初始保证金的受监管衍生品清算，Coinbase 提供合格托管、法币即时兑换与定制报告；另一侧，Pepperstone 把永续资金费率预先固定一周，再按日作为隔夜 swap 计提。</p><p class="item-b"><strong>机制</strong>：两项变化分别把加密市场的全天候抵押品和点对点资金费率翻译进传统清算与 CFD 账户体系，保留监管报告、客户资金隔离与既有风控边界，而不是让机构直接接入链上协议。</p><p class="item-b"><strong>二阶效应</strong>：永续机制正在被传统渠道拆成可复用零件，Crypto 原生平台的优势不再只是全天候和无到期日；保证金移动速度、持仓成本可预期性与监管可审计性会成为新的产品基线。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>USDC 已完成首笔初始保证金交易；perpetual CFD 材料由 Pepperstone 委托，资金成本优势仍需独立成交数据验证。</p>
+          <h3 class="item-h">Weekly theme | Regulated derivatives venues change margin infrastructure and the cost of holding perpetuals</h3>
+          <p class="item-b"><strong>Event</strong>: Marex completed its first regulated derivatives clearing transaction using USDC for initial margin. Coinbase provided qualified custody, instant fiat conversion and custom reporting. Separately, Pepperstone fixes perpetual funding rates one week ahead and accrues them daily as overnight swap charges.</p><p class="item-b"><strong>Mechanism</strong>: These approaches bring round-the-clock collateral and peer-to-peer funding into traditional clearing and CFD accounts while retaining regulatory reporting, client asset segregation and existing risk controls. Institutions can use the features through their usual intermediaries.</p><p class="item-b"><strong>Second-order effects</strong>: Traditional providers are adopting individual features of crypto perpetuals. Alongside round-the-clock trading and the absence of expiry, collateral mobility, predictable holding costs and auditable records are becoming important product benchmarks.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>USDC was used in a first initial-margin transaction. Pepperstone commissioned the material on perpetual CFDs. Its claimed funding-cost advantage still needs independent execution data.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-16</span>
-            <a class="item-src" href="https://www.globenewswire.com/news-release/2026/07/16/3328317/0/en/marex-offers-clients-ability-to-post-usdc-as-margin-for-derivatives.html" target="_blank" rel="noopener">Marex 公告 ↗</a><a class="item-src item-ref" href="https://www.theblock.co/post/408553/from-perpetual-swaps-to-perpetual-cfds-the-regulated-evolution" target="_blank" rel="noopener">补充：The Block Research · 07-15 ↗</a>
+            <a class="item-src" href="https://www.globenewswire.com/news-release/2026/07/16/3328317/0/en/marex-offers-clients-ability-to-post-usdc-as-margin-for-derivatives.html" target="_blank" rel="noopener">Marex announcement ↗</a><a class="item-src item-ref" href="https://www.theblock.co/post/408553/from-perpetual-swaps-to-perpetual-cfds-the-regulated-evolution" target="_blank" rel="noopener">Additional source: The Block Research · 07-15 ↗</a>
           </div>
         </article>
         </div>
@@ -131,12 +131,12 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Uniswap 把 v4 与 Robinhood Chain 手续费送入 UNI 销毁，费率开关进入多链执行阶段</h3>
-          <p class="item-b">Uniswap 已把两项提案送入最终链上投票：首批为 7 条链上的部分 v4 池开启协议费，另一项把 Robinhood Chain 的 v2 与 v3 手续费接入 UNI 销毁机制。</p><p class="item-b">v4 的动态 hook 费率不能沿用逐池固定配置，治理需要先把池归入规则族再计算分成；这意味着多链收入归属正从一次性开关变成可编排的费用基础设施。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>两项最终投票从 07-19 持续到 07-26，协议费和新增销毁尚未生效，当前只能确认执行路径而非收入结果。</p>
+          <h3 class="item-h">Uniswap directs v4 and Robinhood Chain fees toward UNI burns as its fee switch expands across networks</h3>
+          <p class="item-b">Uniswap put two proposals to final onchain votes. One would activate protocol fees for selected v4 pools across seven chains. The other would route v2 and v3 fees on Robinhood Chain into the UNI burn mechanism.</p><p class="item-b">Dynamic v4 hook fees do not fit a single fixed setting for each pool. Governance must group pools by rule before calculating the protocol&#x27;s share, turning multichain revenue allocation into an ongoing set of configurable fee rules.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The two final votes run from July 19 to July 26. The protocol fees and additional burns have yet to take effect. The proposals describe how they would work, but provide no realized revenue.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-18</span>
-            <a class="item-src" href="https://www.theblock.co/post/408836/uni-burn-poised-to-grow-as-uniswap-governance-votes-on-v4-fees-and-robinhood-chain-expansion" target="_blank" rel="noopener">The Block ↗</a><a class="item-src item-ref" href="https://vote.uniswapfoundation.org/" target="_blank" rel="noopener">补充：Uniswap Governance · 07-19 ↗</a>
+            <a class="item-src" href="https://www.theblock.co/post/408836/uni-burn-poised-to-grow-as-uniswap-governance-votes-on-v4-fees-and-robinhood-chain-expansion" target="_blank" rel="noopener">The Block ↗</a><a class="item-src item-ref" href="https://vote.uniswapfoundation.org/" target="_blank" rel="noopener">Additional source: Uniswap Governance · 07-19 ↗</a>
           </div>
         </article>
         </div>
@@ -145,14 +145,14 @@
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <h2 class="sec-title">机会与打法</h2>
+            <h2 class="sec-title">Product opportunities</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">统一订单簿：不适合直接照搬</h3>
-          <p class="item-b"><strong>好处</strong>：合并订单流和保证金，有机会提升深度与跨品种资金效率。</p><p class="item-b"><strong>限制</strong>：迁移尚未完成，标的数量增加不代表真实深度改善，效果也依赖中心化撮合。</p>
+          <h3 class="item-h">A shared order book requires compatible margin and risk systems</h3>
+          <p class="item-b"><strong>Benefits</strong>: Combining order flow and margin can improve depth and capital efficiency across products.</p><p class="item-b"><strong>Limitations</strong>: Migration was incomplete. A larger asset list does not establish deeper liquidity, and the benefits depend on centralized matching.</p>
 
           <div class="item-meta">
 
@@ -160,17 +160,17 @@
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">持仓成本预估：适合做展示优化</h3>
-          <p class="item-b"><strong>好处</strong>：让用户开仓前理解预计持有成本，尤其适合费用结构较复杂的 RWA 市场。</p><p class="item-b"><strong>限制</strong>：资金费率会变化，7 日估算容易造成确定性错觉。</p>
+          <h3 class="item-h">Estimated holding costs can make contract fees easier to understand</h3>
+          <p class="item-b"><strong>Benefits</strong>: An estimate before entry makes holding costs easier to understand, especially for real-world asset markets with complex fees.</p><p class="item-b"><strong>Limitations</strong>: Funding changes over time. A seven-day estimate can appear more certain than the underlying rates.</p>
 
           <div class="item-meta">
 
-            <a class="item-src" href="https://www.globenewswire.com/news-release/2026/07/16/3328317/0/en/marex-offers-clients-ability-to-post-usdc-as-margin-for-derivatives.html" target="_blank" rel="noopener">Marex 公告 ↗</a>
+            <a class="item-src" href="https://www.globenewswire.com/news-release/2026/07/16/3328317/0/en/marex-offers-clients-ability-to-post-usdc-as-margin-for-derivatives.html" target="_blank" rel="noopener">Marex announcement ↗</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

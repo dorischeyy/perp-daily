@@ -1,6 +1,6 @@
 # Editorial Methodology
 
-> Perp DEX Daily is a Chinese-language research publication covering perpetual futures, trading infrastructure and selected AI developments. This document explains how editors select stories, verify evidence and follow changes across editions.
+> Perp DEX Daily is an independent English-language research publication by Doris covering perpetual futures, trading infrastructure and selected AI developments. This document explains how editors select stories, verify evidence and follow changes across editions.
 
 ---
 
@@ -10,9 +10,9 @@
 
 Editors score candidates, record significant developments in a public story ledger, and check dates, source links and duplication before publication.
 
-The lead directly states one evidence-backed conclusion or analytical result and its necessary boundary, not a reading guide, research plan or compressed table of contents. Version 2 uses one or two short sentences, 20–120 characters total and at most 70 per sentence. Avoid “更值得研究的是”, “更值得关注的是”, “这期先看”, “这一期先看”, “今天先看”, “本文将”, “让我们来看看” and similar introductory promises. Do not cram multiple institutions, unexplained terms, or unrelated Crypto and AI developments into a synthetic theme. Supporting detail stays in the body; historical research is not presented as a new event.
+The lead directly states one evidence-backed conclusion or analytical result and its necessary boundary, not a reading guide, research plan or compressed table of contents. Version 2 uses one or two short sentences, 8 to 55 words in total and at most 32 words per sentence. Open with the finding. Omit introductions such as “This edition will explore” or “Let’s look at.” Do not cram multiple institutions, unexplained terms, or unrelated Crypto and AI developments into a synthetic theme. Supporting detail stays in the body; historical research is not presented as a new event.
 
-From 2026-10-21, `editorial_version: 2` uses dynamic non-AI sections without fixed categories, per-section counts or research quotas. The single exception is section `id: "ai"`: exactly three genuine `kind: "news"` items, including all `domain: "ai"` and `"crypto-ai"` items, in descending integer `importance_score` order from 75 to 100. Every item must be strongly related to Crypto or AI and useful for product, trading, distribution, risk or tool decisions. Internal research still checks mechanisms, GTM, product choices, attributed discussion and uncertainty. The page shows only a complete headline, one 70–150-character paragraph and one numbered source line, “来源 1 2 3…”. Headlines carry dates only for a verified event or a genuine data snapshot, not for the act of checking a mechanism. All primary, reference and discussion URLs are retained and deduplicated; full source names, dates and available author/affiliation metadata stay in each link's `title` and `aria-label`, not a separate supplement row. No event/mechanism/impact subheads, context card, research grid or separate developments block is displayed. Titles and source links are excluded from the body character count.
+From 2026-10-21, `editorial_version: 2` uses dynamic non-AI sections without fixed categories, per-section counts or research quotas. The single exception is section `id: "ai"`: exactly three genuine `kind: "news"` items, including all `domain: "ai"` and `"crypto-ai"` items, in descending integer `importance_score` order from 75 to 100. Every item must be strongly related to Crypto or AI and useful for product, trading, distribution, risk or tool decisions. Internal research still checks mechanisms, GTM, product choices, attributed discussion and uncertainty. The page shows only a complete headline, one 30 to 100 word paragraph and one numbered source line, “Sources 1 2 3…”. Headlines carry dates only for a verified event or a genuine data snapshot, not for the act of checking a mechanism. All primary, reference and discussion URLs are retained and deduplicated; full source names, dates and available author/affiliation metadata stay in each link's `title` and `aria-label`, not a separate supplement row. No event/mechanism/impact subheads, context card, research grid or separate developments block is displayed. Titles and source links are excluded from the body word count.
 
 ### Facts first, mechanisms in ordinary language
 
@@ -20,9 +20,9 @@ Use the approved 2026-10-21 edition of roughly nine items as a length reference:
 
 News begins with what actually changed, who can use it, and any necessary effective-date or scope details. A headline identifies the event date, project and concrete action. State the old-to-new difference only when both sides are verified; explain the relevant mechanism afterwards. Do not lead with claims about complexity, novelty or industry impact.
 
-A mechanism study has an undated headline unless it concerns a real event. Describe what the user deposits, borrows, trades or withdraws, then explain a useful difference from a verified, comparable mainstream product and mode. Do not treat one platform's cross-margin mode as its only mode, or call an ordinary isolated-margin feature unique. A line such as “共享流动性不等于共享保证金” is not a substitute for explaining which balances can be used for which positions. Prefer concrete actions and consequences to abstract contrasts, jargon or a compulsory risk-disclaimer ending. This is an editorial review, not a blanket ban on logical comparisons.
+A mechanism study has an undated headline unless it concerns a real event. Describe what the user deposits, borrows, trades or withdraws, then explain a useful difference from a verified, comparable mainstream product and mode. Do not treat one platform's cross-margin mode as its only mode, or call an ordinary isolated-margin feature unique. A line such as “shared liquidity does not imply shared margin” is not a substitute for explaining which balances can be used for which positions. Prefer concrete actions and consequences to abstract contrasts, jargon or a compulsory risk-disclaimer ending. This is an editorial review, not a blanket ban on logical comparisons.
 
-Keep four dates distinct: source publication (`date`), event occurrence (`event_date`), actual data snapshot (`snapshot_date`), and source checking (`checked_at`). Event headlines match `event_date`. Only a genuine non-AI research snapshot uses `snapshot_date` and an “截至” headline; it is mutually exclusive with `event_date` and cannot be later than the report. Undated mechanism headlines do not display `checked_at`. The editor verifies the factual time and comparison basis; a valid field alone does not prove either.
+Keep four dates distinct: source publication (`date`), event occurrence (`event_date`), actual data snapshot (`snapshot_date`), and source checking (`checked_at`). Event headlines match `event_date`. Only a genuine non-AI research snapshot uses `snapshot_date` and an “As of” headline; it is mutually exclusive with `event_date` and cannot be later than the report. Undated mechanism headlines do not display `checked_at`. The editor verifies the factual time and comparison basis; a valid field alone does not prove either.
 
 ## 0.1 Project discovery comes before news collection
 
@@ -69,7 +69,7 @@ new S-tier event ──open──▶ active ──(due review: update & recall i
                               ├──(two cadences with no movement)──▶ dormant (kept, off the page)
                               └──(event resolves / ruling lands)───▶ closed (one closing line)
 ```
-`lib/threads.mjs` mechanically lists, each day, the threads whose `next_check` is due — so nothing slips.
+`lib/threads.mjs` lists the threads due for review based on `next_check`.
 
 ### 2.3 How it surfaces (the line between professional and verbose)
 Version 2 places a verified new development in one regular news item. Necessary historical context fits naturally inside its paragraph. The ledger remains persistent, but there is no separate developments map or status card. Due reviews without new facts stay off the page; a story returns only with independently verifiable new information.
@@ -97,11 +97,11 @@ The following checks run during research, validation and publication.
 |------|------|----------|
 | **Run idempotency** | `lib/check-run-state.mjs` | Runs before research; exits 10 when today's report already exists, and labels the market snapshot fresh/stale so expensive work is not repeated and old numbers are not reused |
 | **Freshness** | `lib/check-freshness.mjs` | News ≤72h; genuine multi-event weekly threads retain the ≤7d exception, including AI. A single old event or a study cannot fill the three AI slots. Non-AI studies retain old/unknown publication dates with current-day checks and discussions no older than 30 days |
-| **Anti-fabrication** | `lib/check-freshness.mjs` + `generate.md` | URL-embedded date vs `date` cross-check; and every `date` must be verified against the source page via WebFetch — unverifiable items are cut. Built after a real incident where months-old articles were stamped with today's date |
+| **Anti-fabrication** | `lib/check-freshness.mjs` + `generate.md` | URL-embedded date vs `date` cross-check; and every `date` must be verified against the source page on the original page. Unverifiable news is excluded. Built after a real incident where months-old articles were stamped with today's date |
 | **Ledger integrity** | `lib/threads.mjs` | Story-ledger schema validation; a broken ledger blocks publishing |
-| **Concise format** | `lib/validate-content.mjs` + `lib/research.mjs` | Dynamic nonempty non-AI sections; exactly three AI news items with integer scores 75–100 in descending order; explicit Crypto/AI relevance and correct domain routing; 12–90-character headlines with event/snapshot dates only when applicable, one 70–150-character paragraph, no subheads or context blocks |
+| **Concise format** | `lib/validate-content.mjs` + `lib/research.mjs` | Dynamic nonempty non-AI sections; exactly three AI news items with integer scores 75–100 in descending order; explicit Crypto/AI relevance and correct domain routing; 3 to 25 word headlines with event/snapshot dates only when applicable, one 30 to 100 word paragraph, no subheads or context blocks |
 | **Editorial economy** | `lib/check-editorial.mjs` | Checks visible text for duplication; v2 may summarize internal research without treating hidden evidence as repeated page content |
-| **Conclusion lead** | `lead` + `lib/validate-content.mjs` | v2 requires one or two short sentences, 20–120 characters total and ≤70 per sentence; editorial review checks a direct evidence-backed conclusion and boundary, not a reading guide or research plan |
+| **Conclusion lead** | `lead` + `lib/validate-content.mjs` | v2 requires one or two short sentences, 8 to 55 words in total and at most 32 per sentence; editorial review checks a direct evidence-backed conclusion and boundary, not a reading guide or research plan |
 | **Reader-value audit** | `review.draft.md` + `lib/check-review.mjs` | Forces the editor to answer why today's edition is worth opening, what judgment changed, what decision improves, and what would invalidate the conclusion |
 | **Source provenance** | `references` + validator/renderer | News has a dated primary source; studies require at least two distinct URLs with separate publication/check dates. All source URLs are deduplicated into one numbered line; full names, dates and available author relationships remain in title/aria-label, including explicit undated labels |
 | **Project depth** | `lib/research.mjs` + validator | Internal research retains classification, mechanism, GTM, product choice, discussions or a gap, inference and unknowns. It does not render as a template grid; a kind label alone cannot exempt stale news |
@@ -113,7 +113,7 @@ The following checks run during research, validation and publication.
 
 ## 4. Audit trail
 
-Before each publish, the archived review includes per-item freshness verification, scores, thread continuity, critique, exclusions and changes. The editor also checks that news explains the change before the mechanism, that research does not display its check date as an event, and that comparisons name the relevant product/mode and explain a concrete user consequence. Version 2 requires A4: actual queries, discovery candidates, category checks, discussion provenance, research novelty and open questions. It also requires the exact heading `## A5 AI候选筛选`, after A4 and before B, with `### 厂商覆盖` and `### 前三条与取舍`.
+Before each publish, the archived review includes per-item freshness verification, scores, thread continuity, critique, exclusions and changes. The editor also checks that news explains the change before the mechanism, that research does not display its check date as an event, and that comparisons name the relevant product/mode and explain a concrete user consequence. Version 2 requires A4: actual queries, discovery candidates, category checks, discussion provenance, research novelty and open questions. It also requires the exact heading `## A5 AI candidate selection`, after A4 and before B, with `### Vendor coverage` and `### Top three and exclusions`.
 
 A5 coverage uses the seven canonical names Anthropic, OpenAI, Scale AI, xAI, Kimi, DeepSeek and Qwen. Each company has concrete bilingual queries, the three-day window, readable sources, findings and exclusion reasons when nothing qualifies, not just a coverage checkbox. The selection subsection records candidate five-axis scores and integer totals, same-event consolidation, ranking, why the top three won and why other candidates were excluded; its winners and scores must match the AI section.
 
@@ -124,7 +124,7 @@ New candidates survive in this existing report artifact and are reread in subseq
 ## 5. Pipeline architecture
 
 ```
-Scheduling   Cloud Routine (daily)
+Scheduling   Codex automation (daily)
    │
 Content      preflight → generate.md (score → thread → weave → self-review) → editorial gates → HTML render
    │           ├─ State: threads.json (story ledger)
@@ -137,7 +137,3 @@ Delivery     GitHub Actions → lib/deliver.mjs (de-dup / retry) → channels (F
 ```
 
 Principles: **content decoupled from channel**, **state separated from presentation**, **judgment separated from gatekeeping**, and **one fact has one visible home and traceable source**.
-
----
-
-*This methodology evolves with the system. Behind most of these rules sits a real lesson learned the hard way.*

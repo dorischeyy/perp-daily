@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-11-16</title>
+<title>Perp DEX Daily · 2026-11-16</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -100,51 +100,51 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 134 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 134</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 11 月 16 日 · 星期一</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">November 16, 2026 · Monday</div>
     </header>
-    <p class="lead">HRC三季度报告显示，股票永续成交额已超过商品，占HIP-3总额近六成。同期第三方交易应用手续费环比增长50%。</p>
+    <p class="lead">Equity perpetuals overtook commodities and accounted for nearly 60% of HIP-3 trading volume in the third quarter, according to HRC. Fees earned by third-party trading apps rose 50% from the previous quarter.</p>
 
 
       <section class="sec sec-market-structure">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">股票永续与交易成本</h2>
+            <h2 class="sec-title">Equity perpetuals and trading costs</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月13日，HRC报告显示股票已占HIP-3季度成交额近六成</h3>
-          <p class="item-b">HRC公布三季度报告：股票永续成交额环比增长161%至1538亿美元，占HIP-3总额58.8%，超过商品。第三方应用通过交易入口获得的手续费环比增长50%至2500万美元。与此同时，原生加密永续交易回升，HIP-3占全平台永续成交额的比例从7月51%降至9月25%。</p>
+          <h3 class="item-h">November 13: HRC reports that equity perpetuals account for nearly 60% of quarterly HIP-3 trading volume</h3>
+          <p class="item-b">HRC’s third-quarter report put equity perpetual volume at $153.8 billion, up 161% quarter over quarter and ahead of commodities at 58.8% of total HIP-3 volume. Third-party apps earned $25 million in trading interface fees, up 50% quarter over quarter. As native crypto perpetual trading rebounded, HIP-3’s share of platform-wide perpetual volume fell from 51% in July to 25% in September.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://hyperliquidresearch.xyz/reporting/hyperliquid-2026-q3-report" target="_blank" rel="noopener" title="Hyperliquid Research Collective，独立研究报告 · 发布 2026-11-13" aria-label="来源 1：Hyperliquid Research Collective，独立研究报告 · 发布 2026-11-13">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://hyperliquidresearch.xyz/reporting/hyperliquid-2026-q3-report" target="_blank" rel="noopener" title="Independent research report by Hyperliquid Research Collective · Published 2026-11-13" aria-label="Source 1: Independent research report by Hyperliquid Research Collective · Published 2026-11-13">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月13日，Ondo Perps上线跨现货与永续的交易量费率等级</h3>
-          <p class="item-b">Ondo Perps按过去14天已成交量计算费率等级，每日零点UTC更新，主余额与子余额自动共用。永续、代币化股票和私募市场成交均计入等级，但现货与永续各有对应费率，私募市场仍按独立费表收费。用户可在Portfolio的Fee Schedule查看等级。</p>
+          <h3 class="item-h">November 13: Ondo Perps introduces volume-based fee tiers across spot and perpetual markets</h3>
+          <p class="item-b">Ondo Perps calculates fee tiers from executed volume over the trailing 14 days and updates them daily at 00:00 UTC. Main and sub-balances share the same tier. Perpetual, tokenized equity and private-market trades count toward it. Spot and perpetuals retain distinct rates, and private markets retain their own fee schedule. Users can check their tier in Portfolio under Fee Schedule.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://teapawt.org/OndoPerps/status/2121270390110421393" target="_blank" rel="noopener" title="Ondo Perps官方帖，Teapawt可读镜像 · 发布 2026-11-13" aria-label="来源 1：Ondo Perps官方帖，Teapawt可读镜像 · 发布 2026-11-13">1</a><a class="source-number" href="https://teapawt.org/OndoPerps/status/2121270399123992970" target="_blank" rel="noopener" title="Ondo Perps费率规则续帖，Teapawt可读镜像 · 发布 2026-11-13" aria-label="来源 2：Ondo Perps费率规则续帖，Teapawt可读镜像 · 发布 2026-11-13">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://teapawt.org/OndoPerps/status/2121270390110421393" target="_blank" rel="noopener" title="Official Ondo Perps post, available through a Teapawt mirror · Published 2026-11-13" aria-label="Source 1: Official Ondo Perps post, available through a Teapawt mirror · Published 2026-11-13">1</a><a class="source-number" href="https://teapawt.org/OndoPerps/status/2121270399123992970" target="_blank" rel="noopener" title="Ondo Perps follow-up on fees, available through a Teapawt mirror · Published 2026-11-13" aria-label="Source 2: Ondo Perps follow-up on fees, available through a Teapawt mirror · Published 2026-11-13">2</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月13日，MGBX宣布SNDK拆股期间强制结清永续仓位</h3>
-          <p class="item-b">MGBX将于11月19日把SNDK永续改为只可平仓，20日北京时间9时按最新标记价结清剩余仓位，并终止相关交易机器人，22时35分重新开放交易。现货持仓则按一股拆八股调整数量。永续持仓会被关闭，不能把现货的数量换算理解成合约仓位自动延续。</p>
+          <h3 class="item-h">November 13th, MGBX announced mandatory settlement of perpetual positions during the SNDK split.</h3>
+          <p class="item-b">MGBX will make its SNDK perpetual close-only on November 19. At 09:00 Beijing time on November 20, it will settle outstanding positions at the latest mark price and stop the associated trading bots. Trading will reopen at 22:35 Beijing time. Spot holdings will adjust from one share to eight, but existing perpetual positions will close and will not carry over.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://support.mgbx.com/hc/en-gb/articles/18369678166159--Important-Notice-Announcement-on-MGBX-s-Updated-Handling-Plan-for-the-SNDK-SanDisk-Stock-Split-and-Spot-Perpetual-Futures-Trading-Arrangements" target="_blank" rel="noopener" title="MGBX拆股处理更新公告 · 发布 2026-11-13" aria-label="来源 1：MGBX拆股处理更新公告 · 发布 2026-11-13">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://support.mgbx.com/hc/en-gb/articles/18369678166159--Important-Notice-Announcement-on-MGBX-s-Updated-Handling-Plan-for-the-SNDK-SanDisk-Stock-Split-and-Spot-Perpetual-Futures-Trading-Arrangements" target="_blank" rel="noopener" title="MGBX update on treatment of the stock split · Published 2026-11-13" aria-label="Source 1: MGBX update on treatment of the stock split · Published 2026-11-13">1</a>
           </div>
         </article>
         </div>
@@ -153,29 +153,29 @@
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <h2 class="sec-title">交易入口与用户运营</h2>
+            <h2 class="sec-title">Trading access and user engagement</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Wealthsimple把永续接入原有保证金账户，盈亏影响全账户购买力</h3>
-          <p class="item-b">用户在Wealthsimple手机端完成适当性与产品教育后，可用原有保证金账户交易加密资产及金银永续，盈亏以美元现金结算。仓位与股票、期货共享购买力，永续亏损也可能触发出售账户内其他资产。当前分批开放，仅支持市价单，尚未开放网页端。</p>
+          <h3 class="item-h">Wealthsimple integrates perpetual contracts into existing margin accounts, affecting overall account purchasing power.</h3>
+          <p class="item-b">After completing suitability checks and product education on mobile, eligible Wealthsimple users can trade perpetuals on crypto assets, gold and silver from an existing margin account. Gains and losses settle in U.S. dollars. These positions share buying power with stocks and futures, so losses can trigger sales of other assets in the account. The phased rollout supports market orders on mobile only.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://help.wealthsimple.com/hc/en-ca/articles/58514414640923-Trade-perpetual-futures-on-Wealthsimple" target="_blank" rel="noopener" title="Wealthsimple永续交易帮助页 · 发布 2026-11-12 · 核验 2026-11-16" aria-label="来源 1：Wealthsimple永续交易帮助页 · 发布 2026-11-12 · 核验 2026-11-16">1</a><a class="source-number" href="https://help.wealthsimple.com/hc/en-ca/articles/28510862839323-Open-a-margin-account" target="_blank" rel="noopener" title="Wealthsimple保证金账户说明 · 发布 2026-11-10 · 核验 2026-11-16" aria-label="来源 2：Wealthsimple保证金账户说明 · 发布 2026-11-10 · 核验 2026-11-16">2</a><a class="source-number" href="https://help.wealthsimple.com/hc/en-ca/articles/33647420196379-Understanding-margin-calls" target="_blank" rel="noopener" title="Wealthsimple追保与资产出售规则 · 发布 2026-11-01 · 核验 2026-11-16" aria-label="来源 3：Wealthsimple追保与资产出售规则 · 发布 2026-11-01 · 核验 2026-11-16">3</a><a class="source-number" href="https://www.wealthsimple.com/en-ca/learn/wealthsimple-perpetual-futures" target="_blank" rel="noopener" title="Wealthsimple介绍文章，网页可用说法与帮助页冲突 · 发布 2026-11-11 · 核验 2026-11-16" aria-label="来源 4：Wealthsimple介绍文章，网页可用说法与帮助页冲突 · 发布 2026-11-11 · 核验 2026-11-16">4</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://help.wealthsimple.com/hc/en-ca/articles/58514414640923-Trade-perpetual-futures-on-Wealthsimple" target="_blank" rel="noopener" title="Wealthsimple perpetuals trading help page · Published 2026-11-12 · Verified 2026-11-16" aria-label="Source 1: Wealthsimple perpetuals trading help page · Published 2026-11-12 · Verified 2026-11-16">1</a><a class="source-number" href="https://help.wealthsimple.com/hc/en-ca/articles/28510862839323-Open-a-margin-account" target="_blank" rel="noopener" title="Wealthsimple margin account guide · Published 2026-11-10 · Verified 2026-11-16" aria-label="Source 2: Wealthsimple margin account guide · Published 2026-11-10 · Verified 2026-11-16">2</a><a class="source-number" href="https://help.wealthsimple.com/hc/en-ca/articles/33647420196379-Understanding-margin-calls" target="_blank" rel="noopener" title="Wealthsimple rules on margin calls and asset sales · Published 2026-11-01 · Verified 2026-11-16" aria-label="Source 3: Wealthsimple rules on margin calls and asset sales · Published 2026-11-01 · Verified 2026-11-16">3</a><a class="source-number" href="https://www.wealthsimple.com/en-ca/learn/wealthsimple-perpetual-futures" target="_blank" rel="noopener" title="Wealthsimple overview, whose claim about web access conflicts with its help page · Published 2026-11-11 · Verified 2026-11-16" aria-label="Source 4: Wealthsimple overview, whose claim about web access conflicts with its help page · Published 2026-11-11 · Verified 2026-11-16">4</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Trasia用移动交易、地址侦查与社区组队赛连接Hyperliquid用户</h3>
-          <p class="item-b">Trasia用户可在手机内交易HyperCore和HIP-3市场，使用TWAP、分层挂单及标准或统一账户，并通过侦查模式查看地址操作。其社区赛以十人组队、队长招募奖励和团队盈利排名引导参与，交易仍依托Hyperliquid，尚无激励结束后的留存数据。</p>
+          <h3 class="item-h">Trasia uses mobile trading, address reconnaissance, and community team competitions to connect Hyperliquid users.</h3>
+          <p class="item-b">Trasia users can trade HyperCore and HIP-3 markets on their mobile devices. They can use TWAP, layered orders, and standard or unified accounts. They can also view address operations in a monitoring mode. The community competition is organized in teams of ten, with rewards for team leaders and team profitability rankings. Trading still relies on Hyperliquid, and there is no data on retention after incentives end.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://play.google.com/store/apps/details?id=xyz.trasia.app" target="_blank" rel="noopener" title="Trasia Google Play产品页 · 发布 2026-10-08 · 核验 2026-11-16" aria-label="来源 1：Trasia Google Play产品页 · 发布 2026-10-08 · 核验 2026-11-16">1</a><a class="source-number" href="https://xitter.gq/trasiaxyz" target="_blank" rel="noopener" title="Trasia官方账号公开镜像，社区赛及Scout帖子 · 未标发布日期 · 核验 2026-11-16" aria-label="来源 2：Trasia官方账号公开镜像，社区赛及Scout帖子 · 未标发布日期 · 核验 2026-11-16">2</a><a class="source-number" href="https://168xclub.substack.com/p/trasia-mable-multicoin-hyperliquid" target="_blank" rel="noopener" title="Mable创始人访谈，历史策略背景 · 发布 2026-07-18 · 核验 2026-11-16" aria-label="来源 3：Mable创始人访谈，历史策略背景 · 发布 2026-07-18 · 核验 2026-11-16">3</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://play.google.com/store/apps/details?id=xyz.trasia.app" target="_blank" rel="noopener" title="Trasia product listing on Google Play · Published 2026-10-08 · Verified 2026-11-16" aria-label="Source 1: Trasia product listing on Google Play · Published 2026-10-08 · Verified 2026-11-16">1</a><a class="source-number" href="https://xitter.gq/trasiaxyz" target="_blank" rel="noopener" title="Public mirror of Trasia&#x27;s official account, including its community competition and Scout posts · Publication date not listed · Verified 2026-11-16" aria-label="Source 2: Public mirror of Trasia&#x27;s official account, including its community competition and Scout posts · Publication date not listed · Verified 2026-11-16">2</a><a class="source-number" href="https://168xclub.substack.com/p/trasia-mable-multicoin-hyperliquid" target="_blank" rel="noopener" title="Founder interview with Mable on Trasia&#x27;s earlier strategy · Published 2026-07-18 · Verified 2026-11-16" aria-label="Source 3: Founder interview with Mable on Trasia&#x27;s earlier strategy · Published 2026-07-18 · Verified 2026-11-16">3</a>
           </div>
         </article>
         </div>
@@ -190,38 +190,38 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月16日，Qwen发布支持显式缓存与思维链摘要的Qwen4-Max正式版</h3>
-          <p class="item-b">Qwen4-Max正式版支持文本、图片和视频理解，覆盖推理、编码与Agent任务，并提供工具调用、结构化输出、显式缓存及思维链摘要。官方同时保留11月11日的预览型号，其入口仍注明仅限Token Plan；正式版与预览版需按不同型号核对接入范围。</p>
+          <h3 class="item-h">On November 16th, Qwen released the official version of Qwen4-Max, which supports explicit caching and chain of thought summaries.</h3>
+          <p class="item-b">The production release of Qwen4-Max understands text, images and video, and supports reasoning, coding and agent tasks. It offers tool calls, structured output, explicit caching and summaries of model reasoning. The November 11 preview remains available separately and is still marked Token Plan only. Teams should check access against the specific model identifier they intend to use.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://docs.qwencloud.com/changelog/models" target="_blank" rel="noopener" title="QwenCloud模型发布日志 · 发布 2026-11-16" aria-label="来源 1：QwenCloud模型发布日志 · 发布 2026-11-16">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://docs.qwencloud.com/changelog/models" target="_blank" rel="noopener" title="QwenCloud model release log · Published 2026-11-16" aria-label="Source 1: QwenCloud model release log · Published 2026-11-16">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月13日，Cursor披露供应商密钥泄露如何导致恶意扩展分发</h3>
-          <p class="item-b">Cursor公布10月安全事件调查：攻击者由Fireworks泄露的密钥取得历史非隐私模式训练记录，再利用未脱敏凭证进入内部工具并投毒扩展缓存。官方称不到0.01%客户的API凭证暴露，最多5000名用户可能收到恶意扩展；已撤销相关权限并迁出Fireworks。</p>
+          <h3 class="item-h">On November 13, Cursor disclosed how a supplier key leak led to malicious extensions being distributed.</h3>
+          <p class="item-b">Cursor’s investigation of its October security incident linked a supplier credential exposure at Fireworks to access to historical non-privacy-mode training records and unauthorized distribution of malicious extensions. Cursor said API credentials belonging to fewer than 0.01% of customers were exposed, and up to 5,000 users may have received a malicious extension. It revoked the affected permissions and moved off Fireworks.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://cursor.com/blog/security-incident-update" target="_blank" rel="noopener" title="Cursor安全事件调查更新 · 发布 2026-11-13" aria-label="来源 1：Cursor安全事件调查更新 · 发布 2026-11-13">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://cursor.com/blog/security-incident-update" target="_blank" rel="noopener" title="Cursor security incident investigation update · Published 2026-11-13" aria-label="Source 1: Cursor security incident investigation update · Published 2026-11-13">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月15日，Seedance 2.5 Flash开放API，支持低成本视频生成</h3>
-          <p class="item-b">Seedance 2.5 Flash已可通过API调用，Runware提供4至30秒、480p或720p带音频视频生成，支持图片、视频及音轨参考。其无视频输入的720p生成标价每秒0.152美元，可用于反复制作预览；Flash不支持原生1080p，交付分辨率需另行选择。</p>
+          <h3 class="item-h">On November 15th, Seedance 2.5 Flash opened its API, supporting low-cost video generation.</h3>
+          <p class="item-b">Seedance 2.5 Flash is available by API. Runware offers 4- to 30-second videos with audio at 480p or 720p and accepts images, video and audio tracks as references. The listed 720p price of $0.152 per second applies to generation without a video input. Flash supports repeated preview generation but has no native 1080p output, so delivery at that resolution requires a separate choice.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://runware.ai/docs/models/bytedance-seedance-2-5-flash" target="_blank" rel="noopener" title="Runware Seedance 2.5 Flash上线页 · 发布 2026-11-15" aria-label="来源 1：Runware Seedance 2.5 Flash上线页 · 发布 2026-11-15">1</a><a class="source-number" href="https://docs.byteplus.com/en/docs/ModelArk/seedance-2-5" target="_blank" rel="noopener" title="BytePlus Seedance 2.5系列文档，11月15日更新 · 发布 2026-11-15" aria-label="来源 2：BytePlus Seedance 2.5系列文档，11月15日更新 · 发布 2026-11-15">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://runware.ai/docs/models/bytedance-seedance-2-5-flash" target="_blank" rel="noopener" title="Runware Seedance 2.5 Flash launch page · Published 2026-11-15" aria-label="Source 1: Runware Seedance 2.5 Flash launch page · Published 2026-11-15">1</a><a class="source-number" href="https://docs.byteplus.com/en/docs/ModelArk/seedance-2-5" target="_blank" rel="noopener" title="BytePlus Seedance 2.5 series documentation, updated November 15 · Published 2026-11-15" aria-label="Source 2: BytePlus Seedance 2.5 series documentation, updated November 15 · Published 2026-11-15">2</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-09-15</title>
+<title>Perp DEX Daily · 2026-09-15</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 78 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 78</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 9 月 15 日 · 星期二</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">September 15, 2026 · Tuesday</div>
     </header>
-    <p class="lead">Reya把v1 AMM用户迁入受限准入的v2订单簿，Robinhood Chain的发射台与股票代币开始形成相互导流，Microsoft则把未来MAI模型的停机服从和权限边界写进公开守则。</p>
+    <p class="lead">Reya is migrating v1 AMM users to its restricted-access v2 order book. Launchpads and equity tokens on Robinhood Chain are starting to direct users to one another. Microsoft published rules on shutdown compliance and permission boundaries for future MAI models.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,9 +110,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Reya把v1用户迁入v2订单簿</h3>
-          <p class="item-b"><strong>事件</strong>：Reya宣布v2订单簿DEX即将开放，v1 AMM用户可直接获得访问资格，新用户需要先加入候补名单。（市场生命周期线 · 自08-28 · 新增迁移落地）</p><p class="item-b"><strong>机制</strong>：直接迁移把已有账户和头寸关系转成冷启动入口，同时用候补名单控制新增流量，撮合架构切换因此与准入状态绑定。</p><p class="item-b"><strong>二阶效应</strong>：订单簿能把做市和价格发现从池子迁到挂单深度，但来源未披露开放日期、做市激励、v1最终关闭时间和头寸迁移规则。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>v2已进入准入阶段，完整交易开放与v1退出规则仍未披露。</p>
+          <h3 class="item-h">Reya migrates v1 users to its v2 order book</h3>
+          <p class="item-b"><strong>Event</strong>: Reya said its v2 order book DEX would open soon. Existing v1 AMM users qualify directly, while new users must join a waitlist. This adds a concrete migration step to the market lifecycle story tracked since August 28.</p><p class="item-b"><strong>Mechanism</strong>: Migrating existing accounts and positions gives the new venue an initial user base. A waitlist limits new arrivals, so access depends on the stage of the matching-system migration.</p><p class="item-b"><strong>Second-order effects</strong>: The order book moves market making and price discovery from a pool to resting quotes. Reya had not disclosed the opening date, maker incentives, final v1 closure date or treatment of existing positions.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Version 2 has entered the approval phase. The rules for opening full transactions and exiting from version 1 have not yet been disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-15</span>
             <a class="item-src" href="https://perpdexwars.com/en/perpdex-news" target="_blank" rel="noopener">PerpDEX Wars ↗</a>
@@ -120,9 +120,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">GRVT让USDC与USDT同时充当保证金</h3>
-          <p class="item-b"><strong>事件</strong>：GRVT上线多资产保证金，账户可同时用USDC与USDT支持现有仓位。</p><p class="item-b"><strong>机制</strong>：双稳定币抵押减少用户为开仓反复换币的步骤，也把稳定币价格偏离、抵押折扣和清算顺序纳入同一风险引擎。</p><p class="item-b"><strong>二阶效应</strong>：资金效率改善可能提升跨市场留存，但来源未披露抵押率、亏损优先扣减和稳定币脱锚时的处置规则。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>双稳定币保证金已上线，风险折扣和清算优先级尚未公开。</p>
+          <h3 class="item-h">GRVT accepts both USDC and USDT as margin</h3>
+          <p class="item-b"><strong>Event</strong>: GRVT has introduced multi-asset margin requirements. Accounts can now be supported using both USDC and USDT for existing positions.</p><p class="item-b"><strong>Mechanism</strong>: Supporting both stablecoins as collateral reduces the conversions users need to open positions. The risk engine must also account for stablecoin depegs, collateral haircuts and liquidation priority.</p><p class="item-b"><strong>Second-order effects</strong>: Improved capital efficiency may lead to increased retention across markets. However, the source of funds, including the collateral ratio, loss priority deductions, and disposal rules during stablecoin withdrawal are not disclosed.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Dual stablecoin margin funds have been launched, but risk discounts and settlement priorities remain undisclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-15</span>
             <a class="item-src" href="https://perpdexwars.com/en/perpdex-news" target="_blank" rel="noopener">PerpDEX Wars ↗</a>
@@ -130,9 +130,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">ApeX把TRON USDT直充接进政治市场</h3>
-          <p class="item-b"><strong>事件</strong>：ApeX Omni支持TRON网络USDT直接入金，无需跨链，并同步开启四阶段、四个市场、总奖池6000 USDT的政治市场活动。</p><p class="item-b"><strong>机制</strong>：直充先降低稳定币迁移摩擦，竞赛再用1.5倍积分和分阶段奖池把新增资金导向指定事件合约。</p><p class="item-b"><strong>二阶效应</strong>：入金与交易激励被串成完整获客漏斗，但活动成交不能直接代表自然需求，来源也未披露反刷量和活动后留存。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>6000 USDT是四阶段总奖池，活动订单流不等于自然成交。</p>
+          <h3 class="item-h">ApeX adds direct TRON USDT deposits for political markets</h3>
+          <p class="item-b"><strong>Event</strong>: ApeX Omni supports direct USDT deposits on the TRON network without the need for cross-chain transactions. It also initiates four-stage, four-market political market activities with a total prize pool of 6000 USDT.</p><p class="item-b"><strong>Mechanism</strong>: Direct payment reduces the friction associated with stablecoin migration. In competitions, 1.5 times more points and phased rewards are used to direct new funds towards designated event contracts.</p><p class="item-b"><strong>Second-order effects</strong>: Deposit and trading incentives are integrated into a complete customer acquisition funnel. However, actual transactions cannot directly represent natural demand, and the sources of these transactions are not disclosed.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The 6,000 USDT prize pool covers all four stages. Order flow attracted by the event cannot establish organic trading activity.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-15</span>
             <a class="item-src" href="https://perpdexwars.com/en/perpdex-news" target="_blank" rel="noopener">PerpDEX Wars ↗</a>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Robinhood Chain把发射台与股票代币做成导流飞轮</h3>
-          <p class="item-b"><strong>事件</strong>：StoneX拆解Robinhood Chain增长来源时指出，Pons近期约有每日1万次代币发射，Long.xyz则让社区代币与Robinhood股票代币组成交易对。（Robinhood分发线 · 自07-02 · 新增交叉导流）</p><p class="item-b"><strong>机制与影响</strong>：发射台持续供给高频新资产，股票代币提供差异化报价资产，两类产品可在同一链上互相导流；这些数字来自分析师与第三方研究，尚无项目方公开的独立用户、留存和补贴后成交口径。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>每日发射数不等于成功项目数，交叉导流仍缺用户队列与留存证据。</p>
+          <h3 class="item-h">Robinhood Chain launchpads and equity tokens begin directing users to one another</h3>
+          <p class="item-b"><strong>Event</strong>: In its analysis of Robinhood Chain growth, StoneX reported that Pons had recently averaged about 10,000 token launches per day. Long.xyz pairs community tokens with Robinhood stock tokens. The two products add a route for referrals within the chain, a distribution story tracked since July 2.</p><p class="item-b"><strong>Mechanism and impact</strong>: The launchpad supplies new assets frequently, while equity tokens offer an unusual quote asset. The two can direct users to each other on the same chain. The figures come from analysts and third-party research. The projects have yet to publish unique-user counts, retention or trading volume net of incentives.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Daily launches count listings, not successful projects. User cohorts and retention data are still missing for the cross-referral claim.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-14</span>
             <a class="item-src" href="https://www.theblock.co/news/business/2026-09-14-robinhood-chain-rapid-growth-being-driven-4-key-factors-analyst-says-414687" target="_blank" rel="noopener">The Block ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">两家平台承载98.4%的七日毕业量</h3>
-          <p class="item-b"><strong>事件</strong>：MemeFees统计截至9月13日的七个完整UTC日共有29,458个代币毕业，其中Meteora Dynamic Bonding Curve占20,980个，pump.fun占8,009个。</p><p class="item-b"><strong>机制与影响</strong>：两家合计承载98.4%的样本毕业量，说明曲线结束后的流动性迁移正高度集中在少数基础设施；统计不含直接建池或未接入数据源的发射，也没有完整关闭后的同批留存数据。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>29,458个是受追踪平台七日毕业量，不覆盖直接建池和未接入数据源。</p>
+          <h3 class="item-h">Two platforms account for 98.4% of token graduations over seven days</h3>
+          <p class="item-b"><strong>Event</strong>: According to MemeFees statistics, as of September 13, there were 29,458 token dissolutions over seven complete UTC days. Of these, 20,980 came from Meteora Dynamic Bonding Curve, and 8,009 came from pump.fun.</p><p class="item-b"><strong>Mechanism and impact</strong>: The two platforms together account for 98.4% of the sample graduation volume. This indicates that the migration of liquidity after the end of the curve is highly concentrated in a few infrastructure systems. The statistics do not include launches that are directly built into pools or do not have access to data sources. There is also no complete data on retention after the platform is shut down.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>29,458 are tracked platforms with a seven-day graduation period. This does not include direct pool creation or data sources that are not connected.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-13</span>
             <a class="item-src" href="https://memefees.com/stats/graduations" target="_blank" rel="noopener">MemeFees ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">本周主线｜自动化操纵绕开发射台前端</h3>
-          <p class="item-b"><strong>事件</strong>：一项覆盖pump.fun前两年全部1500万枚代币的研究，将操纵行为归为刷量、创建者身份混淆、协同抛售、仿盘和社交操纵五类。</p><p class="item-b"><strong>机制与影响</strong>：高频参与者通过直接链上交易绕开前端限制，并借助做市即服务工具自动化执行，意味着仅在UI层增加提醒或限频无法覆盖主要攻击面；论文的交易细节来自随机样本，不代表逐笔审计了全部历史。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>总体覆盖1500万枚代币，五类行为的细节证据来自随机交易样本。</p>
+          <h3 class="item-h">Weekly theme | Automated market manipulation exposes the limits of launchpad front-end controls</h3>
+          <p class="item-b"><strong>Event</strong>: A study covering all 15 million tokens issued on pump.fun over the past two years categorized manipulation behaviors into five categories: volume manipulation, identity confusion, coordinated selling, fake trading, and social manipulation.</p><p class="item-b"><strong>Mechanism and impact</strong>: The study found that front-end notices and rate limits alone left important trading activity outside the platform’s controls. Monitoring must also address activity recorded onchain. Transaction-level conclusions came from a random sample, rather than an audit of every historical trade.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The total coverage includes 15 million tokens. Details about five types of transactions come from random transaction samples.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-09</span>
             <a class="item-src" href="https://arxiv.org/abs/2609.10246" target="_blank" rel="noopener">arXiv ↗</a>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">SGX向美国机构开放既有比特币与以太坊永续</h3>
-          <p class="item-b"><strong>事件</strong>：新加坡交易所在CFTC Regulation 48.10授权下，允许合格美国机构直接接入其既有比特币与以太坊永续订单簿。（美国永续定性线 · 自06-19 · 新增境外场所入口）</p><p class="item-b"><strong>机制与影响</strong>：产品没有在美国新设合约，而是让机构经SGX清算会员完成KYC、入金和技术接入后交易境外订单簿，为美国永续提供一条受监管的跨境入口；截至8月约1900万美元日均成交仍远低于头部加密衍生品场所。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>累计约58亿美元、日均约1900万美元，只面向合格机构且仍需清算会员接入。</p>
+          <h3 class="item-h">SGX opens its existing bitcoin and ether perpetuals to U.S. institutions</h3>
+          <p class="item-b"><strong>Event</strong>: Under CFTC Regulation 48.10, Singapore Exchange permits eligible U.S. institutions to access its existing bitcoin and ether perpetual order books directly. This adds an overseas venue to the U.S. perpetuals story tracked since June 19.</p><p class="item-b"><strong>Mechanism and impact</strong>: Institutions complete KYC, fund their accounts and connect through an SGX clearing member to trade its offshore order book. This provides regulated cross-border access to perpetuals without creating a new U.S. contract. Average daily volume of about $19 million as of August remained well below that of leading crypto derivatives venues.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The cumulative amount is approximately 5.8 billion USD, with an average daily amount of about 19 million USD. This is only available to qualified institutions, and member access still requires clearing.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-14</span>
             <a class="item-src" href="https://www.coininsider.org/news/sgx-opens-crypto-perpetuals-to-u-s-institutions-as-market-expands/" target="_blank" rel="noopener">CoinInsider ↗</a>
@@ -202,9 +202,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">CLARITY法案用州检察长执法换关键票</h3>
-          <p class="item-b"><strong>事件</strong>：特朗普同意在参议院关键程序投票前接受民主党人提出的大部分加密伦理条款，更新文本拟允许州检察长与司法部共同执法。</p><p class="item-b"><strong>机制与影响</strong>：方案还要求高级官员处置或交由盲目信托管理加密发行方的重大权益，以利益冲突约束交换跨党派票数；目前只是为程序投票形成的谈判文本，法案尚未通过。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>谈判方称约八成伦理方案被接受，但程序投票与最终立法仍未完成。</p>
+          <h3 class="item-h">CLARITY Act backers offer state attorneys general enforcement powers to secure a key vote</h3>
+          <p class="item-b"><strong>Event</strong>: Ahead of a key procedural vote in the Senate, Trump agreed to accept most of the crypto ethics provisions proposed by Democrats. The revised text would allow state attorneys general and the Department of Justice to enforce the provisions jointly.</p><p class="item-b"><strong>Mechanism and impact</strong>: The proposal would require senior officials to divest significant interests in crypto issuers or place them in a blind trust. Negotiators offered these conflict-of-interest provisions to secure bipartisan votes. The text was still under discussion ahead of a procedural vote, and the bill had yet to pass.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Negotiators claim that approximately 80% of the ethical proposals have been accepted. However, the procedural voting and final legislation have not yet been completed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-14</span>
             <a class="item-src" href="https://apnews.com/article/donald-trump-cryptocurrency-ethics-521fd5986eb107413064018f7a468c51" target="_blank" rel="noopener">Associated Press ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">S&amp;P Global入股Kaiko扩建链上数据基准</h3>
-          <p class="item-b"><strong>事件</strong>：S&amp;P Global领投Kaiko新一轮B轮扩展融资，双方将围绕数字资产市场数据、指数和链上基础设施深化合作。</p><p class="item-b"><strong>机制与影响</strong>：传统评级与指数机构把资本和分发接入加密原生数据商，可缩短从原始链上数据到机构基准产品的路径；公告没有披露投资金额，商业整合范围仍停留在合作方向。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>Kaiko服务超过250家企业与监管客户，投资金额和新增产品时间表未披露。</p>
+          <h3 class="item-h">S&amp;P Global invests in Kaiko to expand onchain data benchmarks</h3>
+          <p class="item-b"><strong>Event</strong>: S&amp;P Global led a new round of Series B financing for Kaiko. Both parties will deepen their cooperation in digital asset market data, indices, and on-chain infrastructure.</p><p class="item-b"><strong>Mechanism and impact</strong>: Traditional rating and index agencies can connect capital and distribution to crypto-native data providers, thereby shortening the path from raw blockchain data to institutional benchmark products. The announcement does not disclose the amount of investment involved, and the scope of commercial integration remains limited to cooperation.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Kaiko services are used by over 250 companies and regulatory clients. The investment amounts and schedule for new products are not disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-14</span>
             <a class="item-src" href="https://www.prnewswire.com/news-releases/sp-global-leads-strategic-investment-in-kaiko-deepening-commitment-to-digital-assets-and-on-chain-markets-302877589.html" target="_blank" rel="noopener">S&amp;P Global ↗</a>
@@ -226,16 +226,16 @@
         <div class="sec-head">
           <span class="sec-no">04</span>
           <div>
-            <h2 class="sec-title">AI 相关</h2>
+            <h2 class="sec-title">AI</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
 
-          <h3 class="item-h">Microsoft把模型停机服从写进公开守则</h3>
-          <p class="item-b"><strong>事件</strong>：Microsoft AI发布首版AI Code of Conduct草案，并开启六周公开咨询，拟作为未来MAI模型训练和部署手册。</p><p class="item-b"><strong>机制与影响</strong>：守则要求模型保持从属、对齐和可控，不得抵抗中断或关闭、擅自扩大任务范围或隐藏推理，把抽象安全目标转成可测试的行为边界；草案尚未用于训练现有模型，年内还会修订。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>六周咨询已经开始，但守则仍是草案，尚未进入模型训练。</p>
+          <h3 class="item-h">Microsoft includes model compliance with shutdown instructions in its public rules</h3>
+          <p class="item-b"><strong>Event</strong>: Microsoft AI released the first draft of the AI Code of Conduct and has launched a six-week public consultation process. This draft will serve as a guide for future MAI model training and deployment.</p><p class="item-b"><strong>Mechanism and impact</strong>: The guidelines require models to remain subordinate, aligned, and controllable. They must not resist interruptions or shutdowns, nor should they expand the scope of tasks or hide reasoning processes. Abstract security objectives should be transformed into testable behavioral boundaries. The draft has not yet been used to train existing models, and it will be revised throughout the year.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Six-week consultation has begun, but the guidelines are still draft forms and have not yet entered the model training phase.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-14</span>
             <a class="item-src" href="https://microsoft.ai/news/mai-code-of-conduct/" target="_blank" rel="noopener">Microsoft AI ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">白宫与英伟达公开反对全面放慢AI开发</h3>
-          <p class="item-b"><strong>事件</strong>：特朗普与英伟达CEO黄仁勋在All-In Summit公开反驳AI导致人类灭绝的判断，拒绝把行业整体减速作为默认答案。</p><p class="item-b"><strong>机制与影响</strong>：黄仁勋同时保留条件边界，认为企业失控时应认真对待举报并放慢开发，这把争论从全面暂停转向公司级监测和触发式降速；发言没有提出共同评测门槛或外部执行机制。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>这是政策与产业立场，没有形成新的强制安全标准。</p>
+          <h3 class="item-h">White House and NVIDIA publicly oppose a broad slowdown in AI development</h3>
+          <p class="item-b"><strong>Event</strong>: Trump and NVIDIA CEO Jensen Huang publicly refuted the judgment that AI could lead to human extinction at the All-In Summit, refusing to accept the default answer of slowing down the industry as a solution.</p><p class="item-b"><strong>Mechanism and impact</strong>: Jensen Huang maintained conditional boundaries, suggesting that companies should take reports seriously and slow down development when they lose control. This shifts the debate from a complete halt to company-level monitoring and triggered slowdown. His statements did not propose a common evaluation threshold or external enforcement mechanisms.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>This is a policy and industry perspective; no new mandatory safety standards have been established.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-14</span>
             <a class="item-src" href="https://www.axios.com/2026/09/14/trump-jensen-huang-nvidia-ai-all-in-summit" target="_blank" rel="noopener">Axios ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">OpenAI因安全工作推迟2026年IPO</h3>
-          <p class="item-b"><strong>事件</strong>：OpenAI表示不会在2026年上市，理由是需要继续处理安全与对齐工作，并未给出新的IPO日期。</p><p class="item-b"><strong>机制与影响</strong>：保持私有状态让公司少受季度市场压力，但也延后公开市场的信息披露与治理约束；目前只能确认时间表后移，无法把推迟直接等同于具体安全问题已经得到解决。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>2026年上市计划已取消，新时间表和具体安全里程碑均未披露。</p>
+          <h3 class="item-h">OpenAI delays its 2026 IPO to focus on safety work</h3>
+          <p class="item-b"><strong>Event</strong>: OpenAI stated that it will not launch in 2026, citing the need to continue working on security and alignment issues. No new IPO date was provided.</p><p class="item-b"><strong>Mechanism and impact</strong>: Keeping the company’s operations private reduces its exposure to quarterly market pressures. However, this also delays the disclosure of information and governance constraints in the public market. Currently, it can only be confirmed that the timeline has been postponed. It cannot be said that specific security issues have been resolved.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The listing plan for 2026 has been canceled. No new timeline or specific security milestones have been disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-12</span>
             <a class="item-src" href="https://www.axios.com/2026/09/12/openai-public-ipo-delay-sam-altman" target="_blank" rel="noopener">Axios ↗</a>
@@ -267,15 +267,15 @@
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product analysis</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">分发与增长</div>
-          <h3 class="item-h">经纪商入口不等于原生用户迁移</h3>
-          <p class="item-b"><strong>判断变化</strong>：从经纪商上链即可直接转化存量用户，更新为必须把链上原生获客与主App用户迁移分开评估。</p><p class="item-b"><strong>证据与边界</strong>：CoinDesk Research估计Robinhood主App用户只贡献Robinhood Chain交易的1%至2%，多数活动来自交易终端、Uniswap和发射台；交易笔数不等于独立用户，这仍是第三方估算而非同批转化数据。</p>
+          <div class="decision-area">Distribution and growth</div>
+          <h3 class="item-h">Broker access alone does not establish migration to a venue’s native interface</h3>
+          <p class="item-b"><strong>Change in assessment</strong>: We previously expected a brokerage moving onchain to convert its existing customers directly. The evidence now calls for measuring users acquired natively onchain separately from those migrating from the main app.</p><p class="item-b"><strong>Evidence and limits</strong>: CoinDesk Research estimates that Robinhood’s main app accounts for only 1% to 2% of Robinhood Chain transactions. Most activity comes from trading terminals, Uniswap and launchpads. Transaction counts cannot establish unique users, and the third-party estimate does not track conversion of a matched user cohort.</p>
 
           <div class="item-meta">
 
@@ -284,7 +284,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

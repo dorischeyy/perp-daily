@@ -1,63 +1,56 @@
-# Perp DEX 成交量、持仓量与费用基准
+# Perpetual futures market benchmarks
 
-> 使用本表比较同类市场的成交量、未平仓合约与费用。对照时应说明统计窗口、资产范围和数据来源。
-> 以下数值和梯队是2026-06-21历史锚点，未重新核实时不得用来给今天的项目排名。历史体量不决定新项目是否值得研究；每次比较先找同一时间窗、同一业务口径的当前数据。
-> ⚠️ 单位区分：**永续是名义成交额**，天然比现货大；"高低"永远要和**同梯队**比，别拿新所比 Hyperliquid。
+These figures are historical reference points recorded on June 21, 2026. State the time window, asset universe, source, and measurement convention for every comparison. Obtain current, like-for-like figures before describing a venue's present rank, market share, or growth. A small venue can warrant coverage for its mechanism or distribution model.
 
-## 一、全市场成交规模
+## Aggregate turnover
 
-- 全市场永续（CEX+DEX）日成交额 ~**$1500–2500 亿/日**（CEX 占绝大多数；Binance 一家 ~$250–300 亿/日）。
-- **DEX 永续**合计 ~**$100–250 亿/日**，其中 **Hyperliquid 一家常年占 DEX 侧 60–75%**。
-- 判读口径：一条 perp DEX 新闻里的量，先问"它占 DEX 盘子多少"——占比 >10% 才叫大。
+- Across centralized and decentralized venues, daily perpetual futures notional volume was roughly $150 billion to $250 billion. Centralized exchanges accounted for most of the total. Binance alone traded roughly $25 billion to $30 billion a day.
+- Decentralized perpetuals venues together traded roughly $10 billion to $25 billion a day. The historical estimates placed Hyperliquid at about 60% to 75% of DEX turnover.
+- For a DEX share claim, use a DEX-only denominator. The historical guide treated a share above 10% as substantial. Compare notional turnover with notional turnover over the same window. Perpetuals and spot markets have different turnover characteristics.
 
-## 二、Perp DEX 日成交量梯队（单一协议）
+## Daily volume per protocol
 
-| 梯队 | 日成交量 | 代表 | 判读 |
-|------|---------|------|------|
-| **统治级** | **$50–150 亿/日** | Hyperliquid | 独一档，行业风向标 |
-| **头部** | **$5–30 亿/日** | Aster(近期高峰)、edgeX、GMX 旺季 | 强，值得重点盯 |
-| **腰部** | **$3–20 亿/日（注：与头部有重叠，看时段）** | dYdX、Jupiter Perps、Drift、Vertex | 稳健，第二梯队 |
-| **新锐/长尾** | **$0.2–3 亿/日** | Paradex、Avantis、Lighter、Ostium | 早期，看增速而非绝对值 |
-| **平平无奇** | **< $5000 万/日** | 多数新上线协议 | 不构成赛道变量，除非增速爆发 |
+| Historical group | Approximate notional volume per day | Illustrative venues and interpretation |
+| --- | --- | --- |
+| Largest | $5 billion to $15 billion | Hyperliquid provided a sector reference point. |
+| Leading | $500 million to $3 billion | Aster at its recent peak, edgeX, and GMX during active periods. |
+| Mid-sized | $300 million to $2 billion | dYdX, Jupiter Perps, Drift, and Vertex. Ranges overlap as activity changes. |
+| Emerging | $20 million to $300 million | Paradex, Avantis, Lighter, and Ostium. Growth and repeat activity provide context. |
+| Small | Below $50 million | Many newly launched venues. Check the starting base and whether growth persists. |
 
-## 三、月成交量参照（新闻常用"月量"口径）
+## Monthly notional turnover
 
-- Hyperliquid：~**$2000–4000 亿/月**（地板）。
-- "**单月 $30–50B**"对**新所**（如 Aster 报的 $33B/月）= **强劲起势**，但仅 ~Hyperliquid 月量的 **10–15%**，不要写成"超越/比肩龙头"。
-- 腰部协议月量 ~**$10–300 亿/月**；< $50 亿/月对成熟协议偏弱。
+Hyperliquid's historical reference range was approximately $200 billion to $400 billion a month. Monthly volume of $30 billion to $50 billion at a new venue, such as Aster's reported $33 billion, signaled an active launch. The historical comparison put that example at roughly 10% to 15% of Hyperliquid's monthly turnover. Verify both actual observation windows before citing a share. Mid-sized venues recorded roughly $1 billion to $30 billion a month. Below $5 billion was relatively low for an established venue.
 
-## 四、未平仓量（OI）梯队
+## Open interest
 
-| 梯队 | OI | 代表 |
-|------|-----|------|
-| 统治级 | **$80–120 亿** | Hyperliquid(~$90 亿) |
-| 头部 | **$10–60 亿** | 大型 CEX 级 |
-| 腰部 | **$3–10 亿** | 主流 perp DEX |
-| 长尾 | **< $5 亿** | 新协议 |
-> OI/日量比值可辅助观察持仓与周转。低比值可能来自周转快、短持仓等多种原因，单独不能判断刷量；须核对相同时间窗、持仓单双边口径与费用或用户证据。
+| Historical group | Open interest | Reference |
+| --- | --- | --- |
+| Largest | $8 billion to $12 billion | Hyperliquid was near $9 billion. |
+| Leading | $1 billion to $6 billion | Large centralized venues. |
+| Mid-sized | $300 million to $1 billion | Established perpetuals DEXs. |
+| Long tail | Below $500 million | New protocols. |
 
-## 五、协议费用 / 收入（最能反映真实生意）
+Open interest relative to daily turnover helps distinguish capital held in positions from short holding periods or frequent trading. Compare the same window and confirm whether the source counts one or both sides of a position. Low open interest alone does not establish wash trading. Check fees, incentives, and user evidence.
 
-- **日费用**：Hyperliquid ~**$100–300 万/日**（行业最高之一）；腰部协议 ~$5–50 万/日；新锐 < $5 万/日。
-- **年化收入**：能稳定做到 **$1 亿+/年**的 perp DEX 屈指可数（Hyperliquid、GMX 旺季、dYdX）。"年收入过亿"= 第一梯队信号。
-- 判读：**费用 > 量**——刷量可造，费用难造。一条新闻若只吹量不提费用/真实用户，降权。
+## Fees and revenue
 
-## 六、给日报的判读规则（必用）
+Hyperliquid's historical daily fees were roughly $1 million to $3 million. Mid-sized protocols generated around $50,000 to $500,000 per day, and emerging protocols typically generated below $50,000. Few venues sustained more than $100 million in annualized revenue. Historical examples included Hyperliquid, GMX in active periods, and dYdX. Specify whether a figure is gross fees, protocol revenue, or an annualized run rate. Volume claims carry less weight without corresponding information about fees and users.
 
-1. 量级数字优先用当前同指标、同窗口、同范围的数据说明相对规模或变化；没有可靠参照时写清缺口，不强套2026年6月的历史梯队。
-2. 新所的高增速值得报，但**必须标尺度**（"对新所强劲，约龙头的 X%"），不许暗示比肩 Hyperliquid。
-3. 只报名义量而缺OI/费用/真实用户时写“交易质量未能核验”，不能只据低OI或积分活动断言刷量。
-4. 新项目可因机制、产品选择、GTM或分发路线进入研究，不以融资额、成交量或是否已达头部作为硬门槛。低体量只说明阶段与结论适用范围。
+## Interpreting a figure
 
-## 七、把数字翻译成读者能判断的尺度
+1. Use a current comparison with the same metric, window, and coverage. If the benchmark is missing, name the missing data.
+2. For a fast-growing entrant, report the starting base and its share of a comparable market. Support any change in competitive position with more than a turnover headline.
+3. When only notional volume is available, describe what is known about trading activity and what remains unverified about its quality. Points programs and low open interest alone do not prove artificial trading.
+4. Evaluate new products on mechanics, acquisition, and distribution as well as scale. Funding or volume identifies a stage of development and limits how far a finding can be generalized.
 
-数字不是装饰。影响判断的数字及必要参照自然写入70至150字正文，不再生成`context`或小抬头。下表是底稿检查维度，不是页面标签；只取最有用的同口径参照，不做数据墙。
+Choose the one comparison that helps the reader interpret a figure. Fold it into the 30 to 100 word item. These questions belong in the editorial review:
 
-| 标签 | 何时使用 | 写法要求 |
-|------|----------|----------|
-| `量级参照` | 成交量、OI、费用、收入、TVL、融资、解锁、资金费率等 | 同一指标、同一时间窗、同一范围内给份额、梯队或与可比对象的差距。24h 不和月度比，名义成交量不和费用比。 |
-| `影响范围` | 安全损失、清算、监管覆盖、受影响资产/用户等 | 说明损失/覆盖占相关池子、协议或市场的比例，并点明是否已修复、赔付或仍在扩散。 |
-| `落地程度` | 上线市场数、集成数、活动/任务数、功能发布等 | 区分“宣布/测试/已上线”，说明真实可交易市场、流动性或用户采用，而非只报数量。 |
-| `口径限制` | 没有可靠且同口径的比较值 | 直接说明还缺什么数据，不能为了显得专业而捏造占比或排名。 |
+| Review label | Applies to | Evidence to include |
+| --- | --- | --- |
+| Scale | Volume, open interest, fees, revenue, TVL, funding, unlocks, and funding rates | Share of a comparable market, a relevant peer, or a change over an equivalent period. |
+| Scope | Security losses, liquidations, regulatory coverage, affected assets and users | Fraction of the affected pool or market, and whether remediation or repayment is complete. |
+| Implementation | Market launches, integrations, campaigns, and new features | Announced, in testing, or live. Check tradability, liquidity, and observed use. |
+| Measurement limits | Missing or mismatched comparisons | Name the missing denominator, coverage, time window, or independent evidence. |
 
-模板：`约占 [同口径总盘子] 的 X%，属 [梯队]，因此 [这条对竞争/风险/策略意味着什么]。` 例如，新所 24h 量很高但 OI 很低，应写出“量高、持仓黏性待核实”，不能把它写成龙头格局反转。
+For example, a venue can show rapid growth in daily volume while carrying little open interest. Report those observations separately and identify the holding-period or repeat-user data needed to assess retention.

@@ -1,105 +1,90 @@
-# Perp DEX 项目发现与研究规则
+# Project discovery and research
 
-适用自 2026-10-21 的日报，`editorial_version` 为 `2`。本文件与 `generate.md` 一起执行。研究底稿回答谁在争夺用户、如何获得订单流及风险由谁承担；非AI栏目按当天材料动态分类，AI固定精选3条真实新闻。每条仅完整标题、70至150字正文和一行编号来源。
+Use this playbook with [the publishing guide](../generate.md) and `editorial_version: 2`. Research establishes who competes for users, how orders reach a venue, and who bears the risk. Publish the findings in English, while searching original materials in the languages used by projects and their users.
 
-## 1. 每日选题
+## 1. Choosing subjects
 
-- 非AI不固定栏目、每栏条数或研究配额，先研究筛选再按主题分类。AI固定唯一`id: "ai"`栏目，恰好3条`kind: "news"`，`importance_score`为75至100整数并按降序排列；不足3条继续检索和查证，不能降门槛或用旧研究、假日期补数。项目发现与机制核验仍要做，不能因为成稿短而退回泛新闻聚合。
-- 每条设置内部`domain`（crypto/ai/crypto-ai）和`relevance`，说明Crypto或AI强关联及具体价值。`ai`和`crypto-ai`均归AI栏，其余栏目只含`crypto`。无关泛宏观、名人、融资热闹或没有实际信息的内容不收。
-- 监管、融资、排名、代币涨跌不自动获得高分。先写出会改变的具体产品选择，例如保证金复用、市场创建、入金步骤、费用、做市责任或地域分发；写不出来就降级或删除。
-- 新项目、尚未报道项目、用户提供的线索优先进入调研。非AI研究不要求项目当天发布公告，但必须回答“这次新增了什么认知”，不能把旧简介换日期重复发。AI新闻沿用72小时门槛和真实多事件本周主线7天例外，不能靠单一旧事件或研究补足3条。
-- 研究与快讯分别标注。研究使用当日`checked_at`，来源实际发布日期继续保留；无日期文档用`null`，来源链接的title/aria-label标明未标发布日期。核验日只留在底稿或来源元数据，不是上线日，也不强塞进规则介绍的标题。真实事件用`event_date`；真正的数据快照另用`snapshot_date`表示数据所属日期，不能以查证日冒充。
-- 同项目同论点7天内不重复，同一事件合并为一条，不跨栏重复。需要跟进时只写机制、GTM、采用或争议的新证据。先读近7期自评的A4发现与A5筛选记录，再读最近3期正文。
-- 品类和篇幅参考2026-10-21确认的约9条，AI固定3条，非AI约6条按有效材料浮动。每日主动查当日合约成交走势、产品增删改与用户活动，不只做常青机制说明；没有足够新信息时继续查证，不降门槛凑数。市场变化要有实际快照时间、同口径参照和覆盖范围，区分成交额、持仓与净入金；没有新变化不重复昨天的榜单。
+Group the day's verified crypto material according to the stories it supports. There are no fixed non-AI section names, counts, or research quotas. Use one `ai` section containing exactly three genuine news items. Include all AI and crypto-AI items there. Rank them in descending order by integer `importance_score` between 75 and 100. If fewer qualify, continue searching. A study or an old announcement cannot fill a news slot. Record the `domain` and specific `relevance` of every item.
 
-## 2. 检索顺序
+Identify a decision the evidence can inform. For example, a rule change might affect how a user funds an account, reuses collateral, pays fees, or accesses a market in a particular region. A funding announcement, token move, ranking, or regulatory statement has to establish a concrete change to earn priority.
 
-运行 `node lib/research-plan.mjs YYYY-MM-DD`，得到按项目名、别名和账号生成的检索计划。计划只是入口，不能因为某项目没在名单里就不查。
+Investigate new projects, leads supplied by readers, and unresolved questions from prior editions. A useful non-AI study can introduce a mechanism without an announcement that day. Explain the new evidence or insight. Read the A4 and A5 reviews for the past seven editions and the most recent three reports. Consolidate reports of the same event. Repeat a project and thesis only for a meaningful change in mechanics, adoption, distribution, or the evidence behind a dispute.
 
-1. 用户线索、上期尚未核实的项目、轮换名单。先定位官方网站、文档、开发者与生态关系。
-2. 项目名加具体问题搜索：机制、产品流程、获客与留存、讨论者。不要把所有词塞进一条查询，先查问题，再对入选项目展开。
-3. 至少两条名单外发现搜索。查生态目录、builder 集成、应用商店、钱包合作、研究者对比和新项目体验帖，沿发现的新名称查官方页。
-4. 媒体与 RSS 最后补漏，不能因篇幅短而用监管大新闻或普通上币代替项目发现。没有 X API 不等于只能搜媒体新闻。
+The October 21, 2026 edition, with about nine items, is a length reference. Three AI items are required. The number of non-AI items depends on the quality of the material. Look for fresh volume trends, product changes, and user campaigns alongside mechanism research. Attach the actual observation time, measurement window, and coverage to market comparisons. Distinguish turnover, open interest, and net deposits.
 
-另外完整执行`ai_daily_scan`，每天必扫七家：Anthropic、OpenAI、Scale AI、xAI、Kimi、DeepSeek、Qwen。它们不参与Perp项目轮换，也不要求每家每天发一条。按精确名称与别名做两组中英查询，均用3天窗口：
+## 2. Daily search sequence
 
-- 发布、模型能力、API可用性，例如项目名/别名加release/model capability/API availability或发布/能力/API开放。
-- 定价、安全、真实采用，例如项目名/别名加pricing/safety/customer adoption或价格/安全/实际采用。
+Run `node lib/research-plan.mjs YYYY-MM-DD`. Start with suggested names, aliases, and accounts, then expand beyond the list.
 
-Claude归Anthropic，Grok归xAI，Moonshot/月之暗面归Kimi，Alibaba/通义千问归Qwen；A5使用上面的七个标准名称。先搜索发现官方来源并实际读取，再引用URL，不凭记忆拼接地址。七家覆盖之外可继续找合格AI候选，目标是全体候选中最重要的3条，不是厂商平均分配。
+1. Follow reader leads, unresolved projects from prior reviews, and the rotating project list. Identify the official site, documentation, developers, and integrations.
+2. Search one concrete question at a time. Follow up on mechanism, user flow, acquisition, retention, and independent discussion.
+3. Run at least two discovery searches outside the registry. Check ecosystem directories, builder integrations, app stores, wallet partnerships, researcher comparisons, and trader reports. Verify each new name against an official page.
+4. Check press and RSS coverage after project research. Public posts, blogs, interviews, and forums can be searched without an X API key. Record access failures.
 
-时间窗分开：新闻 3 天，真实讨论优先 7 天、最多 30 天，产品发现 30 天；机制文档不加日期限制。先不限时间找到官网，再查近期变化。搜索结果的抓取时间、相对更新时间不换算成精确发布日期。
+Run the separate `ai_daily_scan` for Anthropic, OpenAI, Scale AI, xAI, Kimi, DeepSeek, and Qwen every day, independently of the derivatives rotation. For each company, submit the English `query_en`, then translate the `query_zh` search intent into Chinese and run it within the same three-day window. The plan identifies the required language in `ai_query_localization.target_language`. Preserve brand names and search operators, and add verified local names when available. Translate Chinese official-source discovery terms and other entries marked `target_language: zh` before searching. Record the results or access gaps for each language in the review. Search for releases, model capabilities, and API availability, then for pricing, safety, and actual adoption. Claude belongs under Anthropic, Grok under xAI, Moonshot under Kimi, and Alibaba's Qwen products under Qwen. Use the seven canonical names in A5. Locate and read official pages before citing them. Additional companies can contribute qualifying stories.
 
-### 四组必查问题
+Use separate windows. Search news over three days, discussions preferably over seven and at most thirty days, and recently discovered products over thirty days. Mechanism documentation can be older or undated. Distinguish a page's publication date from its indexing or crawl date.
 
-| 组别 | 查询组合 | 要找的证据 |
-|---|---|---|
-| 谁在讨论 | `"项目名" review`、`"项目名" trader experience`、`"项目名" 体验 机制`、`site:x.com "项目名"`、`"项目名" criticism withdrawal slippage` | 具名作者、原帖或原文、发文日、具体观点、与项目的关系 |
-| GTM | `"项目名" referral affiliate points`、`"项目名" wallet integration builder fee`、`"项目名" Asia mobile invite campaign` | 目标客群、首个分发入口、激励成本、转化流程、留存证据 |
-| 产品 | `"项目名" onboarding deposit account mobile`、`"项目名" cross margin API copy trading` | 用户任务、入金和交易步骤、功能取舍、与底层协议的边界 |
-| 机制 | `"项目名" docs matching oracle liquidity liquidation`、`"项目名" settlement custody sequencer` | 撮合位置、价格用途、资金来源、结算和退出、风险承担者 |
+### Four search groups
 
-## 3. 先分类，再比较
+| Question | Example queries | Evidence to collect |
+| --- | --- | --- |
+| Who is discussing it? | Project name plus trader experience, review, criticism, withdrawal, or slippage. Search public author posts. | Named author, original URL and date, specific observation, relationship to the project. |
+| How does it acquire and retain users? | Referral, affiliate, points, wallet integration, builder fees, Asia, mobile, invitation, or campaign. | Target group, first distribution channel, incentive cost, activation step, retention evidence. |
+| What does the user do? | Onboarding, deposit, account, mobile, cross margin, API, or copy trading. | Task, funding and trading steps, feature trade-offs, dependence on an underlying protocol. |
+| How does execution work? | Matching, oracle, liquidity, liquidation, settlement, custody, sequencer, or official documentation. | Matching location, role of prices, source of capital, execution, exit, and risk ownership. |
 
-| 内部类型 | 识别标准 |
-|---|---|
-| `perp-protocol` | 有自己的永续交易与风险规则 |
-| `trading-frontend` | 接入已有协议的撮合、深度或结算，主攻用户入口，须明确底层依赖 |
-| `spot-infrastructure` | 现货订单簿、借贷或杠杆现货基础设施，不能冒称永续协议 |
-| `prediction-market` | 事件结果份额与裁决结算 |
-| `other` | 其他与Crypto或AI强相关的产品，明确其边界 |
+## 3. Classifying and comparing trading products
 
-这些是项目类型，不是固定栏目。非AI最终按当天主题归组，例如分发、市场、玩法或融资；AI和Crypto-AI交叉内容统一归`ai`。不同交易产品类型可以因同一问题放在一起，同一项目研究不得重复收录。AI候选按实际模型、API、工具或采用变化核实，不强套永续机制分类。
+| Internal category | Definition |
+| --- | --- |
+| `perp-protocol` | Operates its own perpetual trading and risk rules. |
+| `trading-frontend` | Provides a user interface over an existing protocol's matching, liquidity, or settlement. Name the underlying dependency. |
+| `spot-infrastructure` | Provides a spot order book, borrowing, or leveraged spot trading. |
+| `prediction-market` | Creates outcome shares with rules for resolution and settlement. |
+| `other` | Covers another relevant product. State what it provides. |
 
-独立链、订单簿、预言机不是互斥选项。拆开核实：
+These categories describe a project. Group public items by the actual question readers face. Different product types may appear together when they compete for the same task. Check AI stories against actual changes in models, APIs, tools, or adoption.
 
-1. **执行**：订单簿、AMM、池子报价还是 RFQ；撮合在链上、专用链、中心化服务还是第三方协议。
-2. **流动性与盈亏**：对手方是谁，做市商与 LP 的资本从哪来，谁承担交易者盈利；有没有外部对冲。
-3. **价格**：成交价、指数价、标记价各来自哪里，预言机用于成交还是保证金/清算；不能从有订单簿推断不需要预言机。
-4. **结算与控制**：链、保证金资产、资金隔离、账户授权、提现与逃生路径；官方未说明就标未披露。
-5. **市场与风险**：谁能创建市场，限额/清算/坏账/保险/ADL如何处理，权限和参数由谁控制。
+Verify each layer independently. An application chain, an order book, and an external oracle may coexist.
 
-选择有公开资料的同类交易模式作为比较对象，注明抵押品、流动性来源、执行方式和定价规则。引用费率、预言机供应商或风险参数时，核对资料日期与适用市场。
+1. **Execution.** Establish whether orders match against a book, an AMM, a pooled quote, or an RFQ. Find where matching happens and who operates it.
+2. **Liquidity and P&L.** Identify the counterparty, the capital committed by market makers or LPs, who pays profitable traders, and any external hedge.
+3. **Prices.** Distinguish the execution, index, and mark prices. Check how the venue uses oracles for quotes, margin, or liquidation.
+4. **Settlement and control.** Check the chain, collateral, segregation, account permissions, and withdrawal or emergency exit path. Identify undisclosed arrangements.
+5. **Markets and risk.** Establish who lists a market, sets its limits, controls parameters, and absorbs liquidation losses, bad debt, insurance claims, or automatic deleveraging.
 
-## 4. GTM 与产品判断
+Compare a documented product in the same trading mode. State its collateral, liquidity, execution, and pricing. Verify market and date before citing a fee, an oracle provider, or a risk parameter.
 
-GTM 不能只写“积分拉新”。追到“谁 → 从哪看到 → 为什么入金/试用 → 首次完成什么 → 为什么留下 → 成本由谁承担”。有证据再写效果，没有留存、净入金或激励结束后的数据就保留缺口。
+## 4. Distribution, product decisions, and public writing
 
-产品策略至少解释一个真实选择及其代价：自建交易基础设施还是复用既有深度，移动端还是专业 API，广泛标的还是特定资产，跨保证金效率还是风险隔离。官方定位是事实，动机与效果的推断要明确标为分析推断。
+Trace the route from discovery to continued use. Identify the audience, where they find the product, what prompts a deposit or trial, their first completed action, why they return, and who pays the incentive. Claims about effectiveness need evidence such as retention, net deposits, or use after rewards end.
 
-研究底稿保留完整机制、GTM、产品、讨论、判断与未知项，但不直接展示。成稿使用12至90字的完整标题与70至150字单段正文，不另设机制、GTM、影响等小抬头。标题和来源不计入正文长度；只去空白与受支持的粗体标记，其他可见字符照实计数，不在正文写Markdown链接。
+Explain at least one documented choice and its cost. Examples include building a venue versus drawing on existing liquidity, mobile onboarding versus professional API access, market breadth versus asset specialization, or collateral efficiency versus risk isolation. Attribute a project's stated position and label any inference about motives or effects.
 
-- 真实新闻：标题写时间、项目、具体事件；正文先交代变化和适用范围，有证据才写原来怎样、现在怎样，最后再解释必要机制。不要先夸复杂、先进或行业意义。
-- 机制研究：标题直接说明规则或产品特点，不强加日期。正文先说用户如何入金、借款、交易或退出，再与有来源的主流同类产品、具体模式比较。相似规则照实说相似，独特之处要有证据，不能把全仓和逐仓混成一个平台的统一规则。
-- 数据快照：只有实际记录某日数据时才使用“截至某日”，填写研究专用的`snapshot_date`，与`event_date`互斥且不晚于报告日。编辑核实实际数据日期和口径，不拿`checked_at`代替。
-- 自然表达：用人、钱、操作和结果解释，不用“共享流动性不等于共享保证金”式抽象对仗充当解释，也不强塞所有技术环节。比如“每个交易对分别准备抵押物，其他交易对的余额不能拿来补仓”比口号更清楚。不是全局禁用“不等于”，而是避免读者仍需自行翻译术语才能知道发生了什么。
+Keep the full mechanism, go-to-market analysis, product trade-off, discussion, inference, and unknowns in the evidence record. Publish a 3 to 25 word headline and a single paragraph of 30 to 100 words. Put links in the source fields. For news, lead with the event, affected users, and effective scope. Document the previous rule before claiming a difference. For a study, describe what users can deposit, borrow, trade, or withdraw. Explain which balances can support which positions before generalizing about margin systems.
 
-lead围绕一个主重点直接给事实支持的结论或分析结果及必要边界，不写导读或研究计划。1至2短句共20至120字，单句不超过70字；禁“更值得研究的是”“更值得关注的是”“这期先看”“这一期先看”“今天先看”“本文将”“让我们来看看”等。不能把推断写成事实、把旧机制写成当日上线，也不能串起互不相关新闻冒充结论。
+Use `event_date` for a verified event and match the headline date. Leave undated mechanism headlines undated. For a genuine data study, use `snapshot_date` with a matching “As of” date, no later than the report date. It is mutually exclusive with `event_date`. The actual source publication date stays in `date`, or is null for undated research material. Record the research check separately in `checked_at`. Never convert a check date into a launch or snapshot date.
 
-## 5. 讨论与热度的证据
+Write the lead in one or two sentences, 8 to 55 words in total, with no sentence longer than 32 words. State one supported finding and any essential condition. Leave out reading instructions, general claims of significance, and connections between unrelated events.
 
-- 每个讨论条目必须有作者、日期、永久链接、具体观点和关系标签：官方、独立、推广或未知。
-- 沿官方转发、集成伙伴、开发者、交易员、研究者扩展名单；收到新账号只作为线索，不推定身份或可信度。
-- 项目自述、返佣推广和空投任务不能当独立用户验证。搜索排名、粉丝数和一张关注截图不能证明“流行”。同一稿的转载只算一个来源。
-- “多人讨论”至少需要两名不同作者的可读原文；“增长/流行”还需跨时间的采用或讨论证据并说明样本范围，否则只写已观察到的讨论。
-- X 页面不可读时，试公开博客、论坛、访谈、播客文字稿或具名转载；必须注明是转述。仍无证据就在 `discussion_gap` 写搜索过什么与访问缺口，不能编造讨论者，也不能退回整栏泛新闻。
+## 5. Discussion and adoption claims
 
-## 6. 研究来源与自评
+Each discussion entry needs an author, publication date, permanent link, specific observation, and relationship to the project. Use `official`, `independent`, `sponsored`, or `unknown`. Treat reposts, integration partners, developers, traders, and researchers as discovery leads. An official post, affiliate campaign, or airdrop task cannot establish independent user approval.
 
-每条研究至少两条不同来源 URL，至少一条官方机制文档/产品页。两条官方页可证明产品规则，不能冒充两个独立认可。主来源和补充来源在当日实际重读，填写 `checked_at`；链接可访问本身不代表规则已在生产启用。
+A claim that multiple people discussed an issue requires at least two distinct authors with readable original accounts. Growth or popularity also requires evidence across time and a stated sample. Reprints of one story count once. A search ranking, follower count, or screenshot does not establish adoption. If an X post is inaccessible, try a public blog, forum, interview, podcast transcript, or attributable secondary account. Identify secondary accounts as such. Otherwise record the queries and access gap in `discussion_gap`.
 
-主来源、references和讨论原文的所有URL合并去重，页面只保留一行“来源 1 2 3…”，每个编号链接对应真实出处。完整来源名称、真实发布日期或未标日期、核验日及已有作者关系保留在链接`title`和`aria-label`，不单独显示“补充”行，也不为了缩短页面删除来源或编造关系。
+## 6. Source record and editorial review
 
-编辑自评新增 `## A4 项目发现与证据`，包含：
+Each study requires at least two distinct source URLs, including an official mechanism document or product page. Two official pages can confirm a rule without showing independent adoption. Reread the primary source and references on the report date and set their `checked_at` accordingly. A readable specification alone does not establish production availability. The public source row deduplicates the primary, reference, and discussion URLs and keeps source names, publication and check dates, and available affiliations in accessible link metadata.
 
-- `### 检索覆盖`：具体查询、时间窗、发现项目、采用/排除理由，覆盖至少两条名单外发现查询。
-- `### 项目分类`：说明内部项目类型、非AI动态分组与AI归栏依据，以及每条为何与Crypto或AI强相关；非AI不以配额代替价值判断。
-- `### 讨论证据`：作者、关系、日期、观点、原链接，或明确访问缺口。
-- `### 研究增量与待查`：对照近 7 期写出本次新认知、未披露问题，以及下次复盘触发条件。
+Write `## A4 Project discovery and evidence` using these headings in order:
 
-随后必须有精确标题`## A5 AI候选筛选`，位于A4之后、B之前，包含：
+- `### Search coverage` records actual queries, windows, discoveries, selections, exclusions, and at least two searches outside the registry.
+- `### Project classification` names the internal type, public grouping, domain, and relevance of each selected item.
+- `### Discussion evidence` records author, affiliation, date, observation, and URL, or the specific evidence gap.
+- `### New findings and open questions` compares the research with the past seven editions, identifies undisclosed details, and sets a trigger for the next review.
 
-- `### 厂商覆盖`：以Anthropic、OpenAI、Scale AI、xAI、Kimi、DeepSeek、Qwen七个标准名称逐家记录实际中英查询、3天窗口、所读来源、具体结果与排除理由。无新消息、时间不符、只有宣传或页面不可读都要写清实际证据与缺口，不能只写已扫或未入选。
-- `### 前三条与取舍`：先合并同一事件，再列所有AI候选的结构性30、相关度25、持续性20、可行动性15、证据质量10得分及整数合计，按总分降序比较。说明最高的3条75分以上真实新闻为何胜出、同分如何取舍、其他候选为何排除，最终`importance_score`与总分及顺序一致。七家扫描是覆盖要求，不是7条输出配额；不足3条继续查，不降低门槛，不用无日期文档、旧闻或研究填空。
+Follow A4 with `## A5 AI candidate selection`, before section B. In `### Vendor coverage`, use all seven canonical names and give the actual searches, source pages, findings, exclusions, or access gaps for each. In `### Top three and exclusions`, consolidate the same event and score all candidates across the five dimensions worth 30, 25, 20, 15, and 10 points. Explain the descending ranking, tie-breaks, and exclusions. Match the three published integer scores to those in A5.
 
-新发现项目和候选记入当期A4/A5，下一轮从近7期记录继续。达到长期追踪门槛的实际事实进入`threads.json`；只完成研究但没有新事件时，不把核验日写成故事事件日。日常发布仍只包含固定五文件，不能顺手修改信源配置。
+Carry discovery leads into the next research cycle through A4 and A5. Add a qualifying change to `threads.json` using its actual event date. The five-file daily publication excludes source registry changes.

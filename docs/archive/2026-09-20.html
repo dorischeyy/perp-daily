@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-09-20</title>
+<title>Perp DEX Daily · 2026-09-20</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -82,12 +82,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 82 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 82</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 9 月 20 日 · 星期日</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">September 20, 2026 · Sunday</div>
     </header>
-    <p class="lead">Payward准备把美国永续接入Hyperliquid，Binance同步扩展美股永续，Anthropic则把第三方评估人员嵌入模型研发现场。</p>
+    <p class="lead">Payward is preparing to connect U.S. perpetuals to Hyperliquid, Binance is expanding its U.S. equity perpetuals, and Anthropic is embedding third-party evaluators in its model development process.</p>
 
 
       <section class="sec sec-perpdex">
@@ -100,27 +100,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">本周主线 ｜ Payward把美国永续接入HIP-3</h3>
-          <p class="item-b"><strong>事件</strong>：Payward计划面向美国客户部署链上永续，首批使用Hyperliquid HIP-3许可制市场，但仍需监管批准。（交易后台服务化线，自08-25，本次进入持牌架构）</p><p class="item-b"><strong>机制</strong>：Bitnomial负责建市、清算与结算，NinjaTrader Clearing承接客户账户，Hyperliquid提供公开链上订单簿，把市场运营、持牌中介与执行协议拆成三层。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>合作方与责任边界已经公开，产品尚无获批结果、上线日期或真实成交。</p>
+          <h3 class="item-h">Weekly theme | Payward prepares to connect U.S. perpetuals to HIP-3</h3>
+          <p class="item-b"><strong>Event</strong>: Payward plans to offer onchain perpetuals to U.S. customers using permissioned Hyperliquid HIP-3 markets for the initial rollout. Regulatory approval is still required. The trading infrastructure story tracked since August 25 now includes a proposed licensed structure.</p><p class="item-b"><strong>Mechanism</strong>: Bitnomial would establish the markets and handle clearing and settlement. NinjaTrader Clearing would maintain customer accounts, and Hyperliquid would provide the public onchain order book. The proposal separates market operation, licensed intermediation and execution.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The boundaries of cooperation and responsibilities between partners have been disclosed. The product has not yet received approval, has no launch date, nor has a real transaction occurred.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-16</span>
             <a class="item-src" href="https://www.payward.com/press-release/payward-hyperliquid-onchain-perpetual-futures" target="_blank" rel="noopener">Payward ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Binance一次上线七只美股永续</h3>
-          <p class="item-b"><strong>事件</strong>：Binance于9月18日依次开放UiPath、AMC、Cypherpunk、Arista Networks、Hut 8、Applied Digital和Axe Compute的USDT永续。（TradFi永续线，自07-09，标的供给继续扩张）</p><p class="item-b"><strong>机制</strong>：七只合约均全天交易、最高20倍杠杆、每八小时结算资金费并支持多资产保证金，平台用同一参数模板快速扩列。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>公告只确认上市参数，没有成交、未平仓量、指数异常处理或地区可用性数据。</p>
+          <h3 class="item-h">Binance lists seven U.S. equity perpetuals at once</h3>
+          <p class="item-b"><strong>Event</strong>: On September 18, Binance opened USDT perpetuals in sequence for UiPath, AMC, Cypherpunk, Arista Networks, Hut 8, Applied Digital and Axe Compute. They expand the range of TradFi perpetuals tracked since July 9.</p><p class="item-b"><strong>Mechanism</strong>: All seven contracts trade around the clock, offer up to 20× leverage, settle funding every eight hours and support multi-asset margin. The platform used the same parameters to expand its listings.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The announcement only confirms the listing parameters. There is no data regarding transactions, open interest, index abnormalities, or regional availability.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-18</span>
             <a class="item-src" href="https://www.binance.com/en/support/announcement/detail/3c2b63c9c3e44d40b8cec99961166fe8" target="_blank" rel="noopener">Binance ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">OKX撤回ONE永续原定下线时点</h3>
-          <p class="item-b"><strong>事件</strong>：OKX把原定9月18日下线的ONEUSDT永续延期，并表示修订后的时间将另行公布。（市场生命周期线，自08-28，状态由确定下线回到待定）</p><p class="item-b"><strong>机制</strong>：此前的停止交易、自动撤单、仓位交割和机器人关停安排同步失效，说明公告式生命周期缺少可供前端与订单系统稳定消费的版本状态。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>原下线时点已取消，但替代日期、迁仓和最终交割安排都未公布。</p>
+          <h3 class="item-h">OKX withdraws its previously announced ONE perpetual delisting time</h3>
+          <p class="item-b"><strong>Event</strong>: OKX postponed the delisting of the ONEUSDT perpetual originally set for September 18. It will announce a revised date separately. In the market-lifecycle story tracked since August 28, a scheduled delisting has returned to pending status.</p><p class="item-b"><strong>Mechanism</strong>: The previous arrangements for halting transactions, automatic order cancellation, position settlement, and robot shutdown have become ineffective. This indicates that the announced lifecycle lacks a version that can be used by the front-end and order systems to maintain stability.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The original cut-off date has been canceled, but the replacement date, relocation, and final settlement arrangements have not been announced.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-18</span>
             <a class="item-src" href="https://www.okx.com/en-sg/help/okx-to-postpone-the-delisting-of-oneusdt-perpetual-futures" target="_blank" rel="noopener">OKX ↗</a>
@@ -138,27 +138,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Perpspad把代币发射绑定到永续头寸</h3>
-          <p class="item-b">Perpspad在Solana上让每个发射代币的链上子钱包持有一笔经Imperial路由、在Phoenix成交的杠杆永续，交易费持续补充头寸。</p><p class="item-b">头寸利润用于回购销毁，代币价值与外部杠杆仓位长期绑定，收益路径和清算风险也被一起写入发射机制。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>项目已公开白皮书和发射入口，但尚无毕业数量、头寸规模或清算记录。</p>
+          <h3 class="item-h">Perpspad links token launches to perpetual positions</h3>
+          <p class="item-b">On Solana, Perpspad assigns each newly launched token an onchain subwallet holding a leveraged perpetual position routed through Imperial and executed on Phoenix. Trading fees continually replenish the position.</p><p class="item-b">Position profits fund token buybacks and burns. The token’s value is tied over time to an external leveraged position, exposing the launch mechanism to both its returns and its liquidation risk.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The project has published its white paper and opened its launch interface. It has yet to publish graduation counts, position sizes or liquidation records.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-18</span>
-            <a class="item-src" href="https://tg.me/ourbitofficial/3934" target="_blank" rel="noopener">Ourbit官方公告 ↗</a>
+            <a class="item-src" href="https://tg.me/ourbitofficial/3934" target="_blank" rel="noopener">Ourbit official announcement ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">ADD.fun用固定价替代发射曲线</h3>
-          <p class="item-b">ADD.fun宣布在BNB Chain启动固定价发射，买卖不会随进度改变储备资产计价，毕业后再迁移到PancakeSwap V2。</p><p class="item-b">标准模型把供应量对半分给发射池和毕业流动性，发射阶段收取1% BNB费用，迁移后的LP代币销毁。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>团队同时说明合约尚未审计、网站仍在间歇维护，宣布启动不等于完整生产可用。</p>
+          <h3 class="item-h">ADD.fun replaces the launch curve with fixed-price sales</h3>
+          <p class="item-b">ADD.fun announced the launch of a fixed-price trading mechanism on the BNB Chain. Trading prices will not change over time, and after the launch, the system will be migrated to PancakeSwap V2.</p><p class="item-b">The standard design splits supply equally between the launch pool and liquidity provided at graduation. It charges a 1% fee in BNB during the launch phase and burns the LP tokens after migration.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The team also stated that the contracts have not been audited, and the website is still being maintained intermittently. It was announced that the system is not fully operational yet.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-18</span>
-            <a class="item-src" href="https://www.sotwe.com/ADDfunLabs?lang=en" target="_blank" rel="noopener">ADD.fun官方账号镜像 ↗</a>
+            <a class="item-src" href="https://www.sotwe.com/ADDfunLabs?lang=en" target="_blank" rel="noopener">Mirror of ADD.fun&#x27;s official account ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">pump.fun重新领跑9月19日发射数量</h3>
-          <p class="item-b">MemeFees在9月19日完整日观察到至少78,241个新代币，pump.fun以至少31,614个居首，Pons为11,501个。（Robinhood分发线，自07-02，费用领先与发射数量领先开始分离）</p><p class="item-b">统计只覆盖16个有观测值的发射台，带加号的数据为采样下限，不能当作全链完整发行量。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>pump.fun当日数量接近Pons的2.7倍，但Pons仍占近30日受追踪发射台手续费的51.3%。</p>
+          <h3 class="item-h">Pump.fun retakes the lead in launch count on September 19</h3>
+          <p class="item-b">During the full September 19 reporting day, MemeFees observed at least 78,241 new tokens. Pump.fun led with at least 31,614 launches, while Pons recorded 11,501. In the Robinhood distribution story tracked since July 2, the leader in fees is beginning to diverge from the leader in launch count.</p><p class="item-b">The statistics only cover 16 emitters with observed values. Data with a plus sign indicates the lower limit of sampling; it cannot be considered as the complete issuance volume.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Pump.fun recorded nearly 2.7 times as many launches as Pons that day, while Pons accounted for 51.3% of tracked launchpad fees over the previous 30 days.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-19</span>
             <a class="item-src" href="https://memefees.com/stats/launches" target="_blank" rel="noopener">MemeFees ↗</a>
@@ -176,27 +176,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Binance用再投资处理四只bStocks分红</h3>
-          <p class="item-b">Binance将Broadcom、QQQ、Meta和Seagate的净现金分红在扣税费后再投资为同一bStock，链上持有人则通过乘数调整收到权益。</p><p class="item-b">bStocks是底层证券的凭证而非直接持股，分红处理期间交易继续，但转换、充值和提现按标的暂停。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>本次覆盖四只产品，公告没有披露净分红率、扣减明细或实际派发完成时间。</p>
+          <h3 class="item-h">Binance uses reinvestment to distribute dividends on four bStocks</h3>
+          <p class="item-b">Binance reinvests net cash dividends from Broadcom, QQQ, Meta and Seagate in the corresponding bStock after deducting taxes and fees. Onchain holders receive the economic benefit through an adjustment to the multiplier.</p><p class="item-b">bStocks are certificates of underlying securities, not direct ownership. Trading continues during the dividend distribution period, but conversions, rechargements, and withdrawals are suspended for the underlying assets.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>This announcement covers four products. No details about the net dividend rate, deductions, or actual distribution completion time were disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-18</span>
             <a class="item-src" href="https://www.binance.com/en/support/announcement/detail/7df43402f0094e79b293bd7fbb574474" target="_blank" rel="noopener">Binance ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">OCC允许Bastion转为国家信托银行</h3>
-          <p class="item-b">美国OCC有条件批准Bastion Platforms Trust Company转为无存款保险的国家信托银行，可从事白标稳定币发行、托管钱包和发行人服务。</p><p class="item-b">获批范围包括铸造、销毁、赎回、储备管理与合规控制，但业务必须随GENIUS Act及后续实施规则调整。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>这是附条件的转换批准，Bastion仍受业务范围、资本和未来稳定币规则约束。</p>
+          <h3 class="item-h">OCC allows Bastion to convert to a national trust bank</h3>
+          <p class="item-b">The U.S. OCC conditionally approved Bastion Platforms Trust Company to become a national trust bank without deposit insurance. This bank can engage in the issuance of stablecoins, custody of wallets, and issuer services.</p><p class="item-b">The approved scope includes minting, destroying, redemption, reserve management, and compliance control. However, the business must be adjusted according to the GENIUS Act and subsequent implementation rules.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>This is a conditional conversion approval. Bastion remains subject to business scope, capital, and future stablecoin rules.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-18</span>
             <a class="item-src" href="https://occ.treas.gov/topics/charters-and-licensing/interpretations-and-decisions/2026/cd1391.pdf" target="_blank" rel="noopener">U.S. OCC ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">OKX为苹果和亚马逊代币化股票增加USDC市场</h3>
-          <p class="item-b">OKX于9月18日开放xAAPL/USDC与xAMZN/USDC现货，为代币化股票补充稳定币报价和预开盘阶段。</p><p class="item-b">两种资产不赋予直接股权或股东权利，休市时段价格与流动性也可能偏离底层股票。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>新增的是两组现货报价，不是新增托管权利、赎回机制或美国市场准入。</p>
+          <h3 class="item-h">OKX adds USDC markets for tokenized Apple and Amazon shares</h3>
+          <p class="item-b">OKX opened xAAPL/USDC and xAMZN/USDC spot trading on September 18th, providing stablecoin quotes and pre-open phase for tokenized stocks.</p><p class="item-b">Neither asset conveys direct equity ownership or shareholder rights. When the underlying stock market is closed, prices and liquidity can diverge from those of the underlying shares.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The new additions are two sets of spot quotes, not any new custody rights, redemption mechanisms, or access to the US market.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-18</span>
             <a class="item-src" href="https://www.okx.com/en-ar/help/okx-to-list-usdc-trading-pairs-for-tokenized-stocks-xaapl-and-xamzn" target="_blank" rel="noopener">OKX ↗</a>
@@ -214,27 +214,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Gemini在网络安全评估中误入三家公司</h3>
-          <p class="item-b">Google确认Gemini在第三方网络安全测试中进入三家真实公司的系统，一次靠猜密码，两次使用公开仓库中的凭证。</p><p class="item-b">测试环境原本应隔离却意外开放互联网，虚构目标还与真实公司重名；模型识别越界后停止，暴露的是能力与评估环境同时失控。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>事件发生在五月的受控评估中，Google称相关实体已获通知，已知问题已修复。</p>
+          <h3 class="item-h">Gemini exceeded its authorized scope at three companies during a security evaluation</h3>
+          <p class="item-b">Google confirmed that Gemini accessed systems at three real companies without authorization during a third-party cybersecurity evaluation.</p><p class="item-b">Google said the test environment’s isolation failed and fictional target names overlapped with real companies. The model stopped after recognizing that it had exceeded its scope. The incident highlighted the need for independent containment and unambiguous evaluation targets.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The incident occurred during a controlled evaluation in May. Google stated that the relevant entities were notified, and the known issues have been resolved.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-18</span>
             <a class="item-src" href="https://www.axios.com/2026/09/19/google-safety-incidents-testing-hacks" target="_blank" rel="noopener">Axios ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Anthropic把独立评估嵌入模型研发</h3>
-          <p class="item-b">Anthropic与Accenture合作，由Faculty在模型研发内部开展红队、对齐和防护测试，评估人员将获得接近员工的访问权限。（嵌入式评估线，自09-18，首次建立）</p><p class="item-b">双方各预计未来五年投入至少10亿美元，但访问范围、公开报告标准和独立出资机制都尚未定型，Anthropic目前直接承担评估费用。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>金额是双方对能力建设的预期投入，不是已支付预算，也未拆分评估业务占比。</p>
+          <h3 class="item-h">Anthropic embeds independent evaluation in model development</h3>
+          <p class="item-b">Anthropic partnered with Accenture to embed Faculty evaluators in model development for red-teaming, alignment and safeguard testing. The evaluators will receive access approaching that of employees. This establishes the embedded evaluation story tracked since September 18.</p><p class="item-b">Both parties expect to invest at least 1 billion USD over the next five years. However, the scope of access, reporting standards, and independent funding mechanisms are not yet finalized. Anthropic currently bears the costs of evaluation.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The amount represents the expected investment in capacity building by both parties, not a paid budget, nor is it split to assess the business contribution.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-18</span>
             <a class="item-src" href="https://www.anthropic.com/news/accenture-embedded-evaluation" target="_blank" rel="noopener">Anthropic ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">华为为金融机构发布三层AI工厂</h3>
-          <p class="item-b">华为发布Fintelligent AI方案，用Agent Factory、Token Factory和Data-Knowledge Factory连接智能体开发、算力调度与金融知识供给。</p><p class="item-b">底层openJiuwen支持多智能体协作和统一治理，方案重点从单个模型能力转向金融机构自行构建、运行和复用生产级智能体。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>官方公布的是产品架构和能力清单，未披露客户名单、生产规模或实际成本改善。</p>
+          <h3 class="item-h">Huawei introduces a three-layer AI factory for financial institutions</h3>
+          <p class="item-b">Huawei released its Fintelligent AI solution, which connects agent development, computing scheduling, and financial knowledge through Agent Factory, Token Factory, and Data-Knowledge Factory.</p><p class="item-b">The underlying openJiuwen framework supports multi-agent collaboration and unified governance. The focus of the solution shifts from individual model capabilities to the ability of financial institutions to build, operate, and reuse production-level agents.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The official documentation provides a list of product structures and capabilities, but does not disclose customer lists, production scale, or actual cost improvements.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-18</span>
             <a class="item-src" href="https://www.huawei.com/en/news/2026/9/hc-agenticai-openjiuwen-fab2" target="_blank" rel="noopener">Huawei ↗</a>
@@ -242,7 +242,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

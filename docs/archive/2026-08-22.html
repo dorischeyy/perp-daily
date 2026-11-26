@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-08-22</title>
+<title>Perp DEX Daily · 2026-08-22</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 55 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 55</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 8 月 22 日 · 星期六</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">August 22, 2026 · Saturday</div>
     </header>
-    <p class="lead">主要永续场所成交在 OI 继续收缩时反弹，Binance 把通用 AI 代理接入合约执行，Shinhan 则把韩元债券基金推进到公链发行验证。</p>
+    <p class="lead">Major perpetual venues saw volume rebound as open interest continued to contract. Binance connected general-purpose AI agents to futures execution, while Shinhan moved a Korean won bond fund toward a public-chain issuance test.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,29 +110,29 @@
 
         <article class="item">
 
-          <h3 class="item-h">四场所成交反弹 27.2%，OI 反降 0.9%</h3>
-          <p class="item-b"><strong>事件</strong>：8 月 22 日远端快照中，Binance、Hyperliquid、Bybit 与 Gate 合计日成交由约 1951487 BTC 升至 2481366 BTC，增加 27.2%；合计 OI 由约 881684 BTC 降至 873825 BTC，减少 0.9%。</p><p class="item-b"><strong>机制</strong>：成交恢复而仓位存量继续收缩，使四场所 OI 与成交比由 0.45 降至 0.35，说明新增换手没有同步沉淀为更高的杠杆敞口。</p><p class="item-b"><strong>二阶效应</strong>：短期容量压力有所缓解，但若 OI 持续下降，成交反弹更可能来自快速换手而非稳定增量资金，做市与清算参数仍不能只按总成交上调。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>汇总只覆盖四个场所并以 BTC 计价，不含交易对深度、激励成交、资金费率和清算方向。</p>
+          <h3 class="item-h">Daily volume rises 27.2% across four venues while open interest slips 0.9%</h3>
+          <p class="item-b"><strong>Event</strong>: In the August 22 snapshot, combined daily volume at Binance, Hyperliquid, Bybit and Gate rose 27.2%, from about 1,951,487 BTC to 2,481,366 BTC. Open interest fell 0.9%, from about 881,684 BTC to 873,825 BTC.</p><p class="item-b"><strong>Mechanism</strong>: Trading recovered while outstanding positions continued to fall. The ratio of open interest to volume dropped from 0.45 to 0.35, so the added turnover did not translate into greater outstanding leveraged exposure.</p><p class="item-b"><strong>Second-order effects</strong>: Short-term pressure on capacity eased. If open interest continues to decline, the rebound may reflect fast turnover rather than durable new capital. Aggregate volume alone cannot justify higher market-making or liquidation limits.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The BTC-denominated aggregate covers four venues and omits pair depth, trading incentives, funding rates and liquidation direction.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-22</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/ca1dc61c59d127471282b783aa619b8f5ed2b090/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/05014a17dda3b336b91ee7339c6dc7bc91e1115e/docs/market.json" target="_blank" rel="noopener">补充：前一日市场快照 · 08-21 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/ca1dc61c59d127471282b783aa619b8f5ed2b090/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/05014a17dda3b336b91ee7339c6dc7bc91e1115e/docs/market.json" target="_blank" rel="noopener">Additional source: Previous day&#x27;s market snapshot · 08-21 ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">Hyperliquid 成交增 35.3%，OI 仍降 1.8%</h3>
-          <p class="item-b"><strong>事件</strong>：Hyperliquid 日成交由约 182147 BTC 升至 246472 BTC，增加 35.3%，OI 则由约 171921 BTC 降至 168902 BTC，减少 1.8%；OI 与成交比由 0.94 降至 0.69。</p><p class="item-b"><strong>机制</strong>：成交增幅高于四场所整体，但仓位没有同步积累，说明当日新增活动主要表现为更快周转，而非净杠杆扩张。</p><p class="item-b"><strong>二阶效应</strong>：周转恢复会改善短时承接，但 OI 下行意味着持续性仍待验证；若后续成交回落，平台不能把单日放量直接外推为容量台阶上移。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>同日 Binance、Bybit 与 Gate 的 OI 与成交比分别约为 0.25、0.41 和 0.54，Hyperliquid 为 0.69。</p>
+          <h3 class="item-h">Hyperliquid volume increases 35.3% as open interest falls 1.8%</h3>
+          <p class="item-b"><strong>Event</strong>: Hyperliquid’s daily volume rose 35.3%, from about 182,147 BTC to 246,472 BTC. Open interest fell 1.8%, from about 171,921 BTC to 168,902 BTC. The open-interest-to-volume ratio fell from 0.94 to 0.69.</p><p class="item-b"><strong>Mechanism</strong>: Volume grew faster than across the four venues as a group, while open positions did not accumulate. The additional activity was mainly faster turnover, with no net expansion in leverage.</p><p class="item-b"><strong>Second-order effects</strong>: Improved turnover can help absorb exits in the short term. Falling open interest leaves its durability uncertain. If trading subsides, one day of elevated volume cannot justify a permanently higher capacity estimate.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>That day, open-interest-to-volume ratios were about 0.25 at Binance, 0.41 at Bybit, and 0.54 at Gate, against 0.69 at Hyperliquid.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-22</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/ca1dc61c59d127471282b783aa619b8f5ed2b090/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/05014a17dda3b336b91ee7339c6dc7bc91e1115e/docs/market.json" target="_blank" rel="noopener">补充：前一日市场快照 · 08-21 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/ca1dc61c59d127471282b783aa619b8f5ed2b090/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/05014a17dda3b336b91ee7339c6dc7bc91e1115e/docs/market.json" target="_blank" rel="noopener">Additional source: Previous day&#x27;s market snapshot · 08-21 ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">Binance 把通用 AI 代理接入合约执行</h3>
-          <p class="item-b"><strong>事件</strong>：Binance 推出 Agent OS，让 AI 代理读取实时行情与余额，并执行现货、杠杆、兑换和期货交易；平台用独立 Agentic 子账户隔离权限，代理不能提币。</p><p class="item-b"><strong>机制</strong>：交易入口从人工界面扩展到通用代理，但用户仍需确认订单并承担交易结果，子账户隔离只限制资产边界，不能消除模型判断、提示注入或错误指令。</p><p class="item-b"><strong>二阶效应</strong>：头部交易所把代理执行变成标准入口后，竞争重点会从是否提供 API 转向账户级权限、逐单确认、撤销和归因能力，开放执行而缺少硬边界的平台风险更高。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>产品已开放，但 Binance 未披露代理用户数、成交规模、错误率、损失数据或第三方安全评测。</p>
+          <h3 class="item-h">Binance connects general-purpose AI agents to futures execution</h3>
+          <p class="item-b"><strong>Event</strong>: Binance launched Agent OS, allowing AI agents to read market data and balances and execute spot, margin, conversion and futures trades. A separate Agentic subaccount limits permissions, and agents cannot withdraw funds.</p><p class="item-b"><strong>Mechanism</strong>: The trading interface now includes general-purpose agents, but users must confirm orders and remain responsible for the outcome. Subaccount boundaries limit which assets are exposed. They do not prevent model errors, prompt injection or erroneous instructions.</p><p class="item-b"><strong>Second-order effects</strong>: As major exchanges standardize agent execution, differentiation will depend on account-level permissions, per-order confirmation, revocation and attribution as well as API access. Broader execution access without enforceable limits creates greater risk.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The product is available. Binance has not disclosed agent user numbers, trading volume, error rates, losses, or an independent security evaluation.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-21</span>
             <a class="item-src" href="https://decrypt.co/376161/binance-ai-agents-trade-crypto" target="_blank" rel="noopener">Decrypt ↗</a>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Aligned 上线 ALIGN，核心基础设施仍待交付</h3>
-          <p class="item-b">Aligned 推出 ALIGN 代币，总量 100 亿枚，初始流通约 16%；钱包已可用，但零知识 rollup、LambdaVM 与互操作网络仍处于开发阶段，代币上线早于核心基础设施完整落地。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>代币与钱包已上线，核心网络能力、开发者采用、费用收入和主网交付时间仍未披露。</p>
+          <h3 class="item-h">Aligned launches ALIGN while core infrastructure remains pending</h3>
+          <p class="item-b">Aligned launched ALIGN with a total supply of 10 billion and about 16% circulating initially. Its wallet is available. The zero-knowledge rollup, LambdaVM and interoperability network remain in development, so the token arrived before the core infrastructure was complete.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The token and wallet are live. Core network capabilities, developer adoption, fee revenue, and a mainnet delivery date remain undisclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-21</span>
             <a class="item-src" href="https://decrypt.co/376180" target="_blank" rel="noopener">Decrypt ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Starcloud 融资 2.5 亿美元押注轨道算力</h3>
-          <p class="item-b">轨道数据中心公司 Starcloud 为 A 轮追加融资，使本轮达到 1.7 亿美元，并把本次融资与信贷合计推至 2.5 亿美元、估值 23 亿美元；公司计划部署在轨 AI 推理设施，但发射选择收窄且仍依赖 SpaceX Starship。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>融资与估值已披露，8.8 万颗航天器申请不等于获批或部署，发射成本、在轨功耗和客户收入仍未验证。</p>
+          <h3 class="item-h">Starcloud raises $250 million for orbital computing</h3>
+          <p class="item-b">Orbital data-center company Starcloud extended its Series A to $170 million, bringing financing and credit together to $250 million at a $2.3 billion valuation. It plans to deploy AI inference infrastructure in orbit. Launch options are narrowing and still depend on SpaceX Starship.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The funding and valuation are public. An application for 88,000 spacecraft is not approval or deployment. Launch costs, power use in orbit, and customer revenue remain unverified.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-21</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Castelion 估值 130 亿美元扩产高超音速武器</h3>
-          <p class="item-b">国防科技公司 Castelion 完成 8 亿美元 C 轮股权融资并获得 2.5 亿美元循环信贷，估值达到 130 亿美元；公司已获得约 5 亿美元军方合同，资金将用于把原型能力转为规模化生产。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>股权与信贷合计约 10.5 亿美元，报道把整轮概括为 10 亿美元；合同额不等于已确认收入。</p>
+          <h3 class="item-h">Castelion reaches a $13 billion valuation as it expands hypersonic weapons production</h3>
+          <p class="item-b">Defense technology company Castelion raised $800 million in Series C equity and secured a $250 million revolving credit line at a $13 billion valuation. It has about $500 million in military contracts. The funding is intended to move from prototypes to scaled production.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Equity and credit total about $1.05 billion. The report rounds the full package to $1 billion. Contract value does not equal recognized revenue.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-20</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/20/castelion-hits-13b-valuation-to-mass-produce-hypersonic-missiles/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Shinhan 验证韩元短债基金公链发行</h3>
-          <p class="item-b">管理资产超过 960 亿美元的 Shinhan Asset Management 与 Solana Foundation、Etherfuse 和 Orca 签署合作备忘录，计划验证韩元超短债基金的代币化发行、流动性和赎回流程；韩国代币证券新规预计 2027 年 2 月生效。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>当前是概念验证与合作备忘录，尚无正式发行、基金规模、链上持有人、二级流动性或监管批复。</p>
+          <h3 class="item-h">Shinhan tests public-chain issuance of a won-denominated short-term bond fund</h3>
+          <p class="item-b">Shinhan Asset Management, with more than $96 billion under management, signed a memorandum with the Solana Foundation, Etherfuse and Orca to test tokenized issuance, liquidity and redemption for a won-denominated ultrashort bond fund. South Korea’s new tokenized securities rules are expected in February 2027.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The parties have a proof of concept and a memorandum of understanding. No formal issuance, fund size, onchain holders, secondary liquidity, or regulatory approval had been reported.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-21</span>
             <a class="item-src" href="https://www.theblock.co/news/regulation/2026-08-21-south-korea-shinhan-partners-solana-412420" target="_blank" rel="noopener">The Block ↗</a>
@@ -202,9 +202,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">BounceBit 因 300 万美元漏洞关闭独立链</h3>
-          <p class="item-b">BounceBit 在授权漏洞导致约 2.865 亿枚 BB 从 9 个账户被转移、损失约 300 万美元后暂停链上操作，并决定停止独立 L1、迁移到 BNB Chain；团队计划按攻击前快照重新发行资产。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>链在发现异常约 40 分钟后暂停，重发与迁移方案已公布，但补偿、审计和完整事故报告尚未落地。</p>
+          <h3 class="item-h">BounceBit closes its standalone chain after a $3 million security incident</h3>
+          <p class="item-b">BounceBit paused onchain operations after unauthorized transfers of about 286.5 million BB from nine accounts, worth roughly $3 million. It decided to retire its independent layer-1 chain and migrate to BNB Chain. The team plans to reissue assets from a pre-incident snapshot.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The chain paused about 40 minutes after the anomaly was detected. Reissuance and migration plans were announced. Compensation, an audit, and a full incident report are still pending.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-21</span>
             <a class="item-src" href="https://www.theblock.co/news/ecosystems/2026-08-21-bouncebit-sunset-blockchain-migrate-bnb-chain-after-3-million-exploit-412485" target="_blank" rel="noopener">The Block ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Coldcard 在 1.3 亿美元攻击后重做随机数防线</h3>
-          <p class="item-b">Coldcard 在一宗约 1.3 亿美元比特币失窃案暴露 2021 年起存在的种子随机性缺陷后升级安全流程，要求用户补充随机输入，并在签名前重新核验 PSBT；硬件钱包的安全边界从设备熵源扩展到用户可验证的生成和签名过程。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>升级措施已公布，但攻击归因、受影响设备范围、可复现证据和修复后的独立评测仍不完整。</p>
+          <h3 class="item-h">Coldcard revises its randomness safeguards after reported losses of $130 million</h3>
+          <p class="item-b">Coldcard revised its security process after a bitcoin theft worth about $130 million exposed a wallet-generation flaw dating to 2021. It now requires additional randomness from users and renewed verification of partially signed bitcoin transactions before signing. The changes emphasize user-verifiable generation and signing as well as device safeguards.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Upgrade measures were announced. Attribution, the range of affected devices, evidence sufficient for independent verification, and independent evaluation of the fix remain incomplete.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-21</span>
             <a class="item-src" href="https://decrypt.co/376270/coldcard-new-security-after-bitcoin-exploit" target="_blank" rel="noopener">Decrypt ↗</a>
@@ -233,9 +233,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Nvidia 用外部监督把 ARC-AGI-3 得分推至满分</h3>
-          <p class="item-b">Nvidia 研究团队用自定义记忆、工具和监督流程，让 Claude Opus 5 在 ARC-AGI-3 的一组任务上从约 30% 提升到 100%；结果说明长程任务表现越来越依赖运行框架，而不是只更换底层模型。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>这是研究团队的特定任务结果，不是 Nvidia 商业产品，也不能外推为真实交易或安全场景的成功率。</p>
+          <h3 class="item-h">Nvidia reports a perfect ARC-AGI-3 score using external oversight</h3>
+          <p class="item-b">Nvidia researchers combined custom memory, tools and supervision with Claude Opus 5, raising its score from about 30% to 100% on a subset of ARC-AGI-3 tasks. The result illustrates how the framework surrounding a model can affect long-running work.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The research team reported results on specific tasks. They do not describe an Nvidia commercial product or establish success rates for live trading or security operations.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-21</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/21/nvidia-just-showed-that-the-harness-not-the-ai-model-is-now-the-real-hero/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">TRM 称 AI 相关加密犯罪同比增 40%</h3>
-          <p class="item-b">TRM Labs 称 AI 相关加密犯罪活动同比增长约 40%，并指出 2026 年上半年 4% 的事件贡献了约 75% 的损失，朝鲜关联攻击者造成约 6 亿美元损失；AI 正同时降低攻击规模化和诱导自动化的门槛。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>统计来自 TRM 自有标签和样本口径，AI 相关不等于由自主代理直接实施，也不能用于推断单个平台事故率。</p>
+          <h3 class="item-h">TRM reports a 40% year-over-year increase in AI-related crypto crime</h3>
+          <p class="item-b">TRM Labs reported about 40% year-over-year growth in AI-related crypto crime. In the first half of 2026, 4% of incidents accounted for approximately 75% of losses. It attributed around $600 million in losses to North Korea-linked actors and noted that AI is making deception easier to automate at scale.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The statistics use TRM&#x27;s own labels and sampling choices. An AI association does not establish direct action by an autonomous agent or an incident rate for any single platform.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-21</span>
             <a class="item-src" href="https://www.theblock.co/news/web3/2026-08-21-ai-adoption-in-crypto-crime-trm-412297" target="_blank" rel="noopener">The Block ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">ChatGPT 获得 Apple Messages 发送权限</h3>
-          <p class="item-b">ChatGPT 新增 Apple Messages 插件，可在本地读取相关消息并起草、发送或删除内容；启用持续批准后，代理可跳过每次发送前的最终人工复核，便利性与误发风险同时上升。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>插件不建立完整消息索引，但需要 Full Disk Access；用户仍可限制权限并保留逐次确认。</p>
+          <h3 class="item-h">ChatGPT gains permission to send messages through Apple Messages</h3>
+          <p class="item-b">ChatGPT added an Apple Messages plugin that can read relevant messages locally and draft, send or delete content. Persistent approval removes the final manual review before each send, increasing convenience and the risk of sending an unintended message.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The plugin does not build a full message index but requires Full Disk Access. Users can still restrict permissions and require confirmation for each action.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-20</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/20/chatgpt-can-now-send-texts-for-you-with-new-apple-messages-plugin/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -267,24 +267,24 @@
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product assessment</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">风控与清算</div>
-          <h3 class="item-h">把代理执行边界固化到账户与订单层</h3>
-          <p class="item-b"><strong>判断变化</strong>：从按代理分配独立风险预算，进一步收紧为平台强制的子账户隔离、提币禁权和逐单确认，不能把这些边界留给代理自行遵守。</p><p class="item-b"><strong>证据与边界</strong>：Binance 已用 Agentic 子账户和提币禁权承载现货、杠杆与期货执行，TRM 同时记录 AI 相关加密犯罪增长；但代理采用量、真实错误率和直接损失仍未披露。</p>
+          <div class="decision-area">Risk Control and Settlement</div>
+          <h3 class="item-h">Account and order controls can enforce the limits on agent execution</h3>
+          <p class="item-b"><strong>Revised assessment</strong>: Agent-level budgets can be enforced through platform-managed subaccounts, disabled withdrawals and order confirmation. These controls should operate independently of what an agent chooses to do.</p><p class="item-b"><strong>Evidence and limits</strong>: Binance supports spot, margin and futures execution through agent subaccounts with withdrawals disabled. TRM reported growth in AI-related crypto crime. Adoption, observed error rates and direct losses from these trading agents remained undisclosed.</p>
 
           <div class="item-meta">
 
-            <a class="item-src" href="https://decrypt.co/376161/binance-ai-agents-trade-crypto" target="_blank" rel="noopener">Decrypt ↗</a><a class="item-src item-ref" href="https://www.theblock.co/news/web3/2026-08-21-ai-adoption-in-crypto-crime-trm-412297" target="_blank" rel="noopener">补充：The Block · 08-21 ↗</a>
+            <a class="item-src" href="https://decrypt.co/376161/binance-ai-agents-trade-crypto" target="_blank" rel="noopener">Decrypt ↗</a><a class="item-src item-ref" href="https://www.theblock.co/news/web3/2026-08-21-ai-adoption-in-crypto-crime-trm-412297" target="_blank" rel="noopener">Additional source: The Block · 08-21 ↗</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

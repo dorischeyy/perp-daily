@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-07-28</title>
+<title>Perp DEX Daily · 2026-07-28</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 最高优先级产品判断 */
+  /* Principal market implications */
   .product-view{margin:22px 0 8px; padding:20px 22px; background:#17150f; color:#fbfaf6;
     border-radius:7px; overflow-wrap:anywhere;}
   .product-view-area{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -36,7 +36,7 @@
   .product-view-row{font-size:13.5px; line-height:1.7; color:#d9d2c2;}
   .product-view-row b{color:#fbfaf6;}
   .product-view-f{margin-top:4px; color:#b8ae99;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -54,7 +54,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -65,7 +65,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -100,18 +100,18 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 35 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 35</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 7 月 28 日 · 星期二</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">July 28, 2026 · Tuesday</div>
     </header>
-    <p class="lead">Ondo 放弃把 Perp 执行全部塞进传统公链，改用单一 TEE enclave 完成撮合、保证金与清算，再由多方 attestor 验证代码和控制密钥。AFX 同日披露其桥损失始于开发者被诱导克隆恶意仓库，攻击一路穿透制品库与内部系统直达验证者，Perp DEX 的安全边界正在从合约扩展到构建链、密钥和验证者治理。</p>
+    <p class="lead">Ondo plans to put matching, margin and liquidation in a single trusted execution environment. Independent attestors would verify its code and control the keys. AFX separately attributed its bridge loss to compromised development and validator infrastructure. Both developments show why a perpetuals exchange's security depends on its build process, key custody and validator governance as well as its contracts.</p>
 
     <section class="product-view">
-      <div class="product-view-area">基础设施 · 置信度 高</div>
-      <div class="product-view-j">在采用私密高性能执行前，先把构建链、证明链和密钥链视为同一个产品风险面；TEE 或多签名称本身不能替代可验证的独立控制。</div>
-      <div class="product-view-row"><b>判断变化：</b>从“链下撮合只要保留链上结算即可接受”转向“只有代码来源、attestor 独立性、密钥重构、可重放日志和紧急撤销同时可审计，链下执行才进入候选”。</div>
-      <div class="product-view-row product-view-f"><b>证伪条件：</b>若 Ondo 出现连续 30 天的真实成交与持仓数据，同时公开独立 attestor 身份与硬件多样性、开放 signed log 重放和链上状态承诺，并证明单一 enclave 失效或构建链被攻破时资金仍不可移动，应降低这一门槛。</div>
+      <div class="product-view-area">Infrastructure · Confidence level: High</div>
+      <div class="product-view-j">Before adopting private, high-performance execution, consider the construction chain, proof-of-chain, and key-chain as one risk profile. TEE or multi-signature names alone cannot replace verifiable independent control.</div>
+      <div class="product-view-row"><b>Revised assessment:</b>Shift from “Offline matching is acceptable as long as the settlement on the chain is maintained” to “Only those where the code source, attestor independence, key reconstruction, replayable logs, and emergency revocations are auditable at the same time can be considered candidates for offline execution.”</div>
+      <div class="product-view-row product-view-f"><b>Disconfirmation Conditions:</b>If Ondo can provide real-time transaction and position data for 30 consecutive days, and at the same time disclose the identities of independent attestors, as well as hardware diversity, open signed logs for replaying, and promises regarding on-chain status, and can prove that funds cannot be moved when a single enclave fails or the chain is compromised, then this threshold can be lowered.</div>
     </section>
 
 
@@ -126,9 +126,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Ondo 不再自建传统 L1，用单一 TEE 和多方 attestor 承担 Perp 执行</h3>
-          <p class="item-b"><strong>事件</strong>：Ondo 07-27 上线 Ondo Network，明确不再按传统区块链实现此前的 Ondo Chain，而把已经运行的 Ondo Perps 作为首个应用。</p><p class="item-b"><strong>机制</strong>：撮合、保证金、风险检查与清算目前在单一高性能 TEE enclave 内私密执行，多方 attestor 负责批准代码、分片保管关键密钥并验证链上事件，核心状态写入可签名重放日志。</p><p class="item-b"><strong>二阶效应</strong>：速度和仓位隐私不再必须依赖公开复制执行，但信任也从共识层转移到 enclave 软件来源、attestor 独立性、硬件证明与日志可用性；官方仍把更大无许可 attestor 集、链上状态承诺和外部 watcher 列为后续方向。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>网络与 Ondo Perps 已上线，但执行仍是单 enclave，官方未披露 attestor 身份、交易量、OI、故障切换或公开日志验证数据。</p>
+          <h3 class="item-h">Ondo puts perpetual execution in a single trusted enclave with multiple attestors</h3>
+          <p class="item-b"><strong>Event</strong>: On July 27, Ondo introduced Ondo Network with the live Ondo Perps as its first application. It said it would no longer implement the previously proposed Ondo Chain as a conventional Layer 1.</p><p class="item-b"><strong>Mechanism</strong>: Matching, margin, risk checks and liquidation currently run privately inside a high-performance trusted execution environment. Several attestors approve code, share custody of critical keys and verify onchain events. Core state is recorded in a signed, replayable log.</p><p class="item-b"><strong>Second-order effects</strong>: The design shifts assurance from public replication to software provenance, independent attestors, hardware attestation and log availability. A more open attestor set, onchain state commitments and external watchers were still future work.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Ondo Network and Ondo Perps were live, with execution still confined to a single enclave. The identities of attestors, volume, open interest, failover arrangements and public log-verification results were not disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-27</span>
             <a class="item-src" href="https://ondo.finance/blog/introducing-the-ondo-network" target="_blank" rel="noopener">Ondo Finance ↗</a>
@@ -136,17 +136,17 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">AFX 根因从“热签名失守”升级为开发供应链一路穿透验证者</h3>
-          <p class="item-b"><strong>事件</strong>：（链下权限攻击线，自 07-15，第 7 个进展）AFX 07-28 首次公布主要攻击路径：开发者 07-09 在 Telegram 诱导下克隆恶意仓库，攻击者随后进入 JFrog 与内部系统，最终取得验证者相关基础设施权限。</p><p class="item-b"><strong>机制</strong>：攻击者 07-16 植入恶意 Groovy 插件并制造 OOM 症状，主机重启又让插件恢复持久化；此前被视为有效的五个验证者签名正是这条横向移动链的最终结果，合约和 Arbitrum 原生桥均按设计运行。</p><p class="item-b"><strong>二阶效应</strong>：验证者数量和签名阈值只能抵抗彼此独立的故障，若开发终端、制品库、部署与热签名共享同一信任域，多签会退化成单一供应链故障；AFX 的最终取证报告与用户恢复方案仍未完成。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>07-22 提款为 2415 万 USDC，五个热签名达到约三分之二门槛并耗尽几乎全部 TVL；07-28 披露仍不是最终取证报告。</p>
+          <h3 class="item-h">AFX attributes validator compromise to its development supply chain</h3>
+          <p class="item-b"><strong>Event</strong>: On July 28, AFX published preliminary findings on its bridge incident, the seventh development tracked since July 15. The review traced the compromise of development and validator infrastructure back to July 9.</p><p class="item-b"><strong>Mechanism</strong>: AFX dated further unauthorized activity to July 16. Its review attributed the loss to compromised infrastructure and found that the bridge contracts and Arbitrum's native bridge had operated as designed.</p><p class="item-b"><strong>Implications</strong>: A larger validator set provides limited protection if validators share operational dependencies. AFX's final forensic findings and user recovery plan were still pending.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The July 22 withdrawal of 24.15 million USDC followed a compromise of the bridge&#x27;s signing authority and depleted nearly all protocol TVL. The July 28 disclosure was preliminary.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-28</span>
-            <a class="item-src" href="https://medium.com/@AFXTrade/afx-bridge-incident-what-happened-what-we-learned-and-what-comes-next-d97387746012" target="_blank" rel="noopener">AFX Trade ↗</a><a class="item-src item-ref" href="https://www.coindesk.com/es/tech/2026/07/23/arbitrum-based-afx-trade-drained-of-usd24-million-after-bridge-keys-compromised" target="_blank" rel="noopener">补充：CoinDesk · 07-23 ↗</a>
+            <a class="item-src" href="https://medium.com/@AFXTrade/afx-bridge-incident-what-happened-what-we-learned-and-what-comes-next-d97387746012" target="_blank" rel="noopener">AFX Trade ↗</a><a class="item-src item-ref" href="https://www.coindesk.com/es/tech/2026/07/23/arbitrum-based-afx-trade-drained-of-usd24-million-after-bridge-keys-compromised" target="_blank" rel="noopener">Additional source: CoinDesk · 07-23 ↗</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

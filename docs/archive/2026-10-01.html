@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-10-01</title>
+<title>Perp DEX Daily · 2026-10-01</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -82,12 +82,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 93 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 93</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 10 月 1 日 · 星期四</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">October 1, 2026 · Thursday</div>
     </header>
-    <p class="lead">Hyperliquid把波动率指数与机构信贷接进同一交易底座，Base和OUSD则把条件交易、合规资产与企业结算继续推向生产环境。</p>
+    <p class="lead">Hyperliquid brought volatility indices and institutional credit to the same trading infrastructure. Base and OUSD moved conditional trading, compliant assets and enterprise settlement closer to production.</p>
 
 
       <section class="sec sec-perpdex">
@@ -100,27 +100,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">BVIV波动率指数永续成为HIP-3首个联合部署市场</h3>
-          <p class="item-b"><strong>事件</strong>：Markets.xyz、Perps.inc与Volmex在Hyperliquid HIP-3上线BVIV永续，标的为比特币30天隐含波动率指数，也是Markets.xyz首个由合作方联合部署的市场。</p><p class="item-b"><strong>机制</strong>：联合部署方可以创建并管理市场，无需各自质押50万枚HYPE；SEDA用指数现价、期限曲线和已实现波动率生成价格与资金费，并设置双预言机交叉检查和安全模式。（交易后台服务化线，自08-25，本次首次出现第三方共同管理的生产市场）</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>市场已上线，但公告没有披露首日成交、OI、价差或联合部署方发生故障时的最终责任。</p>
+          <h3 class="item-h">BVIV volatility index perpetual becomes the first jointly deployed HIP-3 market</h3>
+          <p class="item-b"><strong>Event</strong>: Markets.xyz, Perps.inc and Volmex launched a BVIV perpetual on Hyperliquid HIP-3 tracking bitcoin’s 30-day implied volatility index. It is Markets.xyz’s first market jointly deployed with partners.</p><p class="item-b"><strong>Mechanism</strong>: Joint deployers can create and manage a market without each staking 500,000 HYPE. SEDA uses the spot index, term structure and realized volatility for pricing and funding, with two oracles for cross-checks and a safe mode. It is the first third-party co-managed production market in the trading infrastructure story tracked since August 25.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The market has been launched, but the announcement does not disclose information on first-day transactions, OI, price differences, or the ultimate responsibility in case of failures during joint deployments.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-30</span>
             <a class="item-src" href="https://www.globenewswire.com/news-release/2026/09/30/3372002/0/en/bviv-is-now-live-on-markets-xyz-bringing-bitcoin-s-crypto-vix-onchain-in-partnership-with-perps-inc-and-volmex-finance.html" target="_blank" rel="noopener">GlobeNewswire ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Ondo Perps让12只代币化股票直接充当永续抵押品</h3>
-          <p class="item-b"><strong>事件</strong>：Ondo Perps开放首批12只代币化股票与ETF的现货交易，并允许用户把现货头寸作为对应永续的抵押品，在同一平台做方向交易或基差交易。</p><p class="item-b"><strong>机制</strong>：产品把代币化股票从可交易标的推进到资本效率工具，用户无需先换回稳定币就能建立对冲仓位；前30天免现货交易费，但官方尚未披露各资产深度、抵押折扣和清算表现。（TradFi/RWA永续线，自07-09，本次从扩列标的推进到现货抵押与永续联动）</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>首批只覆盖12只资产，免手续费是启动期政策，不能替代对长期深度、抵押效率和强平质量的验证。</p>
+          <h3 class="item-h">Ondo Perps accepts 12 tokenized equities directly as perpetual collateral</h3>
+          <p class="item-b"><strong>Event</strong>: Ondo Perps opens trading of the first 12 tokenized stocks and ETFs. Users can use these positions as collateral for perpetual contracts, allowing directional or basis trading on the same platform.</p><p class="item-b"><strong>Mechanism</strong>: Users can hedge with tokenized shares as collateral without first converting them to stablecoins. Spot fees are waived for the first 30 days. Depth by asset, collateral haircuts and liquidation outcomes remain undisclosed. The link between spot collateral and perpetuals adds to the TradFi and RWA story tracked since July 9.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The first batch only covers 12 assets. The no-fee policy is a policy during the initial phase and cannot replace verification of long-term depth, collateral efficiency, and liquidation quality.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-30</span>
             <a class="item-src" href="https://www.thestreet.com/crypto/markets/ondo-perps-launches-spot-trading-for-ondo-stocks" target="_blank" rel="noopener">TheStreet ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Hyperliquid出现首笔合格托管支持的机构信贷</h3>
-          <p class="item-b"><strong>事件</strong>：Hyperion DeFi、Anchorage Digital与HyperLend宣布Hyperliquid首笔机构信贷安排，借款义务由存放在Anchorage Digital Bank并原生质押的HYPE担保。</p><p class="item-b"><strong>机制</strong>：HyperLend旗下Aviya提供许可借贷场所，Atlas负责质押品设定、释放和全天候监控，法律文件、托管与链上执行由不同主体承接；具体额度、利率、LTV和清算阈值未披露。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>这是首笔交易结构公告，不代表已有可重复的信贷市场；担保规模、借款用途和违约处置仍未知。</p>
+          <h3 class="item-h">Hyperliquid sees its first institutional loan backed by qualified custody</h3>
+          <p class="item-b"><strong>Event</strong>: Hyperion DeFi, Anchorage Digital, and HyperLend announced the first institutional credit arrangement with Hyperliquid. The borrowing obligations are secured by HYPE tokens deposited with Anchorage Digital Bank and pledged natively.</p><p class="item-b"><strong>Mechanism</strong>: HyperLend’s Aviya provides a permissioned lending venue. Atlas handles collateral pledges, releases and round-the-clock monitoring. Separate parties handle legal documentation, custody and onchain execution. The credit limit, interest rate, loan-to-value ratio and liquidation threshold were undisclosed.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>This announcement covers the structure of one transaction. It does not establish a repeatable credit market. The size of the guarantee, use of the loan and treatment of default are still unknown.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-30</span>
             <a class="item-src" href="https://ir.hyperiondefi.com/news-events/press-releases/detail/322/hyperion-defi-anchorage-digital-and-hyperlend-together-announce-the-first-institutional-credit-facility-on-hyperliquid" target="_blank" rel="noopener">Hyperion DeFi ↗</a>
@@ -138,27 +138,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">受追踪发射台单日创建量突破10万个</h3>
-          <p class="item-b"><strong>事件</strong>：MemeFees在10月1日02:10 UTC的数据库快照中记录，9月30日受追踪发射台创建代币超过10.35万个，pump.fun贡献最多；过去7天记录到3.12万个毕业项目。</p><p class="item-b"><strong>机制</strong>：创建供给远高于毕业数量，说明发射入口继续极度商品化，筛选、毕业和二级承接才是稀缺环节；统计只覆盖已接入平台与选定合约，带加号的数字均为下限。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>创建量是受追踪平台的最低值，7日毕业量跨10个平台汇总，不能直接计算全市场毕业率。</p>
+          <h3 class="item-h">Tracked launchpads create over 100,000 tokens in one day</h3>
+          <p class="item-b"><strong>Event</strong>: In its database snapshot at 02:10 UTC on October 1, MemeFees counted more than 103,500 tokens created on tracked launchpads on September 30. Pump.fun contributed the most. The dataset recorded 31,200 project graduations over the preceding seven days.</p><p class="item-b"><strong>Mechanism</strong>: The creation of supply exceeds the number of projects completed, indicating that the launch process continues to be highly commoditized. Screening, completion, and secondary handling are the scarce aspects. The statistics cover only those platforms that have been integrated, with the numbers indicating the lower limits.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The amount created is limited by the lowest value on the tracking platform. The total amount across 10 platforms is aggregated, and it cannot be directly calculated as the overall market completion rate.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-01</span>
             <a class="item-src" href="https://memefees.com/stats" target="_blank" rel="noopener">MemeFees ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">DogeOS测试网引入两套Dogecoin代币发射台</h3>
-          <p class="item-b"><strong>事件</strong>：DogeOS开放公共测试网，为Dogecoin提供EVM兼容应用层；Anoncoin与Starbase已在其上开发代币发射台，但上线时间仍取决于各自团队。</p><p class="item-b"><strong>机制</strong>：发射台可以借用Dogecoin资产与社区分发，同时把合约执行放在独立应用层；当前只能验证测试网可开发性，不能证明主网流动性、跨层安全或新币需求。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>公共测试网已开放，两个发射台仍在开发，主网日期、审核规则和真实项目供给均未披露。</p>
+          <h3 class="item-h">DogeOS testnet introduces two Dogecoin token launchpads</h3>
+          <p class="item-b"><strong>Event</strong>: DogeOS opened its public testnet, an EVM-compatible application layer for Dogecoin. Anoncoin and Starbase are developing token launchpads on it. Each team will determine its own launch date.</p><p class="item-b"><strong>Mechanism</strong>: The launchpads could use Dogecoin assets and its community for distribution while running contracts on a separate application layer. The testnet establishes that developers can build there. Mainnet liquidity, cross-layer security and demand for new tokens remain unproven.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The public testnet is open and both launchpads remain in development. No mainnet date, screening rules or pipeline of projects ready to launch has been disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-30</span>
             <a class="item-src" href="https://www.globenewswire.com/news-release/2026/09/30/3372073/0/en/dogeos-opens-public-testnet-as-builders-bring-new-apps-to-dogecoin.html" target="_blank" rel="noopener">DogeOS ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">MemeToro原型把未达标退款写进募资合约</h3>
-          <p class="item-b"><strong>事件</strong>：MemeToro更新发射台原型，募资合约固定最低与最高目标、单钱包上限和截止时间；未达最低目标或未完成发射时，参与者可在退款窗口取回资金。</p><p class="item-b"><strong>机制</strong>：AI只负责提出项目与生成清单，不持有资金也不执行交易，链上合约承担托管和退款；合约尚未审计或部署，测试网与安全评审仍是进入真实募资前的门槛。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>目前是公开原型与规则说明，不是已审计产品；退款可执行性仍需测试网和合约审计验证。</p>
+          <h3 class="item-h">MemeToro prototype encodes refunds for missed fundraising targets</h3>
+          <p class="item-b"><strong>Event</strong>: MemeToro updates the launch prototype. Fundraising contracts specify minimum and maximum targets, limits per wallet, and deadlines. Participants can retrieve their funds through a refund window if the minimum target is not reached or the launch is incomplete.</p><p class="item-b"><strong>Mechanism</strong>: The AI proposes projects and generates checklists. It holds no funds and executes no transactions. Onchain contracts would handle custody and refunds. The contracts had been neither audited nor deployed. Testnet validation and security review remain prerequisites for real fundraising.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The project has published a prototype and its rules. The product is unaudited, and refund execution still needs verification on testnet and through a contract audit.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-30</span>
             <a class="item-src" href="https://theholycoins.com/news/memetoro-expands-ai-memecoin-launchpad-prototype-with-smart-contract-funding-and-refund-rules" target="_blank" rel="noopener">The Holy Coins ↗</a>
@@ -176,27 +176,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Base Cobalt把条件交易与B20合规控制带上主网</h3>
-          <p class="item-b"><strong>事件</strong>：Base上线Cobalt主网升级，Validity Transactions可让交易在价格、区块和截止时间等条件满足前保持休眠，未在期限内满足就不进入区块。</p><p class="item-b"><strong>机制</strong>：提交内容在上链前保持私密，B20则新增AND或OR组合策略、股票拆分倍率更新和带备注的授权资产转移；条件执行降低反复签名需求，但发行人控制与管理员权限也需要更清晰的审计。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>升级已在主网生效，既有Beryl集成继续兼容；新策略只有被资产发行人与应用采用后才形成实际覆盖。</p>
+          <h3 class="item-h">Base Cobalt brings conditional transactions and B20 compliance controls to mainnet</h3>
+          <p class="item-b"><strong>Event</strong>: Base has launched an upgrade to the Cobalt mainnet. Validity Transactions allows transactions to be dormant until conditions such as price, block, and deadline are met. Transactions that do not meet these conditions will not be included in the block.</p><p class="item-b"><strong>Mechanism</strong>: The submitted content remains private before being uploaded to the chain. B20 introduces new AND or OR strategies, updates stock split ratios, and includes notes for authorized asset transfers. Conditional execution reduces the need for repeated signatures. However, issuer control and administrator permissions require clearer auditing.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The upgrade has been implemented in the main network. The existing Beryl integration remains compatible. The new strategy will only become effective when asset issuers and applications adopt it.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-30</span>
             <a class="item-src" href="https://www.theblock.co/news/ecosystems/2026-09-30-base-launches-cobalt-upgrade-with-conditional-transactions-and-new-b20-asset-functions-417308" target="_blank" rel="noopener">The Block ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Open USD同时登陆四条链并开放企业零费率铸赎</h3>
-          <p class="item-b"><strong>事件</strong>：Open Standard推出由Bridge发行的OUSD，首发覆盖Base、Ethereum、Solana和Tempo，企业可按1:1美元零费用铸造与赎回，并接入钱包、卡、外汇和结算流程。</p><p class="item-b"><strong>机制</strong>：Coinbase、Mastercard、Shopify、Stripe与Visa共同发起的网络已有200多家合作方，储备按月出具证明；创始方承诺的10亿美元流动性不等于当前流通量或实际结算需求。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>200多家是计划接入的网络规模，10亿美元是流动性承诺，均不能替代OUSD的实时供应与结算量。</p>
+          <h3 class="item-h">Open USD launches on four chains with fee-free minting and redemption for enterprises</h3>
+          <p class="item-b"><strong>Event</strong>: Open Standard has launched OUSD, issued by Bridge. It is available for Base, Ethereum, Solana, and Tempo. Enterprises can mint and redeem OUSD at a rate of 1:1 USD with no fees. It can be integrated into wallets, cards, foreign exchange, and settlement processes.</p><p class="item-b"><strong>Mechanism</strong>: The network initiated by Coinbase, Mastercard, Shopify, Stripe, and Visa has more than 200 partners. The initial commitment of 1 billion USD in liquidity does not equal the current amount of liquidity or the actual settlement requirements.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>More than 200 networks are planned to be integrated. The promise of 1 billion USD in liquidity cannot replace OUSD’s real-time supply and settlement capabilities.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-30</span>
-            <a class="item-src" href="https://www.withbridge.com/blog/ousd-is-live-issued-by-bridge" target="_blank" rel="noopener">Bridge ↗</a><a class="item-src item-ref" href="https://solana.com/nl/news/open-usd-is-live-on-solana" target="_blank" rel="noopener">补充：Solana Foundation · 09-30 ↗</a>
+            <a class="item-src" href="https://www.withbridge.com/blog/ousd-is-live-issued-by-bridge" target="_blank" rel="noopener">Bridge ↗</a><a class="item-src item-ref" href="https://solana.com/nl/news/open-usd-is-live-on-solana" target="_blank" rel="noopener">Additional source: Solana Foundation · 09-30 ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">CFTC把事件合约与博彩边界送进白宫审查</h3>
-          <p class="item-b"><strong>事件</strong>：CFTC向白宫OIRA提交两项规则，分别拟进一步明确swap定义包含事件合约，并排除赌场式博彩产品；其中后者显示为临时最终规则阶段。</p><p class="item-b"><strong>机制</strong>：规则可能直接重画联邦衍生品监管与州级博彩执法边界，但文本尚未公开，体育合约能否继续受到州法约束也有巡回法院分歧。（预测市场联邦规则线，自07-24，本次从执法与诉讼推进到正式规则审查）</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>OIRA审查不是规则已经生效，正式文本、适用范围和是否提供公众评议仍待公布。</p>
+          <h3 class="item-h">CFTC sends the boundary between event contracts and gambling for White House review</h3>
+          <p class="item-b"><strong>Event</strong>: The CFTC submitted two rules to the OIRA of the White House. These rules aim to further clarify the definition of swaps, including event contracts, and to exclude casino-style gambling products. The latter is considered a temporary final rule.</p><p class="item-b"><strong>Mechanism</strong>: The rule could redraw the boundary between federal derivatives oversight and state gambling enforcement. Its text has yet to be released, and federal appeals courts disagree on whether state law can still govern sports contracts. The federal prediction-market story tracked since July 24 has advanced from enforcement and litigation to formal rule review.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>OIRA’s review does not mean that the regulations have taken effect. The official text, scope of application, and whether public comments are available remain undisclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-30</span>
             <a class="item-src" href="https://www.theblock.co/news/regulation/2026-09-30-white-house-weighs-new-cftc-event-contract-rules-in-growing-prediction-market-power-struggle-417345" target="_blank" rel="noopener">The Block ↗</a>
@@ -214,27 +214,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">S3 Vectors把元数据过滤前置到相似度搜索</h3>
-          <p class="item-b"><strong>事件</strong>：AWS为S3 Vectors加入元数据预过滤，可在向量相似度计算前按租户、类别、状态或时间范围缩小候选集，单条向量支持2KB可过滤元数据和最多100个约束。</p><p class="item-b"><strong>机制</strong>：多租户Agent可以先隔离用户与权限范围，再做语义检索，无需重建索引或额外付费；AWS称高选择性条件下匹配向量最多增加5倍，但这是厂商测试口径。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>5倍提升只针对高选择性过滤的厂商测试，真实收益取决于数据分布、过滤命中率与召回配置。</p>
+          <h3 class="item-h">S3 Vectors applies metadata filtering before similarity search</h3>
+          <p class="item-b"><strong>Event</strong>: AWS has added metadata pre-filters for S3 Vectors. This allows for narrowing the candidate set by tenant, category, status, or time range before calculating vector similarity. A single vector supports 2KB of metadata and up to 100 constraints.</p><p class="item-b"><strong>Mechanism</strong>: Multi-tenant agents can isolate users and their access levels before performing semantic retrieval. There is no need to rebuild indexes or pay additional fees. AWS claims that the matching vector can be increased by up to 5 times under high selectivity conditions, but this is based on manufacturer testing.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>A 5-fold increase is only applicable to manufacturers who use high selectivity filtering. Real returns depend on data distribution, filtering accuracy, and recall settings.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-30</span>
             <a class="item-src" href="https://aws.amazon.com/blogs/aws/amazon-s3-vectors-now-supports-metadata-pre-filtering-for-higher-recall-on-filtered-searches/" target="_blank" rel="noopener">AWS ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">MongoDB Atlas Agent Engine把执行、记忆与治理并入数据库</h3>
-          <p class="item-b"><strong>事件</strong>：MongoDB推出Atlas Agent Engine公共预览，把Agent运行、持久记忆、权限和审计放进Atlas，并支持MCP、A2A及不同模型、框架与云。</p><p class="item-b"><strong>机制</strong>：每次Agent动作都绑定到人或Agent身份并记录日志，组织策略不能由应用静默关闭；这减少独立编排与状态栈，但公共预览仍需验证并发、故障恢复和长期成本。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>MongoDB的7万客户是Atlas平台基数，不是Agent Engine采用量；产品目前仍是公共预览。</p>
+          <h3 class="item-h">MongoDB Atlas Agent Engine brings execution, memory and governance into the database</h3>
+          <p class="item-b"><strong>Event</strong>: MongoDB has released a public preview of the Atlas Agent Engine. This engine integrates agent operations, persistent memory, permissions, and auditing into Atlas. It supports MCP, A2A, as well as various models, frameworks, and clouds.</p><p class="item-b"><strong>Mechanism</strong>: Every agent action is tied to a specific person or agent identity, and logs are kept. Organizational strategies cannot be silently shut down by applications. This reduces the need for independent orchestration and state stacks. However, public preview still requires verification of concurrency, fault recovery, and long-term costs.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>MongoDB’s 70,000 customers are the Atlas platform’s customer base. They do not measure adoption of Agent Engine, which remains in public preview.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-29</span>
             <a class="item-src" href="https://www.mongodb.com/company/newsroom/press-releases/mongodb-launches-atlas-agent-engine-to-put-ai-agents-in-production-without-a-new-stack" target="_blank" rel="noopener">MongoDB ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">微软用GridSFM把电网最优潮流计算压到毫秒级</h3>
-          <p class="item-b"><strong>事件</strong>：微软研究院发布开放基础模型GridSFM，用公开电网数据与物理建模近似求解交流最优潮流，目标是在毫秒级评估大量规划场景。</p><p class="item-b"><strong>机制</strong>：模型试图把需要大量迭代的电网约束计算变成可复用推理能力，适合新能源接入与容量规划；发布材料没有给出生产部署、误差分布或极端工况表现。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>模型与研究说明已公开，但缺少运营电网部署和跨区域外部验证，不能据毫秒级推理判断可替代现有规划工具。</p>
+          <h3 class="item-h">Microsoft’s GridSFM reduces optimal power-flow calculations to milliseconds</h3>
+          <p class="item-b"><strong>Event</strong>: Microsoft Research has released the open-source model GridSFM. This model uses public grid data and physical modeling to solve AC optimal power flow problems. The goal is to evaluate numerous planning scenarios in milliseconds.</p><p class="item-b"><strong>Mechanism</strong>: The model attempts to transform complex grid constraints into reusable reasoning capabilities, which are suitable for new energy integration and capacity planning. The released materials do not provide information on production deployment, error distributions, or performance under extreme conditions.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The model and research details are available, but there is a lack of information on grid deployment and cross-regional validation. Therefore, it cannot be used as a substitute for existing planning tools.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-30</span>
             <a class="item-src" href="https://www.microsoft.com/en-us/research/video/the-future-of-the-grid-how-ai-transforms-power-system-planning/" target="_blank" rel="noopener">Microsoft Research ↗</a>
@@ -242,7 +242,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

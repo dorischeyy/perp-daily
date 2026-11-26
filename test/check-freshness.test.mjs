@@ -6,71 +6,71 @@ import { researchContent } from "./_research-fixture.mjs";
 const TODAY = "2026-06-23";
 const cf = (content) => run(["lib/check-freshness.mjs", tmpJson(content), TODAY]);
 
-test("纯新闻报告也必须与核验日期一致，不能将前一天内容装入今天归档", () => {
+test("Checks the edition date", () => {
   const content = researchContent({ date: "2026-06-22" });
   content.sections = content.sections.filter((section) => section.id === "ai");
   const result = cf(content);
   assert.equal(result.code, 1);
-  assert.match(result.out, /报告 date=2026-06-22 必须等于本次核验日期 2026-06-23/);
+  assert.match(result.out, /report date 2026-06-22 differs from 2026-06-23/);
 
   const future = baseContent({ date: "2026-06-24" });
   assert.equal(cf(future).code, 1);
 });
 
-test("历史报告显式传入对应核验日期仍可通过", () => {
+test("Accepts an explicitly dated historical edition", () => {
   const content = researchContent({ date: "2026-06-22" });
   content.sections = content.sections.filter((section) => section.id === "ai");
   assert.equal(run(["lib/check-freshness.mjs", tmpJson(content), "2026-06-22"]).code, 0);
   assert.equal(run(["lib/check-freshness.mjs", tmpJson(baseContent()), TODAY]).code, 0);
 });
 
-test("新闻 ≤72h → 通过(exit 0)", () => {
+test("Accepts news up to three days old", () => {
   const c = baseContent();
-  c.sections[0].items[0].date = "2026-06-21"; // 2天
+  c.sections[0].items[0].date = "2026-06-21"; // 2 days before the edition
   assert.equal(cf(c).code, 0);
 });
 
-test("新闻 >72h 且非本周主线 → 阻断(exit 1)", () => {
+test("Rejects ordinary news older than three days", () => {
   const c = baseContent();
-  c.sections[0].items[0].date = "2026-06-15"; // 8天
+  c.sections[0].items[0].date = "2026-06-15"; // 8 days before the edition
   assert.equal(cf(c).code, 1);
 });
 
-test("本周主线 ≤7天 → 通过", () => {
+test("Accepts a weekly theme within seven days", () => {
   const c = baseContent();
-  c.sections[0].items[0].headline = "本周主线 ｜ 趋势综述";
-  c.sections[0].items[0].date = "2026-06-18"; // 5天
+  c.sections[0].items[0].headline = "Weekly trend | Trading volume";
+  c.sections[0].items[0].date = "2026-06-18"; // 5 days before the edition
   assert.equal(cf(c).code, 0);
 });
 
-test("本周主线 >7天 → 阻断", () => {
+test("Rejects a weekly theme older than seven days", () => {
   const c = baseContent();
-  c.sections[0].items[0].headline = "本周主线 ｜ 太旧";
-  c.sections[0].items[0].date = "2026-06-10"; // 13天
+  c.sections[0].items[0].headline = "Weekly trend | Previous market update";
+  c.sections[0].items[0].date = "2026-06-10"; // 13 days before the edition
   assert.equal(cf(c).code, 1);
 });
 
-test("URL 内嵌日期与 date 字段差 >2 天 → 判造假阻断", () => {
+test("Checks embedded source dates", () => {
   const c = baseContent();
   c.sections[0].items[0].url = "https://x.com/blog/2026/01/29/post";
-  c.sections[0].items[0].date = "2026-06-23"; // 与 url 的 01-29 差很多
+  c.sections[0].items[0].date = "2026-06-23";
   assert.equal(cf(c).code, 1);
 });
 
-test("旧产品判断栏不再豁免时效", () => {
+test("Applies freshness rules to legacy columns", () => {
   const c = baseContent();
   c.sections = [
-    { id: "legacy-product-view", title: "产品判断", items: [
-      { headline: "老来源洞察", body: ["x"], url: "https://x.com/p", date: "2026-05-01" },
+    { id: "legacy-product-view", title: "Product assessment", items: [
+      { headline: "Archived analysis", body: ["x"], url: "https://x.com/p", date: "2026-05-01" },
     ] },
   ];
   assert.equal(cf(c).code, 1);
 });
 
-test("补充来源可较旧，但 URL 日期必须与自身 date 一致", () => {
+test("Checks the date of each reference", () => {
   const c = baseContent();
   c.sections[0].items[0].references = [
-    { source: "背景", url: "https://example.com/2026/06/01/context", date: "2026-06-01" },
+    { source: "Background", url: "https://example.com/2026/06/01/context", date: "2026-06-01" },
   ];
   assert.equal(cf(c).code, 0);
 
@@ -78,16 +78,16 @@ test("补充来源可较旧，但 URL 日期必须与自身 date 一致", () => 
   assert.equal(cf(c).code, 1);
 });
 
-test("今日进展必须是近 72h 的新事实", () => {
+test("Requires recent thread updates", () => {
   const c = baseContent({
     threads: [{
-      title: "新进展",
+      title: "New developments",
       since: "2026-06-01",
       date: "2026-06-21",
       source: "S",
       url: "https://example.com/thread",
-      update: "出现新变化。",
-      watch: "下一步。",
+      update: "The exchange published its new fee schedule.",
+      watch: "Check trading volume after the fee change.",
     }],
   });
   assert.equal(cf(c).code, 0);
@@ -95,16 +95,16 @@ test("今日进展必须是近 72h 的新事实", () => {
   assert.equal(cf(c).code, 1);
 });
 
-test("今日进展的 URL 日期与 date 不一致会被阻断", () => {
+test("Checks embedded thread source dates", () => {
   const c = baseContent({
     threads: [{
-      title: "日期不一致",
+      title: "Conflicting publication dates",
       since: "2026-06-01",
       date: "2026-06-23",
       source: "S",
       url: "https://example.com/2026/01/29/thread",
-      update: "出现新变化。",
-      watch: "下一步。",
+      update: "The exchange published its new fee schedule.",
+      watch: "Check trading volume after the fee change.",
     }],
   });
   assert.equal(cf(c).code, 1);

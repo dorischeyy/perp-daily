@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-11-21</title>
+<title>Perp DEX Daily · 2026-11-21</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -100,51 +100,51 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 139 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 139</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 11 月 21 日 · 星期六</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">November 21, 2026 · Saturday</div>
     </header>
-    <p class="lead">CFTC明确Hyperliquid等链上场所进入美国零售衍生品市场只能自持牌或接入持牌交易所，技术架构不改变交易所义务。</p>
+    <p class="lead">The CFTC chair said onchain venues such as Hyperliquid have two routes to U.S. retail derivatives users: register as an exchange or partner with a registered exchange. The technical architecture does not change the obligation.</p>
 
 
       <section class="sec sec-regulation-and-shared-infrastructure">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">监管准入与共享交易后台</h2>
+            <h2 class="sec-title">Regulatory access and shared trading infrastructure</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月19日，CFTC明确Hyperliquid进入美国零售市场的两条持牌路径</h3>
-          <p class="item-b">CFTC主席Michael Selig表示，Hyperliquid等链上场所若向美国零售用户提供衍生品，必须自行注册为交易所或与已注册交易所合作；他同时称单股永续按结构可被视为期货，日度资金费类似期货变动保证金。</p>
+          <h3 class="item-h">On November 19th, the CFTC clarified two licensed pathways for Hyperliquid to enter the US retail market.</h3>
+          <p class="item-b">CFTC Chair Michael Selig said that onchain venues such as Hyperliquid must register as an exchange or partner with one already registered to offer derivatives to U.S. retail users. He added that single-stock perpetuals could qualify as futures depending on their structure, and compared daily funding to variation margin on futures.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.theblock.co/news/regulation/2026-11-19-cftc-chair-selig-hyperliquid-onchain-venues-the-us-444106" target="_blank" rel="noopener" title="The Block对CFTC主席访谈的报道 · 发布 2026-11-19" aria-label="来源 1：The Block对CFTC主席访谈的报道 · 发布 2026-11-19">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.theblock.co/news/regulation/2026-11-19-cftc-chair-selig-hyperliquid-onchain-venues-the-us-444106" target="_blank" rel="noopener" title="The Block coverage of an interview with the CFTC chair · Published 2026-11-19" aria-label="Source 1: The Block coverage of an interview with the CFTC chair · Published 2026-11-19">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月18日，Pyth确认LayerZero ATLAS将以共享数据层上线无前端交易引擎</h3>
-          <p class="item-b">LayerZero的无前端交易引擎ATLAS将于11月30日上线，统一处理撮合、清算、风控和即时结算，接入方保留前端与客户关系。Pyth将把股票、ETF、外汇、商品、利率和公司行动数据一次接入共享引擎，公告称初始容量超过每秒25万笔。</p>
+          <h3 class="item-h">November 18: Pyth confirms it will supply shared market data to LayerZero’s headless ATLAS trading engine</h3>
+          <p class="item-b">LayerZero plans to launch ATLAS on November 30. The headless engine will handle matching, clearing, risk controls and immediate settlement, while partners retain their front ends and customer relationships. Pyth will supply equity, ETF, FX, commodity, interest-rate and corporate-action data through a single integration. The announcement cited initial capacity above 250,000 transactions per second.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.pyth.network/blog/pyth-market-data-comes-to-layerzero-atlas" target="_blank" rel="noopener" title="Pyth对LayerZero ATLAS数据接入的说明 · 发布 2026-11-18" aria-label="来源 1：Pyth对LayerZero ATLAS数据接入的说明 · 发布 2026-11-18">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.pyth.network/blog/pyth-market-data-comes-to-layerzero-atlas" target="_blank" rel="noopener" title="Pyth note on data integration with LayerZero ATLAS · Published 2026-11-18" aria-label="Source 1: Pyth note on data integration with LayerZero ATLAS · Published 2026-11-18">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月20日，Pyth把Anthropic股票ANT价格源切换为正式运行</h3>
-          <p class="item-b">Pyth于11月20日把Anthropic PBC的ANT/USD股票价格源从已添加切换为正式运行，同日停用BTF ETF和11月WTI期货两个旧源。ANT相关永续和代币化产品因此多了可接入的价格基础设施，但公告没有披露接入场所和实际调用量。</p>
+          <h3 class="item-h">November 20: Pyth activates the ANT/USD price feed for Anthropic shares</h3>
+          <p class="item-b">On November 20, Pyth moved the ANT/USD equity feed for Anthropic PBC from added to active. It also retired two existing feeds, for the BTF ETF and November WTI futures. ANT perpetuals and tokenized products now have another price feed they can integrate. The announcement did not identify any venues already using it or report usage.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://docs.pyth.network/release-notes/market-data" target="_blank" rel="noopener" title="Pyth市场数据状态更新 · 发布 2026-11-20" aria-label="来源 1：Pyth市场数据状态更新 · 发布 2026-11-20">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://docs.pyth.network/release-notes/market-data" target="_blank" rel="noopener" title="Pyth market data status update · Published 2026-11-20" aria-label="Source 1: Pyth market data status update · Published 2026-11-20">1</a>
           </div>
         </article>
         </div>
@@ -153,39 +153,39 @@
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <h2 class="sec-title">股票产品与公司行动</h2>
+            <h2 class="sec-title">Equity products and corporate actions</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月20日，Binance提前完成SNDK永续拆股并分阶段恢复标准标记价</h3>
-          <p class="item-b">Binance提前在北京时间10:30完成SNDK永续八比一拆股调整，先结算未实现盈亏再恢复仓位，并设置最长15分钟只撤单期。恢复后先用正负10%最新价保护，18:00起在第三方指数稳定后逐步切回标准标记价，交易不中断。</p>
+          <h3 class="item-h">On November 20, Binance completed the SNDK perpetual split-up early and resumed standard mark prices in stages.</h3>
+          <p class="item-b">Binance completed the SNDK perpetual’s 8-for-1 stock-split adjustment early at 10:30 Beijing time. It settled unrealized gains and losses before restoring positions, with a cancel-only period of up to 15 minutes. It initially applied a ±10% last-price protection band. From 18:00, once the third-party index stabilized, it would phase back to the standard mark price without interrupting trading.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/square/post/390143778147449" target="_blank" rel="noopener" title="Binance SNDK合约规模调整完成公告 · 发布 2026-11-20" aria-label="来源 1：Binance SNDK合约规模调整完成公告 · 发布 2026-11-20">1</a><a class="source-number" href="https://www.binance.com/en/square/post/390250429434521" target="_blank" rel="noopener" title="Binance SNDK最新价保护结束公告 · 发布 2026-11-20" aria-label="来源 2：Binance SNDK最新价保护结束公告 · 发布 2026-11-20">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.binance.com/en/square/post/390143778147449" target="_blank" rel="noopener" title="Binance notice confirming the SNDK contract size adjustment · Published 2026-11-20" aria-label="Source 1: Binance notice confirming the SNDK contract size adjustment · Published 2026-11-20">1</a><a class="source-number" href="https://www.binance.com/en/square/post/390250429434521" target="_blank" rel="noopener" title="Binance notice on the end of SNDK last-price protection · Published 2026-11-20" aria-label="Source 2: Binance notice on the end of SNDK last-price protection · Published 2026-11-20">2</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月20日，Binance把每日2倍AMD ETF接入最高20倍永续</h3>
-          <p class="item-b">Binance上线JNJ、NIO和AMDL三只USDT永续，均支持24小时交易、最高20倍杠杆和八小时资金费。AMDL本身是每日2倍做多AMD的ETF，外层永续可再加杠杆；平台即使资金费触顶也不自动切换为每小时结算。</p>
+          <h3 class="item-h">On November 20, Binance added a 2x daily AMD ETF to the platform, with a maximum leverage of 20x perpetual trading.</h3>
+          <p class="item-b">Binance listed USDT perpetuals on JNJ, NIO and AMDL with round-the-clock trading, up to 20x leverage and eight-hour funding. AMDL is itself an ETF targeting twice AMD’s daily return. The perpetual adds another layer of leverage. Even when funding reaches a rate limit, the platform does not automatically switch to hourly settlement.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/square/post/390202022161053" target="_blank" rel="noopener" title="Binance多只TradFi永续上线公告 · 发布 2026-11-20" aria-label="来源 1：Binance多只TradFi永续上线公告 · 发布 2026-11-20">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.binance.com/en/square/post/390202022161053" target="_blank" rel="noopener" title="Binance announcement of new TradFi perpetuals · Published 2026-11-20" aria-label="Source 1: Binance announcement of new TradFi perpetuals · Published 2026-11-20">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月20日，Bybit为股票、ETF和ADR开放全额持仓出借</h3>
-          <p class="item-b">Bybit为符合条件的股票用户开放全额持仓出借，覆盖美股、ETF和ADR。证券按机构借贷需求出借，费用按证券市值、借贷利率和用户分成逐日累计，再按自然月以USDC结算；加入计划不保证证券会被借出或产生收益。</p>
+          <h3 class="item-h">November 20: Bybit opens fully paid securities lending for stocks, ETFs and ADRs</h3>
+          <p class="item-b">Bybit opened fully paid securities lending to eligible equity customers for U.S. stocks, ETFs and ADRs. Loans depend on institutional demand. Fees accrue daily based on the security’s market value, the borrow rate and the customer’s revenue share, and are settled by calendar month in USDC. Enrollment guarantees neither a loan nor income.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://announcements.bybit.com/en/article/fully-paid-securities-lending-fpsl-is-now-available-on-bybit-stocks--art1bc2caf65bc3/" target="_blank" rel="noopener" title="Bybit全额证券借贷上线公告 · 发布 2026-11-20" aria-label="来源 1：Bybit全额证券借贷上线公告 · 发布 2026-11-20">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://announcements.bybit.com/en/article/fully-paid-securities-lending-fpsl-is-now-available-on-bybit-stocks--art1bc2caf65bc3/" target="_blank" rel="noopener" title="Bybit launch notice for fully paid securities lending · Published 2026-11-20" aria-label="Source 1: Bybit launch notice for fully paid securities lending · Published 2026-11-20">1</a>
           </div>
         </article>
         </div>
@@ -200,38 +200,38 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月20日，OpenAI开放GPT-Live-1.1并把静默待机降至每分钟0.02美元</h3>
-          <p class="item-b">OpenAI在API开放GPT-Live-1.1，改善多语种发音、口音一致性和转写，并支持边说边听及后台任务委派。新增待机模式可在静默5至60秒后暂停推理但保持WebRTC连接，计费从活跃每分钟0.05美元降至0.02美元。</p>
+          <h3 class="item-h">November 20: OpenAI releases GPT-Live-1.1 and prices silent standby at $0.02 per minute</h3>
+          <p class="item-b">OpenAI has made the API available for GPT-Live-1.1. This improvement includes better multilingual pronunciation, consistency in accents, and transcription. It also supports listening while speaking and background task delegation. A new standby mode is available, which pauses reasoning after 5 to 60 seconds of silence, while maintaining a WebRTC connection. The cost has been reduced from 0.05 dollars per minute during active use to 0.02 dollars per minute.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://community.openai.com/t/gpt-live-1-1-has-arrived-in-the-api/1418537" target="_blank" rel="noopener" title="OpenAI GPT-Live-1.1 API公告 · 发布 2026-11-20" aria-label="来源 1：OpenAI GPT-Live-1.1 API公告 · 发布 2026-11-20">1</a><a class="source-number" href="https://developers.openai.com/api/docs/models/gpt-live-1.1" target="_blank" rel="noopener" title="OpenAI GPT-Live-1.1模型与价格文档 · 发布 2026-11-19" aria-label="来源 2：OpenAI GPT-Live-1.1模型与价格文档 · 发布 2026-11-19">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://community.openai.com/t/gpt-live-1-1-has-arrived-in-the-api/1418537" target="_blank" rel="noopener" title="OpenAI GPT-Live-1.1 API announcement · Published 2026-11-20" aria-label="Source 1: OpenAI GPT-Live-1.1 API announcement · Published 2026-11-20">1</a><a class="source-number" href="https://developers.openai.com/api/docs/models/gpt-live-1.1" target="_blank" rel="noopener" title="OpenAI GPT-Live-1.1 model and pricing documentation · Published 2026-11-19" aria-label="Source 2: OpenAI GPT-Live-1.1 model and pricing documentation · Published 2026-11-19">2</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月19日，Google把Genie 4交互世界模型接入Gemini API</h3>
-          <p class="item-b">Google把Genie 4接入Gemini API和AI Studio，可用文本或参考图生成带原生音频的连续720p、24帧交互世界，并通过键盘与实时文本修改天气、光照、物体和事件。输出带SynthID水印，现已可供开发者试用。</p>
+          <h3 class="item-h">On November 19th, Google integrated the Genie 4 interactive world model into the Gemini API.</h3>
+          <p class="item-b">Google added Genie 4 to the Gemini API and AI Studio. Developers can use text or a reference image to generate a continuous, interactive world at 720p and 24 frames per second with native audio. Keyboard input and live text can change weather, lighting, objects and events. The output includes a SynthID watermark, and the model is open for developer testing.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/" target="_blank" rel="noopener" title="Google Genie 4 API发布公告 · 发布 2026-11-19" aria-label="来源 1：Google Genie 4 API发布公告 · 发布 2026-11-19">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/" target="_blank" rel="noopener" title="Google Genie 4 API announcement · Published 2026-11-19" aria-label="Source 1: Google Genie 4 API announcement · Published 2026-11-19">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月19日，Kimi Code支持离线续跑远程项目并接入Amazon Bedrock</h3>
-          <p class="item-b">Kimi Code Desktop 1.4.0支持SSH远程项目，文件、工具和会话在远端运行，本机离线后任务仍可继续；CLI 2.7.0新增Amazon Bedrock连接，可按模型选择Anthropic Messages或OpenAI兼容协议，并允许运行中立即改变Agent方向。</p>
+          <h3 class="item-h">On November 19th, Kimi Code supported offline running of remote projects and integration with Amazon Bedrock.</h3>
+          <p class="item-b">Kimi Code Desktop 1.4.0 supports SSH remote projects. Files, tools, and sessions run remotely, and tasks can continue even when the local machine is offline. CLI 2.7.0 adds an Amazon Bedrock connection, allowing selection of Anthropic Messages or OpenAI-compatible protocols based on the model, and enables immediate changes to the Agent direction during execution.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.kimi.com/code/docs/en/kimi-code/whats-new.html" target="_blank" rel="noopener" title="Kimi Code更新日志 · 发布 2026-11-19" aria-label="来源 1：Kimi Code更新日志 · 发布 2026-11-19">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.kimi.com/code/docs/en/kimi-code/whats-new.html" target="_blank" rel="noopener" title="Kimi Code changelog · Published 2026-11-19" aria-label="Source 1: Kimi Code changelog · Published 2026-11-19">1</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

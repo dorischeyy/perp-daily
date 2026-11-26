@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-10-03</title>
+<title>Perp DEX Daily · 2026-10-03</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -82,12 +82,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 95 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 95</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 10 月 3 日 · 星期六</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">October 3, 2026 · Saturday</div>
     </header>
-    <p class="lead">Velocity把赔付改造成分期回收权，CME撤回24/7小额原油期货，而Anthropic开始用驻场工程师体系争夺企业Agent交付入口。</p>
+    <p class="lead">Velocity converted compensation into a right to staged recovery. CME withdrew its round-the-clock micro crude oil futures proposal, and Anthropic began using embedded engineers to deliver enterprise agents.</p>
 
 
       <section class="sec sec-perpdex">
@@ -100,27 +100,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Velocity用可赎回DFX把赔付变成分期回收权</h3>
-          <p class="item-b"><strong>事件</strong>：Velocity为4月漏洞受损用户开放申领，按每损失1 USDT发放1枚DFX；用户可把DFX赎回USDT并销毁、在二级市场出售，或继续持有等待后续回收。</p><p class="item-b"><strong>机制</strong>：赔付池接收追回资产与60%至90%的协议净收入，DFX价格随池内USDT变化；这把一次性赔付改造成对未来回收现金流的可交易索取权，但当前兑付仍只覆盖损失的一小部分。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>已有216480枚DFX兑换约2250 USDT，当前池约311万USDT；项目方所称最高1.475亿美元合作方承诺尚未进入池内，不能计作已到位赔付。</p>
+          <h3 class="item-h">Velocity converts compensation into staged recovery rights through redeemable DFX</h3>
+          <p class="item-b"><strong>Event</strong>: Velocity opened claims for users affected by its April incident at one DFX for every 1 USDT lost. Holders can burn DFX to redeem USDT, sell it on the secondary market or retain it for later recoveries.</p><p class="item-b"><strong>Mechanism</strong>: Recovered assets and 60% to 90% of net protocol revenue go to the compensation pool. DFX redemption value changes with the pool’s USDT balance. Holders have a tradable claim on future recoveries, but the amount currently redeemable covers only a small fraction of losses.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Users had redeemed 216,480 DFX for about 2,250 USDT, and the pool held about 3.11 million USDT. Up to $147.5 million in partner commitments cited by the project had yet to reach the pool and cannot be counted as funded compensation.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-02</span>
             <a class="item-src" href="https://www.theblock.co/news/ecosystems/2026-10-02-drift-opens-exploit-recovery-claims-initial-payouts-just-over-1-user-losses-417581" target="_blank" rel="noopener">The Block ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">OKX一次上线五只美股永续并改写极端资金费节奏</h3>
-          <p class="item-b"><strong>事件</strong>：OKX上线H100、埃森哲、耐克、百威英博和Sezzle五只USDT保证金永续，网页、App与API同步开放，并允许24/7交易。</p><p class="item-b"><strong>机制</strong>：常态资金费每8小时结算一次；当费率触及上下限时改为每小时结算，试图缩短极端多空失衡向持仓成本传导的时间。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>公告确认了上线与资金费规则，但没有披露深度、未平仓量，以及正股休市期间的价格偏离和风险控制结果。</p>
+          <h3 class="item-h">OKX lists five U.S. equity perpetuals and changes funding intervals at rate limits</h3>
+          <p class="item-b"><strong>Event</strong>: OKX listed five USDT-margined perpetuals on H100, Accenture, Nike, Anheuser-Busch InBev and Sezzle, opening 24/7 trading through its website, app and API.</p><p class="item-b"><strong>Mechanism</strong>: Funding normally settles every eight hours. Reaching the rate ceiling or floor switches settlement to hourly, allowing extreme imbalances between longs and shorts to affect carrying costs sooner.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The announcement confirms the rules for launching and funding payments, but it does not disclose details such as the depth of the market, open interest, or price deviations and risk control measures during the market’s suspension.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-02</span>
             <a class="item-src" href="https://www.okx.com/en-sg/help/okx-to-list-perpetual-futures-for-h100-acn-nke-bwet-and-secz" target="_blank" rel="noopener">OKX ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">CME撤回24/7小额原油期货，连续交易先踩刹车</h3>
-          <p class="item-b"><strong>事件</strong>：CME撤回原定推出的24/7、10桶规格原油期货，称行业参与者担心产品会带来非预期风险。</p><p class="item-b"><strong>机制</strong>：CME原本把该产品定位为链上预测市场和离岸永续的受监管替代品；如今场所主动撤回，说明连续交易竞争已从技术可行性转向标的、流动性与风险责任边界。（美国永续定性线，自06-19，本次新增CME撤回产品）</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>这是CME主动暂停并撤回方案，不是CFTC禁令或法院对永续属于swap还是future的实体裁定，诉讼主线仍未闭合。</p>
+          <h3 class="item-h">CME withdraws its proposal for round-the-clock micro crude oil futures</h3>
+          <p class="item-b"><strong>Event</strong>: CME has withdrawn its original plans to launch 24/7 crude oil futures in 10 barrels. Industry participants are concerned that these products may introduce unexpected risks.</p><p class="item-b"><strong>Mechanism</strong>: CME had positioned the product as a regulated alternative to onchain prediction markets and offshore perpetuals. Its voluntary withdrawal shifts the competitive question from technical feasibility to eligible assets, liquidity and responsibility for risk. This updates the U.S. perpetuals story tracked since June 19.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>This is an initiative by the CME to suspend and withdraw its proposal. It is not a ban by the CFTC, nor is it a court ruling determining whether perpetual contracts are considered swaps or futures. The legal proceedings remain open.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-02</span>
             <a class="item-src" href="https://www.cmegroup.com/media-room/press-releases/2026/10/02/cme_group_suspendsplanstolaunch24710-barrelcrudeoilcontract.html" target="_blank" rel="noopener">CME Group ↗</a>
@@ -138,27 +138,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Umia把发射台延伸到法律实体、金库与决策市场</h3>
-          <p class="item-b"><strong>事件</strong>：Umia向外部项目开放首批发射，Slop Cash成为首个公布项目；发行不只包含代币拍卖，还同时建立持有代码、域名和社交账号的法律载体与非托管链上金库。</p><p class="item-b"><strong>机制</strong>：超出固定月度额度的董事会级决策交由条件市场定价并执行；拍卖设最低募集门槛，未达到则全部退款，把募集、资产归属和后续治理放进同一套发射结构。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>Slop Cash已完成3个月度周期、约1万条合并PR和4700条代码评审，但代币拍卖日期与参数仍可变，产品运行数据不能替代发行结果。</p>
+          <h3 class="item-h">Umia extends its launchpad to legal entities, vaults and decision markets</h3>
+          <p class="item-b"><strong>Event</strong>: Umia opened its first launch cohort to external projects, naming Slop Cash as the first. Each launch includes a token auction, a legal entity to hold the code, domain names and social accounts, and a noncustodial onchain treasury.</p><p class="item-b"><strong>Mechanism</strong>: Board-level decisions beyond the fixed monthly quota are priced and executed in a conditional market. Auctions have a minimum threshold for fundraising; if the threshold is not reached, all funds will be refunded. Fundraising, asset ownership, and subsequent governance are all part of the same launch structure.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Slop Cash has completed 3 quarterly cycles, involving approximately 10,000 merged PRs and 4,700 code reviews. However, the date of the token auction and its parameters remain variable. Product operation data cannot replace the results of issuance.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-02</span>
             <a class="item-src" href="https://chainwire.org/2026/10/02/umia-opens-its-platform-to-outside-projects-with-slop-cash-from-elizaos-creator-shaw-walters-the-first-to-be-announced/" target="_blank" rel="noopener">Chainwire ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Pump用每日回购销毁绑定发射收入与代币供给</h3>
-          <p class="item-b"><strong>事件</strong>：Pump数据页显示10月2日用约123万美元回购并销毁2.104亿枚PUMP，占当日收入约50.40%；累计回购销毁金额约4.7188亿美元。</p><p class="item-b"><strong>机制</strong>：协议把目标为一半的收入按日转成公开市场买入与永久销毁，让发射、交易收入直接影响流通供给，而不是只进入平台财库。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>页面明确提示Custom Pairs上线后费用看板尚未准确反映全部收入和回购额；历史回购也不构成未来继续执行的承诺。</p>
+          <h3 class="item-h">Pump ties launch revenue to token supply through daily buybacks and burns</h3>
+          <p class="item-b"><strong>Event</strong>: Pump’s data page shows about $1.23 million spent buying back and burning 210.4 million PUMP on October 2, equivalent to about 50.40% of the day’s revenue. Cumulative buybacks and burns totaled about $471.88 million.</p><p class="item-b"><strong>Mechanism</strong>: The agreement aims to convert half of the revenue into daily purchases in the open market and permanent destruction. This ensures that launch and trading revenues directly affect the supply in circulation, rather than just entering the platform’s finances.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The page clearly states that the fee dashboard for Custom Pairs after its launch does not accurately reflect all revenues and repurchases. Historical repurchases do not constitute a commitment to continue this practice in the future.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-02</span>
             <a class="item-src" href="https://pump.fun/pump-token" target="_blank" rel="noopener">Pump ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">BUDA用八天Uniswap拍卖试水Robinhood Chain发行</h3>
-          <p class="item-b"><strong>事件</strong>：BUDA项目页把10月1日至8日设为Uniswap拍卖窗口，并在Robinhood Chain部署可核验ERC-20合约，尝试用公开市场完成首轮价格发现。</p><p class="item-b"><strong>机制</strong>：白皮书给出固定供给、5%交易税与3%持有人反射分配，发行后交易机制与拍卖入口相连，而不是拍卖结束后再另行设计代币流通规则。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>官网同时仍显示Pre-Launch和过期倒计时，没有可核验的成交、募集或拍卖完成数据，因此只按发行方案收录。</p>
+          <h3 class="item-h">BUDA tests issuance on Robinhood Chain with an eight-day Uniswap auction</h3>
+          <p class="item-b"><strong>Event</strong>: The BUDA project page has designated October 1st to 8th as the Uniswap auction period. ERC-20 contracts that can be verified will be deployed on the Robinhood Chain. The goal is to use the open market to achieve initial price discovery.</p><p class="item-b"><strong>Mechanism</strong>: The white paper proposes a fixed supply, a 5% transaction tax, and a 3% holder-based distribution. The trading mechanism after issuance is connected to the auction process, rather than being designed separately after the auction ends.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The official website still displays information about the pre-launch phase and a countdown to expiration. There is no verifiable data on transactions, fundraising, or auction completion. Therefore, it is only recorded according to the issuance plan.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-01</span>
             <a class="item-src" href="https://blackuniteddigitalasset.com/" target="_blank" rel="noopener">BUDA ↗</a>
@@ -176,27 +176,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Blast因运营成本超过收入决定关闭L2</h3>
-          <p class="item-b"><strong>事件</strong>：Blast表示L2持续运营成本高于收入，且看不到可信的经济可持续路径，因此将停止网络并要求用户把资产撤回Ethereum。</p><p class="item-b"><strong>机制</strong>：项目先赎回Lido资产，恢复后提现会有24小时延迟；10月26日后界面停止提供常规退出，用户需直接调用Ethereum上的桥接合约。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>Blast的TVL从主网上线前超过20亿美元降至约3200万美元；当前余额仍需按退出窗口迁移，不能把停运决定理解为资产已自动返还。</p>
+          <h3 class="item-h">Blast decides to wind down its layer 2 after operating costs exceed revenue</h3>
+          <p class="item-b"><strong>Event</strong>: Blast indicates that L2’s ongoing operating costs exceed its revenues. There seems to be no credible economic sustainability path, so the network will be shut down, and users will be asked to withdraw their assets to Ethereum.</p><p class="item-b"><strong>Mechanism</strong>: The project first redeems Lido assets. After restoration, withdrawals will be delayed by 24 hours. After October 26, the interface will no longer provide regular exit options. Users will need to directly call the bridging contract on Ethereum.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Blast’s TVL decreased from over 2 billion USD before the mainnet launch to approximately 32 million USD. The current balance still needs to be migrated during the exit window. The decision to shut down the service should not be interpreted as an automatic return of assets.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-02</span>
             <a class="item-src" href="https://www.theblock.co/news/business/2026-10-02-blast-ethereum-layer-2-shutting-down-417583" target="_blank" rel="noopener">The Block ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">SEC为机构加密自托管提出条件化路径</h3>
-          <p class="item-b"><strong>事件</strong>：SEC提出新规则，允许注册投顾与受监管基金在特定条件下自托管加密资产，并允许符合要求的州级信托公司担任托管人。</p><p class="item-b"><strong>机制</strong>：提案同步更新财务审计、经纪商托管、记录与披露要求，把此前缺少合格托管人的场景从事实灰区转成可审查的条件清单。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>正式提案需在联邦公报发布后经历60天公众评论期，自托管适用范围与最终保护要求仍可能变化。</p>
+          <h3 class="item-h">SEC proposes conditional path for institutional crypto self-custody</h3>
+          <p class="item-b"><strong>Event</strong>: The SEC has proposed new rules that allow registered investment advisors and regulated funds to self-hold crypto assets under certain conditions. It also allows qualified state-level trust companies to act as custodians.</p><p class="item-b"><strong>Mechanism</strong>: The proposal updates financial audits, brokerage custody, recording, and disclosure requirements. This changes the situation where qualified custodians were previously lacking, turning it into a condition that can be reviewed.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The formal proposal requires a 60-day public comment period after publication in the Federal Register. The scope of self-custody and final safeguards may still change.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-01</span>
             <a class="item-src" href="https://www.sec.gov/newsroom/press-releases/2026-100-sec-proposal-would-address-how-investment-advisers-funds-can-custody-crypto-assets-under-federal" target="_blank" rel="noopener">SEC ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">NEAR Intents漏洞让跨链意图系统回到热钱包边界</h3>
-          <p class="item-b"><strong>事件</strong>：NEAR Intents因Omni存取基础设施与智能合约交互漏洞损失约380万美元，协议暂停服务、修补合约并承诺全额补偿。</p><p class="item-b"><strong>机制</strong>：核心服务预计较快恢复，但11条链的存取需额外停机；异常资金从BSC热钱包流出后进入交易所并桥接到比特币，说明意图层仍受底层托管与跨链出口控制制约。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>补偿承诺与合约修补已经公布，但完整事故复盘、资金追回比例和各链恢复结果当时尚未披露。</p>
+          <h3 class="item-h">NEAR Intents incident highlights hot-wallet risk in cross-chain intent systems</h3>
+          <p class="item-b"><strong>Event</strong>: NEAR Intents reported about $3.8 million in losses linked to its Omni deposit and withdrawal infrastructure and its interaction with smart contracts. The protocol paused services, patched the contract and pledged full compensation.</p><p class="item-b"><strong>Mechanism</strong>: Core services were expected to return relatively quickly, but deposits and withdrawals on 11 chains required additional downtime. The incident highlighted the dependence of cross-chain intent systems on underlying custody and withdrawal controls.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Compensation commitments and contract repairs have been announced. However, a complete review of the incident, the proportion of funds recovered, and the recovery results of each chain have not yet been disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-01</span>
             <a class="item-src" href="https://www.theblock.co/news/ecosystems/2026-10-01-near-intents-halts-services-after-3-8-million-exploit-promises-full-compensation-417404" target="_blank" rel="noopener">The Block ↗</a>
@@ -214,27 +214,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Anthropic用12周驻场工程师制补企业Agent交付缺口</h3>
-          <p class="item-b"><strong>事件</strong>：Anthropic投入1亿美元启动Claude Frontier Academy，目标在2027年底前培训1万名Frontier Deployed Engineers，首批已在旧金山、纽约和伦敦运行。</p><p class="item-b"><strong>机制</strong>：工程师先完成多日现场模拟部署与考核，再进入12周驻场，在所属组织内负责一个真实Claude项目并接受二次评估，把模型销售延伸成可认证的交付能力供给。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>首批学员已开课，但1万人是到2027年底的目标，尚无毕业人数、生产项目成功率或续约贡献数据。</p>
+          <h3 class="item-h">Anthropic offers 12-week embedded engineering engagements for enterprise agents</h3>
+          <p class="item-b"><strong>Event</strong>: Anthropic invested 100 million USD to launch the Claude Frontier Academy. The goal is to train 10,000 Frontier Deployed Engineers by the end of 2027. The first batch of these engineers has already been deployed in San Francisco, New York, and London.</p><p class="item-b"><strong>Mechanism</strong>: Engineers first complete multiple days of on-site simulation and assessment, followed by a 12-week on-site assignment. They are responsible for managing a real Claude project within their organization and undergo a second assessment. The model sales are extended to become a certified delivery capability.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The first batch of students has started their courses. However, the goal is to reach 10,000 participants by the end of 2027. There is no data on the number of graduates, success rates of produced projects, or contributions from renewing contracts.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-02</span>
             <a class="item-src" href="https://www.anthropic.com/news/claude-frontier-academy" target="_blank" rel="noopener">Anthropic ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">OpenAI把GPT-6部署拆成路由、缓存与长任务控制</h3>
-          <p class="item-b"><strong>事件</strong>：OpenAI发布GPT-6模型指南，把上线检查拆为模型与推理强度路由、缓存与上下文压缩、任务成功率和延迟监控，以及长任务的中途引导与异步工具。</p><p class="item-b"><strong>机制</strong>：选择不再只看单次模型能力，而是按成功任务成本和响应速度匹配Astra、Sol、Luna；提示、技能和仓库规则还要明确自主边界与完成条件。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>缓存输入成本最高可降低95%取决于模型与命中率，指南没有提供统一客户样本，不能直接外推到任意生产工作流。</p>
+          <h3 class="item-h">OpenAI outlines routing, caching and long-running task controls for GPT-6 deployment</h3>
+          <p class="item-b"><strong>Event</strong>: OpenAI released a guide for GPT-6 models, dividing onboarding checks into model and reasoning intensity routing, caching and context compression, task success rate and latency monitoring, as well as mid-course guidance for long tasks and asynchronous tools.</p><p class="item-b"><strong>Mechanism</strong>: It is important to no longer rely solely on the capabilities of individual models. Instead, we should match Astra, Sol, and Luna based on the cost of successful tasks and response times. The rules regarding prompts, skills, and warehouses must also clearly define autonomous boundaries and completion conditions.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The cost of cache input can be reduced by up to 95% depending on the model and hit rate. The guidelines do not provide unified customer samples, so it cannot be directly applied to any production workflow.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-02</span>
             <a class="item-src" href="https://openai.com/index/practical-guide-building-gpt-6/" target="_blank" rel="noopener">OpenAI ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">zkAPI把AI调用的付款身份与提示请求拆开</h3>
-          <p class="item-b"><strong>事件</strong>：Ethereum Foundation与Open Anonymity推出已在主网运行的zkAPI，用户先把ETH或USDC存入金库，再用零知识证明换取短期、有额度上限的API密钥。</p><p class="item-b"><strong>机制</strong>：付款服务器只验证余额与花费，模型提供商接收提示但不知道对应存款身份；会话结束后以签名用量回执结算，一次证明可覆盖整段会话。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>zkAPI隐藏付款关联，不隐藏IP、时间模式或提示内容；稳定网络标识和可识别文本仍可能让不同会话重新关联。</p>
+          <h3 class="item-h">zkAPI separates the payer’s identity from the AI prompt</h3>
+          <p class="item-b"><strong>Event</strong>: The Ethereum Foundation and Open Anonymity have launched a zkAPI that is already operational on the main network. Users can deposit ETH or USDC into a vault, and then use zero-knowledge proofs to obtain short-term API keys with a maximum limit.</p><p class="item-b"><strong>Mechanism</strong>: Payment servers only verify balances and expenditures. Model providers receive prompts but do not know the identity of the corresponding deposits. After the session ends, settlement is done using a signed receipt, ensuring that the entire session can be proven at once.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>zkAPI hides payment-related information, but does not hide IP addresses, time patterns, or message content. Stable network identifiers and recognizable text may still allow different sessions to be reconnected.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-01</span>
             <a class="item-src" href="https://blog.ethereum.org/2026/10/01/introducing-zkapi" target="_blank" rel="noopener">Ethereum Foundation ↗</a>
@@ -242,7 +242,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

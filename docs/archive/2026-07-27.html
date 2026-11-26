@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-07-27</title>
+<title>Perp DEX Daily · 2026-07-27</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 持续追踪：跨日叙事线的"当前进展地图" */
+  /* Ongoing coverage of developing stories */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -41,7 +41,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -52,7 +52,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「机会与打法」做成醒目的产品判断卡片 */
+  /* Product analysis card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -84,12 +84,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 34 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 34</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 7 月 27 日 · 星期一</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">July 27, 2026 · Monday</div>
     </header>
-    <p class="lead">Hyperliquid 的 RWA 永续在完整一周内首次超过加密成交，Dango 却在上线不到四个月后同时关闭 Perp DEX 与自建 L1。Aster 用策略金库扩大资金入口，CME 则在今天把 77 个标准与微型单股期货带入受监管市场，股票与多资产衍生品的竞争正从标的扩列转向订单流、资本管理和可持续退场。</p>
+    <p class="lead">For the first full week, Hyperliquid’s real-world asset perpetuals traded more volume than its crypto contracts. Dango closed its perpetual exchange and Layer 1 less than four months after launch. Aster expanded access through strategy vaults, while CME introduced 77 standard and micro single-stock futures.</p>
 
 
       <section class="sec sec-perpdex">
@@ -102,39 +102,39 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Hyperliquid RWA 周成交首次超过加密，个股贡献六成</h3>
-          <p class="item-b"><strong>事件</strong>：（股票永续矩阵线，自 06-12，第 45 天）07-13 至 07-19，Hyperliquid 的 HIP-3 RWA 永续成交约 260 亿美元，占平台周成交约 54%，首次在完整一周内超过加密永续；个股又贡献 RWA 成交的 61%。</p><p class="item-b"><strong>机制</strong>：HIP-3 允许第三方建市者部署永续市场，把标的扩展和做市责任从核心团队下放。个股成为 RWA 主力后，Hyperliquid 不再只是加密流动性引擎，而是在承接休市时段和链下经纪渠道之外的股票订单流。</p><p class="item-b"><strong>二阶效应</strong>：RWA 能否形成独立增长曲线，不能只看名义成交，还要看持仓、费用和独立交易者是否同步增加。个股集中度越高，指数授权、公司行动和现货休市期间的定价责任也越突出。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>当周全市场 Perp DEX 成交约 790 亿美元，Hyperliquid 约 500 亿美元，其中 RWA 约 260 亿美元；该 RWA 量级已高于其他 DEX 的加密永续成交总和。</p>
+          <h3 class="item-h">Hyperliquid real-world asset perpetuals exceed crypto volume for a full week, with single stocks contributing 61%</h3>
+          <p class="item-b"><strong>Event</strong>: Between July 13 and 19, Hyperliquid’s HIP-3 real-world asset perpetuals traded about $26 billion, or 54% of weekly platform volume. It was the first full week in which they exceeded crypto perpetuals. Single stocks accounted for 61% of real-world asset volume. This was day 45 of coverage since June 12.</p><p class="item-b"><strong>Mechanism</strong>: HIP-3 allows third-party builders to deploy and make markets. The mix of trading suggests Hyperliquid is attracting equity order flow outside spot-market hours and traditional brokerage channels.</p><p class="item-b"><strong>Second-order effects</strong>: Sustained growth requires more evidence than turnover. Open interest, fees and independent trader counts can show whether user demand is broadening. Concentration in single stocks also raises questions about licensing, corporate actions and pricing while the underlying market is closed.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Total perpetual DEX volume was about $79 billion that week, with around $50 billion on Hyperliquid and $26 billion in its real-world asset contracts. The latter exceeded combined crypto perpetual volume at the other decentralized venues.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-24</span>
-            <a class="item-src" href="https://www.techflowpost.com/newsletter/129338" target="_blank" rel="noopener">深潮 TechFlow ↗</a>
+            <a class="item-src" href="https://www.techflowpost.com/newsletter/129338" target="_blank" rel="noopener">TechFlow ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Dango 上线不到四个月即退场，Perp DEX 与自建 L1 分两步关闭</h3>
-          <p class="item-b"><strong>事件</strong>：Dango 宣布关闭交易平台与底层链，将于 07-29 12:00 UTC 停止永续交易，并于 08-13 12:00 UTC 停止 L1；这距离其 4 月开放交易不到四个月。</p><p class="item-b"><strong>机制</strong>：截止时间后仍未平仓的仓位按预言机价格结算，金库解锁并把余额以 USDC 返还至现货账户；链停止前仍未取走的存款，则退回原始以太坊地址。交易停止与链停止被拆成两个窗口，给关仓和跨链退出留出缓冲。</p><p class="item-b"><strong>二阶效应</strong>：自建链可以统一撮合、结算和激励，也把持续运行底层网络变成额外固定成本。高性能基础设施本身不是护城河，平台还要证明流动性、收入与合规路径；退场机制也应在上线时就成为产品要求。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>退出同时覆盖 DEX 与 L1，并包含强制关仓、金库解锁和链停机后的余额退回；目前没有已确认的用户损失，但真实执行要到两个截止日后才能验证。</p>
+          <h3 class="item-h">Dango winds down its perpetual DEX and Layer 1 in two stages less than four months after launch</h3>
+          <p class="item-b"><strong>Event</strong>: Dango announced that its exchange would stop perpetuals trading on July 29 at 12:00 UTC and its layer-1 network would shut down on August 13 at 12:00 UTC, less than four months after trading opened in April.</p><p class="item-b"><strong>Mechanism</strong>: Positions still open at the deadline will settle at the oracle price. Vaults will unlock, with balances returned in USDC to spot accounts. Deposits left on the chain at shutdown will be returned to their original Ethereum addresses. Separate trading and network deadlines leave time for closing positions and withdrawing across chains.</p><p class="item-b"><strong>Second-order effects</strong>: A dedicated chain allows an exchange to coordinate matching, settlement and incentives, but it also adds the fixed cost of running a network. The platform still needs liquidity, revenue and a viable compliance route. Procedures for an orderly exit should be defined at launch.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The wind-down covers both the DEX and the L1. It includes mandatory position closures, vault unlocks, and the return of balances after the chain stops. No customer loss had been confirmed. Execution can be checked only after both deadlines.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-25</span>
-            <a class="item-src" href="https://beincrypto.com/dango-shutdown-dex-2026/" target="_blank" rel="noopener">BeInCrypto ↗</a><a class="item-src item-ref" href="https://cryptovolix.com/dango-shuts-down-perp-dex-and-l1-chain-months-after-launch" target="_blank" rel="noopener">补充：Cryptovolix · 07-25 ↗</a>
+            <a class="item-src" href="https://beincrypto.com/dango-shutdown-dex-2026/" target="_blank" rel="noopener">BeInCrypto ↗</a><a class="item-src item-ref" href="https://cryptovolix.com/dango-shuts-down-perp-dex-and-l1-chain-months-after-launch" target="_blank" rel="noopener">Additional source: Cryptovolix · 07-25 ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Aster 上线 Vault Beta，把受托策略接入永续流动性</h3>
-          <p class="item-b"><strong>事件</strong>：Aster 07-24 上线 Vault Beta，允许白名单管理人用 USDT 或 USD1 建立主动策略金库，用户按份额共享损益；金库可设置公开、私有或弹性仓位可见性。</p><p class="item-b"><strong>机制</strong>：管理人预先披露锁定期和利润分成，用户提款则可能触发减仓或平仓。它把单笔交易账户封装成可申购的策略产品，让不会主动交易的资金也能进入永续市场。</p><p class="item-b"><strong>二阶效应</strong>：策略金库可能提高资金黏性和手续费，却同时引入管理人筛选、仓位透明度和提款瀑布风险。平台从撮合场所转向受托资本入口后，评价标准要增加回撤、容量和提款执行，而不只是 TVL。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>产品已进入有限 Beta，管理人暂时只对白名单开放；Aster 尚未披露金库 TVL、策略表现或实际申购数据。</p>
+          <h3 class="item-h">Aster launches Vault Beta to connect managed strategies with perpetual market liquidity</h3>
+          <p class="item-b"><strong>Event</strong>: Aster launched Vault Beta on July 24. Approved managers can create actively managed vaults denominated in USDT or USD1, with users sharing profits and losses in proportion to their holdings. Managers can choose public, private or flexible position visibility.</p><p class="item-b"><strong>Mechanism</strong>: Managers disclose lockups and profit sharing in advance. Withdrawals may force positions to be reduced or closed. The vault turns an actively managed trading account into a strategy that people can subscribe to without placing trades themselves.</p><p class="item-b"><strong>Second-order effects</strong>: Strategy vaults can retain capital and generate fees while introducing manager selection, position transparency and withdrawal risks. A venue distributing managed strategies also needs measures of drawdown, capacity and withdrawal execution alongside TVL.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The product is in limited beta and only approved managers have access. Aster has not disclosed vault TVL, strategy returns, or actual subscriptions.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-24</span>
             <a class="item-src" href="https://en.bloomingbit.io/feed/news/116926" target="_blank" rel="noopener">Bloomingbit ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">CME 单股期货今日开盘，受监管股票衍生品扩至近全天交易</h3>
-          <p class="item-b"><strong>事件</strong>：（传统金融永续线，自 07-09，第 18 天）CME 的单股期货现已交易，首批覆盖 50 多只股票，共 55 个标准合约和 22 个微型合约，包括 Alphabet、Amazon、Apple、Meta、Nvidia 与 SpaceX。</p><p class="item-b"><strong>机制</strong>：标准合约对应 100 股，微型合约对应 10 股，均按官方收盘价进行美元现金结算，并采用季度到期。交易从周日至周五接近全天开放，接受 SEC 与 CFTC 联合监管、最低 15% 保证金和现货停牌联动。</p><p class="item-b"><strong>二阶效应</strong>：链上股票永续不再是延长交易时段和免借券做空的唯一路径。CME 提供受监管清算与微型仓位，但仍保留到期日和周末空窗；竞争会转向深度、公司行动处理与休市定价，而不是谁先扩列更多股票。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>合约已经开始交易，覆盖标的合计日均名义成交超过 2000 亿美元，并占标普 500 与纳斯达克 100 权重约 55% 至 65%；首日持仓和成交尚无完整数据。</p>
+          <h3 class="item-h">CME opens single-stock futures, extending regulated trading to nearly around-the-clock hours</h3>
+          <p class="item-b"><strong>Event</strong>: CME single-stock futures are trading. Its initial offering covers more than 50 stocks through 55 standard and 22 micro contracts, including Alphabet, Amazon, Apple, Meta, Nvidia and SpaceX. This is day 18 of coverage since July 9.</p><p class="item-b"><strong>Mechanism</strong>: Standard contracts represent 100 shares and micro contracts 10. Both settle in US dollars at the official close and expire quarterly. Trading is nearly continuous from Sunday through Friday. The contracts are jointly regulated by the SEC and CFTC, have a minimum 15% margin requirement and follow halts in the underlying stock.</p><p class="item-b"><strong>Second-order effects</strong>: Traders now have another way to access extended-hours equity exposure or short stocks without borrowing shares. CME offers regulated clearing and micro sizing but retains expiry dates and weekend closures. Depth, corporate actions and pricing when cash markets close will increasingly distinguish it from equity perpetuals.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The contracts are trading. Their underlying stocks account for more than $200 billion in average daily notional volume and roughly 55–65% of the weighting in the S&amp;P 500 and Nasdaq 100. Complete first-day volume and open interest for the contracts were unavailable.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-27</span>
-            <a class="item-src" href="https://www.cmegroup.com/articles/faqs/faq-single-stock-futures.html" target="_blank" rel="noopener">CME Group ↗</a><a class="item-src item-ref" href="https://www.cmegroup.com/media-room/press-releases/2026/6/30/cme_group_to_launchsinglestockfuturesonjuly27.html" target="_blank" rel="noopener">补充：CME Group 新闻稿 · 06-30 ↗</a>
+            <a class="item-src" href="https://www.cmegroup.com/articles/faqs/faq-single-stock-futures.html" target="_blank" rel="noopener">CME Group ↗</a><a class="item-src item-ref" href="https://www.cmegroup.com/media-room/press-releases/2026/6/30/cme_group_to_launchsinglestockfuturesonjuly27.html" target="_blank" rel="noopener">Additional source: CME Group press release · 06-30 ↗</a>
           </div>
         </article>
         </div>
@@ -143,14 +143,14 @@
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <h2 class="sec-title">机会与打法</h2>
+            <h2 class="sec-title">Product opportunities</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">受托策略金库：不适合直接并入现有 LP</h3>
-          <p class="item-b"><strong>好处</strong>：公开锁定期、利润分成与仓位可见性，可以把主动管理策略包装成可比较的资金入口，并为交易场所带来更黏的资本。</p><p class="item-b"><strong>限制</strong>：管理人风险、隐藏仓位和集中提款都可能迫使金库在不利价格减仓；它本质上是受托交易，不是被动 LP。</p>
+          <h3 class="item-h">Managed strategy vaults require separate treatment from an existing LP pool</h3>
+          <p class="item-b"><strong>Benefits</strong>: Published lockups, performance fees and position visibility make actively managed vault strategies easier to compare and may bring longer-held capital to the venue.</p><p class="item-b"><strong>Limitations</strong>: Manager risk, hidden positions and clustered withdrawals can force a vault to reduce risk at unfavorable prices. Managed trading differs from passive liquidity provision.</p>
 
           <div class="item-meta">
 
@@ -158,8 +158,8 @@
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">股票衍生品：优势要落在连续性而非标的数量</h3>
-          <p class="item-b"><strong>好处</strong>：CME 的现金结算、停牌联动、微型合约和公司行动规则，为机构用户提供了可预期的受监管基线。</p><p class="item-b"><strong>限制</strong>：季度到期、经纪接入和周末空窗仍会带来移仓与价格跳空，接近全天不等于真正 24/7。</p>
+          <h3 class="item-h">Continuity of trading matters more than listing count for equity derivatives</h3>
+          <p class="item-b"><strong>Benefits</strong>: CME’s cash settlement, coordinated halts, micro contracts and corporate-action rules give institutions a predictable regulated baseline.</p><p class="item-b"><strong>Limitations</strong>: Quarterly expiries, broker access and weekend closures still create roll and gap risk. Near-continuous trading leaves breaks in the week.</p>
 
           <div class="item-meta">
 
@@ -168,7 +168,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

@@ -1,19 +1,19 @@
 name: Notify (Feishu + Slack)
 
-# 云端日报沙箱出口白名单不含 open.feishu.cn / hooks.slack.com，无法直接发。
-# 改由 GitHub Actions(runner 无出口限制)在 docs/latest.json 更新时发卡片到所有 enabled 渠道。
-# 渠道开关在 channels.json；密钥用 repo secrets：FEISHU_WEBHOOK / SLACK_WEBHOOK。
+# Deliver the published summary to enabled channels from a GitHub runner.
+# channels.json names the relevant webhook environment variables.
+# Store webhook values in repository secrets.
 #
-# 去重：只在「当天报告提交(report:)」或手动触发时投递。其它对 latest.json 的改动
-# (如 chore 重推、修订标记) 不重复发，避免一天多条。
+# Deliver a new report commit or an explicit manual dispatch.
+# Other changes to the latest index must not send a duplicate card.
 on:
   push:
     branches: [main]
     paths:
       - 'docs/latest.json'
-  workflow_dispatch: {}   # 手动触发=有意为之，绕过去重强制发一次
+  workflow_dispatch: {}   # Manual dispatch explicitly requests redelivery.
 
-# 同一时间只跑一个投递，防并发双发
+# Serialize deliveries to prevent concurrent duplicates.
 concurrency:
   group: notify
   cancel-in-progress: false
@@ -23,18 +23,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: "Gate 去重（仅 report 提交或手动触发才投递）"
+      - name: Check whether this event should deliver an edition
         id: gate
         env:
           MSG: ${{ github.event.head_commit.message }}
           EVENT: ${{ github.event_name }}
         run: |
           if [ "$EVENT" = "workflow_dispatch" ]; then
-            echo "手动触发，强制投递"; echo "go=1" >> "$GITHUB_OUTPUT"
+            echo "Manual delivery requested"; echo "go=1" >> "$GITHUB_OUTPUT"
           elif printf '%s' "$MSG" | head -1 | grep -qE '^report:'; then
-            echo "report 提交，投递"; echo "go=1" >> "$GITHUB_OUTPUT"
+            echo "New report commit"; echo "go=1" >> "$GITHUB_OUTPUT"
           else
-            echo "::notice::非 report 提交（$(printf '%s' "$MSG" | head -1)），跳过投递防重复"; echo "go=0" >> "$GITHUB_OUTPUT"
+            echo "::notice::Skipping duplicate delivery for a non-report commit ($(printf '%s' "$MSG" | head -1))"; echo "go=0" >> "$GITHUB_OUTPUT"
           fi
       - name: Send cards via deliver.mjs (Feishu + Slack)
         if: steps.gate.outputs.go == '1'
@@ -43,12 +43,12 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         run: |
           if [ -z "$FEISHU_WEBHOOK" ] && [ -z "$SLACK_WEBHOOK" ]; then
-            echo "::error::FEISHU_WEBHOOK 和 SLACK_WEBHOOK 都未设置，无渠道可发"; exit 1
+            echo "::error::Neither FEISHU_WEBHOOK nor SLACK_WEBHOOK is configured"; exit 1
           fi
-          [ -z "$SLACK_WEBHOOK" ] && echo "::warning::SLACK_WEBHOOK 未设置，跳过 Slack（仅发飞书）"
-          [ -z "$FEISHU_WEBHOOK" ] && echo "::warning::FEISHU_WEBHOOK 未设置，跳过飞书（仅发 Slack）"
+          [ -z "$SLACK_WEBHOOK" ] && echo "::warning::SLACK_WEBHOOK is unset. Skipping Slack."
+          [ -z "$FEISHU_WEBHOOK" ] && echo "::warning::FEISHU_WEBHOOK is unset. Skipping Feishu."
           TITLE=$(node -e "console.log(require('./docs/latest.json').title)")
           URL=$(node -e "console.log(require('./docs/latest.json').url)")
           LEAD=$(node -e "console.log(require('./docs/latest.json').lead)")
-          echo "发送: $TITLE -> $URL"
+          echo "Sending $TITLE -> $URL"
           node lib/deliver.mjs "$TITLE" "$URL" "$LEAD"

@@ -1,16 +1,16 @@
 {
   "date": "2026-07-22",
   "edition": 31,
-  "lead": "Lighter 把 Robinhood 股票代币变成永续保证金，分发竞争开始进入抵押品复用；Ostium 则证明，即使交易者保证金与 LP 金库隔离，事故后的冻结和重启定价仍会成为新的风险分配环节。",
+  "lead": "Lighter's acceptance of Robinhood stock tokens as perpetuals collateral extends competition over distribution into how traders can reuse assets, while Ostium's trading freeze shows how reopening prices can redistribute losses even when trader margin is held separately from the LP vault.",
   "threads": [
     {
-      "title": "Hyperliquid 股票永续矩阵扩张",
+      "title": "Hyperliquid expands its equity perpetuals lineup",
       "since": "2026-06-12",
       "day_n": 40,
       "tier": "S",
       "status": "active",
-      "update": "本次到期复盘未发现 07-17 后新增重量级股票永续或可核实的 HIP-3 OI 突破；长鑫科技将于 07-27 上市，当前最有信息量的变化尚未发生。",
-      "watch": "07-27 后 CXMT 盘前价格与现货收敛、深度变化，以及指数切换或暂停规则。"
+      "update": "This review found no major new equity perpetual or verified breakout in HIP-3 open interest after July 17. CXMT's listing was scheduled for July 27 and had yet to take place.",
+      "watch": "Convergence between CXMT's premarket and spot prices after July 27, changes in depth, and rules for index transitions or trading halts."
     }
   ],
   "sections": [
@@ -19,11 +19,11 @@
       "title": "Perp DEX",
       "items": [
         {
-          "headline": "Lighter 把 Robinhood 股票代币变成永续保证金，钱包分发进入抵押品复用",
+          "headline": "Lighter accepts Robinhood stock tokens as collateral for perpetuals",
           "body": [
-            "**事件**：（Robinhood 分发线，自 07-02，第 20 天）Lighter 07-20 开放 Robinhood Stock Tokens 作为永续保证金，NVDA、GOOG、AAPL 等股票代币不再只是钱包里的交易资产。",
-            "**机制**：这些 ERC-20 代币是 Robinhood Assets Jersey 发行的债务证券，依靠 Chainlink 价格源进入 Lighter 的保证金体系；与只存 USDG 相比，用户可以保留股票敞口，同时用同一资产支撑永续仓位。",
-            "**二阶效应**：经纪商与 DEX 的合作从入口导流升级到资产负债表复用，但股票波动、发行人信用、价格源和强平会叠加在同一仓位上；美国及多个司法辖区用户仍被排除，资金效率提升不等于可服务市场同步扩大。"
+            "**Event:** On July 20, Lighter began accepting Robinhood Stock Tokens as margin for perpetual positions, including tokens referencing NVDA, GOOG and AAPL. This is day 20 of the Robinhood distribution story, tracked since July 2.",
+            "**Mechanism:** The ERC-20 tokens are debt securities issued by Robinhood Assets Jersey. Lighter uses Chainlink price feeds to value them as margin. Unlike a deposit in USDG alone, this lets users retain equity exposure while backing perpetual positions with the same assets.",
+            "**Second-order effects:** Brokerage distribution now extends to collateral reuse. Equity volatility, issuer credit, price feeds and liquidation risk affect the same position. Users in the US and several other jurisdictions remain excluded."
           ],
           "source": "CoinMarketCap AI",
           "url": "https://coinmarketcap.com/cmc-ai/lighter/price-analysis/",
@@ -36,23 +36,23 @@
             }
           ],
           "context": {
-            "label": "落地程度",
-            "text": "股票代币已可作保证金，但未披露抵押折扣、强平参数、保证金规模或实际使用率，暂时只能确认功能落地。"
+            "label": "Implementation",
+            "text": "Stock tokens are eligible collateral. Haircuts, liquidation parameters, posted margin and utilization have not been disclosed."
           }
         },
         {
-          "headline": "Ostium 隔离了交易者保证金，却把事故风险推迟到冻结与重启定价",
+          "headline": "Ostium isolates trader margin, but a freeze and reopening price still allocate risk",
           "body": [
-            "**事件**：（预言机攻击线，自 07-15，第 7 天）Ostium 07-20 确认 LP 金库损失 2375 万 USDC；交易者保证金放在独立合约中未被盗，已有仓位在攻击后 60 分钟内冻结。",
-            "**机制**：平台计划在恢复前至少提前 24 小时通知，并把冻结仓位统一按重开价格标记。资产隔离阻断了攻击继续侵蚀用户本金，却无法让用户在停牌期间减仓、补保证金或对冲。",
-            "**二阶效应**：预言机事故的损失不只在被盗金库，重开价格还会重新分配停牌期间的跳空损益；如果事故报告、LP 补偿和重启规则不能同时公开，恢复交易本身会成为第二个信任测试。"
+            "**Event:** On July 20, Ostium confirmed a loss of 23.75 million USDC from the LP vault. Trader margin in a separate contract was not stolen. Open positions were frozen within 60 minutes of the attack. This was day seven of the oracle incident story, tracked since July 15.",
+            "**Mechanism:** The platform plans to provide at least 24 hours' notice before reopening and mark all frozen positions at the reopening price. Segregation protected trader principal, but users could not reduce positions, top up margin or hedge on the platform during the halt.",
+            "**Second-order effects:** The reopening price will allocate gains and losses accumulated during the halt. The incident report, LP compensation terms and reopening rules will shape confidence in the restart."
           ],
           "source": "BleepingComputer",
           "url": "https://www.bleepingcomputer.com/news/security/hackers-steal-237-million-in-crypto-from-ostium-in-off-chain-attack/",
           "date": "2026-07-20",
           "context": {
-            "label": "影响范围",
-            "text": "2375 万 USDC 损失落在 LP 金库，交易者保证金未被盗；赔付、事故报告与恢复日期仍未公布。"
+            "label": "Scope",
+            "text": "The LP vault lost 23.75 million USDC. Trader margin was not stolen. Compensation, the incident report and the reopening date were still pending."
           }
         }
       ]
@@ -62,42 +62,42 @@
       "title": "Launchpad",
       "items": [
         {
-          "headline": "pump.fun 用迁移后回购销毁替代静态锁仓，BOOST 默认覆盖新毕业代币",
+          "headline": "pump.fun makes BOOST buybacks and burns the default for newly graduated tokens",
           "body": [
-            "pump.fun 07-21 将 BOOST 设为所有合资格新币的默认迁移机制：代币完成 bonding curve 后，系统在五分钟内以时间加权方式执行买入，并销毁买到的代币。",
-            "它把原本长期锁在池中的一部分迁移流动性改成短时、可观察的买盘和永久销毁。好处是减少迁移瞬间的流动性断层，代价是把支持集中在开盘五分钟，之后的深度仍取决于真实交易者和做市。"
+            "On July 21, pump.fun made BOOST the default migration mechanism for all eligible new tokens. After the bonding curve completes, the system executes time-weighted purchases within five minutes and burns the tokens it buys.",
+            "This redirects part of the liquidity previously locked in the pool into short-term buying and permanent burns. It can reduce a liquidity gap at migration, but support is concentrated in the opening five minutes. Later depth still depends on traders and market makers."
           ],
           "source": "KuCoin Flash",
           "url": "https://www.kucoin.com/news/flash/pump-fun-launches-boost-mode-to-recycle-dead-liquidity-via-token-burns",
           "date": "2026-07-21",
           "context": {
-            "label": "口径限制",
-            "text": "每个 SOL 池注入 17.6 SOL、流动性提升约 20% 均来自平台估算，尚无迁移后深度和存活率数据验证。"
+            "label": "Measurement limits",
+            "text": "The 17.6 SOL per pool and estimated 20% liquidity increase come from the platform. Post-migration depth and survival rates have yet to be verified."
           }
         }
       ]
     },
     {
       "id": "legacy-product-view",
-      "title": "产品观察",
+      "title": "Product observations",
       "items": [
         {
-          "headline": "股票代币作为保证金的风险参数",
+          "headline": "Risk parameters for stock tokens used as margin",
           "body": [
-            "**好处**：用户不用先卖出股票代币换成稳定币，能保留原资产敞口并提高抵押品利用率。",
-            "**限制**：发行人信用、司法辖区、价格源和股票跳空会与永续仓位叠加，清算参数也不能沿用稳定币。",
-            "将股票代币纳入保证金时，需分别评估抵押折扣、持仓限额和极端行情下的清算能力。"
+            "**Benefit:** Users can retain exposure to their stocks without first converting to stablecoins and can use those holdings as collateral.",
+            "**Limitation:** Issuer credit, jurisdiction, price feeds and stock price gaps add risk to perpetual positions. Stablecoin liquidation parameters cannot simply be reused.",
+            "Assess collateral haircuts, position limits and liquidation capacity under stress separately before accepting equity tokens."
           ],
           "source": "CoinMarketCap AI",
           "url": "https://coinmarketcap.com/cmc-ai/lighter/price-analysis/",
           "date": "2026-07-20"
         },
         {
-          "headline": "事故重启价格：需要预先写进处置规则",
+          "headline": "Define the reopening price in the incident response rules",
           "body": [
-            "**好处**：预先定义冻结、通知和重开价格口径，可以缩短事故发生后的临时决策时间，并让用户提前知道损益怎样结算。",
-            "**限制**：单一重开价格无法消除停牌期间的跳空损失，通知窗口也不能替代补保证金、减仓和对冲能力。",
-            "市场恢复交易前，运营方需要说明未成交订单的处理、仓位标记价格、通知时间和分阶段重开安排。"
+            "**Benefit:** Defining the freeze, notice and reopening price in advance shortens incident decisions and helps users understand how gains and losses will be settled.",
+            "**Limitation:** One reopening price cannot eliminate price gaps during a halt. A notice period cannot replace the ability to add margin, reduce a position or hedge.",
+            "Before trading resumes, operators should explain how open orders are handled, how positions are marked, when users will be notified and how markets will reopen in stages."
           ],
           "source": "BleepingComputer",
           "url": "https://www.bleepingcomputer.com/news/security/hackers-steal-237-million-in-crypto-from-ostium-in-off-chain-attack/",

@@ -4,6 +4,6 @@ URL=https://dorischeyy.github.io/perp-daily/archive/2026-06-21.html
 FEISHU_WEBHOOK present: YES
 node: v22.22.2 | curl: /usr/bin/curl
 channels cfg: channels.json
---- deliver.mjs 输出 ---
-❌ feishu (Perp 日报群) 失败: Host not in allowlist: open.feishu.cn. Add this host to your network egress settings to allow access.
+--- deliver.mjs output ---
+❌ feishu (Perp Daily group) failed: Host not in allowlist: open.feishu.cn. Add this host to your network egress settings to allow access.
 deliver exit code: 1

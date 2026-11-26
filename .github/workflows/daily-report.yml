@@ -1,15 +1,12 @@
 name: Legacy Daily Report (manual fallback)
 
-# 用 Max 订阅（OAuth token，零 API 费）在 GitHub runner 上生成日报，
-# 取代脆弱的 claude.ai 云端 Routine（relay proxy push 反复 403、06-27/28 漏发）。
-# 流程：Claude 按 generate.md 产出 content/threads/review → publish.sh 校验/渲染/推送 → 内联投递飞书+Slack。
-#
-# 为什么 runner 推送稳：用 GITHUB_TOKEN 直推、不过 Anthropic relay proxy，永不 403。
-# 为什么自己投递：GITHUB_TOKEN 推的提交不会触发 feishu-notify（GitHub 防递归），故本 workflow 末尾自己发。
-#   feishu-notify.yml 保留做手动补发（Actions 页 Run workflow）。
+# Manual fallback that generates the edition on a GitHub runner.
+# Claude prepares the inputs and publish.sh validates, renders, and publishes them.
+# The fallback delivers Feishu and Slack summaries inline because a GITHUB_TOKEN
+# push does not trigger a second workflow. Use feishu-notify.yml for manual redelivery.
 
 on:
-  workflow_dispatch: {}        # Codex 迁移后的人工兜底；不再定时执行 Claude
+  workflow_dispatch: {}        # Manual recovery after migration to the scheduled Codex run.
 
 concurrency:
   group: daily-report
@@ -23,9 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      # 提交身份钉死为 dorischeyy：noreply 邮箱归属 dorischeyy 账号，每日 report: 提交计入其贡献格。
-      # 用 env 而非 git config：env 优先级最高，claude-code-action 内部再怎么改 git 配置也覆盖不了
-      #（此前身份被 action 配成 claude.ai 账号邮箱 startrail1016@gmail.com，贡献全记到了 Startrail1016 账号）。
+      # Set the author and committer identity in the environment so the action
+      # retains the repository owner's attribution even if it changes Git configuration.
       GIT_AUTHOR_NAME: dorischeyy
       GIT_AUTHOR_EMAIL: dorischeyy@users.noreply.github.com
       GIT_COMMITTER_NAME: dorischeyy
@@ -33,43 +29,43 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0        # publish.sh 要 fetch + rebase origin/main
+          fetch-depth: 0        # The fallback fetches and rebases on origin/main.
 
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: 计算北京日期（权威 today）
+      - name: Determine the edition date in Beijing
         id: meta
         run: echo "d=$(TZ=Asia/Shanghai date +%F)" >> "$GITHUB_OUTPUT"
 
-      - name: 守卫：今天已发布则跳过（防手动补发后迟到的定时任务重发第二份）
+      - name: Check whether today's edition has already been published
         id: guard
         run: |
           if [ -f docs/latest.json ] && [ "$(node -e "console.log(require('./docs/latest.json').date)")" = "${{ steps.meta.outputs.d }}" ]; then
             echo "published=true" >> "$GITHUB_OUTPUT"
-            echo "今天（${{ steps.meta.outputs.d }}）的日报已发布，跳过生成与投递"
+            echo "The edition for ${{ steps.meta.outputs.d }} is already published. Skipping generation and delivery."
           else
             echo "published=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Claude 生成交接物（content.json / threads.json / review.draft.md）
+      - name: Generate content, ledger, and editorial review
         if: steps.guard.outputs.published != 'true'
         id: claude
         uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          show_full_output: true    # 输出留痕：07-02 空跑（agent 自称成功但没写 content.json）时输出被隐藏，无法定位原因
+          show_full_output: true    # Retain output to diagnose incomplete runs.
           prompt: |
-            你是《Perp DEX 日报》的主编兼首席分析师。今天是 ${{ steps.meta.outputs.d }}（北京时间，权威日期，content.json 的 date 必须用它）。
-            严格按仓库根目录的 `generate.md` 全流程执行：读 config/sources.json、docs/market.json、threads.json、近几天 docs/archive/；用 WebSearch / WebFetch 联网调研，并逐条 WebFetch 来源页核实真实发布日、砍掉 >72h 的旧闻；按 generate.md 的评分 / 故事线 / 时效 / 防造假铁律产出。
-            产出三个交接物到仓库根目录：content.json、threads.json（更新台账并跑通 node lib/threads.mjs 校验）、review.draft.md。
-            只做到「写完这三个文件」为止：**绝不要运行 publish.sh，也不要 git add / commit / push** —— 校验、渲染、推送、投递都由后续 workflow 步骤处理。
-            **执行方式铁律**：全部工作在主循环里自己做完（WebSearch / WebFetch / 读写文件），**禁止用 Agent / Task 工具派子代理或后台任务**——这是单程无人值守运行，你一结束回合整个任务就终止了，"等后台代理跑完"等于什么都没产出（07-02 两次空跑的真实事故根因）。结束回合前必须确认三个交接物已写到磁盘。
+            You are the editor of Perp DEX Daily. Write the report and its review in English. Use ${{ steps.meta.outputs.d }} as the authoritative Beijing date for content.json.
+            Follow generate.md. Read config/sources.json, docs/market.json, threads.json and recent editions. Use WebSearch and WebFetch to research the stories and verify the publication date on each source page. Apply the scoring, freshness, provenance and story continuity rules, including the 72-hour limit for standalone news.
+            Write content.json, threads.json and review.draft.md at the repository root. Run node lib/threads.mjs to validate the updated ledger.
+            Finish after writing these three files. The following workflow steps handle validation, rendering, Git publication and delivery. Do not run publish.sh or git add, commit or push.
+            Complete the work in this run using search, source reads and file operations. Do not delegate to Agent, Task or background jobs. Confirm all three artifacts exist on disk before ending the turn.
           claude_args: '--permission-mode bypassPermissions --model sonnet --disallowedTools "Agent,Task"'
 
-      - name: 上传 Claude execution log（失败排查用）
+      - name: Upload the execution log for diagnostics
         if: always() && steps.guard.outputs.published != 'true'
         uses: actions/upload-artifact@v4
         with:
@@ -77,21 +73,21 @@ jobs:
           path: ${{ steps.claude.outputs.execution_file }}
           if-no-files-found: warn
 
-      - name: "校验 → 渲染 → 推送（report: 提交）"
+      - name: Validate, render, and publish the edition
         if: steps.guard.outputs.published != 'true'
         run: bash publish.sh
 
-      - name: 投递飞书 + Slack（内联）
+      - name: Deliver Feishu and Slack summaries
         if: steps.guard.outputs.published != 'true'
         env:
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         run: |
           if [ -z "$FEISHU_WEBHOOK" ] && [ -z "$SLACK_WEBHOOK" ]; then
-            echo "::error::FEISHU_WEBHOOK / SLACK_WEBHOOK 都未设置"; exit 1
+            echo "::error::Neither FEISHU_WEBHOOK nor SLACK_WEBHOOK is configured"; exit 1
           fi
           TITLE=$(node -e "console.log(require('./docs/latest.json').title)")
           URL=$(node -e "console.log(require('./docs/latest.json').url)")
           LEAD=$(node -e "console.log(require('./docs/latest.json').lead)")
-          echo "投递: $TITLE -> $URL"
+          echo "Delivering $TITLE -> $URL"
           node lib/deliver.mjs "$TITLE" "$URL" "$LEAD"

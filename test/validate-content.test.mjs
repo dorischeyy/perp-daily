@@ -4,179 +4,179 @@ import { validateContent } from "../lib/validate-content.mjs";
 import { baseContent } from "./_helpers.mjs";
 import { researchContent } from "./_research-fixture.mjs";
 
-test("合法 content 无 error", () => {
+test("Accepts a valid report", () => {
   const { errors } = validateContent(baseContent());
   assert.equal(errors.length, 0, errors.join("; "));
 });
 
-test("缺 sections → error", () => {
+test("Requires sections", () => {
   const c = baseContent(); delete c.sections;
   assert.ok(validateContent(c).errors.some((e) => /sections/.test(e)));
 });
 
-test("sections 为空数组 → error", () => {
+test("Rejects empty sections", () => {
   assert.ok(validateContent(baseContent({ sections: [] })).errors.length > 0);
 });
 
-test("四个新闻栏目都必须存在，且每栏 3–5 条", () => {
+test("Checks legacy section coverage and size", () => {
   const valid = baseContent();
   const perpdex = valid.sections.find((s) => s.id === "perpdex");
   perpdex.items.push(
-    { headline: "第 4 条", body: ["**事件**：第四条"], source: "S", url: "https://example.com/perpdex-4", date: "2026-06-23" },
-    { headline: "第 5 条", body: ["**事件**：第五条"], source: "S", url: "https://example.com/perpdex-5", date: "2026-06-23" },
+    { headline: "Item 4", body: ["**Event**: Article 4"], source: "S", url: "https://example.com/perpdex-4", date: "2026-06-23" },
+    { headline: "Item 5", body: ["**Event**: Article 5"], source: "S", url: "https://example.com/perpdex-5", date: "2026-06-23" },
   );
   assert.equal(validateContent(valid).errors.length, 0);
 
   const tooFew = baseContent();
   tooFew.sections.find((s) => s.id === "launchpad").items.pop();
-  assert.ok(validateContent(tooFew).errors.some((e) => /launchpad.*3–5 条/.test(e)));
+  assert.ok(validateContent(tooFew).errors.some((e) => /launchpad.*3–5 news/.test(e)));
 
   const tooMany = baseContent();
   const crypto = tooMany.sections.find((s) => s.id === "crypto");
   crypto.items.push(
-    { headline: "第 4 条", body: ["第四条"], source: "S", url: "https://example.com/crypto-4", date: "2026-06-23" },
-    { headline: "第 5 条", body: ["第五条"], source: "S", url: "https://example.com/crypto-5", date: "2026-06-23" },
-    { headline: "第 6 条", body: ["第六条"], source: "S", url: "https://example.com/crypto-6", date: "2026-06-23" },
+    { headline: "Item 4", body: ["Article 4"], source: "S", url: "https://example.com/crypto-4", date: "2026-06-23" },
+    { headline: "Item 5", body: ["Article 5"], source: "S", url: "https://example.com/crypto-5", date: "2026-06-23" },
+    { headline: "Item 6", body: ["Article 6"], source: "S", url: "https://example.com/crypto-6", date: "2026-06-23" },
   );
-  assert.ok(validateContent(tooMany).errors.some((e) => /crypto.*3–5 条/.test(e)));
+  assert.ok(validateContent(tooMany).errors.some((e) => /crypto.*3–5 news/.test(e)));
 
   const missing = baseContent();
   missing.sections = missing.sections.filter((s) => s.id !== "ai");
-  assert.ok(validateContent(missing).errors.some((e) => /缺少必需新闻栏目：ai/.test(e)));
+  assert.ok(validateContent(missing).errors.some((e) => /missing required news section: ai/.test(e)));
 });
 
-test("date 格式错 → error", () => {
+test("Rejects an invalid edition date", () => {
   assert.ok(validateContent(baseContent({ date: "2026/06/23" })).errors.some((e) => /date/.test(e)));
 });
 
-test("item 缺 url → error", () => {
+test("Requires a source URL", () => {
   const c = baseContent(); delete c.sections[0].items[0].url;
   assert.ok(validateContent(c).errors.some((e) => /url/.test(e)));
 });
 
-test("item url 非 http(s) → error（挡 javascript: 等）", () => {
+test("Allows only HTTP(S) sources", () => {
   const c = baseContent(); c.sections[0].items[0].url = "javascript:alert(1)";
   assert.ok(validateContent(c).errors.some((e) => /url/.test(e)));
 });
 
-test("item date 格式错 → error", () => {
-  const c = baseContent(); c.sections[0].items[0].date = "昨天";
+test("Rejects invalid news dates", () => {
+  const c = baseContent(); c.sections[0].items[0].date = "Yesterday";
   assert.ok(validateContent(c).errors.some((e) => /date/.test(e)));
 });
 
-test("item body 为空 → error", () => {
+test("Requires a nonempty body", () => {
   const c = baseContent(); c.sections[0].items[0].body = [];
   assert.ok(validateContent(c).errors.some((e) => /body/.test(e)));
 });
 
-test("额外未知栏目 id → warning 而非 error", () => {
+test("Warns about unknown legacy sections", () => {
   const c = baseContent();
   c.sections.push({ id: "weird", title: "Weird", items: [] });
   const { errors, warnings } = validateContent(c);
   assert.equal(errors.length, 0);
-  assert.ok(warnings.some((w) => /已知栏目/.test(w)));
+  assert.ok(warnings.some((w) => /unknown section/.test(w)));
 });
 
-test("产品判断栏和二阶效应已取消，所有栏目都禁用 kicker", () => {
+test("Rejects retired columns, subheads and kickers", () => {
   const ordinary = baseContent();
-  ordinary.sections[0].kicker = "重复副标题";
-  assert.ok(validateContent(ordinary).errors.some((e) => /只保留一级标题/.test(e)));
+  ordinary.sections[0].kicker = "Repeated headline";
+  assert.ok(validateContent(ordinary).errors.some((e) => /one section heading/.test(e)));
 
   const c = baseContent();
-  c.sections.push({ id: "legacy-product-view", title: "产品判断", items: [] });
-  assert.ok(validateContent(c).errors.some((e) => /产品判断栏已取消/.test(e)));
+  c.sections.push({ id: "legacy-product-view", title: "Product assessment", items: [] });
+  assert.ok(validateContent(c).errors.some((e) => /product assessment section was retired/.test(e)));
 
   const withSecondOrder = baseContent();
-  withSecondOrder.sections[0].items[0].body.push("**二阶效应**：这段不应再出现。");
-  assert.ok(validateContent(withSecondOrder).errors.some((e) => /二阶效应段已取消/.test(e)));
+  withSecondOrder.sections[0].items[0].body.push("**Second-order effects**: Traders could switch collateral.");
+  assert.ok(validateContent(withSecondOrder).errors.some((e) => /second-order effects subheading was retired/.test(e)));
 });
 
-test("lead 必须是一句话市场概括，product_view 已停用", () => {
+test("Checks lead format and rejects retired cards", () => {
   const missing = baseContent();
   delete missing.lead;
-  assert.ok(validateContent(missing).errors.some((e) => /lead 应为/.test(e)));
+  assert.ok(validateContent(missing).errors.some((e) => /lead must contain/.test(e)));
 
-  const multiple = baseContent({ lead: "第一句市场概括。第二句继续展开。" });
-  assert.ok(validateContent(multiple).errors.some((e) => /只保留一句/.test(e)));
+  const multiple = baseContent({ lead: "A new venue opened perpetual markets today. Traders can place orders through its wallet." });
+  assert.ok(validateContent(multiple).errors.some((e) => /one sentence/.test(e)));
 
-  const legacy = baseContent({ product_view: { judgment: "旧字段" } });
-  assert.ok(validateContent(legacy).errors.some((e) => /product_view 已停用/.test(e)));
+  const legacy = baseContent({ product_view: { judgment: "Retired field" } });
+  assert.ok(validateContent(legacy).errors.some((e) => /product_view has been retired/.test(e)));
 });
 
-test("v2摘要允许两句聚焦重点，不再强制把新闻拼成一句", () => {
-  const content = researchContent({ lead: "示例协议将开户和交易嵌入钱包，用户不必先访问独立网站。它缩短了交易路径，但补贴结束后的留存仍无公开数据，不能据此认定获客成功。" });
+test("Allows a focused two-sentence lead", () => {
+  const content = researchContent({ lead: "Example Protocol offers perpetual futures directly in its wallet. Retention figures after the incentive campaign remain unavailable." });
   assert.deepEqual(validateContent(content).errors, []);
 });
 
-test("v2摘要限制总长度、单句长度及句数，避免冗长目录", () => {
-  for (const lead of ["事实".repeat(61), `${"事实".repeat(36)}。`, "第一条说明市场的新变化。第二条说明另一家机构的变化。第三条又加入一个无关产品。"] ) {
+test("Limits lead words, sentence count and sentence length", () => {
+  for (const lead of ["facts ".repeat(56), `${"fact ".repeat(33)}.`, "A venue listed perpetual futures. Another venue opened a wallet. Both published fee schedules."]) {
     assert.ok(validateContent(researchContent({ lead })).errors.some((e) => /lead/.test(e)));
   }
 });
 
-test("合法的数字量级说明通过校验", () => {
+test("Accepts metric context", () => {
   const c = baseContent();
-  c.sections[0].items[0].context = { label: "量级参照", text: "约为 DEX 永续日成交盘子的十分之一，属于头部梯队。" };
+  c.sections[0].items[0].context = { label: "Scale", text: "The venue accounted for about 10% of daily perpetual DEX volume." };
   const { errors } = validateContent(c);
   assert.equal(errors.length, 0, errors.join("; "));
 });
 
-test("数字量级说明的标签与长度受校验", () => {
+test("Checks metric labels and explanation length", () => {
   const c = baseContent();
-  c.sections[0].items[0].context = { label: "很重要", text: "太短" };
+  c.sections[0].items[0].context = { label: "Unknown label", text: "Short" };
   const { errors } = validateContent(c);
   assert.ok(errors.some((e) => /context\.label/.test(e)));
   assert.ok(errors.some((e) => /context\.text/.test(e)));
 });
 
-test("可能影响判断的数字没有解释时给提醒", () => {
+test("Flags unexplained material metrics", () => {
   const c = baseContent();
-  c.sections[0].items[0].body = "24h 交易量达到 $1.2B。";
+  c.sections[0].items[0].body = "Trading volume reached $1.2B in 24 hours.";
   const { warnings } = validateContent(c);
-  assert.ok(warnings.some((w) => /量级说明/.test(w)));
+  assert.ok(warnings.some((w) => /context is missing for a material metric/.test(w)));
 });
 
-test("有量级说明的数字不再给遗漏提醒", () => {
+test("Accepts a contextualized metric", () => {
   const c = baseContent();
-  c.sections[0].items[0].body = "24h 交易量达到 $1.2B。";
-  c.sections[0].items[0].context = { label: "量级参照", text: "约占 DEX 永续盘子的 1%，属腰部协议的活跃水平。" };
+  c.sections[0].items[0].body = "Trading volume reached $1.2B in 24 hours.";
+  c.sections[0].items[0].context = { label: "Scale", text: "The venue accounted for about 1% of daily perpetual DEX volume." };
   const { warnings } = validateContent(c);
-  assert.ok(!warnings.some((w) => /量级说明/.test(w)));
+  assert.ok(!warnings.some((w) => /context is missing for a material metric/.test(w)));
 });
 
-test("补充来源 references 必须有独立链接与真实日期", () => {
+test("Requires independently dated reference URLs", () => {
   const c = baseContent();
   c.sections[0].items[0].references = [
-    { source: "补充来源", url: "https://example.com/b", date: "2026-06-22" },
+    { source: "Independent source", url: "https://example.com/b", date: "2026-06-22" },
   ];
   assert.equal(validateContent(c).errors.length, 0);
 
   c.sections[0].items[0].references[0].url = c.sections[0].items[0].url;
-  c.sections[0].items[0].references[0].date = "昨天";
+  c.sections[0].items[0].references[0].date = "Yesterday";
   const { errors } = validateContent(c);
-  assert.ok(errors.some((e) => /重复/.test(e)));
+  assert.ok(errors.some((e) => /duplicat/.test(e)));
   assert.ok(errors.some((e) => /date/.test(e)));
 });
 
-test("source 写多个来源却没有 references 时提醒", () => {
+test("Flags multiple sources without links", () => {
   const c = baseContent();
-  c.sections[0].items[0].source = "来源 A / 来源 B";
-  assert.ok(validateContent(c).warnings.some((w) => /多个来源/.test(w)));
+  c.sections[0].items[0].source = "Source A / Source B";
+  assert.ok(validateContent(c).warnings.some((w) => /multiple sources/.test(w)));
 });
 
-test("今日进展必须有日期来源链接和新 delta", () => {
+test("Requires dated and sourced thread updates", () => {
   const c = baseContent({
     threads: [{
-      title: "钱包分发进入保证金复用",
+      title: "Wallet distribution and collateral reuse",
       since: "2026-06-20",
       day_n: 4,
       tier: "A",
       status: "active",
       date: "2026-06-23",
-      source: "官方公告",
+      source: "Official announcement",
       url: "https://example.com/thread",
-      update: "钱包新增股票代币作为永续保证金。",
-      watch: "观察真实采用与抵押折扣。",
+      update: "The wallet added stock tokens as collateral for perpetual futures.",
+      watch: "Track adoption and collateral haircuts.",
     }],
   });
   assert.equal(validateContent(c).errors.length, 0);
@@ -188,61 +188,61 @@ test("今日进展必须有日期来源链接和新 delta", () => {
   assert.ok(errors.some((e) => /threads\[0\]\.url/.test(e)));
 });
 
-test("今日进展为空或超过四条会被阻断", () => {
-  assert.ok(validateContent(baseContent({ threads: [] })).errors.some((e) => /整个省略/.test(e)));
+test("Limits optional thread snapshots", () => {
+  assert.ok(validateContent(baseContent({ threads: [] })).errors.some((e) => /omit the entire/.test(e)));
   const item = {
-    title: "线",
+    title: " Line",
     since: "2026-06-20",
     status: "active",
     date: "2026-06-23",
     source: "S",
     url: "https://example.com/thread",
-    update: "出现新的真实变化。",
-    watch: "下一步。",
+    update: " New real changes.",
+    watch: " Next.",
   };
-  const threads = Array.from({ length: 5 }, (_, i) => ({ ...item, title: `线${i}`, url: `${item.url}/${i}` }));
-  assert.ok(validateContent(baseContent({ threads })).errors.some((e) => /最多 4 条/.test(e)));
+  const threads = Array.from({ length: 5 }, (_, i) => ({ ...item, title: ` Line${i}`, url: `${item.url}/${i}` }));
+  assert.ok(validateContent(baseContent({ threads })).errors.some((e) => /at most 4/.test(e)));
 });
 
-test("v2 必须保留 AI 栏且恰好三条新闻，其他栏目仍可动态选择", () => {
+test("Requires exactly three AI news items", () => {
   const content = researchContent();
   content.sections = content.sections.filter((section) => section.id === "ai");
   assert.deepEqual(validateContent(content).errors, []);
   content.sections[0].items.pop();
-  assert.ok(validateContent(content).errors.some((error) => /恰好 3 条/.test(error)));
+  assert.ok(validateContent(content).errors.some((error) => /exactly 3 news/.test(error)));
   content.sections[0].items.push(...researchContent().sections.find((section) => section.id === "ai").items.slice(1));
-  assert.ok(validateContent(content).errors.some((error) => /恰好 3 条/.test(error)));
+  assert.ok(validateContent(content).errors.some((error) => /exactly 3 news/.test(error)));
   content.sections = researchContent().sections.filter((section) => section.id !== "ai");
-  assert.ok(validateContent(content).errors.some((error) => /缺少必需 AI 栏/.test(error)));
+  assert.ok(validateContent(content).errors.some((error) => /missing required AI section/.test(error)));
 });
 
-test("v2 AI 栏只接受 AI 新闻，研究和跨栏 AI 条目会被阻断", () => {
+test("Restricts AI coverage by domain and item kind", () => {
   const content = researchContent();
   const ai = content.sections.find((section) => section.id === "ai").items;
   ai[0].kind = "news";
   ai[0].domain = "crypto-ai";
   assert.deepEqual(validateContent(content).errors, []);
   ai[0].kind = "research";
-  assert.ok(validateContent(content).errors.some((error) => /不能用研究填充/.test(error)));
+  assert.ok(validateContent(content).errors.some((error) => /must be news, not research/.test(error)));
   ai[0].kind = "news";
   ai[0].domain = "crypto";
-  assert.ok(validateContent(content).errors.some((error) => /AI 栏只接受 ai 或 crypto-ai/.test(error)));
+  assert.ok(validateContent(content).errors.some((error) => /AI only accepts ai or crypto-ai/.test(error)));
   ai[0].domain = "ai";
   for (const domain of ["ai", "crypto-ai"]) {
     content.sections[0].items[2].domain = domain;
-    assert.ok(validateContent(content).errors.some((error) => /只能放在 ai 栏/.test(error)));
+    assert.ok(validateContent(content).errors.some((error) => /only in the AI section/.test(error)));
   }
 });
 
-test("v2 AI importance_score 必须为 75–100 整数且降序排列", () => {
+test("Validates ordered AI scores", () => {
   const content = researchContent();
   const ai = content.sections.find((section) => section.id === "ai").items;
   for (const score of [undefined, 74, 101, 75.5, "90", NaN]) {
     ai[0].importance_score = score;
-    assert.ok(validateContent(content).errors.some((error) => /75–100 的整数/.test(error)));
+    assert.ok(validateContent(content).errors.some((error) => /integer.*75–100/.test(error)));
   }
   [100, 75, 75].forEach((score, index) => { ai[index].importance_score = score; });
   assert.deepEqual(validateContent(content).errors, []);
   ai[2].importance_score = 80;
-  assert.ok(validateContent(content).errors.some((error) => /降序排列/.test(error)));
+  assert.ok(validateContent(content).errors.some((error) => /descending order/.test(error)));
 });

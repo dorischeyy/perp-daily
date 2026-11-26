@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-08-10</title>
+<title>Perp DEX Daily · 2026-08-10</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 46 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 46</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 8 月 10 日 · 星期一</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">August 10, 2026 · Monday</div>
     </header>
-    <p class="lead">Hyperliquid 的 RWA 永续增长开始暴露协议留存收入压力，场所快照也显示高 OI、成交周转与市场质量不能互相替代。</p>
+    <p class="lead">Growth in Hyperliquid’s real-world asset perpetuals put pressure on the revenue the protocol retains. Venue snapshots also show that open interest and trading turnover capture different aspects of activity and cannot establish market quality by themselves.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,9 +110,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">HIP-3 已承接约半数成交，但 Hyperliquid 协议收入连续四季下降</h3>
-          <p class="item-b"><strong>事件</strong>：CoinDesk 8 月 9 日报道，HIP-3 builder 市场已贡献 Hyperliquid 约一半成交，RWA 永续 OI 达 36 亿美元；平台季度总收入则从 2025 年第三季度约 3.57 亿美元降至 2026 年第二季度约 2.02 亿美元。</p><p class="item-b"><strong>机制</strong>：builder 最多可保留一半交易费，协议收入成本占比也从 2025 年第二季度不足 6% 升至一年后的 18%；交易扩张发生在第三方市场层，不能一比一转化为回购资金。</p><p class="item-b"><strong>二阶效应</strong>：permissionless 扩列让 RWA 成为增长引擎，却把竞争从单纯争夺成交推进到费率分成、builder 集中度与净收入留存；产品评估需要同时看新增市场、用户深度和协议实际捕获价值。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>收入由季度高点约 3.57 亿美元降至 2.02 亿美元，报道将 builder 分成列为成本上升因素之一，不代表全部降幅都由 HIP-3 造成。</p>
+          <h3 class="item-h">HIP-3 approaches half of Hyperliquid volume as quarterly protocol revenue falls for four quarters</h3>
+          <p class="item-b"><strong>Event</strong>: CoinDesk reported on August 9 that builder markets contributed about half of Hyperliquid’s volume and real-world asset perpetual open interest reached $3.6 billion. Quarterly platform revenue declined from approximately $357 million in Q3 2025 to $202 million in Q2 2026.</p><p class="item-b"><strong>Mechanism</strong>: Builders can retain up to half the trading fees. The cost share of protocol revenue rose from below 6% in Q2 2025 to 18% a year later. Growth in third-party market volume therefore does not translate proportionately into funds available for buybacks.</p><p class="item-b"><strong>Second-order effects</strong>: Permissionless listings expanded the product range, but the economics depend on fee splits, builder concentration and revenue retained by the protocol. New listings and user activity need to be considered alongside that net capture.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Quarterly revenue fell from about $357 million at its peak to $202 million. The report identified builder fee sharing as one contributor to higher costs without attributing the entire decline to HIP-3.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-09</span>
             <a class="item-src" href="https://www.coindesk.com/business/2026/08/09/hyperliquid-s-rwa-perps-boom-is-eating-into-the-revenue-that-backs-hype" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -120,22 +120,22 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">BYDFi 的 OI 是日成交近 58 倍，排名前列却缺少同量级换手</h3>
-          <p class="item-b"><strong>事件</strong>：8 月 10 日市场快照显示，BYDFi 总 OI 为 113363 BTC，24 小时成交仅 1957 BTC，OI 与日成交比约 57.93；其 OI 位列样本第八，成交却在主要场所中最低。</p><p class="item-b"><strong>机制</strong>：高 OI 与低日成交并存可能来自持仓周期、统计口径或数据同步差异；在没有资产级深度和清算数据时，不能把 OI 排名直接解释为可退出流动性。</p><p class="item-b"><strong>二阶效应</strong>：极端比值应先触发数据质量复核，再进入风险容量模型；若多日持续且报价深度不足，平台排名会系统性高估仓位可承载能力。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>这是全平台一日汇总截面，极端比值也可能受场所上报范围或同步时点影响，不能单独证明流动性不足。</p>
+          <h3 class="item-h">BYDFi reports open interest nearly 58 times its daily volume</h3>
+          <p class="item-b"><strong>Event</strong>: On August 10, BYDFi showed 113,363 BTC of open interest against 1,957 BTC of 24-hour volume, a ratio of about 57.93. It ranked eighth in the sample by open interest but last among major venues by volume.</p><p class="item-b"><strong>Mechanism</strong>: Holding periods, reporting methods or data synchronization could explain high open interest alongside low daily volume. Without asset-level depth and liquidation data, a high open-interest ranking provides little evidence of liquidity available to exit.</p><p class="item-b"><strong>Second-order effects</strong>: Such an extreme ratio calls for a data-quality check before it enters a risk-capacity model. If it persists for days while quoted depth remains thin, rankings will systematically overstate how much exposure the venue can support.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>This is a one-day, whole-venue snapshot. Unusual ratios can arise from differences in reporting scope or synchronization. They do not by themselves establish a shortage of liquidity.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-10</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/main/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/main/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">Toobit 用 Binance 约 14% 的 OI 做出约 44% 的日成交</h3>
-          <p class="item-b"><strong>事件</strong>：同一快照中，Toobit 总 OI 为 53602 BTC、日成交 143142 BTC；Binance 分别为 397519 和 323019 BTC，Toobit 的 OI 与日成交比约 0.37，Binance 约 1.23。</p><p class="item-b"><strong>机制</strong>：较高换手可能来自更短持仓、用户频繁轮转或交易激励，也可能受平台成交口径影响；成交活跃本身并不等于价差更窄或真实可执行深度更厚。</p><p class="item-b"><strong>二阶效应</strong>：场所比较需要把 OI、成交、价差与激励拆开，才能区分“高周转入口”和“长期风险承载场所”；只看成交榜会反向忽略存量仓位质量。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>Toobit 日成交约为 Binance 的 44%，总 OI 约为其 14%；两者均是平台总量，未校正交易对构成与激励活动。</p>
+          <h3 class="item-h">Toobit reports about 44% of Binance’s daily volume with roughly 14% of its open interest</h3>
+          <p class="item-b"><strong>Event</strong>: Toobit reported 53,602 BTC in open interest and 143,142 BTC in daily volume. Binance reported 397,519 BTC and 323,019 BTC, respectively. The corresponding open-interest-to-volume ratios were about 0.37 and 1.23.</p><p class="item-b"><strong>Mechanism</strong>: Higher turnover could reflect short holding periods, frequent repositioning, incentives or differences in how venues report volume. Trading activity alone does not establish narrower spreads or deeper executable liquidity.</p><p class="item-b"><strong>Second-order effects</strong>: Open interest, volume, spreads and incentives distinguish a high-turnover trading venue from one that carries risk over longer periods. A volume ranking omits information about outstanding positions.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Toobit&#x27;s daily volume was about 44% of Binance&#x27;s, and its total open interest about 14%. These venue-wide figures are unadjusted for market mix or incentives.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-10</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/main/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/main/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a>
           </div>
         </article>
         </div>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">百余个加密项目年内退出，孵化筛选从代币跑道转向现金流</h3>
-          <p class="item-b">CoinDesk 8 月 10 日援引 RootData 称，2026 年已有超过 100 个加密项目关闭、申请破产或长期失联；山寨币下跌 70% 至 90% 也削弱了以代币计价的团队金库。</p><p class="item-b">项目存活门槛正从融资与发币能力转向稳定币或现金收入、留存和安全预算；但关停统计跨越交易所、钱包、协议与链，不能用来推断某一赛道的统一淘汰率。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>超过 100 个是 RootData 跨赛道关停口径，报道没有给出全部项目基数，因此不能据此计算行业失败率。</p>
+          <h3 class="item-h">More than 100 crypto projects exit during the year as incubators shift attention to cash flow</h3>
+          <p class="item-b">On August 10, CoinDesk cited RootData as saying that more than 100 crypto projects had shut down, filed for bankruptcy or gone silent for extended periods in 2026. Altcoin declines of 70% to 90% also weakened team treasuries held in tokens.</p><p class="item-b">Survival increasingly depends on stablecoin or cash revenue, retention and a security budget alongside the ability to raise funds and launch tokens. The shutdown count spans exchanges, wallets, protocols and chains, so it does not give a failure rate for any one segment.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>RootData counted more than 100 shutdowns across multiple sectors. The report did not give the total project population needed to calculate an industry failure rate.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-10</span>
             <a class="item-src" href="https://www.coindesk.com/business/2026/08/09/crypto-is-going-through-a-massive-dot-com-style-shakeout-as-over-100-projects-fold-in-2026" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Founders&#39; Fest 用 36 小时构建加现场路演连接投资人</h3>
-          <p class="item-b">Hyderabad 的 What The Tech 于 8 月 8 日完成决赛路演，并在 8 月 9 日继续技术展；项目设置 36 小时 hackathon、20 万卢比奖金、导师办公时段与投资人会面。</p><p class="item-b">同一活动把构建、展示、招聘和融资入口压缩到四天，可降低早期团队获得反馈的协调成本；官网未披露获奖项目、参赛规模或后续投资结果，不能把路演机会写成融资转化。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>官网确认赛程、20 万卢比奖金与投资人环节，没有公开获奖名单、投资承诺或产品采用数据。</p>
+          <h3 class="item-h">Founders’ Fest combines a 36-hour build with live investor pitches</h3>
+          <p class="item-b">What The Tech in Hyderabad held its final demo day on August 8 and continued with a technology exhibition on August 9. The program included a 36-hour hackathon, 200,000 rupees in prizes, mentor office hours and investor meetings.</p><p class="item-b">The four-day event combined building, demonstrations, recruitment and financing introductions, reducing the effort needed for early teams to get feedback. The official site listed no winners, attendance figures or subsequent investments. A pitch opportunity alone does not establish funding.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The official website confirms the schedule, a prize pool of 200,000 rupees, and an investor session. It gave no winners, investment commitments, or adoption data.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-09</span>
             <a class="item-src" href="https://hackathon.foundersfest.org/content" target="_blank" rel="noopener">Founders&#39; Fest ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">UCLA HAcK 完成三日硬件冲刺，评审材料 8 月 11 日截止</h3>
-          <p class="item-b">UCLA Engineering 的 2026 HAcK at Accelerator 于 8 月 7 日至 9 日进行线下与远程构建，团队需提交原型演示、MicroPython 代码与设计说明，并在 8 月 11 日前交设计评审材料。</p><p class="item-b">要求同时提交运行原型、代码和书面解释，提高了对可复现性的门槛；获奖结果要到 8 月 15 日公布，目前只能确认完成构建阶段，不能评价项目质量。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>三日构建已结束，设计评审与颁奖尚未完成；活动页面没有公开参赛团队数或项目商业化计划。</p>
+          <h3 class="item-h">UCLA HAcK completes a three-day hardware sprint with judging submissions due August 11</h3>
+          <p class="item-b">UCLA Engineering’s 2026 HAcK at Accelerator held in-person and remote build sessions from August 7 to 9. Teams had to submit a prototype demonstration, MicroPython code and a design explanation, then provide design review materials by August 11.</p><p class="item-b">Requiring a running prototype, code and written explanation makes reproducibility easier to assess. Winners were due to be announced on August 15. Completion of the build phase alone does not establish project quality.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The three-day build has ended. Design review and awards are still pending. The event page provided no team count or plans to commercialize the projects.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-09</span>
             <a class="item-src" href="https://etransfercenter.seas.ucla.edu/e1tr_2026/" target="_blank" rel="noopener">UCLA Engineering Transfer Center ↗</a>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">BTCPay 漏洞暴露 LND 凭证，受影响商户节点可被直接转走资金</h3>
-          <p class="item-b">CoinDesk 8 月 8 日报道，BTCPay Server 的严重漏洞可在未认证情况下暴露 LND macaroon 凭证，攻击者已利用该凭证控制 Lightning 钱包并转移资金；官方要求升级到 2.4.2 或先离线。</p><p class="item-b">风险位于 BTCPay 与 Lightning 节点的权限边界，而非链上钱包本身；商户支付基础设施需要把凭证读取、版本资产清单和紧急停机纳入同一响应流程。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>报道确认有节点被盗，但未披露受影响用户数和金额；BTCPay 的链上钱包不受该漏洞影响。</p>
+          <h3 class="item-h">BTCPay reports that an issue affecting LND credentials put merchant funds at risk</h3>
+          <p class="item-b">CoinDesk reported on August 8 that a critical BTCPay Server vulnerability had led to unauthorized control of Lightning wallets and loss of funds. The project advised operators to upgrade to version 2.4.2 or take the service offline until they could upgrade.</p><p class="item-b">The failure concerned the permissions boundary between BTCPay and the Lightning node. Merchant payment operators need to manage access to credentials, maintain an inventory of deployed versions and include emergency shutdown in their incident response.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The report confirms theft from affected nodes. It gives neither the number of affected users nor the amount lost. The issue did not affect BTCPay&#x27;s onchain wallets.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-08</span>
             <a class="item-src" href="https://www.coindesk.com/tech/2026/08/08/another-bitcoin-infrastructure-exploit-hits-this-time-draining-merchant-lightning-nodes" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -202,9 +202,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">BIP-110 分叉八小时只出两块，低算力把规则分歧变成停摆</h3>
-          <p class="item-b">BIP-110 支持者在区块 961632 分叉后约八小时只产生两个区块，主链同期前进 48 个区块；过去两周仅 2.53% 区块发出支持信号，低于无分叉激活所需的 55%。</p><p class="item-b">少数链继承主链难度却只有极少算力，要完成 2016 个区块才能调低难度；两条链仍接受相同签名交易，也让出售分叉币面临重放风险。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>监测器估算少数链按当前速度约需 350 天完成一次难度周期，主链通常约 14 天。</p>
+          <h3 class="item-h">BIP-110 fork produces two blocks in eight hours as limited hash power stalls progress</h3>
+          <p class="item-b">After the BIP-110 fork at block 961,632, the minority chain produced only two blocks in about eight hours while the main chain advanced 48. Only 2.53% of blocks had signaled support over the previous two weeks, below the 55% needed for activation without a split.</p><p class="item-b">The minority chain inherited main-chain mining difficulty with very little hash power and needs 2,016 blocks before it can lower that difficulty. Since both chains accept the same signed transactions, users face replay risk when selling forked coins.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>At the observed pace, the monitor estimated that the minority chain would need around 350 days for one difficulty adjustment period, compared with about 14 days on the main chain.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-09</span>
             <a class="item-src" href="https://www.coindesk.com/tech/2026/08/09/controversial-bitcoin-fork-bip-110-mines-two-blocks-then-stops" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">XRPL 提议给 MPT 增加隐私转账，但交易类型仍受严格限制</h3>
-          <p class="item-b">XRPL 3.3.0 提出的 Confidential Transfers 可加密多用途代币的余额和支付金额，同时保留账户与资产类型可见；修正案需连续两周获得至少 80% 验证者支持才会激活。</p><p class="item-b">首版只支持 MPT 直接支付，不覆盖内置交易所、托管或支票；这给机构资产增加选择性隐私，却仍保留可审计身份边界和明确的功能缺口。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>功能仍是待投票修正案，80% 支持需持续两周；文章标题中的 5.3 亿美元是相关代币化资产范围，不是新增流入。</p>
+          <h3 class="item-h">XRPL proposal adds private transfers for MPTs within a restricted set of transaction types</h3>
+          <p class="item-b">Confidential Transfers, proposed in XRPL 3.3.0, would encrypt balances and payment amounts for multipurpose tokens while keeping accounts and asset types visible. Activation requires at least 80% validator support for two consecutive weeks.</p><p class="item-b">The initial version covers direct MPT payments only. The built-in exchange, escrow and checks are outside its scope. This offers selective privacy for institutional assets while keeping identities auditable and the feature limits explicit.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The feature remains a proposed amendment. Support must stay at or above 80% for two weeks. The $530 million in the headline is the value of relevant tokenized assets, not new inflows.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-07</span>
             <a class="item-src" href="https://www.coindesk.com/tech/2026/08/07/new-xrp-ledger-amendments-target-usd530-million-in-tokenized-wall-street-assets" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -233,9 +233,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">美国 AI 政策在中期选举前仍缺统一路线，州级规则继续分叉</h3>
-          <p class="item-b">Axios 8 月 9 日指出，美国联邦层面的 AI 政策主张在中期选举前仍未形成一致框架，而选举深伪等问题继续由不同州分别处理。</p><p class="item-b">政策空白不会停止模型和内容产品进入选举场景，却会把合规实现拆成地区规则；平台需要保留来源标识和地区化处置能力，避免把未来联邦统一规则当作当前前提。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>这是美国中期选举前的政策观察，不是新联邦法案、行政命令或统一执行标准。</p>
+          <h3 class="item-h">U.S. AI policy remains divided ahead of midterm elections as state rules diverge</h3>
+          <p class="item-b">On August 9, Axios reported that U.S. federal AI proposals had yet to converge on a common framework before the midterm elections. States continued to address election deepfakes separately.</p><p class="item-b">AI products can still be used in elections while policy develops. Platforms therefore need provenance labels and region-specific enforcement under current rules, without assuming a future federal standard will cover those obligations.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>This is a policy observation ahead of the US midterm elections. It introduces no new federal bill, executive order, or common enforcement standard.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-09</span>
             <a class="item-src" href="https://www.axios.com/newsletters/axios-am-7a6cf3f0-9330-11f1-9adf-a1cb1a91697d" target="_blank" rel="noopener">Axios AM ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">本周主线｜金融 Agent 迭代可提分，但合规改善取决于如何更新</h3>
-          <p class="item-b">FinEvo-Bench 用 120 个任务覆盖 20 个商业场景和六个金融领域，测试 Agent 在反馈后的持续迭代；实验中各系统得分提升 9.33 至 19.37 分，合规问题每任务减少 0.12 至 0.44 个。</p><p class="item-b">结果显示增加经验并非越多越好，技能更新单独使用优于仅记忆或两者组合；金融 Agent 的改进机制需要区分可复用规则与具体轨迹，不能把全部历史直接堆回上下文。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>结果来自论文选定的四套 Agent 框架和基准任务，不等于线上金融业务可获得相同增益。</p>
+          <h3 class="item-h">Weekly theme | Iteration improves financial agent scores, but compliance depends on how updates are made</h3>
+          <p class="item-b">FinEvo-Bench uses 120 tasks across 20 business scenarios and six financial domains to test how agents improve with feedback. Systems gained 9.33 to 19.37 points and recorded 0.12 to 0.44 fewer compliance problems per task.</p><p class="item-b">Adding experience did not uniformly improve results. Updating skills alone outperformed memory alone and the combination of both. Financial agents may need to distinguish reusable rules from specific past trajectories when deciding what context to retain.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The paper tested four selected agent frameworks on benchmark tasks. Results in live financial workflows could differ.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-06</span>
             <a class="item-src" href="https://arxiv.org/abs/2608.06144" target="_blank" rel="noopener">arXiv ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">本周主线｜轨迹诊断基准把错误定位到完整生命周期</h3>
-          <p class="item-b">TRAJDEBUG 汇集 Tau2Bench 与 SWE-Bench Pro 中 486 条失败轨迹，要求系统沿完整执行过程识别错误，而不是只根据最终答案判断失败。</p><p class="item-b">长链任务的修复重点因此从“重试一次”推进到定位错误产生、传播和未被纠正的阶段；但论文只证明基准上的诊断能力，尚未给出生产环境修复率。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>486 条轨迹来自两个既有基准的失败样本，覆盖面不代表所有工具调用、浏览器或金融工作流。</p>
+          <h3 class="item-h">Weekly theme | Agent trajectory benchmark locates errors across an entire task</h3>
+          <p class="item-b">TRAJDEBUG collects 486 failed trajectories from Tau2Bench and SWE-Bench Pro. It asks systems to locate errors within the complete execution history instead of judging failure solely from the final answer.</p><p class="item-b">For long-running tasks, diagnosis can identify where an error first arose, how it spread and where correction failed, rather than simply repeating a run. The paper reported benchmark diagnostic results and supplied no production repair rate.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The 486 traces are failed runs drawn from two existing benchmarks. The sample does not cover every kind of tool call, browser task, or financial workflow.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-06</span>
             <a class="item-src" href="https://arxiv.org/abs/2608.06346" target="_blank" rel="noopener">arXiv ↗</a>
@@ -267,15 +267,15 @@
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product assessment</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">交易与费用</div>
-          <h3 class="item-h">市场扩列指标必须同时附带协议净收入留存</h3>
-          <p class="item-b"><strong>判断变化</strong>：从“permissionless 扩列带来成交和 OI 即验证平台增长”改为“把 builder 分成、收入成本和协议净留存列为同等核心指标”。</p><p class="item-b"><strong>证据与边界</strong>：HIP-3 已贡献约一半成交、RWA 永续 OI 达 36 亿美元，但 Hyperliquid 季度总收入从约 3.57 亿美元降至 2.02 亿美元，收入成本占比升至 18%；报道没有证明全部下降由 builder 分成造成。</p>
+          <div class="decision-area">Transactions and fees</div>
+          <h3 class="item-h">Protocol revenue retention gives context to growth in listed markets</h3>
+          <p class="item-b"><strong>Revised assessment</strong>: Permissionless listings can grow both turnover and open interest while leaving little additional revenue with the protocol. Builder splits, revenue costs and retained income warrant equal attention.</p><p class="item-b"><strong>Evidence and limits</strong>: HIP-3 accounted for about half of volume and real-world asset perpetual open interest reached $3.6 billion. Quarterly platform revenue fell from about $357 million to $202 million and the cost share rose to 18%. The report did not attribute the entire decline to builder splits.</p>
 
           <div class="item-meta">
 
@@ -284,7 +284,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

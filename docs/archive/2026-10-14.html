@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-10-14</title>
+<title>Perp DEX Daily · 2026-10-14</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -82,12 +82,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 103 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 103</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 10 月 14 日 · 星期三</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">October 14, 2026 · Wednesday</div>
     </header>
-    <p class="lead">21Shares把私募公司估值包装成上市ETP，S&amp;P与Kaiko把信用指数互换搬上Canton，Workday则把企业Agent接入现有权限和审批体系。</p>
+    <p class="lead">21Shares packaged private-company valuations into a listed ETP. S&amp;P and Kaiko brought credit index swaps to Canton, and Workday connected enterprise agents to existing permissions and approvals.</p>
 
 
       <section class="sec sec-perpdex">
@@ -100,27 +100,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">21Shares用永续把私募估值包装成上市ETP</h3>
-          <p class="item-b"><strong>事件</strong>：21Shares披露其私募公司ETP不持有Anthropic股权，而由母公司FalconX发行票据，并通过Binance与Hyperliquid永续管理估值敞口，证券账户买到的是合成价格而不是股东权利。</p><p class="item-b"><strong>机制</strong>：上市前由二级交易、融资和订单簿共同形成参考价，上市后不强制换股，只把预言机切换到公开现货；（TradFi/RWA永续线 · 自07-09 · 第42个进展）永续由交易标的继续进入传统包装层，同时把对手方、资金费和预言机风险传给ETP净值。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>页面说明了结构与定价保护，但没有披露产品规模、永续持仓、资金费历史或极端行情偏离。</p>
+          <h3 class="item-h">21Shares uses perpetuals to package private-company valuations into a listed ETP</h3>
+          <p class="item-b"><strong>Event</strong>: 21Shares disclosed that its private-company ETP holds no Anthropic equity. Parent company FalconX issues notes and manages valuation exposure with perpetuals on Binance and Hyperliquid. Investors buying the ETP receive synthetic price exposure without shareholder rights.</p><p class="item-b"><strong>Mechanism</strong>: Before listing, secondary trades, financing and the order book inform the reference price. An IPO does not force a conversion to shares. The oracle instead switches to public spot prices. This 42nd development in the traditional-asset perpetuals story tracked since July 9 shows how a listed ETP passes counterparty, funding and oracle risks into its net asset value.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The page explains the structure and pricing protection, but it does not disclose details such as product size, perpetual positions, funding payments history, or deviations from extreme market conditions.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-13</span>
             <a class="item-src" href="https://www.21shares.com/en-us/insights/pre-ipo-etp" target="_blank" rel="noopener">21Shares ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">S&amp;P与Kaiko完成首笔代币化指数链上互换</h3>
-          <p class="item-b"><strong>事件</strong>：DRW与Marex在Canton上的Derivnex完成总收益互换，参考由Kaiko代币化的S&amp;P iBoxx美元流动性投资级指数，S&amp;P称这是首笔引用完整代币化指数的链上OTC衍生品。</p><p class="item-b"><strong>机制</strong>：交易条款、授权基准值和估值事件由共享智能合约贯穿生命周期，参与方仍保留私密协商与许可控制；变化在于把基准授权、交易表示和持续估值放进同一账本，而不是把公开订单簿搬上链。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>交易已经完成，但公告未披露名义本金、保证金安排、结算周期或后续参与机构。</p>
+          <h3 class="item-h">S&amp;P and Kaiko complete the first onchain swap on a tokenized index</h3>
+          <p class="item-b"><strong>Event</strong>: DRW and Marex completed a total revenue swap at Derivnex in Canton. This transaction referenced the S&amp;P iBoxx US dollar liquidity investment-grade index, which is tokenized by Kaiko. S&amp;P described this as the first OTC derivative on the blockchain that utilizes a fully tokenized index.</p><p class="item-b"><strong>Mechanism</strong>: Trading terms, authorization thresholds, and valuation events are managed through shared smart contracts throughout the lifecycle. Participants still retain the ability to negotiate privately and control permissions. The change lies in integrating authorization, transaction representation, and continuous valuation into the same ledger, rather than moving public order books onto the chain.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The transactions have been completed, but the announcement does not disclose the nominal principal, margin arrangements, settlement cycles, or subsequent participating institutions.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-13</span>
             <a class="item-src" href="https://www.spglobal.com/spdji/en/corporate-news/article/sp-dow-jones-indices-and-kaiko-enable-first-on-chain-otc-swap-referencing-a-tokenized-benchmark-executed-by-drw-and-marex-on-derivnex/" target="_blank" rel="noopener">S&amp;P Dow Jones Indices ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Crypto.com单日增加60个可见永续市场</h3>
-          <p class="item-b"><strong>事件</strong>：PerpFinder的10月13日快照显示，Crypto.com可见永续市场数由318增至378；同一日报还记录BingX未平仓量一天由17.2亿美元升至24.8亿美元。</p><p class="item-b"><strong>机制</strong>：前者说明供给可在一天内批量扩列，后者说明风险资本也会快速迁移，但聚合器只读取公开接口，无法单独证明新增合约获得真实深度或未平仓量变化来自净入金。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>市场数与未平仓量来自不同平台的单日快照，不能相互归因，也不等于自然成交需求。</p>
+          <h3 class="item-h">Crypto.com’s visible perpetual market count grows by 60 in one day</h3>
+          <p class="item-b"><strong>Event</strong>: PerpFinder’s October 13 snapshot showed Crypto.com’s visible perpetual markets rising from 318 to 378. The same report put BingX open interest at $2.48 billion, up from $1.72 billion a day earlier.</p><p class="item-b"><strong>Mechanism</strong>: The first observation shows that venues can add markets in bulk within a day. The second shows that risk capital can move quickly. An aggregator reading public APIs alone cannot establish the executable depth of new contracts or attribute changes in open interest to net deposits.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The number of market participants and open interest come from snapshots of different platforms on a single day. These cannot be attributed to each other, nor do they represent actual trading demands.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-13</span>
             <a class="item-src" href="https://perpfinder.com/today/2026-10-13" target="_blank" rel="noopener">PerpFinder ↗</a>
@@ -138,27 +138,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">1win把经营收入写进代币回购机制</h3>
-          <p class="item-b">1win宣布10月15日启动Solana原生1WIN公开销售，固定总供应10亿枚，并称51%供应面向游戏奖励、投注奖励和Telegram分发。</p><p class="item-b">机制同时承诺用既有游戏收入在公开市场回购，并永久销毁支持场景中消费代币的10%；收入来源比储备池更可持续，但回购频率、审计和销售条款仍未完整披露。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>1亿注册玩家是平台自报覆盖，不等于代币购买者、活跃用户或可验证收入规模。</p>
+          <h3 class="item-h">1win ties its token buybacks to operating revenue</h3>
+          <p class="item-b">1win announced that it will launch a public sale of Solana native tokens on October 15th, with a total supply of 1 billion tokens. It was stated that 51% of the supply will be allocated for gaming rewards, betting rewards, and Telegram distribution.</p><p class="item-b">The mechanism also commits existing gaming revenue to open-market buybacks and permanently burns 10% of tokens spent in supported products. Operating revenue could provide a more durable source than a reserve pool, but buyback frequency, audits and sale terms have yet to be fully disclosed.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>100 million registered players are reported by the platform. This does not equal token buyers, active users, or verifiable revenue levels.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-13</span>
             <a class="item-src" href="https://cryptocompass.com/articles/1win-announces-upcoming-public-sale-for-1win-token-13-oct" target="_blank" rel="noopener">CryptoCompass ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">ChainGPT用锁定期决定IDO分配权重</h3>
-          <p class="item-b">ChainGPT Pad更新质押池，11个池全部使用BNB Chain上的CGPT，锁定从45天到3年，对应1倍到3倍的Launchpad tier积分乘数。</p><p class="item-b">平台把代币销售额度与长期锁仓绑定，而不是只按先到先得分配；页面显示质押总锁仓约211万美元，但没有给出各档人数、实际IDO分配率或退出成本。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>最长锁定相对最短档增加约24倍时长，只换得3倍积分，机会成本并非线性补偿。</p>
+          <h3 class="item-h">ChainGPT uses lockup duration to determine IDO allocation weights</h3>
+          <p class="item-b">ChainGPT Pad has updated its pledge pool. All 11 pools now use CGPT on the BNB Chain. The lock period ranges from 45 days to 3 years, with corresponding credit multiplier factors ranging from 1 to 3 times the Launchpad tier.</p><p class="item-b">The platform ties token sale allocations to long-term staking. Its page showed about $2.11 million in staking TVL but gave no participant counts by tier, realized IDO allocation rates or exit costs.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The longest lock period is about 24 times longer than the shortest period. However, this only results in a 3-fold increase in points. Opportunity costs are not linearly compensated.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-12</span>
             <a class="item-src" href="https://help.chaingpt.org/article/chaingpt-pad-staking-pools" target="_blank" rel="noopener">ChainGPT Help Center ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">VAYLA把首发拆成竞价、交易和提现三步</h3>
-          <p class="item-b">KuCoin为VAYLA安排一小时集合竞价，随后开放VAYLA/USDT现货和多类交易机器人，并把提现延后到次日同一时刻。</p><p class="item-b">这种生命周期把开盘价格发现、二级交易和资产外流分开，减少首分钟连续撮合压力，但公告没有披露首发供应、竞价限额、做市承诺或解锁安排。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>入金、竞价与交易已开放，提现于10月14日开放，发行端持仓分布仍不可见。</p>
+          <h3 class="item-h">VAYLA separates launch into bidding, trading and withdrawals</h3>
+          <p class="item-b">KuCoin has arranged a one-hour auction for VAYLA. Subsequently, VAYLA/USDT spot trading and various types of trading robots will be available. Withdrawals will be postponed until the same time the next day.</p><p class="item-b">This lifecycle separates price discovery, secondary trading, and asset outflows, reducing the pressure of continuous matching in the first minute. However, the announcement does not disclose details such as initial supply, bidding limits, market-making commitments, or unlocking arrangements.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Deposits, bidding, and trading are available. Withdrawals will be available on October 14. The distribution of holdings at the issuance end remains invisible.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-12</span>
             <a class="item-src" href="https://www.kucoin.com/announcement/en-world-premiere-vayla-vayla-listed-on-kucoin" target="_blank" rel="noopener">KuCoin ↗</a>
@@ -176,27 +176,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Ledger确认硬件植入物可窃取助记词</h3>
-          <p class="item-b">Ledger确认经CryptoBilis售出的设备内有带eSIM的LTE植入物，可在初始化时读取屏幕上的24词恢复短语并外传，且不需要修改Secure Element或系统软件。</p><p class="item-b">MediaMarkt随后暂停欧洲销售，Trezor和OneKey也收紧经销授权；安全边界由设备芯片扩展到装配、仓储、退货与经销链，现有链上损失估算仍未获Ledger确认。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>已确认的是特定经销渠道中的植入物，受影响设备数与损失总额尚未核实，不能外推到全部官方直售设备。</p>
+          <h3 class="item-h">Ledger confirms that hardware implants put recovery phrases at risk</h3>
+          <p class="item-b">Ledger confirmed that a tampered device sold through CryptoBilis could expose a 24-word recovery phrase. The investigation identified a cellular hardware implant and found no change to the Secure Element or device software.</p><p class="item-b">MediaMarkt subsequently suspended European sales, and Trezor and OneKey tightened reseller authorization. The incident widened the review beyond the device chip to assembly, storage, returns and distribution. Ledger had not confirmed the onchain estimates of losses.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>It has been confirmed that implants are used in specific distribution channels. The number of affected devices and total losses have not been verified yet. Therefore, it cannot be extrapolated to all official direct sales devices.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-13</span>
-            <a class="item-src" href="https://www.theblock.co/news/business/2026-10-13-ledger-confirms-hardware-implant-cryptobilis-reseller-units-mediamarkt-suspends-sales-europe-418442" target="_blank" rel="noopener">The Block ↗</a><a class="item-src item-ref" href="https://decrypt.co/380826/ledger-finds-lte-implant-that-stole-recovery-phrases-in-suspected-86m-drain" target="_blank" rel="noopener">补充：Decrypt · 10-13 ↗</a>
+            <a class="item-src" href="https://www.theblock.co/news/business/2026-10-13-ledger-confirms-hardware-implant-cryptobilis-reseller-units-mediamarkt-suspends-sales-europe-418442" target="_blank" rel="noopener">The Block ↗</a><a class="item-src item-ref" href="https://decrypt.co/380826/ledger-finds-lte-implant-that-stole-recovery-phrases-in-suspected-86m-drain" target="_blank" rel="noopener">Additional source: Decrypt · 10-13 ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Privy把可编程钱包接入XRP Ledger</h3>
-          <p class="item-b">Privy与Ripple合作支持开发者程序化创建和管理XRPL钱包、签署交易，并使用XRP、RLUSD和其他链上资产。</p><p class="item-b">嵌入式钱包让支付应用和Agent无需用户逐次管理密钥即可持有和转移资金，同时保留私钥与助记词导出；这降低接入摩擦，也把服务器权限和交易审批变成新的控制点。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>合作和开发能力已公布，页面没有给出正式可用时间、生产客户、交易量或Agent支付失败率。</p>
+          <h3 class="item-h">Privy brings programmable wallets to the XRP Ledger</h3>
+          <p class="item-b">Privy collaborates with Ripple to support developers in programmatically creating and managing XRPL wallets, signing transactions, and using XRP, RLUSD, and other on-chain assets.</p><p class="item-b">Embedded wallets allow payment applications and agents to hold and transfer funds without the need for users to manage keys individually. This reduces friction in integration, and it also transforms server permissions and transaction approvals into new control points.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The capabilities for cooperation and development have been announced. However, no official availability time, production customers, trading volumes, or agent payment failure rates are provided on the page.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-13</span>
             <a class="item-src" href="https://privy.io/blog/building-payments-and-agentic-commerce-with-the-xrp-ledger" target="_blank" rel="noopener">Privy ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Binance关停矿池和云挖矿服务</h3>
-          <p class="item-b">Binance计划11月10日停止矿池、Pool Savings、云挖矿和交易加速器，同时关闭相关API与连接端点，用户需迁移算力并赎回活动仓位。</p><p class="item-b">历史数据和结算状态只保留到11月24日，说明退出不仅是隐藏入口，还包括奖励停止、接口下线和有限的数据迁移窗口；平台资源则继续转向股票衍生品和AI交易工具。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>公告未披露矿池份额、受影响用户数、待结算余额或资源转移规模。</p>
+          <h3 class="item-h">Binance closes its mining pool and cloud mining services</h3>
+          <p class="item-b">Binance plans to stop mining pools, Pool Savings, cloud mining, and trading accelerators on November 10th. Related APIs and connection endpoints will also be closed. Users must migrate their computing power and redeem their active positions.</p><p class="item-b">Historical data and settlement status are only retained up to November 24th. This indicates that exiting the platform involves not only hiding the entrance but also stopping rewards, disabling interfaces, and having a limited data migration window. Platform resources continue to be allocated to stock derivatives and AI trading tools.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The announcement does not disclose details such as mining pool shares, affected users, outstanding balances, or resource transfer sizes.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-13</span>
             <a class="item-src" href="https://www.theblock.co/news/business/2026-10-13-binance-to-shut-down-mining-pool-cloud-mining-and-related-services-418410" target="_blank" rel="noopener">The Block ↗</a>
@@ -214,27 +214,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Google用真实代码库证明Argon的长任务能力</h3>
-          <p class="item-b">Google上线Gemini 4 Argon，并称其在内部把Agent代码提交提高超过35%、回滚减少近三分之一，还在一夜间把ADK长会话准备时间降低40%。</p><p class="item-b">模型通过Gemini API、Antigravity、Gemini应用和搜索AI Mode分发，复杂编码从基准进入真实仓库；但效率数字来自Google自有团队，尚缺外部复现和统一失败率。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>首发价为每百万输入2美元、输出10美元，11月30日后计划翻倍，成本结论需要按正式价格重算。</p>
+          <h3 class="item-h">Google evaluates Argon’s long-running task performance on real codebases</h3>
+          <p class="item-b">Google launched Gemini 4 Argon. It was reported that the agent code has been improved by more than 35%, and the number of rollbacks has been reduced by nearly one-third. Additionally, the preparation time for long sessions using ADK was reduced by 40% overnight.</p><p class="item-b">The model is distributed through Gemini API, Antigravity, Gemini applications, and Search AI Mode. The complex coding process moves from the benchmark to the real-world environment. However, the efficiency numbers come from Google’s own team, and there is a lack of external reproducibility and a unified failure rate.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The initial price is $2 per million inputs, with an output of $10. Plans are to double this price after November 30th. The cost conclusion needs to be recalculated based on the official price.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-13</span>
             <a class="item-src" href="https://blog.google/intl/en-mena/product-updates/explore-get-answers/gemini-4-argon-built-to-solve-your-hardest-problems/" target="_blank" rel="noopener">Google ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Workday让外部Agent沿用HR和财务权限</h3>
-          <p class="item-b">Workday全面开放Agent Harness、MCP工具、Custom Agents和Developer Agent，第三方模型和框架接入后仍沿用现有用户权限、业务审批与审计轨迹。</p><p class="item-b">（前沿模型评估线 · 自09-18 · 第9个进展）生产治理开始从提示词扩展到系统记录层，但动作前按公司政策再次校验的Grounded Reasoning仍计划于2027年初早期开放，不能把已上线审计与未来阻断能力混为一谈。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>Harness与核心工具已正式可用，Context Service和Grounded Reasoning仍处早期开放计划。</p>
+          <h3 class="item-h">Workday applies existing HR and finance permissions to external agents</h3>
+          <p class="item-b">Workday fully opens up Agent Harness, MCP tools, Custom Agents, and Developer Agents. Even after third-party models and frameworks are integrated, existing user permissions, business approvals, and audit trails remain in place.</p><p class="item-b">In the ninth development tracked since September 18, production governance is expanding beyond prompts into system records. Auditing is live. Grounded Reasoning, which checks actions against company policies before execution, is slated for early access in early 2027. Its ability to block actions remains prospective.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Harness and core tools are now officially available. Context Service and Grounded Reasoning are still in the early stages of development.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-13</span>
             <a class="item-src" href="https://newsroom.workday.com/2026-10-13-Workdays-Trusted-Agent-Platform-Now-Delivers-Headless-Access-to-HR-and-Finance,-Letting-Customers-Build-and-Run-Lawful-AI-Agents" target="_blank" rel="noopener">Workday ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Anthropic为Agent规模重写源码管理</h3>
-          <p class="item-b">Anthropic称代码合并量从5月日均约2500次升至9月超过3万次，原有Git镜像和克隆路径成为瓶颈，因此用五个月迁移到内部系统Scion。</p><p class="item-b">Scion把提交、合并、历史和稀疏读取集中到可水平扩展服务，Agent和CI可经API读取差异而无需完整仓库；变化说明AI编码的瓶颈已从生成转向审阅、存储、权限与回滚基础设施。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>其主分支历史接近100GB、CI每日约2500万次检出，是极端内部规模，不能直接外推到普通团队。</p>
+          <h3 class="item-h">Anthropic redesigns source control to handle agents at scale</h3>
+          <p class="item-b">Anthropic said daily code merges rose from about 2,500 in May to more than 30,000 in September. Its existing Git mirrors and clone paths became bottlenecks. The company spent five months migrating to its internal Scion system.</p><p class="item-b">Scion consolidates submission, merging, historical data, and sparse reads into a horizontally scalable service. Agents and CI can read differences through the API without requiring a complete repository. The bottleneck in AI coding has shifted from generation to review, storage, permissions, and rollback infrastructure.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The main branch has a history of nearly 100GB. CI is checked approximately 25 million times per day. This is an extremely large internal scale, and it cannot be directly extrapolated to ordinary teams.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-13</span>
             <a class="item-src" href="https://www.anthropic.com/engineering/redesigning-source-control" target="_blank" rel="noopener">Anthropic ↗</a>
@@ -242,7 +242,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

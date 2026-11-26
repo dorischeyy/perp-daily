@@ -1,11 +1,11 @@
 name: Feed Health
 
-# RSS 源会静默失活（DL News 已关停、Blockworks 停更）。每周抓一遍 config/sources.json 的 feeds.rss，
-# 有失活/陈旧/不可达就让本 Action 失败 → GitHub 自动邮件通知仓库 owner + Actions 页变红。
-# 不发飞书/Slack（那两个渠道只用于接收日报，不放运维告警）。
+# Check the configured RSS feeds weekly for availability and recent entries.
+# A failed job reports stale or unreachable feeds through GitHub.
+# Keep operational alerts out of the report delivery channels.
 on:
   schedule:
-    - cron: '0 1 * * 1'    # UTC 01:00 周一 = 北京 09:00 周一
+    - cron: '0 1 * * 1'    # Monday, 09:00 in Beijing.
   workflow_dispatch: {}
 
 concurrency:
@@ -20,5 +20,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: 检查 RSS 源健康（失活则本步失败 → GitHub 通知）
+      - name: Check RSS feed availability and freshness
         run: node lib/check-feeds.mjs

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "A Chinese-language daily research publication by Doris covering perpetual futures, crypto market infrastructure, and AI.",
+  "description": "An independent daily research publication by Doris covering perpetual futures, crypto market infrastructure, and AI.",
   "author": "Doris (https://github.com/dorischeyy)",
   "scripts": {
     "test": "node --test test/*.test.mjs",

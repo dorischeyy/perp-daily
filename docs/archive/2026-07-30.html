@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-07-30</title>
+<title>Perp DEX Daily · 2026-07-30</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 37 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 37</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 7 月 30 日 · 星期四</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">July 30, 2026 · Thursday</div>
     </header>
-    <p class="lead">Trade.xyz 的 SK Hynix 永续因同一笔外部异常成交穿透多家报价源而触发清算，Binance 则在受监管场所把黄金、白银的 USDT 期权按零售只买、机构可卖的权限分层推出，多资产衍生品竞争正在从标的覆盖转向价格质量与风险承担方式。</p>
+    <p class="lead">An anomalous external trade reached multiple price feeds and triggered liquidations in Trade.xyz’s SK Hynix perpetual. Binance introduced USDT options on gold and silver at a regulated venue, limiting retail participants to buying while allowing institutions to sell. The decisions show how price quality and trading permissions allocate risk.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,9 +110,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">SK Hynix 外部异常成交穿透多家报价源，Trade.xyz 为清算损失兜底</h3>
-          <p class="item-b"><strong>事件</strong>：（股票永续矩阵线，自 06-12，第 13 个进展）Trade.xyz 07-29 宣布赔付符合条件的 SKHYNIX 永续清算损失，此前一笔外部市场成交被多家独立数据商转发，令标记价从 1127.90 美元跌至 917.25 美元，跌幅接近 19%。</p><p class="item-b"><strong>机制</strong>：预言机按既定规格把韩国盘前市场的韩元成交换算为美元，一笔真实但异常的外部成交因此同时进入多家报价源，再通过标记价格参与保证金估值和清算；Trade.xyz 正考虑提高自身订单簿价格的权重。</p><p class="item-b"><strong>二阶效应</strong>：数据商数量不等于价格来源独立，同一原始成交可以被多路重复确认；当系统按规则工作却产生需要人工赔付的清算结果，市场还缺少异常成交识别、清算暂停与事后损失分配的预设边界。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>报道抓取时该合约 24 小时成交超过 15 亿美元、OI 接近 6 亿美元；赔付人数与总额尚未披露，无法判断实际清算损失占 OI 的比例。</p>
+          <h3 class="item-h">Trade.xyz offers compensation after an anomalous external SK Hynix trade affects multiple price feeds</h3>
+          <p class="item-b"><strong>Event</strong>: On July 29, Trade.xyz said it would cover eligible SKHYNIX perpetual liquidation losses. Several data providers had relayed the same external trade, and the mark price fell from $1,127.90 to $917.25, nearly 19%. This was the thirteenth development tracked since June 12.</p><p class="item-b"><strong>Mechanism</strong>: The oracle converted Korean pre-market trades from won to dollars under its published specification. Multiple data suppliers relayed one anomalous trade into the mark used for margin and liquidation. Trade.xyz was considering giving its own order-book prices more weight.</p><p class="item-b"><strong>Second-order effects</strong>: Multiple vendors can report the same underlying trade, so vendor count alone does not establish price-source independence. The episode exposed the need for clear rules on outlier detection, liquidation pauses and how losses are allocated afterward.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>At the time of reporting, the contract had traded more than $1.5 billion in 24 hours, with open interest near $600 million. The number of traders compensated and the total amount remained undisclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-29</span>
             <a class="item-src" href="https://cointelegraph.com/markets/trade-xyz-sk-hynix-perp-liquidations-price-anomaly" target="_blank" rel="noopener">Cointelegraph ↗</a>
@@ -131,9 +131,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Binance 在 ADGM 受监管场所上线黄金、白银期权，零售端只能买不能卖</h3>
-          <p class="item-b">Binance 07-29 宣布由 ADGM 监管的 Nest Exchange 上线 USDT 结算黄金、白银期权，零售用户只能买入，合格机构与流动性提供者可以卖出，合约不涉及实物交割。</p><p class="item-b">同一平台已提供黄金、白银永续，新增期权把零售最大损失限制为权利金，并把裸卖与做市风险留给具备资格的参与者；商品敞口竞争由线性杠杆扩展到按用户能力分层的非线性风险产品。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>首批只覆盖黄金与白银，公告未披露具体开盘时间、到期结构、成交、OI 或做市深度，现阶段只能确认产品与权限框架。</p>
+          <h3 class="item-h">Binance offers gold and silver options at its ADGM-regulated venue, with retail clients restricted to buying options</h3>
+          <p class="item-b">On July 29, Binance announced USDT-settled gold and silver options on ADGM-regulated Nest Exchange. Retail clients may buy options. Qualified institutions and liquidity providers may also sell them. The contracts do not involve physical delivery.</p><p class="item-b">Nest already offered gold and silver perpetuals. Limiting retail customers to purchasing options caps their maximum loss at the premium, while qualified participants take on writing and market-making risk. This expands commodity exposure from linear leveraged positions to options with permissions tailored to the participant.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The initial offering covers gold and silver. The announcement did not provide an opening time, expiry structure, volume, open interest, or quoted depth. It establishes the product and access framework.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-29</span>
             <a class="item-src" href="https://cointelegraph.com/news/binance-launches-regulated-gold-silver-options-through-adgm-exchange" target="_blank" rel="noopener">Cointelegraph ↗</a>
@@ -145,15 +145,15 @@
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product assessment</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">风控与清算</div>
-          <h3 class="item-h">多家报价商不能替代对同源异常成交的识别</h3>
-          <p class="item-b"><strong>判断变化</strong>：从“多家数据商给出一致价格即可提高标记价置信度”更新为“必须先确认报价是否来自彼此独立的原始市场，同一异常成交被多路转发不能算多重确认”。</p><p class="item-b"><strong>证据与边界</strong>：SKHYNIX 的预言机按规格运行，异常外部成交仍穿透多家数据商并触发近 19% 标记价下跌；单一个案不能证明某个数据商或盘前市场长期失真，赔付规模也尚未披露。</p>
+          <div class="decision-area">Risk Control and Settlement</div>
+          <h3 class="item-h">Multiple data vendors can relay a single anomalous underlying trade</h3>
+          <p class="item-b"><strong>Revised assessment</strong>: Agreement among price vendors increases confidence only if their underlying markets are independent. Several feeds can relay the same unusual trade.</p><p class="item-b"><strong>Evidence and limits</strong>: The SKHYNIX oracle operated as specified, yet multiple vendors passed through one trade and the mark price fell nearly 19%. One event does not establish persistent distortion by a vendor or the market, and compensation totals remained undisclosed.</p>
 
           <div class="item-meta">
 
@@ -162,7 +162,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

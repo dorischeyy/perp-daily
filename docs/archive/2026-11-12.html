@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-11-12</title>
+<title>Perp DEX Daily · 2026-11-12</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -100,41 +100,41 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 130 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 130</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 11 月 12 日 · 星期四</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">November 12, 2026 · Thursday</div>
     </header>
-    <p class="lead">xStocks一次把200多只英欧股票带上链，Pyth同时接入五家NYSE市场的实时行情。链上股票供给与官方价格数据正在同步扩张。</p>
+    <p class="lead">xStocks brought more than 200 UK and EU equities onchain, while Pyth added real-time data from five NYSE markets. Both the range of tokenized equities and access to official pricing data are expanding.</p>
 
 
       <section class="sec sec-tokenized-equities-infrastructure">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">代币化股票与价格基础设施</h2>
+            <h2 class="sec-title">Tokenized equities and pricing infrastructure</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月11日，xStocks把200多只英国和欧盟股票带上链</h3>
-          <p class="item-b">Payward与GTN首批发行200多只英国和欧盟股票代币，每枚由受监管托管方持有的底层股票一比一支持，并从首日起进入Kraken、联盟平台及多条链。xStocks总资产数由此超过1500只，但英国和美国投资者仍不能使用。</p>
+          <h3 class="item-h">November 11th, xStocks added over 200 British and EU stocks to the blockchain.</h3>
+          <p class="item-b">Payward and GTN issued an initial batch of more than 200 tokens representing UK and EU equities. Each is backed 1:1 by shares held by a regulated custodian. They were available on Kraken, partner platforms and multiple chains from day one. xStocks now covers more than 1,500 assets, although the products remain unavailable to UK and U.S. investors.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.payward.com/press-release/xstocks-uk-eu-equities" target="_blank" rel="noopener" title="Payward · 发布 2026-11-11" aria-label="来源 1：Payward · 发布 2026-11-11">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.payward.com/press-release/xstocks-uk-eu-equities" target="_blank" rel="noopener" title="Payward · Published 2026-11-11" aria-label="Source 1: Payward · Published 2026-11-11">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月11日，Pyth接入五家NYSE市场的实时股票行情</h3>
-          <p class="item-b">Pyth成为NYSE BQT分发方，向获许可客户提供五家NYSE集团市场的最优买卖价、成交、官方收盘价及停牌恢复状态。股票永续和代币化平台可把原始市场状态与Pyth全天指数并列使用，但接入仍需直接取得NYSE许可。</p>
+          <h3 class="item-h">November 11th, Pyth integrated with five NYSE markets’ real-time stock data.</h3>
+          <p class="item-b">As a distributor of NYSE BQT, Pyth provides licensed customers with the best bid and offer, trades, official closing prices, and trading halt and resumption status from five NYSE Group markets. Equity perpetuals and tokenization platforms can use this cash-market status alongside Pyth’s round-the-clock indices. Access still requires a license directly from NYSE.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.pyth.network/blog/pyth-network-adds-nyse-data-to-pyth-data-marketplace" target="_blank" rel="noopener" title="Pyth Network · 发布 2026-11-11" aria-label="来源 1：Pyth Network · 发布 2026-11-11">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.pyth.network/blog/pyth-network-adds-nyse-data-to-pyth-data-marketplace" target="_blank" rel="noopener" title="Pyth Network · Published 2026-11-11" aria-label="Source 1: Pyth Network · Published 2026-11-11">1</a>
           </div>
         </article>
         </div>
@@ -143,39 +143,39 @@
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <h2 class="sec-title">永续产品与分发入口</h2>
+            <h2 class="sec-title">Perpetuals products and distribution channels</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月11日，Decrypt把Phoenix永续交易嵌入新闻页面</h3>
-          <p class="item-b">Decrypt已把Phoenix的100多个永续市场接入站内，读者用同一自托管Solana账户余额即可交易加密、股票、商品和盘前标的，无需离开新闻页或另连钱包。媒体开始直接承接交易入口，撮合与流动性仍由Phoenix负责。</p>
+          <h3 class="item-h">November 11th, Decrypt embedded Phoenix perpetual contracts into news pages.</h3>
+          <p class="item-b">Decrypt integrated more than 100 Phoenix perpetual markets into its site. Readers can use the same self-custodial Solana account balance to trade crypto, equity, commodity and premarket instruments without leaving the news page or connecting another wallet. Decrypt provides the trading interface. Phoenix handles order matching and liquidity.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://decrypt.co/382992/decrypt-becomes-first-news-publisher-to-offer-perps-trading-powered-by-solanas-phoenix" target="_blank" rel="noopener" title="Decrypt · 发布 2026-11-11" aria-label="来源 1：Decrypt · 发布 2026-11-11">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://decrypt.co/382992/decrypt-becomes-first-news-publisher-to-offer-perps-trading-powered-by-solanas-phoenix" target="_blank" rel="noopener" title="Decrypt · Published 2026-11-11" aria-label="Source 1: Decrypt · Published 2026-11-11">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月11日，Bybit上线Dangote盘前永续并预设股本重置</h3>
-          <p class="item-b">Bybit上线DANGOTEUSDT盘前永续，最高五倍杠杆，盘前阶段每四小时固定收取0.005%资金费。合约先按估算股本定价，正式股本披露后平台可按比例重置为一份合约对应一股；若IPO取消，结算价由平台规则决定。</p>
+          <h3 class="item-h">November 11: Bybit lists Dangote pre-IPO perpetuals with an adjustment planned once actual shares outstanding are disclosed</h3>
+          <p class="item-b">Bybit listed the DANGOTEUSDT premarket perpetual with up to 5x leverage and a fixed 0.005% funding rate every four hours during premarket trading. Initial pricing uses estimated shares outstanding. Once actual shares outstanding are disclosed, Bybit can adjust the contract proportionally so that one contract corresponds to one share. If the IPO is canceled, the platform’s rules determine the settlement price.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://announcements.bybit.com/en/article/new-listing-listing-of-dangoteusdt-on-bybit-pre-ipo-tradfi-perpetual-on-nov-11-2026-11-00am-utc--art6ad921fb4a95/" target="_blank" rel="noopener" title="Bybit · 发布 2026-11-11" aria-label="来源 1：Bybit · 发布 2026-11-11">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://announcements.bybit.com/en/article/new-listing-listing-of-dangoteusdt-on-bybit-pre-ipo-tradfi-perpetual-on-nov-11-2026-11-00am-utc--art6ad921fb4a95/" target="_blank" rel="noopener" title="Bybit · Published 2026-11-11" aria-label="Source 1: Bybit · Published 2026-11-11">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月11日，Binance公布两只新的TradFi永续合约</h3>
-          <p class="item-b">Binance公布NUUSDT与FRHCUSDT，将于11月12日以USDT结算、最高20倍杠杆并支持多资产模式和全天交易。两只合约每八小时结算资金费，费率上限为正负2%；公告给出交易参数，但尚未提供深度、持仓或休市定价表现。</p>
+          <h3 class="item-h">November 11th, Binance announced two new TradFi perpetual contracts.</h3>
+          <p class="item-b">Binance announced that NUUSDT and FRHCUSDT would launch on November 12 with USDT settlement, up to 20x leverage, multi-assets mode and round-the-clock trading. Funding settles every eight hours, with rates capped at ±2%. The announcement specifies contract terms. It provides no evidence yet on market depth, open interest or pricing when the underlying markets are closed.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.bh/en/support/announcement/detail/e7a88ff576b541608d0845f3b666ec66" target="_blank" rel="noopener" title="Binance · 发布 2026-11-11" aria-label="来源 1：Binance · 发布 2026-11-11">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.binance.bh/en/support/announcement/detail/e7a88ff576b541608d0845f3b666ec66" target="_blank" rel="noopener" title="Binance · Published 2026-11-11" aria-label="Source 1: Binance · Published 2026-11-11">1</a>
           </div>
         </article>
         </div>
@@ -184,44 +184,44 @@
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <h2 class="sec-title">AI模型与分发工具</h2>
+            <h2 class="sec-title">AI models and distribution tools</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月11日，Qwen4-Max预览版开放多模态与Agent能力</h3>
-          <p class="item-b">QwenCloud开放Qwen4-Max-Preview，支持文本、图片和视频理解、深度推理、联网搜索、工具调用与结构化输出，并兼容OpenAI和Anthropic接口。当前仅通过Token Plan提供，仍属预览版，官方尚未给出独立基准和按量价格。</p>
+          <h3 class="item-h">November 11th, Qwen4-Max preview version introduced multi-modal and agent capabilities.</h3>
+          <p class="item-b">QwenCloud has made Qwen4-Max-Preview available. This tool supports text, image, and video understanding, deep reasoning, online search, tool invocation, and structured output. It is compatible with both OpenAI and Anthropic interfaces. Currently, it is only available through the Token Plan. It remains in a preview version, and the official has not yet provided independent benchmarks or pay-as-you-go pricing.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://docs.qwencloud.com/changelog/models" target="_blank" rel="noopener" title="QwenCloud · 发布 2026-11-11" aria-label="来源 1：QwenCloud · 发布 2026-11-11">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://docs.qwencloud.com/changelog/models" target="_blank" rel="noopener" title="QwenCloud · Published 2026-11-11" aria-label="Source 1: QwenCloud · Published 2026-11-11">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月10日，ChatGPT开放企业资料管理与Business Agent</h3>
-          <p class="item-b">OpenAI测试Businesses in ChatGPT，企业可认领资料、更新价格与库存并查看被提及和点击的聚合数据。符合条件的美国电商和在线服务商还能上线独立标注的Business Agent承接咨询，并可把它设为广告落地页。</p>
+          <h3 class="item-h">November 10: ChatGPT tests business profiles and customer-facing Business Agents</h3>
+          <p class="item-b">OpenAI is testing Businesses in ChatGPT. Companies can claim a profile, update prices and inventory, and see aggregate mentions and clicks. Eligible U.S. e-commerce and online service providers can also launch a separately labeled Business Agent to answer customer questions and use it as the landing page for an advertisement.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/introducing-businesses-chatgpt/" target="_blank" rel="noopener" title="OpenAI · 发布 2026-11-10" aria-label="来源 1：OpenAI · 发布 2026-11-10">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://openai.com/index/introducing-businesses-chatgpt/" target="_blank" rel="noopener" title="OpenAI · Published 2026-11-10" aria-label="Source 1: OpenAI · Published 2026-11-10">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月11日，Vercel AI Gateway接入Gemini Decision 1</h3>
-          <p class="item-b">Vercel AI Gateway接入Gemini Decision 1，可对文本、图片、音频、视频和PDF返回布尔概率、选项或评分，用于请求路由、策略检查和Agent工具过滤，不生成普通文本token。调用记录会与其他模型一起进入日志和预算。</p>
+          <h3 class="item-h">On November 11th, Vercel AI Gateway was integrated with Gemini Decision 1.</h3>
+          <p class="item-b">Vercel AI Gateway has been integrated with Gemini Decision 1. This tool can return boolean probabilities, options, or scores for text, images, audio, video, and PDFs. It can be used for request routing, policy checking, and filtering with agent tools. It does not generate regular text tokens. Call records will be logged together with other models in logs and budgets.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://vercel.com/changelog/gemini-decision-1-now-available-on-ai-gateway" target="_blank" rel="noopener" title="Vercel · 发布 2026-11-11" aria-label="来源 1：Vercel · 发布 2026-11-11">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://vercel.com/changelog/gemini-decision-1-now-available-on-ai-gateway" target="_blank" rel="noopener" title="Vercel · Published 2026-11-11" aria-label="Source 1: Vercel · Published 2026-11-11">1</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-10-02</title>
+<title>Perp DEX Daily · 2026-10-02</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -82,12 +82,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 94 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 94</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 10 月 2 日 · 星期五</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">October 2, 2026 · Friday</div>
     </header>
-    <p class="lead">Robinhood把Arcus流动性接进钱包，Coinbase把永续底层迁往Deribit，SEC则为机构自托管提出条件化合规路径。</p>
+    <p class="lead">Robinhood connected Arcus liquidity to its wallet, Coinbase began moving its perpetuals infrastructure to Deribit, and the SEC proposed a conditional compliance route for institutional self-custody.</p>
 
 
       <section class="sec sec-perpdex">
@@ -100,27 +100,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Robinhood Wallet接入Arcus股票代币RFQ路由</h3>
-          <p class="item-b"><strong>事件</strong>：Robinhood Wallet把Arcus API接为股票代币兑换的多家路由商之一，覆盖190多只股票代币；Arcus的永续市场仍处于beta阶段。</p><p class="item-b"><strong>机制</strong>：Arcus用询价模式让专业做市商竞争报价，而非把交易集中到单一流动性池；这让Robinhood分发线从钱包内展示继续推进到第三方执行路由，但永续交付仍未完成。（Robinhood Chain分发线，自07-02，本次新增Arcus生产路由）</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>Arcus披露的累计成交超过50亿美元、1.5万名交易者和2800万美元TVL均为项目方口径，未拆分本次钱包集成带来的新增量。</p>
+          <h3 class="item-h">Robinhood Wallet integrates Arcus RFQ routing for equity tokens</h3>
+          <p class="item-b"><strong>Event</strong>: Robinhood Wallet added the Arcus API as one of several routing providers for equity-token swaps, covering more than 190 equity tokens. Arcus’s perpetual markets remain in beta.</p><p class="item-b"><strong>Mechanism</strong>: Arcus uses RFQs so professional market makers compete on quotes. The wallet integration adds a production execution route beyond displaying tokens, but perpetuals have yet to ship there. It updates the Robinhood Chain distribution story tracked since July 2.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Arcus disclosed that the cumulative transaction volume exceeded 5 billion USD, with 15,000 traders and a TVL of 28 million USD. These figures are based on project-specific metrics, and the additional volume resulting from this wallet integration was not included.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-01</span>
             <a class="item-src" href="https://www.theblock.co/news/business/2026-10-01-robinhood-wallet-integrates-arcus-rfq-system-for-stock-token-swaps-417394" target="_blank" rel="noopener">The Block ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Hyperliquid政策机构要求欧盟按衍生品而非MiCA监管永续</h3>
-          <p class="item-b"><strong>事件</strong>：Hyperliquid Policy Center向欧盟委员会提交MiCA复审意见，主张永续应按经济实质归入MiFID II衍生品，而不是因记录在公链上就归入MiCA。</p><p class="item-b"><strong>机制</strong>：文件要求逐项而非按交易场所定性，并区分订单簿永续与平台充当对手方的CFD；同时建议场所事前公开资金费算法、维持保证金和清算阈值。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>这是咨询意见而非欧盟规则，委员会是否采纳、如何适用于链上前端和市场创建者仍未确定。</p>
+          <h3 class="item-h">Hyperliquid policy group urges the EU to regulate perpetuals as derivatives outside MiCA</h3>
+          <p class="item-b"><strong>Event</strong>: The Hyperliquid Policy Center submitted comments to the European Commission’s MiCA review. It argued that perpetuals should be classified as MiFID II derivatives according to their economic substance, regardless of whether their records are on a public blockchain.</p><p class="item-b"><strong>Mechanism</strong>: The submission calls for classification instrument by instrument and distinguishes order book perpetuals from CFDs where the platform is the counterparty. It also recommends advance disclosure of funding formulas, maintenance margin and liquidation thresholds.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>This is merely an advisory opinion, not EU regulations. It remains uncertain whether the committee will adopt this approach and how it will be applied to on-chain frontends and market creators.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-30</span>
             <a class="item-src" href="https://hyperliquidpolicy.org/micaresponse/2026-09-30_hpc_mica_review_consultation_response.pdf" target="_blank" rel="noopener">Hyperliquid Policy Center ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Coinbase International把永续执行与资金费迁往Deribit</h3>
-          <p class="item-b"><strong>事件</strong>：Coinbase International原有永续由Coinbase承接客户关系与抵押品，底层交易、持仓和执行迁入Deribit；迁移窗口内预计停机约60分钟并撤销未成交订单。</p><p class="item-b"><strong>机制</strong>：持仓会按参考价结算后重建，API从Coinbase接口切到Deribit JSON-RPC；资金费由按小时收付改为连续计提、每日08:00 UTC结算，并加入零费率区间和分资产上限。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>账户和抵押品关系仍在Coinbase，迁移先覆盖永续；期权将在10月后续阶段迁入，实际流动性与故障恢复尚待验证。</p>
+          <h3 class="item-h">Coinbase International moves perpetual execution and funding to Deribit</h3>
+          <p class="item-b"><strong>Event</strong>: Coinbase International originally handled customer relationships and collateral management for perpetual contracts. The underlying transactions, positions, and executions were transferred to Deribit. It is expected that there will be a downtime of about 60 minutes during the migration process, and unexecuted orders will be canceled.</p><p class="item-b"><strong>Mechanism</strong>: Positions will be re-established after settlement at the reference price. The API will switch from Coinbase to Deribit JSON-RPC. Funding payments will be made continuously, starting at 08:00 UTC every day. A zero-fee range and asset limits will also be introduced.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The relationship between accounts and collateral remains with Coinbase. The migration will first cover perpetual products. Options will be migrated in subsequent phases in October. The actual liquidity and fault recovery have yet to be verified.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-01</span>
             <a class="item-src" href="https://help.coinbase.com/en/international-exchange/deribit/coinbase-faqs" target="_blank" rel="noopener">Coinbase ↗</a>
@@ -138,27 +138,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">RunUp把发射台费用接入INJ永续财库</h3>
-          <p class="item-b"><strong>事件</strong>：RunUp在Injective上线发射台并启动RUNNER公开发行，白名单阶段限333个名额，随后开放公共参与。</p><p class="item-b"><strong>机制</strong>：平台把费用注入一套通过Injective RFQ执行的2倍INJ多头财库，再把策略利润用于RUNNER回购销毁，使发射收入、永续敞口和代币供给形成闭环。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>公告没有披露财库初始资金、止损和清算边界，回购规模完全取决于发射量与永续策略盈亏。</p>
+          <h3 class="item-h">RunUp channels launchpad fees into an INJ perpetual treasury</h3>
+          <p class="item-b"><strong>Event</strong>: RunUp launched its launch pad on Injective and started the public issuance of RUNNER. There are only 333 spots available in the whitelist phase, and public participation will be open later.</p><p class="item-b"><strong>Mechanism</strong>: The platform directs fees into a treasury that takes a 2x long INJ position through Injective RFQs. Profits from that strategy fund RUNNER buybacks and burns, linking launch revenue to perpetual exposure and token supply.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The announcement did not disclose the treasury’s initial funding, stop-loss rules or liquidation thresholds. Buyback capacity depends entirely on launch volume and profits or losses on its perpetual futures strategy.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-01</span>
             <a class="item-src" href="https://www.tradingview.com/news/coinmarketcal:2aa724111094b:0-injective-runup-launchpad-goes-live-with-runner-public-launch-01-oct-2026/" target="_blank" rel="noopener">TradingView News ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">StonkFun靠股票代币计价拿到Solana发射台收入第二</h3>
-          <p class="item-b"><strong>事件</strong>：StonkFun把发射迁到Raydium LaunchLab后，9月6日至28日占受追踪Solana发射台收入约32%，仅次于Pump的约42%，并曾在单日收入上超过Pump。</p><p class="item-b"><strong>机制</strong>：其差异点是允许新币用代币化股票、ETF、盘前资产或其他代币计价，而非几乎只用SOL；Pump随后加入Custom Pairs，说明竞争已从发币入口转向报价资产选择。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>32%和42%只覆盖报道追踪的13个发射台与9月6日至28日窗口，不能外推为Solana全市场份额。</p>
+          <h3 class="item-h">Equity-token pricing takes StonkFun to second place in Solana launchpad revenue</h3>
+          <p class="item-b"><strong>Event</strong>: After StonkFun transferred its launches to Raydium LaunchLab, from September 6th to 28th, it accounted for approximately 32% of the revenue from tracked Solana launches. This was second only to Pump’s 42%, and it even surpassed Pump in daily revenue.</p><p class="item-b"><strong>Mechanism</strong>: The difference lies in the ability to denominate new coins using tokenized stocks, ETFs, pre-market assets, or other tokens, rather than almost exclusively using SOL. Pump then adds Custom Pairs, indicating that competition has shifted from the coin issuance process to the selection of assets for quotation.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>32% and 42% only cover 13 launches tracked during the period from September 6 to 28. These percentages cannot be extrapolated to Solana’s overall market share.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-30</span>
             <a class="item-src" href="https://blockworks.com/newsletter/0xresearch/issue/post_34c28ba6-d226-4d62-a118-6b6d99a33121" target="_blank" rel="noopener">Blockworks ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Traiq用两类发射台拆分同价IDO准入</h3>
-          <p class="item-b"><strong>事件</strong>：Traiq把TRQ公开IDO日期标为10月1日，并安排在PinkSale或DxSale与ChainGPT Pad同步进行；两处价格均为0.003美元，硬顶75万美元，对应300万美元FDV。</p><p class="item-b"><strong>机制</strong>：BSC原生场允许白名单用户直接从合约购买且不强制KYC，ChainGPT Pad则要求KYC并给白名单固定额度；同价双场把结算路径与准入规则拆开。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>发行页同时写明代币尚未公开分发，页面目标、锁仓和后续收入分配均不能视作已完成募集或已验证需求。</p>
+          <h3 class="item-h">Traiq uses two launchpad types to differentiate access to fixed-price IDOs</h3>
+          <p class="item-b"><strong>Event</strong>: Traiq has set the public IDO date for TRQ as October 1st. It is scheduled to be launched during PinkSale or DxSale, in conjunction with ChainGPT Pad. The price at both events is 0.003 USD, with a hard cap of 750,000 USD, corresponding to 3 million USD in FDV.</p><p class="item-b"><strong>Mechanism</strong>: The BSC native market allows users on a whitelist to purchase contracts directly, without requiring KYC. ChainGPT Pad, however, requires KYC and provides a fixed quota for whitelisted users. The dual-market model separates settlement paths from access rules.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The issuance page states that the currency has not yet been distributed publicly. The page’s objectives, locking mechanisms, and subsequent revenue distribution cannot be considered as completed fundraising or verified needs.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-01</span>
             <a class="item-src" href="https://traiq.io/en/token/" target="_blank" rel="noopener">Traiq ↗</a>
@@ -176,27 +176,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">SEC提出基金与投顾加密资产自托管条件</h3>
-          <p class="item-b"><strong>事件</strong>：SEC提出面向注册投顾、注册基金和业务发展公司的加密资产托管框架，允许在特定条件下自托管，并允许州级信托公司担任托管人。</p><p class="item-b"><strong>机制</strong>：提案同时更新财务审计与经纪商托管要求，试图为此前缺少明确路径的机构策略建立合规入口；正式文本将在联邦公报发布后进入60天评论期。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>当前仍是规则提案，自托管条件、审计责任和州信托公司适用范围需以最终规则为准。</p>
+          <h3 class="item-h">SEC proposes conditions for funds and advisers to self-custody crypto assets</h3>
+          <p class="item-b"><strong>Event</strong>: The SEC has proposed a framework for managing crypto assets for registered investment advisors, fund companies, and business development companies. This framework allows self-hosting under certain conditions, and state-level trust companies can act as custodians.</p><p class="item-b"><strong>Mechanism</strong>: The proposal also updates financial auditing and brokerage custody requirements. It aims to establish compliant pathways for institutions that previously lacked clear paths. The official text will enter a 60-day comment period after being published in the Federal Register.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>This is still a proposal for rules. The self-managed conditions, audit responsibilities, and applicability to state-based trusts will be determined by the final rules.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-01</span>
             <a class="item-src" href="https://www.sec.gov/newsroom/press-releases/2026-100-sec-proposal-would-address-how-investment-advisers-funds-can-custody-crypto-assets-under-federal" target="_blank" rel="noopener">SEC ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">zk.money以双层安全模型重启隐私钱包</h3>
-          <p class="item-b"><strong>事件</strong>：Aztec重启开源自托管钱包zk.money，用户以通行密钥保护标签账户，余额、历史、金额和交易对手默认不进入公开记录。</p><p class="item-b"><strong>机制</strong>：资金从Ethereum进入Aztec后私密流转，再可回到Ethereum；额外的Oxide层由TEE验证代币操作，并与ZK电路采用独立信任假设，避免单一系统故障同时击穿两层。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>旧版首年超过7.5万个钱包和1亿美元交易量只证明历史需求，新版采用、TEE运营去中心化和迁移可靠性尚无数据。</p>
+          <h3 class="item-h">zk.money relaunches its privacy wallet with a two-layer security model</h3>
+          <p class="item-b"><strong>Event</strong>: Aztec relaunched zk.money as an open-source, self-custody wallet. Users protect their tagged accounts with passkeys. Balances, transaction histories, amounts and counterparties stay off the public record by default.</p><p class="item-b"><strong>Mechanism</strong>: Funds flow from Ethereum to Aztec, where they are privately transferred, and can then be returned to Ethereum. An additional Oxide layer ensures that token operations are verified by TEE. The ZK circuit uses a separate trust assumption to prevent a single system failure from affecting both layers.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Over 75,000 wallets and 100 million USD in trading volume in the first year of the old version only proves historical demand. There is no data on the decentralization of new versions, TEE operations, or migration reliability.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-29</span>
             <a class="item-src" href="https://aztec-labs.com/blog/zk-money-is-back.html" target="_blank" rel="noopener">Aztec Labs ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Lloyds与Visa完成USDC跨链结算试点</h3>
-          <p class="item-b"><strong>事件</strong>：Lloyds与Visa完成7天真实结算试点，Lloyds经英国受监管交易所Archax购入USDC，向Visa在美国的结算端转移合计75万美元义务。</p><p class="item-b"><strong>机制</strong>：Lloyds节点运行在Canton私有环境，Visa端使用公链，资金在周末也能于一小时内到账；试点验证的是机构间后台结算，不是消费者支付方式。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>75万美元只是一周试点规模，公告未给出相对传统通道的成本、失败率或正式上线时间。</p>
+          <h3 class="item-h">Lloyds and Visa complete cross-chain USDC settlement pilot</h3>
+          <p class="item-b"><strong>Event</strong>: Lloyds and Visa completed a 7-day real-time settlement pilot. Lloyds purchased USDC through the UK-regulated exchange Archax, transferring a total of 750,000 USD to Visa’s settlement terminal in the US.</p><p class="item-b"><strong>Mechanism</strong>: Lloyds nodes operate in a private environment in Canton. Visa uses a public blockchain for transactions, ensuring that funds can be transferred within one hour on weekends. The pilot test involves inter-agency backend settlement, not consumer payment methods.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>750,000 USD represents only a one-week pilot scale. The announcement does not provide information on the costs associated with traditional channels, failure rates, or the official launch date.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-30</span>
             <a class="item-src" href="https://www.lloydsbankinggroup.com/media/press-releases/2026/lloyds-banking-group/lloyds-and-visa-test-round-the-clock-cross-border-settlement-using-stablecoins.html" target="_blank" rel="noopener">Lloyds Banking Group ↗</a>
@@ -214,27 +214,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">OpenAI披露针对隐藏推理的协同蒸馏攻击</h3>
-          <p class="item-b"><strong>事件</strong>：OpenAI称其识别并阻断一场试图大规模提取受保护推理的协同活动，核心活动集群被归因于与Moonshot AI相关的人员。</p><p class="item-b"><strong>机制</strong>：攻击者没有攻破加密、数据库或直接访问用户对话，而是操纵跨会话模型交互来重现隐藏推理；OpenAI随后限制相关账户、加强流式输出检测并向Frontier Model Forum共享情报。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>1.6万次请求和1.5万多个用户描述的是尝试与关联账户，不等于成功提取量；归因也未覆盖所有操作者。</p>
+          <h3 class="item-h">OpenAI reports coordinated attempts to distill hidden reasoning</h3>
+          <p class="item-b"><strong>Event</strong>: OpenAI said it identified and blocked a coordinated attempt to extract protected reasoning at scale. It attributed the core activity cluster to individuals associated with Moonshot AI.</p><p class="item-b"><strong>Mechanism</strong>: OpenAI reported no direct access to user conversations or compromise of its encryption or databases. It restricted the associated accounts, strengthened monitoring of streamed outputs and shared intelligence with the Frontier Model Forum.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>16,000 requests and over 15,000 users describe attempts with related accounts. This does not equal the amount of successful withdrawals. The attribution also does not cover all operators.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-30</span>
             <a class="item-src" href="https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/" target="_blank" rel="noopener">OpenAI ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">LlamaIndex Extract 2.5把结构推理和证据定位下放到全档位</h3>
-          <p class="item-b"><strong>事件</strong>：LlamaIndex发布Extract 2.5，为三档文档抽取服务更换面向抽取的Agent框架，并新增原生表格模式、跨页记录处理和更细的证据框定位。</p><p class="item-b"><strong>机制</strong>：系统先按文档结构和信息密度分配推理，再用中间表示校验长列表是否完整；高阶档位以置信度和引用坐标支持人工复核，单任务可处理最多3200个字段。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>ExtractBench总值F1从87.1至95.1提升到93.9至96.4，但均为厂商基准，真实准确率取决于文档分布和字段定义。</p>
+          <h3 class="item-h">LlamaIndex Extract 2.5 brings structural reasoning and evidence localization to all tiers</h3>
+          <p class="item-b"><strong>Event</strong>: LlamaIndex released Extract 2.5, which replaces the agent framework used for document extraction with a three-tier system. New features include a native table mode, cross-page record processing, and more detailed evidence-based positioning.</p><p class="item-b"><strong>Mechanism</strong>: The system first assigns reasoning based on document structure and information density, then verifies whether the long lists are complete using intermediate representations. Higher levels of complexity support manual review with confidence levels and reference coordinates. A single task can handle up to 3200 fields.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>ExtractBench aggregate F1 scores improved from a range of 87.1–95.1 to 93.9–96.4. These are vendor benchmarks. Real accuracy depends on the document mix and how fields are defined.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-01</span>
             <a class="item-src" href="https://www.llamaindex.ai/blog/introducing-extract-v2-5" target="_blank" rel="noopener">LlamaIndex ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Decagon为客服对话后训练无token语音模型</h3>
-          <p class="item-b"><strong>事件</strong>：Decagon发布Chord，把无token扩散语音模型针对客服对话后训练，保留停顿、语气变化和口头填充词，而不是把录音清洗成均匀朗读。</p><p class="item-b"><strong>机制</strong>：该模型已用于电信、金融服务和旅行客户的真实来电；Decagon称更换语音后解决率分别提高6.1、7.1和2.6个百分点，同时降低用户只要求转人工的比例。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>生产提升来自三个未具名客户的前后对照，未披露样本量、置信区间和长期留存；185人偏好测试也由厂商自行组织。</p>
+          <h3 class="item-h">Decagon post-trains a token-free voice model for customer support conversations</h3>
+          <p class="item-b"><strong>Event</strong>: Decagon releases Chord, a voice model that trains without tokens. It retains pauses, tone variations, and filler words, rather than cleaning recordings into uniform readings.</p><p class="item-b"><strong>Mechanism</strong>: This model has been used in real calls from telecommunications, financial services, and travel clients. Decagon claims that after changing the voice system, the resolution rate increased by 6.1, 7.1, and 2.6 percentage points, respectively. At the same time, the proportion of users who only require manual intervention decreased.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The improvement in production comes from three unnamed customers. The sample size, confidence interval, and long-term retention are not disclosed. The 185 person preference tests were also organized by the manufacturer.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-01</span>
             <a class="item-src" href="https://decagon.ai/blog/decagon-chord-voice-model" target="_blank" rel="noopener">Decagon ↗</a>
@@ -242,7 +242,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-08-19</title>
+<title>Perp DEX Daily · 2026-08-19</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 52 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 52</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 8 月 19 日 · 星期三</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">August 19, 2026 · Wednesday</div>
     </header>
-    <p class="lead">主要永续场所成交与 OI 同步降温，美国稳定币会计和加密发行规则同时前推，AI 开发基础设施则从代码托管扩展到全流程软件工厂。</p>
+    <p class="lead">Both volume and open interest fell across major perpetual venues. U.S. stablecoin accounting and crypto issuance rules advanced, while AI development infrastructure expanded from code hosting toward tools that cover the full software development process.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,32 +110,32 @@
 
         <article class="item">
 
-          <h3 class="item-h">四场所成交下降 3.6%，OI 回落 2.5%</h3>
-          <p class="item-b"><strong>事件</strong>：8 月 19 日远端快照中，Binance、Hyperliquid、Bybit 与 Gate 合计日成交由前一日约 1119845 BTC 降至 1079152 BTC，减少 3.6%；合计 OI 由约 956127 BTC 降至 932591 BTC，减少 2.5%。</p><p class="item-b"><strong>机制</strong>：成交和仓位存量一起回落，但 OI 降幅小于成交降幅，说明前一日的高换手脉冲正在消退，市场没有出现同量级的集中去杠杆。</p><p class="item-b"><strong>二阶效应</strong>：容量判断应从单日放量转回连续周转和退出质量；降温本身不是风险信号，但若成交继续收缩而 OI 停留，退出拥挤度会重新上升。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>四场所 OI 与日成交比由 0.85 升至 0.86；汇总快照不含交易对深度、资金费率、激励成交和清算分布。</p>
+          <h3 class="item-h">Daily volume falls 3.6% across four venues as open interest declines 2.5%</h3>
+          <p class="item-b"><strong>Event</strong>: In the August 19 snapshot, combined daily volume at Binance, Hyperliquid, Bybit and Gate fell 3.6%, from about 1,119,845 BTC to 1,079,152 BTC. Open interest fell 2.5%, from about 956,127 BTC to 932,591 BTC.</p><p class="item-b"><strong>Mechanism</strong>: Volume and outstanding positions both fell, but open interest declined more slowly. The preceding turnover surge was fading without a comparable wave of deleveraging.</p><p class="item-b"><strong>Second-order effects</strong>: Repeated observations of turnover and execution quality matter more for capacity than the previous day’s spike. Continued declines in volume alongside persistent open interest would make exits more crowded.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The ratio of open interest to daily volume rose from 0.85 to 0.86. The aggregate omits pair depth, funding rates, incentive-driven volume and the distribution of liquidations.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-19</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/28df9b9d73e317b73ca7fd3419a975bbbc2d7219/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/740223228acf22ee5315f0a6ed889d23d267b2dd/docs/market.json" target="_blank" rel="noopener">补充：前一日市场快照 · 08-18 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/28df9b9d73e317b73ca7fd3419a975bbbc2d7219/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/740223228acf22ee5315f0a6ed889d23d267b2dd/docs/market.json" target="_blank" rel="noopener">Additional source: Previous day&#x27;s market snapshot · 08-18 ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">Hyperliquid 成交微增，OI 下降 4.7%</h3>
-          <p class="item-b"><strong>事件</strong>：Hyperliquid 日成交由约 103052 BTC 增至 104590 BTC，增长 1.5%；OI 由 190827 BTC 降至 181819 BTC，减少 4.7%，OI 与成交比由 1.85 降至 1.74。</p><p class="item-b"><strong>机制</strong>：周转改善来自成交小幅增加与仓位主动收缩的叠加，不是新增杠杆推动；这与前一日成交放大、OI 微增的结构不同。</p><p class="item-b"><strong>二阶效应</strong>：更低的存量周转比有利于短时退出，但若 OI 下降来自大户减仓，后续费用和可用做市库存也可能同步回落，不能把比值改善直接写成需求增长。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>Hyperliquid 当日成交约为 Binance 的 14.7%，较前一日约 14.3% 略升，仍不足以说明订单流格局改变。</p>
+          <h3 class="item-h">Hyperliquid volume edges higher as open interest falls 4.7%</h3>
+          <p class="item-b"><strong>Event</strong>: Hyperliquid’s daily volume rose 1.5%, from about 103,052 BTC to 104,590 BTC. Open interest fell 4.7%, from 190,827 BTC to 181,819 BTC. Its open-interest-to-volume ratio declined from 1.85 to 1.74.</p><p class="item-b"><strong>Mechanism</strong>: Turnover improved through a modest rise in trading and a reduction in outstanding positions. New leverage did not drive it. The previous day had combined a sharp increase in volume with a small rise in open interest.</p><p class="item-b"><strong>Second-order effects</strong>: A lower ratio can support near-term exits. If large holders are reducing positions, fee revenue and inventory available for market making could also decline. The ratio alone does not establish stronger demand.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Hyperliquid&#x27;s daily volume reached about 14.7% of Binance&#x27;s, up slightly from roughly 14.3% the previous day. That move alone is too small to establish a change in order flow.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-19</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/28df9b9d73e317b73ca7fd3419a975bbbc2d7219/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/740223228acf22ee5315f0a6ed889d23d267b2dd/docs/market.json" target="_blank" rel="noopener">补充：前一日市场快照 · 08-18 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/28df9b9d73e317b73ca7fd3419a975bbbc2d7219/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/740223228acf22ee5315f0a6ed889d23d267b2dd/docs/market.json" target="_blank" rel="noopener">Additional source: Previous day&#x27;s market snapshot · 08-18 ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">Gate 与 Bybit 成交均下降约 12%</h3>
-          <p class="item-b"><strong>事件</strong>：Gate 与 Bybit 日成交分别下降 12.3% 和 12.3%，OI 分别下降 2.8% 和 0.4%；两家 OI 与成交比分别由 1.13 升至 1.25、由 1.17 升至 1.33。</p><p class="item-b"><strong>机制</strong>：成交收缩明显快于仓位下降，存量头寸需要由更少的日内换手承接；Bybit 的 OI 几乎不动，使其周转恶化比 Gate 更值得持续观察。</p><p class="item-b"><strong>二阶效应</strong>：聚合市场仍显平稳时，单场所退出质量可能先变差；风险对照应把 OI 留存和成交承接分开，而不是只看总量涨跌。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>两家当前合计 OI 约 337694 BTC、日成交约 261638 BTC，足以影响四场所聚合周转，但仍缺资产级盘口证据。</p>
+          <h3 class="item-h">Gate and Bybit both report volume declines of about 12%</h3>
+          <p class="item-b"><strong>Event</strong>: Daily volume fell 12.3% at both Gate and Bybit. Open interest declined 2.8% at Gate and 0.4% at Bybit. Their open-interest-to-volume ratios rose from 1.13 to 1.25 and from 1.17 to 1.33, respectively.</p><p class="item-b"><strong>Mechanism</strong>: Volume contracted much faster than positions, leaving less daily trading to absorb existing exposure. Bybit’s open interest barely moved, making its deterioration in turnover especially worth monitoring.</p><p class="item-b"><strong>Second-order effects</strong>: Exit conditions at a single venue can weaken before aggregate market data shift. Risk comparisons need to distinguish the retention of open positions from the trading volume available to absorb them.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The two venues have combined open interest of about 337,694 BTC and daily volume of around 261,638 BTC. Those figures can move aggregate turnover across the four venues, but do not show asset-level order-book depth.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-19</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/28df9b9d73e317b73ca7fd3419a975bbbc2d7219/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/740223228acf22ee5315f0a6ed889d23d267b2dd/docs/market.json" target="_blank" rel="noopener">补充：前一日市场快照 · 08-18 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/28df9b9d73e317b73ca7fd3419a975bbbc2d7219/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/740223228acf22ee5315f0a6ed889d23d267b2dd/docs/market.json" target="_blank" rel="noopener">Additional source: Previous day&#x27;s market snapshot · 08-18 ↗</a>
           </div>
         </article>
         </div>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Etched 融资 7 亿美元，估值一个月翻倍</h3>
-          <p class="item-b">AI 芯片公司 Etched 完成 7 亿美元融资，估值升至 210 亿美元，领投方 Jane Street 在测试并采购硬件后进入；公司把产品定位从单颗推理芯片扩展到支持前沿模型的集群级推理系统，但公开信息仍以早期测试和订单承诺为主，规模交付能力尚待验证。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>Etched 估值从 7 月约 103 亿美元升至 210 亿美元，一个月增加约 110 亿美元，远快于已披露交付进度。</p>
+          <h3 class="item-h">Etched raises $700 million as its valuation doubles in a month</h3>
+          <p class="item-b">AI chip company Etched raised $700 million at a $21 billion valuation. Lead investor Jane Street tested and purchased its hardware before investing. The company expanded its offering from an inference chip to cluster-scale systems for frontier models. Public evidence still consists primarily of early tests and order commitments. Delivery at scale remains unproven.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Etched&#x27;s valuation rose from roughly $10.3 billion in July to $21 billion, a gain of about $11 billion in a month. Disclosed progress on deliveries was much slower.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-18</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Anthro Energy 开建 25 GWh 电解质工厂</h3>
-          <p class="item-b">Anthro Energy 在肯塔基州开建年产 25 GWh 电解质的工厂，产能可对应超过 30 万辆电动车，计划 2028 年投产；工厂先兼容多种配方，再逐步导入自有聚合物电解质 Proteus，核心赌注是用可嵌入现有产线的路径跨过固态电池规模制造门槛。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>项目已开工并获得约 2490 万美元能源部奖励和 1840 万美元税收抵免，但投产、客户验证与良率仍在 2028 年以后。</p>
+          <h3 class="item-h">Anthro Energy breaks ground on a 25 GWh electrolyte plant</h3>
+          <p class="item-b">Anthro Energy began construction in Kentucky of a plant designed to produce 25 GWh of electrolyte annually, enough for more than 300,000 electric vehicles. Production is planned for 2028. The plant will initially support several formulations before introducing Proteus, the company’s polymer electrolyte. Its approach to scaling solid-state batteries depends on compatibility with existing production lines.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Construction has begun, with a Department of Energy award of about $24.9 million and $18.4 million in tax credits. Production, customer qualification, and yield data are expected in 2028 or later.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-18</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/18/anthro-energy-breaks-ground-on-factory-that-could-pave-the-road-to-solid-state-batteries/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Reach Capital 募集 2.65 亿美元第五期基金</h3>
-          <p class="item-b">Reach Capital 完成 2.65 亿美元 Fund V，计划三年内向约 50 家学习、健康和工作领域的 AI 公司投资，每笔 100 万至 1000 万美元，覆盖种子前到 A 轮；基金已经完成募集，但尚未通过新基金投资任何公司，当前信号是专注型早期资本供给，不是项目采用证明。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>新基金比 2023 年 2.15 亿美元 Fund IV 增长约 23%，但尚无已投项目，部署速度和组合质量都待观察。</p>
+          <h3 class="item-h">Reach Capital raises $265 million for its fifth fund</h3>
+          <p class="item-b">Reach Capital closed its $265 million Fund V. It plans to invest $1 million to $10 million per deal in about 50 AI companies in learning, health and work over three years, from pre-seed to Series A. The fund had yet to invest in a company. The close establishes a source of early capital rather than evidence of adoption.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The new fund is roughly 23% larger than the $215 million Fund IV raised in 2023. No investments had been made, leaving deployment pace and portfolio quality to be assessed.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-18</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/18/reach-capital-raises-265m-fund-v-to-back-ai-founders-building-to-expand-human-potential/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">FASB 拟允许部分稳定币列为现金等价物</h3>
-          <p class="item-b">美国财务会计准则委员会发布拟议更新，允许满足条件的稳定币按现金等价物列报，并要求披露现金等价物的重要类别和金额；提案仍处意见期，分类便利只解决财务报表口径，不等于发行人、赎回和链上流动性风险被消除。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>这是拟议会计准则而非生效规则，公开意见期到 11 月 19 日；最终资格条件与实施时间仍可能变化。</p>
+          <h3 class="item-h">FASB proposes allowing certain stablecoins to qualify as cash equivalents</h3>
+          <p class="item-b">The U.S. Financial Accounting Standards Board proposed allowing qualifying stablecoins to be reported as cash equivalents and requiring disclosure of significant categories and amounts of cash equivalents. The proposal remains open for comment. Financial statement classification leaves issuer, redemption and onchain liquidity risks in place.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The proposed accounting standard is open for public comment through November 19. Eligibility and implementation dates may change before it takes effect.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-18</span>
             <a class="item-src" href="https://www.coindesk.com/policy/2026/08/18/u-s-accounting-standards-group-proposes-way-to-see-stablecoins-as-cash-equivalent" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -202,9 +202,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">SEC 推出首项重大加密专项规则提案</h3>
-          <p class="item-b">美国 SEC 提出 Regulation Crypto，拟为符合条件的加密投资合约发行提供临时注册豁免、有限募资路径，并为逐步退出管理努力的发行人设置安全港；这是规则制定起点而非最终豁免，国会市场结构立法仍会影响它的适用边界。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>提案需要公开意见和后续表决才能生效，当前改变的是合规路径的可讨论性，不是立即解除注册义务。</p>
+          <h3 class="item-h">SEC proposes its first major crypto-specific rule</h3>
+          <p class="item-b">The SEC proposed Regulation Crypto, including temporary registration relief and a limited fundraising route for qualifying crypto investment contracts, plus a safe harbor for issuers progressively withdrawing managerial efforts. This starts a rulemaking process. Congressional market structure legislation could still change its scope.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The proposal needs public comment and a subsequent vote before taking effect. It opens a compliance route for discussion without immediately lifting registration obligations.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-18</span>
             <a class="item-src" href="https://www.coindesk.com/policy/2026/08/18/r" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Robinhood 要求美国明确代币化股票路径</h3>
-          <p class="item-b">Robinhood CEO Vlad Tenev 呼吁美国监管者尽快明确代币化股票框架，指出相关产品已在海外市场推进，而美国用户仍被排除；这使竞争差异不只来自链上交易能力，还来自同一经纪品牌能否把产品合法分发给本土账户。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>Robinhood 的股票代币仍不向美国、加拿大、英国和瑞士居民开放，政策倡议尚未转化为美国上线许可。</p>
+          <h3 class="item-h">Robinhood asks U.S. regulators to clarify the pathway for tokenized stocks</h3>
+          <p class="item-b">Robinhood CEO Vlad Tenev urged U.S. regulators to clarify the framework for tokenized stocks, pointing to overseas products still unavailable to U.S. users. Competition therefore depends partly on whether the same brokerage can lawfully distribute a product to domestic accounts.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Robinhood stock tokens remain unavailable to residents of the US, Canada, the UK, and Switzerland. The policy initiative has yet to secure US launch authorization.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-18</span>
             <a class="item-src" href="https://www.coindesk.com/markets/2026/08/18/robinhood-ceo-urges-u-s-to-clear-path-for-tokenized-stocks-as-overseas-markets-advance" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -233,9 +233,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Cursor 推出可与 GitHub 双向同步的 Origin</h3>
-          <p class="item-b">Cursor 推出代码托管平台 Origin，覆盖仓库、拉取请求、浏览和编辑，并可与 GitHub 双向同步；发布时尚未披露所谓 agent-native 功能细节，因此当前价值主要是给开发者一个可迁移的托管入口，而不是已经完成端到端代理协作。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>Origin 在 GitHub 超过 6 小时故障期间发布，但 GitHub 拥有约 1.8 亿开发者，短期替代范围仍受生态和迁移成本限制。</p>
+          <h3 class="item-h">Cursor introduces Origin with two-way GitHub synchronization</h3>
+          <p class="item-b">Cursor launched Origin, a code host with repositories, pull requests, browsing, editing and two-way GitHub synchronization. It supplied no details of the advertised agent-native functionality at launch. Developers can move code to the new host, while end-to-end agent collaboration remains unverified.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Origin launched during a GitHub outage lasting more than six hours. GitHub&#x27;s roughly 180 million developers, its ecosystem, and migration costs limit how much a new service can replace in the short term.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-18</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/18/cursor-capitalizes-on-github-frustration-launches-rival-hosting-platform/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">OpenAI 在入侵事件后收紧模型开发监控</h3>
-          <p class="item-b">OpenAI 在 Hugging Face 入侵事件后增加模型开发期监控、训练后对齐和安全措施，并强化网络隔离与工具行为告警；部分强化学习工作暂停两周，最大规模训练仍未恢复，安全门槛开始直接影响前沿模型的研发节奏。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>公司称监控计算开销约 20%、告警目标在 30 分钟内，但完整事后报告尚未发布，外部无法复核覆盖率。</p>
+          <h3 class="item-h">OpenAI tightens model-development monitoring after a security incident</h3>
+          <p class="item-b">Following the Hugging Face incident, OpenAI expanded monitoring during model development, post-training alignment and safeguards, including stronger network isolation and alerts on tool behavior. Some reinforcement learning work paused for two weeks. The largest training runs had yet to restart, making safety requirements a direct constraint on development pace.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The company estimates monitoring adds about 20% compute overhead and targets alerts within 30 minutes. Without the full postmortem, outsiders cannot verify coverage.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-18</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/18/openai-institutes-new-safeguards-after-hugging-face-breach/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Warp 用 Factories 编排软件开发全流程</h3>
-          <p class="item-b">Warp 发布 Factories，把任务分成分诊、规格、实现、评审和验证阶段，可接入 Codex、Claude Code、Linear、Jira、Slack 与 Teams，并统一记录跨代理记忆、评测和 token 成本；产品竞争从单个编码代理转向持续可观测的团队生产系统。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>Warp 称已自动化每周约 30% 至 35% 的任务，这是公司口径；跨团队质量、失败回滚和长期成本仍待独立验证。</p>
+          <h3 class="item-h">Warp introduces Factories to coordinate the full software development process</h3>
+          <p class="item-b">Warp launched Factories to organize work into triage, specification, implementation, review and verification. It connects with Codex, Claude Code, Linear, Jira, Slack and Teams and records shared agent memory, evaluations and token costs. The product competes on visibility into team-wide delivery as well as the work of individual coding agents.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Warp says it has automated roughly 30–35% of weekly tasks. Quality across teams, recovery from failures, and long-term costs still need independent checks.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-18</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/18/warps-new-system-is-an-out-of-the-box-software-factory-for-ai-development/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -267,15 +267,15 @@
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product assessment</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">合规</div>
-          <h3 class="item-h">把现金等价物资格加入稳定币准入矩阵</h3>
-          <p class="item-b"><strong>判断变化</strong>：从把稳定币会计分类视为机构接入后的后台事项，改为把现金等价物资格视作企业客户是否愿意持有保证金的前置准入门槛。</p><p class="item-b"><strong>证据与边界</strong>：FASB 提案允许满足条件的稳定币按现金等价物列报，但仍在意见期；会计分类也不能替代发行人储备、赎回、冻结权限、链上流动性和脱锚风险审查。</p>
+          <div class="decision-area">Compliance</div>
+          <h3 class="item-h">Cash-equivalent eligibility is a separate criterion for accepting a stablecoin</h3>
+          <p class="item-b"><strong>Revised assessment</strong>: For corporate customers, a stablecoin’s eligibility as a cash equivalent can influence willingness to hold it as margin before integration begins.</p><p class="item-b"><strong>Evidence and limits</strong>: FASB’s proposal would allow qualifying stablecoins to be reported as cash equivalents, but it remained open for comment. Accounting treatment does not replace review of reserves, redemption, freezing authority, onchain liquidity and depeg risk.</p>
 
           <div class="item-meta">
 
@@ -284,7 +284,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

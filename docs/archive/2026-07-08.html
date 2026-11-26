@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-07-08</title>
+<title>Perp DEX Daily · 2026-07-08</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 持续追踪 STORY THREADS：跨日叙事线的"当前进展地图" */
+  /* Ongoing coverage of developing stories */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -41,7 +41,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -54,7 +54,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品观察」做成醒目的主编批注卡片 */
+  /* Editorial analysis card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -82,35 +82,35 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 17 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 17</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 7 月 8 日 · 星期三</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">July 8, 2026 · Wednesday</div>
     </header>
-    <p class="lead">Ondo Perps 今天让交易者第一次能拿代币化股票直接当保证金开永续仓位，同一周里 Coinbase、Gemini、eToro 也在密集补齐永续/股票牌照：抵押品设计和合规牌照，成了这个安静新闻日里唯二真正推进的两条线。</p>
+    <p class="lead">Ondo Perps began allowing traders to use tokenized stocks as margin for perpetual positions. In the same week, Coinbase, Gemini and eToro pursued licensing for derivatives or equities. Collateral eligibility and regulatory permissions were the main changes in an otherwise quiet market.</p>
     
     
       <section class="sec sec-perpdex">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <div class="sec-kicker">抵押品创新与合规大所的补票潮</div>
+            <div class="sec-kicker">New collateral options and regulated exchanges entering derivatives</div>
             <h2 class="sec-title">Perp DEX</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">Ondo Perps 上线：代币化股票可直接抵押开永续仓位</h3>
-          <p class="item-b"><strong>事件</strong>：Ondo Finance 07-07 通过 Ondo Global Panama 主体推出永续期货平台 Ondo Perps，支持 SPCX、MU、AAPL、NVDA、TSLA、QQQ 及金银共 8 类美股/ETF/大宗商品标的，最高 20 倍杠杆、7x24 交易，不对美国、巴拿马等地区开放；首周奖励池 15 万美元 USDC（总规划 300 万美元）。属上线首日数据，规模「待核实」。</p><p class="item-b"><strong>机制</strong>：核心创新是交易者可直接把已持有的代币化股票/ETF头寸作为保证金开永续仓位，无需先平仓换回稳定币再入金，双抵押品制度（代币化证券 + 稳定币）把「持有资产」和「加杠杆交易」两件事解耦。</p><p class="item-b"><strong>二阶效应</strong>：这把 RWA 代币化往前推了一步，从「能不能上链」变成「上链后能不能当跨市场的通用抵押品」；若模式跑通，会倒逼其他 RWA perp 平台重新设计保证金体系，但目前只是首日数据，实际使用规模有待观察。</p>
+          <h3 class="item-h">Ondo Perps launches with tokenized stocks eligible as margin</h3>
+          <p class="item-b"><strong>Event</strong>: On July 7, Ondo Finance launched Ondo Perps through Ondo Global Panama. The platform offered eight markets: SPCX, MU, AAPL, NVDA, TSLA, QQQ, gold and silver. It announced 24/7 trading and leverage of up to 20×. The United States and Panama were among the excluded jurisdictions. The first-week USDC rewards pool was $150,000, against a planned $3 million total. Actual adoption had yet to be established.</p><p class="item-b"><strong>Mechanism</strong>: Traders can pledge eligible tokenized stocks and ETFs they already own without first selling them for stablecoins. Both tokenized securities and stablecoins can serve as collateral for a separate leveraged position.</p><p class="item-b"><strong>Second-order effects</strong>: The design tests whether tokenized assets can function as collateral across markets. Meaningful usage could influence how competing real-world asset venues design margin. First-day availability alone provides little evidence about adoption.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-07</span>
             <a class="item-src" href="https://www.prnewswire.com/news-releases/ondo-perps-launches-first-equity-perpetuals-platform-with-tokenized-stock-collateral-302819574.html" target="_blank" rel="noopener">PR Newswire (Ondo Perps) ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">本周主线｜合规大所集体补齐「加密+股票+衍生品」全牌照</h3>
-          <p class="item-b"><strong>事件</strong>：过去一周至少三家头部合规平台同步扩张进衍生品/股票经纪：Coinbase 07-07 拿下英国 FCA 的 MiFID 投资服务牌照，机构和高级交易者可交易加密、股票、大宗商品的永续期货，英国零售用户首次能在 Coinbase 交易股票现货；同日 Gemini 在美国大多数州上线 0% 佣金股票交易，CEO 称目标是把加密、股票、衍生品整合进一个受监管平台；eToro 则在 07-02 领投链上永续交易所 Extended 并计划把其永续产品整合进自家钱包 Zengo。</p><p class="item-b"><strong>机制</strong>：三家公司走的是不同路径（自建牌照 vs 引入经纪商模式 vs 投资+集成链上协议），但共同点是把「加密+股票+衍生品」做成单一受监管入口，而不是分散在多个牌照/多个 App 里。</p><p class="item-b"><strong>二阶效应</strong>：当受监管的老牌交易所也能给用户永续敞口时，permissionless 上新速度、零费高杠杆、标的广度这些 perp DEX 的原生优势必须被更清晰地讲出来，不能只靠「能交易永续」本身吸引用户；这也是「谁能更快把新资产类别搬上链」的竞速正从纯链上协议之间，扩散到链上协议与受监管大所之间。</p>
+          <h3 class="item-h">Weekly theme | Regulated venues pursue permissions spanning crypto, equities and derivatives</h3>
+          <p class="item-b"><strong>Event</strong>: At least three large regulated platforms expanded their brokerage or derivatives offerings within a week. On July 7, Coinbase obtained a UK FCA MiFID investment services authorization for perpetual futures on crypto, equities and commodities for institutional and advanced traders. UK retail users also gained access to spot equities on Coinbase for the first time. The same day, Gemini launched commission-free stock trading in most US states. Its CEO said the aim was a regulated platform combining crypto, stocks and derivatives. On July 2, eToro led an investment in Extended and announced plans for a Zengo wallet integration.</p><p class="item-b"><strong>Mechanism</strong>: Coinbase secured a license, Gemini introduced stock brokerage and eToro invested in an onchain exchange. Each aims to give customers a single regulated point of access to crypto, stocks and derivatives.</p><p class="item-b"><strong>Second-order effects</strong>: As established regulated exchanges offer perpetuals, onchain venues will need to compete on specific advantages such as permissionless listings, fees, leverage and market breadth. The race to list new asset classes now includes large regulated exchanges as well as other protocols.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-07</span>
             <a class="item-src" href="https://www.coindesk.com/business/2026/07/07/coinbase-secures-uk-authorization-to-offer-traditional-investments-alongside-crypto" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -122,23 +122,23 @@
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <div class="sec-kicker">机会与打法</div>
-            <h2 class="sec-title">产品观察</h2>
+            <div class="sec-kicker">Product opportunities</div>
+            <h2 class="sec-title">Product observations</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">代币化资产反向抵押，是虚拟 RWA 标的之外可以评估的第二条路</h3>
-          <p class="item-b">Ondo Perps 让用户直接拿代币化股票/ETF 当保证金开永续仓，把「持有」和「加杠杆」解耦。</p>
+          <h3 class="item-h">Tokenized assets can serve as collateral as well as reference assets for perpetuals</h3>
+          <p class="item-b">Ondo Perps allows holders to pledge tokenized stocks and ETFs directly, preserving their existing exposure while using the assets as margin for a perpetual trade.</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://www.prnewswire.com/news-releases/ondo-perps-launches-first-equity-perpetuals-platform-with-tokenized-stock-collateral-302819574.html" target="_blank" rel="noopener">PR Newswire (Ondo Perps) ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">合规大所正批量拿到永续+股票牌照，perp DEX 的差异化必须更锋利</h3>
-          <p class="item-b">Coinbase、Gemini、eToro 一周内密集补齐「加密+股票+衍生品」全牌照，说明「受监管场所也能给用户永续敞口」正从个案变成趋势。建议评估在产品定位和营销话术上主动突出 permissionless 上新速度、零费高杠杆、虚拟标的广度这几项 perp DEX 原生优势，而不是被动等对手先把「一站式」的故事讲完。</p>
+          <h3 class="item-h">Licensed venues expand into both equities and perpetuals, increasing pressure on decentralized exchanges</h3>
+          <p class="item-b">Coinbase, Gemini and eToro pursued combinations of crypto, securities and derivatives permissions in the same week. As licensed venues widen access, decentralized exchanges compete through listing speed, fee and leverage design, and coverage of synthetic markets.</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://www.coindesk.com/business/2026/07/07/coinbase-secures-uk-authorization-to-offer-traditional-investments-alongside-crypto" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -146,7 +146,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

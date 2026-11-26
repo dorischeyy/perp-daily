@@ -1,9 +1,9 @@
 {
-  "_comment": "渠道配置：webhook 从环境变量读取（feishu=FEISHU_WEBHOOK，slack=SLACK_WEBHOOK）。GitHub Action 把这两个 secret 注入 env 后跑 deliver.mjs，发给所有 enabled:true 的渠道。要停某渠道把它 enabled 改 false。",
+  "_comment": "The delivery workflow reads Feishu and Slack webhooks from FEISHU_WEBHOOK and SLACK_WEBHOOK, then runs deliver.mjs for each enabled channel. Set enabled to false to pause a channel.",
   "channels": [
     {
       "type": "feishu",
-      "name": "Perp 日报群",
+      "name": "Perp Daily group",
       "webhook": "env:FEISHU_WEBHOOK",
       "enabled": true
     },

@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-11-13</title>
+<title>Perp DEX Daily · 2026-11-13</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -100,41 +100,41 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 131 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 131</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 11 月 13 日 · 星期五</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">November 13, 2026 · Friday</div>
     </header>
-    <p class="lead">Kalshi拟把符合条件的IPO股票永续缩短至上市后第二个交易日，规则11月19日生效。KuCoin同日下调六只永续合约的最大杠杆并提高维持保证金。</p>
+    <p class="lead">Kalshi’s new rules, effective November 19, would allow perpetual futures on eligible IPO stocks as early as the second trading day after listing. KuCoin lowered maximum leverage and raised maintenance margin on six perpetual contracts.</p>
 
 
       <section class="sec sec-regulated-equity-perps-and-tokenized-stocks">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">股票永续与代币化股票</h2>
+            <h2 class="sec-title">Equity perpetuals and tokenized stocks</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月12日，联邦公报公布Kalshi放宽IPO股票永续上市条件</h3>
-          <p class="item-b">Kalshi拟允许符合条件的IPO股票最早在上市后第二个交易日进入永续证券期货，不再统一等待至少一个月。标的需自IPO起成交至少240万股、发行市值至少30亿美元，并继续满足当前市值至少1000亿美元等标准；规则11月19日生效。</p>
+          <h3 class="item-h">November 12: Federal Register publishes Kalshi’s revised eligibility rules for perpetual futures on IPO stocks</h3>
+          <p class="item-b">Kalshi would allow eligible IPO stocks into its perpetual security futures market as early as the second trading day after listing, replacing a minimum one-month wait. At least 2.4 million shares must have traded since the IPO, and market capitalization at issuance must have been at least $3 billion. Existing requirements, including current market capitalization of at least $100 billion, still apply. The rules take effect November 19.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.govinfo.gov/content/pkg/FR-2026-11-12/pdf/FR-2026-11-12.pdf" target="_blank" rel="noopener" title="Federal Register · 发布 2026-11-12" aria-label="来源 1：Federal Register · 发布 2026-11-12">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.govinfo.gov/content/pkg/FR-2026-11-12/pdf/FR-2026-11-12.pdf" target="_blank" rel="noopener" title="Federal Register · Published 2026-11-12" aria-label="Source 1: Federal Register · Published 2026-11-12">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月12日，KuCoin完成AAPLX公司行动并恢复交易</h3>
-          <p class="item-b">KuCoin完成Apple xStock的代币化股票分红调整，按新旧乘数换算用户余额并相应调整价格，随后恢复充提、划转和现货交易。平台在处理前取消全部挂单，并提醒API和网格用户重建策略；总价值目标不变，但仍受市场波动影响。</p>
+          <h3 class="item-h">November 12: KuCoin completes the AAPLX corporate action and resumes trading</h3>
+          <p class="item-b">KuCoin completed the dividend adjustment for Apple xStock. It converted balances using the old and new multipliers, adjusted prices, and resumed deposits, withdrawals, transfers and spot trading. KuCoin canceled all open orders beforehand and told API and grid traders to rebuild their strategies. The adjustment was designed to preserve total value, subject to market movements.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.kucoin.com/announcement/en-announcement-on-completion-of-apple-xstock-aaplx-tokenized-stock-dividend-and-services-resumption" target="_blank" rel="noopener" title="KuCoin · 发布 2026-11-12" aria-label="来源 1：KuCoin · 发布 2026-11-12">1</a><a class="source-number" href="https://www.kucoin.com/announcement/en-announcement-on-apple-xstock-aaplx-tokenized-stock-dividend" target="_blank" rel="noopener" title="KuCoin初始通知 · 发布 2026-11-12" aria-label="来源 2：KuCoin初始通知 · 发布 2026-11-12">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.kucoin.com/announcement/en-announcement-on-completion-of-apple-xstock-aaplx-tokenized-stock-dividend-and-services-resumption" target="_blank" rel="noopener" title="KuCoin · Published 2026-11-12" aria-label="Source 1: KuCoin · Published 2026-11-12">1</a><a class="source-number" href="https://www.kucoin.com/announcement/en-announcement-on-apple-xstock-aaplx-tokenized-stock-dividend" target="_blank" rel="noopener" title="KuCoin initial notice · Published 2026-11-12" aria-label="Source 2: KuCoin initial notice · Published 2026-11-12">2</a>
           </div>
         </article>
         </div>
@@ -143,29 +143,29 @@
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <h2 class="sec-title">永续风控与执行</h2>
+            <h2 class="sec-title">Perpetuals risk controls and execution</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月13日，KuCoin下调六只永续合约最大杠杆</h3>
-          <p class="item-b">KuCoin把APR、BANK、AEVO、MASK、NEIROCTO和B2六只逐仓永续的最高风险档最大杠杆由50倍降至20倍，并把维持保证金率由1.5%提高到2.5%，其他档位也同步调整。新参数于06:00至07:00 UTC切换，已有仓位需重新核对强平距离。</p>
+          <h3 class="item-h">November 13th, KuCoin reduced the maximum leverage for six perpetual contracts.</h3>
+          <p class="item-b">KuCoin cut maximum leverage from 50x to 20x in the highest risk tier for the APR, BANK, AEVO, MASK, NEIROCTO and B2 isolated-margin perpetuals. It raised that tier’s maintenance margin rate from 1.5% to 2.5% and adjusted other tiers as well. The transition runs from 06:00 to 07:00 UTC. Traders with open positions need to check how far they are from liquidation.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.kucoin.com/announcement/en-kucoin-futures-will-adjust-the-maximum-leverage-and-risk-limit-of-multiple-perpetual-contracts-2026-11-13" target="_blank" rel="noopener" title="KuCoin · 发布 2026-11-12" aria-label="来源 1：KuCoin · 发布 2026-11-12">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.kucoin.com/announcement/en-kucoin-futures-will-adjust-the-maximum-leverage-and-risk-limit-of-multiple-perpetual-contracts-2026-11-13" target="_blank" rel="noopener" title="KuCoin · Published 2026-11-12" aria-label="Source 1: KuCoin · Published 2026-11-12">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月11日，Paradex为RFQ接口补充未开户状态</h3>
-          <p class="item-b">Paradex v1.171.3让RFQ接口在账户仍处于开户流程时返回NOT_ONBOARDED，并在前端向未入金的新账户展示充值提示而非通用报错。版本还修正零价格期权组合的成交带显示，减少账户状态与真实报价异常被混为一类。</p>
+          <h3 class="item-h">November 11: Paradex adds an onboarding status to its request-for-quote API</h3>
+          <p class="item-b">In Paradex v1.171.3, the RFQ API returns NOT_ONBOARDED for accounts still going through onboarding. The interface shows a deposit prompt to new, unfunded accounts in place of a generic error. The release also fixes how the trade tape displays zero-priced options combinations, helping users distinguish account states from actual pricing issues.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://docs.paradex.trade/releases/changelog" target="_blank" rel="noopener" title="Paradex · 发布 2026-11-11" aria-label="来源 1：Paradex · 发布 2026-11-11">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://docs.paradex.trade/releases/changelog" target="_blank" rel="noopener" title="Paradex · Published 2026-11-11" aria-label="Source 1: Paradex · Published 2026-11-11">1</a>
           </div>
         </article>
         </div>
@@ -174,19 +174,19 @@
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <h2 class="sec-title">交易激励</h2>
+            <h2 class="sec-title">Trading incentives</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月12日，Backpack启动14天永续交易奖励</h3>
-          <p class="item-b">Backpack从11月12日至25日每天分配2500美元，14天总奖池3.5万美元，覆盖加密、股票与ETF永续且计入API成交。参与者需先报名并在每日快照时保持至少100美元余额；前20名分一半奖池，其余合格用户按成交量分另一半。</p>
+          <h3 class="item-h">November 12th, Backpack launched 14-day perpetual trading rewards.</h3>
+          <p class="item-b">Backpack is allocating $2,500 per day from November 12 to 25, a $35,000 pool over 14 days. Crypto, equity and ETF perpetuals qualify, including trades placed by API. Users must register and hold at least $100 at each daily snapshot. The top 20 split half the pool, and other eligible users share the rest in proportion to trading volume.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://learn.backpack.exchange/blog/the-perps-open-daily-rewards" target="_blank" rel="noopener" title="Backpack · 发布 2026-11-12" aria-label="来源 1：Backpack · 发布 2026-11-12">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://learn.backpack.exchange/blog/the-perps-open-daily-rewards" target="_blank" rel="noopener" title="Backpack · Published 2026-11-12" aria-label="Source 1: Backpack · Published 2026-11-12">1</a>
           </div>
         </article>
         </div>
@@ -195,44 +195,44 @@
         <div class="sec-head">
           <span class="sec-no">04</span>
           <div>
-            <h2 class="sec-title">AI评估与Agent工具</h2>
+            <h2 class="sec-title">AI evaluation and agent tools</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月12日，Scale与IMDA发布新加坡法律推理基准</h3>
-          <p class="item-b">SG-LegalClarify用1860个新加坡法律场景测试19个模型，其中760个故意缺少关键事实。联网后平均得分由53.8%升至63.0%，但面对缺失信息仍约39%完全不追问；即使发问，平均也只覆盖39%的相关缺口。</p>
+          <h3 class="item-h">November 12: Scale AI and IMDA release a Singapore legal reasoning benchmark</h3>
+          <p class="item-b">SG-LegalClarify tested 19 models on 1,860 Singapore legal scenarios, 760 of which deliberately omitted key facts. Web access raised the average score from 53.8% to 63.0%. When information was missing, about 39% of responses asked no follow-up questions. Even when models did ask, they covered only 39% of the relevant gaps on average.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://scale.com/blog/scale-imda-legal-reasoning-benchmark" target="_blank" rel="noopener" title="Scale AI · 发布 2026-11-12" aria-label="来源 1：Scale AI · 发布 2026-11-12">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://scale.com/blog/scale-imda-legal-reasoning-benchmark" target="_blank" rel="noopener" title="Scale AI · Published 2026-11-12" aria-label="Source 1: Scale AI · Published 2026-11-12">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月12日，Kimi Code CLI加入持久权限规则与人工验收</h3>
-          <p class="item-b">Kimi Code CLI v2.6.0可自动加载用户与项目权限规则，并按拒绝、询问、允许的优先级处理。Tower同时新增artifact任务，要求关键产物先提交并经人工明确接受后才能合并；同名Skill也可按来源目录区分。</p>
+          <h3 class="item-h">November 12: Kimi Code CLI adds persistent permission rules and human acceptance for artifacts</h3>
+          <p class="item-b">Kimi Code CLI v2.6.0 automatically loads user and project permission rules and processes them in the order of rejection, inquiry, and approval. Tower also added new artifact tasks, requiring critical artifacts to be submitted and manually approved before merging. Skills with the same name can also be distinguished by their source directories.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.kimi.com/code/docs/en/kimi-code/whats-new.html" target="_blank" rel="noopener" title="Kimi Code · 发布 2026-11-12" aria-label="来源 1：Kimi Code · 发布 2026-11-12">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.kimi.com/code/docs/en/kimi-code/whats-new.html" target="_blank" rel="noopener" title="Kimi Code · Published 2026-11-12" aria-label="Source 1: Kimi Code · Published 2026-11-12">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月12日，Databricks拒绝策略覆盖Agent与MCP服务</h3>
-          <p class="item-b">Databricks把ABAC DENY策略扩展到模型服务、模型供应商服务、MCP服务、Agent服务和Skill，并允许策略直接绑定到具体对象。功能仍为Beta，但管理员已能用同一拒绝规则约束数据、密钥和多类AI可执行资产。</p>
+          <h3 class="item-h">November 12: Databricks extends deny policies to agents and MCP services</h3>
+          <p class="item-b">Databricks extended its ABAC DENY strategy to model services, model provider services, MCP services, Agent services, and Skills. This allowed policies to be directly applied to specific objects. The feature is still in beta, but administrators can now use the same rejection rules to control data, keys, and various AI executables.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://docs.databricks.com/aws/en/release-notes/product/2026/november" target="_blank" rel="noopener" title="Databricks · 发布 2026-11-12" aria-label="来源 1：Databricks · 发布 2026-11-12">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://docs.databricks.com/aws/en/release-notes/product/2026/november" target="_blank" rel="noopener" title="Databricks · Published 2026-11-12" aria-label="Source 1: Databricks · Published 2026-11-12">1</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

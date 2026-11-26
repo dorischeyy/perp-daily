@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-09-11</title>
+<title>Perp DEX Daily · 2026-09-11</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 74 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 74</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 9 月 11 日 · 星期五</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">September 11, 2026 · Friday</div>
     </header>
-    <p class="lead">tradeXYZ把事件市场接入统一交易账户，Pump.fun开放股票代币配对，Nasdaq则以投资Payward推进全天候代币化股票基础设施。</p>
+    <p class="lead">tradeXYZ added event markets to its unified trading account. Pump.fun opened equity-token trading pairs, and Nasdaq invested in Payward to advance infrastructure for round-the-clock tokenized equities.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,9 +110,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">tradeXYZ把事件市场接入统一交易账户</h3>
-          <p class="item-b"><strong>事件</strong>：tradeXYZ在Hyperliquid上推出Events，覆盖体育、政治、经济和金融结果，首批Up/Down合约包含股票、商品与未上市公司。</p><p class="item-b"><strong>机制</strong>：事件合约与现货、永续共用账户，并以XYZ持续交易的HIP-3市场价格作为结算输入，而不是另接一套外部预言机。</p><p class="item-b"><strong>二阶效应</strong>：同一保证金入口开始同时承接连续价格敞口和离散结果交易，但结算价抗操纵、争议处理与合约准入仍需单独验证。（预测市场规则线，自07-24以来的新进展）</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>产品已上线并公开首批类别，但来源未披露合约数量、成交、OI或争议处理记录，现阶段只能确认账户与定价结构。</p>
+          <h3 class="item-h">tradeXYZ adds event markets to its unified trading account</h3>
+          <p class="item-b"><strong>Event</strong>: tradeXYZ launched Events on Hyperliquid for sports, political, economic and financial outcomes. The first Up/Down contracts cover equities, commodities and unlisted companies.</p><p class="item-b"><strong>Mechanism</strong>: Event contracts use the same account as spot and perpetual trading. Settlement draws on prices from XYZ’s continuously traded HIP-3 markets without adding a separate external oracle.</p><p class="item-b"><strong>Second-order effects</strong>: One margin interface now supports both continuous price exposure and discrete event outcomes. The settlement price’s resistance to manipulation, dispute resolution and contract eligibility still require separate verification. This adds to the prediction-market rules story tracked since July 24.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The product is live and its first categories are public. The source provided no contract count, trading volume, open interest or dispute-resolution record. Only the account and pricing structures can currently be confirmed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-10</span>
             <a class="item-src" href="https://coinness.com/en/news/1168359" target="_blank" rel="noopener">CoinNess ↗</a>
@@ -120,9 +120,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Extended把RWA吃单费降至1个基点</h3>
-          <p class="item-b"><strong>事件</strong>：Extended宣布9月15日起把RWA永续吃单费降至1个基点，挂单费维持0，做市返佣按30日成交份额从0.2至1.0个基点分层。</p><p class="item-b"><strong>机制</strong>：平台用吃单费率吸引主动成交，再把部分收入按持续报价份额返给做市商，把低费率和订单簿深度绑定。</p><p class="item-b"><strong>二阶效应</strong>：RWA永续竞争从标的扩列继续转向报价成本与做市留存，但费率优势能否换来更窄价差和持续OI尚无数据。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>1个基点是名义吃单费，不含资金费、滑点与做市返佣后的净成本；来源未给调整前费率及同期深度。</p>
+          <h3 class="item-h">Extended cuts the taker fee on real-world asset markets to one basis point</h3>
+          <p class="item-b"><strong>Event</strong>: Extended will reduce its RWA perpetual taker fee to one basis point from September 15. Makers continue to pay zero, with rebates from 0.2 to 1.0 basis points depending on their share of 30-day volume.</p><p class="item-b"><strong>Mechanism</strong>: The taker fee is intended to attract active trading. The platform returns part of the revenue to market makers according to their share of continuous quotes, tying lower fees to order-book depth.</p><p class="item-b"><strong>Second-order effects</strong>: Competition in RWA perpetuals is shifting from the number of assets listed to quoting costs and market-maker retention. There are no data yet showing that the fee advantage produces narrower spreads or sustained open interest.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>One basis point is the stated taker fee. It excludes funding and slippage and does not account for maker rebates. The source provided neither the previous fee nor corresponding order-book depth.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-10</span>
             <a class="item-src" href="https://perpdexwars.com/en/perpdex-news?venue=extended" target="_blank" rel="noopener">PerpDEX Wars ↗</a>
@@ -130,9 +130,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Reya迁移订单簿前让12个市场仅减仓</h3>
-          <p class="item-b"><strong>事件</strong>：Reya在V2从AMM迁往订单簿前，将ADA、APT等12个市场切为仅减仓，允许平仓或缩仓，但禁止新开和加仓。</p><p class="item-b"><strong>机制</strong>：分阶段限制先冻结风险增量，再迁移流动性与撮合；新订单簿吃单费为3个基点，挂单费为0。</p><p class="item-b"><strong>二阶效应</strong>：仅减仓能降低一次性强制结算冲击，也把市场状态、订单权限和流动性迁移的一致性变成上线门槛。（市场生命周期线，自08-28以来的新进展）</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>本轮影响12个市场，来源未披露这些市场的持仓量、迁移截止时间及未平仓位最终处理规则。</p>
+          <h3 class="item-h">Reya makes 12 markets reduce-only ahead of its order book migration</h3>
+          <p class="item-b"><strong>Event</strong>: Ahead of its V2 migration from an automated market maker to an order book, Reya placed 12 markets, including ADA and APT, in reduce-only mode. Traders may close or reduce a position, but cannot open or add to one.</p><p class="item-b"><strong>Mechanism</strong>: The phased restrictions first prevent new risk, then move liquidity and matching to the new order book. Takers will pay three basis points and makers will pay zero.</p><p class="item-b"><strong>Second-order effects</strong>: Reduce-only trading can reduce the disruption of a single forced settlement. A successful launch also requires market status, order permissions and the liquidity migration to agree. This adds to the market-lifecycle story tracked since August 28.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>This round affects 12 markets. The sources of these markets, the deadline for liquidity transfer, and the final handling rules for unliquidated positions remain undisclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-10</span>
             <a class="item-src" href="https://www.kucoin.com/news/flash/reya-v2-shifts-to-orderbook-model-12-markets-enter-reduce-only-mode" target="_blank" rel="noopener">KuCoin News ↗</a>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Pump.fun开放股票代币作为发币配对资产</h3>
-          <p class="item-b">Pump.fun的Custom Pairs允许新币用股票代币、主流加密资产和代币化金属计价，Bitquery记录到功能于9月9日上线。</p><p class="item-b">31天样本中，五家支持股票配对的Launchpad累计成交59.7亿美元，但股票资产只改变约1%的交易输赢，说明新配对更多扩大可用抵押与叙事入口，尚未证明改善项目质量。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>59.7亿美元覆盖五个平台、148782个代币和31天，不是Pump.fun单站成交；买方最终盈利比例仅26.7%。</p>
+          <h3 class="item-h">Pump.fun allows equity tokens as quote assets for new launches</h3>
+          <p class="item-b">Pump.fun’s Custom Pairs feature allows new tokens to be priced using stock tokens, mainstream crypto assets, and tokenized metals. Bitquery recorded that this feature was launched on September 9th.</p><p class="item-b">In a 31-day sample, five Launchpads that support stock pairing had a total transaction volume of $5.97 billion. However, stock assets only changed about 1% in transaction outcomes. This indicates that new pairing methods expand the available collateral and narrative opportunities, but they have not yet proven to improve the quality of projects.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>5.97 billion USD was allocated over five platforms, covering 148,782 tokens over 31 days. This was not a single transaction on Pump.fun. The profit margin for buyers was only 26.7%.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-09</span>
             <a class="item-src" href="https://bitquery.io/investigations/pump-fun-stock-tokens-meme-coins" target="_blank" rel="noopener">Bitquery Research ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">研究从1500万枚pump.fun代币归纳五类操纵</h3>
-          <p class="item-b">一项9月9日提交的研究收集pump.fun过去两年全部1500万枚代币，并对随机交易样本做大规模分析。</p><p class="item-b">研究把操纵归纳为洗售、创建者地址混淆、协同抛售、仿冒币和社交媒体操纵，意味着Launchpad风控不能只看单钱包或单笔异常。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>1500万枚是代币全集，交易层结论来自大规模随机样本而非逐币完整重放；论文仍处于预印本阶段。</p>
+          <h3 class="item-h">Study of 15 million pump.fun tokens identifies five forms of market manipulation</h3>
+          <p class="item-b">A study submitted on September 9th analyzed all 15 million tokens issued by pump.fun over the past two years, and conducted a large-scale analysis of random trading samples.</p><p class="item-b">Research categorizes manipulation into wash sales, address confusion, coordinated selling, counterfeit coins, and social media manipulation. This means that Launchpad risk control cannot rely solely on individual wallets or abnormal transactions.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>15 million tokens represent the entire token inventory. The conclusions drawn from the trading layer are based on large-scale random samples, rather than complete replay of individual tokens. The paper is still in the preprint stage.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-09</span>
             <a class="item-src" href="https://arxiv.org/abs/2609.10246" target="_blank" rel="noopener">arXiv ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">16家Launchpad单日发币回落至86776枚</h3>
-          <p class="item-b">MemeFees记录9月10日16家Launchpad共创建86776枚代币，其中Pons为16884枚，较9月9日全样本107077枚回落约19%。</p><p class="item-b">供给仍处高位，但单日回落和头部份额变化说明发币量适合观察生产速度，不宜直接替代毕业率、流动性和真实买家质量。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>数据按UTC日统计，混合平台Feed采样下限与已验证工厂合约完整计数，跨平台数量不是完全同质口径。</p>
+          <h3 class="item-h">Daily launches across 16 platforms fall to 86,776</h3>
+          <p class="item-b">MemeFees recorded 86,776 tokens created across 16 launchpads on September 10, including 16,884 on Pons. The total was about 19% below the previous day’s full-sample count of 107,077.</p><p class="item-b">Supply remains high, but daily declines and changes in market share indicate that the issuance volume is suitable for observing production rates. It should not be used directly to replace graduation rates, liquidity, or the quality of real buyers.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Counts use UTC days. Some platforms supply feed-sampled lower bounds, while verified factory contracts provide complete counts for others. Cross-platform totals are therefore not directly comparable.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-11</span>
             <a class="item-src" href="https://memefees.com/stats/launches" target="_blank" rel="noopener">MemeFees ↗</a>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Nasdaq投资Payward推进全天候代币化股票</h3>
-          <p class="item-b">Nasdaq Ventures同意向Kraken母公司Payward投资1亿美元，并把合作范围扩展到代币化股票的分发、结算与交易互操作。</p><p class="item-b">Payward提供Kraken执行与xStocks，Nasdaq提供市场基础设施、监控和NETs设计；资本合作已确定，但相关代币化股票仍需监管批准和真实流动性验证。（TradFi资产线，自07-09以来的新进展）</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>1亿美元是对Payward的股权投资，不是代币化股票流动性承诺；互操作与正式市场仍属后续阶段。</p>
+          <h3 class="item-h">Nasdaq invests in Payward to advance round-the-clock tokenized equities</h3>
+          <p class="item-b">Nasdaq Ventures has agreed to invest 100 million USD in Payward, the parent company of Kraken. This collaboration extends to the distribution, settlement, and trading interoperability of tokenized stocks.</p><p class="item-b">Payward provides Kraken execution and xStocks, while Nasdaq provides market infrastructure, monitoring, and NETs design. Capital cooperation has been established, but the related tokenized stocks still require regulatory approval and real-world liquidity verification. (TradFi asset line, new developments since 07-09)</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>100 million USD represents an equity investment in Payward, not a commitment to tokenized stock liquidity. Interoperability and formal market integration are still in the later stages.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-10</span>
             <a class="item-src" href="https://www.nasdaq.com/newsroom/nasdaq-advances-always-on-markets-and-tokenized-equities-strategy-payward" target="_blank" rel="noopener">Nasdaq ↗</a>
@@ -202,9 +202,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">SGX加密永续向美国机构开放</h3>
-          <p class="item-b">新加坡交易所依据CFTC Regulation 48.10取得授权，让美国机构直接交易其比特币和以太坊永续，而无需另建一套美国订单簿。</p><p class="item-b">两项产品自2025年11月上线以来累计成交58亿美元，跨境许可把亚洲流动性直接开放给美国机构，但仍限合格参与者和BTC、ETH两个标的。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>58亿美元是约十个月累计成交，不是日量；它证明受监管入口有采用，不能与链上Perp DEX日成交直接比较。</p>
+          <h3 class="item-h">SGX opens crypto perpetuals to U.S. institutions</h3>
+          <p class="item-b">Singapore Exchange obtained authorization under CFTC Regulation 48.10 for U.S. institutions to trade its bitcoin and ether perpetuals directly, without creating a separate U.S. order book.</p><p class="item-b">Since their launch in November 2025, these two products have generated a total of 5.8 billion USD in transactions. Cross-border licensing allows Asian liquidity to be directly available to American institutions, but this is still limited to qualified participants and the two assets: BTC and ETH.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The $5.8 billion represents cumulative trading over about ten months. It shows use of the regulated venue, but cannot be compared directly with a single day of onchain perpetual DEX volume.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-10</span>
             <a class="item-src" href="https://www.coindesk.com/markets/2026/09/10/sgx-s-bitcoin-and-ether-perpetual-futures-are-now-open-to-u-s-institutions" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Stacks首期机构比特币质押锁定250枚BTC</h3>
-          <p class="item-b">21Shares、HashKey Cloud、UTXO Management和Sypher Capital参加Stacks Genesis Bond，首期共锁定250枚BTC，预计9月17日支付首笔BTC奖励。</p><p class="item-b">BTC通过Bitcoin L1脚本锁定且不跨桥，参与者以STX提供质押容量；官方称没有罚没，但奖励可能因周期执行失败而缺失。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>首期250枚BTC已满额，但容量被刻意限制，不能外推为大规模机构需求；下一期拟于10月开放。</p>
+          <h3 class="item-h">Stacks locks 250 BTC in its first institutional bitcoin staking round</h3>
+          <p class="item-b">21Shares, HashKey Cloud, UTXO Management, and Sypher Capital participated in the Stacks Genesis Bond. The first phase locks up 250 BTC, with the first BTC reward expected to be paid on September 17.</p><p class="item-b">BTC is locked through the Bitcoin L1 script and does not cross bridges. Participants provide collateral in STX. Officials claim there are no confiscations, but rewards may be lost due to failed cycles.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The first batch of 250 BTC has been fully allocated, but the capacity is intentionally limited. This cannot be extrapolated to large institutional demands. The next batch is scheduled to be available in October.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-10</span>
             <a class="item-src" href="https://www.stacks.co/blog/the-genesis-bond-is-live-institutions-begin-bitcoin-staking-on-stacks" target="_blank" rel="noopener">Stacks Labs ↗</a>
@@ -233,9 +233,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">OpenAI把企业数据分析做成可安装Agent</h3>
-          <p class="item-b">OpenAI在ChatGPT Work推出Data agent，可连接Redshift、BigQuery、Databricks、Snowflake等数据源，调查指标变化并生成可分享的交互看板。</p><p class="item-b">查询继承连接账户的表、行和列权限，管理员决定连接与角色；能力覆盖分析到发布，但准确性仍依赖语义层、指标定义和数据权限是否配置正确。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>产品已进入ChatGPT Work插件目录并有Alpha客户案例，但官方没有公布总体用户数、准确率或人工复核成本。</p>
+          <h3 class="item-h">OpenAI packages enterprise data analysis as an installable agent</h3>
+          <p class="item-b">OpenAI has introduced a Data Agent in ChatGPT Work. This agent can connect to data sources such as Redshift, BigQuery, Databricks, and Snowflake. It can analyze changes in metrics and generate interactive dashboards that can be shared.</p><p class="item-b">Permissions for querying tables, rows, and columns in connected accounts are determined by administrators based on connections and roles. The ability to analyze from analysis to publication depends on the correctness of semantic layers, metric definitions, and data permissions.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The product has been added to the ChatGPT Work plugin catalog, and there are Alpha customer cases. However, the official team has not disclosed the total number of users, accuracy rates, or the cost of manual review.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-10</span>
             <a class="item-src" href="https://openai.com/index/put-data-to-work/" target="_blank" rel="noopener">OpenAI ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Anthropic披露AI滥用已触及生物武器研究</h3>
-          <p class="item-b">Anthropic称已封禁利用其模型从事网络攻击、监控和可能支持生物武器研究的行为，并发布第三份AI滥用报告。</p><p class="item-b">公司表示最新模型已加强生物研究限制，但披露的是最显著的新型案例，不代表常见滥用率，也未证明防护能覆盖所有变体。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>来源未披露涉事账户总数、成功率或潜在损害规模；只能确认风险类型与平台采取了封禁和模型防护。</p>
+          <h3 class="item-h">Anthropic reports AI misuse in biological weapons research</h3>
+          <p class="item-b">In its third AI misuse report, Anthropic said it had banned activity involving cyberattacks, surveillance and work that could support biological weapons research.</p><p class="item-b">Anthropic said its latest models had tighter controls on biological research. The report describes notable new cases, so it cannot establish the overall frequency of misuse or whether the safeguards cover every variant.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The total number of accounts involved, the success rate, or the potential scale of damage are not disclosed. It can only be confirmed that the platform has taken measures such as blockades and model protection to mitigate risks.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-10</span>
             <a class="item-src" href="https://apnews.com/article/anthropic-ai-threat-bioweapon-russia-00266dca90e4f8853f669648998d3bda" target="_blank" rel="noopener">Associated Press ↗</a>
@@ -253,17 +253,17 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Microsoft发布青少年AI安全参与框架</h3>
-          <p class="item-b">Microsoft发布Safe Participation Framework，把保护拆成安全设计、分龄体验与教育赋能，并要求使用Copilot先登录、限制13岁以下用户。</p><p class="item-b">Windows Age API只向开发者提供年龄区间而非出生日期，减少额外身份数据暴露；框架已给出产品方向，但跨服务执行范围和效果数据尚未公开。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>年龄信号、登录要求和内容保护已有具体设计，框架本身仍是方向性承诺，缺少覆盖率与伤害下降数据。</p>
+          <h3 class="item-h">Microsoft publishes a framework for safe youth engagement with AI</h3>
+          <p class="item-b">Microsoft has released the Safe Participation Framework, which focuses on security design, age-based experiences, and educational empowerment. It requires users under 13 years old to log in using Copilot.</p><p class="item-b">The Windows Age API provides developers with age ranges rather than exact birth dates, reducing the exposure of additional identity data. The framework has been developed, but the scope and effectiveness of cross-service execution have not yet been disclosed.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Age signals, login requirements, and content protection have been designed. However, the framework itself remains a directional commitment, lacking data on coverage rates and reduction in harm.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-10</span>
-            <a class="item-src" href="https://ae.marketscreener.com/news/microsoft-a-framework-for-safe-participation-with-ai-for-the-next-generation-ce785bded18ff320" target="_blank" rel="noopener">Microsoft（经MarketScreener转载） ↗</a>
+            <a class="item-src" href="https://ae.marketscreener.com/news/microsoft-a-framework-for-safe-participation-with-ai-for-the-next-generation-ce785bded18ff320" target="_blank" rel="noopener">Microsoft, republished by MarketScreener ↗</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

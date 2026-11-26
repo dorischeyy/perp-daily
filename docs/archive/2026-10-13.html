@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-10-13</title>
+<title>Perp DEX Daily · 2026-10-13</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -82,12 +82,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 102 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 102</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 10 月 13 日 · 星期二</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">October 13, 2026 · Tuesday</div>
     </header>
-    <p class="lead">Binance将ETF和个股永续装进同一合约框架，AlloX用锁定期换取发行折扣，Standard Chartered则让RLUSD从托管走向抵押品候选。</p>
+    <p class="lead">Binance applied a common contract framework to ETF and single-stock perpetuals. AlloX offered issuance discounts in exchange for lockups, and Standard Chartered began considering RLUSD as collateral after providing custody.</p>
 
 
       <section class="sec sec-perpdex">
@@ -100,27 +100,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Binance把ETF和个股一起纳入24/7永续</h3>
-          <p class="item-b"><strong>事件</strong>：Binance在10月12日连续上线ZCSH、MSTU、SNPS和RDW四只USDT永续，标的同时覆盖Zcash ETF、两倍做多MSTR的杠杆ETF和两只美股，均支持24/7交易、最高20倍杠杆与八小时资金费。</p><p class="item-b"><strong>机制</strong>：ZCSH和MSTU把ETF费用、再平衡与跟踪误差叠加到永续的指数和资金费之上，底层证券休市时仍继续交易；同一合约框架因此需要同时处理股票价格发现、ETF路径依赖和全天保证金风险。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>四只合约已上线，公告未披露成交量、OI、价差或底层证券休市时的价格质量。</p>
+          <h3 class="item-h">Binance includes ETFs and single stocks in its round-the-clock perpetual offerings</h3>
+          <p class="item-b"><strong>Event</strong>: On October 12, Binance listed four USDT perpetuals: ZCSH, MSTU, SNPS and RDW. They cover a Zcash ETF, a leveraged ETF targeting twice MSTR’s daily return and two U.S. stocks. All trade 24/7 with up to 20x leverage and eight-hour funding.</p><p class="item-b"><strong>Mechanism</strong>: ZCSH and MSTU layer ETF fees, rebalancing and tracking error on top of the perpetual index and funding rate. Trading continues when the underlying securities are closed. The contract framework must therefore account for equity price discovery, ETF path dependence and round-the-clock margin risk.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Four contracts have been launched, but the announcement does not disclose trading volumes, OI, price differences, or the prices of underlying securities during market closures.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-12</span>
             <a class="item-src" href="https://www.binance.com/en/square/post/376400136183151" target="_blank" rel="noopener">Binance ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">DEX在百万美元BTC订单上进入成本前列</h3>
-          <p class="item-b"><strong>事件</strong>：PerpFinder在10月12日23:57 UTC扫描订单簿，Paradex以0.3个基点成为10万美元BTC永续市价买单的最低成本场所，Lighter以0.9个基点排在100万美元档首位；1000万美元档则由MEXC以5.8个基点居首。</p><p class="item-b"><strong>机制</strong>：成本口径同时计入吃单费、半边价差和价格冲击，订单放大后排名会随盘口深度重排；链上场所能在中等规模进入前列，但无法成交的场所数量从10万美元档的1家升至1000万美元档的20家。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>这是单时点BTC市价买单测量，不包含持仓期间资金费、网络成本、订单拆分和不同时间段的深度变化。</p>
+          <h3 class="item-h">DEXs rank among the lowest-cost venues for $1 million BTC orders</h3>
+          <p class="item-b"><strong>Event</strong>: PerpFinder scanned the order book on October 12th at 23:57 UTC. Paradex became the lowest-cost place to place a perpetual order for 100,000 USD BTC, at a price of 0.3 basis points. Lighter ranked first in the 1 million USD range, at a price of 0.9 basis points. The 10 million USD range was led by MEXC, at a price of 5.8 basis points.</p><p class="item-b"><strong>Mechanism</strong>: The cost estimate adds taker fees, half the spread and price impact. As order size rises, venue ranking changes with available depth. Onchain venues rank near the top at medium sizes, but the number of venues unable to fill a trade rises from one at $100,000 to 20 at $10 million.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>This measures BTC market buys at one point in time. It excludes funding while a position is held, network costs, order splitting and changes in depth at other times.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-12</span>
             <a class="item-src" href="https://perpfinder.com/" target="_blank" rel="noopener">PerpFinder ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">澳大利亚拟把加密结算CFD纳入同一保护令</h3>
-          <p class="item-b"><strong>事件</strong>：ASIC提议把CFD零售保护令延长十年，并将通过数字资产转移结算的CFD纳入定义；方案继续要求杠杆限制、标准化强平和负余额保护，并明确相反头寸不能冲减单笔CFD的初始保证金。</p><p class="item-b"><strong>机制</strong>：监管边界从产品名称转向相同经济风险，现金、抵销和数字资产结算的杠杆敞口将适用一致保护；当前仍处四周征求意见阶段，反馈截止11月9日，延长期限还需部长批准。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>ASIC称现行规则实施后六个月零售账户净损失下降91%；新范围和十年延期都尚未正式生效。</p>
+          <h3 class="item-h">Australia proposes applying the same protections to crypto-settled CFDs</h3>
+          <p class="item-b"><strong>Event</strong>: The ASIC proposed extending the retail protection order for CFDs by ten years, and included CFDs that are settled through digital asset transfers in the definition. The proposal still requires leverage limits, standardized liquidations, and negative balance protection. It also specifies that opposite positions cannot reduce the initial margin for a single CFD.</p><p class="item-b"><strong>Mechanism</strong>: The proposal applies comparable safeguards to leveraged exposures whether they settle in cash, through offsetting positions or in digital assets. The four-week consultation runs until November 9. Extending the order still requires ministerial approval.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>ASIC states that after six months of implementing current rules, retail account net losses have decreased by 91%. The new scope and ten-year extension have not yet taken effect officially.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-12</span>
             <a class="item-src" href="https://www.asic.gov.au/about-asic/news-centre/find-a-media-release/2026-releases/26-239mr-asic-moves-to-extend-and-strengthen-cfd-consumer-protections" target="_blank" rel="noopener">ASIC ↗</a>
@@ -138,27 +138,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">AlloX在Sonar把估值折扣换成长锁定</h3>
-          <p class="item-b">AlloX在10月12日开启100万美元社区销售，接受Ethereum上的USDC和USDT，并用三档方案把完全稀释估值从6500万美元降至3900万美元。</p><p class="item-b">Silver在TGE全额解锁，Gold以20%解锁加12个月线性释放换取较低估值，Platinum则用三个月悬崖期和随后12个月释放获得最低估值；超募按比例分配，多余资金结算时退回。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>承诺窗口已开放至10月19日，TGE和分发日期仍未确认；100万美元是募资目标，不是已完成金额。</p>
+          <h3 class="item-h">AlloX offers a valuation discount on Sonar in exchange for a longer lockup</h3>
+          <p class="item-b">AlloX launched a community sales campaign worth 1 million USD on October 12th, accepting USDC and USDT on Ethereum. It used a three-tier scheme to reduce the fully diluted valuation from 65 million USD to 39 million USD.</p><p class="item-b">Silver offers full unlocking during the TGE period. Gold offers 20% unlocking with a 12-month linear release, while Platinum offers a three-month cliff period followed by a 12-month release period, resulting in the lowest valuation. Excess funds are distributed proportionally and returned when settled.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The commitment window has been extended until October 19th. The TGE and distribution dates remain unconfirmed. 1 million USD is the fundraising target, not the amount already raised.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-12</span>
-            <a class="item-src" href="https://sale.allox.ai/" target="_blank" rel="noopener">AlloX / Sonar ↗</a><a class="item-src item-ref" href="https://t.me/s/alloxdotai" target="_blank" rel="noopener">补充：AlloX Announcements · 10-12 ↗</a><a class="item-src item-ref" href="https://www.globenewswire.com/news-release/2026/10/09/3378173/0/en/allox-1-million-public-sale-opens-october-12-on-coinbase-owned-sonar-after-binance-wallet-success-and-5m-funding.html" target="_blank" rel="noopener">补充：GlobeNewswire · 10-09 ↗</a>
+            <a class="item-src" href="https://sale.allox.ai/" target="_blank" rel="noopener">AlloX / Sonar ↗</a><a class="item-src item-ref" href="https://t.me/s/alloxdotai" target="_blank" rel="noopener">Additional source: AlloX Announcements · 10-12 ↗</a><a class="item-src item-ref" href="https://www.globenewswire.com/news-release/2026/10/09/3378173/0/en/allox-1-million-public-sale-opens-october-12-on-coinbase-owned-sonar-after-binance-wallet-success-and-5m-funding.html" target="_blank" rel="noopener">Additional source: GlobeNewswire · 10-09 ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">ChainGPT把Live状态拆成注册与售卖阶段</h3>
-          <p class="item-b">ChainGPT更新Launchpad状态定义，明确质押池与发行活动池分开，活动在注册窗口或售卖窗口开放时均属于Live。</p><p class="item-b">Buzz活动即使原始状态仍显示Upcoming，只要进入Buzz &amp; Registration就应视为可参与；普通销售则依次经过注册、保证轮、先到先得、售罄、领取和结束，前端状态需要由生命周期阶段而不是单一枚举决定。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>更新的是活动分类和状态判定，不包含新增项目、募资金额或参与转化数据。</p>
+          <h3 class="item-h">ChainGPT divides its Live status into registration and sale phases</h3>
+          <p class="item-b">ChainGPT updated the definition of Launchpad status, clarifying that the pledge pool and issuance activity pool are separate. Activities are considered “Live” when they are available in the registration or sales window.</p><p class="item-b">Even though the Buzz activity is still marked as “Upcoming,” participants can join by entering “Buzz &amp; Registration.” Regular sales follow a process of registration, guaranteed rounds, first-come, first-served, sale completion, receipt, and termination. The status of the activity is determined by the lifecycle stage, rather than a simple enumeration.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The update concerns activity categories and status determination, without including new projects, fundraising amounts, or data related to conversion processes.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-11</span>
             <a class="item-src" href="https://help.chaingpt.org/article/chaingpt-pad-pool-types-lifecycle-phases" target="_blank" rel="noopener">ChainGPT ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Robinhood Chain把免Gas窗口延长到年底</h3>
-          <p class="item-b">freefloat记录显示，Robinhood Chain的免Gas截止日从9月29日延长至12月31日，原截止日经过时链上没有出现可测的阶跃变化。</p><p class="item-b">对Pons而言，免费Gas继续补贴发行和交易，回购流量因此尚未经历完整成本测试；真正的需求弹性要等补贴终止后，再比较发行、成交和回购是否同步下降。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>页面把免Gas视为估值模型中的独立断点，延长日期不能证明Pons需求已经摆脱补贴。</p>
+          <h3 class="item-h">Robinhood Chain extends its gas-free period to year-end</h3>
+          <p class="item-b">Freefloat records show Robinhood Chain’s gas-free deadline moving from September 29 to December 31. Onchain data showed no measurable step change when the original deadline passed.</p><p class="item-b">For Pons, free Gas continues to subsidize issuance and trading. As a result, the repurchase flow has not yet undergone a full cost-benefit analysis. The true demand elasticity can only be determined after the subsidies are terminated, when it becomes possible to compare whether issuance, trading, and repurchase decrease simultaneously.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The page considers Gas-free as an independent checkpoint in the valuation model. Extending the date does not prove that Pons’ needs have been freed from subsidies.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-10</span>
             <a class="item-src" href="https://freefloat.io/pons" target="_blank" rel="noopener">freefloat ↗</a>
@@ -176,27 +176,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Standard Chartered上线RLUSD托管</h3>
-          <p class="item-b">Standard Chartered DIFC分行已为合格机构客户上线XRPL版RLUSD托管，并与Ripple和LMAX Group推进把RLUSD纳入合格抵押品。</p><p class="item-b">计划中的抵押镜像会让RLUSD继续留在银行托管端，由LMAX识别其价值用于交易和抵押管理，减少向交易场所直接转账；该能力仍需完成文件、测试、内部审批和各地监管准备。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>托管服务已经上线，LMAX抵押品资格和镜像能力仍是计划状态，尚无抵押规模或上线时间。</p>
+          <h3 class="item-h">Standard Chartered launches RLUSD custody</h3>
+          <p class="item-b">Standard Chartered’s DIFC branch opened custody for XRPL-issued RLUSD to eligible institutional clients. It is working with Ripple and LMAX Group to make RLUSD eligible collateral.</p><p class="item-b">The planned collateralized mirror will keep RLUSD under bank custody. LMAX will be responsible for recognizing its value for trading and collateral management purposes, reducing the need for direct transfers to trading platforms. This capability still requires completing documents, testing, internal approvals, and regulatory preparations.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The hosting service has been launched. LMAX collateral qualifications and mirroring capabilities are still in planning stage. There is no indication of the size of the collateral or the launch date.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-12</span>
             <a class="item-src" href="https://ripple.com/ripple-press/standard-chartered-launches-rlusd-custody-and-joins-planned-collateral-integration-with-ripple-and-lmax-group/" target="_blank" rel="noopener">Ripple ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">FSB把跨境协作列为稳定币监控缺口</h3>
-          <p class="item-b">FSB向G20提交全球稳定币跨境脆弱性说明，指出同一安排可跨多个司法辖区、实体类型和监管机关，单一地区难以完整评估风险传播。</p><p class="item-b">下一步重点是补足跨境监测、信息共享和2023年建议的实施协作，并改善现有数据源的覆盖与可比性；这是一份监控与政策协调文件，不是新的稳定币准入规则。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>文件面向可能跨境并具系统重要性的稳定币安排，不等于所有单一地区稳定币都已被认定为系统性风险。</p>
+          <h3 class="item-h">FSB identifies cross-border coordination as a gap in stablecoin oversight</h3>
+          <p class="item-b">FSB submitted a global stablecoin cross-border vulnerabilities report to G20, indicating that the same arrangement can span multiple jurisdictions, entity types, and regulatory authorities. It’s difficult to fully assess risk propagation in a single region.</p><p class="item-b">The next step is to improve cross-border monitoring, information sharing, and collaboration for the implementation of recommendations in 2023. It’s important to enhance the coverage and comparability of existing data sources. This is a document for monitoring and policy coordination, not a new set of rules for stablecoins.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The document addresses arrangements for stablecoins that may cross borders and are systemically important. This does not mean that all stablecoins in a single region are considered systemic risks.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-12</span>
             <a class="item-src" href="https://www.fsb.org/2026/10/global-stablecoin-arrangements-cross-border-vulnerabilities-and-financial-stability-monitoring/" target="_blank" rel="noopener">FSB ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Morgan Stanley把代币化股票推迟到明年一季度</h3>
-          <p class="item-b">Morgan Stanley数字资产战略负责人称，代币化股票接入其另类交易系统的现实时间表从2026年下半年推迟到2027年第一季度，团队仍在建设所需基础设施。</p><p class="item-b">该系统会把链上股票接入既有的场外撮合和客户服务框架，但银行认为当前产品供给和客户需求都未成熟；钱包、合规边界和可用于交易的真实资产仍是上线前置条件。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>新时间表来自负责人访谈，代表建设目标而非已上线服务；客户采用、资产范围和监管批准仍待确认。</p>
+          <h3 class="item-h">Morgan Stanley postpones tokenized equities until next year’s first quarter</h3>
+          <p class="item-b">The head of Morgan Stanley’s digital assets strategy said that the real-time timeline for tokenized stocks to be integrated into their alternative trading system has been postponed from the second half of 2026 to the first quarter of 2027. The team is still working on building the necessary infrastructure.</p><p class="item-b">The system would connect onchain stocks to existing OTC matching and client service infrastructure. The bank said product supply and customer demand were not yet mature. Wallets, compliance arrangements and actual assets available for trading remain prerequisites for launch.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The new schedule comes from interviews with stakeholders, representing construction goals rather than already launched services. Customer adoption, asset scope, and regulatory approval remain to be confirmed.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-12</span>
             <a class="item-src" href="https://www.theblock.co/news/markets/2026-10-12-morgan-stanley-tokenized-equities-q1-2027-418256" target="_blank" rel="noopener">The Block ↗</a>
@@ -214,27 +214,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Binance把AI界面推向全球英语用户</h3>
-          <p class="item-b">Binance在约15万名用户测试后向全球英语用户推出Binance AI，界面会按用户经验和关注资产调整组件，并提供持仓回顾、异动分析、语音提醒和每四小时更新的市场简报。</p><p class="item-b">生成式界面把个性化从内容推荐推进到交易信息架构，但公告只确认功能与分发范围，没有披露建议准确率、错误提醒、用户留存或交易结果。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>约15万为测试人数，不是日活或持续使用规模；更多语言仍在逐步开放。</p>
+          <h3 class="item-h">Binance rolls out its AI interface to English-speaking users worldwide</h3>
+          <p class="item-b">After testing with approximately 150,000 users, Binance launched Binance AI for global English-speaking users. The interface is tailored to user experience and the assets of interest. It provides portfolio reviews, analysis of market movements, voice alerts, and market briefings updated every four hours.</p><p class="item-b">The generative interface moves personalization from content recommendation to transaction information architecture. However, the announcement only confirms the functionality and distribution scope, without disclosing accuracy rates, error alerts, user retention, or transaction results.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Approximately 150,000 is the number of people participating in the test, not the daily active users or the scale of continuous usage. More languages are still being gradually introduced.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-12</span>
-            <a class="item-src" href="https://www.binance.com/en/square/post/376484922102853" target="_blank" rel="noopener">Binance ↗</a><a class="item-src item-ref" href="https://www.theblock.co/news/business/2026-10-12-binance-ai-trading-interface-global-rollout-418349" target="_blank" rel="noopener">补充：The Block · 10-12 ↗</a>
+            <a class="item-src" href="https://www.binance.com/en/square/post/376484922102853" target="_blank" rel="noopener">Binance ↗</a><a class="item-src item-ref" href="https://www.theblock.co/news/business/2026-10-12-binance-ai-trading-interface-global-rollout-418349" target="_blank" rel="noopener">Additional source: The Block · 10-12 ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Ozak把研究、永续和预测市场放进同一对话</h3>
-          <p class="item-b">Ozak AI上线Eon交易Agent，用同一聊天入口完成市场研究、现货、永续和预测市场准备，并在信息缺失时追问，而不是自动补齐订单参数。</p><p class="item-b">永续票据会展示保证金、杠杆、预估清算价、费用、止损和止盈，最终仍由用户钱包签名；产品把自然语言延伸到交易准备，但官方示例不能证明真实成交质量或风险提示有效性。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>产品已开放使用，页面展示的是10月10日示例，没有披露真实用户量、成交量、失败率或误下单数据。</p>
+          <h3 class="item-h">Ozak combines research, perpetuals and prediction markets in one conversation</h3>
+          <p class="item-b">Ozak AI has launched Eon trading agents. These agents use the same interface for market research, spot trading, perpetual trading, and prediction markets. When information is lacking, they ask questions instead of automatically filling in order parameters.</p><p class="item-b">A perpetual order ticket displays margin, leverage, estimated liquidation price, fees, stop loss and take profit. The user’s wallet must sign. Natural language can help prepare the order, but the official examples do not establish real execution quality or the effectiveness of warnings.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The product is now available for use. The page shows examples from October 10th, but no real-world user numbers, transaction volumes, failure rates, or order placement data are disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-12</span>
             <a class="item-src" href="https://ozak.ai/blogs/the-all-in-one-ai-crypto-trading-agent" target="_blank" rel="noopener">Ozak AI ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">MorningAI让网站修改先预览再发布</h3>
-          <p class="item-b">MorningAI发布Website Agent，连接GitHub后可用自然语言改文案、图片、布局、按钮和页面，并在桌面、平板和手机视图中生成预览。</p><p class="item-b">修改不会自动上线，用户预览后才执行发布，还可以复制审阅链接交给工程师；同一Agent也把社媒分析、内容生成、批准和排期串进一个对话。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>已确认的是产品工作流和人工发布闸门，页面没有披露实际采用人数、回滚率或生产修改错误率。</p>
+          <h3 class="item-h">MorningAI lets users preview website changes before publishing</h3>
+          <p class="item-b">MorningAI released Website Agent. Once connected to GitHub, it can convert text, images, layouts, buttons, and pages using natural language. It also generates previews in desktop, tablet, and mobile views.</p><p class="item-b">Changes will not be automatically implemented. They are only executed after user previewing. Users can also copy the review links and send them to engineers. The same agent integrates social media analysis, content generation, approvals, and scheduling into a single process.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>It has been confirmed that there are product workflows and manual release gates, but the page does not disclose actual numbers of users, rollback rates, or errors in production modifications.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-12</span>
             <a class="item-src" href="https://www.morningai.com/blog/october-12-2026-product-updates" target="_blank" rel="noopener">MorningAI ↗</a>
@@ -242,7 +242,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

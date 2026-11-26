@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-09-21</title>
+<title>Perp DEX Daily · 2026-09-21</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -82,12 +82,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 83 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 83</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 9 月 21 日 · 星期一</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">September 21, 2026 · Monday</div>
     </header>
-    <p class="lead">Coinbase把美国单股永续推进到正式规则申报，PancakeSwap开始分发IPO前私募敞口，Google则让家庭Agent拥有独立账号与隔离云电脑。</p>
+    <p class="lead">Coinbase moved U.S. single-stock perpetuals to a formal rule filing. PancakeSwap began distributing pre-IPO private-market exposure, and Google gave its home agent a separate account and an isolated cloud computer.</p>
 
 
       <section class="sec sec-perpdex">
@@ -100,27 +100,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Coinbase提交美国单股永续规则</h3>
-          <p class="item-b"><strong>事件</strong>：Coinbase Derivatives于9月18日向SEC提交规则，拟上线现金结算的单股与ETF期货，其中包括无固定到期日的单股永续。（CME/CFTC定性线，自06-19，本次从登记意向进入产品规则申报）</p><p class="item-b"><strong>机制</strong>：平台同时依赖证券期货交易所通知登记与CFTC产品审查，把证券法入口和期货规则并行处理。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>SEC公告明确写明CFTC尚未批准；提交规则不等于获批、上线或产生真实成交。</p>
+          <h3 class="item-h">Coinbase files U.S. rules for single-stock perpetuals</h3>
+          <p class="item-b"><strong>Event</strong>: On September 18, Coinbase Derivatives filed rules with the SEC for cash-settled futures on single stocks and ETFs, including single-stock perpetuals without a fixed expiry. This takes the CME/CFTC classification story tracked since June 19 from registration plans to a product rule filing.</p><p class="item-b"><strong>Mechanism</strong>: The venue relies on both notice registration as a security futures exchange and CFTC product review, pursuing the securities and futures requirements in parallel.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The SEC’s announcement clearly states that the CFTC has not approved this. Submitting the rules does not mean approval, launch, or actual transactions.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-18</span>
             <a class="item-src" href="https://www.sec.gov/files/rules/sro/coin/2026/34-106420_0.pdf" target="_blank" rel="noopener">SEC ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">MEXC把T永续资金费改为四小时结算</h3>
-          <p class="item-b"><strong>事件</strong>：MEXC于9月19日把TUSDT永续资金费结算从八小时缩短为四小时，并把单次资金费上下限设为正负3%。</p><p class="item-b"><strong>机制</strong>：结算次数增加会更快在多空之间转移持仓成本，但单次上限不代表日累计成本下降，极端行情下仍需按连续周期计算。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>公告只调整结算频率和费率上限，没有披露触发原因、持仓量或异常行情样本。</p>
+          <h3 class="item-h">MEXC moves funding on the T perpetual to four-hour settlement</h3>
+          <p class="item-b"><strong>Event</strong>: On September 19, MEXC shortened the TUSDT perpetual funding interval from eight hours to four, with a ceiling of +3% and floor of −3% per settlement.</p><p class="item-b"><strong>Mechanism</strong>: Increased settlement frequency leads to faster transfer of position costs between long and short positions. However, the maximum single settlement amount does not represent a decrease in daily cumulative costs. In extreme market conditions, continuous cycles must still be used for calculations.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The announcement only adjusts the settlement frequency and rate limits. The reasons for triggering, the amount of positions held, or samples of abnormal market conditions are not disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-19</span>
             <a class="item-src" href="https://www.mexc.com/announcements/article/adjustment-to-tusdt-funding-rate-settlement-frequency-sep-19-2026-22-17827791538710" target="_blank" rel="noopener">MEXC ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Binance滚动上线2027年3月季度合约</h3>
-          <p class="item-b"><strong>事件</strong>：Binance宣布在9月25日交割0925合约后，上线BTC与ETH的USDT季度0326，以及BTC、ETH、BNB、XRP和SOL的币本位季度0326。</p><p class="item-b"><strong>机制</strong>：季度合约用固定到期日形成基差收敛，并在交割前十分钟只允许减仓，与永续依靠持续资金费维持锚定的方式不同。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>这是预定上市安排，公告没有给出实际深度、基差或交割参与数据。</p>
+          <h3 class="item-h">Binance rolls out March 2027 quarterly futures</h3>
+          <p class="item-b"><strong>Event</strong>: Binance plans to list new quarterly 0326 contracts after settlement of the 0925 contracts on September 25. The USDT-margined series covers BTC and ETH. The coin-margined series covers BTC, ETH, BNB, XRP and SOL.</p><p class="item-b"><strong>Mechanism</strong>: A quarterly contract has a fixed expiry at which the futures basis converges toward zero. Only position reductions are allowed during the final ten minutes before delivery. Perpetuals instead use ongoing funding payments to keep their price close to the underlying.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>This is a scheduled listing arrangement; the announcement does not provide actual depth, basis points, or data on participants in the delivery process.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-18</span>
             <a class="item-src" href="https://www.binance.com/en/support/announcement/detail/fcd1b50824c04192b80091599c452ee8" target="_blank" rel="noopener">Binance ↗</a>
@@ -138,27 +138,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">PancakeSwap开始分发IPO前私募敞口</h3>
-          <p class="item-b"><strong>事件</strong>：PancakeSwap与Binance Wallet于9月20日推出Pre-Access Portal，首个活动将让符合条件的钱包用户申购第三方安排的IPO前公司敞口。</p><p class="item-b"><strong>机制</strong>：活动按Alpha Points、Trencher Badge与bStocks On-Chain等级分配资格，把钱包身份、积分和限时申购拼成链上私募分发入口。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>代币不代表直接持股、投票权或股息；首个项目、定价、赎回和结算时间仍未公布。</p>
+          <h3 class="item-h">PancakeSwap begins distributing pre-IPO private-market exposure</h3>
+          <p class="item-b"><strong>Event</strong>: PancakeSwap and Binance Wallet launched a Pre-Access Portal on September 20th. The first activity will allow eligible wallet users to purchase pre-IPO company shares arranged by third parties.</p><p class="item-b"><strong>Mechanism</strong>: Qualifications are awarded based on Alpha Points, Trencher Badge, and bStocks On-Chain levels. Wallet identities, points, and limited-time subscriptions are combined to form a chain-based private placement portal.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Tokens do not represent direct ownership, voting rights, or dividends. The first project, pricing, redemption, and settlement times remain undisclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-20</span>
             <a class="item-src" href="https://blog.pancakeswap.finance/articles/pre-access-portal" target="_blank" rel="noopener">PancakeSwap ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">aka.fun发布稿与官方披露互相冲突</h3>
-          <p class="item-b"><strong>事件</strong>：9月18日发布稿称aka.fun已在Arc主网上线，但项目官方披露页仍写明合约只部署在Arc测试网，尚无生产系统。</p><p class="item-b"><strong>机制</strong>：平台设想用Uniswap v4交易费购买RWA，但当前只有未经独立审计的测试网实现，不能把媒体发布稿直接当成主网上线证据。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>官方披露页明确写着未主网上线、未独立审计且运营方未公开，采用数据暂不可验证。</p>
+          <h3 class="item-h">aka.fun’s press release conflicts with its official disclosures</h3>
+          <p class="item-b"><strong>Event</strong>: A September 18 press release said aka.fun had launched on Arc mainnet. The project’s own disclosure page still stated that its contracts were deployed only on Arc testnet and that it had no production system.</p><p class="item-b"><strong>Mechanism</strong>: The platform proposes buying real-world assets with Uniswap v4 trading fees. Only a testnet implementation was available, and it had yet to receive an independent audit. The press release alone cannot verify a mainnet launch.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The official disclosure page clearly states that it has not been launched on the mainnet, has not been independently audited, and the operator has not made it public. Therefore, the data cannot be verified yet.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-18</span>
             <a class="item-src" href="https://beincrypto.com/aka-fun-launches-arc-meme-trading-into-rwa-distribution/" target="_blank" rel="noopener">BeInCrypto ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Genius.fun把交易费导向RWA收购</h3>
-          <p class="item-b"><strong>事件</strong>：Genius.fun披露首轮运行中有26个代币毕业，前六小时向创建者分配150 BNB奖励，并计划在9月25日启动首笔1万美元基金会回购。</p><p class="item-b"><strong>机制</strong>：选择基金会路径的代币把2%交易费拆给RWA收购金库、创建者、平台和回购销毁，但代币持有人不拥有金库资产的赎回权。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>毕业数与奖励为项目方叙述，首笔RWA回购尚未发生，也没有链上审计或持续留存数据。</p>
+          <h3 class="item-h">Genius.fun directs trading fees toward real-world asset purchases</h3>
+          <p class="item-b"><strong>Event</strong>: Genius.fun reported that 26 tokens graduated in its first run and that creators received 150 BNB in rewards during the first six hours. The foundation scheduled its first $10,000 buyback for September 25.</p><p class="item-b"><strong>Mechanism</strong>: Tokens using the foundation model split a 2% trading fee among the RWA acquisition treasury, the creator, the platform and token buybacks and burns. Holders have no right to redeem the treasury’s assets.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The number of graduates and rewards are described by the project team. The first RWA repurchase has not yet occurred, nor are there any on-chain audits or continuous data retention.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-19</span>
             <a class="item-src" href="https://moneyinsighttoday.com/the-150k-six-hour-launchpad-how-to-launch-a-token-on-genius-fun/" target="_blank" rel="noopener">Money Insight Today ↗</a>
@@ -176,27 +176,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">本周主线 ｜ SEC开放许可型链上美股AMM</h3>
-          <p class="item-b"><strong>事件</strong>：SEC于9月17日发布为期五年的条件性豁免，允许合格Tokenized Securities Venue用链上订单簿或自动做市池交易代币化NMS股票。</p><p class="item-b"><strong>机制</strong>：发行人可以选择不参与，场所和流动性提供者则需满足许可、信息披露和市场完整性条件，监管先用限时沙盒收集正式规则所需证据。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>豁免即时生效但附带条件并继续征求意见，不等于所有代币化股票或无许可AMM都可直接使用。</p>
+          <h3 class="item-h">Weekly theme | SEC opens a path for permissioned onchain AMMs for U.S. equities</h3>
+          <p class="item-b"><strong>Event</strong>: On September 17th, the SEC issued a five-year conditional exemption, allowing qualified Tokenized Securities Venues to use on-chain order books or automated market-making to trade tokenized NMS stocks.</p><p class="item-b"><strong>Mechanism</strong>: Issuers can choose not to participate. However, venues and liquidity providers must meet conditions related to licensing, information disclosure, and market integrity. Regulatory authorities will use temporary sandboxes to collect evidence required for formal rules.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The exemption took effect immediately, subject to conditions and an ongoing request for comment. It does not give all tokenized stocks or permissionless automated market makers blanket eligibility.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-17</span>
             <a class="item-src" href="https://www.sec.gov/newsroom/press-releases/2026-90-sec-issues-innovation-exemption-facilitate-trading-tokenized-nms-stock-request-comment" target="_blank" rel="noopener">SEC ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">NEAR Intents锁仓升至1.76亿美元</h3>
-          <p class="item-b"><strong>事件</strong>：DefiLlama于9月21日显示NEAR Intents跨26条链锁仓约1.76亿美元，30日增长81.3%，同期DEX成交约41.8亿美元。</p><p class="item-b"><strong>机制</strong>：用户只提交目标资产与数量，由求解器竞争跨链路径；费用含协议费和各分发前端的affiliate fee，规模增长同时扩大桥接与链级故障面。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>这是动态页面快照，不是审计财报；TVL、成交和收入会随价格、统计时点与方法变化。</p>
+          <h3 class="item-h">NEAR Intents TVL reaches $176 million</h3>
+          <p class="item-b"><strong>Event</strong>: On September 21, DefiLlama showed about $176 million locked in NEAR Intents across 26 chains, up 81.3% over 30 days. DEX volume over the same period was about $4.18 billion.</p><p class="item-b"><strong>Mechanism</strong>: Users only need to submit the target assets and quantities. The solver will then compete to find cross-chain paths. The costs include the protocol fees and affiliate fees for each distribution frontend. As the scale increases, so does the bridging and chain-level fault tolerance.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>This is a dynamic page snapshot, not an audit of financial reports. TVL, transaction volume, and revenue change with prices, statistical time points, and methods.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-21</span>
             <a class="item-src" href="https://investors.defillama.com/protocol/near-intents" target="_blank" rel="noopener">DefiLlama ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">PEPE通过NTT进入Solana原生流动性</h3>
-          <p class="item-b"><strong>事件</strong>：Sunrise于9月20日把PEPE接入Solana的canonical SPL版本，生态报道显示首24小时成交约4000万美元。</p><p class="item-b"><strong>机制</strong>：Wormhole NTT在源链锁定或销毁资产、在目标链铸造对应供应，避免多个桥接版本分裂同一资产的流动性。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>成交额来自生态媒体快照，未拆分自然交易与激励，也不能替代跨链合约和托管风险评估。</p>
+          <h3 class="item-h">PEPE reaches native Solana liquidity through NTT</h3>
+          <p class="item-b"><strong>Event</strong>: On September 20th, Sunrise integrated PEPE into Solana’s canonical SPL version. Ecosystem reports indicate that approximately 40 million USD was traded in the first 24 hours.</p><p class="item-b"><strong>Mechanism</strong>: Wormhole NTT locks or destroys assets in the source chain, and creates corresponding supplies in the target chain. This prevents liquidity from being split between multiple bridging versions of the same asset.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The volume figure comes from an ecosystem media snapshot. It does not distinguish organic trading from incentive-driven activity, and the cross-chain contract and custody risks require a separate assessment.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-20</span>
             <a class="item-src" href="https://solanacompass.com/news/pepe-lands-on-solana-as-a-canonical-spl-token-via-wormhole-ntt-hits-40m-volume-in-24-hours" target="_blank" rel="noopener">Solana Compass ↗</a>
@@ -214,27 +214,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">本周主线 ｜ Google给家庭Agent独立账号与云电脑</h3>
-          <p class="item-b"><strong>事件</strong>：Google Labs于9月17日把CC扩展为最多六人的家庭Agent，每个成员拥有独立Google账号、权限和隔离云电脑。</p><p class="item-b"><strong>机制</strong>：成员按需共享Gmail、Chat、Drive和Calendar，Agent在Antigravity云环境中执行任务，向家庭组外行动前仍需单独授权。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>目前仅向美国18岁以上用户开放候补名单，家庭协作成功率、成本和越权事件都未披露。</p>
+          <h3 class="item-h">Weekly theme | Google gives its home agent a separate account and cloud computer</h3>
+          <p class="item-b"><strong>Event</strong>: On September 17th, Google Labs expanded CC to support up to six family agents. Each member has their own Google account, permissions, and isolated cloud computers.</p><p class="item-b"><strong>Mechanism</strong>: Members can share Gmail, Chat, Drive, and Calendar with others as needed. Agents perform tasks in the Antigravity cloud environment. Separate authorization is required before actions are taken outside the family group.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Currently, the waiting list is only available to users aged 18 and above in the United States. The success rate of family collaboration, costs, and any unauthorized events are not disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-17</span>
             <a class="item-src" href="https://blog.google/innovation-and-ai/models-and-research/google-labs/cc-expanding-to-groups/" target="_blank" rel="noopener">Google ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">OpenAI发布澳洲青少年安全蓝图</h3>
-          <p class="item-b"><strong>事件</strong>：OpenAI于9月18日发布六项澳洲青少年AI安全主张，并披露面向13至17岁用户的ChatGPT for Teens已于8月开始当地推送。</p><p class="item-b"><strong>机制</strong>：方案把AI素养、适龄防护、隐私保护的年龄确认、危机支持和家长控制组合成产品与公共政策双层框架。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>蓝图包含政策倡议和既有产品能力，没有披露年龄识别误差、危机干预效果或全国覆盖率。</p>
+          <h3 class="item-h">OpenAI releases an Australian youth safety blueprint</h3>
+          <p class="item-b"><strong>Event</strong>: On September 18, OpenAI announced six initiatives related to AI safety for Australian teenagers. It was also revealed that ChatGPT for Teens, designed for users aged 13 to 17, began being available locally in August.</p><p class="item-b"><strong>Mechanism</strong>: The plan combines AI literacy, age-appropriate protection, privacy protection for age verification, crisis support, and parental controls into a product and public policy framework.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The blueprint includes policy initiatives and existing product capabilities. Age identification errors, crisis intervention effectiveness, or national coverage rates are not disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-18</span>
             <a class="item-src" href="https://openai.com/index/australian-youth-safety-blueprint/" target="_blank" rel="noopener">OpenAI ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">本周主线 ｜ Anthropic用验证分层放宽生物能力</h3>
-          <p class="item-b"><strong>事件</strong>：Anthropic于9月17日开放Life Sciences Verification Program测试申请，让获批团队在Opus 5和Sonnet 5上获得分层的生命科学能力访问。</p><p class="item-b"><strong>机制</strong>：标准用途按年授权并使用精细分类器，高风险用途按项目授予六个月权限，部分实时阻断改为持续离线监控和30天标记数据保留。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>项目仍是测试版，不向个人开放，也不提供BAA或HIPAA合规保证；最高风险权限只给少量美国政府伙伴。</p>
+          <h3 class="item-h">Weekly theme | Anthropic changes access to biology capabilities through verified tiers</h3>
+          <p class="item-b"><strong>Event</strong>: On September 17th, Anthropic opened applications for the Life Sciences Verification Program. Approved teams will gain access to hierarchical life sciences capabilities on Opus 5 and Sonnet 5.</p><p class="item-b"><strong>Mechanism</strong>: For standard uses, annual licenses are required, and sophisticated classifiers are used. For high-risk uses, six-month permissions are granted. Some real-time blocking mechanisms are replaced with continuous offline monitoring and 30-day data retention.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The project is still in the testing phase. It is not open to individuals, and it does not provide compliance guarantees under BAA or HIPAA regulations. The highest risk permissions are only granted to a limited number of U.S. government partners.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-17</span>
             <a class="item-src" href="https://www.anthropic.com/news/life-sciences-verification-program" target="_blank" rel="noopener">Anthropic ↗</a>
@@ -242,7 +242,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-09-29</title>
+<title>Perp DEX Daily · 2026-09-29</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -82,12 +82,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 91 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 91</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 9 月 29 日 · 星期二</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">September 29, 2026 · Tuesday</div>
     </header>
-    <p class="lead">链上永续成交份额回落至7.9%，Coinbase与花旗把稳定币支付接入企业银行轨道，英伟达则把Agent安全边界下沉到运行时和芯片侧监控。</p>
+    <p class="lead">Onchain venues’ share of perpetual trading fell to 7.9%. Coinbase and Citi connected stablecoin payments to corporate banking infrastructure, and NVIDIA extended agent security controls to runtime and chip-level monitoring.</p>
 
 
       <section class="sec sec-perpdex">
@@ -100,27 +100,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">链上永续成交份额回落至7.9%</h3>
-          <p class="item-b"><strong>事件</strong>：PerpFinder的9月28日快照记录全市场永续24小时成交1298.2亿美元，其中DEX聚合成交102.5亿美元，占比7.9%。</p><p class="item-b"><strong>机制</strong>：该口径把20家CEX的公开接口与DefiLlama的DEX聚合量相加，并剔除无法验证成交质量的WEEX；份额下降说明当日订单流重新偏向中心化场所，但不能外推为长期趋势。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>102.5亿美元仍处于基准中的DEX永续日成交正常区间，但7.9%低于9月14日至20日周均9.6%，属于份额回落而非赛道萎缩。</p>
+          <h3 class="item-h">Onchain venues’ share of perpetual trading falls to 7.9%</h3>
+          <p class="item-b"><strong>Event</strong>: PerpFinder’s September 28 snapshot recorded $129.82 billion in total 24-hour perpetual volume, of which $10.25 billion, or 7.9%, came from the DEX aggregate.</p><p class="item-b"><strong>Mechanism</strong>: The calculation combines public API data from 20 centralized exchanges with DefiLlama’s DEX aggregate. It excludes WEEX because the quality of its volume could not be verified. The daily share shows a shift in order flow toward centralized venues, without establishing a long-term trend.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The 10.25 billion USD still falls within the normal range for DEX perpetual transactions. However, 7.9% is lower than the weekly average of 9.6% from September 14th to 20th. This indicates a decline in share, not a contraction in the market.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-28</span>
             <a class="item-src" href="https://perpfinder.com/" target="_blank" rel="noopener">PerpFinder ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Lighter在百万美元BTC市价单成本中继续居首</h3>
-          <p class="item-b"><strong>事件</strong>：PerpFinder在9月28日实测Lighter的10万美元BTC市价买单成本为0.4个基点，100万美元订单为0.9个基点，两档均排名第一。</p><p class="item-b"><strong>机制</strong>：Lighter标准账户基础挂单与吃单费率均为零，成本主要来自点差与冲击；订单放大到1000万美元后成本升至5.2个基点，说明零费率不能替代大单深度验证。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>同一轮实测中有5家场所无法完成100万美元订单、19家无法完成1000万美元订单，Lighter的优势覆盖中等大单，但极端规模仍有明显冲击。</p>
+          <h3 class="item-h">Lighter retains lowest execution cost for $1 million BTC market orders</h3>
+          <p class="item-b"><strong>Event</strong>: PerpFinder measured on September 28 that the cost of buying 100,000 USD BTC at the Lighter price was 0.4 basis points, and the order of 1 million USD was 0.9 basis points. Both orders ranked first.</p><p class="item-b"><strong>Mechanism</strong>: Lighter’s standard account has zero base maker and taker fees, leaving spread and price impact as the main costs. At $10 million, estimated cost rose to 5.2 basis points. Traders still need to check depth at their intended size.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>In the same round of testing, 5 venues were unable to complete orders worth 1 million USD, and 19 venues were unable to complete orders worth 10 million USD. Lighter’s advantage lies in handling medium-sized orders, but orders of extreme size still pose significant challenges.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-28</span>
             <a class="item-src" href="https://perpfinder.com/fees/lighter" target="_blank" rel="noopener">PerpFinder ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">BTC资金费在26家场所间出现双向分化</h3>
-          <p class="item-b"><strong>事件</strong>：PerpFinder在9月28日16:22 UTC记录，1万美元BTC多头持有24小时，Phemex可收取7.27美元，Hibachi则需支付5.28美元，26家场所中位结果为支付2.62美元。</p><p class="item-b"><strong>机制</strong>：工具把不同结算周期统一到相同持仓时长，揭示同一资产在不同场所的多空拥挤方向并不一致；套利仍需扣除交易费、滑点、转账与保证金风险。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>结果把当前费率外推24小时，真实资金费会变化；它是跨场所成本快照，不是可锁定的套利收益。</p>
+          <h3 class="item-h">BTC funding rates diverge in both directions across 26 venues</h3>
+          <p class="item-b"><strong>Event</strong>: At 16:22 UTC on September 28, PerpFinder estimated that a $10,000 BTC long held for 24 hours would earn $7.27 in funding on Phemex and pay $5.28 on Hibachi. The median across 26 venues was a payment of $2.62.</p><p class="item-b"><strong>Mechanism</strong>: The tool consolidates different settlement cycles into a common holding period. This reveals that the directional congestion of the same asset in different markets varies. Arbitrage opportunities still require consideration of transaction fees, slippage, transfers, and margin risks.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The results extrapolate current rates over 24 hours, and actual funding payments will change. This is a snapshot of costs across platforms, not a locked-in arbitrage opportunity.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-28</span>
             <a class="item-src" href="https://perpfinder.com/tools/funding-rate-calculator" target="_blank" rel="noopener">PerpFinder ↗</a>
@@ -138,30 +138,30 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">pump.fun占已观察单日发射量近一半</h3>
-          <p class="item-b"><strong>事件</strong>：MemeFees在9月28日观察到16个发射台共创建83373个以上代币，其中pump.fun为41620个以上，约占已观察总量49.9%。</p><p class="item-b"><strong>机制</strong>：pump.fun与部分Solana平台来自五分钟轮询的公开feed，带加号的数据只是下限；高供给说明发行入口仍集中，不代表毕业率、成交留存或创作者收入同步领先。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>统计只覆盖当日有观测的16个平台，feed型平台可能漏计，49.9%是已观察数量中的份额。</p>
+          <h3 class="item-h">Pump.fun accounts for nearly half of observed daily token launches</h3>
+          <p class="item-b"><strong>Event</strong>: MemeFees observed on September 28 that 16 launch platforms created more than 83,373 tokens, with pump.fun creating over 41,620 tokens, accounting for approximately 49.9% of the total observed tokens.</p><p class="item-b"><strong>Mechanism</strong>: Pump.fun and certain other Solana launches are counted from public feeds polled every five minutes. A plus sign marks a lower bound. High issuance suggests that launches remain concentrated, but says little about graduation rate, sustained trading or creator revenue.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The statistics only cover 16 platforms that were observed on the day. Feed-based platforms may be missed, and 49.9% represents the proportion of the observed number.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-28</span>
             <a class="item-src" href="https://memefees.com/stats/launches" target="_blank" rel="noopener">MemeFees ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">头部四家拿走78.6%的24小时发射台费用</h3>
-          <p class="item-b"><strong>事件</strong>：MemeFees在9月29日02:20 UTC记录，pump.fun、Pons、Flap.sh与FOMO的24小时费用份额分别为31.9%、21.0%、15.3%和10.4%，合计78.6%。</p><p class="item-b"><strong>机制</strong>：费用份额比发射数量更接近真实价值捕获，但不同平台费率、成交口径和数据覆盖并不完全一致；排名反映收入集中，不等于用户质量相同。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>页面给出的费用HHI为1860，已属集中市场；头部变化会显著改变创作者、流动性提供者与平台之间的收入分配。</p>
+          <h3 class="item-h">Four leading platforms collect 78.6% of launchpad fees over 24 hours</h3>
+          <p class="item-b"><strong>Event</strong>: MemeFees recorded on September 29th at 02:20 UTC. The 24-hour fees for pump.fun, Pons, Flap.sh, and FOMO were 31.9%, 21.0%, 15.3%, and 10.4%, respectively. The total fee was 78.6%.</p><p class="item-b"><strong>Mechanism</strong>: The cost ratio is closer to the actual value captured, but the fees, trading volumes, and data coverage vary across platforms. Rankings reflect revenue concentration, but this does not mean that user quality is the same.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The page reports a fee-based Herfindahl–Hirschman Index (HHI) of 1,860, indicating a concentrated market. A shift among the leading venues could therefore materially change the distribution of revenue among creators, liquidity providers and platforms.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-29</span>
             <a class="item-src" href="https://memefees.com/" target="_blank" rel="noopener">MemeFees ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Pons发射量低于均值但费用份额仍居第二</h3>
-          <p class="item-b"><strong>事件</strong>：Pons在9月28日由工厂事件完整计数6583次发射，低于七日均值7940次；到9月29日02:20 UTC，其24小时费用仍为146万美元，份额21.0%。</p><p class="item-b"><strong>机制</strong>：发射供给与费用捕获继续分离，说明单看创建数量会高估或低估平台价值；Pons的成交量只覆盖V2曲线交易，V1与外部Uniswap v4成交未计入。（Robinhood Chain分发线，自07-02，本次继续验证费用领先与供给量分离）</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>费用含Pons V1与V2，成交量只含V2曲线交易，不能用费用除以页面成交量直接推导统一费率。</p>
+          <h3 class="item-h">Pons falls below its average launch count but still ranks second in fee share</h3>
+          <p class="item-b"><strong>Event</strong>: On September 28, Pons recorded 6,583 launches, which was lower than the seven-day average of 7,940. By 02:20 UTC on September 29, its 24-hour cost remained at 1.46 million USD, with a share of 21.0%.</p><p class="item-b"><strong>Mechanism</strong>: Launch count and fee capture continue to diverge. Counting creations alone can overstate or understate a platform’s value. Pons volume here includes only V2 bonding-curve trades, excluding V1 and external Uniswap v4 activity. The divergence adds evidence to the Robinhood Chain story tracked since July 2.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Fees include Pons V1 and V2. Trading volume only includes transactions on the V2 curve. It is not possible to directly calculate a uniform fee by dividing fees by trading volume.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-29</span>
-            <a class="item-src" href="https://memefees.com/" target="_blank" rel="noopener">MemeFees ↗</a><a class="item-src item-ref" href="https://memefees.com/stats/launches" target="_blank" rel="noopener">补充：MemeFees发射量 · 09-28 ↗</a>
+            <a class="item-src" href="https://memefees.com/" target="_blank" rel="noopener">MemeFees ↗</a><a class="item-src item-ref" href="https://memefees.com/stats/launches" target="_blank" rel="noopener">Additional source: MemeFees launch volume · 09-28 ↗</a>
           </div>
         </article>
         </div>
@@ -176,27 +176,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">美国参议院报告把USDT列为伊朗影子银行核心通道</h3>
-          <p class="item-b"><strong>事件</strong>：美国参议院小组民主党调查人员分析846个受制裁或被封锁的伊朗关联钱包，称其中757个涉恐融资钱包里87%主要使用USDT；Tether则称过去一年已协助冻结5.5亿美元相关USDT。</p><p class="item-b"><strong>机制</strong>：公开链让资金流可追踪，也让发行方具备冻结能力，但制裁执行仍依赖地址归因、执法通知和发行方响应；同一基础设施同时承担跨境结算与合规控制。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>87%描述的是报告筛选出的757个涉恐融资钱包，不代表伊朗全部加密活动；5.5亿美元冻结额来自Tether自身披露。</p>
+          <h3 class="item-h">U.S. Senate report identifies USDT as a central channel for Iran’s shadow banking system</h3>
+          <p class="item-b"><strong>Event</strong>: Democratic investigators on a U.S. Senate panel analyzed 846 sanctioned or blocked Iran-linked wallets. Of 757 wallets linked to terrorist financing, they said 87% primarily used USDT. Tether said it had helped freeze $550 million in related USDT over the previous year.</p><p class="item-b"><strong>Mechanism</strong>: Public chains allow for traceability of capital flows, but they also give issuers the ability to freeze funds. However, sanctions implementation still depends on address attribution, law enforcement notifications, and issuer responses. The same infrastructure can handle cross-border settlements and compliance control.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>87% of the data refers to 757 cryptocurrency wallets identified through reporting. This does not represent all crypto activities in Iran. The freeze amount of 550 million USD comes from Tether’s own disclosure.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-28</span>
             <a class="item-src" href="https://www.theblock.co/news/regulation/2026-09-28-tethers-usdt-center-iran-shadow-banking-network-new-senate-report-says-417094" target="_blank" rel="noopener">The Block ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Coinbase与花旗把稳定币支付接入企业银行轨道</h3>
-          <p class="item-b"><strong>事件</strong>：Coinbase选择花旗Virtual Account Wallet为企业客户提供类银行法币账户，入账法币可自动换成稳定币；花旗机构客户也可通过Spring by Citi接受稳定币并以法币结算。</p><p class="item-b"><strong>机制</strong>：Coinbase负责数字资产支付与自动兑换，花旗作为银行记录方提供账户和结算，商户无需直接持有稳定币；首阶段在美国上线，后续能力与覆盖范围尚未披露。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>合作已公布具体账户、兑换和收单分工，但没有披露已接入企业数、处理规模、费率或上线日期。</p>
+          <h3 class="item-h">Coinbase and Citi connect stablecoin payments to corporate banking infrastructure</h3>
+          <p class="item-b"><strong>Event</strong>: Coinbase has chosen to provide corporate customers with bank-like fiat currency accounts using the Citibank Virtual Account Wallet. Fiat currency deposits can be automatically converted into stablecoins. Citibank institutional customers can also accept stablecoins through Spring by Citi and settle transactions in fiat currency.</p><p class="item-b"><strong>Mechanism</strong>: Coinbase is responsible for digital asset payments and automated exchanges. Citibank acts as the bank record-keeper, providing accounts and settlements. Merchants don’t need to hold stablecoins directly. The initial phase will be launched in the United States, but further capabilities and coverage have not been disclosed yet.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The cooperation has announced specific account, exchange, and settlement responsibilities, but the number of enterprises involved, processing scale, rates, or launch dates have not been disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-28</span>
             <a class="item-src" href="https://www.coinbase.com/blog/coinbase-brings-bank-grade-fiat-and-stablecoin-payments-to-businesses-in-collaboration-with-citi" target="_blank" rel="noopener">Coinbase ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">加州禁止公职人员发行个人Memecoin</h3>
-          <p class="item-b"><strong>事件</strong>：加州州长签署AB 2409，禁止州内公职人员发行Memecoin，并限制企业上架使用公职人员姓名或肖像的代币；同批法律还补充数字资产诈骗追偿与查扣框架。</p><p class="item-b"><strong>机制</strong>：规则把公职身份、代币发行和平台上架责任同时纳入利益冲突控制，但适用范围是加州公职人员与相关企业，不是全美Memecoin禁令。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>法律直接约束加州公职人员和使用其形象的上架行为，跨州平台与联邦层面的适用仍需另行判断。</p>
+          <h3 class="item-h">California bars public officials from issuing personal memecoins</h3>
+          <p class="item-b"><strong>Event</strong>: The Governor of California signed AB 2409, which prohibits state officials from issuing Memecoin tokens. It also restricts companies from using officials’ names or portraits in their tokens. The same laws also provide frameworks for recovering losses from digital asset fraud and confiscating tokens.</p><p class="item-b"><strong>Mechanism</strong>: The rules include control of conflicts of interest related to public office, token issuance, and platform listing responsibilities. However, this applies only to California public officials and related companies, not to the nationwide ban on Memecoin.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Laws directly govern the behavior of California public officials and those who use their image. Whether these laws apply to cross-state platforms and federal levels remains to be determined.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-28</span>
             <a class="item-src" href="https://www.theblock.co/news/regulation/2026-09-28-california-gov-gavin-newsom-bans-public-officials-from-launching-memecoins-takes-aim-at-trump-416970" target="_blank" rel="noopener">The Block ↗</a>
@@ -214,27 +214,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">英伟达把Agent隔离下沉到运行时与芯片侧监控</h3>
-          <p class="item-b"><strong>事件</strong>：英伟达发布Open Agent Safety Platform，OpenShell在CPU侧追踪并约束Agent动作，Sentry则在BlueField-4 DPU上独立监控，声称可在越界时于毫秒级隔离Agent。</p><p class="item-b"><strong>机制</strong>：策略执行与Agent运行环境分离，能降低模型绕过应用层护栏的风险；但权限规则仍由部署方定义，硬件隔离不能自动判断目标本身是否安全。（前沿模型评估线，自09-18，本次新增模型外独立执行边界）</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>英伟达称已有100多家机构参与或采用相关技术，但未公开统一测试结果；毫秒级隔离是平台能力声明，不等于所有部署都已验证。</p>
+          <h3 class="item-h">NVIDIA extends agent isolation to runtime and chip-level monitoring</h3>
+          <p class="item-b"><strong>Event</strong>: NVIDIA released the Open Agent Safety Platform. OpenShell tracks and restricts agent actions on the CPU side, while Sentry monitors independently on BlueField-4 DPUs. It claims that agents can be isolated in milliseconds when they exceed limits.</p><p class="item-b"><strong>Mechanism</strong>: Enforcing policy outside the agent’s runtime can reduce the risk of a model bypassing application safeguards. The deployer still defines permissions, and hardware isolation cannot decide whether an objective is safe. Independent enforcement adds to the frontier-model evaluation story tracked since September 18.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>NVIDIA states that over 100 institutions have participated in or adopted this technology, but no unified test results have been disclosed. Millisecond-level isolation is a capability statement of the platform; it does not mean that all deployments have been verified.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-28</span>
             <a class="item-src" href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-Open-Agent-Safety-Platform-to-Secure-Agents-From-Testing-to-Deployment/default.aspx" target="_blank" rel="noopener">NVIDIA ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">前沿研究者要求为AI研发自动化预设暂停机制</h3>
-          <p class="item-b"><strong>事件</strong>：OpenAI、Anthropic、Microsoft与学界研究者发布白皮书，警告具备专家级研发能力的模型可能让一年进展压缩到数周，并主张强制事故报告、独立评估与可暂停机制。</p><p class="item-b"><strong>机制</strong>：论证把风险触发点放在模型能否自动改进研发流程，而不是单次能力分数；作者同时承认算力、训练周期、收益递减和自动化难度都可能阻止递归加速。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>白皮书讨论的是高不确定性情景，不是已经发生的智能爆炸；治理建议的价值在于预设测量与停止条件。</p>
+          <h3 class="item-h">Frontier researchers call for predefined pauses in automated AI development</h3>
+          <p class="item-b"><strong>Event</strong>: OpenAI, Anthropic, Microsoft, and academic researchers have released a white paper warning that models with expert-level development capabilities could compress a year’s progress into just a few weeks. They advocate for mandatory incident reporting, independent evaluation, and a mechanism for suspending operations.</p><p class="item-b"><strong>Mechanism</strong>: The argument is that risk triggers should be placed within the model to automatically improve the R&amp;D process, rather than relying solely on individual capability scores. The authors also acknowledge that computational power, training cycles, diminishing returns, and the difficulty of automation may all hinder recursive acceleration.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The white paper discusses high uncertainty scenarios, not actual smart explosions. The value of governance recommendations lies in predefined measurements and stopping conditions.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-28</span>
             <a class="item-src" href="https://www.axios.com/2026/09/28/ai-pioneers-intelligence-explosion" target="_blank" rel="noopener">Axios ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">OpenAI与Anthropic的安全主张开始影响监管议程</h3>
-          <p class="item-b"><strong>事件</strong>：美联社梳理两家公司近期对独立测试和放缓高风险研发的共同倡议，同时指出实验室也可能借此塑造规则、争取公众信任并保护未来上市价值。</p><p class="item-b"><strong>机制</strong>：模型开发者既是风险信息的主要持有者，也是规则影响对象；有效治理需要把事故数据、外部评估权限和规则制定从公司自我声明中分离。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>报道分析企业激励与政策影响，不证明安全倡议只是商业策略；关键可核验项仍是外部测试、事故披露与暂停条件是否独立执行。</p>
+          <h3 class="item-h">OpenAI and Anthropic’s safety positions begin influencing the regulatory agenda</h3>
+          <p class="item-b"><strong>Event</strong>: The Associated Press notes that both companies have recently taken joint initiatives to conduct independent tests and slow down high-risk research and development. They also point out that laboratories can use this opportunity to shape regulations, gain public trust, and protect the value of future listings.</p><p class="item-b"><strong>Mechanism</strong>: Model developers are both the main holders of risk information and the targets of regulatory actions. Effective governance requires separating accident data, external evaluation authority, and rule-making from company self-statements.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The report analyzes corporate incentives and policy impacts. It does not prove that security initiatives are merely business strategies. Key verifiable items remain external testing, accident disclosures, and whether suspension conditions are implemented independently.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-27</span>
             <a class="item-src" href="https://apnews.com/article/ai-slowdown-midterms-anthropic-openai-ipo-9a057de94eb8f30a2fdb5b938918627e" target="_blank" rel="noopener">Associated Press ↗</a>
@@ -242,7 +242,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

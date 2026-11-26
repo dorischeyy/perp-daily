@@ -1,23 +1,23 @@
-# Perp DEX 日报
+# Perp DEX Daily
 
-Perp DEX 日报是 Doris 开发并维护的中文研究产品，面向关注加密衍生品的产品经理、研究者和交易者。日报追踪永续合约交易所的变化，从定价、保证金、清算与结算规则入手，解释这些变化如何影响交易者。独立的 AI 栏目记录模型发布、产品能力与实际应用。
+Perp DEX Daily is an independent research publication built and maintained by Doris. It covers perpetual futures markets, crypto trading infrastructure, and AI products. Each edition examines changes in pricing, margin, liquidation, or settlement and explains what traders, product builders, and researchers can do with that information.
 
-[阅读最新一期](https://dorischeyy.github.io/perp-daily/) · [浏览往期日报与编辑记录](docs/archive/)
+[Read the latest edition](https://dorischeyy.github.io/perp-daily/) · [Browse past editions and editorial reviews](docs/archive/)
 
-## 从一期日报读起
+## Inside an edition
 
-2026 年 11 月 26 日，第 143 期跟踪了两项保证金与风险管理规则的变化。Binance 将五只代币化证券纳入保证金范围。KuCoin 公布了将于 12 月 1 日生效的共享保险基金规则，并说明哪些合约会优先触发自动减仓。正文可直接打开公告原文，同期编辑记录列出了事件日期、入选依据及尚待确认的问题。[第 143 期](https://dorischeyy.github.io/perp-daily/archive/2026-11-26.html) · [本期编辑记录](docs/archive/2026-11-26-review.md)
+Issue 143, published on November 26, 2026, covered two changes in risk management. Binance added five tokenized securities to its collateral options. KuCoin announced shared insurance funds and described which contracts would face automatic deleveraging first when the new rules take effect on December 1. The edition links to the announcements. Its editorial review records the event dates, the reasons for selecting each story, and questions the announcements leave open. [Read issue 143](https://dorischeyy.github.io/perp-daily/archive/2026-11-26.html) · [Read the editorial review](docs/archive/2026-11-26-review.md)
 
-## 研究与发布
+## Research and publication
 
-- **来源与日期。** 新闻条目注明事件发生时间，并链接至交易所公告、监管文件、项目文档或论文。机制研究区分规则生效时间、数据快照时间与资料核验时间。
-- **持续跟踪。** 同一主题的进展保存在公开记录中，包含此前判断、新证据、来源与下次复核日期。读者可以沿记录了解一个市场或机制如何演变。[主题跟踪记录](threads.json)
-- **选题与核验。** 编辑流程按结构影响、相关性、持续性、可行动性和证据质量筛选候选。每期公开编辑记录，保留选题取舍和核验结果。[编辑方法](METHODOLOGY.md)
-- **交付。** Codex 自动化流程负责调研、撰稿与校验。每期以静态网页发布到 GitHub Pages，并由仓库工作流向飞书和 Slack 分发摘要。[运行说明](OPERATIONS.md)
+- **Sources and dates.** Stories link to exchange notices, regulatory filings, protocol documentation, and research papers. Reports distinguish the date of an event from the date a source was published, data was observed, or a rule was checked.
+- **Continuing coverage.** A public ledger tracks the original assessment, new evidence, sources, and the next development to check. [Story ledger](threads.json)
+- **Selection.** Candidates are scored for structural impact, relevance, durability, actionability, and evidence quality. An editorial review accompanies each edition and explains the selection. [Editorial methodology](METHODOLOGY.md)
+- **Delivery.** A Codex automation researches, drafts, and validates each edition. GitHub Pages hosts the report, and repository workflows distribute summaries to Feishu and Slack. [Operations guide](OPERATIONS.md)
 
-## 本地预览
+## Local preview
 
-使用 Node.js 18 或以上版本，在仓库根目录执行以下命令，即可将示例数据渲染为 HTML 并运行检查。
+Use Node.js 18 or later. The public repository retains the July 22, 2026 working draft in `content.json`. For a local preview, use the sample in `config/content.sample.json`. From the repository root, run:
 
 ```bash
 mkdir -p out
@@ -26,4 +26,4 @@ npm run check
 npm test
 ```
 
-在浏览器中打开 `out/preview.html` 即可预览页面。选题范围、引用规则与生成步骤见[编发规范](generate.md)，候选资料入口见[来源目录](config/sources.json)。
+Open `out/preview.html` in a browser. The publishing guide covers research, attribution, and production. The source registry lists the starting points for daily discovery. [Publishing guide](generate.md) · [Source registry](config/sources.json)

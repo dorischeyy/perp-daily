@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-10-08</title>
+<title>Perp DEX Daily · 2026-10-08</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -82,12 +82,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 97 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 97</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 10 月 8 日 · 星期四</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">October 8, 2026 · Thursday</div>
     </header>
-    <p class="lead">Coinbase完成Deribit整合并准备连接美国与全球衍生品流动性，Robinhood在代币化股票月成交中跃居首位，而GPT-6开始把交互界面直接生成到对话里。</p>
+    <p class="lead">Coinbase completed its Deribit integration and is preparing to connect U.S. and global derivatives liquidity. Robinhood took the lead in monthly tokenized equity volume, and GPT-6 began generating interactive interfaces inside conversations.</p>
 
 
       <section class="sec sec-perpdex">
@@ -100,27 +100,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Coinbase完成Deribit整合并筹备统一衍生品流动性</h3>
-          <p class="item-b"><strong>事件</strong>：Coinbase宣布Deribit并购后的产品整合已经完成，下一步将把美国与全球加密衍生品连接到单一受监管流动性池，并在未来数周加入期权、现货保证金与统一投资组合。</p><p class="item-b"><strong>机制</strong>：客户将可在同一账户调度现货、永续、期货、期权、借贷与质押，平台用统一保证金和抵押品管理减少跨场所搬资；但全球流动性池仍是即将推出的安排，不等于各司法辖区产品已同步开放。交易后台服务化线自8月25日以来出现第9个进展。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>Deribit整合已经完成，跨美国与全球市场的统一流动性池仍待推出；监管准入、账户迁移和跨产品清算边界尚未披露。</p>
+          <h3 class="item-h">Coinbase completes Deribit integration and prepares to connect derivatives liquidity</h3>
+          <p class="item-b"><strong>Event</strong>: Coinbase said the post-acquisition product integration with Deribit was complete. It now plans to connect U.S. and global crypto derivatives in one regulated liquidity pool and add options, spot margin and unified portfolios in the coming weeks.</p><p class="item-b"><strong>Mechanism</strong>: A common account would span spot, perpetuals, futures, options, borrowing and staking. Unified margin and collateral management are intended to reduce transfers across venues. The global pool is still planned, and availability varies by jurisdiction. This is the ninth development in the trading infrastructure story tracked since August 25.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The integration with Deribit has been completed, but the unified liquidity pool across the United States and global markets is still pending launch. Matters related to regulatory approval, account migration, and cross-product settlement boundaries have not yet been disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-07</span>
             <a class="item-src" href="https://www.coinbase.com/blog/coinbase-is-building-the-most-complete-trading-platform" target="_blank" rel="noopener">Coinbase ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Binance一次上线四只美股与稳定币公司永续</h3>
-          <p class="item-b"><strong>事件</strong>：Binance在10月6日分四个时点上线USDEX、VKTX、MCD和AKAM四只USDT本位永续，底层分别对应StablecoinX、Viking Therapeutics、麦当劳与Akamai。</p><p class="item-b"><strong>机制</strong>：新合约默认每8小时结算资金费，把稳定币公司、医药、消费与云基础设施股票敞口继续装进全天候保证金账户；但公告没有给出价格源、传统休市跳空保护和各标的初始深度。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>这是同日四只TradFi标的扩列，说明资产覆盖继续加速，但仍只有上线参数，不能据此判断成交、持仓或清算质量。</p>
+          <h3 class="item-h">Binance adds four perpetuals on U.S. equities and stablecoin companies</h3>
+          <p class="item-b"><strong>Event</strong>: Binance launched four perpetual contracts denominated in USDT on October 6: USDEX, VKTX, MCD, and AKAM. These contracts are backed by underlying assets such as StablecoinX, Viking Therapeutics, McDonald’s, and Akamai, respectively.</p><p class="item-b"><strong>Mechanism</strong>: The contracts settle funding every eight hours by default. Margin accounts now offer around-the-clock exposure to stocks in stablecoins, pharmaceuticals, consumer goods and cloud infrastructure. The announcement omitted the price feeds, protection against gaps while underlying markets are closed, and opening depth for each stock.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>This is an expansion of four TradFi assets on the same day. Asset coverage continues to accelerate, but there are still only launch parameters available. It is not possible to determine the quality of transactions, positions, or settlements based on this information.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-06</span>
             <a class="item-src" href="https://www.binance.com/en/square/post/374693112092711" target="_blank" rel="noopener">Binance ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">PerpFinder快照显示大额市价单可成交性高度分层</h3>
-          <p class="item-b"><strong>事件</strong>：PerpFinder在10月8日快照中估算，Lighter执行10万美元BTC永续市价买单的总成本约0.3个基点，100万美元约1.0个基点；Hyperliquid执行1000万美元约6.0个基点。</p><p class="item-b"><strong>机制</strong>：聚合器把手续费、盘口冲击和可成交深度合并成同一订单成本，并按多个固定名义金额横向比较；结果显示小额费率优势不能直接外推到大单，部分场所在更高档位甚至无法完整成交。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>快照显示4个场所无法完成100万美元档位、20个场所无法完成1000万美元档位；这是单时点公开盘口估算，不含延迟、拒单与真实滑点。</p>
+          <h3 class="item-h">PerpFinder snapshot shows large differences in venues’ ability to fill large market orders</h3>
+          <p class="item-b"><strong>Event</strong>: In its October 8 snapshot, PerpFinder estimated total execution costs on Lighter at about 0.3 basis points for a $100,000 BTC perpetual market buy and 1.0 basis point for $1 million. A $10 million market buy on Hyperliquid cost an estimated 6.0 basis points.</p><p class="item-b"><strong>Mechanism</strong>: The aggregator combines fees, order book impact and executable depth into an estimated order cost at several fixed notional sizes. A fee advantage on small orders does not necessarily carry over to large trades. Some venues could not fill the entire order at higher sizes.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Snapshots show that 4 venues cannot handle transactions worth $1 million, and 20 venues cannot handle transactions worth $10 million. These are estimates based on open market quotes at a single point in time, excluding delays, rejection of orders, and actual slippage.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-08</span>
             <a class="item-src" href="https://perpfinder.com/" target="_blank" rel="noopener">PerpFinder ↗</a>
@@ -138,27 +138,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Pump.fun重回单日费用首位，发射台收入结构继续分化</h3>
-          <p class="item-b">Freefloat统计的10月5日已完成日数据显示，Pump.fun单日费用约240万美元、成交约1.84亿美元；Flap费用约144万美元、成交约2674万美元，StonkFun费用约57.7万美元、成交约1729万美元。</p><p class="item-b">同样是发射台，高费用可能来自更大成交，也可能来自更高抽成或交易税；比较竞争力时需要同时看成交、费用率、发行数量、毕业率和毕业后流动性，不能只用费用榜下结论。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>榜单覆盖多链头部平台，但各项目费用定义和数据可得性不同，页面也明确不提供统一的跨链市场份额结论。</p>
+          <h3 class="item-h">Pump.fun returns to first place in daily fees as launchpad revenue diverges</h3>
+          <p class="item-b">For the complete day of October 5, Freefloat reported approximately $2.4 million in Pump.fun fees on $184 million in volume, $1.44 million in Flap fees on $26.74 million in volume and $577,000 in StonkFun fees on $17.29 million in volume.</p><p class="item-b">For launch pads, high costs may stem from larger transactions or higher commissions/trading taxes. When comparing competitiveness, it’s necessary to consider transaction volume, cost ratios, issuance quantities, graduation rates, and liquidity after graduation. One cannot make conclusions based solely on cost metrics.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The list covers leading platforms across multiple chains. However, the costs and data availability vary for each project. The page also clarifies that no unified cross-chain market share conclusions can be drawn.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-05</span>
             <a class="item-src" href="https://freefloat.io/launchpads" target="_blank" rel="noopener">Freefloat ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Pons宣称累计成交突破160亿美元</h3>
-          <p class="item-b">Pons在10月7日对外宣布累计成交超过160亿美元、累计费用约1.9亿美元，继续把Robinhood Chain的高频发行与交易税推向更大规模。</p><p class="item-b">这条进展更新了Robinhood Chain分发线，但累计成交与费用来自平台社交口径，尚未由统一第三方方法复算，也没有拆出毕业项目、重复交易和补贴后留存。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>若平台口径成立，累计费用约为累计成交的1.2%；这一比率不能直接等同于协议净收入或可持续用户价值。</p>
+          <h3 class="item-h">Pons says cumulative volume has passed $16 billion</h3>
+          <p class="item-b">On October 7th, Pons announced that the cumulative transaction volume exceeded 16 billion USD, with costs amounting to approximately 190 million USD. This continues Robinhood Chain’s high-frequency issuance and trading activities on a larger scale.</p><p class="item-b">This update improved the distribution of Robinhood Chain. However, cumulative transactions and costs come from the platform’s social metrics. They have not been recalculated using unified third-party methods. There is no breakdown of graduation projects, duplicate transactions, or post-subsidy retention.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>If the platform’s terms are valid, the cumulative cost is approximately 1.2% of the cumulative transactions. This ratio cannot be directly equated with the net revenue from the agreement or the sustainable user value.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-07</span>
             <a class="item-src" href="https://www.cryptocompass.com/articles/boom-pons-hits-16-000-000-000-trading-volume-3" target="_blank" rel="noopener">CryptoCompass ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">MemeToro把募资、退款与发射执行拆成开源合约</h3>
-          <p class="item-b">MemeToro公开BNB Chain发射台架构，Escrow合约负责募资目标、截止时间和退款，Executor负责达到条件后的发射，Token接口负责分发。</p><p class="item-b">产品把募资托管与后续执行拆开，便于分别审计失败退款和成功发射路径；但报道同时说明部分模块仍是占位或路线图，当前预售进度不能证明完整发射流程已在生产环境跑通。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>报道时第8阶段预售约15.9万美元，代码开放提高了可审计性，但生产部署、审计报告、首个项目结算与退款记录仍待验证。</p>
+          <h3 class="item-h">MemeToro separates fundraising, refunds and launch execution into open-source contracts</h3>
+          <p class="item-b">MemeToro revealed the architecture of the BNB Chain launch platform. The Escrow contract is responsible for managing fundraising targets, deadlines, and refunds. The Executor is responsible for launching tokens when conditions are met. The Token interface is responsible for distribution.</p><p class="item-b">The product separates fundraising and subsequent execution, allowing for separate audits of failed refunds and successful launches. However, the report also indicates that some modules are still placeholder or roadmap elements. The current pre-sale progress does not prove that the entire launch process has been successfully tested in the production environment.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>At the time of reporting, phase 8 pre-sale amounted to approximately 159,000 USD. The open-source code improves auditability, but the production deployment, audit reports, first project settlements, and refund records still need verification.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-06</span>
             <a class="item-src" href="https://www.thecoinrepublic.com/2026/10/06/memetoro-crypto-presale-open-source-ai-agent-and-meme-coin-launchpad-on-bnb-chain/" target="_blank" rel="noopener">The Coin Republic ↗</a>
@@ -176,27 +176,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">OKX与ICE申请在美国提供全天候代币化股票交易</h3>
-          <p class="item-b">OKX与纽约证交所母公司ICE向SEC提交创新豁免方案，计划提供60多只美国股票的全天候代币化交易，并保留股息与投票权。</p><p class="item-b">方案要求发行人有30天反对期，目标是在五年试验期内连接传统证券权利与链上连续交易；目前只是监管申请，尚未获得豁免或向客户开放。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>若获批，覆盖将从加密原生RWA扩到具有公司行动权利的美国股票；托管、清算、休市定价和投资者适当性仍待SEC审查。</p>
+          <h3 class="item-h">OKX and ICE apply to offer round-the-clock U.S. trading in tokenized equities</h3>
+          <p class="item-b">OKX and ICE, the parent of the New York Stock Exchange, submitted an innovation exemption proposal to the SEC. They plan to offer round-the-clock trading in tokenized versions of more than 60 U.S. stocks while preserving dividend and voting rights.</p><p class="item-b">The proposal requires issuers to have a 30-day opposition period. The goal is to integrate traditional securities rights with continuous trading on the blockchain within a five-year trial period. Currently, this is just a regulatory application; no exemptions have been granted, and the platform is not yet open to customers.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>If approved, the coverage will expand from crypto-native RWA to U.S. stocks with corporate rights. Matters related to custody, settlement, market close pricing, and investor suitability still need to be reviewed by the SEC.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-05</span>
             <a class="item-src" href="https://www.coindesk.com/markets/2026/10/05/okx-and-nyse-s-owner-file-for-round-the-clock-tokenized-trading-in-u-s-stocks" target="_blank" rel="noopener">CoinDesk ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Robinhood跃居9月链上代币化股票成交首位</h3>
-          <p class="item-b">CoinDesk Research统计，9月链上代币化股票成交创156亿美元纪录，Robinhood贡献65.7亿美元、占42%，较前月增长407%；bStocks为54.2亿美元、占34.7%。</p><p class="item-b">Robinhood Chain不再只是发行与费用故事，已经在月成交中形成可见分发规模；但统计反映代币化股票现货活动，不能直接推导其永续采用或独立用户增长。TradFi永续资产类别线自6月24日以来出现第44个进展。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>同期代币化股票资产规模约48.7亿美元、环比增长13.7%；成交增长远快于存量，仍需观察换手来源与持续性。</p>
+          <h3 class="item-h">Robinhood ranks first in September onchain tokenized equity volume</h3>
+          <p class="item-b">According to CoinDesk Research, tokenized stock transactions on the blockchain reached a record of 15.6 billion USD in September. Robinhood contributed 6.57 billion USD, accounting for 42%, a 407% increase from the previous month. bStocks accounted for 5.42 billion USD, accounting for 34.7%.</p><p class="item-b">Robinhood Chain now has measurable distribution scale in monthly trading as well as issuance and fees. These figures cover tokenized equity spot trading. They do not establish perpetual adoption or growth in unique users. This is the 44th development in the TradFi perpetual asset coverage story tracked since June 24.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The scale of tokenized stock assets during the same period was approximately 4.87 billion USD, representing a 13.7% increase compared to the previous period. Transactions grew much faster than the existing assets. It’s still necessary to observe the sources and sustainability of these transfers.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-06</span>
             <a class="item-src" href="https://www.coindesk.com/research/stablecoins-and-tokenized-assets-report-october-2026" target="_blank" rel="noopener">CoinDesk Research ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">USDG原生进入Arbitrum并接入交易、借贷与永续抵押</h3>
-          <p class="item-b">Global Dollar已在Arbitrum原生发行USDG，用户可在Fluid与Uniswap交易，在Morpho与Maple借贷，并通过GMX的GLV(USDG)金库参与永续流动性。</p><p class="item-b">Kraken开放Arbitrum网络充提，Stargate提供跨链路由，使同一稳定币从发行直接连接交易、收益与抵押场景；生态整合已上线，但各协议深度、激励依赖和赎回压力表现尚未披露。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>原生发行、交易与充提入口已经开放，GMX金库把USDG接入永续抵押需求；不能据合作清单推断实际TVL或利用率。</p>
+          <h3 class="item-h">Native USDG launches on Arbitrum for trading, lending and perpetual collateral</h3>
+          <p class="item-b">Global Dollar has already launched USDG on the Arbitrum platform. Users can trade USDG on Fluid and Uniswap, borrow USDG on Morpho and Maple, and participate in perpetual liquidity through GMX’s GLV (USDG) vault.</p><p class="item-b">Kraken enables deposits and withdrawals on the Arbitrum network. Stargate provides cross-chain routing, allowing the same stablecoin to be directly traded, with associated earnings and collateral scenarios. The ecosystem is fully integrated, but details regarding the depth of each protocol, incentives, and redemption pressures have not yet been disclosed.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Native issuance, trading, and withdrawal channels are already open. GMX vaults have connected USDG to perpetual collateral requirements. It is not possible to infer the actual TVL or utilization rate based on the list of partners.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-07</span>
             <a class="item-src" href="https://forum.arbitrum.foundation/t/arbitrumdao-factsheet-usdg-launches-on-arbitrum/31552" target="_blank" rel="noopener">ArbitrumDAO Forum ↗</a>
@@ -214,27 +214,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">GPT-6开始在对话中直接生成可交互界面</h3>
-          <p class="item-b">OpenAI向ChatGPT付费用户滚动推出GPT-6与Intelligent UI，模型可组合文字、图形、按钮、表单和图表，并用原生流式组件库与编译器边生成边呈现。</p><p class="item-b">界面由模型根据任务动态选择，意味着输出从文本和代码继续扩到可直接操作的临时工具；免费与Go用户计划次日开始获得，企业可用性仍受管理员设置影响。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>网页搜索任务平均提前44%开始回答来自OpenAI内部评测，且本次更新只影响ChatGPT聊天体验，不改变Work与Codex所用模型。</p>
+          <h3 class="item-h">GPT-6 begins generating interactive interfaces directly in chat</h3>
+          <p class="item-b">OpenAI is rolling out paid users of ChatGPT, along with GPT-6 and Intelligent UI. The model can combine text, graphics, buttons, forms, and charts, and can be presented using native streaming components and compilers.</p><p class="item-b">The interface is dynamically selected by the model based on tasks, meaning that outputs will expand from text and code to temporary tools that can be directly operated. Free and Go user plans will be available starting the next day, but enterprise availability remains subject to administrator settings.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The average time taken for web search tasks to begin answering questions from OpenAI’s internal evaluations was 44% longer than usual. This update only affects the ChatGPT chat experience and does not change the models used by Work and Codex.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-07</span>
             <a class="item-src" href="https://openai.com/index/gpt-6-for-everyone/" target="_blank" rel="noopener">OpenAI ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Ironclad用真实合同任务评估Agent端到端完成度</h3>
-          <p class="item-b">OpenAI与Ironclad设计11项合同、法务和采购任务，每项按8至50个标准评分；GPT-6 Astra平均得分比GPT-5.6 Sol高32%，估算尝试时间低48%。</p><p class="item-b">评估把读文档、修改条款、调用系统和交付结果放进同一任务，不再只测问答正确率；但时间节省来自模拟估算，不是客户生产环境的实测工时。前沿模型评估线出现新的工作流样本。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>任务由有经验人员通常需要30至40分钟完成，评分细到证据与操作步骤；样本仍集中在单一企业合同工作流。</p>
+          <h3 class="item-h">Ironclad evaluates agents on end-to-end work with real contracts</h3>
+          <p class="item-b">OpenAI and Ironclad designed 11 tasks covering contracts, legal work and procurement. Each task was scored against 8 to 50 criteria. GPT-6 Astra averaged 32% higher scores than GPT-5.6 Sol, with a 48% reduction in estimated time per attempt.</p><p class="item-b">The evaluation now includes reading documents, modifying terms, calling systems, and delivering results. It no longer focuses solely on the accuracy of answers. However, the time savings come from simulated estimates, not from actual work hours in the client’s production environment. New workflow samples have appeared in the advanced model evaluation line.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Tasks typically take 30 to 40 minutes to complete, with detailed scoring based on evidence and operational steps. The samples are still concentrated within a single enterprise workflow.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-06</span>
             <a class="item-src" href="https://openai.com/index/advancing-computer-use-with-ironclad/" target="_blank" rel="noopener">OpenAI ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Claude Haiku 5.5进入AWS并把成本控制下放到推理强度</h3>
-          <p class="item-b">AWS在Bedrock与Claude Platform上提供Claude Haiku 5.5，支持通过effort参数控制推理强度，定位于高并发Agent、子Agent和延迟敏感任务。</p><p class="item-b">开发者可把常规步骤路由到低成本模型，把复杂判断升级到更高强度或更大模型，形成任务级成本分层；AWS称多数任务价格较Haiku 4.5低约75%，实际节省仍取决于调用结构和输出长度。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>约75%的降幅是厂商对多数任务的比较，不等于所有工作流总成本；区域、工具调用、缓存与重试都会改变实际账单。</p>
+          <h3 class="item-h">Claude Haiku 5.5 comes to AWS with adjustable reasoning effort for cost control</h3>
+          <p class="item-b">AWS provides Claude Haiku 5.5 on Bedrock and Claude Platform. This tool allows control of inference intensity through the effort parameter. It is designed for high-concurrency agents, sub-agents, and tasks that are sensitive to latency.</p><p class="item-b">Developers can route routine tasks to low-cost models, while complex judgments can be handled by higher-capacity models. This creates a hierarchical structure of task costs. AWS claims that most tasks are about 75% cheaper than with Haiku 4.5. However, actual savings depend on the call structure and output length.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Approximately 75% of the decrease is due to manufacturers comparing various tasks. This does not equal the total cost of all workflows. Factors like regions, tool calls, caching, and retries will affect the actual billings.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-07</span>
             <a class="item-src" href="https://aws.amazon.com/blogs/machine-learning/introducing-claude-haiku-5-5-on-aws/" target="_blank" rel="noopener">AWS ↗</a>
@@ -242,7 +242,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

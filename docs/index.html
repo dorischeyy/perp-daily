@@ -1,56 +1,56 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Perp DEX 日报由 Doris 开发并维护，追踪永续合约交易所、加密市场基础设施与 AI 产品进展。" />
-<title>Perp DEX 日报 · 2026-11-26</title>
+<meta name="description" content="Perp DEX Daily is built and maintained by Doris. It covers perpetual futures exchanges, crypto market infrastructure and AI products." />
+<title>Perp DEX Daily · 2026-11-26</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
   body{
     background:#f4f1ea; color:#16140f;
-    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    font-family:Georgia,"Times New Roman",serif;
     line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
-    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+    font-family:-apple-system,sans-serif; font-size:12px;
     letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
   .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
     margin:14px 0 6px; line-height:1.05;}
-  .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+  .mast-sub{font-family:-apple-system,sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
-  .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+  .threads-h{font-family:-apple-system,sans-serif; font-size:11px;
     letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
   .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
   .thread:last-child{border-bottom:none;}
   .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
-  .thread-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+  .thread-meta{font-family:-apple-system,sans-serif; font-size:11px;
     color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
   .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
-  .thread-source{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+  .thread-source{font-family:-apple-system,sans-serif; font-size:11px;
     color:#a3987f; margin-top:4px;}
   .thread-src{color:#8a7f66; text-decoration:none;}
   .thread-src:hover{color:#b03a2e;}
-  .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
+  .thread-w{font-family:-apple-system,sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
-  .sec-no{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
+  .sec-no{font-family:-apple-system,sans-serif; font-size:13px;
     font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
     width:30px; height:30px; display:flex; align-items:center; justify-content:center;
     flex:0 0 30px; margin-top:4px;}
@@ -64,10 +64,10 @@
   .item-b + .item-b{margin-top:7px;}
   .item-b strong{color:#16140f; font-weight:700;}
   .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
-    color:#6b6655; font-family:-apple-system,"PingFang SC",sans-serif; font-size:12.5px; line-height:1.65;}
+    color:#6b6655; font-family:-apple-system,sans-serif; font-size:12.5px; line-height:1.65;}
   .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
   .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
-    font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; letter-spacing:.03em;}
+    font-family:-apple-system,sans-serif; font-size:12px; letter-spacing:.03em;}
   .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
     border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
   .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
@@ -79,20 +79,20 @@
   .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
   .item-ref{color:#a3987f;}
   a.item-src:hover{color:#b03a2e;}
-  .research-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-meta{font-family:-apple-system,sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
   .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
   .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
   .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
   .research-row + .research-row{border-top:1px dotted #e4ded0;}
-  .research-row dt{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dt{font-family:-apple-system,sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
   .research-row dd{min-width:0; color:#403a2e;}
   .research-inference{background:#f7f4ec; padding:10px;}
   .research-discussions{list-style:none;}
   .research-discussions li + li{margin-top:8px;}
-  .discussion-meta{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta{font-family:-apple-system,sans-serif; font-size:11px; color:#8a7f66;}
   .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
   .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
-    font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
+    font-family:-apple-system,sans-serif; font-size:11px;
     letter-spacing:.06em; color:#6b6655; text-align:center; line-height:1.8;}
   .foot a{color:inherit; text-underline-offset:.16em;}
   @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
@@ -102,61 +102,61 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>永续合约与市场基础设施</span><span>第 143 期</span>
+        <span>Perpetual Futures and Market Infrastructure</span><span>Issue 143</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 11 月 26 日 · 星期四</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">November 26, 2026 · Thursday</div>
     </header>
-    <p class="lead">交易平台正在同时扩大可复用资产和极端行情缓冲。Binance把五只代币化证券纳入保证金，KuCoin把保险基金扩展为共享池与两级ADL。</p>
+    <p class="lead">Binance added five tokenized securities to its margin collateral. KuCoin announced shared insurance funds and a two-stage process for deciding which contracts face automatic deleveraging when losses mount.</p>
 
 
       <section class="sec sec-collateral-and-risk-infrastructure">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">抵押复用与风险基础设施</h2>
+            <h2 class="sec-title">Collateral and risk management</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月25日，KuCoin公布共享保险基金与两级自动减仓机制</h3>
-          <p class="item-b">KuCoin将于12月1日让交易对按风险使用独立或共享保险基金；共享池先对亏损贡献最高的一组合约执行Symbol-Level ADL，池风险继续恶化才扩展至全部合约。平台还将开放按池、交易对或结算币查询保险基金的新接口，但实际触发阈值仍以届时规则为准。</p>
+          <h3 class="item-h">November 25: KuCoin sets out shared insurance funds and two-stage auto-deleveraging</h3>
+          <p class="item-b">Starting December 1, KuCoin plans to assign pairs to individual or shared insurance funds according to risk. If a shared pool comes under stress, symbol-level auto-deleveraging will first target the contracts contributing the most to losses. It will extend to the entire pool only if conditions worsen. KuCoin also plans an API for querying balances by pool, pair or settlement currency. Trigger thresholds are subject to the rules in effect at launch.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.kucoin.com/announcement/product-updates" target="_blank" rel="noopener" title="KuCoin保险基金与ADL升级公告 · 发布 2026-11-25" aria-label="来源 1：KuCoin保险基金与ADL升级公告 · 发布 2026-11-25">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.kucoin.com/announcement/product-updates" target="_blank" rel="noopener" title="KuCoin insurance fund and auto-deleveraging announcement · Published 2026-11-25" aria-label="Source 1: KuCoin insurance fund and auto-deleveraging announcement · Published 2026-11-25">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月25日，Binance把五只bStocks同时接入交易与保证金</h3>
-          <p class="item-b">Binance于11月25日上线ARTYB、FRHCB、IBITB、IGVB和SOXXB现货，并把五只代币化证券加入跨仓、组合保证金与Portfolio Margin Pro抵押品。它们可与底层持仓1比1转换，但法律形态是ADGM批准的金融工具凭证，不等于直接持有股票，且仅向获准地区的合格用户开放。</p>
+          <h3 class="item-h">November 25: Binance adds five bStocks to spot trading and margin collateral</h3>
+          <p class="item-b">Binance listed ARTYB, FRHCB, IBITB, IGVB and SOXXB for spot trading and made them eligible collateral for cross margin, portfolio margin and Portfolio Margin Pro. They can be converted one-to-one against underlying holdings. Legally, they are ADGM-approved financial instrument certificates rather than direct stock ownership. Access is limited to eligible users in approved jurisdictions.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/square/post/391930722230690" target="_blank" rel="noopener" title="Binance bStocks抵押公告 · 发布 2026-11-25" aria-label="来源 1：Binance bStocks抵押公告 · 发布 2026-11-25">1</a><a class="source-number" href="https://www.binance.com/en/support/announcement/detail/94eb40096c2d44179a3e48fd4e5bf3d4" target="_blank" rel="noopener" title="Binance bStocks现货与转换公告 · 发布 2026-11-25" aria-label="来源 2：Binance bStocks现货与转换公告 · 发布 2026-11-25">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.binance.com/en/square/post/391930722230690" target="_blank" rel="noopener" title="Binance bStocks collateral announcement · Published 2026-11-25" aria-label="Source 1: Binance bStocks collateral announcement · Published 2026-11-25">1</a><a class="source-number" href="https://www.binance.com/en/support/announcement/detail/94eb40096c2d44179a3e48fd4e5bf3d4" target="_blank" rel="noopener" title="Binance bStocks spot trading and conversion notice · Published 2026-11-25" aria-label="Source 2: Binance bStocks spot trading and conversion notice · Published 2026-11-25">2</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月25日，OKX上线四只港股公司USDT永续</h3>
-          <p class="item-b">OKX于11月25日分批上线腾讯、美团、快手和京东USDT永续，网页、App与API均可用。四只合约全天交易、常规每8小时结算资金费；费率触及上下限时会自动改为每小时结算。公告没有披露港股休市时的指数源切换、标记价保护或公司行动处理，且可用地区以账户实际显示为准。</p>
+          <h3 class="item-h">November 25: OKX lists USDT perpetuals on four Hong Kong stocks</h3>
+          <p class="item-b">OKX rolled out Tencent, Meituan, Kuaishou and JD perpetuals on its website, app and API. They trade around the clock. Funding normally settles every eight hours and switches to hourly when the rate reaches a limit. The notice did not specify how index sources change outside Hong Kong market hours, how mark prices are protected or how corporate actions are handled. Availability depends on the account&#39;s region.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.okx.com/help/okx-to-list-tradfi-perpetual-futures-for-tencent-meituan-kuaishou-and-jd" target="_blank" rel="noopener" title="OKX港股公司永续公告 · 发布 2026-11-25" aria-label="来源 1：OKX港股公司永续公告 · 发布 2026-11-25">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.okx.com/help/okx-to-list-tradfi-perpetual-futures-for-tencent-meituan-kuaishou-and-jd" target="_blank" rel="noopener" title="OKX Hong Kong equity perpetuals listing notice · Published 2026-11-25" aria-label="Source 1: OKX Hong Kong equity perpetuals listing notice · Published 2026-11-25">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月24日，SEC工作人员对Molecule研究代币出具不行动函</h3>
-          <p class="item-b">SEC公司金融部工作人员表示，若LabsCo严格按申请函所述方式发行和销售Project Tokens，不会建议就证券法第5条注册或交易法第12(g)条股权登记采取执法行动。回复同时强调该立场只基于所陈述事实，不代表委员会批准、法律结论或其他代币项目可直接套用。</p>
+          <h3 class="item-h">November 24: SEC staff issues no-action letter on Molecule research tokens</h3>
+          <p class="item-b">SEC Division of Corporation Finance staff said it would not recommend enforcement over registration under Securities Act Section 5 or equity registration under Exchange Act Section 12(g) if LabsCo offers and sells Project Tokens as described in its request. The staff position applies to those facts. It is neither Commission approval nor a legal conclusion that other token issuers can rely on.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.sec.gov/rules-regulations/no-action-interpretive-exemptive-letters/division-corporation-finance-no-action/molecule-ag-112426" target="_blank" rel="noopener" title="SEC Molecule AG不行动函 · 发布 2026-11-24" aria-label="来源 1：SEC Molecule AG不行动函 · 发布 2026-11-24">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.sec.gov/rules-regulations/no-action-interpretive-exemptive-letters/division-corporation-finance-no-action/molecule-ag-112426" target="_blank" rel="noopener" title="SEC no-action letter to Molecule AG · Published 2026-11-24" aria-label="Source 1: SEC no-action letter to Molecule AG · Published 2026-11-24">1</a>
           </div>
         </article>
         </div>
@@ -171,38 +171,38 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月24日，GPT-6.2蛋白设计进入五个靶点实验验证</h3>
-          <p class="item-b">OpenAI于11月24日披露，GPT-6.2仅用推理与代码设计蛋白结构，实验团队对五个靶点测试322个小型结合蛋白，其中35个显示结合；模型改写的抗体片段也保留结合能力。候选筛选仍依赖专业结构模型，完整蛋白折叠预测明显落后，因此尚不是端到端药物设计系统。</p>
+          <h3 class="item-h">November 24: Researchers test GPT-6.2 protein designs against five targets</h3>
+          <p class="item-b">OpenAI reported that researchers tested 322 small binders designed with GPT-6.2 against five targets. Of those, 35 showed binding. Antibody fragments revised by the model also retained binding activity. GPT-6.2 used reasoning and code for design, but candidate screening still relied on specialist structure models. Its full protein-folding predictions lagged behind, limiting the scope of the result.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/" target="_blank" rel="noopener" title="OpenAI蛋白设计研究 · 发布 2026-11-24" aria-label="来源 1：OpenAI蛋白设计研究 · 发布 2026-11-24">1</a><a class="source-number" href="https://cdn.openai.com/pdf/gpt-6-a-universal-foundation-model-for-protein-biology.pdf" target="_blank" rel="noopener" title="GPT-6蛋白生物学论文 · 发布 2026-11-24" aria-label="来源 2：GPT-6蛋白生物学论文 · 发布 2026-11-24">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/" target="_blank" rel="noopener" title="OpenAI protein design research · Published 2026-11-24" aria-label="Source 1: OpenAI protein design research · Published 2026-11-24">1</a><a class="source-number" href="https://cdn.openai.com/pdf/gpt-6-a-universal-foundation-model-for-protein-biology.pdf" target="_blank" rel="noopener" title="GPT-6 protein biology paper · Published 2026-11-24" aria-label="Source 2: GPT-6 protein biology paper · Published 2026-11-24">2</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月25日，Qwen4-Max-Preview下线并自动路由正式版</h3>
-          <p class="item-b">阿里云于11月25日下线Qwen4-Max-Preview，旧模型ID仍可调用，但请求会自动路由至qwen4-max，Credits与用量也按正式版统计。预览期折扣同时结束，费用可能上升；依赖旧ID的Agent不会因接口中断立即暴露迁移，却可能在模型版本和账单上发生静默变化。</p>
+          <h3 class="item-h">November 25: Alibaba Cloud retires Qwen4-Max-Preview and reroutes its model ID</h3>
+          <p class="item-b">Alibaba Cloud retired Qwen4-Max-Preview on November 25. Requests using the old ID now route to qwen4-max, and credits and usage are recorded against the production model. The preview discount also ended, so costs may rise. An agent can continue to receive successful API responses while its underlying model and bill change.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://help.aliyun.com/en/model-studio/token-plan-product-updates" target="_blank" rel="noopener" title="阿里云Token Plan功能更新 · 发布 2026-11-25" aria-label="来源 1：阿里云Token Plan功能更新 · 发布 2026-11-25">1</a><a class="source-number" href="https://help.aliyun.com/en/model-studio/qwen4-max" target="_blank" rel="noopener" title="阿里云Qwen4-Max模型说明 · 发布 2026-11-16" aria-label="来源 2：阿里云Qwen4-Max模型说明 · 发布 2026-11-16">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://help.aliyun.com/en/model-studio/token-plan-product-updates" target="_blank" rel="noopener" title="Alibaba Cloud Token Plan product updates · Published 2026-11-25" aria-label="Source 1: Alibaba Cloud Token Plan product updates · Published 2026-11-25">1</a><a class="source-number" href="https://help.aliyun.com/en/model-studio/qwen4-max" target="_blank" rel="noopener" title="Alibaba Cloud Qwen4-Max model documentation · Published 2026-11-16" aria-label="Source 2: Alibaba Cloud Qwen4-Max model documentation · Published 2026-11-16">2</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月24日，Codex与Astra帮助业余研究者筛查系外行星信号</h3>
-          <p class="item-b">OpenAI于11月24日披露，两名业余研究者分别用Codex与Astra分析约10万和1900万颗恒星的公开观测数据。一个流程找出200多个信号，其中10个对应已确认行星；SETI研究者独立复现了两个候选信号。所有新候选仍需数月或数年的专业观测，不能写成已发现行星。</p>
+          <h3 class="item-h">November 24: Amateur researchers use Codex and Astra to screen for exoplanet signals</h3>
+          <p class="item-b">OpenAI described two amateur researchers who used Codex and Astra to analyze public observations of roughly 100,000 and 19 million stars, respectively. One workflow flagged more than 200 signals, including 10 associated with confirmed planets. A SETI researcher independently reproduced two candidate signals. Confirming any new planet would still require months or years of professional observation.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/searching-for-distant-planets-with-astra/" target="_blank" rel="noopener" title="OpenAI系外行星案例 · 发布 2026-11-24" aria-label="来源 1：OpenAI系外行星案例 · 发布 2026-11-24">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://openai.com/index/searching-for-distant-planets-with-astra/" target="_blank" rel="noopener" title="OpenAI exoplanet research case study · Published 2026-11-24" aria-label="Source 1: OpenAI exoplanet research case study · Published 2026-11-24">1</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot"><a href="https://github.com/dorischeyy/perp-daily">Doris 开发与维护</a> · 自动化编发 · 仅供研究参考，不构成投资建议</footer>
+    <footer class="foot"><a href="https://github.com/dorischeyy/perp-daily">Built and maintained by Doris</a> · Automated publication · For research purposes only. Not investment advice.</footer>
   </main>
 </body>
 </html>

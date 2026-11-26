@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-08-09</title>
+<title>Perp DEX Daily · 2026-08-09</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 45 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 45</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 8 月 9 日 · 星期日</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">August 9, 2026 · Sunday</div>
     </header>
-    <p class="lead">Hyperliquid 与 Bybit 的总持仓几乎相同但周转差异明显，Anthropic 把前沿原型赛搬到 Bengaluru，而 OpenAI 因网络安全能力放慢 Astra 开发。</p>
+    <p class="lead">Hyperliquid and Bybit held nearly equal open interest but showed markedly different turnover. Anthropic moved its frontier-model prototyping competition to Bengaluru, while OpenAI slowed development of Astra over its cybersecurity capabilities.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,32 +110,32 @@
 
         <article class="item">
 
-          <h3 class="item-h">Hyperliquid 与 Bybit 总 OI 几乎相同，前者持仓周转慢约 2.4 倍</h3>
-          <p class="item-b"><strong>事件</strong>：8 月 9 日同一市场快照显示，Hyperliquid 与 Bybit 的总未平仓量分别为 164704 和 164742 BTC，差距不到 0.1%；两者 24 小时成交量则分别为 23610 和 55993 BTC。</p><p class="item-b"><strong>机制</strong>：Hyperliquid 的 OI 与日成交比约 6.98，Bybit 约 2.94；前者用更少的当日成交承载近似规模的存量仓位，意味着价格快速移动时需要处理的仓位密度更高。</p><p class="item-b"><strong>二阶效应</strong>：周末快照提醒场所比较不能只看 OI 或成交排名；OI、周转、资产集中度和可用深度必须合并评估，否则高存量会被误写成高流动性。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>两者均为全平台合约汇总的一日截面，没有资产级深度、资金费率或清算损失，不能据此判断执行质量。</p>
+          <h3 class="item-h">Hyperliquid and Bybit report nearly identical open interest, with roughly 2.4× slower turnover on Hyperliquid</h3>
+          <p class="item-b"><strong>Event</strong>: In the same August 9 snapshot, Hyperliquid reported 164,704 BTC of open interest and Bybit 164,742 BTC, a difference of less than 0.1%. Their 24-hour trading volumes were 23,610 and 55,993 BTC respectively.</p><p class="item-b"><strong>Mechanism</strong>: Open interest divided by daily volume was about 6.98 on Hyperliquid and 2.94 on Bybit. Hyperliquid carried a similar stock of positions on lower daily turnover, relevant to how much existing exposure must adjust during a rapid price move.</p><p class="item-b"><strong>Second-order effects</strong>: Open interest measures outstanding positions; volume measures trading activity. Evaluating market quality also requires the concentration of assets and available depth. High open interest on its own does not indicate that large orders can exit easily.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Both figures are one-day, platform-wide contract aggregates. They do not include asset-level depth, funding rates or liquidation losses.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-09</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/main/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/main/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">Gate 总 OI 升至第二，但日成交只覆盖约 18% 存量</h3>
-          <p class="item-b"><strong>事件</strong>：同一快照中，Gate 总 OI 为 195623 BTC，仅次于 Binance 的 397897 BTC；其 24 小时成交为 35612 BTC，OI 与日成交比约 5.49。</p><p class="item-b"><strong>机制</strong>：作为参照，Binance 的 OI 与日成交比约 1.65；Gate 的存量规模虽位居第二，但每单位持仓对应的当日成交明显更少，风险更集中在已有仓位而非当日换手。</p><p class="item-b"><strong>二阶效应</strong>：排名提升会增加平台作为价格发现与风险承载场所的重要性，也提高异常行情时对标记价格、减仓和保险资源的要求；单日高比值仍可能受周末交易节奏影响。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>Gate 的 OI 约为 Binance 的 49%，但日成交仅约为其 15%；这里比较的是同一时点的全平台汇总。</p>
+          <h3 class="item-h">Gate ranks second by open interest but trades only about 18% of that amount in a day</h3>
+          <p class="item-b"><strong>Event</strong>: In the same snapshot, Gate ranked second in open interest with 195,623 BTC, behind Binance’s 397,897 BTC. Gate recorded 35,612 BTC of 24-hour volume, giving it an open-interest-to-volume ratio of about 5.49.</p><p class="item-b"><strong>Mechanism</strong>: Binance’s comparable ratio was about 1.65. Gate ranked second in outstanding positions but recorded far less daily trading per unit of exposure. Its risk was concentrated more in existing positions than in daily turnover.</p><p class="item-b"><strong>Second-order effects</strong>: A higher ranking increases Gate’s role in price discovery and risk bearing, and places greater demands on mark prices, deleveraging and insurance during disruptions. Weekend trading patterns could still explain part of the unusually high single-day ratio.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Gate&#x27;s open interest was about 49% of Binance&#x27;s and its daily volume about 15%. Both comparisons use whole-venue totals from the same observation time.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-09</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/main/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/main/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">MEXC 永续市场数接近 Hyperliquid 三倍，资本深度却没有同步拉开</h3>
-          <p class="item-b"><strong>事件</strong>：快照记录 MEXC 有 1107 个永续市场，Hyperliquid 为 375 个；两者总 OI 分别为 160090 和 164704 BTC，MEXC 的覆盖数多约 195%，总持仓反而低约 2.8%。</p><p class="item-b"><strong>机制</strong>：更多交易对扩展了长尾资产入口，但总 OI 没有同比增长，说明市场数量与资金深度是两条独立维度；平均值也会掩盖头部交易对对 OI 的高度集中。</p><p class="item-b"><strong>二阶效应</strong>：扩列竞争若缺少资产级 OI、价差和活跃天数，会把目录宽度误当成可执行流动性；对长尾永续而言，持续深度和退市规则比上币数量更能决定用户体验。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>快照只给市场总数与平台总 OI，没有单市场分布，不能用简单平均数代表任一交易对的真实深度。</p>
+          <h3 class="item-h">MEXC lists nearly three times as many perpetual markets as Hyperliquid without a comparable lead in capital depth</h3>
+          <p class="item-b"><strong>Event</strong>: The snapshot counted 1,107 perpetual markets on MEXC and 375 on Hyperliquid. Open interest was 160,090 BTC and 164,704 BTC, respectively. MEXC listed about 195% more markets but held about 2.8% less open interest.</p><p class="item-b"><strong>Mechanism</strong>: More pairs extend access to less widely traded assets, but total open interest has not risen proportionally. Listing breadth and capital depth are separate measures. Averages can also hide concentration in leading pairs.</p><p class="item-b"><strong>Second-order effects</strong>: Without asset-level open interest, spreads and active trading days, comparisons can mistake a broad catalog for executable liquidity. Sustained depth and clear delisting rules matter more to users of smaller perpetual markets than the number of listings.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The snapshot gives the market count and venue-wide open interest without a market-level breakdown. A simple average cannot establish executable depth for any particular pair.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-09</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/main/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/main/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a>
           </div>
         </article>
         </div>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Anthropic 用五小时原型赛筛选前沿产品，优胜者直接进入投资机构办公时段</h3>
-          <p class="item-b">Anthropic 与 Elevation Capital 8 月 8 日在 Bengaluru 举办 Push to Prod，一至三人团队需在五小时内用 Claude 做出现场原型，主办方明确排除简单工具重包装。</p><p class="item-b">活动设置 1 万美元奖金，并让优胜者进入 Elevation Capital 办公时段；它把模型试用、技术辅导和投资筛选压缩到同一天，但现场原型仍不能替代留存和付费验证。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>官网确认活动已结束、五小时构建、奖金与后续办公时段，但未披露参赛数、获奖项目或后续融资。</p>
+          <h3 class="item-h">Anthropic selects frontier prototypes in a five-hour competition and offers winners investor office hours</h3>
+          <p class="item-b">Anthropic and Elevation Capital held Push to Prod in Bengaluru on August 8. Teams of one to three had five hours to build a working prototype with Claude. The organizers explicitly ruled out simple repackaging of existing tools.</p><p class="item-b">The event offered $10,000 in prizes and Elevation Capital office hours for winners. It combined model trials, technical guidance and investment screening in one day. A live prototype still provides no evidence of retention or willingness to pay.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The event has ended. The official site confirms the five-hour build, prizes, and follow-up office hours. It gives no entrant count, winners, or subsequent funding.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-08</span>
             <a class="item-src" href="https://pushtoprod-india.devfolio.co/overview" target="_blank" rel="noopener">Devfolio ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">FinTech|X 关闭本届申请，筛选门槛从创意转向市场验证与现金跑道</h3>
-          <p class="item-b">Tampa Bay Wave 的 FinTech|X Accelerator 于 8 月 8 日关闭申请，要求团队至少有两名全职成员、已有市场验证，并保有 6 至 12 个月现金跑道。</p><p class="item-b">项目承诺连接 600 多名投资网络成员、250 多名导师，并在 10 月启动、11 月路演；这是一条偏成熟金融科技的增长通道，入选与获得融资仍是两个独立结果。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>页面公开了资格与日程，但没有本届申请数、录取规模、投资条款或加密项目占比。</p>
+          <h3 class="item-h">FinTech|X closes applications with emphasis on market validation and cash runway</h3>
+          <p class="item-b">Applications for Tampa Bay Wave’s FinTech|X Accelerator closed on August 8. Applicants needed at least two full-time team members, evidence of market validation and six to 12 months of cash runway.</p><p class="item-b">The program offers access to over 600 investment network members and more than 250 mentors, with an October start and a November demo day. It targets relatively mature fintech teams. Admission and funding are separate outcomes.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The page lists eligibility and dates. It does not disclose the number of applicants or admissions for this cohort, investment terms, or the share of crypto projects.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-08</span>
             <a class="item-src" href="https://www.tampabaywave.org/fintech/" target="_blank" rel="noopener">Tampa Bay Wave ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Stellar 正式启动 Ambassador Program，把社区分发改造成持续运营岗位</h3>
-          <p class="item-b">Stellar 本周汇总确认 SDF 正式启动 Ambassador Program，并与 Stellar House São Paulo 同期推进；社区角色从一次性活动参与转向可持续的本地教育与生态连接。</p><p class="item-b">大使计划能扩大地区触达，却不能直接证明开发者、钱包或支付量增长；有效转化应由后续活动、项目引荐与链上使用数据共同验证。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>周报确认计划正式启动，但没有披露大使人数、地区覆盖、激励结构或项目转化目标。</p>
+          <h3 class="item-h">Stellar starts an ambassador program with recurring community operations roles</h3>
+          <p class="item-b">Stellar’s weekly update confirmed that the Stellar Development Foundation formally launched its Ambassador Program alongside Stellar House São Paulo. The program gives local participants ongoing roles in education and ecosystem introductions beyond individual events.</p><p class="item-b">Ambassadors can expand regional reach. Subsequent events, project referrals and onchain use would show whether that reach translates into more developers, active wallets or payment volume.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The weekly report confirms the program launched. Ambassador numbers, regional coverage, incentives, and project conversion targets remain undisclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-08</span>
             <a class="item-src" href="https://www.reddit.com/r/Stellar/comments/1viat5a/stellar_weekly_roundup_week_of_jul_31_2026/" target="_blank" rel="noopener">Stellar Weekly Roundup ↗</a>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Ondo USDY 进入 Stellar 抵押品体系，链上代币化资产规模越过 29.6 亿美元</h3>
-          <p class="item-b">Stellar 本周汇总称 RedStone 已把 Ondo 的 USDY 带到链上并设为可用抵押品，同时 Stellar 代币化资产总规模超过 29.6 亿美元。</p><p class="item-b">收益型美元资产从持有工具变成抵押品后，可进入借贷和交易资金循环；但汇总没有给出 USDY 在 Stellar 的余额、借用率或清算记录，规模突破也不等于新增资产已经获得深度。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>29.6 亿美元是 Stellar 全部代币化资产口径，不是 USDY 单项余额，也不是可借流动性。</p>
+          <h3 class="item-h">Ondo USDY joins Stellar’s collateral ecosystem as tokenized assets on the network exceed $2.96 billion</h3>
+          <p class="item-b">Stellar’s weekly update said RedStone brought Ondo’s USDY to Stellar as eligible collateral. Total tokenized assets on the network exceeded $2.96 billion.</p><p class="item-b">Making a yield-bearing dollar asset eligible as collateral lets users deploy it in lending and trading. The update gave no Stellar USDY balances, utilization or liquidation records. Growth in total tokenized assets does not establish depth in this new asset.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The $2.96 billion covers all tokenized assets on Stellar. It does not measure USDY&#x27;s balance or the liquidity available to borrow.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-08</span>
             <a class="item-src" href="https://www.reddit.com/r/Stellar/comments/1viat5a/stellar_weekly_roundup_week_of_jul_31_2026/" target="_blank" rel="noopener">Stellar Weekly Roundup ↗</a>
@@ -202,9 +202,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Solana 把程序升级时的账户扩容改为自动处理，减少部署前置步骤</h3>
-          <p class="item-b">Solana 8 月 6 日开发者更新显示，一项修正程序修改时账户数据大小的提案已被接受；升级现有程序时，所需空间将自动扩展，不再要求开发者先手工扩容。</p><p class="item-b">变化降低了程序升级的操作顺序风险，但目前是已接受提案而非所有网络已激活；生产团队仍需等待 feature gate 与客户端支持情况。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>提案已接受，更新没有说明主网激活高度或所有客户端完成支持的时间。</p>
+          <h3 class="item-h">Solana automates account resizing during program upgrades, reducing deployment steps</h3>
+          <p class="item-b">Solana’s August 6 developer update reported acceptance of a proposal to adjust account data size when programs change. Existing programs would expand to the required size automatically on upgrade, removing the need for developers to allocate space manually first.</p><p class="item-b">This reduces the risk of performing upgrade steps in the wrong order. The proposal has been accepted, but network activation still depends on a feature gate and client support.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The proposal was accepted. The update gives neither a mainnet activation height nor a date by which all clients will support it.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-06</span>
             <a class="item-src" href="https://www.reddit.com/r/solana/comments/1vh57oo/solana_changelog_august_6/" target="_blank" rel="noopener">Solana Changelog ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Solana 多客户端一致性测试继续扩展，错误结果也要逐字一致</h3>
-          <p class="item-b">同一开发者更新显示，Agave 正把 conformance 测试扩展到指令、虚拟机系统调用、序列化和交易执行，Mithril 也在对齐该套件；Firedancer 同时推进独立快照生成。</p><p class="item-b">多客户端的安全目标不只要求有效交易结果一致，也要求错误处理一致，才能用模糊测试发现实现分歧；相关工作仍在开发中，不能当作客户端差异风险已经消失。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>更新列出四类 conformance 工作与 Mithril 跟进，但没有公开覆盖率、发现缺陷数或主网上线状态。</p>
+          <h3 class="item-h">Solana expands multi-client conformance tests to require matching error results</h3>
+          <p class="item-b">The update also said that Agave was extending conformance tests to instructions, virtual machine system calls, serialization and transaction execution. Mithril was aligning with the suite, while Firedancer was developing independent snapshot generation.</p><p class="item-b">Clients must agree on errors as well as valid transactions for fuzz testing to identify differences in implementation. These changes remain under development. The possibility of divergent client behavior remains.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The update lists four categories of conformance work and follow-up on Mithril. It gives no coverage rate, defect count, or mainnet launch status.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-06</span>
             <a class="item-src" href="https://www.reddit.com/r/solana/comments/1vh57oo/solana_changelog_august_6/" target="_blank" rel="noopener">Solana Changelog ↗</a>
@@ -233,9 +233,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">OpenAI 因关键网络攻击能力放慢 Astra，能力评测开始直接改变研发节奏</h3>
-          <p class="item-b">Axios 8 月 7 日报道，OpenAI 无法排除 Astra 已具备关键级网络攻击能力，因此放慢相关开发并扩大测试、安全控制和隔离环境，且已向白宫通报。</p><p class="item-b">这次变化把高危能力评测从发布前检查提前到模型研发阶段；但报道只确认风险无法排除，并不证明模型已在真实网络完成关键攻击。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>调整针对内部 Astra 研发与受控测试，不代表现有公开 ChatGPT 模型具备相同能力。</p>
+          <h3 class="item-h">OpenAI slows Astra development following cybersecurity capability evaluations</h3>
+          <p class="item-b">Axios reported on August 7 that OpenAI could not rule out Critical-level cybersecurity capabilities in Astra. It slowed related development, expanded testing, security controls and isolation, and notified the White House.</p><p class="item-b">The response moves high-risk capability assessments earlier into development. The report identified unresolved risk and gave no evidence that the model had conducted a Critical-level attack on a real network.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The adjustment applies to internal Astra development and controlled testing. It does not establish equivalent capabilities in publicly available ChatGPT models.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-07</span>
             <a class="item-src" href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks" target="_blank" rel="noopener">Axios ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">AI 使用传闻击穿 200 万美元图书交易，创作行业开始先惩罚不透明度</h3>
-          <p class="item-b">Axios 8 月 8 日报道，一笔约 200 万美元的图书交易在作者 Jerry Falade 被质疑使用生成式 AI 后告吹；争议发生在是否构成大规模生成仍不明确的情况下。</p><p class="item-b">创作市场缺少可被买方和受众共同接受的披露标准，导致工具辅助、文本生成与版权风险被混成同一标签；合同和溯源规则正从合规附件变成交易成立条件。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>报道呈现的是交易因质疑而终止，不等于已证明作品由 AI 批量生成或发生版权侵权。</p>
+          <h3 class="item-h">Reports of AI use derail a $2 million book deal and raise questions about disclosure</h3>
+          <p class="item-b">Axios reported on August 8 that a book deal worth about $2 million had fallen through after questions arose about author Jerry Falade’s use of generative AI. Whether substantial portions of the work were generated remained unclear.</p><p class="item-b">Buyers and audiences lack a shared disclosure standard for AI-assisted writing. Tool-assisted editing, generated text and copyright concerns can therefore be treated alike. Contract terms and provenance requirements increasingly determine whether a publishing deal can proceed.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The report says the deal ended after questions were raised. It does not establish that AI mass-produced the works or that copyright infringement occurred.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-08</span>
             <a class="item-src" href="https://www.axios.com/2026/08/08/generative-ai-accusations-hank-green-jerry-falade" target="_blank" rel="noopener">Axios ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">美国 29 州已有选举深伪法，但禁令与披露规则仍形成碎片化保护</h3>
-          <p class="item-b">Axios 8 月 7 日统计，美国已有 29 个州的 AI 选举深伪法律生效，但各州对禁止期、披露方式和责任范围的设计不一致，加州与夏威夷部分法律还遭法院禁令。</p><p class="item-b">没有联邦统一底线时，同一内容在不同州会面对不同下架与标注要求；平台需要按地区执行规则，却仍可能在跨州传播中留下保护空档。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>29 州指法律已生效的覆盖数，不代表规则一致、全部可执行或已有联邦层面的统一要求。</p>
+          <h3 class="item-h">Election deepfake laws in 29 U.S. states vary in their bans and disclosure rules</h3>
+          <p class="item-b">Axios reported on August 7 that AI election deepfake laws had taken effect in 29 U.S. states. Restrictions differ in timing, disclosure and liability. Courts have enjoined parts of the laws in California and Hawaii.</p><p class="item-b">Without a common federal baseline, the same content can face different removal and labeling rules across states. Platforms must enforce rules by jurisdiction, with protection gaps still possible when content crosses state lines.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Laws are in effect in 29 states. Their provisions and enforceability vary, and the figure does not establish a uniform federal requirement.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-07</span>
             <a class="item-src" href="https://www.axios.com/2026/08/07/election-ai-deepfake-rules-states" target="_blank" rel="noopener">Axios ↗</a>
@@ -267,24 +267,24 @@
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product assessment</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">风控与清算</div>
-          <h3 class="item-h">总 OI 不能再脱离周转率单独决定风险容量</h3>
-          <p class="item-b"><strong>判断变化</strong>：从“用总 OI 和成交量分别判断场所规模”更新为“把 OI 与日成交比及其趋势纳入风险密度判断，再决定杠杆、OI 上限与储备需求”。</p><p class="item-b"><strong>证据与边界</strong>：Hyperliquid 与 Bybit 总 OI 近乎相同，但 OI 与日成交比分别约 6.98 和 2.94；这是周末单日全平台快照，没有资产级深度和清算数据，不能直接证明前者风险更高。</p>
+          <div class="decision-area">Risk Control and Settlement</div>
+          <h3 class="item-h">Open interest needs turnover context when assessing risk capacity</h3>
+          <p class="item-b"><strong>Revised assessment</strong>: The open-interest-to-volume ratio and its trend add information about position density when setting leverage, open-interest caps and reserve requirements.</p><p class="item-b"><strong>Evidence and limits</strong>: Hyperliquid and Bybit had nearly identical open interest, but their ratios to daily volume were 6.98 and 2.94. The one-day weekend snapshot omitted asset-level depth and liquidation data, so it does not demonstrate that Hyperliquid was riskier.</p>
 
           <div class="item-meta">
 
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/main/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/main/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

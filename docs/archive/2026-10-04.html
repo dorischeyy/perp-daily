@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-10-04</title>
+<title>Perp DEX Daily · 2026-10-04</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -82,12 +82,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 96 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 96</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 10 月 4 日 · 星期日</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">October 4, 2026 · Sunday</div>
     </header>
-    <p class="lead">Sparkling把Hyperliquid、Polymarket和xStocks装进同一自托管入口，Copper为机构补上Hyperliquid权限与审计控制，而美国社区银行开始起诉OCC的加密信托银行章程。</p>
+    <p class="lead">Sparkling combined Hyperliquid, Polymarket and xStocks behind one self-custodial interface. Copper added permissions and audit controls for institutions using Hyperliquid. U.S. community banks challenged the OCC’s crypto trust bank charters in court.</p>
 
 
       <section class="sec sec-perpdex">
@@ -100,27 +100,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Sparkling用一次确认串起永续、预测市场与股票代币</h3>
-          <p class="item-b"><strong>事件</strong>：Sparkling在Telegram上线自托管交易入口，同一余额可路由到Hyperliquid永续、Polymarket预测市场、xStocks股票代币和Bebop跨链兑换，完整网页端计划10月14日推出。</p><p class="item-b"><strong>机制</strong>：Agent先把自然语言请求转换为含标的、仓位、价格、滑点、费用与风险检查的待签卡片，用户逐笔确认后才执行；入口层负责意图与账户体验，成交和资产责任仍分散在第三方场所与Turnkey密钥体系。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>Telegram产品已经上线，但625000名交易者、40亿美元成交和2000万钱包用户都是合作方或同类产品口径，Sparkling自身尚未披露成交、留存与失败率。</p>
+          <h3 class="item-h">Sparkling combines perpetuals, prediction markets and equity tokens in one confirmation</h3>
+          <p class="item-b"><strong>Event</strong>: Sparkling launched a self-custodial Telegram interface. A single balance can route to Hyperliquid perpetuals, Polymarket prediction markets, xStocks equity tokens and Bebop cross-chain swaps. A full web interface is planned for October 14.</p><p class="item-b"><strong>Mechanism</strong>: The agent converts a request into a card showing the asset, position, price, slippage, fees and risk checks. Each trade requires the user’s signature before execution. Sparkling handles intent and account presentation, while execution and asset responsibilities remain distributed between third-party venues and Turnkey’s key infrastructure.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Telegram products have been launched, but the 625,000 traders, $4 billion in transactions, and 20 million wallet users are either partners or similar products. Sparkling has not disclosed information on transaction volumes, retention rates, or failure rates.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-03</span>
             <a class="item-src" href="https://chainwire.org/2026/10/03/sparkling-launches-the-trading-app-that-comes-with-an-agent-2/" target="_blank" rel="noopener">Chainwire ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Copper把Hyperliquid交易纳入机构权限与审计环境</h3>
-          <p class="item-b"><strong>事件</strong>：Copper为机构客户开放Hyperliquid永续交易界面与API，并在同一平台提供tradeXYZ股票、商品与指数市场访问。</p><p class="item-b"><strong>机制</strong>：资产留在Copper的非托管MPC体系，Policy Engine在下单前执行多人授权、细粒度权限与完整审计轨迹；交易仍由Hyperliquid完成，Copper补的是密钥治理、抵押品调度与机构操作控制。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>超过一半链上永续成交和约8%全市场OI均来自Copper披露，公告没有给出接入客户数、经由该界面的成交或清算责任变化。</p>
+          <h3 class="item-h">Copper adds institutional access controls and auditing for Hyperliquid trading</h3>
+          <p class="item-b"><strong>Event</strong>: Copper provides institutional clients with a Hyperliquid perpetual trading interface and APIs. On the same platform, they can access trade XYZ stocks, commodities, and index markets.</p><p class="item-b"><strong>Mechanism</strong>: Assets stay within Copper’s noncustodial multiparty computation system. Before an order is submitted, its Policy Engine enforces multiparty authorization and granular permissions and maintains an audit trail. Hyperliquid executes the trade. Copper provides key governance, collateral management and institutional operating controls.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>More than half of the on-chain perpetual transactions and about 8% of the total market’s OI come from Copper. The announcement does not provide information on the number of customers accessing the platform, or any changes in the responsibilities related to transactions and settlements through this interface.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-01</span>
             <a class="item-src" href="https://www.prnewswire.com/news-releases/copper-launches-hyperliquid-trading-interface-302896102.html" target="_blank" rel="noopener">Copper ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">True Markets用订单簿给股票代币补上价格保护</h3>
-          <p class="item-b"><strong>事件</strong>：True Markets向首批beta客户开放NVDAc/USDC链上订单簿，特斯拉股票代币计划在10月跟进，接口面向美国以外合资格客户。</p><p class="item-b"><strong>机制</strong>：场所允许非市价限价单挂单，并提供价格保护、成交后最佳执行报告和价格改善，目标是把股票代币从AMM孤立池迁到可对照主市场价格的经纪执行层。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>目前只有NVDAc一本订单簿和初始beta客户，公告称部分AMM数百美元市价单成本可超过100个基点，但没有披露新场所的点差、深度或成交量。</p>
+          <h3 class="item-h">True Markets uses an order book for price protection on equity tokens</h3>
+          <p class="item-b"><strong>Event</strong>: True Markets opened its NVDAc/USDC onchain order book to initial beta customers. A Tesla equity token is planned for October. The interface is intended for eligible customers outside the United States.</p><p class="item-b"><strong>Mechanism</strong>: The platform allows non-market price limit orders, and provides price protection, best execution reports after transactions, and price improvement. The goal is to move stock tokens from isolated AMM pools to a brokerage execution layer that can compare prices with those of the main market.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Only the NVDAc order book was open to the initial beta cohort. The announcement said a market order of a few hundred dollars could cost over 100 basis points on some AMMs. It did not disclose spreads, depth or volume on the new venue.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-01</span>
             <a class="item-src" href="https://www.streetinsider.com/Business%2BWire/True%2BMarkets%2BLaunches%2BTokenized%2BEquities%2C%2BBringing%2BBest%2BExecution%2BOn-Chain/27133972.html" target="_blank" rel="noopener">Business Wire ↗</a>
@@ -138,27 +138,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Pons高费用增长开始转化为Arbitrum链收入</h3>
-          <p class="item-b">Robinhood Chain在8月和9月分别产生约670万美元与3580万美元费用，按Orbit约10%的分成，Arbitrum两个月可获得约430万美元，其中8%进入DAO国库、2%支持开发者。</p><p class="item-b">Pons发射台是费用增长的重要来源，但链收入来自交易税与高频发行，不等于毕业项目质量、长期流动性或Robinhood主App用户已经迁入。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>9月链费约为8月的5.3倍，但报道没有拆分Pons、现货、永续和其他应用贡献，也没有给出补贴结束后的留存。</p>
+          <h3 class="item-h">Pons fee growth begins contributing to Arbitrum chain revenue</h3>
+          <p class="item-b">Robinhood Chain generated approximately 6.7 million USD in fees in August and 35.8 million USD in fees in September. With a commission rate of about 10% for Orbit, Arbitrum could earn approximately 4.3 million USD over two months. Of this amount, 8% goes into the DAO’s treasury, and 2% supports developers.</p><p class="item-b">Pons launch sites are an important source of cost increases. However, chain revenue comes from transaction taxes and high-frequency issuance. This does not equal the quality of graduation projects, long-term liquidity, or the number of Robinhood main app users who have switched to other platforms.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The chain fee in September was approximately 5.3 times that of August. However, reports did not break down contributions from Pons, spot, perpetual, and other applications. There was also no information on what would happen after the subsidies ended.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-03</span>
             <a class="item-src" href="https://www.fool.com/investing/2026/10/03/the-clarity-act-did-not-pass-but-here-are-2-altcoi/" target="_blank" rel="noopener">The Motley Fool ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Suilend关闭STEAMM发射页并退回借贷主线</h3>
-          <p class="item-b">Suilend将在10月5日停用STEAMM代币发射主页，把产品重心移回借贷和后续项目；现有仓位仍可从Suilend访问并退出。</p><p class="item-b">Bluewater收购后没有强制迁移或冻结存量仓位，而是关闭获客入口、保留资产退出路径，说明发射业务被砍时仍需把前端停运和用户资产生命周期分开处理。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>公告没有披露STEAMM累计发行、收入或关闭原因，无法判断是采用不足、收购整合还是风险偏好变化。</p>
+          <h3 class="item-h">Suilend closes the STEAMM launch page and refocuses on lending</h3>
+          <p class="item-b">Suilend will discontinue the STEAMM token issuance page on October 5th, shifting its focus back to lending and subsequent projects. Existing positions can still be accessed and exited through Suilend.</p><p class="item-b">After acquiring Bluewater, there was no forced migration or freezing of existing positions. Instead, the company closed access to customers and retained paths for asset withdrawal. This indicates that when the launch business was cut down, the company still had to separate the front-end shutdown from the user asset lifecycle management process.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The announcement does not disclose the cumulative issuance, revenue, or reasons for the closure of STEAMM. It is impossible to determine whether this is due to insufficient adoption, mergers and acquisitions, or changes in risk preferences.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-02</span>
             <a class="item-src" href="https://www.tokenpost.com/news/technology/26378" target="_blank" rel="noopener">TokenPost ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">ChainGPT在Arc主网上线前先建立项目申请队列</h3>
-          <p class="item-b">ChainGPT Pad宣布成为首个支持Circle Arc的发射台，项目方已可申请在Arc发行，参与者也可提前完成账户准备。</p><p class="item-b">平台把发射审核和用户准入前置到主网开放之前，利用USDC原生gas和机构测试网叙事吸引首批供给；但Arc主网、原生代币与首场销售都尚未完成。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>页面称测试网有100多家公司并处理2.44亿笔交易，但这些是Arc测试网总量，不是发射台采用；首个项目、募资和结算记录均未披露。</p>
+          <h3 class="item-h">ChainGPT opens a project application queue ahead of Arc mainnet</h3>
+          <p class="item-b">ChainGPT Pad has announced that it is the first platform to support Circle Arc. The project has already started applying for issuance on Arc, and participants can prepare their accounts in advance.</p><p class="item-b">The platform delays the issuance review and user access until after the main network is opened. It uses USDC’s native gas and institutional test networks to attract the first batch of supply. However, the Arc main network, native tokens, and the initial sales have not yet been completed.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The page reported more than 100 companies and 244 million transactions on Arc testnet. These are network-wide figures. No first launchpad project, fundraising outcome or settlement record was disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-02</span>
             <a class="item-src" href="https://help.chaingpt.org/article/chaingpt-pad-is-the-first-launchpad-to-support-arc-circle-s-new-blockchain" target="_blank" rel="noopener">ChainGPT ↗</a>
@@ -176,27 +176,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">美国社区银行起诉OCC加密信托银行章程</h3>
-          <p class="item-b">美国独立社区银行家协会起诉OCC，主张允许加密公司用国家信托银行章程从事大量非受托业务超出国会授权。</p><p class="item-b">争议集中在牌照是否让加密机构获得联邦银行信用，却不承担存款保险、社区再投资、合并监管及传统资本流动性要求；现有信托章程仍不能吸收存款或发放贷款。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>案件刚提交华盛顿特区联邦地区法院，OCC尚未回应，当前没有禁令或实体判决改变已批准章程。</p>
+          <h3 class="item-h">U.S. community banks challenge OCC crypto trust bank charters in court</h3>
+          <p class="item-b">The American Independent Community Bankers Association sued the OCC, arguing that crypto companies should be allowed to use national trust bank charters to engage in a large number of non-trusting activities beyond what Congress has authorized.</p><p class="item-b">The controversy centers around whether licenses allow crypto institutions to obtain federal banking credit, without them being required to provide deposit insurance, community reinvestment, combined regulation, or traditional capital liquidity requirements. Existing trust charters still cannot accept deposits or issue loans.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The case has just been submitted to the District of Washington Court of Appeals. The OCC has not responded yet. Currently, there are no injunctions or substantive judgments that change the approved regulations.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-03</span>
             <a class="item-src" href="https://cointelegraph.com/news/community-banks-sue-occ-over-trust-bank-charters-of-crypto-firms" target="_blank" rel="noopener">Cointelegraph ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">韩国为代币化证券设定双节点账本与零售上限</h3>
-          <p class="item-b">韩国金融委员会发布下位法规草案，允许股票、债券、基金和部分投资合同以代币化形式发行流通，并计划2027年2月4日生效。</p><p class="item-b">账本须由韩国证券存管机构和至少两家账户管理实体共同维护，发行人账户管理机构最低资本为40亿韩元；零售投资者在每家场外交易所的年度净买入上限为1亿韩元。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>草案从10月2日至11月11日征求意见，仍需委员会审议、法制审查和内阁程序，参数可能在生效前调整。</p>
+          <h3 class="item-h">South Korea sets dual-node ledger rules and retail limits for tokenized securities</h3>
+          <p class="item-b">The Korean Financial Commission has issued a draft regulation that allows stocks, bonds, funds, and certain investment contracts to be issued and traded in the form of tokens. This regulation is scheduled to take effect on February 4, 2027.</p><p class="item-b">The ledger must be maintained by a South Korean securities depository institution and at least two account management entities. The minimum capital required for the issuer’s account management entity is 4 billion Korean won. Retail investors are allowed to have a maximum annual net purchase of 100 million Korean won per over-the-counter exchange.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The draft was open for feedback from October 2nd to November 11th. It still requires review by the committee, legal review, and cabinet procedures. The parameters may be adjusted before it takes effect.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-01</span>
-            <a class="item-src" href="https://www.fsc.go.kr/eng/pr010101/87834" target="_blank" rel="noopener">韩国金融委员会 ↗</a>
+            <a class="item-src" href="https://www.fsc.go.kr/eng/pr010101/87834" target="_blank" rel="noopener">South Korea&#x27;s Financial Services Commission ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Circle要求MiCA把银行存款比例改成流动性约束</h3>
-          <p class="item-b">Circle在欧盟MiCA复审意见中，要求取消电子货币代币储备至少30%、重大代币60%存入商业银行的固定比例，改为更灵活的最低流动性要求。</p><p class="item-b">Circle同时反对单一主权资产35%上限和单家银行不得超过其总资产1.5%的集中度规则，认为现有组合会迫使大型发行人分散到数十家银行，反而增加操作与对手方风险。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>这是最大MiCA授权美元与欧元稳定币发行人的政策主张，不是欧盟已接受的修法文本；更低存款比例的压力情景效果尚未公开。</p>
+          <h3 class="item-h">Circle urges MiCA to replace bank deposit ratios with liquidity requirements</h3>
+          <p class="item-b">In the EU MiCA review, Circle requested that the fixed ratio of electronic currency tokens stored in commercial banks be reduced to at least 30%, and 60% of tokens should be stored in commercial banks. Instead, a more flexible minimum liquidity requirement should be adopted.</p><p class="item-b">Circle also opposed a 35% limit on a single sovereign asset and a rule limiting exposure to any one bank to 1.5% of that bank’s total assets. It argued that the combined rules would force large issuers to spread deposits across dozens of banks, potentially increasing operational and counterparty risk.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>This is the policy proposal for issuing US dollars and euro stablecoins under the largest MiCA authorization. It is not a law text that has been accepted by the European Union. The effects of lower deposit requirements have not yet been disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-01</span>
             <a class="item-src" href="https://www.circle.com/blog/circles-response-to-the-european-commissions-mica-review-consultation" target="_blank" rel="noopener">Circle ↗</a>
@@ -214,27 +214,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">AWS把云架构审查变成持续Agent</h3>
-          <p class="item-b">AWS Well-Architected Agent进入公开预览，可读取资源配置、利用率和应用拓扑，按成本、安全、性能与韧性持续生成资源、应用和架构三级建议。</p><p class="item-b">每项发现可附控制台步骤、CLI命令或IaC修改，但客户需先用IAM角色限定账户、区域、应用和权限，生成式建议仍须人工复核后执行。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>首批建议覆盖65多个AWS服务，预览仅在美国三个区域提供控制面，但可纳管所有AWS商业区域的工作负载。</p>
+          <h3 class="item-h">AWS introduces an agent for continuous cloud architecture review</h3>
+          <p class="item-b">The AWS Well-Architected Agent is now in public preview. It allows for the viewing of resource configurations, utilization rates, and application topologies. It continuously generates recommendations for resources, applications, and architectures based on cost, security, performance, and resilience.</p><p class="item-b">Each discovery can be accompanied by console steps, CLI commands, or IaC modifications. However, customers must first use IAM roles to restrict accounts, regions, applications, and permissions. Generated recommendations still require manual review before execution.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The first batch of proposals covers more than 65 AWS services. The preview is only available in three regions in the United States, but it can manage workloads in all AWS commercial regions.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-01</span>
             <a class="item-src" href="https://aws.amazon.com/blogs/aws/announcing-aws-well-architected-agent-an-ai-powered-intelligence-to-optimize-your-cloud-environment-preview/" target="_blank" rel="noopener">AWS ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">微软把语音Agent首个转写假设压到百毫秒级</h3>
-          <p class="item-b">微软发布MAI-Transcribe-2-Streaming、MAI-Voice-2.1和Flash版本，转写支持60种语言，语音生成支持23种语言与26个地区。</p><p class="item-b">流式转写在收到音频约100毫秒后先输出可修订假设，让Agent能在说话者结束前开始推理或调用工具；Flash则用低延迟语音回传缩短完整对话闭环。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>约100毫秒首个假设、45秒音频150毫秒端到端与快55%均为厂商评测，真实电话网络、工具调用与合规审查会增加总延迟。</p>
+          <h3 class="item-h">Microsoft brings initial voice-agent transcription hypotheses into the hundreds of milliseconds</h3>
+          <p class="item-b">Microsoft has released versions of MAI-Transcribe-2-Streaming, MAI-Voice-2.1, and Flash. These tools support transcription in 60 languages, and voice generation supports 23 languages and 26 regions.</p><p class="item-b">Streaming transcription outputs revisable assumptions after receiving audio approximately 100 milliseconds later, allowing agents to start reasoning or invoking tools before the speaker finishes speaking. Flash uses low-latency voice feedback to shorten the entire conversation loop.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The first assumption takes about 100 milliseconds, the audio takes 45 seconds, the end-to-end time is about 150 milliseconds, and the speed is 55% faster. These are all manufacturer evaluations. Real-time phone networks, tool calls, and compliance checks will increase overall latency.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-01</span>
             <a class="item-src" href="https://microsoft.ai/news/our-first-streaming-transcription-model/" target="_blank" rel="noopener">Microsoft AI ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Google用可验证TEE训练Gboard下一词模型</h3>
-          <p class="item-b">Google已把基于可信执行环境的联邦学习系统用于Gboard英文和日文下一词预测，把设备上传先加密汇总，再在可审计服务器工作负载中训练。</p><p class="item-b">外部验证者可检查TEE运行代码、访问策略与公开日志，服务端再按设备参与度动态调整差分隐私参数；这把隐私承诺从只信运营方推进到可核验执行路径。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>系统已进入两种语言的生产模型，但Google仍把侧信道防护、加速器支持和软件正确性证明列为后续工作，尚不是对任意私密训练的完整保证。</p>
+          <h3 class="item-h">Google uses verifiable trusted execution environments to train Gboard’s next-word model</h3>
+          <p class="item-b">Google has used systems based on trusted execution environments for predicting the next word in English and Japanese on Gboard. Device uploads are encrypted and aggregated before being trained on an auditable server workload.</p><p class="item-b">External verifiers can inspect the code executed by TEEs, access the strategies, and view the logs. The server then dynamically adjusts the differential privacy parameters based on the device’s participation. This moves the privacy commitment from just trusting the operator to an verifiable execution path.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The system has entered a production model in two languages. However, Google still considers side-channel protection, accelerator support, and software correctness proof as future tasks. This does not guarantee complete protection against any private training.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-02</span>
             <a class="item-src" href="https://research.google/blog/toward-provably-private-learning-from-federated-data/" target="_blank" rel="noopener">Google Research ↗</a>
@@ -242,7 +242,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

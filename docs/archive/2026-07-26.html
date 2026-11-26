@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-07-26</title>
+<title>Perp DEX Daily · 2026-07-26</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 持续追踪：跨日叙事线的"当前进展地图" */
+  /* Ongoing coverage of developing stories */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -41,7 +41,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -52,7 +52,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「机会与打法」做成醒目的产品判断卡片 */
+  /* Product analysis card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -84,21 +84,21 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 33 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 33</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 7 月 26 日 · 星期日</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">July 26, 2026 · Sunday</div>
     </header>
-    <p class="lead">Ostium 以分阶段、按重开实时价的方式恢复交易，CFTC 延长能源永续与 24/7 期货的规则征询，OKX 则把到期日嵌进 X-Perp 并上线新合约。今天的共同主线不是增加标的，而是永续市场如何重启、受监管和最终结算。</p>
+    <p class="lead">Ostium resumed trading in stages at live reopening prices. The CFTC extended its consultation on energy perpetuals and 24/7 futures, while OKX launched new X-Perp contracts with an expiry date. The changes affect how venues reopen, how contracts are supervised and how positions settle.</p>
 
     <section class="threads">
-      <div class="threads-h">持续追踪</div>
+      <div class="threads-h">Story threads</div>
 
         <div class="thread">
-          <div class="thread-t">Robinhood Chain perp 分发</div>
-          <div class="thread-meta">自 2026-07-02 · 第 24 天 · S 级</div>
-          <div class="thread-u">到期复盘：Robinhood 支持页已经完整说明 Lighter 的入金、逐仓清算与退出路径，但 Arcus FAQ 仍只承诺分批开放 Perps Beta，未披露成交量或用户转化。</div>
-          <div class="thread-w"><b>下一步看：</b>Arcus 全量开放时间、Lighter 路由量与链上原生 OI，以及仅支持市价单且缺少止盈止损是否影响采用。</div>
+          <div class="thread-t">Perpetuals distribution on Robinhood Chain</div>
+          <div class="thread-meta">Since 2026-07-02 · Day 24 · Tier S</div>
+          <div class="thread-u">Robinhood&#x27;s support page now explains Lighter deposits, isolated-margin liquidations and withdrawals. The Arcus FAQ still promises a phased Perps Beta without disclosing volume or customer conversion.</div>
+          <div class="thread-w"><b>Next milestone:</b>When Arcus opens to all users, how much volume routes to Lighter, how much open interest stays onchain, and whether market orders alone, without take-profit or stop-loss orders, limit adoption.</div>
         </div>
     </section>
 
@@ -112,18 +112,18 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Ostium 重开先处理减仓与清算，旧仓只认重开实时价</h3>
-          <p class="item-b"><strong>事件</strong>：（链下权限攻击线，自 07-15，第 12 天）Ostium 在暂停八天后于 07-23 分阶段恢复交易，先开放平仓、补充保证金、撤改订单、止盈止损与清算，待积压订单处理后再开放新仓。</p><p class="item-b"><strong>机制</strong>：原有仓位和挂单被保留，但系统只用重开时的实时价格执行，暂停期间的价格变动不会倒推成交或清算；先恢复保护性动作，是为了让旧风险先退出，再允许新的风险进入。</p><p class="item-b"><strong>二阶效应</strong>：这套顺序能处理停市后的仓位连续性，却没有回答签名密钥如何失守、LP 如何补偿。协议可以先恢复交易，但交易恢复不等于安全信任已经恢复。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>交易者保证金因隔离合约未被盗并已恢复使用；受损 LP 资金尚未追回，补偿方案在重开时仍未定稿。</p>
+          <h3 class="item-h">Ostium reopens for risk reduction and liquidation at live prices before accepting new positions</h3>
+          <p class="item-b"><strong>Event</strong>: On July 23, after an eight-day pause, Ostium began a staged reopening. It first enabled closing positions, adding margin, cancelling or amending orders, take-profit and stop-loss execution, and liquidation. New positions were to follow after the backlog cleared. This was day 12 of coverage since July 15.</p><p class="item-b"><strong>Mechanism</strong>: Existing positions and orders were preserved, but execution used live prices at reopening. Price movements during the halt did not trigger retroactive trades or liquidations. The sequence allowed existing exposures to be reduced before new risk entered.</p><p class="item-b"><strong>Second-order effects</strong>: The process addressed position continuity after a halt. At reopening, the cause of the signing-key compromise and the terms of LP compensation remained unresolved.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Segregated trader margin was not stolen and became usable again. The affected LP funds remained unrecovered, and compensation had yet to be finalized.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-23</span>
-            <a class="item-src" href="https://cryptoticker.io/en/ostium-hack-oracle-exploit-arbitrum/" target="_blank" rel="noopener">CryptoTicker ↗</a><a class="item-src item-ref" href="https://www.timesofblockchain.com/news/ostium-perps-trading-reopen/" target="_blank" rel="noopener">补充：Times of Blockchain · 07-23 ↗</a>
+            <a class="item-src" href="https://cryptoticker.io/en/ostium-hack-oracle-exploit-arbitrum/" target="_blank" rel="noopener">CryptoTicker ↗</a><a class="item-src item-ref" href="https://www.timesofblockchain.com/news/ostium-perps-trading-reopen/" target="_blank" rel="noopener">Additional source: Times of Blockchain · 07-23 ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">CFTC 延长能源永续征询，24/7 交易与无到期合约被拆开审</h3>
-          <p class="item-b"><strong>事件</strong>：（美国永续监管定性线，自 06-19，第 38 天）CFTC 07-23 把能源衍生品规则征询延长 30 天至 08-26，并新增问题，分别审视固定到期合约的 24/7 交易，以及以可储存或实物交割能源商品为标的的永续合约。</p><p class="item-b"><strong>机制</strong>：延长交易时间只改变撮合和清算时段，能源永续则同时改变到期、交割和现货收敛机制。监管把两者分开，意味着加密市场已经验证的连续交易，不能自动证明原油等实物商品适合无到期设计。</p><p class="item-b"><strong>二阶效应</strong>：美国对永续的开放正在按标的属性分层，而不是一次性放行所有资产。链上能源永续若想进入受监管市场，必须补足周末价格形成、可交割现货和操纵防护的证据链。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>这只是公开征询延长和新增问题，不是规则通过，也没有批准任何新的能源永续产品。</p>
+          <h3 class="item-h">CFTC extends energy perpetual consultation and distinguishes 24/7 trading from contracts without expiry</h3>
+          <p class="item-b"><strong>Event</strong>: On July 23, the CFTC extended its energy derivatives consultation by 30 days to August 26. New questions distinguish 24/7 trading of fixed-expiry futures from perpetual contracts on energy commodities that can be stored or physically delivered. This is day 38 of coverage since June 19.</p><p class="item-b"><strong>Mechanism</strong>: Longer trading hours change when matching and clearing take place. An energy perpetual also changes expiry, delivery and the means by which futures prices converge with spot. The CFTC&#x27;s distinction shows why continuous crypto trading alone does not establish that a perpetual is suitable for crude oil.</p><p class="item-b"><strong>Second-order effects</strong>: US regulators are considering perpetuals asset by asset. Onchain energy venues seeking regulated access need evidence on weekend price formation, deliverable spot markets and safeguards against manipulation.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The regulator extended public consultation and added questions. It did not adopt a rule or approve a new energy perpetual.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-23</span>
             <a class="item-src" href="https://www.cftc.gov/PressRoom/PressReleases/9271-26" target="_blank" rel="noopener">CFTC ↗</a>
@@ -141,12 +141,12 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">OKX 给 X-Perp 加上远期到期日，ZAMA 合约进入实盘</h3>
-          <p class="item-b">OKX 07-24 上线 ZAMAUSD X-Perp。它保留永续合约的资金费率和全天交易，却设置约五年后的到期日；临近到期时会自动生成新的远月合约，让新旧合约并行供用户移仓。</p><p class="item-b">到期交割价取最后 30 分钟逐秒指数均价，给长期合约一个强制收敛终点；代价是持仓同时承担长期资金费、基差和移仓流动性分裂风险，说明“perp”正在被产品化为资金费机制，而不再只等于永不到期。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>ZAMA 合约已经开放网页、App 与 API 交易，但 OKX 未披露其 OI、深度或远月移仓采用数据。</p>
+          <h3 class="item-h">OKX gives X-Perp a distant expiry date and launches the ZAMA contract</h3>
+          <p class="item-b">OKX launched ZAMAUSD X-Perp on July 24. It retains funding payments and round-the-clock trading but expires in about five years. As expiry approaches, a new longer-dated contract will trade alongside the old one so holders can roll their positions.</p><p class="item-b">Settlement uses the average of index prices sampled every second over the final 30 minutes. This gives the contract a fixed point of convergence. Holders face funding and basis risk as well as the possibility of liquidity splitting during the roll. Here the “perp” label describes the funding mechanism despite a defined expiry.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>ZAMA contracts are trading on the OKX website, app, and API. OKX has not disclosed open interest, depth, or use of rolls into more distant expiries.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-24</span>
-            <a class="item-src" href="https://www.okx.com/help/okx-to-list-zamausd-expiry-x-perp" target="_blank" rel="noopener">OKX ↗</a><a class="item-src item-ref" href="https://www.okx.com/en-gb/help/x-perps-guide" target="_blank" rel="noopener">补充：OKX X-Perps Guide · 06-02 ↗</a>
+            <a class="item-src" href="https://www.okx.com/help/okx-to-list-zamausd-expiry-x-perp" target="_blank" rel="noopener">OKX ↗</a><a class="item-src item-ref" href="https://www.okx.com/en-gb/help/x-perps-guide" target="_blank" rel="noopener">Additional source: OKX X-Perps Guide · 06-02 ↗</a>
           </div>
         </article>
         </div>
@@ -155,14 +155,14 @@
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <h2 class="sec-title">机会与打法</h2>
+            <h2 class="sec-title">Product opportunities</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">事故重启：先恢复保护性动作，再开放新风险</h3>
-          <p class="item-b"><strong>好处</strong>：先让用户减仓、补保证金和处理挂单，再开放新仓，可以把暂停期间积累的风险按可解释顺序释放。</p><p class="item-b"><strong>限制</strong>：重开顺序只能降低恢复阶段的二次伤害，不能替代对签名密钥、价格发布权限和 LP 赔付的根因处理。</p>
+          <h3 class="item-h">Ostium’s reopening restores risk-reduction actions before adding new positions</h3>
+          <p class="item-b"><strong>Benefits</strong>: Allowing reductions, margin deposits and order management before new positions offers an orderly way to address risk accumulated during a halt.</p><p class="item-b"><strong>Limitations</strong>: Reopening in stages can limit further harm. It cannot resolve the original pricing incident or settle compensation for LPs.</p>
 
           <div class="item-meta">
 
@@ -170,8 +170,8 @@
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">能源永续：价格连续与实物交割不能混为一谈</h3>
-          <p class="item-b"><strong>好处</strong>：24/7 商品价格能覆盖周末事件，给链上用户提供传统场所休市时的连续风险表达。</p><p class="item-b"><strong>限制</strong>：原油等实物商品有仓储、交割和区域现货约束，链上指数连续不代表底层可交割市场也连续。</p>
+          <h3 class="item-h">Continuous pricing and physical delivery pose separate questions for energy perpetuals</h3>
+          <p class="item-b"><strong>Benefits</strong>: Around-the-clock commodity prices give traders a way to express weekend risk while traditional exchanges are closed.</p><p class="item-b"><strong>Limitations</strong>: Physical oil markets depend on storage, delivery and regional supply. A continuously quoted index does not make the deliverable market continuously tradable.</p>
 
           <div class="item-meta">
 
@@ -179,8 +179,8 @@
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">到期型 X-Perp：当前架构不适合照搬</h3>
-          <p class="item-b"><strong>好处</strong>：远期到期和最终指数结算给合约明确终点，能限制无限期持仓并提供强制价格收敛机制。</p><p class="item-b"><strong>限制</strong>：新旧合约并行会拆分深度，用户还要承担移仓、长期资金费和最终结算窗口的额外复杂度。</p>
+          <h3 class="item-h">Expiring X-Perp contracts require distinct lifecycle and settlement rules</h3>
+          <p class="item-b"><strong>Benefits</strong>: A distant expiry and final index settlement give the contract a defined endpoint and a way to force convergence.</p><p class="item-b"><strong>Limitations</strong>: Parallel contracts can split depth. Traders also face roll costs, long-running funding payments and the final settlement window.</p>
 
           <div class="item-meta">
 
@@ -189,7 +189,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

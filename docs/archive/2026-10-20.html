@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-10-20</title>
+<title>Perp DEX Daily · 2026-10-20</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -82,12 +82,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 108 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 108</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 10 月 20 日 · 星期二</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">October 20, 2026 · Tuesday</div>
     </header>
-    <p class="lead">CFTC以CME未证明实际竞争损害反驳其永续诉讼，JPMorgan把JPM Coin扩到Ethereum，Microsoft则把Agent权限改成随任务与风险动态收缩的独立控制面。</p>
+    <p class="lead">The CFTC argued that CME had failed to establish actual competitive harm in its perpetual futures lawsuit. JPMorgan expanded JPM Coin to Ethereum, and Microsoft separated agent permissions into controls that can narrow with the task and its risk.</p>
 
 
       <section class="sec sec-perpdex">
@@ -100,27 +100,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">CFTC称CME未证明永续产品造成实际竞争损害</h3>
-          <p class="item-b"><strong>事件</strong>：CFTC在10月19日提交的法庭文件中称，CME没有说明Kalshi比特币永续期货造成了实际或迫近的竞争损害，因此缺乏起诉资格。</p><p class="item-b"><strong>机制</strong>：CFTC仍把该产品按个案认证为期货，CME则坚持无到期日产品属于掉期，法院尚未对实体分类作出裁定，美国永续分类线因此从产品登记推进到诉讼资格争议。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>这是监管方的诉讼立场，不是法院对永续属于期货还是掉期的最终裁定。</p>
+          <h3 class="item-h">CFTC says CME has not shown actual competitive harm from perpetual products</h3>
+          <p class="item-b"><strong>Event</strong>: In an October 19 court filing, the CFTC argued that CME had not shown actual or imminent competitive harm from Kalshi’s bitcoin perpetual futures and therefore lacked standing to sue.</p><p class="item-b"><strong>Mechanism</strong>: The CFTC continues to treat the product as a futures contract under its case-specific certification. CME argues that a product without an expiry is a swap. The court has yet to rule on the classification itself. The U.S. perpetuals dispute has moved from product filing to legal standing.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>This is the regulatory perspective, not the final ruling by the court regarding whether perpetuals are considered futures or swaps.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-19</span>
             <a class="item-src" href="https://www.coindesk.com/policy/2026/10/19/u-s-cftc-rebuffs-cme-legal-stance-in-consequential-fight-over-perpetual-futures" target="_blank" rel="noopener">CoinDesk ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">TRUE把60个加密与非加密永续市场放进同一USDC余额</h3>
-          <p class="item-b"><strong>事件</strong>：TRUE文档列出60个永续市场，覆盖加密资产、美股、未上市公司、金属、原油、外汇和指数，并让同一USDC余额跨市场使用。</p><p class="item-b"><strong>机制</strong>：平台以自建排序器和订单簿撮合、在Solana结算，BTC最高50倍、非加密资产最高10倍、未上市公司最高5倍，但股票类产品只提供价格敞口，不代表实际股份。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>跨资产保证金入口已经形成，真实成交、未平仓量、点差与极端行情表现仍未披露。</p>
+          <h3 class="item-h">TRUE offers 60 crypto and non-crypto perpetual markets against one USDC balance</h3>
+          <p class="item-b"><strong>Event</strong>: The TRUE document lists 60 perpetual futures markets, covering crypto assets, US stocks, unlisted companies, metals, crude oil, foreign exchange, and indices. It also allows the use of the same USDC balance across markets.</p><p class="item-b"><strong>Mechanism</strong>: TRUE operates its own sequencer and order book and settles on Solana. Maximum leverage is 50x for BTC, 10x for non-crypto assets and 5x for unlisted companies. Equity-linked contracts provide price exposure without ownership of the shares.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The margin entry for cross-asset trading has been established. However, actual transactions, open interest, spread, and extreme market performance have not yet been disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-18</span>
             <a class="item-src" href="https://docs.truefinance.ai/en/docs/perps" target="_blank" rel="noopener">TRUE Docs ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Lighter在10万美元BTC永续市价单快照中成本最低</h3>
-          <p class="item-b"><strong>事件</strong>：PerpFinder在10月20日02:34 UTC的快照中测得，10万美元BTC永续市价买单在Lighter的预估总成本为0.5个基点，约5美元。</p><p class="item-b"><strong>机制</strong>：该口径把吃单费、半个买卖价差与预估价格冲击相加，适合比较同一时点的可见执行成本，但不能外推全天、限价单或大额拆单结果。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>同页显示全市场24小时成交1789.4亿美元、DEX占9.5%，两者都是动态快照，不代表长期份额。</p>
+          <h3 class="item-h">Lighter has the lowest cost in a snapshot of $100,000 BTC perpetual market orders</h3>
+          <p class="item-b"><strong>Event</strong>: In its October 20 snapshot at 02:34 UTC, PerpFinder estimated a total cost of 0.5 basis points, about $5, for a $100,000 BTC perpetual market buy on Lighter.</p><p class="item-b"><strong>Mechanism</strong>: The estimate adds the taker fee, half the bid-ask spread and estimated price impact. It compares visible execution costs at one point in time and does not establish all-day costs or results for limit orders or large orders split into smaller trades.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>On the same page, there was a total of 178.94 billion USD in transactions across the entire market during the 24 hours. DEX accounted for 9.5% of these transactions. Both are dynamic snapshots and do not represent long-term share sizes.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-20</span>
             <a class="item-src" href="https://perpfinder.com/" target="_blank" rel="noopener">PerpFinder ↗</a>
@@ -138,27 +138,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">FEAST公平发售以40.07 BNB完成结算</h3>
-          <p class="item-b">FEAST页面显示发售已结算，售出3亿枚代币并募集40.07 BNB，发售收取1%费用。</p><p class="item-b">合约只保留退款、结算和添加流动性路径，页面称已注入的流动性无法由所有者移除，但团队分配仍有36个月释放期。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>发售份额占10亿总供应的30%，另有30%用于流动性池，募资规模仍属早期样本。</p>
+          <h3 class="item-h">FEAST fair launch settles at 40.07 BNB</h3>
+          <p class="item-b">The FEAST page shows that the issuance has been settled. 300 million tokens have been sold, and 40.07 BNB has been raised. A 1% fee was charged for the issuance.</p><p class="item-b">Contracts only retain paths for refunds, settlements, and adding liquidity. The liquidity injected cannot be removed by the owner. However, the team still has a 36-month period to release these funds.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The sale allocation is 30% of the one billion total supply. A further 30% is earmarked for the liquidity pool. The amount raised is still an early observation.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-19</span>
             <a class="item-src" href="https://feast.meme/sale" target="_blank" rel="noopener">FEAST ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Debitum页面排定DEB发售价从4美元升至5美元</h3>
-          <p class="item-b">Debitum代币销售页把10月20日00:00 UTC列为单价从4美元上调至5美元的节点，销售额度为100万枚DEB。</p><p class="item-b">购买使用USDC、USDT、ETH、WETH或WBTC并在同一笔交易交付、无锁仓，Uniswap与Curve流动性仍只是后续计划。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>销售额度占1000万固定供应的10%，价格节点可查，但二级流动性尚未上线。</p>
+          <h3 class="item-h">Debitum schedules an increase in DEB’s sale price from $4 to $5</h3>
+          <p class="item-b">Debitum’s token sale page scheduled an increase in the unit price from $4 to $5 at 00:00 UTC on October 20. The sale allocation was one million DEB.</p><p class="item-b">Buyers can pay in USDC, USDT, ETH, WETH or WBTC and receive DEB in the same transaction without a lockup. Liquidity on Uniswap and Curve remains a future plan.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The sale allocation is 10% of the fixed supply of 10 million DEB. The pricing schedule is public, but secondary-market liquidity is not yet available.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-19</span>
-            <a class="item-src" href="https://www.coingabbar.com/en/debitum-presale-update-deb-price-rises-to-5-stage-news" target="_blank" rel="noopener">CoinGabbar ↗</a><a class="item-src item-ref" href="https://debitum.app/token-sale" target="_blank" rel="noopener">补充：Debitum · 10-20 ↗</a>
+            <a class="item-src" href="https://www.coingabbar.com/en/debitum-presale-update-deb-price-rises-to-5-stage-news" target="_blank" rel="noopener">CoinGabbar ↗</a><a class="item-src item-ref" href="https://debitum.app/token-sale" target="_blank" rel="noopener">Additional source: Debitum · 10-20 ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">NEAR两大发射台24小时合计完成6464笔交换</h3>
-          <p class="item-b">NEAR Stats在10月19日快照中记录JustHoot完成3586笔交换、37.11万美元成交，Nearly完成2878笔交换、34.01万美元成交。</p><p class="item-b">Nearly同时披露13次发射和4400美元费用，JustHoot未披露同口径费用与发射数，因此只能比较活跃度，不能直接比较收入效率。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>数据是24小时快照，且两家披露字段不完整一致，无法判断自然留存与单次发射质量。</p>
+          <h3 class="item-h">Two NEAR launchpads record 6,464 swaps in 24 hours</h3>
+          <p class="item-b">NEAR Stats recorded JustHoot completing 3,586 transactions on October 19, with a total value of 371,100 USD. Nearly completed 2,878 transactions, worth 340,100 USD.</p><p class="item-b">Nearly also reported 13 launches and $4,400 in fees. JustHoot did not report comparable figures for fees or launches. The two can be compared on activity but not directly on revenue efficiency.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The data is a 24-hour snapshot. Since both companies do not disclose complete and consistent information regarding these fields, it is impossible to determine the effectiveness of natural retention and the quality of single launches.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-19</span>
             <a class="item-src" href="https://nearstats.org/launchpads" target="_blank" rel="noopener">NEAR Stats ↗</a>
@@ -176,27 +176,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">JPMorgan把机构存款代币JPM Coin扩到Ethereum</h3>
-          <p class="item-b">JPMorgan面向机构客户把代表银行美元存款的JPM Coin扩到Ethereum，理由是客户与流动性已经聚集在该网络。</p><p class="item-b">代币仍是许可客户使用的银行负债，不是面向公众的稳定币；交易后台服务化线因此新增公共链结算样本，但跨行采用与链上规模尚未披露。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>其Kinexys平台现有日处理量超过70亿美元，相对该行每日约12万亿美元支付业务仍是小规模通道。</p>
+          <h3 class="item-h">JPMorgan expands its institutional deposit token JPM Coin to Ethereum</h3>
+          <p class="item-b">JPMorgan has extended JPM Coins, which represent bank deposits in US dollars, to Ethereum for institutional customers. This is because customers and liquidity have already gathered on that network.</p><p class="item-b">JPM Coin remains a bank liability available to permissioned customers. This adds a public-chain settlement example to the trading infrastructure story. Interbank adoption and the scale of onchain activity have yet to be disclosed.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Its Kinexys platform currently processes transactions worth over 7 billion USD per day. This is still a small-scale channel compared to the bank’s daily transactions, which amount to approximately 12 trillion USD.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-19</span>
-            <a class="item-src" href="https://www.coindesk.com/markets/2026/10/19/jpmorgan-s-jpm-coin-representing-dollar-deposits-is-coming-to-ethereum-bloomberg" target="_blank" rel="noopener">CoinDesk ↗</a><a class="item-src item-ref" href="https://www.jpmorgan.com/payments/newsroom/jpm-coin-live-on-ethereum" target="_blank" rel="noopener">补充：JPMorgan · 10-19 ↗</a>
+            <a class="item-src" href="https://www.coindesk.com/markets/2026/10/19/jpmorgan-s-jpm-coin-representing-dollar-deposits-is-coming-to-ethereum-bloomberg" target="_blank" rel="noopener">CoinDesk ↗</a><a class="item-src item-ref" href="https://www.jpmorgan.com/payments/newsroom/jpm-coin-live-on-ethereum" target="_blank" rel="noopener">Additional source: JPMorgan · 10-19 ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">DTCC首批代币化服务只覆盖25只证券</h3>
-          <p class="item-b">DTCC的代币化服务计划先在Canton与许可Besu网络覆盖25只证券，并让链上记录与DTC托管证券保持一比一对应。</p><p class="item-b">约30万亿美元可用资产是潜在资格范围，不是首日代币化规模，Stellar与Arc接入、数字现金结算和抵押品用途仍在后续路线图。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>首发标的仅25只，30万亿美元代表可纳入范围，不能写成已经上链的资产规模。</p>
+          <h3 class="item-h">DTCC’s initial tokenization service covers only 25 securities</h3>
+          <p class="item-b">DTCC plans to cover an initial 25 securities on Canton and a permissioned Besu network. Onchain records would correspond one-to-one to securities held in custody at DTC.</p><p class="item-b">The roughly $30 trillion figure is the potential universe of eligible assets. It does not describe the amount tokenized on the first day. Stellar and Arc integrations, digital cash settlement and collateral uses remain on the roadmap.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>There are only 25 initial targets. The amount of 30 trillion USD represents the range of assets that can be included in the system. This cannot be considered as the scale of assets that have already been integrated into the chain.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-17</span>
             <a class="item-src" href="https://tsnmedia.org/dtcc-tokenization-service-launch-scope/" target="_blank" rel="noopener">TSN Media ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">BitTorrent用三季度服务收入回购并销毁21.621万亿枚BTT</h3>
-          <p class="item-b">BitTorrent称已把三季度去中心化服务收入全部用于回购，并在10月16日销毁21.621万亿枚BTT，按公告口径约760万美元。</p><p class="item-b">项目计划按季度继续执行，但收入基础、回购成交细节与效果均由项目方自报，销毁数量不能替代可审计的持续现金流。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>约760万美元价值和100%收入回购均来自项目公告，缺少独立审计与季度收入拆分。</p>
+          <h3 class="item-h">BitTorrent uses third-quarter service revenue to buy back and burn 21.621 trillion BTT</h3>
+          <p class="item-b">BitTorrent stated that all revenue from decentralized services in the third quarter has been used for repurchases. On October 16th, 21.621 trillion BTT were destroyed, which is approximately $7.6 million according to the announcement.</p><p class="item-b">The project plan will continue to be implemented quarterly. However, the revenue base, details of repurchases, and results are reported by the project team. The number of assets destroyed cannot replace an auditable continuous cash flow.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Approximately 7.6 million USD in value and 100% of revenue were repurchased through project announcements. Independent audits and quarterly revenue breakdowns are not disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-18</span>
             <a class="item-src" href="https://www.globenewswire.com/news-release/2026/10/18/3382943/0/en/bittorrent-ushers-in-next-gen-web3-infrastructure-with-strategic-rebrand-and-inaugural-btt-burn.html" target="_blank" rel="noopener">GlobeNewswire ↗</a>
@@ -214,27 +214,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Microsoft让Agent权限随任务与风险动态收缩</h3>
-          <p class="item-b">Microsoft提出Dynamic Permissions与Dynamic Agent Risk，让Agent按任务、时间和实时风险获得或收回权限，并由外部控制面执行条件访问。</p><p class="item-b">官方明确模型不能充当自身安全边界，前沿评估线因此从固定账号治理推进到任务级最小权限、持续风险评分与独立阻断。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>方案给出控制面与产品方向，跨租户覆盖、误判率和生产事故数据尚未披露。</p>
+          <h3 class="item-h">Microsoft makes agent permissions narrow dynamically with the task and its risk</h3>
+          <p class="item-b">Microsoft proposed Dynamic Permissions and Dynamic Agent Risk, which grant or revoke agent privileges by task, time and current risk. An independent control plane enforces conditional access.</p><p class="item-b">The official model must not act as its own security boundary. Therefore, the advanced evaluation line shifts from fixed account governance to task-level minimum permissions, continuous risk scoring, and independent blocking.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The plan outlines control aspects and product directions. Cross-tenant coverage, misjudgment rates, and production accident data have not yet been disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-19</span>
             <a class="item-src" href="https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/" target="_blank" rel="noopener">Microsoft Security Blog ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Notion称自动模型路由把平均成本降约90%</h3>
-          <p class="item-b">Notion称其自动模型路由在20多类任务上达到接近Opus 5.5与Astra的结果，同时把平均模型成本降低约90%，并让积分可用量扩大10倍。</p><p class="item-b">Notion Agent任务时长上限由5分钟提高到24小时以上，并增加MCP与连接器工具，但质量与成本结论来自厂商内部评估，缺少独立生产基准。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>成本下降来自20多类内部用例的平均值，未公开逐任务分布、失败率或长任务人工接管比例。</p>
+          <h3 class="item-h">Notion says automatic model routing cut average cost by about 90%</h3>
+          <p class="item-b">Notion claims that its automated model routing achieves results close to Opus 5.5 and Astra on over 20 types of tasks. At the same time, it reduces the average model cost by approximately 90% and increases the available credits by a factor of 10.</p><p class="item-b">The maximum task duration for Notion Agents has been increased from 5 minutes to more than 24 hours. Additionally, MCP and connector tools have been added. However, the conclusions regarding quality and cost come from internal evaluations by the manufacturer, and there is a lack of independent production benchmarks.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The cost reduction comes from the average of more than 20 internal use cases. Details such as task-specific distributions, failure rates, or the proportion of long-term tasks handled manually are not disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-19</span>
             <a class="item-src" href="https://www.notion.com/blog/notion-ai-more-for-less" target="_blank" rel="noopener">Notion ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">OpenA2A记录30天内420次外部工具调用</h3>
-          <p class="item-b">OpenA2A在9月19日至10月19日窗口记录420次工具调用，来自19种指纹；同期公开暴露的MCP服务器升至2495台，A2A握手达到27247次。</p><p class="item-b">报告建议把告警重点放在真实工具调用而非连接次数，前沿评估线新增外部可观察的Agent行为指标，但扫描覆盖和指纹归因仍有偏差。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>报告同时扫描到255582个公开AI服务，其中80.5%为OpenClaw，暴露面不等于已发生攻击。</p>
+          <h3 class="item-h">OpenA2A records 420 external tool calls in 30 days</h3>
+          <p class="item-b">OpenA2A recorded 420 tool calls from 19 different fingerprints between September 19 and October 19. The number of publicly exposed MCP servers increased to 2,495 during this period. The number of A2A handshakes reached 27,247.</p><p class="item-b">The report suggests focusing alerts on actual tool calls rather than the number of connections. New indicators for observable agent behavior have been added, but there is still room for improvement in coverage and fingerprint attribution.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The report also identified 255,582 public AI services. Of these, 80.5% were OpenClaw. The exposure does not equal the number of attacks that have occurred.</p>
           <div class="item-meta">
             <span class="item-date">2026-10-19</span>
             <a class="item-src" href="https://research.opena2a.org/reports/state-of-ai-agent-security-2026-10" target="_blank" rel="noopener">OpenA2A Research ↗</a>
@@ -242,7 +242,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

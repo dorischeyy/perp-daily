@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-09-24</title>
+<title>Perp DEX Daily · 2026-09-24</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -82,12 +82,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 86 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 86</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 9 月 24 日 · 星期四</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">September 24, 2026 · Thursday</div>
     </header>
-    <p class="lead">BitMEX正式停止交易，Binance把代币化股票接入组合保证金，CFTC则开始限制更易被操纵的提及类事件合约。</p>
+    <p class="lead">BitMEX formally stopped trading, Binance added tokenized equities to portfolio margin, and the CFTC began restricting event contracts on word mentions that it considered more susceptible to manipulation.</p>
 
 
       <section class="sec sec-perpdex">
@@ -100,27 +100,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">BitMEX停止交易并保留提款通道</h3>
-          <p class="item-b"><strong>事件</strong>：BitMEX于9月23日停止全部交易所业务，用户已不能交易、充值或建立新仓位，但仍可登录账户并提取余额。</p><p class="item-b"><strong>机制</strong>：平台把交易终止与资产退出拆成两个阶段，未提取余额后续可能继续承担账户费用；这标志着一家早期加密永续交易所完成从7月公告到实际停运的最后一步。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>停止交易已实际发生，不再只是退出计划；现阶段保留的是登录和提款能力，不代表交易业务恢复。</p>
+          <h3 class="item-h">BitMEX ends trading and keeps withdrawals open</h3>
+          <p class="item-b"><strong>Event</strong>: BitMEX stopped all exchange operations on September 23. Users can no longer trade, deposit or open positions, but can still sign in and withdraw balances.</p><p class="item-b"><strong>Mechanism</strong>: Trading has ended while the withdrawal process remains open. Unwithdrawn balances may later incur account fees. The shutdown completes the transition announced in July by one of the earliest crypto perpetual exchanges.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The suspension of trading has actually occurred; it is no longer just a withdrawal plan. At this stage, only the ability to log in and withdraw funds remains. This does not mean that trading operations have resumed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-23</span>
             <a class="item-src" href="https://www.bitmex.com/wind-down/" target="_blank" rel="noopener">BitMEX ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Binance把三只代币化股票纳入组合保证金</h3>
-          <p class="item-b"><strong>事件</strong>：Binance于9月23日把CYPHB、AMCB和AGPUB三只bStocks加入全仓保证金、组合保证金和组合保证金专业版的可抵押资产。</p><p class="item-b"><strong>机制</strong>：代币化股票由交易标的进一步进入统一抵押品层，用户可用其支持其他仓位，但不能借入这些bStocks，实际抵押能力仍取决于指数定价与折扣率。（TradFi/RWA永续线，自07-09，本次从扩列推进到代币化证券承担组合抵押品）</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>仅面向VIP 3及以上且所在司法辖区允许的用户，三只资产可作抵押但不能借入，并非全平台无条件开放。</p>
+          <h3 class="item-h">Binance adds three tokenized equities to portfolio margin</h3>
+          <p class="item-b"><strong>Event</strong>: On September 23, Binance added three bStocks, CYPHB, AMCB and AGPUB, as eligible collateral for Cross Margin, Portfolio Margin and Portfolio Margin Pro.</p><p class="item-b"><strong>Mechanism</strong>: Tokenized shares can now support other positions in a unified collateral pool. Users cannot borrow the bStocks themselves, and borrowing power depends on the index price and collateral haircut. This adds tokenized portfolio collateral to the TradFi and RWA perpetuals story tracked since July 9.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>This service is only available to VIP level 3 and above users in jurisdictions where it is allowed. Three assets can be used as collateral, but they cannot be borrowed. This is not a universal service across the platform.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-23</span>
             <a class="item-src" href="https://www.binance.com/en/support/announcement/c61f3c18a3004f968b53fb09841f7bc7" target="_blank" rel="noopener">Binance ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">KuCoin用估算股本定价Oura上市前永续</h3>
-          <p class="item-b"><strong>事件</strong>：KuCoin于9月23日上线OURAUSDT上市前股票指数永续，按每张合约0.1股、估算股本约3.21亿股报价，最高20倍杠杆。</p><p class="item-b"><strong>机制</strong>：正式IPO前，合约用估算股本把市场交易价格映射为公司估值；上市后平台再依据实际发行信息调整合约参数，因此当前价格是合成预期而非可交割股权。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>3.21亿股为平台估算值，正式发行股数和IPO价格可能不同；合约不赋予股票所有权。</p>
+          <h3 class="item-h">KuCoin uses an estimated share count to price the Oura pre-IPO perpetual</h3>
+          <p class="item-b"><strong>Event</strong>: On September 23, KuCoin listed OURAUSDT pre-IPO equity-index perpetual futures. Each contract represents 0.1 share. The pricing assumes approximately 321 million shares outstanding, with up to 20× leverage.</p><p class="item-b"><strong>Mechanism</strong>: Before the IPO, the contract uses estimated shares outstanding to translate its trading price into an implied company valuation. After listing, the platform adjusts the contract terms using actual issuance data. The pre-IPO price therefore reflects a synthetic expectation and confers no deliverable equity.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>321 million shares are the estimated number of shares for the platform. The actual number of shares issued and the IPO price may differ. Contracts do not grant ownership of shares.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-23</span>
             <a class="item-src" href="https://www.kucoin.com/announcement/en-kucoin-futures-new-listing-ourausdt-pre-ipo-stock-index-perpetual-contract-pre-market-trading" target="_blank" rel="noopener">KuCoin ↗</a>
@@ -138,27 +138,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Pons占据Launchpad已报告费用近四成</h3>
-          <p class="item-b"><strong>事件</strong>：MemeFees对9月23日完整UTC日的统计显示，Pons占已报告Launchpad费用的38.5%，高于pump.fun的25.0%和Flap.sh的16.3%。</p><p class="item-b"><strong>机制</strong>：Pons在Robinhood Chain上的联合曲线和毕业后交易继续产生较高费用，但费用份额只衡量被数据源覆盖的收入，并不直接代表发射数量、用户留存或资产质量。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>当天覆盖16个有历史数据的17个平台，FOMO缺报；633万美元分母会随覆盖变化，不能与完整市场规模等同。</p>
+          <h3 class="item-h">Pons accounts for nearly 40% of reported launchpad fees</h3>
+          <p class="item-b"><strong>Event</strong>: According to statistics from MemeFees on September 23, UTC, Pons accounted for 38.5% of the reported Launchpad fees, which is higher than pump.fun’s 25.0% and Flap.sh’s 16.3%.</p><p class="item-b"><strong>Mechanism</strong>: Pons continues to generate substantial fees on Robinhood Chain from its bonding curve and from trading after tokens graduate. Its fee share measures only the revenue covered by the data source. It does not establish launch counts, user retention or asset quality.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The day’s data covered 16 of the 17 platforms with historical records. FOMO did not report. The $6.33 million denominator depends on the platforms included and measures only the observed market.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-23</span>
             <a class="item-src" href="https://memefees.com/" target="_blank" rel="noopener">MemeFees ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">KOLPAD把创作者费永久分给KOL与回购</h3>
-          <p class="item-b"><strong>事件</strong>：KOLPAD于9月21日启用首版服务条款，允许用户无需连接钱包或付费，就能为平台名单中的KOL在pump.fun发射代币。</p><p class="item-b"><strong>机制</strong>：每次发射会新建并资助创作者钱包，同时把创作者费永久锁定为80%直达KOL公开钱包、20%进入KOLPAD回购销毁钱包，并在同一笔交易中撤销管理员权限。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>KOL无需知情或同意即可被用于发射，平台可移除展示但不能撤销既有链上费用分配，背书关系不能据此成立。</p>
+          <h3 class="item-h">KOLPAD permanently splits creator fees between KOLs and buybacks</h3>
+          <p class="item-b"><strong>Event</strong>: On September 21, KOLPAD introduced its first terms of service. Users can launch tokens on pump.fun for any key opinion leader on KOLPAD’s list without connecting a wallet or paying a fee.</p><p class="item-b"><strong>Mechanism</strong>: Each launch creates and funds a creator wallet. The transaction revokes admin privileges and permanently directs 80% of creator fees to the named individual’s public wallet and 20% to KOLPAD’s buyback-and-burn wallet.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>People can launch tokens in a listed individual’s name without that person’s knowledge or consent. KOLPAD can remove a listing but cannot reverse its existing onchain fee split. A listing therefore provides no evidence of endorsement.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-21</span>
             <a class="item-src" href="https://kolpad.fun/legal/terms.html" target="_blank" rel="noopener">KOLPAD ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">LaunchOnSF把APE开放为发射基础币</h3>
-          <p class="item-b"><strong>事件</strong>：APE于9月22日通过Sunrise成为Solana上的规范化代币后，LaunchOnSF开放以APE而非SOL或USDC作为新币交易对的基础资产。</p><p class="item-b"><strong>机制</strong>：新币在发射和毕业后都围绕APE计价，并把买方活动导向Raydium上的规范化APE流动性池，基础币选择由支付工具变成流动性导流机制。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>APE作为基础币只改变交易对和流动性路径，不代表发射代币获得ApeCoin生态背书，也不赋予底层资产权益。</p>
+          <h3 class="item-h">LaunchOnSF enables APE as a base currency for token launches</h3>
+          <p class="item-b"><strong>Event</strong>: On September 22, APE became a standardized token on Solana through Sunrise. LaunchOnSF now allows trading pairs using APE instead of SOL or USDC as the underlying asset.</p><p class="item-b"><strong>Mechanism</strong>: The new currency is priced around APE both during the launch and after graduation. And guide the buyer&#x27;s activities towards a standardized APE liquidity pool on Raydium. The selection of the base currency has been changed from payment tools to a liquidity diversion mechanism.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>As a base currency, APE only changes the trading pairs and liquidity paths. It does not grant tokens to obtain the endorsement of the ApeCoin ecosystem, nor does it confer any rights to underlying assets.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-22</span>
             <a class="item-src" href="https://solanacompass.com/news/apecoin-ape-goes-live-on-solana-as-a-canonical-token-via-sunrise-trading-open-on-raydium" target="_blank" rel="noopener">Solana Compass ↗</a>
@@ -176,27 +176,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Blockchain.com与NYSE探索代币化证券入口</h3>
-          <p class="item-b"><strong>事件</strong>：Blockchain.com与纽约证券交易所于9月23日签署合作备忘录，拟探索通过Blockchain.com应用和NYSE数字ATS提供全天候代币化美股与ETF。</p><p class="item-b"><strong>机制</strong>：双方计划连接面向个人用户的钱包分发、受监管交易场所和双向数据交换，让传统证券的发行、交易与链上持有进入同一接入路径。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>目前仍是探索性备忘录，产品上线取决于监管批准；4400万确认账户只是潜在分发基础，不是已转化用户。</p>
+          <h3 class="item-h">Blockchain.com and NYSE explore access to tokenized securities</h3>
+          <p class="item-b"><strong>Event</strong>: On September 23, Blockchain.com and the New York Stock Exchange signed a memorandum of understanding to explore round-the-clock access to tokenized U.S. stocks and ETFs through the Blockchain.com app and NYSE’s digital alternative trading system.</p><p class="item-b"><strong>Mechanism</strong>: The parties plan to connect retail wallets, a regulated trading venue and two-way data exchange. The proposed service would cover issuance, trading and onchain ownership of traditional securities.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>This is still an exploratory memo. The product’s launch depends on regulatory approval. 44 million confirmed accounts are just potential distribution bases, not actual users.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-23</span>
             <a class="item-src" href="https://www.blockchain.com/blog/posts/blockchaincom-and-nyse-team-up-to-explore-tokenized-securities" target="_blank" rel="noopener">Blockchain.com ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">CFTC限制高操纵风险的提及类事件合约</h3>
-          <p class="item-b"><strong>事件</strong>：CFTC市场监督部门于9月22日发布咨询，指出以个人是否说出特定词语、出席活动或与他人互动为结算条件的合约具有更高操纵风险。</p><p class="item-b"><strong>机制</strong>：这类结果可能由当事人直接影响且缺少外部独立验证，指定合约市场只能在有限条件下上市，并需按单个合约提交完整的抗操纵分析。（预测市场规则线，自07-24，本次从宽泛自我认证限制推进到具体高风险合约类型）</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>咨询没有全面禁止提及类合约，而是限定可上市情形并强化逐合约分析；最终联邦规则和州级管辖争议仍未解决。</p>
+          <h3 class="item-h">CFTC restricts event contracts on word mentions that pose high manipulation risks</h3>
+          <p class="item-b"><strong>Event</strong>: On September 22, the CFTC’s market surveillance department issued a consultation, stating that contracts based on whether individuals mention certain words, attend events, or interact with others pose a higher risk of manipulation.</p><p class="item-b"><strong>Mechanism</strong>: Interested parties may directly influence these outcomes, and independent verification may be unavailable. Designated contract markets may list them only under limited conditions and must submit a full manipulation-resistance analysis for each contract. This narrows the prediction-market rules story tracked since July 24 from broad self-certification limits to specific high-risk contract types.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The consultation does not completely ban the use of contract-like instruments. Instead, it restricts their use and strengthens analysis based on individual contracts. Ultimately, federal and state-level regulations remain unresolved.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-22</span>
             <a class="item-src" href="https://www.cftc.gov/PressRoom/PressReleases/9302-26" target="_blank" rel="noopener">CFTC ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Galaxy让计息sUSDS同时充当机构抵押品</h3>
-          <p class="item-b"><strong>事件</strong>：Galaxy于9月23日向公司资产负债表配置1亿美元sUSDS，并开始在机构交易与借贷平台接受该资产作为抵押品。</p><p class="item-b"><strong>机制</strong>：客户质押sUSDS后仍可获得Sky储蓄率，同时用同一资产支持贷款或交易敞口，把收益资产与融资抵押品合并，但也叠加协议、流动性和对手方风险。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>Galaxy披露平均贷款余额约14亿美元，1亿美元是其自有资金配置，不能视为全部客户贷款已改用sUSDS抵押。</p>
+          <h3 class="item-h">Galaxy makes yield-bearing sUSDS available as institutional collateral</h3>
+          <p class="item-b"><strong>Event</strong>: On September 23, Galaxy allocated 100 million USD sUSDS to its balance sheet and began accepting this asset as collateral on institutional trading and lending platforms.</p><p class="item-b"><strong>Mechanism</strong>: After pledging sUSDS, customers can still earn Sky savings rates. They can also use the same asset to support loans or trading positions. This combines income assets with financing collateral, but it also involves protocol, liquidity, and counterparty risks.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Galaxy reveals that the average loan balance is approximately 1.4 billion USD, with 100 million USD being its own funds. This does not mean that all loans to customers have been converted into sUSDS collateral.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-23</span>
             <a class="item-src" href="https://www.theblock.co/news/business/2026-09-23-galaxy-adds-100-million-in-skys-susds-to-treasury-buys-sky-token-as-firms-deepen-lending-ties-416137" target="_blank" rel="noopener">The Block ↗</a>
@@ -214,27 +214,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Claude用950个Agent筛出新酶系统</h3>
-          <p class="item-b"><strong>事件</strong>：Anthropic于9月23日披露，Claude驱动约950个Agent并行检索基因组数据，提出候选酶系统，再由人类科学家完成湿实验验证。</p><p class="item-b"><strong>机制</strong>：系统把文献检索、序列聚类、候选排序和实验假设拆给多个Agent，最终从逾20万个逆转录酶收敛到20个候选，实验确认其中一个具有此前未记录的活性。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>计算阶段约21小时、消耗2.1亿Token，但酶的完整生物学功能仍未知，结果处于预印本与人工实验复核阶段。</p>
+          <h3 class="item-h">Claude uses 950 agents to screen for a new enzyme system</h3>
+          <p class="item-b"><strong>Event</strong>: On September 23, Anthropic revealed that Claude-driven agents processed genomic data for approximately 950 agents simultaneously. Candidate enzyme systems were proposed, and human scientists conducted wet laboratory verifications.</p><p class="item-b"><strong>Mechanism</strong>: The system distributes tasks such as literature retrieval, sequence clustering, candidate ranking, and experimental hypotheses among multiple Agents. Ultimately, from over 200,000 enzymes, only 20 candidates were identified. Experimental confirmation revealed that one of these candidates exhibited activity that had not been recorded before.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The computing phase took approximately 21 hours, consuming 210 million Tokens. However, the full biological functions of enzymes remain unknown. The results are still in the pre-print and manual experimentation stages.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-23</span>
             <a class="item-src" href="https://www.anthropic.com/news/claude-discovers-novel-enzyme-system" target="_blank" rel="noopener">Anthropic ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Microsoft把机器人推理卸载到边缘与云</h3>
-          <p class="item-b"><strong>事件</strong>：Microsoft Research于9月23日发布Physical AI Toolchain的推理卸载能力，让机器人把视觉、规划和动作模型转到边缘GPU或云端执行。</p><p class="item-b"><strong>机制</strong>：系统通过Kubernetes在本机与远端算力之间调度模型，避免小型机载GPU拖慢推理，也减少大GPU带来的电池负担，同时把网络延迟纳入机器人控制闭环。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>研究中的小GPU任务最慢可达A100的4.83倍，大GPU电耗最高增加160%；结果取决于具体硬件、模型和网络条件。</p>
+          <h3 class="item-h">Microsoft offloads robot inference to edge and cloud infrastructure</h3>
+          <p class="item-b"><strong>Event</strong>: Microsoft Research announced the inference-offload capabilities of the Physical AI Toolchain on September 23rd. Have the robot transfer the vision, planning, and action models to the edge GPU or the cloud for execution.</p><p class="item-b"><strong>Mechanism</strong>: The system uses Kubernetes to schedule models between local and remote computing resources. This approach prevents small airborne GPUs from slowing down inference processes. It also reduces the battery burden caused by large GPUs. Additionally, network latency is taken into consideration within the robot control loop.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>In research, small GPU tasks can reach up to 4.83 times the performance of A100s. Large GPUs can increase power consumption by up to 160%. The results depend on specific hardware, model, and network conditions.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-23</span>
             <a class="item-src" href="https://www.microsoft.com/en-us/research/blog/offloaded-inference-for-real-world-physical-ai-robotics/" target="_blank" rel="noopener">Microsoft Research ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">AWS把Agent技能选择与执行拆开评估</h3>
-          <p class="item-b"><strong>事件</strong>：AWS于9月22日为Strands Evals和Bedrock AgentCore增加技能型Agent评估，可分别检查技能是否选对、指令是否遵循以及工具是否真正被调用。</p><p class="item-b"><strong>机制</strong>：评估器读取Agent执行轨迹，而不只看最终答案；团队因此能区分路由错误、执行偏离和工具漏调，并把失败定位到具体技能阶段。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>新增三类评估器并支持多种Agent框架，但需要可观测执行轨迹；没有轨迹时仍无法判断最终答案背后的技能调用是否正确。</p>
+          <h3 class="item-h">AWS separately evaluates how agents select and execute skills</h3>
+          <p class="item-b"><strong>Event</strong>: On September 22, AWS added skill-based agent evaluation for Strands Evals and Bedrock AgentCore. This allows for the verification of whether skills are selected correctly, whether instructions are followed, and whether tools are actually invoked.</p><p class="item-b"><strong>Mechanism</strong>: The evaluator reads the execution traces of agents, rather than just the final answers. This allows the team to identify routing errors, execution deviations, and tool misconfigurations, and to pinpoint the failures at specific skill levels.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Three new evaluators have been added, along with support for various agent frameworks. However, observable execution traces are required. Without such traces, it’s impossible to determine whether the skill calls behind the final answers are correct.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-22</span>
             <a class="item-src" href="https://aws.amazon.com/blogs/machine-learning/evaluate-skill-equipped-agents-with-strands-evals-and-amazon-bedrock-agentcore/" target="_blank" rel="noopener">Amazon Web Services ↗</a>
@@ -242,7 +242,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

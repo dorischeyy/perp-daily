@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-08-20</title>
+<title>Perp DEX Daily · 2026-08-20</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 53 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 53</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 8 月 20 日 · 星期四</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">August 20, 2026 · Thursday</div>
     </header>
-    <p class="lead">主要永续场所成交在 OI 继续收缩时放大至前值 2.27 倍，CFTC 开始探索 Hyperliquid 的美国合规路径，AI 算力则向可结算的期货基准推进。</p>
+    <p class="lead">Volume at major perpetual venues reached 2.27 times its previous level even as open interest continued to shrink. The CFTC began exploring a U.S. compliance path for Hyperliquid. Work on an AI compute benchmark moved toward a price that futures contracts could use for settlement.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,29 +110,29 @@
 
         <article class="item">
 
-          <h3 class="item-h">四场所成交增 126.9%，OI 反降 3.0%</h3>
-          <p class="item-b"><strong>事件</strong>：8 月 20 日远端快照中，Binance、Hyperliquid、Bybit 与 Gate 合计日成交由约 1079152 BTC 增至 2448392 BTC，增长 126.9%；合计 OI 由约 932591 BTC 降至 905050 BTC，减少 3.0%。</p><p class="item-b"><strong>机制</strong>：成交放大与仓位存量收缩同时出现，说明新增换手更接近旧仓重定价和主动减仓，而不是杠杆持续累积；四场所 OI 与成交比由 0.86 降至 0.37。</p><p class="item-b"><strong>二阶效应</strong>：高周转暂时改善了存量仓位的退出承接，但若成交脉冲消退而 OI 停留，周转比会快速反弹；容量判断仍需等待资产级深度、资金费率和清算分布。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>汇总口径只覆盖四个场所并以 BTC 计价，不含交易对深度、激励成交、资金费率和清算方向。</p>
+          <h3 class="item-h">Daily volume rises 126.9% across four venues as open interest falls 3.0%</h3>
+          <p class="item-b"><strong>Event</strong>: In the August 20 snapshot, combined daily volume at Binance, Hyperliquid, Bybit and Gate rose 126.9%, from about 1,079,152 BTC to 2,448,392 BTC. Open interest fell 3.0%, from about 932,591 BTC to 905,050 BTC.</p><p class="item-b"><strong>Mechanism</strong>: Volume increased as outstanding positions contracted, consistent with repricing and reductions in existing positions. Across the four venues, open interest divided by volume fell from 0.86 to 0.37.</p><p class="item-b"><strong>Second-order effects</strong>: High turnover can temporarily ease exits. If the surge fades while open interest holds, that relief can reverse quickly. Asset-level depth, funding and liquidation data are needed to assess capacity.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The BTC-denominated aggregate covers four venues and omits pair depth, trading incentives, funding rates and liquidation direction.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-20</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/3fab1cbada93b127ca1825045f7acadcaa41b259/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/335d2e3115bde1761d1e08544f057b06f40c7269/docs/market.json" target="_blank" rel="noopener">补充：前一日市场快照 · 08-19 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/3fab1cbada93b127ca1825045f7acadcaa41b259/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/335d2e3115bde1761d1e08544f057b06f40c7269/docs/market.json" target="_blank" rel="noopener">Additional source: Previous day&#x27;s market snapshot · 08-19 ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">三家 CEX 放量时 OI 全部收缩</h3>
-          <p class="item-b"><strong>事件</strong>：Binance、Bybit 与 Gate 日成交分别增长 116.1%、187.0% 和 116.5%，OI 却分别减少 0.3%、4.8% 和 5.5%；三家 OI 与成交比分别降至 0.27、0.44 和 0.55。</p><p class="item-b"><strong>机制</strong>：Bybit 的成交弹性最大，但三家都没有用新增仓位匹配换手，结构更像波动放大后的仓位迁移与减仓；Binance 的 OI 最稳定，说明其存量承接与另两家不同。</p><p class="item-b"><strong>二阶效应</strong>：聚合成交增长不能直接外推为杠杆需求增长；若后续 OI 继续下滑，做市库存和费用留存可能滞后走弱，即使单日成交仍显著。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>三家前一日 OI 与成交比分别为 0.58、1.33 和 1.25，今日下降来自成交放大与 OI 收缩的叠加。</p>
+          <h3 class="item-h">Volume rises at three centralized exchanges while open interest falls at all three</h3>
+          <p class="item-b"><strong>Event</strong>: Daily trading volume rose 116.1% at Binance, 187.0% at Bybit and 116.5% at Gate. Open interest fell 0.3%, 4.8% and 5.5%, respectively, taking the three open-interest-to-volume ratios to 0.27, 0.44 and 0.55.</p><p class="item-b"><strong>Mechanism</strong>: Bybit had the sharpest volume response, but none of the three venues accumulated positions alongside the surge. The pattern is consistent with repositioning and deleveraging as volatility rose. Binance retained more of its existing exposure than its peers.</p><p class="item-b"><strong>Second-order effects</strong>: Growth in aggregate trading does not establish new leverage demand. If open interest keeps falling, market-making inventory and retained fee revenue could weaken later even after a high-volume day.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The three venues&#x27; open-interest-to-volume ratios were 0.58, 1.33, and 1.25 the previous day. Higher volume combined with lower open interest to bring today&#x27;s ratios down.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-20</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/3fab1cbada93b127ca1825045f7acadcaa41b259/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/335d2e3115bde1761d1e08544f057b06f40c7269/docs/market.json" target="_blank" rel="noopener">补充：前一日市场快照 · 08-19 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/3fab1cbada93b127ca1825045f7acadcaa41b259/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/335d2e3115bde1761d1e08544f057b06f40c7269/docs/market.json" target="_blank" rel="noopener">Additional source: Previous day&#x27;s market snapshot · 08-19 ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">CFTC 探索 Hyperliquid 的美国合规路径</h3>
-          <p class="item-b"><strong>事件</strong>：美国总统特朗普表示，CFTC 主席 Mike Selig 正研究让 Hyperliquid 以完全合规、合法方式进入美国；这是高层首次明确点名链上永续场所的美国接入路径。（CME-CFTC 线 · 自 06-19 · 新增美国合规路径信号）</p><p class="item-b"><strong>机制</strong>：若推进，监管要把前端分发、非托管协议、经纪商义务、客户保护和永续产品定性拆开处理；当前表态没有给出批准、牌照结构或具体产品范围。</p><p class="item-b"><strong>二阶效应</strong>：合规探索会提高链上永续进入持牌分发渠道的可能性，也会把市场准入从技术可用性转成监管责任分配竞争；短期仍不能视作美国用户已经可用。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>现阶段只有公开表态，尚无 CFTC 命令、许可文件、产品清单、上线时间或客户保护细则。</p>
+          <h3 class="item-h">CFTC explores a U.S. regulatory pathway for Hyperliquid</h3>
+          <p class="item-b"><strong>Event</strong>: President Donald Trump said CFTC Chair Mike Selig was studying a fully compliant, lawful U.S. pathway for Hyperliquid. The statement was the first at that level to name an onchain perpetuals venue explicitly. It adds a potential route to the CME–CFTC story tracked since June 19.</p><p class="item-b"><strong>Mechanism</strong>: Progress would require regulators to address frontend distribution, noncustodial protocols, broker obligations, customer protection and classification of perpetual contracts separately. The statement offered no approval, license structure or product scope.</p><p class="item-b"><strong>Second-order effects</strong>: Regulatory exploration may raise the prospects of distribution through licensed channels. Competition would then depend on who assumes regulatory responsibilities as well as technical availability. The statement did not open access for U.S. users.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Only public statements are available. No CFTC order, licensing document, product list, launch date, or detailed customer safeguards have been published.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-19</span>
             <a class="item-src" href="https://www.coindesk.com/markets/2026/08/19/hype-jumps-11-as-trump-says-cftc-is-working-to-bring-hyperliquid-to-u-s" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Rillet 融资 1 亿美元，估值升至 10 亿美元</h3>
-          <p class="item-b">AI 会计软件公司 Rillet 完成 1 亿美元 C 轮融资，估值达到 10 亿美元；公司称客户超过 600 家、ARR 在三个月内翻倍，但增长和自动化准确率仍是公司口径，融资完成不等于复杂财务流程已经规模验证。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>本轮后累计融资超过 2 亿美元；估值和 ARR 增速来自公司披露，未见审计后的收入或留存数据。</p>
+          <h3 class="item-h">Rillet raises $100 million at a $1 billion valuation</h3>
+          <p class="item-b">AI accounting software company Rillet raised $100 million in a Series C at a $1 billion valuation. It reported more than 600 customers and said annual recurring revenue doubled in three months. Growth and automation accuracy remain company-reported. The financing does not validate performance across complex financial workflows at scale.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Total funding exceeds $200 million after this round. The company disclosed the valuation and ARR growth rate. It provided no audited revenue or retention figures.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-19</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/19/rillet-raises-100m-series-c-at-1b-valuation-2-years-after-emerging-from-stealth/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Rivian 分拆公司 Also 再融资 1.5 亿美元</h3>
-          <p class="item-b">电动交通公司 Also 完成 1.5 亿美元 D 轮融资，成立不到两年累计融资 4.55 亿美元；公司正开始交付此前延期的电动自行车，并通过 DoorDash 合作把自动配送扩展到微出行，产品已进入交付但规模和单位经济尚未披露。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>融资和 DoorDash 协议已经确认，首款电动自行车刚开始出货，其他配送产品计划秋季交付。</p>
+          <h3 class="item-h">Rivian spinout Also raises another $150 million</h3>
+          <p class="item-b">Electric mobility company Also raised $150 million in a Series D, bringing total funding to $455 million less than two years after its founding. Deliveries of its delayed electric bicycle are beginning. A DoorDash partnership extends autonomous delivery into micromobility. Delivery volumes and unit economics were undisclosed.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The funding and the DoorDash agreement are confirmed. The first electric bicycle has started shipping. Other delivery products are planned for autumn.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-19</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Navi 首次引入外部资本，获投 1 亿美元</h3>
-          <p class="item-b">印度金融科技公司 Navi 接受 Prosus 约 1 亿美元投资，这是公司首次引入机构外部资本，交易仍待监管批准；其支付规模已显著扩大，但当前财年仍亏损，资本进入不能替代放贷资产质量和盈利验证。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>公司估值约 13 亿美元，7 月 UPI 处理 9.47 亿笔、约 50.5 亿美元，贷款资产管理规模约 14 亿美元。</p>
+          <h3 class="item-h">Navi takes outside capital for the first time with a $100 million investment</h3>
+          <p class="item-b">Indian fintech Navi agreed to an investment of about $100 million from Prosus, its first outside institutional capital, subject to regulatory approval. Payment volume had grown substantially, but the company remained loss-making that fiscal year. Loan quality and profitability still need verification.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The company is valued at about $1.3 billion. In July it processed 947 million UPI transactions worth roughly $5.05 billion, and its loan assets under management stood at about $1.4 billion.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-19</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/19/sachin-bansals-fintech-navi-raises-first-outside-capital-with-100m-prosus-investment/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Swift 24/7 账本完成首笔实时银行交易</h3>
-          <p class="item-b">汇丰与渣打在 Swift 的 24/7 区块链账本试点中完成首笔实时银行间交易，使用代币化存款匹配和净额化义务，再接回传统结算轨道；它证明全天候银行资金协调可以先落在共享账本，但尚未替代最终法币结算。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>试点覆盖六大洲 17 家银行，当前完成的是首笔实盘交易，生产吞吐、参与规模和最终结算迁移尚未验证。</p>
+          <h3 class="item-h">Swift’s 24/7 ledger completes its first live bank transaction</h3>
+          <p class="item-b">HSBC and Standard Chartered completed the first live interbank transaction in Swift’s 24/7 blockchain ledger pilot. Tokenized deposits were used to match and net obligations before returning to conventional settlement rails. The shared ledger supports round-the-clock coordination while final fiat settlement remains on existing systems.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The pilot includes 17 banks on six continents and has completed its first live transaction. Production throughput, actual participation, and migration of final settlement remain unverified.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-19</span>
             <a class="item-src" href="https://www.coindesk.com/business/2026/08/19/hsbc-standard-chartered-execute-first-live-banking-transaction-on-swift-s-24-7-ledger" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -202,9 +202,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Cantor 向机构客户开放 Kalshi 大宗交易</h3>
-          <p class="item-b">Cantor Fitzgerald 计划让约 3000 家机构客户通过其经纪渠道交易 Kalshi 大宗合约，由 Susquehanna 提供定价和流动性；预测市场由零售前端继续进入机构订单流，但州与联邦管辖、逐类合约准入和结算规则仍未解决。（预测市场联邦规则线 · 自 07-24 · 新增机构分发）</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>已披露的是经纪分发和大宗交易安排，没有客户采用量、成交规模、可交易合约清单或监管终局。</p>
+          <h3 class="item-h">Cantor offers Kalshi block trades to institutional clients</h3>
+          <p class="item-b">Cantor Fitzgerald plans to offer about 3,000 institutional clients access to block trades in Kalshi contracts through its brokerage. Susquehanna would supply pricing and liquidity. This expands the institutional distribution story tracked since July 24. State and federal jurisdiction, eligibility by contract and settlement rules remain unsettled.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The disclosures cover broker distribution and block trade arrangements. They give no customer adoption or volume, list of tradable contracts, or final regulatory outcome.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-19</span>
             <a class="item-src" href="https://www.coindesk.com/markets/2026/08/19/cantor-opens-kalshi-prediction-markets-to-thousands-of-institutional-clients" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Ethena 用 10 亿美元信贷工具分散 USDe 收益来源</h3>
-          <p class="item-b">Ethena 与 FalconX 建立 10 亿美元担保仓储工具，以超额抵押机构贷款为 USDe 引入独立于永续资金费率和基差交易的收益来源；破产隔离 SPV、合格托管人与优先担保权降低了结构风险，但放款、服务和抵押品管理仍集中于同一合作方。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>10 亿美元是工具额度，不是已提款余额；尚无实际放款、违约率、抵押品构成和压力期赎回数据。</p>
+          <h3 class="item-h">Ethena diversifies USDe income sources with a $1 billion credit facility</h3>
+          <p class="item-b">Ethena and FalconX established a $1 billion secured warehouse facility. Overcollateralized institutional loans would diversify USDe income beyond perpetual funding and basis trades. A bankruptcy-remote special-purpose vehicle, qualified custodian and senior security interest reduce structural risk, but lending, servicing and collateral management remain with one partner.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The $1 billion is the facility limit. No drawdown balance, actual lending, default rate, collateral mix, or redemptions under stress have been disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-19</span>
             <a class="item-src" href="https://www.coindesk.com/business/2026/08/19/beyond-crypto-funding-rates-ethena-diversifies-usde-backing-with-usd1-billion-falconx-facility" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -233,9 +233,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">OpenAI 推出不留存客户数据的安全处理</h3>
-          <p class="item-b">OpenAI 发布 Private Safety Processing，为部分客户提供跨会话的长期自动化风险监测，同时承诺不保留客户数据，只输出窄化安全信号；它把企业隐私保护从训练承诺推进到运行期监测，但目前仍是面向少数客户的预览。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>功能仅向部分客户预览，尚未披露误报率、覆盖场景、正式可用时间和独立隐私审计。</p>
+          <h3 class="item-h">OpenAI introduces security processing without retaining customer data</h3>
+          <p class="item-b">OpenAI introduced Private Safety Processing, a preview for selected customers offering long-term automated risk monitoring across sessions. It says it retains no customer data and outputs only limited safety signals. The service extends enterprise privacy commitments into runtime monitoring.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Only selected customers have preview access. The false-positive rate, covered scenarios, general availability date, and an independent privacy audit remain undisclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-19</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/19/openai-seeks-to-one-up-anthropic-with-new-customer-privacy-protections/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Silicon Data 推动 GPU 租赁形成期货基准</h3>
-          <p class="item-b">Silicon Data 完成 3000 万美元 A 轮融资，计划建立 GPU 租赁参考价格，并推动 CME 在 10 月 5 日上线算力期货，仍待监管批准；不可储存的算力从私下租赁价格向可结算指数推进。（TradFi/RWA 永续线 · 自 07-09 · 算力标的推进）</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>融资已完成，但 CME 产品仍待批准，参考指数的样本覆盖、抗操纵性、成交深度和套保需求尚未验证。</p>
+          <h3 class="item-h">Silicon Data works toward a futures benchmark for GPU rentals</h3>
+          <p class="item-b">Silicon Data raised $30 million in a Series A to develop reference prices for GPU rentals. CME was targeting October 5 for compute futures, subject to approval. A settlement index for non-storable compute would take pricing beyond private rentals and extend the TradFi and RWA perpetuals story tracked since July 9.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The funding is complete. The CME product still needs approval. Index sample coverage, resistance to manipulation, trading depth, and hedging demand have yet to be demonstrated.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-19</span>
             <a class="item-src" href="https://techcrunch.com/video/meet-the-startup-helping-wall-street-put-a-price-on-ai-compute/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Google 把交互式学习工具扩到 Search 与 Gemini</h3>
-          <p class="item-b">Google 为 Search 增加自定义模拟、测验和材料上传，并让 Gemini 执行多步后台研究、持续对话和 3D 模拟；学习助手由回答问题扩展到生成练习和交互环境，但教育效果、教师控制和错误率尚未披露。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>功能已进入 Search 与 Gemini 的专用学习入口，尚无覆盖地区、学校采用、学习成效和成本数据。</p>
+          <h3 class="item-h">Google expands interactive learning tools in Search and Gemini</h3>
+          <p class="item-b">Google added custom simulations, quizzes and material uploads to Search. Gemini can perform multistep background research, maintain ongoing conversations and generate 3D simulations. Its learning tools extend into exercises and interactive environments. Learning outcomes, teacher controls and error rates were undisclosed.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The feature is available through dedicated learning sections in Search and Gemini. Geographic coverage, school adoption, learning outcomes, and costs have not been disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-19</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/19/google-launches-new-study-tools-for-students-across-search-and-gemini/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -267,15 +267,15 @@
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product assessment</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">流动性</div>
-          <h3 class="item-h">把合成美元收益来源纳入抵押品风险隔离</h3>
-          <p class="item-b"><strong>判断变化</strong>：从主要按价格稳定性和可赎回性审视合成美元，收紧为同时拆解收益来源、破产隔离、抵押品托管与服务方集中度。</p><p class="item-b"><strong>证据与边界</strong>：Ethena 的新工具把部分 USDe 收益从永续资金费率转向机构信贷，并设置超额抵押、破产隔离 SPV 与合格托管；但额度不等于已提款，FalconX 同时承担放款发起、服务和抵押品管理，违约与压力赎回表现未知。</p>
+          <div class="decision-area">Liquidity</div>
+          <h3 class="item-h">Synthetic dollar collateral carries risks tied to the sources of its yield</h3>
+          <p class="item-b"><strong>Revised assessment</strong>: Reviewing a synthetic dollar’s price stability and redemption terms also requires examining its income sources, bankruptcy remoteness, collateral custody and concentration of service providers.</p><p class="item-b"><strong>Evidence and limits</strong>: Ethena’s facility shifts part of USDe’s income from perpetual funding to institutional credit with overcollateralization, a bankruptcy-remote SPV and qualified custody. The credit limit does not equal amounts drawn. FalconX combines origination, servicing and collateral management. Default and stressed-redemption performance remained unknown.</p>
 
           <div class="item-meta">
 
@@ -284,7 +284,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

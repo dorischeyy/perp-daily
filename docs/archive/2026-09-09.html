@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-09-09</title>
+<title>Perp DEX Daily · 2026-09-09</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 72 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 72</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 9 月 9 日 · 星期三</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">September 9, 2026 · Wednesday</div>
     </header>
-    <p class="lead">Hyperliquid持仓结构重新偏向核心加密永续，Pons把Robinhood Chain费用推至纪录高位，Meta则将个人Agent放进独立安全虚拟机。</p>
+    <p class="lead">Open interest on Hyperliquid shifted back toward core crypto perpetuals, Pons drove Robinhood Chain fees to a record, and Meta put its personal agent in a dedicated secure virtual machine.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,19 +110,19 @@
 
         <article class="item">
 
-          <h3 class="item-h">Hyperliquid未平仓量回到143亿美元</h3>
-          <p class="item-b"><strong>事件</strong>：Hyperliquid未平仓量在9月6日达到143亿美元，距2025年10月10日崩盘前的147亿美元仅约3%。</p><p class="item-b"><strong>机制</strong>：过去一个月总未平仓量增加35.7亿美元，但HIP-3未平仓量减少1.19亿美元，其占比从34%降至25%，新增持仓主要回到核心加密永续。</p><p class="item-b"><strong>二阶效应</strong>：核心加密永续约97%的交易费流向HYPE回购，HIP-3 builder则可保留最多一半费用，持仓结构变化会同步改变协议的费用留存。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>9月9日快照按188205.71 BTC未平仓量和78670美元BTC价格折算约148亿美元，高于仓库统治级80亿至120亿美元区间。</p>
+          <h3 class="item-h">Hyperliquid open interest returns to $14.3 billion</h3>
+          <p class="item-b"><strong>Event</strong>: Hyperliquid open interest reached $14.3 billion on September 6, about 3% below the $14.7 billion recorded before the October 10, 2025 crash.</p><p class="item-b"><strong>Mechanism</strong>: Total open interest rose $3.57 billion over the previous month while HIP-3 open interest fell $119 million. HIP-3’s share dropped from 34% to 25%, indicating that new positions were concentrated in core crypto perpetuals.</p><p class="item-b"><strong>Second-order effects</strong>: About 97% of trading fees on core crypto perpetuals go toward HYPE buybacks. HIP-3 builders can retain up to half of their markets’ fees. A change in the mix of positions therefore also changes the share of fees the protocol retains.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>At a bitcoin price of $78,670, the September 9 snapshot valued 188,205.71 BTC of open interest at about $14.8 billion. That exceeds the research framework’s $8 billion to $12 billion benchmark for a dominant venue.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-08</span>
-            <a class="item-src" href="https://www.theblock.co/news/ecosystems/2026-09-08-hyperliquid-open-interest-climbs-14-3-billion-hype-hits-all-time-high-413855" target="_blank" rel="noopener">The Block ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/main/docs/market.json" target="_blank" rel="noopener">补充：CoinGecko行情快照 · 09-09 ↗</a>
+            <a class="item-src" href="https://www.theblock.co/news/ecosystems/2026-09-08-hyperliquid-open-interest-climbs-14-3-billion-hype-hits-all-time-high-413855" target="_blank" rel="noopener">The Block ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/main/docs/market.json" target="_blank" rel="noopener">Additional source: CoinGecko market snapshot · 09-09 ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">Lighter在Robinhood Chain新增九只股票永续</h3>
-          <p class="item-b"><strong>事件</strong>：Lighter在Robinhood Chain一次新增ASTS、CLSK、IREN、LUNR、QBTS、RGTI、SMCI、SOFI和WULF九只股票永续，最高杠杆均为10倍。</p><p class="item-b"><strong>机制</strong>：同一交易后台通过Robinhood Chain承接非加密标的，把股票主题、链上分发和永续保证金集中到一个入口。</p><p class="item-b"><strong>二阶效应</strong>：RWA永续扩列速度继续上升，但九只标的的指数来源、休市处理、OI上限和真实深度尚未公开，数量不能替代市场质量。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>九只市场已显示为可交易，公开线索只给出标的与10倍杠杆，没有成交、未平仓量或风控参数。</p>
+          <h3 class="item-h">Lighter adds nine equity perpetuals on Robinhood Chain</h3>
+          <p class="item-b"><strong>Event</strong>: Lighter added nine Robinhood Chain equity perpetuals: ASTS, CLSK, IREN, LUNR, QBTS, RGTI, SMCI, SOFI and WULF. Each has a maximum leverage of 10x.</p><p class="item-b"><strong>Mechanism</strong>: The same trading backend handles non-encrypted targets through the Robinhood Chain, consolidating stock topics, on-chain distribution, and perpetual margin into one entry point.</p><p class="item-b"><strong>Second-order effects</strong>: RWA perpetual listings continue to accelerate. For these nine markets, index sources, treatment of underlying market closures, open-interest caps and actual depth have yet to be disclosed. Listing count alone cannot establish market quality.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>All nine markets appear as tradable. The public source identifies the underlyings and 10× leverage but supplies no trading volume, open interest or risk-control parameters.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-07</span>
             <a class="item-src" href="https://perpdexwars.com/en/perpdex-news?venue=hyperliquid" target="_blank" rel="noopener">PerpDEX Wars ↗</a>
@@ -130,9 +130,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Aster按市场分组调整永续吃单费</h3>
-          <p class="item-b"><strong>事件</strong>：Aster从9月7日起调整RWA与Group B永续的吃单费，VIP等级的挂单费仍为0，其他普通市场不变。</p><p class="item-b"><strong>机制</strong>：平台不再让全部永续共享同一费率，而是按资产与市场组别单独定价，同时保留挂单端激励。</p><p class="item-b"><strong>二阶效应</strong>：竞争从统一低费率转向按市场成本分层，交易者比较场所时需要同时看标的类别、账户等级与maker/taker角色。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>公开更新确认了分组调费与生效时间，但未给出各等级完整新费率，无法计算单笔成本变化。</p>
+          <h3 class="item-h">Aster adjusts perpetual taker fees by market group</h3>
+          <p class="item-b"><strong>Event</strong>: Effective September 7, Aster adjusted taker fees on RWA and Group B perpetuals. VIP maker fees remained zero, and the change did not affect other standard markets.</p><p class="item-b"><strong>Mechanism</strong>: The platform no longer charges the same rate for all perpetual contracts. Instead, it charges separately based on asset and market categories. At the same time, incentives for resting orders are still in place.</p><p class="item-b"><strong>Second-order effects</strong>: Competition shifts from unified low rates to market-cost-based segmentation. Traders need to consider target categories, account levels, and maker/taker roles when comparing venues.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Public updates confirm the timing of fee adjustments. However, complete new rates for each level are not provided, making it impossible to calculate individual cost changes.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-08</span>
             <a class="item-src" href="https://perpdexwars.com/en/perpdex-news?venue=variational" target="_blank" rel="noopener">PerpDEX Wars ↗</a>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Pons把Robinhood Chain单日费用推至600万美元</h3>
-          <p class="item-b">Robinhood Chain在9月4日创下约600万美元单日费用纪录，过去七日费用约2500万美元，周DEX成交达到124亿美元。</p><p class="item-b">Pons是主要驱动，约80%的协议收入用于回购PONS，但同期日活账户反而下降，费用增长更多来自单账户付费上升。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>Pons在9月3日产生近600万美元费用，一度高于Pump.fun和Hyperliquid，但费用高度依赖新池交易，不能外推为长期留存。</p>
+          <h3 class="item-h">Pons drives Robinhood Chain’s daily fees to $6 million</h3>
+          <p class="item-b">Robinhood Chain set a daily fee record of approximately 6 million USD on September 4. The fees over the past seven days totaled approximately 25 million USD. The weekly DEX transactions amounted to 12.4 billion USD.</p><p class="item-b">PONS is the main driver, with about 80% of the protocol’s revenue used for repurchasing PONS. However, the number of active accounts decreased during this period. Fee increases were mainly due to higher payments per account.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Pons generated nearly 6 million USD in fees on September 3. This amount was higher than that of Pump.fun and Hyperliquid. However, these fees are highly dependent on new pool transactions and cannot be extrapolated as a long-term trend.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-08</span>
             <a class="item-src" href="https://www.theblock.co/news/ecosystems/2026-09-08-pons-propels-robinhood-chain-fees-record-6-million-daily-fees-dex-volume-doubles-413852" target="_blank" rel="noopener">The Block ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">16家Launchpad单日创建逾10万枚代币</h3>
-          <p class="item-b">MemeFees在9月8日记录16家Launchpad合计创建105087枚代币，其中Pons为36449枚，pump.fun为29222枚。</p><p class="item-b">数据同时显示Pons的创建量高于其七日均值，而各平台抓取方法并不完全一致，发行数量只能说明供给速度。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>Pons使用合约事件精确计数，pump.fun等为平台采样下限，跨平台适合看数量级，不适合做严格份额排名。</p>
+          <h3 class="item-h">Sixteen launchpads create more than 100,000 tokens in a day</h3>
+          <p class="item-b">MemeFees recorded 105,087 tokens created by 16 Launchpads on September 8th. Among them, Pons generated 36,449 tokens, and pump.fun generated 29,222 tokens.</p><p class="item-b">Data shows that Pons’ creation volume exceeds its seven-day average. However, the methods used by various platforms for capturing data are not consistent. The number of units issued only indicates the rate of supply.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Pons counts contract events directly. Figures for pump.fun and some other platforms are sampled lower bounds. The results support comparisons of scale but cannot establish precise market-share rankings.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-08</span>
             <a class="item-src" href="https://memefees.com/stats/launches" target="_blank" rel="noopener">MemeFees ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">BIBO以单一配对资产开放首轮发射</h3>
-          <p class="item-b">BIBO在9月7日开放First Wave，所有Meme代币先统一与BIBOCAT配对，达到目标后再建立持续交易池。</p><p class="item-b">完整的BIBO平台币与ve(3,3)投票尚未上线，首轮只验证发射和单一报价资产，避免把未来激励模型写成现有能力。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>首轮已开放Launchpad，但BIBO代币、投票锁仓和完整流动性激励仍未启用。</p>
+          <h3 class="item-h">BIBO opens its first launch round with a single quote asset</h3>
+          <p class="item-b">BIBO opened First Wave on September 7. All Meme tokens were first paired with BIBOCAT. After reaching the target, a continuous trading pool was established.</p><p class="item-b">The complete BIBO platform coins and ve(3,3) voting have not yet been launched. Only initial verification of issuance and single-quoted assets has been conducted to avoid describing future incentive models as existing capabilities.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The Launchpad is open for the first round, but BIBO tokens, voting lock-ups, and full liquidity incentives are not yet available.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-07</span>
             <a class="item-src" href="https://bibo.trade/docs/launch-edition" target="_blank" rel="noopener">BIBO Docs ↗</a>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Robinhood把事件合约路由扩至五个场所</h3>
-          <p class="item-b">Robinhood与Crypto.com和OG.com达成合作，部分事件合约将新增路由至OG.com，同时继续连接Kalshi、ForecastEX和Rothera。</p><p class="item-b">平台第二季度成交136亿份事件合约并产生约1.56亿美元收入，多场所路由开始成为经纪入口扩容和分散执行依赖的手段。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>136亿份是Q2合约份数而非美元名义成交，合作扩大执行场所，但没有解决州与联邦管辖争议。</p>
+          <h3 class="item-h">Robinhood expands event contract routing to five venues</h3>
+          <p class="item-b">Robinhood has partnered with Crypto.com and OG.com. Some event contracts will now be routed through OG.com, while continuing to connect with Kalshi, ForecastEX, and Rothera.</p><p class="item-b">In the second quarter, the platform traded 13.6 billion event contracts, generating approximately 156 million USD in revenue. The use of multiple exchanges has become a means to expand brokerage entry points and distribute execution tasks.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>13.6 billion units refer to the number of contracts in Q2, not the nominal value in dollars. The cooperation expands the execution locations, but it does not resolve disputes between state and federal jurisdictions.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-08</span>
             <a class="item-src" href="https://www.theblock.co/news/markets/2026-09-08-robinhood-expands-prediction-markets-crypto-com-og-partnerships-nfl-season-413832" target="_blank" rel="noopener">The Block ↗</a>
@@ -202,9 +202,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Strive以永续优先股继续增持比特币</h3>
-          <p class="item-b">上市公司Strive上周购入1375枚比特币，总持仓增至24531枚；其SATA永续优先股为当周提供约70%的新增资金。</p><p class="item-b">SATA流通名义规模接近10亿美元，把固定面值优先股变成比特币财库的持续融资通道，但融资规模不等于普通股股东的净增值。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>24531枚是公司总持仓，约10亿美元是SATA流通名义规模，两者口径不同，不能直接相加衡量财库价值。</p>
+          <h3 class="item-h">Strive uses perpetual preferred shares to continue accumulating bitcoin</h3>
+          <p class="item-b">The listed company Strive purchased 1375 bitcoins last week, increasing its total holdings to 24,531 bitcoins. Its SATA perpetual preferred shares provided approximately 70% of the new capital for that week.</p><p class="item-b">SATA’s nominal circulation is close to 1 billion USD. By converting fixed-value preferred shares into a continuous financing channel for Bitcoin reserves, the financing amount does not equal the net value increase for common shareholders.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>24,531 units represent the company’s total holdings, with approximately 1 billion USD being the nominal size of SATA circulation. These two metrics are not directly comparable, and their combined value cannot be measured directly.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-08</span>
             <a class="item-src" href="https://www.theblock.co/news/markets/2026-09-08-strive-adds-1375-bitcoin-sata-approaches-billion-dollar-milestone-413800" target="_blank" rel="noopener">The Block ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Cronos回滚近两小时链历史追回大部分损失</h3>
-          <p class="item-b">Cronos复盘称攻击者操纵TONIC抵押品并借出1.204亿美元，验证者随后回滚10961个区块，恢复约1.112亿美元。</p><p class="item-b">仍有919万美元在停链前转出且未追回，所有发生在1小时54分钟窗口内的交易无论是否相关都被撤销，资金恢复以牺牲终局性为代价。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>回滚覆盖约92.4%的受影响价值，剩余约7.6%已离链；恢复余额不等于消除跨平台对账成本。</p>
+          <h3 class="item-h">Cronos rolls back nearly two hours of chain history to recover most losses</h3>
+          <p class="item-b">Cronos reported that attackers manipulated TONIC collateral and lent out 120.4 million USD. Verifiers then rolled back 10,961 blocks, recovering approximately 111.2 million USD.</p><p class="item-b">There was still 9.19 million USD transferred before the chain was shut down, and it was not recovered. All transactions that occurred within the 1 hour and 54 minutes window were canceled, regardless of their relevance. The funds were restored at the expense of finality.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Approximately 92.4% of the affected value has been rolled back. The remaining 7.6% has been removed from the chain. Restoring balances does not mean eliminating the costs associated with cross-platform reconciliation.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-08</span>
             <a class="item-src" href="https://www.theblock.co/news/ecosystems/2026-09-08-cronos-post-mortem-413724" target="_blank" rel="noopener">The Block ↗</a>
@@ -233,9 +233,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Meta推出运行在独立虚拟机中的个人Agent</h3>
-          <p class="item-b">Meta发布个人Agent Muse，可在WhatsApp或独立应用中接收长期目标，并通过自带浏览器执行跨应用任务。</p><p class="item-b">每位用户对应独立Muse Secure VM，用户决定授权范围；官方尚未披露开放地区、第三方应用清单或长任务成功率。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>产品已发布并说明隔离架构，但当前页面没有量化可用范围、失败恢复或高风险操作审批表现。</p>
+          <h3 class="item-h">Meta introduces a personal agent running in its own virtual machine</h3>
+          <p class="item-b">Meta released the personal agent Muse. It allows users to set long-term goals through WhatsApp or standalone applications. Tasks can be executed across applications using its built-in browser.</p><p class="item-b">Each user has a separate Muse Secure VM. Users determine the scope of authorization. The official team has not disclosed information about open regions, third-party applications, or the success rate of long-term tasks.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The product has been released, and the isolation architecture has been described. However, the current page does not provide quantitative data on available ranges, failure recovery, or approval for high-risk operations.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-08</span>
             <a class="item-src" href="https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/" target="_blank" rel="noopener">Meta ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">OpenAI公布Navier-Stokes奇性证明</h3>
-          <p class="item-b">OpenAI公布由尚在训练的内部模型生成、再由GPT-6 Astra完成Lean形式化的Navier-Stokes奇性证明，结论是光滑流体可在有限时间形成奇点。</p><p class="item-b">项目使用约1万个并发Agent，完成后公开论文与形式化证明；OpenAI不申领奖金，外部数学界仍需独立审查结果。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>论文和Lean证明已公开，但官方自验不等于Clay数学研究所完成认可或同行评审。</p>
+          <h3 class="item-h">OpenAI publishes a proof concerning a Navier–Stokes singularity</h3>
+          <p class="item-b">OpenAI reported that an internal model still in training produced a proof concerning a Navier–Stokes singularity. GPT-6 Astra then formalized the proof in Lean. The reported result is that an initially smooth fluid flow can form a singularity in finite time.</p><p class="item-b">The project uses approximately 10,000 concurrent agents. Once completed, the paper and formal proofs will be published. OpenAI does not claim any bonuses; the results still need to be independently reviewed by the external mathematical community.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The paper and Lean proofs are publicly available, but official verification does not equal approval or peer review by the Clay Mathematics Institute.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-08</span>
             <a class="item-src" href="https://openai.com/index/navier-stokes-solution/" target="_blank" rel="noopener">OpenAI ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Google与国泰航空扩大AI尾迹规避试验</h3>
-          <p class="item-b">Google与国泰航空把AI凝结尾迹规避扩展到亚太超长航线，系统结合卫星图像和天气预测，在起飞前与飞行中建议小幅调整高度。</p><p class="item-b">首阶段超过80次航班采用规避路线，估算尾迹增温影响下降约40%，第二阶段将继续验证不同航线的运营可行性。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>当前是百余航班规模的真实运营试验，40%为卫星图像估算结果，尚不是全机队减排结论。</p>
+          <h3 class="item-h">Google and Cathay Pacific expand their AI contrail avoidance trial</h3>
+          <p class="item-b">Google and Cathay Pacific extended AI-based anti-stellar drift technology to long-haul routes in the Asia-Pacific region. The system combines satellite images and weather forecasts to suggest slight adjustments in altitude before takeoff and during flight.</p><p class="item-b">In the first phase, more than 80 flights used alternative routes. It is estimated that the impact of wake-up warming decreased by about 40%. In the second phase, the operational feasibility of different routes will be further verified.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The operational trial covered more than 100 flights. The estimated 40% reduction in contrail warming came from satellite imagery. It does not establish a fleet-wide emissions reduction.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-07</span>
             <a class="item-src" href="https://blog.google/innovation-and-ai/models-and-research/google-research/contrail-avoidance-ultra-long-haul-flights/" target="_blank" rel="noopener">Google ↗</a>
@@ -263,7 +263,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

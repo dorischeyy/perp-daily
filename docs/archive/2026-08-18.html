@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-08-18</title>
+<title>Perp DEX Daily · 2026-08-18</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 51 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 51</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 8 月 18 日 · 星期二</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">August 18, 2026 · Tuesday</div>
     </header>
-    <p class="lead">主要永续场所成交骤增但 OI 近乎不动，代币化股票与 Robinhood Chain 显示 RWA 敞口和抵押品需求正在分化，AI 工具则继续向算力云、浏览器和会议入口重组。</p>
+    <p class="lead">Trading volume surged across major perpetual venues with little movement in open interest. Tokenized equities and Robinhood Chain highlighted distinct demand for asset exposure and collateral. AI tools continued moving into compute clouds, browsers and meeting software.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,32 +110,32 @@
 
         <article class="item">
 
-          <h3 class="item-h">四大永续场所成交放大 216.2%，OI 仅增 0.2%</h3>
-          <p class="item-b"><strong>事件</strong>：8 月 18 日远端快照中，Binance、Hyperliquid、Gate 与 Bybit 合计日成交由前一日约 354144 BTC 升至 1119845 BTC，增长 216.2%；合计 OI 仅由 953940 BTC 升至 956127 BTC，增加 0.2%。</p><p class="item-b"><strong>机制</strong>：成交在一天内放大至前值的 3.16 倍，而仓位存量几乎没有同步扩张，说明市场主要经历了高换手脉冲，而不是同量级的新风险敞口进入。</p><p class="item-b"><strong>二阶效应</strong>：成交激增可以缓解短时退出压力，但不能单独证明可持续容量提高；风控仍需连续快照、资产级盘口和实际冲击成本交叉确认。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>四个场所合计 OI 与日成交比由 2.69 降至 0.85；CoinGecko 汇总不含交易对构成、激励成交和可执行深度。</p>
+          <h3 class="item-h">Daily volume rises 216.2% across four venues while open interest gains only 0.2%</h3>
+          <p class="item-b"><strong>Event</strong>: In the August 18 snapshot, combined daily volume at Binance, Hyperliquid, Gate and Bybit rose 216.2%, from about 354,144 BTC to 1,119,845 BTC. Open interest rose 0.2%, from about 953,940 BTC to 956,127 BTC.</p><p class="item-b"><strong>Mechanism</strong>: Daily turnover reached 3.16 times its previous level with little movement in outstanding positions. That pattern is consistent with a burst of trading rather than a comparable increase in new risk.</p><p class="item-b"><strong>Second-order effects</strong>: A volume surge can help absorb exits temporarily. Durable capacity still requires evidence from subsequent snapshots, asset-level order books and realized price impact.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The ratio of open interest to daily volume fell from 2.69 to 0.85. CoinGecko’s venue totals omit trading pairs, incentives and executable depth.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-18</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/05258eab9232b80c0919f5d8897f6ec6847942fd/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/9fd714d84641e4305d655e4fd1f911612fdc4ac9/docs/market.json" target="_blank" rel="noopener">补充：前一日市场快照 · 08-17 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/05258eab9232b80c0919f5d8897f6ec6847942fd/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/9fd714d84641e4305d655e4fd1f911612fdc4ac9/docs/market.json" target="_blank" rel="noopener">Additional source: Previous day&#x27;s market snapshot · 08-17 ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">Hyperliquid 成交增长 312.6%，持仓周转比降至 1.85</h3>
-          <p class="item-b"><strong>事件</strong>：Hyperliquid 日成交由 24976 BTC 升至 103052 BTC，增长 312.6%；OI 增长 1.3% 至 190827 BTC，OI 与成交比由 7.54 降至 1.85。</p><p class="item-b"><strong>机制</strong>：成交增幅显著高于仓位增幅，前一日极低的存量换手得到快速修复，且 OI 仍保持增长，没有靠大幅减仓制造更低比值。</p><p class="item-b"><strong>二阶效应</strong>：链上场所的相对周转证据明显改善，但一天的数据还不足以把临时流量转成长期容量，尤其不能替代标的级退出深度。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>Hyperliquid 当日成交约为 Binance 的 14.3%，高于前一日约 10.9%；比例改善不说明订单流已长期迁移。</p>
+          <h3 class="item-h">Hyperliquid volume increases 312.6% as its open-interest-to-volume ratio falls to 1.85</h3>
+          <p class="item-b"><strong>Event</strong>: Hyperliquid’s daily volume rose 312.6%, from 24,976 BTC to 103,052 BTC. Open interest rose 1.3% to 190,827 BTC. Its open-interest-to-volume ratio fell from 7.54 to 1.85.</p><p class="item-b"><strong>Mechanism</strong>: Volume grew far faster than positions, reversing the previous day’s unusually low turnover. Open interest continued to rise, so position closures did not drive the lower ratio.</p><p class="item-b"><strong>Second-order effects</strong>: Relative turnover improved markedly onchain. One day of activity cannot establish lasting capacity or substitute for measurements of exit depth by asset.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Hyperliquid&#x27;s daily volume reached about 14.3% of Binance&#x27;s, up from roughly 10.9% the day before. One day&#x27;s increase does not establish a lasting shift in order flow.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-18</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/05258eab9232b80c0919f5d8897f6ec6847942fd/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/9fd714d84641e4305d655e4fd1f911612fdc4ac9/docs/market.json" target="_blank" rel="noopener">补充：前一日市场快照 · 08-17 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/05258eab9232b80c0919f5d8897f6ec6847942fd/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/9fd714d84641e4305d655e4fd1f911612fdc4ac9/docs/market.json" target="_blank" rel="noopener">Additional source: Previous day&#x27;s market snapshot · 08-17 ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">Binance 贡献 63.8% 新增成交，Gate 成为增仓样本</h3>
-          <p class="item-b"><strong>事件</strong>：Binance 较前一日增加约 488345 BTC 成交，占四场所成交增量的 63.8%，但 OI 下降 0.8%；Gate 成交增长 290.5%，OI 反而增长 2.1%。</p><p class="item-b"><strong>机制</strong>：同一轮成交脉冲在不同场所对应不同仓位结果，Binance 更像存量换手加速，Gate 则同时出现换手与仓位扩张，不能用全市场平均值替代逐场所风险画像。</p><p class="item-b"><strong>二阶效应</strong>：外部基准应拆分成交贡献和 OI 增量来源；若容量模型只读取聚合成交，会把集中在单一场所的短期流量误当成普遍深度改善。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>四场所总成交增量约 765701 BTC，其中 Binance 约占三分之二；Gate 的增仓仍缺少账户集中度和交易对分布。</p>
+          <h3 class="item-h">Binance accounts for 63.8% of additional volume while Gate adds open interest</h3>
+          <p class="item-b"><strong>Event</strong>: Binance accounted for approximately 488,345 BTC of additional volume, or 63.8% of the volume increase across four venues, while its open interest fell 0.8%. Gate’s volume rose 290.5% and open interest rose 2.1%.</p><p class="item-b"><strong>Mechanism</strong>: The same burst of activity had different effects on positions. Binance mainly saw faster turnover of existing exposure, while Gate saw both turnover and open interest expand. A market-wide average conceals these different risk profiles.</p><p class="item-b"><strong>Second-order effects</strong>: Benchmarks need to identify each venue’s contribution to volume and open-interest growth. A capacity model that uses only aggregate volume may treat a brief surge at one venue as a broad improvement in depth.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Volume across the four venues rose by about 765,701 BTC, with Binance accounting for roughly two-thirds. The increase in Gate&#x27;s open interest lacks a breakdown by account concentration or trading pair.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-18</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/05258eab9232b80c0919f5d8897f6ec6847942fd/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/9fd714d84641e4305d655e4fd1f911612fdc4ac9/docs/market.json" target="_blank" rel="noopener">补充：前一日市场快照 · 08-17 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/05258eab9232b80c0919f5d8897f6ec6847942fd/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/9fd714d84641e4305d655e4fd1f911612fdc4ac9/docs/market.json" target="_blank" rel="noopener">Additional source: Previous day&#x27;s market snapshot · 08-17 ↗</a>
           </div>
         </article>
         </div>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Higgsfield 融资 4 亿美元，把视频生成推向企业工作流</h3>
-          <p class="item-b">Higgsfield 完成 4 亿美元 B 轮融资，估值八个月内从 13 亿美元升至 54 亿美元；公司披露年化收入 7 亿美元、3000 万用户及 390 家《财富》500 强客户，资金将补充算力、招聘和产品开发，竞争重点从单次生成质量转向企业营销与影视流程的持续嵌入。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>54 亿美元估值约为披露年化收入的 7.7 倍，但收入为公司口径，未披露毛利、留存和算力成本。</p>
+          <h3 class="item-h">Higgsfield raises $400 million to bring video generation into enterprise workflows</h3>
+          <p class="item-b">Higgsfield raised $400 million in a Series B, lifting its valuation from $1.3 billion to $5.4 billion in eight months. It reported $700 million in annualized revenue, 30 million users and 390 Fortune 500 customers. Funding will support compute, hiring and development as competition turns toward recurring use in enterprise marketing and film workflows.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The $5.4 billion valuation is about 7.7 times the annualized revenue reported by the company. Gross margin, retention, and compute costs were not disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-17</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/17/higgsfield-raises-400m-series-b-quadrupling-its-valuation-in-8-months-to-5-4b/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Sonic Fire Tech 用次声灭火推进认证测试</h3>
-          <p class="item-b">Sonic Fire Tech 融资 1500 万美元，将约 20 Hz 的不可听次声通过管道压制火焰，目标是在不用水和化学品的情况下减少附带损失；资金主要用于扩充团队和完成 NFPA 认证测试，锂电池场景目前只能限制蔓延，尚不能宣称完全灭火。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>系统仍处认证和有限测试阶段，商业厨房、住宅与野火场景的部署规模和保险折扣尚未形成。</p>
+          <h3 class="item-h">Sonic Fire Tech advances certification tests for low-frequency sound fire suppression</h3>
+          <p class="item-b">Sonic Fire Tech raised $15 million for a system that channels inaudible infrasound at about 20 Hz through pipes to suppress flames without water or chemicals. Funding will expand the team and support NFPA certification testing. In lithium battery incidents, the company currently claims only to limit the spread.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The system is in certification and limited testing. Deployment at scale and insurance discounts have yet to materialize for commercial kitchens, homes, or wildfire applications.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-17</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/17/sound-powered-fire-protection-startup-gets-15m-to-snuff-out-fires-before-they-turn-catastrophic/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Terra Industries 完成 5200 万美元种子轮</h3>
-          <p class="item-b">非洲防务科技公司 Terra Industries 把种子轮扩至 5200 万美元，用于扩大无人机、排雷车辆和自主系统制造，并计划在伦敦、旧金山与华盛顿建立业务入口；公司称合同预期接近 1 亿美元，但收入仍是年底目标，不能等同于已交付订单。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>融资已经完成，至少一份联邦合同得到披露；接近 1 亿美元合同和数千万收入仍为公司预测。</p>
+          <h3 class="item-h">Terra Industries closes a $52 million seed round</h3>
+          <p class="item-b">African defense technology company Terra Industries expanded its seed round to $52 million for manufacturing drones, demining vehicles and autonomous systems. It plans business operations in London, San Francisco and Washington. It reported nearly $100 million in prospective contracts. Revenue was a year-end target, and deliveries remained unconfirmed.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The funding round is complete and at least one federal contract has been disclosed. Nearly $100 million in contracts and tens of millions in revenue are still company forecasts.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-17</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/17/terra-industries-closes-52m-seed-round-to-build-defense-infrastructure-for-the-global-south/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">代币化股票市占率升至 15%，三家合计占 77%</h3>
-          <p class="item-b">代币化股票占全部 RWA 市值的比例从年初约 5% 升至 15%，当前市值约 28 亿美元，8 月转账量由上月 90 亿美元增至 200 亿美元；Ondo、Binance bStock 与 xStocks 合计占 77%，但三者主要是合成敞口，分发速度领先于带完整股东权利的原生链上股票。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>代币化股票仍只占 RWA 市值 15%，但三家合成产品已控制 77% 份额，增长与集中度同时上升。</p>
+          <h3 class="item-h">Reported tokenized stock market share reaches 15%, with three providers accounting for 77%</h3>
+          <p class="item-b">Tokenized equities grew from about 5% of RWA market value at the start of the year to 15%, worth around $2.8 billion. August transfer volume reached $20 billion against $9 billion the month before. Ondo, Binance bStock and xStocks account for 77%. Their mostly synthetic exposure has spread faster than native onchain shares with full shareholder rights.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Tokenized equities account for 15% of RWA market capitalization, while three synthetic products hold 77% of the relevant market. Growth has come with greater concentration.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-17</span>
             <a class="item-src" href="https://www.theblock.co/news/defi/2026-08-17-tokenized-equities-triple-market-share-ondo-binance-xstocks-dominate-411996" target="_blank" rel="noopener">The Block ↗</a>
@@ -202,9 +202,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Robinhood Chain TVL 增长 45%，RWA 占比反降至 6%</h3>
-          <p class="item-b">Robinhood Chain 8 月 TVL 增长逾 45% 至 5.4 亿美元，代币化 RWA 虽增长 120% 至 3200 万美元，占 TVL 比例却从 7 月初近三分之一降至 6%；稳定币规模已达约 6.4 亿美元，说明链上资金增长主要由抵押品和收益需求驱动，而不是品牌主推的股票资产。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>RWA 绝对规模在增长，但链上总资金增长约快七倍；TVL 也不能直接代表交易量或长期用户留存。</p>
+          <h3 class="item-h">Robinhood Chain TVL rises 45% while real-world assets fall to 6% of the total</h3>
+          <p class="item-b">Robinhood Chain TVL rose more than 45% in August to $540 million. Tokenized RWAs rose 120% to $32 million, yet their share of TVL fell from nearly one-third in early July to 6%. With stablecoins at about $640 million, collateral and yield demand appear to account for more growth than the chain’s promoted equity products.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Real-world asset balances are rising in absolute terms, but total onchain capital grew about seven times as fast. TVL alone cannot measure trading volume or long-term retention.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-17</span>
             <a class="item-src" href="https://www.theblock.co/news/ecosystems/2026-08-17-robinhood-chain-tvl-surges-45-august-tokenized-rwas-lose-ground-411998" target="_blank" rel="noopener">The Block ↗</a>
@@ -212,12 +212,12 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">美国财政部推进 GENIUS Act 稳定币实施规则</h3>
-          <p class="item-b">美国财政部就 GENIUS Act 第 3 节发布拟议规则并征求 60 天意见，重点界定稳定币何时在美国发行、何时被视为向美国用户销售，以及境外发行人如何响应美国法律命令；框架预计 2027 年 1 月生效，2028 年 7 月后未持牌稳定币的分发限制进一步收紧。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>当前仍是拟议规则和意见期，正式文本可能调整；但发行、销售与境外合规已成为明确分发门槛。</p>
+          <h3 class="item-h">U.S. Treasury advances stablecoin implementation rules under the GENIUS Act</h3>
+          <p class="item-b">The U.S. Treasury proposed rules under Section 3 of the GENIUS Act and opened a 60-day comment period. The proposal addresses U.S. issuance, sales to U.S. users and foreign issuers’ obligations under U.S. legal orders. The framework was expected in January 2027, with tighter distribution restrictions on unlicensed stablecoins after July 2028.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The rule is still in the proposal and comment stage. Final wording may change, but issuance, sales, and overseas compliance have emerged as explicit conditions for distribution.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-17</span>
-            <a class="item-src" href="https://www.theblock.co/news/regulation/2026-08-17-us-treasury-seeks-public-comment-genius-act-stablecoin-rules-411987" target="_blank" rel="noopener">The Block ↗</a><a class="item-src item-ref" href="https://home.treasury.gov/news/press-releases/sb0237" target="_blank" rel="noopener">补充：美国财政部 · 08-17 ↗</a>
+            <a class="item-src" href="https://www.theblock.co/news/regulation/2026-08-17-us-treasury-seeks-public-comment-genius-act-stablecoin-rules-411987" target="_blank" rel="noopener">The Block ↗</a><a class="item-src item-ref" href="https://home.treasury.gov/news/press-releases/sb0237" target="_blank" rel="noopener">Additional source: US Department of the Treasury · 08-17 ↗</a>
           </div>
         </article>
         </div>
@@ -233,9 +233,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Groq 从自研芯片转向 Nvidia 算力云</h3>
-          <p class="item-b">Groq 融资 3.5 亿美元、估值 35 亿美元，在核心团队与技术授权给 Nvidia 后，从自研 LPU 芯片转为运营 Nvidia 系统的 neocloud；公司已覆盖 13 个数据中心和 600 多万开发者，并计划把容量从 54 MW 扩至 2027 年逾 200 MW。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>新估值低于去年 69 亿美元，业务从差异化芯片转为资本密集型算力云，扩容不等于自由现金流改善。</p>
+          <h3 class="item-h">Groq shifts focus from its own chips to an Nvidia-powered compute cloud</h3>
+          <p class="item-b">Groq raised $350 million at a $3.5 billion valuation. After the transfer of its core team and technology licensing to Nvidia, Groq shifted from building LPU chips to operating Nvidia systems as a cloud provider. It reported 13 data centers and more than six million developers, with plans to raise capacity from 54 MW to over 200 MW in 2027.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The new valuation is below last year&#x27;s $6.9 billion. The business has shifted from differentiated chips to a capital-intensive compute cloud. Additional capacity alone does not establish an improvement in free cash flow.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-17</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/17/groq-raises-350m-to-fuel-its-pivot-from-ai-chips-to-neocloud/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Relay 关闭独立自动化产品，团队转入 Chrome</h3>
-          <p class="item-b">AI 工作流工具 Relay 将于 9 月 14 日关闭付费客户访问，创始人及部分团队加入 Google Chrome，并把浏览器描述为与 agents 协作的入口；这不是常规人才收购，而是独立自动化产品退出后，能力与分发入口重新集中到浏览器。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>Relay 已明确停服与人员去向，但 Google 尚未公布 Chrome 的具体 agent 功能、迁移方案或发布时间。</p>
+          <h3 class="item-h">Relay closes its standalone automation product as the team joins Chrome</h3>
+          <p class="item-b">AI workflow service Relay will end access for paying customers on September 14. Its founder and part of the team are joining Google Chrome, which they describe as an interface for working with agents. Closing the independent product brings both its capabilities and its distribution closer to the browser.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Relay confirmed when its service will stop and where staff will go. Google has yet to announce specific agent features for Chrome, a migration plan, or a release date.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-17</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/17/ai-automation-startup-relay-shuts-down-staff-joins-googles-chrome-team/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Wispr 用 Canto 模型从听写扩展到会议入口</h3>
-          <p class="item-b">Wispr 完成 2.8 亿美元 B 轮融资、估值 20 亿美元，同时发布 Canto 语音理解模型，称可把错误率从约 30% 降至 10% 以下，并推出会议记录工具；产品从单点听写走向摘要、行动项和跨工具写入，开始争夺桌面工作流入口。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>新模型与会议工具已经发布，错误率改善来自公司披露，第三方基准、留存和跨工具执行量仍待验证。</p>
+          <h3 class="item-h">Wispr expands from dictation into meetings with its Canto model</h3>
+          <p class="item-b">Wispr raised $280 million in a Series B at a $2 billion valuation and introduced Canto, a speech-understanding model it says reduces error rates from about 30% to below 10%. It also launched meeting notes. Summaries, action items and writing to other tools extend the product beyond dictation into desktop workflows.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The new model and meeting tools are available. The company reported the lower error rate. Third-party benchmarks, retention, and the volume of actions completed across tools still need verification.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-17</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/17/wispr-raises-280m-at-2b-valuation-as-it-looks-beyond-dictation/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -267,15 +267,15 @@
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product assessment</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">市场与资产</div>
-          <h3 class="item-h">RWA 扩列验收应分开看敞口需求与抵押品沉淀</h3>
-          <p class="item-b"><strong>判断变化</strong>：从用 RWA 产品覆盖与成交热度验证扩列，收紧为分别验证合成敞口需求、持续 OI、稳定币抵押品和带权利现货的用户选择。</p><p class="item-b"><strong>证据与边界</strong>：代币化股票市值占比升至 15%，但 Robinhood Chain 的 RWA 只占 TVL 约 6%，而稳定币规模超过链上 TVL；两组数据说明资产叙事与资金沉淀并不等价。</p>
+          <div class="decision-area">Market and Assets</div>
+          <h3 class="item-h">Demand for asset exposure and use as collateral need separate measures</h3>
+          <p class="item-b"><strong>Revised assessment</strong>: Assessing expansion now requires separate evidence for demand for synthetic exposure, sustained open interest, stablecoin collateral and users’ preference for spot assets with legal rights.</p><p class="item-b"><strong>Evidence and limits</strong>: The reported tokenized equity market share rose to 15%, but real-world assets accounted for only about 6% of Robinhood Chain TVL, and stablecoin supply exceeded chain TVL. Interest in an asset category and capital held on a particular chain are different measures.</p>
 
           <div class="item-meta">
 
@@ -284,7 +284,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

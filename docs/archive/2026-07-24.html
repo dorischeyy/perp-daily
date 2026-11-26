@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-07-24</title>
+<title>Perp DEX Daily · 2026-07-24</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 持续追踪：跨日叙事线的"当前进展地图" */
+  /* Ongoing coverage of developing stories */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -41,7 +41,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -52,7 +52,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「机会与打法」做成醒目的产品判断卡片 */
+  /* Product analysis card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -84,12 +84,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 32 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 32</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 7 月 24 日 · 星期五</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">July 24, 2026 · Friday</div>
     </header>
-    <p class="lead">RWA 永续在六个月内从边缘品类变成月成交数千亿美元的集中市场；与此同时，AFX Trade 的桥接签名失守和 BitMEX 的关停，分别暴露了链下权限面与市场退场机制这两类容易被忽略的基础设施风险。</p>
+    <p class="lead">In six months, real-world asset perpetuals became a concentrated market trading hundreds of billions of dollars a month. AFX Trade’s bridge signing incident and the closure reported by BitMEX also exposed different operational risks: offchain authority and the orderly exit from a market.</p>
 
 
       <section class="sec sec-perpdex">
@@ -102,21 +102,21 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">RWA 永续月成交增至约 4700 亿美元，增长与集中同时发生</h3>
-          <p class="item-b"><strong>事件</strong>：（TradFi/RWA 规模化线，自 07-09，第 16 天）The Block 07-22 披露，跨交易所 RWA 永续月成交从 1 月约 850 亿美元增至 6 月约 4700 亿美元；股票永续同期增长约 7 倍，已明显快于商品永续。</p><p class="item-b"><strong>机制</strong>：增长主要由 SpaceX 等盘前股票和半导体个股驱动，但流量没有均匀分散。Binance、Hyperliquid 与 OKX 合计承接 6 月超过 80% 的 RWA 永续成交，Binance 接近一半；Hyperliquid 是集中格局中最突出的链上交易场所。</p><p class="item-b"><strong>二阶效应</strong>：需求已经从“有没有 RWA 永续”转向“哪些标的能持续承接价格发现与分发”。扩列速度仍有价值，但订单流入口、可套利的现货参照和少数事件型标的，正在比市场数量更能决定份额。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>4700 亿美元是 CEX 与 DEX 的 RWA 永续成交额，不是代币化股票市值；高换手也不能单独证明长期持仓需求。</p>
+          <h3 class="item-h">Monthly real-world asset perpetual volume reaches about $470 billion, concentrated at three venues</h3>
+          <p class="item-b"><strong>Event</strong>: The Block reported on July 22 that monthly real-world asset perpetual volume across exchanges rose from about $85 billion in January to $470 billion in June. Stock perpetual volume grew roughly sevenfold over that period, outpacing commodity contracts. This was day 16 of coverage since July 9.</p><p class="item-b"><strong>Mechanism</strong>: Pre-IPO equities such as SpaceX and individual semiconductor stocks drove much of the growth. Binance, Hyperliquid and OKX handled more than 80% of June volume, with Binance near half. Hyperliquid was the largest onchain venue in that group.</p><p class="item-b"><strong>Second-order effects</strong>: The figures shift attention from basic asset availability toward which contracts retain order flow and support price discovery. Distribution, accessible spot markets for arbitrage and a small number of event-driven listings may matter more to market share than total listing count.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The $470 billion measures turnover in real-world asset perpetuals across centralized and decentralized exchanges. It does not measure tokenized equity market capitalization or establish demand for long-term holdings.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-22</span>
             <a class="item-src" href="https://www.theblock.co/post/408961/tokenized-equity-perps-drive-rwa-trading-boom-to-470-billion-monthly-volume" target="_blank" rel="noopener">The Block ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">AFX Trade 的桥没有代码失效，五个热签名却足以搬空金库</h3>
-          <p class="item-b"><strong>事件</strong>：（链下权限攻击线，自 07-15，第 10 天）Arbitrum 上的永续 DEX AFX Trade 在 07-22 被转走约 2415 万 USDC，接近协议全部 TVL；攻击者随后跨到 Ethereum 并换成约 12467 ETH。</p><p class="item-b"><strong>机制</strong>：Arbitrum 原生桥和 AFX 桥合约都按设计运行，真正失守的是 AFX 自营桥的验证者私钥。攻击者控制五个热签名，达到约三分之二门槛，交易经过 200 秒争议期后被合约视为合法提款。</p><p class="item-b"><strong>二阶效应</strong>：继 Ostium 的预言机签名密钥后，第二家永续 DEX 在一周内因链下特权凭证而遭受接近全额金库损失。代码审计只能证明合约如何执行，不能证明谁在保管能够让合约执行的签名权。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>受损的是 AFX 自营托管桥，不是 Arbitrum 原生桥；AFX 称交易基础设施与主网未被攻破。</p>
+          <h3 class="item-h">AFX Trade reports bridge vault losses involving compromised signing authority</h3>
+          <p class="item-b"><strong>Event</strong>: On day ten of coverage since July 15, Arbitrum-based perpetuals exchange AFX Trade reported losses of about 24.15 million USDC on July 22, close to its entire TVL. The funds were subsequently converted to roughly 12,467 ETH.</p><p class="item-b"><strong>Mechanism</strong>: The Arbitrum native bridge and AFX bridge contract behaved as designed. The reported failure concerned the custody of AFX's own validator credentials.</p><p class="item-b"><strong>Second-order effects</strong>: After Ostium's oracle incident, AFX was the second perpetuals DEX in a week to suffer losses close to the value of an entire vault following a failure in offchain access controls. A contract audit alone cannot establish whether privileged signing credentials are held securely.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The incident affected AFX&#x27;s custodial bridge. The Arbitrum native bridge was unaffected. AFX said its trading infrastructure and mainnet were not compromised.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-22</span>
-            <a class="item-src" href="https://www.coindesk.com/tech/2026/07/23/arbitrum-based-afx-trade-drained-of-usd24-million-after-bridge-keys-compromised" target="_blank" rel="noopener">CoinDesk ↗</a><a class="item-src item-ref" href="https://www.theblock.co/post/409482/arbitrum-protocol-afx-trade-exploit" target="_blank" rel="noopener">补充：The Block · 07-22 ↗</a>
+            <a class="item-src" href="https://www.coindesk.com/tech/2026/07/23/arbitrum-based-afx-trade-drained-of-usd24-million-after-bridge-keys-compromised" target="_blank" rel="noopener">CoinDesk ↗</a><a class="item-src item-ref" href="https://www.theblock.co/post/409482/arbitrum-protocol-afx-trade-exploit" target="_blank" rel="noopener">Additional source: The Block · 07-22 ↗</a>
           </div>
         </article>
         </div>
@@ -131,12 +131,12 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">BitMEX 将在 9 月关停，永续发明者先进入只减仓再强制结算</h3>
-          <p class="item-b">BitMEX 07-23 宣布停止新用户注册，并将在 09-23 04:00 UTC 关闭交易所。平台从 08-26 起禁止开新仓，只允许减仓；此后会逐步强制平掉剩余仓位，低流动性合约还可能提前结算。</p><p class="item-b">这不是一次黑客事故或已披露的资不抵债事件，而是母公司战略评估后的有序退出。它说明即使产品机制被全行业采用，交易场所本身仍可能因流动性、分发与合规竞争退出；“如何关闭一个市场”因此也是衍生品产品规则的一部分。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>BitMEX 官方称储备超过负债且 11 年未因黑客损失用户资金；关停结论来自公司战略评估，而非已披露的偿付危机。</p>
+          <h3 class="item-h">BitMEX plans a September shutdown with reduce-only trading before mandatory settlement</h3>
+          <p class="item-b">BitMEX announced on July 23 that it had stopped accepting new registrations and would close the exchange on September 23 at 04:00 UTC. From August 26, traders could reduce positions but could not open new ones. Remaining positions would be closed in stages, and illiquid contracts could settle early.</p><p class="item-b">The parent company described an orderly exit following a strategic review. It disclosed no hack or insolvency. Even an exchange whose product design is widely adopted can face pressure from liquidity, distribution and compliance costs. Market closure rules therefore matter throughout a derivatives venue&#x27;s life.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>BitMEX said its reserves exceeded liabilities and that customers had lost no funds to hacking in 11 years. The closure followed a strategic review. The company did not report a solvency crisis.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-23</span>
-            <a class="item-src" href="https://www.bitmex.com/blog/bitmex-closure" target="_blank" rel="noopener">BitMEX ↗</a><a class="item-src item-ref" href="https://www.coindesk.com/markets/2026/07/23/bitmex-s-11-year-run-comes-to-an-end-notifies-users-it-is-ending-operations-in-by-sept-23" target="_blank" rel="noopener">补充：CoinDesk · 07-23 ↗</a>
+            <a class="item-src" href="https://www.bitmex.com/blog/bitmex-closure" target="_blank" rel="noopener">BitMEX ↗</a><a class="item-src item-ref" href="https://www.coindesk.com/markets/2026/07/23/bitmex-s-11-year-run-comes-to-an-end-notifies-users-it-is-ending-operations-in-by-sept-23" target="_blank" rel="noopener">Additional source: CoinDesk · 07-23 ↗</a>
           </div>
         </article>
         </div>
@@ -145,14 +145,14 @@
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <h2 class="sec-title">机会与打法</h2>
+            <h2 class="sec-title">Product opportunities</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">RWA 扩列：先看需求集中，不追求标的数量</h3>
-          <p class="item-b"><strong>好处</strong>：优先选择有现货参照、事件催化和现成分发入口的标的，更容易形成可持续价格发现和可解释的上线优先级。</p><p class="item-b"><strong>限制</strong>：事件型标的会制造高换手，但热度消退后未必留下稳定 OI；跨平台成交统计也不能直接映射到单一协议需求。</p>
+          <h3 class="item-h">Demand concentration matters more than listing count when adding real-world asset perpetuals</h3>
+          <p class="item-b"><strong>Benefits</strong>: A reliable spot reference, an identifiable catalyst and an existing distribution channel provide stronger grounds for a listing and for sustained price discovery.</p><p class="item-b"><strong>Limitations</strong>: Event-driven markets can produce high turnover without durable open interest. Cross-venue volume is not a direct measure of demand for any one protocol.</p>
 
           <div class="item-meta">
 
@@ -160,8 +160,8 @@
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">链下签名与桥：必须作为独立权限面审计</h3>
-          <p class="item-b"><strong>好处</strong>：把签名者、Keeper、价格发布者和跨链验证者分别建模，能看见合约审计之外的单点失守与权限组合风险。</p><p class="item-b"><strong>限制</strong>：提高签名门槛只会增加攻击成本；如果密钥都在线、由同一团队控制，更多签名者仍可能一起被攻破。</p>
+          <h3 class="item-h">Offchain signing authority warrants an independent review in bridge audits</h3>
+          <p class="item-b"><strong>Benefits</strong>: Reviewing the authority of signers, keepers, price publishers and bridge validators separately can reveal shared operational failures that contract audits alone miss.</p><p class="item-b"><strong>Limitations</strong>: A higher signing threshold offers limited independence when keys share the same online environment and operational ownership.</p>
 
           <div class="item-meta">
 
@@ -169,8 +169,8 @@
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">市场退场：需要只减仓与提前结算规则</h3>
-          <p class="item-b"><strong>好处</strong>：先进入只减仓，再按流动性分批结算，可以降低突然停市造成的仓位拥堵和价格跳变。</p><p class="item-b"><strong>限制</strong>：强制平仓仍会把流动性不足和时间窗口风险转给用户，规则透明不能消除实际损失。</p>
+          <h3 class="item-h">An orderly market exit requires reduce-only trading and early settlement rules</h3>
+          <p class="item-b"><strong>Benefits</strong>: Reduce-only trading followed by staged settlement can limit congestion and price gaps during a market closure.</p><p class="item-b"><strong>Limitations</strong>: Forced closure still leaves users exposed to limited liquidity and a fixed exit window. Clear rules cannot remove realized losses.</p>
 
           <div class="item-meta">
 
@@ -179,7 +179,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

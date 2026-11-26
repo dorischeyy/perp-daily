@@ -1,9 +1,9 @@
 {
-  "_comment": "渠道配置：交付层按此表把'标题+链接'发到每个 enabled 的渠道。加新渠道只改这里，不改代码。webhook 用 'env:VAR' 表示从环境变量读取，避免把密钥写进文件（已 gitignore channels.json）。",
+  "_comment": "Delivery sends the title and link to each enabled channel. Add channels here. Use env:VAR to reference an environment variable and keep webhook secrets outside the file.",
   "channels": [
     {
       "type": "feishu",
-      "name": "Perp 日报群",
+      "name": "Perp Daily group",
       "webhook": "env:FEISHU_WEBHOOK",
       "enabled": true
     },

@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-06-23</title>
+<title>Perp DEX Daily · 2026-06-23</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -40,7 +40,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品观察」做成醒目的主编批注卡片 */
+  /* Editorial analysis card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -68,26 +68,26 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 5 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 5</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 6 月 23 日 · 星期二</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">June 23, 2026 · Tuesday</div>
     </header>
-    <p class="lead">Coinbase 在被 CME 诉状点名的同一天上线 OpenAI 和 Anthropic Pre-IPO 永续合约，合规永续市场已从监管辩论进入「速度决定先机」的既成事实之战。</p>
+    <p class="lead">Coinbase launched pre-IPO perpetuals tied to OpenAI and Anthropic on the same day it was named in CME’s lawsuit. Trading venues are bringing products to market while the legal dispute over regulated perpetuals remains unresolved.</p>
     
       <section class="sec sec-perpdex">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <div class="sec-kicker">合规永续竞速</div>
+            <div class="sec-kicker">Competition in regulated perpetuals</div>
             <h2 class="sec-title">Perp DEX</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">Coinbase 被诉同日上线 OpenAI/Anthropic Pre-IPO 永续，AI 巨头 IPO 前定价权争夺正式开打</h3>
-          <p class="item-b"><strong>事件</strong>：6月22日 11:00 UTC，Coinbase Markets 上线 ANTHROPIC-PERP 和 OPENAI-PERP 两款 Pre-IPO 永续合约；Anthropic 已于6/1秘密提交 S-1（目标 Nasdaq，融资额预计超 $60 亿），OpenAI 于6/8提交 S-1（目标 Q4 上市），两款产品通过 Coinbase Bermuda 子公司路由，美国用户须等 7/21 本土合规产品线方可直接访问；与此同时，CME 6/18 提交的诉状明指 CFTC 批准了「Kalshi 和 Coinbase」的永续产品，Coinbase 同日成为监管博弈的焦点和市场入场的双重主角。</p><p class="item-b"><strong>机制</strong>：Pre-IPO perp 以私募市场隐含估值为指数参照，无实物股权交割，散户免去「合格投资者」门槛即可用杠杆建仓；参照 Hyperliquid HIP-3 的 SpaceX SPCX perp 在6/12 IPO 当天实现 $14 亿成交（占 HL 单日30%），验证了「临近上市流动性爆发」规律：Anthropic/OpenAI 若在 Q4 上市，届时 Pre-IPO perp 市场将迎来一次性的交易量高峰。</p><p class="item-b"><strong>二阶效应</strong>：AI IPO 浪潮将持续为 Pre-IPO perp 赛道供给新标的，Coinbase 的合规产品线与 Hyperliquid HIP-3 的 permissionless 路径正在围绕「AI 科技股 perp」展开入口之争；若 CME 初步禁令申请成功，Coinbase 和 Kalshi 合规产品均面临暂停风险，但先发平台积累的用户习惯和流动性将形成竞争护城河；整个「科技独角兽 Pre-IPO perp」细分市场在2026年下半年热度预计持续。</p>
+          <h3 class="item-h">Coinbase lists pre-IPO perpetuals on OpenAI and Anthropic while CME challenges U.S. perpetual listings</h3>
+          <p class="item-b"><strong>Event</strong>: Coinbase Markets launched ANTHROPIC-PERP and OPENAI-PERP at 11:00 UTC on June 22 through its Bermuda subsidiary. The report said Anthropic confidentially filed an S-1 on June 1 targeting Nasdaq and expected to raise more than $6 billion, while OpenAI filed on June 8 targeting a Q4 listing. U.S. users were due to gain direct access through a domestic product line on July 21. CME’s June 18 complaint expressly named CFTC approvals for both Kalshi and Coinbase.</p><p class="item-b"><strong>Mechanism</strong>: These contracts reference implied private-market valuations. They give traders leveraged price exposure without delivering shares. Hyperliquid’s HIP-3 SpaceX perpetual, SPCX, traded $1.4 billion on the June 12 IPO date, 30% of the venue’s daily volume. That example suggests a listing could concentrate trading in OpenAI or Anthropic perpetuals if either company went public in Q4.</p><p class="item-b"><strong>Second-order effects</strong>: Further AI listings could expand the market for pre-IPO perpetuals. Coinbase’s regulated product line and Hyperliquid’s permissionless HIP-3 markets compete for this flow through different routes. A preliminary injunction could interrupt Coinbase or Kalshi listings. Access, accumulated liquidity and user habits could influence where trading resumes. The edition expected interest in the sector to persist in the second half of 2026.</p>
           <div class="item-meta">
             <span class="item-date">2026-06-22</span>
             <a class="item-src" href="https://www.cryptotimes.io/2026/06/22/coinbase-brings-openai-anthropic-pre-ipo-futures-to-traders/" target="_blank" rel="noopener">CryptoTimes ↗</a>
@@ -99,23 +99,23 @@
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <div class="sec-kicker">安全与监管</div>
+            <div class="sec-kicker">Security and regulation</div>
             <h2 class="sec-title">Crypto</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">Taiko L2 因 SGX 私钥提交至 GitHub 被盗 $170 万，ETH 二层桥安全再亮红灯</h3>
-          <p class="item-b"><strong>事件</strong>：6月22日，Ethereum L2 网络 Taiko 遭遇桥攻击：攻击者利用意外上传至 GitHub 开源仓库的 Intel SGX enclave 私钥（Raiko 证明模块），伪造跨链提款证明盗走约 $170 万，团队数小时内发现后暂停出块并要求用户撤出所有桥接资金，TAIKO 代币当日跌逾20%触及历史低点。</p><p class="item-b"><strong>二阶效应</strong>：这是今年累计超 $3.4 亿桥安全事故中最新一例，根因是敏感密钥提交至公开代码库，属于基础研发流程失控而非协议层漏洞；链上基础设施的安全信任问题对任何依赖多链架构的 DeFi 协议都是持续的外部压力。</p>
+          <h3 class="item-h">Taiko reports a $1.7 million bridge loss involving compromised key material</h3>
+          <p class="item-b"><strong>Event</strong>: Taiko reported a bridge incident on June 22 that resulted in roughly $1.7 million in losses. The Ethereum layer-2 team detected the incident within hours, paused block production and told users to withdraw bridged funds. TAIKO fell more than 20% that day to a record low.</p><p class="item-b"><strong>Second-order effects</strong>: Bridge incidents had caused more than $340 million in reported losses that year. Taiko's investigation pointed to a failure in development controls. DeFi protocols operating across chains depend on the security practices of their bridge providers.</p>
           <div class="item-meta">
             <span class="item-date">2026-06-22</span>
             <a class="item-src" href="https://www.coindesk.com/tech/2026/06/22/taiko-halts-its-ethereum-layer-2-network-after-a-bridge-exploit-token-dives-10" target="_blank" rel="noopener">CoinDesk ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">英国央行6/22发布稳定币最终框架：单枚上限 £400 亿，废弃个人持有限额，2027年落地</h3>
-          <p class="item-b"><strong>事件</strong>：英国央行（BoE）6月22日发布《系统性稳定币监管政策声明》：单枚稳定币发行上限 £400 亿，储备资产中短债比例从60%放宽至70%，废除此前草案中的个人持有上限，征询意见期至9月22日，目标2027年正式实施，届时合规稳定币可在英国发行和流通。</p><p class="item-b"><strong>二阶效应</strong>：BoE 较前稿明显松绑，监管态度向「吸引合规发行方入场」倾斜；英镑计价的合规稳定币若2027年落地，为非美元抵押品衍生品市场打开通路，中长期有望推动以 GBP 为计价的 perp 保证金产品（待核实：具体实施路径仍需监管细则确认）。</p>
+          <h3 class="item-h">Bank of England&#x27;s June 22 stablecoin framework proposes a £40 billion cap per coin, drops individual holding limits and targets 2027 implementation</h3>
+          <p class="item-b"><strong>Event</strong>: The Bank of England issued a policy statement on systemic stablecoins on June 22. The proposal would cap issuance at £40 billion per stablecoin, raise the proportion of reserves allowed in short-term debt from 60% to 70%, and drop an earlier limit on individual holdings. Consultation runs through September 22. The Bank aims for implementation in 2027, after which qualifying stablecoins could circulate in the UK.</p><p class="item-b"><strong>Second-order effects</strong>: The revised proposal gives prospective issuers more room than the earlier draft. If implemented in 2027, sterling stablecoins could expand the choice of collateral for derivatives and eventually support GBP-denominated margin for perpetuals. The implementing rules would determine whether that is feasible.</p>
           <div class="item-meta">
             <span class="item-date">2026-06-22</span>
             <a class="item-src" href="https://www.bankofengland.co.uk/news/2026/june/boe-launches-policy-statement-and-draft-rules-on-regulating-systemic-stablecoins" target="_blank" rel="noopener">Bank of England ↗</a>
@@ -127,31 +127,31 @@
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <div class="sec-kicker">机会与打法</div>
-            <h2 class="sec-title">产品观察</h2>
+            <div class="sec-kicker">Product opportunities</div>
+            <h2 class="sec-title">Product observations</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">未上市科技公司的永续合约提供盘前价格参考</h3>
-          <p class="item-b">Coinbase 的 OpenAI/Anthropic Pre-IPO perp 上线，加上此前 Hyperliquid SPCX perp 在 SpaceX IPO 当天成交 $14 亿，清晰验证了「科技独角兽 IPO 前价格发现」是有真实需求的产品方向。</p>
+          <h3 class="item-h">Pre-IPO perpetuals offer an early price reference for privately held technology companies</h3>
+          <p class="item-b">Coinbase’s OpenAI and Anthropic pre-IPO contracts, together with the $1.4 billion traded in Hyperliquid’s SPCX perpetual on SpaceX’s IPO day, indicate demand for price discovery ahead of major technology listings.</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://www.cryptotimes.io/2026/06/22/coinbase-brings-openai-anthropic-pre-ipo-futures-to-traders/" target="_blank" rel="noopener">CryptoTimes ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">CME 诉讼期间的美国永续合约市场</h3>
-          <p class="item-b">CME 诉讼若按常规司法节奏拖延数月，Coinbase 和 Kalshi 的合规 perp 产品在此期间处于不确定状态，美国用户可达性存疑；链上 perp DEX 则不受这场 CME 对 CFTC 诉讼的直接约束，非美市场的交易者反而处于更低摩擦的环境。</p>
+          <h3 class="item-h">The U.S. perpetual futures market during CME’s lawsuit</h3>
+          <p class="item-b">If CME’s case takes several months, the legal position of Kalshi and Coinbase perpetual products, and access for U.S. users, could remain uncertain during that period. This particular lawsuit does not directly bind onchain exchanges serving eligible users outside the United States.</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://money.usnews.com/investing/news/articles/2026-06-18/cme-sues-us-cftc-over-letting-kalshi-coinbase-offer-perpetual-futures" target="_blank" rel="noopener">US News ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Taiko 跨链桥事故涉及密钥管理</h3>
-          <p class="item-b">Taiko 的 $170 万损失，根因是私钥提交到公开代码库，说明跨链桥的安全风险不仅来自协议层，也来自开发流程的任何一个弱环节；今年跨链桥事故损失已超 $3.4 亿。</p>
+          <h3 class="item-h">Taiko’s bridge incident raises questions about key management</h3>
+          <p class="item-b">Taiko’s $1.7 million loss highlights the operational risks of bridge key management, in addition to protocol-level risks. Reported bridge incident losses that year had already exceeded $340 million.</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://www.coindesk.com/tech/2026/06/22/taiko-halts-its-ethereum-layer-2-network-after-a-bridge-exploit-token-dives-10" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -159,7 +159,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

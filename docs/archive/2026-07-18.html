@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-07-18</title>
+<title>Perp DEX Daily · 2026-07-18</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 持续追踪：跨日叙事线的"当前进展地图" */
+  /* Ongoing coverage of developing stories */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -41,7 +41,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -52,7 +52,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「机会与打法」做成醒目的产品判断卡片 */
+  /* Product analysis card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -84,12 +84,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 27 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 27</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 7 月 18 日 · 星期六</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">July 18, 2026 · Saturday</div>
     </header>
-    <p class="lead">永续正在成为新资产的首发定价工具，但没有可信基准，全天交易只会把定价误差连续化。</p>
+    <p class="lead">Perpetuals are providing some new assets with their first market prices. Without a reliable benchmark, around-the-clock trading can carry pricing errors from one session into the next.</p>
 
 
       <section class="sec sec-perpdex">
@@ -102,21 +102,21 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">AI 算力先有了永续合约，CME 和 ICE 的传统期货仍在等审查</h3>
-          <p class="item-b"><strong>事件</strong>：（TradFi/RWA 永续规模化线，自 07-09，第 9 天）The Block 07-17 转引 Bernstein 确认，Bermuda 注册的 Architect AX 已上线以 GPU 租赁价格为标的的永续式算力期货；CME 与 ICE 计划在 2026 年末推出现金结算算力期货，但仍在等待 CFTC 审查。</p><p class="item-b"><strong>机制</strong>：算力无法像石油一样储存，闲置的一小时 GPU 容量会直接消失；AX 用永续合约和资金费率把现货指数锚进连续市场，让云服务商、AI 实验室和投机者围绕同一条价格曲线交易，而不是等待固定到期日。</p><p class="item-b"><strong>二阶效应</strong>：crypto 市场结构的优势是先把产品做出来，短板则是可信基准和真实套保深度；现有 GPU 价格多来自私下成交，AX 初期流动性也仍以投机为主，若指数不能覆盖足够多地区、型号与真实成交，24/7 交易只会放大一条脆弱基准。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>CME 合作方每日处理约 15 万条、覆盖 50 个地区的报价记录，但公开资料仍缺真实成交深度与套保用户占比。</p>
+          <h3 class="item-h">GPU rental perpetuals begin trading while CME and ICE compute futures await review</h3>
+          <p class="item-b"><strong>Event</strong>: The Block reported on July 17, citing Bernstein, that Bermuda-registered Architect AX had launched perpetual-style futures referencing GPU rental prices. CME and ICE were planning cash-settled compute futures for late 2026, subject to CFTC review. This was day nine of coverage since July 9.</p><p class="item-b"><strong>Mechanism</strong>: Unused GPU capacity for a given hour cannot be stored for later delivery. Architect AX uses funding payments to connect a perpetual price with a spot index, giving cloud providers, AI labs and speculators a common market without a fixed expiry.</p><p class="item-b"><strong>Second-order effects</strong>: A fast launch leaves questions about benchmark quality and hedging depth. Many GPU rental prices are privately negotiated, and early AX liquidity was mostly speculative. A 24/7 price is only as representative as the regions, hardware models and actual transactions captured by its index.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>CME’s partner processes about 150,000 price records a day across 50 regions. Public materials did not establish executable depth or the share of participants who were hedging.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-17</span>
             <a class="item-src" href="https://www.theblock.co/post/408758/crypto-style-derivatives-reach-ai-compute-ahead-of-planned-cme-and-ice-futures-bernstein" target="_blank" rel="noopener">The Block ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">CASHCAT 从高点回撤约 70%，薄现货市场让 3 倍杠杆也挡不住 60% 插针</h3>
-          <p class="item-b"><strong>事件</strong>：（Robinhood Chain 分发线，自 07-02，第 16 天）CASHCAT 从 07-11 约 0.228 美元高点跌至 07-17 约 0.05 至 0.065 美元，市值从约 2 亿美元降至约 6300 万美元；此前 Hyperliquid 上线该标的后，即使只开放 3 倍杠杆并强制逐仓，合约仍曾在数分钟内从 0.19 美元上方插针至约 0.08 美元，同期现货几乎未动。</p><p class="item-b"><strong>机制</strong>：当合约深度远薄于指数现货，少量强平就可能在衍生品订单簿里形成自我强化的瀑布；逐仓只能把损失隔离在单个仓位，无法替市场补充买盘或阻止标记价格短时脱离现货。</p><p class="item-b"><strong>二阶效应</strong>：permissionless 上新把标的覆盖速度推到极致，也把流动性准入、杠杆上限和异常价格保护变成产品责任；Robinhood Chain 的 meme 活跃度已经降温，Arcus 承诺的 35 个 RWA 永续仍未开放，分发入口并没有自动转化为可承载杠杆的市场质量。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>公开资料未披露插针期间的清算总额与订单簿深度；逐仓只证明风险被隔离，无法量化单市场最大损失。</p>
+          <h3 class="item-h">CASHCAT falls about 70% from its high as thin spot liquidity permits a 60% price wick despite a 3× leverage cap</h3>
+          <p class="item-b"><strong>Event</strong>: On day 16 of coverage since July 2, CASHCAT had fallen from about $0.228 on July 11 to roughly $0.05–$0.065 on July 17. Its market cap dropped from about $200 million to $63 million. After Hyperliquid listed it with isolated margin and a 3x leverage cap, its perpetual briefly fell from above $0.19 to about $0.08 within minutes while spot barely moved.</p><p class="item-b"><strong>Mechanism</strong>: When perpetuals liquidity is much thinner than the spot markets used for the index, a few liquidations can set off further selling in the derivatives order book. Isolated margin confines an individual position&#x27;s loss. It cannot supply bids or prevent a temporary divergence between mark and spot prices.</p><p class="item-b"><strong>Second-order effects</strong>: Permissionless listing speeds up asset coverage and makes liquidity criteria, leverage caps and abnormal-price safeguards important product decisions. Memecoin activity on Robinhood Chain had cooled, and Arcus&#x27;s 35 promised RWA perpetuals were still unavailable. Distribution alone had yet to produce markets deep enough for leverage.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Public sources give neither the total liquidated during the price spike nor the order-book depth at the time. Isolated margin confines risk to a position, but it does not quantify the maximum loss in a market.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-17</span>
-            <a class="item-src" href="https://crypto-economy.com/cashcat-memecoin-crashes-27-in-one-day/" target="_blank" rel="noopener">Crypto Economy ↗</a><a class="item-src item-ref" href="https://thedefiant.io/news/tokens/cashcat-falls-75-from-peak-after-hyperliquid-perp-listing" target="_blank" rel="noopener">补充：The Defiant · 07-13 ↗</a>
+            <a class="item-src" href="https://crypto-economy.com/cashcat-memecoin-crashes-27-in-one-day/" target="_blank" rel="noopener">Crypto Economy ↗</a><a class="item-src item-ref" href="https://thedefiant.io/news/tokens/cashcat-falls-75-from-peak-after-hyperliquid-perp-listing" target="_blank" rel="noopener">Additional source: The Defiant · 07-13 ↗</a>
           </div>
         </article>
         </div>
@@ -131,9 +131,9 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">代币化股票 90 天现货成交 18 亿美元，真正进入借贷市场的只有 2300 万美元</h3>
-          <p class="item-b">Token Terminal 07-16 数据显示，代币化股票 90 天链上现货成交约 18 亿美元，其中 QQQ 与 SPY 跟踪代币合计占约 81%；但作为借贷抵押品的规模只有 2310 万美元，且 xStocks、Solana、Kamino 在各自口径都占约 83% 至 87%。</p><p class="item-b">这组数据把『能交易』和『能成为资本』分开了：代币化股票已经有现货换手，但借贷抵押仍高度集中且只占 xStocks 约 3.3 亿美元总规模的低个位数百分比，距离可组合的链上资产类别还有明显距离。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>同为 DEX 现货，Uniswap 单个平台 30 天成交约 450 亿美元；代币化股票仍是小众交易场，抵押使用又低一个数量级。</p>
+          <h3 class="item-h">Tokenized stocks trade $1.8 billion in 90 days, with only $23 million entering lending markets</h3>
+          <p class="item-b">Token Terminal data on July 16 put 90-day onchain spot volume in stock tokens at about $1.8 billion, with tokens tracking QQQ and SPY accounting for roughly 81%. Only $23.1 million was being used as loan collateral. xStocks, Solana and Kamino each held about 83–87% in their respective categories.</p><p class="item-b">Stock tokens are changing hands on spot markets, but use as lending collateral is concentrated and amounts to a small single-digit percentage of xStocks&#x27; approximately $330 million total. Broader use across onchain financial applications remains limited.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Uniswap alone recorded about $45 billion in spot volume over 30 days. Tokenized equity trading is still a niche market, and its use as collateral is another order of magnitude smaller.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-16</span>
             <a class="item-src" href="https://thedefiant.io/news/defi/tokenized-stock-lending-tvl-reaches-23m-as-dex-volume-climbs" target="_blank" rel="noopener">The Defiant ↗</a>
@@ -145,14 +145,14 @@
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <h2 class="sec-title">机会与打法</h2>
+            <h2 class="sec-title">Product opportunities</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">GPU 算力报价的可比性</h3>
-          <p class="item-b">GPU 算力的报价随地区、芯片型号、租期与服务质量而变化，部分交易通过私下协商完成。用这类数据结算衍生品，先要解决指数样本的代表性和独立复核问题。</p>
+          <h3 class="item-h">What makes GPU compute quotes comparable</h3>
+          <p class="item-b">GPU quotes vary by region, chip model, rental term and service quality. Some transactions are private. A derivatives settlement index needs a representative sample that can be independently checked.</p>
 
           <div class="item-meta">
 
@@ -160,8 +160,8 @@
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">CASHCAT 案例中的薄市场流动性风险</h3>
-          <p class="item-b">在外部现货深度骤降时，隔离池能限制风险传染，但单边持仓和池内储备仍会影响平仓价格与 LP 退出。</p>
+          <h3 class="item-h">CASHCAT illustrates liquidity risk in a thin spot market</h3>
+          <p class="item-b">An isolated pool can contain contagion when external spot depth falls. One-sided positions and the reserves inside the pool still influence closing prices and LP exits.</p>
 
           <div class="item-meta">
 
@@ -170,7 +170,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

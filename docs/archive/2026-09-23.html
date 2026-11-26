@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-09-23</title>
+<title>Perp DEX Daily · 2026-09-23</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -82,12 +82,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 85 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 85</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 9 月 23 日 · 星期三</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">September 23, 2026 · Wednesday</div>
     </header>
-    <p class="lead">Jupiter以GUM订单簿扩列股票与加密永续，Pons从Robinhood Chain走进Bybit现货入口，Pyth则把Nasdaq Basic数据接入链上软件分发渠道。</p>
+    <p class="lead">Jupiter added equity and crypto perpetuals through its GUM order book. Pons gained access to Bybit’s spot market beyond Robinhood Chain, and Pyth added Nasdaq Basic data to its onchain software distribution channels.</p>
 
 
       <section class="sec sec-perpdex">
@@ -100,27 +100,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Jupiter用GUM订单簿扩列六个永续市场</h3>
-          <p class="item-b"><strong>事件</strong>：Jupiter于9月22日上线HYPE、ZEC、SPCX、SNDK、SKHYNIX和JUP六个永续市场，覆盖加密资产、未上市股权和上市股票代币。</p><p class="item-b"><strong>机制</strong>：新市场不用JLP池承担对手方风险，而是通过GUM中央限价订单簿撮合，用户仍从Solana钱包下单并由网络处理跨链结算。（TradFi/RWA永续线，自07-09，本次从预言机池模式推进到同一前端并行两套流动性引擎）</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>目前属于需质押69枚JUP的测试入口，团队尚未披露新订单簿的深度、成交、故障责任和跨链结算细节。</p>
+          <h3 class="item-h">Jupiter adds six perpetual markets through its GUM order book</h3>
+          <p class="item-b"><strong>Event</strong>: On September 22, Jupiter listed HYPE, ZEC, SPCX, SNDK, SKHYNIX and JUP perpetuals, spanning crypto assets, private-company equity exposure and listed equity tokens.</p><p class="item-b"><strong>Mechanism</strong>: The new markets match on the GUM central limit order book. The JLP pool does not take counterparty risk. Users submit orders from Solana wallets and the network handles cross-chain settlement. The traditional-asset perpetuals story tracked since July 9 now includes a single front end with two liquidity engines.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The beta requires a stake of 69 JUP. The team has yet to disclose the new order book’s depth or trading volume, who is responsible for failures, or how cross-chain settlement works.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-22</span>
             <a class="item-src" href="https://solanacompass.com/news/jupiter-perps-adds-six-markets-including-tokenized-spacex-hype-and-zec-via-gum-orderbook" target="_blank" rel="noopener">Solana Compass ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Binance把Moonshot AI搬进上市前永续</h3>
-          <p class="item-b"><strong>事件</strong>：Binance于9月22日上线北京月之暗面MOONSHOTUSDT上市前永续，按10亿股估算口径报价，提供全天交易和最高20倍杠杆。</p><p class="item-b"><strong>机制</strong>：IPO前缺少现货指数时，标记价取平台最近成交均值并限制每秒变动幅度；正式上市后再逐步收敛到第三方数据构成的标准TradFi永续指数。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>估算股数可能与最终发行结果不同，合约不代表股权，IPO后还可能调整合约规模和转换价格。</p>
+          <h3 class="item-h">Binance launches a Moonshot AI pre-IPO perpetual</h3>
+          <p class="item-b"><strong>Event</strong>: On September 22, Binance listed MOONSHOTUSDT premarket perpetuals linked to Beijing-based Moonshot AI. The contract uses an assumed one billion shares for its reference valuation, trades around the clock and offers up to 20× leverage.</p><p class="item-b"><strong>Mechanism</strong>: When there is no spot index before an IPO, the mark price is taken as the platform’s latest transaction value, with limits on fluctuations per second. After the official listing, the index will gradually converge to a standard TradFi perpetual index based on third-party data.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The estimated number of shares may differ from the final issuance result. Contracts do not represent ownership of shares. The contract size and conversion price may be adjusted after an IPO.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-22</span>
             <a class="item-src" href="https://www.binance.com/en/support/announcement/detail/7379b99aa0f349a49c3b3feca1b4bbd6" target="_blank" rel="noopener">Binance ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">莫斯科交易所上线五只加密永续</h3>
-          <p class="item-b"><strong>事件</strong>：莫斯科交易所于9月22日上线BTC、ETH、SOL、XRP和TRX指数永续，只向合格投资者开放并以卢布结算盈亏。</p><p class="item-b"><strong>机制</strong>：产品是每日结算后自动展期的现金结算期货，不交付加密资产，资金费参数与中央清算把连续敞口纳入本地受监管衍生品账户。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>交易所称既有数字资产期货已有逾7.2万名合格投资者参与，累计成交超过6000亿卢布，但未拆出本批新品的首日数据。</p>
+          <h3 class="item-h">Moscow Exchange lists five crypto perpetuals</h3>
+          <p class="item-b"><strong>Event</strong>: The Moscow Exchange launched perpetual indices for BTC, ETH, SOL, XRP, and TRX on September 22. These indices are only available to qualified investors, and profits and losses are settled in rubles.</p><p class="item-b"><strong>Mechanism</strong>: This product is a cash-settled futures contract that automatically expires after daily settlements. It does not involve the delivery of crypto assets. The funding payments are processed through central clearing systems, which incorporate continuous exposures into local regulated derivative accounts.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The exchange states that there are already over 72,000 qualified investors participating in digital asset futures, with total transactions exceeding 600 billion rubles. However, no data was available for the first day of the launch of this new product.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-22</span>
             <a class="item-src" href="https://www.moex.com/n104244?nt=106" target="_blank" rel="noopener">Moscow Exchange ↗</a>
@@ -138,27 +138,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Pons从链上发射台进入Bybit现货入口</h3>
-          <p class="item-b"><strong>事件</strong>：Bybit于9月22日上线PONS现货，并明确通过Robinhood Chain开放充提，把Pons从链内发射台扩展到中心化交易所分发。</p><p class="item-b"><strong>机制</strong>：Pons用联合曲线完成公平发射，毕业后锁定流动性；Bybit再提供现货、兑换和法币购买入口。（Robinhood分发线，自07-02，本次从链内费用领先推进到外部交易所承接）</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>Bybit引用Pons自7月以来逾70亿美元累计成交，但未给独立核验口径，也未披露上市带来的新增用户与留存。</p>
+          <h3 class="item-h">Pons moves from an onchain launchpad to Bybit’s spot market</h3>
+          <p class="item-b"><strong>Event</strong>: On September 22, Bybit launched PONS spot trading. The trading process is facilitated through the Robinhood Chain, allowing PONS to be distributed across both internal and centralized exchanges.</p><p class="item-b"><strong>Mechanism</strong>: Pons uses a bonding curve for fair launches and locks liquidity after graduation. Bybit adds spot trading, conversion and fiat purchases. External exchange distribution follows Pons’s lead in onchain fees in the Robinhood story tracked since July 2.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Bybit reports that Pons has accumulated over 7 billion USD in transactions since July. However, no independent verification data is provided, nor is any information disclosed regarding new users or retention rates resulting from the listing.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-22</span>
             <a class="item-src" href="https://announcements.bybit.com/en/article/bybit-to-list-pons-pons-on-spot--art9c05fc201aad/" target="_blank" rel="noopener">Bybit ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Jumper借Legion发售JUMP并独立运营</h3>
-          <p class="item-b"><strong>事件</strong>：Jumper于9月22日宣布从LI.FI拆分为独立公司，并计划通过Legion完成首轮JUMP代币销售。</p><p class="item-b"><strong>机制</strong>：项目先用跨链聚合积累用户，再把永续聚合、代币化股票和收益入口收进同一超级应用，代币销售为新公司补充所有权与增长工具。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>项目方称累计成交逾400亿美元、月活逾10万，但代币估值、分配、销售日期和永续聚合上线效果尚未披露。</p>
+          <h3 class="item-h">Jumper sells JUMP through Legion and begins operating independently</h3>
+          <p class="item-b"><strong>Event</strong>: On September 22nd, Jumper announced that it would split from LI.FI and become a separate company. It plans to complete its first round of JUMP token sales through Legion.</p><p class="item-b"><strong>Mechanism</strong>: The project first accumulates users through cross-chain aggregation, then integrates perpetual aggregation, tokenized stocks, and revenue streams into the same superapp. Token sales serve as tools for new companies to gain ownership and growth.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The project claims that cumulative transactions exceed 40 billion USD, with monthly active users exceeding 100,000. However, the token valuation, distribution, sales dates, and the effects of perpetual tokens on the platform have not been disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-22</span>
             <a class="item-src" href="https://www.globenewswire.com/news-release/2026/09/22/3366401/0/en/jumper-to-launch-jump-token-sale-on-legion-as-it-spins-out-to-build-the-super-app-for-onchain-finance.html" target="_blank" rel="noopener">Jumper ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Flap.sh发射量超过Pons和four.meme</h3>
-          <p class="item-b"><strong>事件</strong>：MemeFees在9月22日观察到逾9.2万次代币发射，pump.fun以至少3.23万次居首，Flap.sh以至少2.19万次升至第二。</p><p class="item-b"><strong>机制</strong>：Flap.sh通过链上工厂事件精确计数，单日发射量已超过Pons的9542次和four.meme的至少1.42万次，供给竞争开始从两强扩成多平台。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>带加号的平台数据只是可观察下限，发射数量也不等于毕业、成交或收入，不能据此判断真实资产质量。</p>
+          <h3 class="item-h">Flap.sh exceeds Pons and four.meme in launch count</h3>
+          <p class="item-b"><strong>Event</strong>: On September 22, MemeFees observed over 92,000 token issuances. Pump.fun ranked first with at least 32,300 issuances, followed by Flap.sh with at least 21,900 issuances.</p><p class="item-b"><strong>Mechanism</strong>: Flap.sh accurately counts launches through on-chain events. Daily launches have exceeded Pons’ 9542 launches and four.meme’s minimum of 14200 launches. Supply competition is expanding from two dominant platforms to multiple platforms.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>A plus sign marks an observed lower bound for a platform. Launch count measures neither graduations nor trading volume or revenue. It provides no direct evidence of asset quality.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-22</span>
             <a class="item-src" href="https://memefees.com/stats/launches" target="_blank" rel="noopener">MemeFees ↗</a>
@@ -176,27 +176,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Pyth成为Nasdaq Basic外部分发商</h3>
-          <p class="item-b"><strong>事件</strong>：Pyth于9月22日获批通过Data Marketplace分发Nasdaq Basic，把美国股票实时最优报价、成交和开收盘参考价接入软件与链上应用。</p><p class="item-b"><strong>机制</strong>：数据消费者仍需获得Nasdaq书面批准并直接许可数据，Pyth负责技术分发渠道，数据方保留归属与商业控制。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>Nasdaq Basic覆盖所有美国交易所上市证券，但公告没有说明哪些链上应用已获许可，也未承诺数据可直接公开上链。</p>
+          <h3 class="item-h">Pyth becomes an external distributor for Nasdaq Basic</h3>
+          <p class="item-b"><strong>Event</strong>: On September 22, Pyth was approved to distribute Nasdaq Basic through the Data Marketplace. This allows real-time optimal quotes, transactions, and opening/closing reference prices for U.S. stocks to be integrated into software and blockchain applications.</p><p class="item-b"><strong>Mechanism</strong>: Data consumers still need to obtain written approval from Nasdaq and receive direct permission for their data. Pyth is responsible for the technical distribution channels. The data providers retain ownership and control over their data.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Nasdaq Basic covers all securities listed on American exchanges. However, the announcement does not specify which blockchain applications have been authorized, nor does it promise that data can be directly published on the blockchain.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-22</span>
             <a class="item-src" href="https://www.pyth.network/blog/pyth-external-distributor-of-nasdaq-basic" target="_blank" rel="noopener">Pyth Network ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">SoFi把完整卡业务迁入稳定币结算</h3>
-          <p class="item-b"><strong>事件</strong>：SoFi与Mastercard于9月22日宣布SoFiUSD结算已在借记卡和信用卡业务上线，交易现已在链上运行。</p><p class="item-b"><strong>机制</strong>：商户无需持有稳定币或改造收款流程，SoFi Bank在后台用可按一比一赎回的SoFiUSD完成结算，再向商户提供银行账户内的即时资金。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>SoFi计划把年化逾250亿美元的完整卡业务迁入该结算模式，实际跨境覆盖、成本节省和链上网络分布尚未披露。</p>
+          <h3 class="item-h">SoFi moves its entire card business to stablecoin settlement</h3>
+          <p class="item-b"><strong>Event</strong>: On September 22, SoFi and Mastercard announced that SoFiUSD settlement has been launched in debit and credit card services. Transactions are now conducted on the blockchain.</p><p class="item-b"><strong>Mechanism</strong>: Merchants do not need to hold stablecoins or modify their payment processes. SoFi Bank uses SoFiUSD, which can be redeemed at a 1:1 ratio, for settlement. The merchant is then provided with immediate funds in their bank account.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>SoFi plans to migrate its entire card business, worth over $25 billion annually, to this settlement model. Details regarding actual cross-border coverage, cost savings, and network distribution on the blockchain have not been disclosed yet.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-22</span>
             <a class="item-src" href="https://investors.sofi.com/news/news-details/2026/SoFi-Becomes-First-National-Bank-to-Go-Live-with-Stablecoin-Settlement-across-Mastercards-Global-Payments-Network/default.aspx" target="_blank" rel="noopener">SoFi ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Solana在测试网切换Alpenglow共识</h3>
-          <p class="item-b"><strong>事件</strong>：Solana于9月22日在测试网激活Alpenglow，Votor共识把confirmed与finalized合并为同一确认状态，并停止Frankendancer测试网支持。</p><p class="item-b"><strong>机制</strong>：统一确认语义减少应用在两种终局状态之间自行判断的复杂度，但验证者需升级到兼容客户端，旧客户端不能继续参与测试网。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>当前只是测试网激活，Agave v4.4主网升级目标为11月9日，生产性能、客户端多样性和回退表现仍待验证。</p>
+          <h3 class="item-h">Solana switches to Alpenglow consensus on testnet</h3>
+          <p class="item-b"><strong>Event</strong>: Solana activated Alpenglow on testnet on September 22. Its Votor consensus merges confirmed and finalized into one confirmation state. Testnet support for Frankendancer ended.</p><p class="item-b"><strong>Mechanism</strong>: A single confirmation state removes the need for applications to distinguish between two levels of finality. Validators must upgrade to a compatible client to stay on testnet.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The activation applies only to testnet. Agave v4.4 is targeting November 9 for its mainnet upgrade. Production performance, client diversity and rollback behavior remain unverified.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-22</span>
             <a class="item-src" href="https://solanacompass.com/news/alpenglow-activates-on-solana-testnet-as-frankendancer-era-ends-agave-v44-schedule-targets-november-9-mainnet-activation" target="_blank" rel="noopener">Solana Compass ↗</a>
@@ -214,27 +214,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Anthropic用更低成本发布Opus 5.5</h3>
-          <p class="item-b"><strong>事件</strong>：Anthropic于9月22日发布Claude Opus 5.5，称典型任务成本较Opus 5低40%，输出速度提高逾30%。</p><p class="item-b"><strong>机制</strong>：模型用更少的调用和输出完成长时编码与知识工作，同时在动作执行前加入分类器，并开放可审计沙箱来约束长时间自主任务。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>性能与安全结论主要来自Anthropic和早期客户测试，不同模型的工具、努力档位与防护介入并不完全同口径。</p>
+          <h3 class="item-h">Anthropic releases Opus 5.5 at a lower cost</h3>
+          <p class="item-b"><strong>Event</strong>: On September 22, Anthropic released Claude Opus 5.5, claiming that the cost of typical tasks is 40% lower than with Opus 5, and the processing speed has increased by more than 30%.</p><p class="item-b"><strong>Mechanism</strong>: The model uses fewer calls and outputs to complete long-term coding and knowledge-based tasks. Additionally, classifiers are added before action execution, and an auditable sandbox is provided to constrain long-term autonomous tasks.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The conclusions regarding performance and security mainly come from tests conducted by Anthropic and early customers. The tools, effort levels, and protective measures used by different models are not completely consistent.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-22</span>
             <a class="item-src" href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener">Anthropic ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">阿里把AI芯片、云和手机Agent连成一套</h3>
-          <p class="item-b"><strong>事件</strong>：阿里云于9月22日公布全栈AI路线，涵盖自研高性能芯片、在训Qwen 4、Agent云和手机Agent平台。</p><p class="item-b"><strong>机制</strong>：公司把模型训练、推理硬件、云端编排与终端执行放进同一产品栈，希望减少不同供应商之间的算力与工具调用摩擦。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>Qwen 4仍在训练，目标规模为10万亿参数；芯片供货、模型发布日期和手机Agent的第三方应用覆盖尚未给出。</p>
+          <h3 class="item-h">Alibaba links its AI chips, cloud and mobile agent</h3>
+          <p class="item-b"><strong>Event</strong>: On September 22nd, Alibaba Cloud announced its full-stack AI strategy, which includes proprietary high-performance chips, trained Qwen 4, Agent Cloud, and mobile Agent platforms.</p><p class="item-b"><strong>Mechanism</strong>: The company has integrated model training, inference hardware, cloud orchestration, and terminal execution into the same product stack. This is aimed at reducing friction between different suppliers in terms of computing power and tool invocation.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Qwen 4 is still being trained, with a target of 10 trillion parameters. The dates for chip supply, model release, and third-party applications for mobile agents have not been announced yet.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-22</span>
             <a class="item-src" href="https://www.alibabacloud.com/en/press-room/alibaba-unveils-roadmap-on-full-stack-ai-strategy?_p_lc=1" target="_blank" rel="noopener">Alibaba Cloud ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">AWS把神经元启发优化带入视频模型</h3>
-          <p class="item-b"><strong>事件</strong>：The Biological Computing Co.与AWS于9月22日宣布，将把神经元测量衍生的软件优化层用于开源文生视频模型，并接入Trainium、SageMaker AI和AWS Marketplace。</p><p class="item-b"><strong>机制</strong>：该轻量软件层从真实神经元处理信息的方式提炼优化策略，但部署仍运行在传统硅基基础设施上，不要求客户接入生物硬件。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>公司称推理成本降低80%、生成速度提高5倍，但未公布基准模型、测试集、质量评审或第三方复现实验。</p>
+          <h3 class="item-h">AWS brings neuron-inspired optimization to video models</h3>
+          <p class="item-b"><strong>Event</strong>: The Biological Computing Co. and AWS announced on September 22 that they will optimize software derived from neuron measurements for open-source video generation models. This integration will be available through Trainium, SageMaker AI, and AWS Marketplace.</p><p class="item-b"><strong>Mechanism</strong>: This lightweight software layer optimizes strategies by mimicking how real neurons process information. However, it still operates on traditional silicon-based infrastructure, without requiring customers to use biological hardware.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The company claims that the reasoning cost has been reduced by 80%, and the generation speed has increased by a factor of 5. However, it has not disclosed any information regarding the benchmark model, test set, quality evaluation, or third-party reproduction experiments.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-22</span>
             <a class="item-src" href="https://press.aboutamazon.com/aws/2026/9/the-biological-computing-co-partners-with-aws-to-bring-worlds-first-neuron-derived-ai-video-model-to-market" target="_blank" rel="noopener">Amazon Web Services ↗</a>
@@ -242,7 +242,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

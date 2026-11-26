@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-11-24</title>
+<title>Perp DEX Daily · 2026-11-24</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Developments with a documented change */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -100,61 +100,61 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 141 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 141</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 11 月 24 日 · 星期二</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">November 24, 2026 · Tuesday</div>
     </header>
-    <p class="lead">TradFi链上入口正分成两条路径：OKXICE把真实证券权益带进美国许可AMM，Exchange OS则用虚拟SPY现货和永续测试活动型市场。</p>
+    <p class="lead">OKXICE opened a permissioned U.S. market for tokens backed by shares. Exchange OS is testing a different model with simulated SPY spot and perpetual markets available only during its trading competition.</p>
 
 
       <section class="sec sec-tradfi-access-and-market-design">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">TradFi入口与市场设计</h2>
+            <h2 class="sec-title">Traditional finance access and market design</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月23日，OKXICE向美国合格用户开放全天代币化证券交易</h3>
-          <p class="item-b">OKXICE于11月23日向完成身份验证和CeDeFi Wallet入驻的美国合格用户开放全天交易，113只股票、ETF和ETP将分批上线。每枚数字证券由底层股份1比1支持，并通过X Layer上的Uniswap v4许可池成交；场所依据SEC临时豁免运营，并非注册交易所。</p>
+          <h3 class="item-h">November 23: OKXICE opens round-the-clock trading in tokenized securities to eligible U.S. users</h3>
+          <p class="item-b">On November 23, OKXICE opened round-the-clock trading to eligible U.S. users who complete identity verification and set up a CeDeFi Wallet. It plans to list 113 stocks, ETFs and ETPs in stages. Each digital security is backed 1:1 by underlying shares and trades in a permissioned Uniswap v4 pool on X Layer. The venue operates under a temporary SEC exemption and is not a registered exchange.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.okx.com/learn/okxice-tsv-launch-going-live" target="_blank" rel="noopener" title="OKXICE全天证券交易上线公告 · 发布 2026-11-23" aria-label="来源 1：OKXICE全天证券交易上线公告 · 发布 2026-11-23">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.okx.com/learn/okxice-tsv-launch-going-live" target="_blank" rel="noopener" title="OKXICE announcement of round-the-clock securities trading · Published 2026-11-23" aria-label="Source 1: OKXICE announcement of round-the-clock securities trading · Published 2026-11-23">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月23日，OKX公布Season 3虚拟SPY现货与永续市场</h3>
-          <p class="item-b">OKX于11月23日宣布，Exchange OS将在11月24日上线Season 3专属虚拟SPY现货与永续，永续每小时结算资金费，活动外不可用。这把模拟资产、24/7合约和收益竞赛合成短周期实验，但公告没有披露指数生成、初始深度或活动结束后的结算规则。</p>
+          <h3 class="item-h">November 23: OKX announces simulated SPY spot and perpetual markets for Season 3</h3>
+          <p class="item-b">On November 23, OKX announced that Exchange OS would launch simulated SPY spot and perpetual markets on November 24, exclusively for Season 3. The perpetual settles funding hourly. The competition pairs a simulated asset and a 24/7 contract with a contest based on returns. OKX did not disclose how it would calculate the index, how much liquidity would be available at launch, or how it would settle positions after the event.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.okx.com/en-us/help/okx-to-list-exchange-os-perpetual-futures-for-ptspy" target="_blank" rel="noopener" title="OKX Exchange OS ptSPY永续公告 · 发布 2026-11-23" aria-label="来源 1：OKX Exchange OS ptSPY永续公告 · 发布 2026-11-23">1</a><a class="source-number" href="https://www.okx.com/en-us/help/okx-to-list-exchange-os-trading-pairs-for-ptspy" target="_blank" rel="noopener" title="OKX Exchange OS ptSPY现货公告 · 发布 2026-11-23" aria-label="来源 2：OKX Exchange OS ptSPY现货公告 · 发布 2026-11-23">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.okx.com/en-us/help/okx-to-list-exchange-os-perpetual-futures-for-ptspy" target="_blank" rel="noopener" title="OKX Exchange OS ptSPY perpetual listing · Published 2026-11-23" aria-label="Source 1: OKX Exchange OS ptSPY perpetual listing · Published 2026-11-23">1</a><a class="source-number" href="https://www.okx.com/en-us/help/okx-to-list-exchange-os-trading-pairs-for-ptspy" target="_blank" rel="noopener" title="OKX Exchange OS ptSPY spot listing · Published 2026-11-23" aria-label="Source 2: OKX Exchange OS ptSPY spot listing · Published 2026-11-23">2</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Avantis零费永续只从盈利交易中分成</h3>
-          <p class="item-b">Avantis零费永续不收开平仓和借款费，仅在盈利平仓时按收益分成，亏损交易仍承担价格损失和动态点差；该模式目前面向BTC、ETH和SOL的75至250倍仓位。用户少付持仓成本的同时，也被推向更高最低杠杆。</p>
+          <h3 class="item-h">Avantis takes a share of profits on its zero-fee perpetuals</h3>
+          <p class="item-b">Avantis charges no opening, closing or borrowing fees on its zero-fee perpetuals. It takes a share of profits only when a trader closes a winning position. Losing trades still incur price losses and face a dynamic spread. The product currently supports BTC, ETH and SOL positions at 75x to 250x leverage. Traders save on holding costs but face a higher minimum leverage.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://docs.avantisfi.com/trading/zero-fee-perpetuals-zfp" target="_blank" rel="noopener" title="Avantis零费永续说明 · 未标发布日期 · 核验 2026-11-24" aria-label="来源 1：Avantis零费永续说明 · 未标发布日期 · 核验 2026-11-24">1</a><a class="source-number" href="https://docs.avantisfi.com/trading/zero-fee-perpetuals-zfp/fee-structure-and-comparison" target="_blank" rel="noopener" title="Avantis零费与固定费率比较 · 未标发布日期 · 核验 2026-11-24" aria-label="来源 2：Avantis零费与固定费率比较 · 未标发布日期 · 核验 2026-11-24">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://docs.avantisfi.com/trading/zero-fee-perpetuals-zfp" target="_blank" rel="noopener" title="Avantis documentation on zero-fee perpetuals · Publication date unknown · Verified 2026-11-24" aria-label="Source 1: Avantis documentation on zero-fee perpetuals · Publication date unknown · Verified 2026-11-24">1</a><a class="source-number" href="https://docs.avantisfi.com/trading/zero-fee-perpetuals-zfp/fee-structure-and-comparison" target="_blank" rel="noopener" title="Avantis comparison of zero-fee and fixed-fee trading · Publication date unknown · Verified 2026-11-24" aria-label="Source 2: Avantis comparison of zero-fee and fixed-fee trading · Publication date unknown · Verified 2026-11-24">2</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Drift用JIT竞价、链上限价单和AMM分层承接订单</h3>
-          <p class="item-b">Drift的市价或可成交限价单先进入约五秒JIT竞价，做市商报价不足时再由AMM承接；链上限价单由Keeper监控撮合。当前保证金规则还限制单仓未实现盈利最多100美元可计入新开仓抵押，避免薄市场账面盈利放大跨仓风险。</p>
+          <h3 class="item-h">Drift routes orders through JIT auctions, onchain limit orders and an AMM</h3>
+          <p class="item-b">Market orders and immediately executable limit orders first enter a just-in-time auction lasting about five seconds. The automated market maker fills remaining demand if market makers provide insufficient quotes. Keepers monitor and match onchain limit orders. Under current margin rules, at most $100 of unrealized profit from any one position can back a new position, limiting the risk that paper gains in thin markets create across positions.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.drift.trade/updates/spot-trading" target="_blank" rel="noopener" title="Drift现货与JIT竞价说明 · 发布 2023-02-21 · 核验 2026-11-24" aria-label="来源 1：Drift现货与JIT竞价说明 · 发布 2023-02-21 · 核验 2026-11-24">1</a><a class="source-number" href="https://docs.drift.trade/protocol/trading/margin" target="_blank" rel="noopener" title="Drift保证金要求 · 未标发布日期 · 核验 2026-11-24" aria-label="来源 2：Drift保证金要求 · 未标发布日期 · 核验 2026-11-24">2</a><a class="source-number" href="https://docs.drift.trade/protocol/about-v3/keepers/keeper-incentives" target="_blank" rel="noopener" title="Drift Keeper激励规则 · 未标发布日期 · 核验 2026-11-24" aria-label="来源 3：Drift Keeper激励规则 · 未标发布日期 · 核验 2026-11-24">3</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.drift.trade/updates/spot-trading" target="_blank" rel="noopener" title="Drift guide to spot trading and JIT auctions · Published 2023-02-21 · Verified 2026-11-24" aria-label="Source 1: Drift guide to spot trading and JIT auctions · Published 2023-02-21 · Verified 2026-11-24">1</a><a class="source-number" href="https://docs.drift.trade/protocol/trading/margin" target="_blank" rel="noopener" title="Drift margin requirements · Publication date unknown · Verified 2026-11-24" aria-label="Source 2: Drift margin requirements · Publication date unknown · Verified 2026-11-24">2</a><a class="source-number" href="https://docs.drift.trade/protocol/about-v3/keepers/keeper-incentives" target="_blank" rel="noopener" title="Drift Keeper incentives · Publication date unknown · Verified 2026-11-24" aria-label="Source 3: Drift Keeper incentives · Publication date unknown · Verified 2026-11-24">3</a>
           </div>
         </article>
         </div>
@@ -169,38 +169,38 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月23日，GPT-6.2开始进入ChatGPT聊天页</h3>
-          <p class="item-b">OpenAI于11月23日把面向聊天的GPT-6.2推向Plus、Pro、Business与Enterprise；图像理解内测由47.4%升至71.7%，复杂指令从62.5%升至78.1%。更新只适用于Chat，Work与Codex模型不变，Enterprise仍受管理员设置控制。</p>
+          <h3 class="item-h">November 23: OpenAI begins rolling out GPT-6.2 in ChatGPT Chat</h3>
+          <p class="item-b">On November 23, OpenAI began rolling out GPT-6.2 for Chat to Plus, Pro, Business and Enterprise users. In internal evaluations, its image-understanding score rose from 47.4% to 71.7%, and its complex-instruction score rose from 62.5% to 78.1%. The update applies only to Chat. Work and Codex retain their existing models, and Enterprise access remains subject to administrator settings.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener" title="ChatGPT发布说明 · 发布 2026-11-23" aria-label="来源 1：ChatGPT发布说明 · 发布 2026-11-23">1</a><a class="source-number" href="https://deploymentsafety.openai.com/gpt-6-2-chatgpt/realtime-model-safeguards" target="_blank" rel="noopener" title="GPT-6.2 Chat系统卡 · 发布 2026-11-23" aria-label="来源 2：GPT-6.2 Chat系统卡 · 发布 2026-11-23">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener" title="ChatGPT release notes · Published 2026-11-23" aria-label="Source 1: ChatGPT release notes · Published 2026-11-23">1</a><a class="source-number" href="https://deploymentsafety.openai.com/gpt-6-2-chatgpt/realtime-model-safeguards" target="_blank" rel="noopener" title="GPT-6.2 Chat system card · Published 2026-11-23" aria-label="Source 2: GPT-6.2 Chat system card · Published 2026-11-23">2</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月23日，OpenAI与Cisco开源Linux临时防护运行时Shirudo</h3>
-          <p class="item-b">OpenAI与Cisco于11月23日开源Shirudo，用eBPF在Linux服务不中断时加载临时防护；防护需签名验证，并可用TPM记录加载或移除。Java4Shell受控测试成功阻断攻击，但项目仍处于邀请开发者共同完善的早期阶段，不能替代永久补丁。</p>
+          <h3 class="item-h">November 23: OpenAI and Cisco open-source Shirudo for temporary Linux protections</h3>
+          <p class="item-b">On November 23, OpenAI and Cisco released Shirudo, an open-source runtime that uses eBPF to load temporary protections without interrupting Linux services. Protections require signature verification. Operators can use a Trusted Platform Module (TPM) to record when protections are loaded or removed. Shirudo blocked an attack in a controlled Java4Shell test. The early-stage project is inviting developer contributions and still requires a permanent patch for the underlying vulnerability.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/introducing-shirudo/" target="_blank" rel="noopener" title="OpenAI与Cisco Shirudo发布说明 · 发布 2026-11-23" aria-label="来源 1：OpenAI与Cisco Shirudo发布说明 · 发布 2026-11-23">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://openai.com/index/introducing-shirudo/" target="_blank" rel="noopener" title="OpenAI and Cisco announcement of Shirudo · Published 2026-11-23" aria-label="Source 1: OpenAI and Cisco announcement of Shirudo · Published 2026-11-23">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月23日，Qwen上线可在后台任务期间持续对话的实时语音模型</h3>
-          <p class="item-b">QwenCloud于11月23日上线qwen-audio-3.1-live，语音模型可在后台模型或应用执行任务时继续与用户对话，并在结果就绪后播报。此次更新减少长任务语音空窗，但变更日志未给出价格、延迟、并发或地区范围，生产选型仍需实测。</p>
+          <h3 class="item-h">November 23: Qwen launches a live voice model that keeps talking while background tasks run</h3>
+          <p class="item-b">On November 23, QwenCloud launched qwen-audio-3.1-live. The model can continue a conversation while another model or application works in the background, then speak the result when it is ready. This shortens silent periods during long tasks. The changelog gives no pricing, latency figures, concurrency limits or regional availability, leaving teams to test whether the model meets their production needs.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://docs.qwencloud.com/changelog/models" target="_blank" rel="noopener" title="QwenCloud模型更新记录 · 发布 2026-11-23" aria-label="来源 1：QwenCloud模型更新记录 · 发布 2026-11-23">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://docs.qwencloud.com/changelog/models" target="_blank" rel="noopener" title="QwenCloud model changelog · Published 2026-11-23" aria-label="Source 1: QwenCloud model changelog · Published 2026-11-23">1</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

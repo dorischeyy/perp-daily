@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-08-12</title>
+<title>Perp DEX Daily · 2026-08-12</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 48 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 48</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 8 月 12 日 · 星期三</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">August 12, 2026 · Wednesday</div>
     </header>
-    <p class="lead">永续场所成交从前日脉冲回落而 OI 仍稳定，CFTC 同时把预测市场联邦优先权争议升级为紧急监管行动，产品重点转向持续容量与司法冲突管理。</p>
+    <p class="lead">Volume at perpetual venues fell back after the previous day’s surge, while open interest held steady. The CFTC escalated its federal-preemption dispute over prediction markets into emergency regulatory action.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,32 +110,32 @@
 
         <article class="item">
 
-          <h3 class="item-h">三大永续场所日成交回落约 11%，OI 仍增 0.4%</h3>
-          <p class="item-b"><strong>事件</strong>：8 月 12 日远端快照中，Binance、Gate 与 Hyperliquid 合计日成交由前一日约 950074 BTC 降至 849462 BTC，回落约 10.6%；合计 OI 由 771061 BTC 增至 774435 BTC，增长约 0.4%。</p><p class="item-b"><strong>机制</strong>：成交在前一日脉冲后回落，但仓位存量没有同步撤出，说明市场从快速换手转入持仓消化阶段，而不是杠杆头寸全面收缩。</p><p class="item-b"><strong>二阶效应</strong>：容量判断应同时观察流量峰值后的 OI 留存与资产级退出深度，单日成交回落不应自动触发仓位上限收紧。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>数据是 CoinGecko 场所级 BTC 汇总截面，不含资产构成、激励成交、价差和可执行深度，只用于识别方向。</p>
+          <h3 class="item-h">Daily volume falls about 11% at three perpetual venues while open interest rises 0.4%</h3>
+          <p class="item-b"><strong>Event</strong>: In the August 12 snapshot, combined daily volume at Binance, Gate and Hyperliquid fell from about 950,074 BTC to 849,462 BTC, down 10.6%. Open interest rose from 771,061 BTC to 774,435 BTC, up about 0.4%.</p><p class="item-b"><strong>Mechanism</strong>: Volume eased after the previous day’s surge without a corresponding withdrawal of outstanding positions. The figures are consistent with a shift from rapid turnover toward a period of holding existing exposure.</p><p class="item-b"><strong>Second-order effects</strong>: Capacity assessments can compare retained open interest after a volume spike with the depth available to exit individual positions. A one-day fall in turnover alone does not justify tightening limits.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>These are BTC-denominated CoinGecko aggregates. They omit asset composition, incentive-driven activity, spreads and executable depth.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-12</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/9a5479488bd5ac2a78e7c8659f9a188b66c87c1d/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/e678eee757e02846107f9cb1147d0a0c86cfa08a/docs/market.json" target="_blank" rel="noopener">补充：前一日市场快照 · 08-11 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/9a5479488bd5ac2a78e7c8659f9a188b66c87c1d/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/e678eee757e02846107f9cb1147d0a0c86cfa08a/docs/market.json" target="_blank" rel="noopener">Additional source: Previous day&#x27;s market snapshot · 08-11 ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">Hyperliquid 的 OI 与日成交比升至 2.10，持仓周转再度放慢</h3>
-          <p class="item-b"><strong>事件</strong>：Hyperliquid 日成交由 101031 BTC 降至 84059 BTC，OI 由 174866 BTC 增至 176494 BTC，OI 与日成交比由约 1.73 升至 2.10；Bybit 同期比值由约 1.05 升至 1.14。</p><p class="item-b"><strong>机制</strong>：两家场所都出现成交回落和 OI 留存，但 Hyperliquid 的比值上升更快，前一日相对周转改善没有延续为同等强度的流量。</p><p class="item-b"><strong>二阶效应</strong>：链上场所的高 OI 需要用滚动周转和盘口深度共同解释，短时成交追平 CEX 不能替代持续退出能力验证。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>Hyperliquid 当日比值约为 Bybit 的 1.84 倍，高于前一日约 1.64 倍；比值越高只表示存量相对换手更慢。</p>
+          <h3 class="item-h">Hyperliquid’s open-interest-to-daily-volume ratio rises to 2.10 as turnover slows</h3>
+          <p class="item-b"><strong>Event</strong>: Hyperliquid’s daily volume fell from 101,031 BTC to 84,059 BTC, while open interest rose from 174,866 BTC to 176,494 BTC. Its open-interest-to-volume ratio rose from about 1.73 to 2.10. Bybit’s ratio rose from 1.05 to 1.14.</p><p class="item-b"><strong>Mechanism</strong>: Both venues retained open positions as volume declined. Hyperliquid’s ratio rose faster, so the previous day’s relative improvement in turnover did not carry over at the same strength.</p><p class="item-b"><strong>Second-order effects</strong>: Rolling turnover and order-book depth help interpret high open interest onchain. Briefly matching a centralized venue’s volume does not demonstrate that traders can consistently exit positions.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Hyperliquid&#x27;s ratio was about 1.84 times Bybit&#x27;s that day, up from roughly 1.64 the day before. A higher ratio indicates slower turnover relative to outstanding positions.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-12</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/9a5479488bd5ac2a78e7c8659f9a188b66c87c1d/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/e678eee757e02846107f9cb1147d0a0c86cfa08a/docs/market.json" target="_blank" rel="noopener">补充：前一日市场快照 · 08-11 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/9a5479488bd5ac2a78e7c8659f9a188b66c87c1d/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/e678eee757e02846107f9cb1147d0a0c86cfa08a/docs/market.json" target="_blank" rel="noopener">Additional source: Previous day&#x27;s market snapshot · 08-11 ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">BYDFi 连续三日周转异常，OI 与日成交比反升至 28.15</h3>
-          <p class="item-b"><strong>事件</strong>：BYDFi 日成交由 4456 BTC 降至 4135 BTC，OI 由 114317 BTC 增至 116402 BTC，OI 与日成交比由约 25.7 升至 28.15，连续第三日远高于主要场所。</p><p class="item-b"><strong>机制</strong>：异常没有随市场总体成交回落而收敛，且 OI 继续增加，场所上报范围、同步口径或长周期持仓结构仍需资产级数据验证。</p><p class="item-b"><strong>二阶效应</strong>：连续异常应保持隔离状态，直到交易对深度、仓位集中度和数据来源能够交叉核对，不能用平台汇总值标定容量。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>连续三日异常提高数据隔离置信度，但仍不能据此断言虚假 OI、操纵或真实流动性枯竭。</p>
+          <h3 class="item-h">BYDFi’s open-interest-to-volume ratio rises to 28.15 on a third day of unusual turnover</h3>
+          <p class="item-b"><strong>Event</strong>: BYDFi’s daily volume fell from 4,456 BTC to 4,135 BTC and open interest rose from 114,317 BTC to 116,402 BTC. Its open-interest-to-volume ratio rose from about 25.7 to 28.15, far above the major venues for a third day.</p><p class="item-b"><strong>Mechanism</strong>: The anomaly persisted as market-wide volume fell and BYDFi’s open interest continued to rise. Asset-level data are needed to distinguish venue reporting scope and synchronization from a genuinely longer holding period.</p><p class="item-b"><strong>Second-order effects</strong>: Until pair-level depth, position concentration and data sources can be cross-checked, repeated outliers should remain outside capacity estimates. The venue aggregate alone cannot calibrate them.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Three consecutive days of unusual readings strengthen the case for analyzing the data separately. They do not establish false open interest, manipulation, or an actual collapse in liquidity.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-12</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/9a5479488bd5ac2a78e7c8659f9a188b66c87c1d/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/e678eee757e02846107f9cb1147d0a0c86cfa08a/docs/market.json" target="_blank" rel="noopener">补充：前一日市场快照 · 08-11 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/9a5479488bd5ac2a78e7c8659f9a188b66c87c1d/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/e678eee757e02846107f9cb1147d0a0c86cfa08a/docs/market.json" target="_blank" rel="noopener">Additional source: Previous day&#x27;s market snapshot · 08-11 ↗</a>
           </div>
         </article>
         </div>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">River AI 成立两个月融资 11 亿美元，直接重建个人 Agent 全栈</h3>
-          <p class="item-b">River AI 完成 11 亿美元种子轮与 A 轮融资，资金来自 General Catalyst、AMP、Nvidia、AMD Ventures、YC 与淡马锡；公司已提供可对开放模型执行强化学习和 LoRA 微调的 API。</p><p class="item-b">团队希望同时重建训练、模型、产品和本地硬件，让用户拥有可持续训练的个人 Agent；目前公开证据仍是 API 和公司口径，尚未证明端到端个人硬件或规模采用。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>11 亿美元对成立两个月的公司属于超大早期轮；已上线 API，但个人硬件和完整 Agent 栈仍是路线图。</p>
+          <h3 class="item-h">River AI raises $1.1 billion two months after founding to build a personal agent stack</h3>
+          <p class="item-b">River AI raised $1.1 billion across seed and Series A rounds from General Catalyst, AMP, Nvidia, AMD Ventures, Y Combinator and Temasek. Its API already supports reinforcement learning and LoRA fine-tuning of open models.</p><p class="item-b">The team aims to develop training, models, products and local hardware together so users can own personal agents that keep learning. Available evidence consists of the API and company statements. End-to-end personal hardware and adoption at scale remain unproven.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The $1.1 billion round is unusually large for a two-month-old company. Its API is live. Personal hardware and the full agent stack remain on the roadmap.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-11</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/11/general-catalyst-leads-1-1b-round-into-2-month-old-river-ai/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Kyoto Fusioneering 开建聚变燃料增殖原型，供应链先于反应堆商业化</h3>
-          <p class="item-b">Kyoto Fusioneering 获美国能源部与田纳西州资助，在 Oak Ridge 建设 Unity-3 燃料增殖装置，并把美国总部迁至当地；该装置将测试液态锂等包层材料。</p><p class="item-b">超过一半聚变初创计划外购燃料循环技术，使关键部件供应商可以在反应堆并网前形成跨项目验证入口，但 Unity-3 仍是原型测试，不是发电资产。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>公司累计承诺资本约 1.21 亿美元；本次新增是资助、原型和测试场地，不代表聚变电站已商业运行。</p>
+          <h3 class="item-h">Kyoto Fusioneering begins building a fusion fuel-breeding prototype ahead of reactor commercialization</h3>
+          <p class="item-b">Kyoto Fusioneering received funding from the U.S. Department of Energy and Tennessee to build its Unity-3 fuel breeding facility in Oak Ridge, where it is moving its U.S. headquarters. The facility will test blanket materials including liquid lithium.</p><p class="item-b">More than half of fusion startups plan to source fuel-cycle technology externally, giving component suppliers opportunities to qualify across projects before reactors connect to the grid. Unity-3 is a prototype test facility and does not generate power.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The company has secured about $121 million in capital commitments to date. The update covers funding, a prototype, and a test site. A fusion power plant is not yet in commercial operation.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-11</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/11/kyoto-fusioneering-starts-work-on-key-fusion-power-plant-device/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Phia 被指长期劫持联盟归因，增长渠道收入开始逆转与合规清算</h3>
-          <p class="item-b">新披露显示 Phia 管理层早在去年 12 月已知 cookie stuffing，相关功能可主动开关；停止后公司日收入明显下降，并涉及 Nike、Nordstrom 等零售商。</p><p class="item-b">Phia 表示已在 7 月 7 日移除错误归因功能、逐笔复核并向品牌方冲正，同时招聘合规负责人；事件表明渠道增长若依赖不可审计归因，收入质量会在平台追责时快速反转。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>报道未披露被错配交易额或冲正总额；当前可确认的是功能被移除、收入下降和全面交易复核。</p>
+          <h3 class="item-h">Phia faces allegations of affiliate attribution misuse, with revenue reversals and compliance proceedings</h3>
+          <p class="item-b">New disclosures indicated that Phia management knew of cookie stuffing as early as the previous December and that the feature could be switched on and off. Daily revenue fell sharply after it stopped. Affected retailers included Nike and Nordstrom.</p><p class="item-b">Phia said it removed the misattribution feature on July 7, reviewed transactions individually, reversed improper charges to brands and began hiring a compliance lead. Revenue attributed to a distribution channel can unwind quickly when its attribution cannot withstand an audit.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The report did not quantify the misallocated trades or reversals. It confirms removal of the feature, a decline in revenue, and a review of all trades.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-11</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/11/phoebe-gates-and-sophia-kianni-reportedly-knew-phia-was-cookie-stuffing-for-months/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">CFTC 要求 Kalshi 继续在纽约运营，联邦与州监管正面冲突</h3>
-          <p class="item-b">CFTC 动用紧急权限，要求 Kalshi 在纽约州诉讼期间继续提供预测市场；纽约则主张体育事件合约违反州赌博法，双方同时争夺案件应由州法院还是联邦法院审理。</p><p class="item-b">监管动作维持了产品可用性，却没有解决最终管辖权；场所可能同时面对联邦继续运营命令与州级执法，合规风险由准入问题升级为相互冲突的执行义务。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>命令只维持纽约市场运营，不是联邦优先权的最终判决；移送联邦法院与发回州法院的动议仍待裁定。</p>
+          <h3 class="item-h">CFTC directs Kalshi to keep operating in New York amid a federal-state jurisdictional conflict</h3>
+          <p class="item-b">The CFTC used emergency authority to direct Kalshi to continue offering prediction markets while New York’s litigation proceeds. New York contends that sports event contracts violate state gambling law. The parties also dispute whether the case belongs in state or federal court.</p><p class="item-b">The order keeps the product available while jurisdiction remains unresolved. A venue could face a federal instruction to continue operating alongside state enforcement, creating potentially conflicting obligations beyond the original market-access question.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The order preserves operations in New York. It does not resolve federal preemption. Motions to remove the case to federal court and to remand it to state court remain pending.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-11</span>
             <a class="item-src" href="https://www.coindesk.com/policy/2026/08/11/cftc-orders-kalshi-to-continue-offering-prediction-markets-in-new-york-after-state-lawsuit" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -202,9 +202,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Itaú 加入巴西代币化债券与基金试点，银行开始测试全流程标准</h3>
-          <p class="item-b">拉美资产规模最大的银行 Itaú 与 OpenAssets 加入 ANBIMA 试点，测试固定收益证券和基金在分布式账本上的发行、交易与结算，并同步研究银行采用所需规则和技术标准。</p><p class="item-b">与单一代币发行相比，银行、资管与行业协会共同测试全流程更接近生产基础设施，但当前仍是受控试点，没有披露真实发行规模、二级流动性或上线时间。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>Itaú 总资产超过 5620 亿美元，为试点提供机构分量；该数字不是本次代币化资产规模。</p>
+          <h3 class="item-h">Itaú joins a Brazilian tokenized bond and fund pilot spanning the full transaction lifecycle</h3>
+          <p class="item-b">Itaú, Latin America’s largest bank by assets, and OpenAssets joined an ANBIMA pilot to test issuance, trading and settlement of fixed-income securities and funds on distributed ledgers. Participants will also examine the rules and technical standards banks would need.</p><p class="item-b">Testing the full lifecycle across banks, asset managers and an industry association is closer to production infrastructure than issuing a single token. The pilot remains controlled. It disclosed no actual issuance, secondary-market liquidity or launch date.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Itaú&#x27;s assets exceed $562 billion, which establishes the scale of the pilot participant. The figure is not the value of assets tokenized in this pilot.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-11</span>
             <a class="item-src" href="https://www.coindesk.com/business/2026/08/11/brazil-s-largest-lender-itau-is-stepping-deeper-into-the-tokenization" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Ravencoin 准备回滚四天交易，矿池集中把最终性风险外溢给交易所</h3>
-          <p class="item-b">Ravencoin 在 8 月 7 日出现首个无效区块后发布修复，但两大矿池正从攻击前区块重建替代链，可能抹去四天内已确认的付款、充值和提现。</p><p class="item-b">补丁能阻止新无效区块，却不能消除历史分叉；当多数算力集中在少数矿池时，链上最终性由矿池选择决定，已入账资产的损失会转移给交易所和收款方。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>Bitvavo 与 Upbit 已暂停充值提现；公开信息尚未给出被回滚交易总额，风险窗口从区块 4487776 开始。</p>
+          <h3 class="item-h">Ravencoin prepares a four-day rollback, raising finality questions for exchanges</h3>
+          <p class="item-b">Ravencoin released a fix after its first invalid block on August 7. Two major mining pools were rebuilding an alternative chain from the last pre-incident block, potentially reversing four days of confirmed payments, deposits and withdrawals.</p><p class="item-b">The fix can prevent new invalid blocks but does not resolve the historical split. Where a few pools control most hash power, their chain choice affects finality and can leave exchanges and payment recipients bearing losses on balances already credited.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Bitvavo and Upbit paused deposits and withdrawals. The total value of rolled-back transactions was not public. The exposure window begins at block 4,487,776.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-11</span>
             <a class="item-src" href="https://www.coindesk.com/tech/2026/08/11/ravencoin-could-roll-back-four-days-of-transactions-after-critical-block-flaw" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -233,9 +233,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Anthropic 用 60 个子 Agent 推进黎曼猜想边界，形式化证明承担最终校验</h3>
-          <p class="item-b">Anthropic 未发布模型协调 60 个子 Agent、测试 650 条思路并生成 3100 万输出 token，把黎曼猜想已验证解的下界向前推进；两名内部数学家复核，并用 Lean 形式化。</p><p class="item-b">多 Agent 的价值来自大规模并行探索和分工验证，但 60 个子 Agent 中只有两个形成关键思路，说明算力扩展仍需要可机检证明和人类责任链过滤大量失败路径。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>模型推进了已验证下界，没有证明黎曼猜想；结果由内部数学家与 Lean 核验，模型本身尚未发布。</p>
+          <h3 class="item-h">Anthropic uses 60 subagents to explore results related to the Riemann hypothesis, with formal proof as the final check</h3>
+          <p class="item-b">An unreleased Anthropic model coordinated 60 subagents, tested 650 approaches and generated 31 million output tokens to extend the lower bound of verified cases of the Riemann hypothesis. Two internal mathematicians checked the result, which was also formalized in Lean.</p><p class="item-b">Parallel exploration and division of verification work contributed to the result, but only two of the 60 subagents produced decisive ideas. Scaling compute still requires machine-checkable proofs and human review to filter unsuccessful approaches.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The model improved a verified lower bound. It did not prove the Riemann hypothesis. In-house mathematicians and Lean checked the result. The model has yet to be released.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-11</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/11/an-unreleased-anthropic-model-made-progress-on-one-of-maths-biggest-unsolved-problems/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Anthropic 把文本水印下沉到模型层，复制粘贴仍携带来源信号</h3>
-          <p class="item-b">Anthropic 为 8 月 2 日后发布的模型加入文本与文件水印，覆盖 Claude API、Claude Code 等产品；文件采用 C2PA，文本水印设计为复制粘贴后仍可能保留。</p><p class="item-b">模型层执行能跨产品统一来源标记，减少前端漏标，但编辑强度达到何种程度会破坏文本水印仍未公开，检测可靠性不能只靠厂商声明。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>新模型已自动加入水印，旧模型将后续支持；文本编辑后的保留率和第三方检测准确率尚未披露。</p>
+          <h3 class="item-h">Anthropic places a text watermark at the model level that persists through copying and pasting</h3>
+          <p class="item-b">Anthropic added text and file watermarking to models released after August 2 across products including the Claude API and Claude Code. Files use C2PA. The text mark is designed to persist through copying and pasting.</p><p class="item-b">Model-level marking can standardize provenance across products and reduce omissions at the interface. Anthropic has not disclosed how much editing destroys a text watermark. Detection reliability still needs independent evidence.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>New models apply the watermark automatically. Support for older models is planned. The watermark&#x27;s survival rate after editing and the accuracy of third-party detection were not disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-11</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/11/anthropic-says-it-will-watermark-text-generated-by-its-ai-models/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Gemini App 月活突破 10 亿，独立入口与系统分发形成双层规模</h3>
-          <p class="item-b">Google 表示 Gemini App 月活已超过 10 亿，成为其第 14 个达到这一规模的产品；该口径不包含 Search AI Mode 等其他渠道，iOS 活跃用户超过 1 亿。</p><p class="item-b">独立 App 达到与 ChatGPT 同级别的月活后，竞争不再只靠模型榜单，而是语音、图片生成、搜索、Workspace 与 Android 的连续分发；产品能力会更快被默认入口放大。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>10 亿为 Gemini App 月活，不含其他 Google AI 渠道；63% 用户使用语音，日生成图片超过 1.5 亿张。</p>
+          <h3 class="item-h">Gemini app passes 1 billion monthly users across direct access and system distribution</h3>
+          <p class="item-b">Google said the Gemini app surpassed one billion monthly active users, its 14th product at that scale. The figure excludes Search AI Mode and other channels. More than 100 million users were active on iOS.</p><p class="item-b">With Gemini’s standalone app in the same monthly-user range as ChatGPT, voice, image generation, Search, Workspace and Android distribution increasingly shape competition alongside model benchmarks. Default entry points can amplify adoption of new capabilities.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>One billion is the Gemini app&#x27;s monthly active user count and excludes Google&#x27;s other AI channels. Voice is used by 63% of users, and the app generates more than 150 million images per day.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-11</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/11/googles-gemini-app-surges-to-one-billion-users/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -267,24 +267,24 @@
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product assessment</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">风控与清算</div>
-          <h3 class="item-h">容量变化先看 OI 留存与退出深度，不用成交回落单独触发</h3>
-          <p class="item-b"><strong>判断变化</strong>：从连续异常数据隔离进一步明确，正常场所的成交脉冲回落不能单独触发容量收紧，必须同时出现 OI 变化或资产级退出深度恶化。</p><p class="item-b"><strong>证据与边界</strong>：三大场所合计成交回落约 10.6%，OI 仍增加约 0.4%；这说明仓位没有同步撤出，但场所级快照仍缺少标的构成、价差和盘口深度。</p>
+          <div class="decision-area">Risk Control and Settlement</div>
+          <h3 class="item-h">Position capacity depends on retained open interest and exit depth after a volume decline</h3>
+          <p class="item-b"><strong>Revised assessment</strong>: A retreat from a brief volume spike at an otherwise consistent venue is insufficient to tighten capacity. A change in open interest or a deterioration in asset-level exit depth would provide supporting evidence.</p><p class="item-b"><strong>Evidence and limits</strong>: Combined volume at three major venues fell roughly 10.6% while open interest rose about 0.4%. Positions did not leave at the same rate as turnover, though the snapshot omitted asset mix, spreads and depth.</p>
 
           <div class="item-meta">
 
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/9a5479488bd5ac2a78e7c8659f9a188b66c87c1d/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/9a5479488bd5ac2a78e7c8659f9a188b66c87c1d/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

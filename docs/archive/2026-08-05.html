@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-08-05</title>
+<title>Perp DEX Daily · 2026-08-05</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 41 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 41</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 8 月 5 日 · 星期三</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">August 5, 2026 · Wednesday</div>
     </header>
-    <p class="lead">Kalshi 的联邦豁免主张在纽约受挫，Dinari 让美国用户以自托管钱包购买 724 只代币化股票，BitGo 则把 WBTC 跨链控制迁向 Chainlink，合约扩列正在同时被监管边界、底层权利和抵押品路径重写。</p>
+    <p class="lead">Kalshi’s claim of federal preemption suffered a setback in New York. Dinari opened access to 724 tokenized stocks through self-custody wallets for U.S. users, while BitGo moved cross-chain controls for WBTC toward Chainlink.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,9 +110,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">纽约法院暂不阻止州政府执法，Kalshi 的联邦专属监管主张先失一局</h3>
-          <p class="item-b"><strong>事件</strong>：纽约联邦法官 Jed Rakoff 驳回 CFTC 为 Kalshi 申请紧急临时限制令的请求，纽约州可暂时继续按州赌博法推进执法；CFTC 仍可在 8 月 7 日前向主审法官重新申请。该案争议对象是事件合约，不是 Kalshi 永续本身。</p><p class="item-b"><strong>机制</strong>：Kalshi 与 CFTC 主张，指定合约市场上的商品合约应由联邦《商品交易法》排他监管；法院认为现阶段尚未证明胜诉可能性和不可弥补损害，意味着场所拿到联邦牌照并不会自动消除州级产品分发限制。</p><p class="item-b"><strong>二阶效应</strong>：预测市场若无法取得稳定的联邦优先权，逐州准入、年龄验证和合约类别审查会成为真实分发成本；（预测市场联邦规则线 · 自 07-24）这次新增的是法院对管辖权主张的初步态度，最终实体判决仍未作出。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>裁定只处理紧急临时救济且允许再次申请，不是对联邦优先权争议的最终判决，也不能外推到永续合约定性。</p>
+          <h3 class="item-h">New York court declines to halt state enforcement against Kalshi pending further review</h3>
+          <p class="item-b"><strong>Event</strong>: Federal Judge Jed Rakoff denied the CFTC’s request for an emergency temporary restraining order on Kalshi’s behalf, leaving New York able to pursue enforcement under state gambling law for the time being. The CFTC could renew its request before the assigned judge by August 7. The case concerns event contracts rather than Kalshi’s perpetual futures.</p><p class="item-b"><strong>Mechanism</strong>: Kalshi and the CFTC argued that the federal Commodity Exchange Act gives federal regulators exclusive authority over commodity contracts on designated contract markets. At this stage, the court found insufficient evidence of likely success or irreparable harm. A federal venue licence therefore did not itself remove state distribution constraints.</p><p class="item-b"><strong>Second-order effects</strong>: Without a stable federal preemption rule, state-specific access, age verification and review of contract categories can add distribution costs. The ruling provides an initial view on jurisdiction. It does not resolve the merits.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The order addressed emergency relief and allowed a renewed application. It did not finally decide federal preemption or the classification of perpetual contracts.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-04</span>
             <a class="item-src" href="https://cointelegraph.com/news/ny-judge-denies-cftc-motion-enforcement-kalshi" target="_blank" rel="noopener">Cointelegraph ↗</a>
@@ -120,9 +120,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Dinari 向美国用户开放 724 只代币化股票，现货权利开始正面竞争 RWA 永续</h3>
-          <p class="item-b"><strong>事件</strong>：Dinari 允许合格美国投资者通过自托管钱包和 USDC 买卖 724 只代币化美股，首批覆盖以太坊、Arbitrum、Base 与 Avalanche，并计划扩展到 Solana 和 Sei。</p><p class="item-b"><strong>机制</strong>：dShares 由受监管经纪商与转让代理结构支撑，按 1:1 托管底层股票，并反映股息、投票、拆股等公司行动；它提供的是底层权利映射，而永续提供杠杆化价格敞口，二者解决的用户任务不同。</p><p class="item-b"><strong>二阶效应</strong>：RWA 永续的上新速度优势仍在，但若产品不明确披露股息、公司行动、休市与持仓期限差异，就会在长期持有任务上输给权利更完整的代币化现货；（TradFi/RWA 永续线 · 自 07-31）竞争指标由成交量扩展到权利完整性和美国分发资格。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>724 只是可访问股票数量；报道给出的 Dinari 代币化股票规模约 1000 万美元，仍只占约 22 亿美元同类市场的一小部分。</p>
+          <h3 class="item-h">Dinari opens 724 tokenized stocks to U.S. users, adding competition on holder rights</h3>
+          <p class="item-b"><strong>Event</strong>: Dinari enabled eligible U.S. investors to buy and sell 724 tokenized U.S. stocks using USDC and self-custody wallets. The initial networks are Ethereum, Arbitrum, Base and Avalanche. Solana and Sei are planned.</p><p class="item-b"><strong>Mechanism</strong>: Dinari’s dShares use regulated broker and transfer-agent arrangements. Underlying shares are held in custody one-for-one, with dividends, voting and splits reflected in the token. These ownership rights serve a different purpose from the leveraged price exposure available through perpetuals.</p><p class="item-b"><strong>Second-order effects</strong>: RWA perpetuals retain a listing-speed advantage. For long-term holders, differences in dividends, corporate actions, market closures and holding periods may favor tokenized spot shares with fuller rights. The TradFi and RWA perpetuals story tracked since July 31 now includes underlying rights and eligibility for U.S. distribution alongside volume.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The 724 figure counts stocks available to access. Dinari&#x27;s reported tokenized stock assets of about $10 million represent a small share of an approximately $2.2 billion market.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-04</span>
             <a class="item-src" href="https://www.coindesk.com/business/2026/08/04/dinari-brings-tokenized-u-s-stocks-to-american-investors-as-equity-race-heats-up" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -130,9 +130,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">本周主线 ｜ 永续正在输出市场结构，但杠杆与价格锚风险也同步外溢</h3>
-          <p class="item-b"><strong>事件</strong>：CoinDesk 观点文章把本周多资产永续扩列归纳为一场从加密向传统资产的结构输出：行业日成交量接近 7500 亿美元，RWA 永续 5 月成交约 2110 亿美元，股票永续单月增至约 540 亿美元。</p><p class="item-b"><strong>机制</strong>：无需搬运底层资产、以稳定币统一保证金并用资金费率锚定指数，使场所能快速创建连续敞口；代价是合约没有交割来强制收敛，参考市场休市、指数失真和持续杠杆会把偏离风险留在场所内部。</p><p class="item-b"><strong>二阶效应</strong>：永续的竞争优势不是复制期货，而是把市场创建变成软件化能力；但 RWA 扩列越快，场所越需要把指数来源、公司行动、停牌规则和清算瀑布做成可审计的资产级配置。文章为行业观点，数字口径来自作者引用的行业数据，不能替代跨场所审计。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>这是近 7 日趋势综述；7500 亿美元为接近日成交量，2110 亿与 540 亿美元为不同资产与月份口径，不应直接相加。</p>
+          <h3 class="item-h">Weekly theme | Perpetual market structure extends to new assets alongside leverage and benchmark risks</h3>
+          <p class="item-b"><strong>Event</strong>: A CoinDesk opinion article described this week’s multi-asset perpetual listings as a crypto market structure expanding into traditional assets. It cited industry daily volume approaching $750 billion, about $211 billion in RWA perpetual volume in May and roughly $54 billion in monthly equity perpetual volume.</p><p class="item-b"><strong>Mechanism</strong>: Stablecoin margin, funding tied to an index and no need to transfer the underlying let venues add continuous price exposure quickly. Without delivery to force convergence, venues must manage price deviations when reference markets close, indexes are distorted or leverage persists.</p><p class="item-b"><strong>Second-order effects</strong>: The author argues that perpetuals turn market creation into a software function. Faster RWA listings make auditable, asset-specific index sources, corporate-action rules, trading halts and liquidation waterfalls more important. The figures are industry data cited in an opinion article and have not been audited across venues.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>This summary covers the previous seven days. The $750 billion figure is approximate daily volume. The $211 billion and $54 billion figures cover different assets and months and should not be added.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-01</span>
             <a class="item-src" href="https://www.coindesk.com/opinion/2026/08/01/everyone-has-the-perps-convergence-backwards" target="_blank" rel="noopener">CoinDesk Opinion ↗</a>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">本周主线 ｜ Solana 机器人研究把抢跑识别推进到代码与链上行为联动</h3>
-          <p class="item-b">研究团队分析 586 个公开机器人代码仓库、200 个已知机器人地址和超过 4400 万笔链上交易，尝试从代码蓝图与实际交易指纹建立可复核的机器人分类；样本显示机器人相关 DEX 日成交在 2026 年 1 月超过 2.5 亿美元。</p><p class="item-b">对 launchpad 而言，单纯按首块买入或高频地址拦截会误伤，较可靠的反抢跑需要同时看调用序列、路由选择、时间间隔和多地址协同行为；论文样本不是全网普查，且公开代码与标注地址会低估私有机器人。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>586 个代码仓库与 200 个地址是研究样本，4400 万笔交易用于行为分析；2.5 亿美元为 2026 年 1 月机器人相关 DEX 日成交估计。</p>
+          <h3 class="item-h">Weekly theme | Solana research combines code analysis and onchain behavior to identify frontrunning</h3>
+          <p class="item-b">Researchers analyzed 586 public bot repositories, 200 known bot addresses and over 44 million onchain transactions to build a reproducible classification based on code and observed trading behavior. In their sample, bot-related daily DEX volume exceeded $250 million in January 2026.</p><p class="item-b">Launchpads risk blocking legitimate users if they rely solely on first-block purchases or high-frequency addresses. Distinguishing automated activity requires several signals about how and when addresses trade together. The paper was a sample, and public code and labeled addresses likely undercount private bots.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The researchers sampled 586 code repositories and 200 addresses, and analyzed behavior across 44 million transactions. They estimated bot-related DEX volume at $250 million per day in January 2026.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-31</span>
             <a class="item-src" href="https://arxiv.org/abs/2607.28424" target="_blank" rel="noopener">arXiv ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Solana 提案拟按资源定价，Launchpad 的拥堵成本可能从统一费用改成可归因负载</h3>
-          <p class="item-b">SIMD-0553 提议把费用与计算、账户写入等资源消耗挂钩，支持者估计每日销毁可由约 650 SOL 增至 7500 至 9000 SOL；配套 SIMD-0550 则拟提前到 2029 年进入 1.5% 终端通胀。</p><p class="item-b">资源定价会让批量创建、机器人抢跑和高写入 launchpad 更直接承担其拥堵外部性，但提案仍需达到投票门槛，截至报道时仅获约 2494 万 SOL 支持，距离 15% 阈值仍有约 3995 万 SOL。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>即便每日销毁达到 9000 SOL，报道所列日发行仍约 6 万 SOL，因此该方案不等于 Solana 立即转为通缩。</p>
+          <h3 class="item-h">Solana proposal would price resources separately to attribute launchpad congestion costs</h3>
+          <p class="item-b">SIMD-0553 proposes pricing fees according to resource use, including computation and account writes. Supporters estimate daily burns could rise from about 650 SOL to 7,500–9,000 SOL. Companion proposal SIMD-0550 would bring the 1.5% terminal inflation rate forward to 2029.</p><p class="item-b">Resource pricing would assign more of the cost of congestion to bulk creation, automated sniping and write-intensive launchpads. As reported, the proposal had about 24.94 million SOL in support and needed roughly another 39.95 million SOL to reach the 15% voting threshold.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Even at a burn of 9,000 SOL per day, the report puts daily issuance at roughly 60,000 SOL. The proposal would not immediately make Solana&#x27;s supply deflationary.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-04</span>
             <a class="item-src" href="https://www.coindesk.com/tech/2026/08/04/a-new-solana-proposal-would-take-daily-sol-burns-from-usd47-000-to-usd650-000" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -171,12 +171,12 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">PROVE 首个年度 cliff 到期，但三套公开日历对解锁量给出不同答案</h3>
-          <p class="item-b">Succinct 的 PROVE 于 8 月 5 日跨过 TGE 后首个年度 cliff；CoinGecko 与 Coindar 显示约 2.0833 亿枚解锁，Tokenomics.com 显示约 2.3333 亿枚，项目提交给 Upbit 的月末流通计划则由 2 亿枚增至约 4.3333 亿枚。</p><p class="item-b">同一事件出现 2500 万枚级别差异，说明 launchpad 在展示低流通项目时不能只挂单一倒计时；应把项目方月末流通承诺、按日 vesting 和第三方日历分开，并在无法对齐时明确标记不确定性。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>公开口径约为 2.0833 亿至 2.3333 亿枚，约等于此前约 1.95 亿至 2 亿流通量的 104% 至 117%；差异本身尚未被项目方统一解释。</p>
+          <h3 class="item-h">PROVE reaches its first annual cliff as three public schedules disagree on the amount unlocked</h3>
+          <p class="item-b">Succinct’s PROVE reached its first annual vesting cliff after the TGE on August 5. CoinGecko and Coindar showed about 208.33 million tokens unlocking, while Tokenomics.com showed 233.33 million. The month-end circulation plan filed with Upbit rose from 200 million to about 433.33 million.</p><p class="item-b">Estimates for the same unlock differ by 25 million tokens. For low-float projects, a launchpad should distinguish the issuer’s month-end circulation plan, daily vesting and third-party calendar estimates, and identify any unresolved differences alongside the countdown.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Published estimates range from about 208.33 million to 233.33 million tokens, or roughly 104–117% of the previously reported circulating supply of 195–200 million. The project has not reconciled the figures.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-05</span>
-            <a class="item-src" href="https://www.coingecko.com/en/coins/succinct" target="_blank" rel="noopener">CoinGecko ↗</a><a class="item-src item-ref" href="https://app.tokenomics.com/tokenomics/succinct/unlocks" target="_blank" rel="noopener">补充：Tokenomics.com · 08-05 ↗</a><a class="item-src item-ref" href="https://static.upbit.com/guide/circulating_supply/PROVE_20250806.pdf" target="_blank" rel="noopener">补充：Upbit 项目流通计划 · 08-05 ↗</a>
+            <a class="item-src" href="https://www.coingecko.com/en/coins/succinct" target="_blank" rel="noopener">CoinGecko ↗</a><a class="item-src item-ref" href="https://app.tokenomics.com/tokenomics/succinct/unlocks" target="_blank" rel="noopener">Additional source: Tokenomics.com · 08-05 ↗</a><a class="item-src item-ref" href="https://static.upbit.com/guide/circulating_supply/PROVE_20250806.pdf" target="_blank" rel="noopener">Additional source: Upbit project circulation schedule · 08-05 ↗</a>
           </div>
         </article>
         </div>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Wells Fargo 将用专有链为企业客户提供 24/7 代币化存款支付</h3>
-          <p class="item-b">Wells Fargo 计划今秋向部分企业与商业客户开放代币化存款，首阶段只支持美元兑英镑并运行在专有链上，完整部署后再扩展到全天候结算和可编程支付。</p><p class="item-b">代币仍是银行存款负债，可保持相同监管保护与存款保险资格；这解决的是银行账内现金的可编程性，不是让客户取得可自由跨链流通的稳定币，2027 年扩围仍属计划。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>今秋仅面向部分企业客户并限美元兑英镑；24/7 与更多币种是完整部署目标，不是当前可用范围。</p>
+          <h3 class="item-h">Wells Fargo plans 24/7 tokenized deposit payments for corporate clients on its own network</h3>
+          <p class="item-b">Wells Fargo plans to offer tokenized deposits to selected corporate and commercial customers this fall. The first phase supports only U.S. dollar–pound sterling transactions on a proprietary chain. Full deployment would add round-the-clock settlement and programmable payments.</p><p class="item-b">The tokens remain bank deposit liabilities and can retain the same regulatory protections and eligibility for deposit insurance. Customers gain programmable cash within the bank’s books. They do not receive a freely transferable cross-chain stablecoin. Broader rollout in 2027 remains planned.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The autumn rollout covers selected corporate customers and USD to GBP only. Round-the-clock availability and additional currencies are goals for full deployment.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-04</span>
             <a class="item-src" href="https://www.coindesk.com/business/2026/08/04/wells-fargo-to-offer-tokenized-deposits-for-24-7-corporate-payments" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -202,9 +202,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">BitGo 把 74 亿美元 WBTC 的独家跨链通道从 LayerZero 迁至 Chainlink</h3>
-          <p class="item-b">BitGo 将以 Chainlink CCIP 取代 LayerZero，作为约 74 亿美元 WBTC 的独家跨链服务；在 Kelp 跨链桥约 2.92 亿美元攻击后，公开宣布由 LayerZero 迁向 Chainlink 的资产合计约 145 亿美元。</p><p class="item-b">迁移改变的是消息验证与跨链执行层，不改变 BitGo 对 WBTC 合约、速率限制和转移参数的控制；（预言机与桥接权限攻击线 · 自 07-15）行业正把桥接风险从多通道扩张转向更集中的控制面，完成日期和迁移期双轨风险仍未披露。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>约 145 亿美元是多项目已宣布迁移资产的合计，不是已完成迁移量；WBTC 迁移完成时间和并行运行安排尚未公开。</p>
+          <h3 class="item-h">BitGo moves the exclusive cross-chain route for $7.4 billion in WBTC from LayerZero to Chainlink</h3>
+          <p class="item-b">BitGo will replace LayerZero with Chainlink CCIP as the exclusive cross-chain provider for approximately $7.4 billion of WBTC. Following the roughly $292 million Kelp bridge incident, assets whose issuers publicly announced moves from LayerZero to Chainlink totaled about $14.5 billion.</p><p class="item-b">The migration changes message verification and cross-chain execution. BitGo retains control over WBTC contracts, rate limits and transfer parameters. The bridge and oracle governance story tracked since July 15 now includes more concentrated control. Timing and risks during any period of parallel operation remain undisclosed.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The roughly $14.5 billion is the sum of assets that several projects announced plans to migrate. The completion date and parallel operation arrangements for WBTC remain undisclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-04</span>
             <a class="item-src" href="https://www.coindesk.com/business/2026/08/04/bitgo-s-wbtc-move-pushes-layerzero-to-chainlink-tally-near-usd15-billion" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">BlackRock 为欧洲六只货币基金新增 12 个代币化份额类别</h3>
-          <p class="item-b">BlackRock 与 JPMorgan Kinexys 合作，为欧洲六只 UCITS 货币基金推出 12 个代币化份额类别，覆盖 15 个市场和英镑、欧元、美元三种币种。</p><p class="item-b">报道中的 3110 亿美元是六只底层基金的合计管理规模，不是已有 3110 亿美元上链；新增的是申购持有方式和链上记录能力，实际采用仍取决于投资者资格、分销与赎回流程。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>3110 亿美元是获得代币化访问能力的底层基金 AUM，不代表链上净流入、代币化份额余额或已结算规模。</p>
+          <h3 class="item-h">BlackRock adds 12 tokenized share classes across six European money market funds</h3>
+          <p class="item-b">BlackRock and JPMorgan Kinexys launched 12 tokenized share classes for six European UCITS money market funds across 15 markets, denominated in sterling, euros and U.S. dollars.</p><p class="item-b">The reported $311 billion is the combined assets under management of the six underlying funds. The new share classes add subscription, holding and onchain recordkeeping options. Actual assets held onchain will depend on investor eligibility, distribution and redemption arrangements.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The $311 billion is the AUM of underlying funds made accessible through tokenization. It does not measure onchain net inflows, outstanding tokenized shares, or settled trades.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-04</span>
             <a class="item-src" href="https://www.coindesk.com/business/2026/08/04/blackrock-debuts-tokenized-access-to-usd311-billion-of-money-market-funds-in-europe" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -233,9 +233,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Boltz 因 AI 辅助攻击快于修补而无限期暂停比特币换币</h3>
-          <p class="item-b">非托管比特币换币服务 Boltz 无限期暂停 swap，称 AI 辅助的自动探测与攻击速度已经超过团队修补速度；此前数次利用被控制，服务仍保留退款与 API 通道。</p><p class="item-b">非托管结构避免了集中资金池损失，但不能消除协议可用性风险；团队称没有用户资金受损，仍需等待独立事故复盘确认攻击面、受影响版本与重启条件。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>暂停范围是 Boltz 换币服务；退款和 API 仍可用，团队称无用户资金受损，但未披露攻击次数与完整技术报告。</p>
+          <h3 class="item-h">Boltz suspends bitcoin swaps indefinitely following security incidents and delays in deploying fixes</h3>
+          <p class="item-b">Noncustodial bitcoin swap service Boltz suspended swaps indefinitely. The team said AI-assisted probing was moving faster than it could repair vulnerabilities. It had contained several earlier incidents and kept refund and API access available.</p><p class="item-b">The noncustodial design limited the risk of a pooled loss, but service availability was still affected. Boltz reported no loss of user funds. An independent review is still needed to establish affected versions, the scope of exposure and conditions for reopening.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Boltz paused its swap service. Refunds and the API remained available, and the team said no customer funds were lost. It did not disclose an incident count or a full technical report.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-04</span>
             <a class="item-src" href="https://decrypt.co/374933/bitcoin-bridge-shuts-down-ai-finding-bugs-too-fast" target="_blank" rel="noopener">Decrypt ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">阿里将开放 Qwen3.8-Max 权重，Max 级模型首次从 API 走向可自托管</h3>
-          <p class="item-b">阿里公布 2.4 万亿总参数、950 亿激活参数的 Qwen3.8-Max，并计划下周在 Hugging Face 与 ModelScope 发布权重，同时提供兼容 Claude Code 与 Codex 的 API。</p><p class="item-b">开放权重让企业可以在自有环境审计和部署 Max 级模型，但媒体引用的 Fable5 胜场、成本约为 Claude 三成等指标来自阿里自测，且 12 项编码测试中只领先 1 项，不能据此认定全面替代闭源模型。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>2.4 万亿为总参数、950 亿为每次推理激活参数；Fable5 胜场和成本来自厂商评测，开放权重尚待下周实际发布。</p>
+          <h3 class="item-h">Alibaba plans open weights for Qwen3.8-Max, allowing self-hosting beyond its API</h3>
+          <p class="item-b">Alibaba announced Qwen3.8-Max with 2.4 trillion total parameters and 95 billion active parameters. It plans to release weights on Hugging Face and ModelScope the following week and offer an API compatible with Claude Code and Codex.</p><p class="item-b">Open weights would let enterprises audit and deploy a Max-class model locally. Reported wins against Fable5 and costs of about 30% of Claude’s came from Alibaba’s tests. The model led in only one of 12 coding tests, leaving broader comparisons with closed models unresolved.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The model has 2.4 trillion total parameters, with 95 billion active per inference. The comparison with Fable5 and the cost figures come from vendor tests. Open weights were due the following week.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-04</span>
             <a class="item-src" href="https://decrypt.co/374906/alibaba-best-ai-model-qwen-free-claude-chatgpt" target="_blank" rel="noopener">Decrypt ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Apple 限制漏洞提交通道后，AI 找到的高价值 macOS 漏洞反而无法上报</h3>
-          <p class="item-b">Apple 因 AI 生成的虚假报告激增而限制未结工单数量；研究团队 Bynario 称 ChatGPT 三周找到 50 多个 macOS 漏洞，其中一条完整接管链因额度已满无法提交，黑市估值约 10 万至 20 万美元。</p><p class="item-b">AI 同时提高真实漏洞发现与垃圾报告产量，固定工单上限会把质量筛选成本转嫁给研究者；上述漏洞价值由研究者估算，Apple 正在审查，尚不能视为已确认赏金或已验证漏洞。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>50 多个漏洞与 10 万至 20 万美元价值来自 Bynario 陈述；Apple 尚未确认漏洞链或支付赏金。</p>
+          <h3 class="item-h">Apple’s submission restrictions leave researchers unable to report a high-value macOS security finding</h3>
+          <p class="item-b">Apple limited the number of open reports after a surge in false AI-generated submissions. Research group Bynario said ChatGPT identified more than 50 potential macOS vulnerabilities in three weeks. The cap prevented it from submitting one purported full-takeover finding, which the researchers valued at $100,000–$200,000 on the black market.</p><p class="item-b">AI can increase both genuine discoveries and low-quality reports. A fixed open-ticket cap shifts some of the screening cost to researchers. Apple was reviewing the claims. The value was the researchers’ estimate, with neither a confirmed bounty nor a verified vulnerability.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Bynario reported more than 50 vulnerabilities and estimated their value at $100,000–$200,000. Apple had not confirmed the findings or paid a bounty.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-04</span>
             <a class="item-src" href="https://decrypt.co/374900/apples-ai-slop-problem-left-a-200k-macos-exploit-unreported" target="_blank" rel="noopener">Decrypt ↗</a>
@@ -267,15 +267,15 @@
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product assessment</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">市场与资产</div>
-          <h3 class="item-h">股票永续上新应从价格可得性扩展到用户权利差异披露</h3>
-          <p class="item-b"><strong>判断变化</strong>：从“有可靠指数即可优先扩列股票永续”更新为“可靠指数只是准入条件，还要明确该合约相对代币化现货缺失哪些持有权利”。</p><p class="item-b"><strong>证据与边界</strong>：Dinari 已向美国合格用户提供 724 只 1:1 托管股票，并映射股息、投票与公司行动；但其规模约 1000 万美元，尚不能证明代币化现货已取得主流流动性。</p>
+          <div class="decision-area">Market and Assets</div>
+          <h3 class="item-h">New equity perpetual listings require disclosure of holder rights as well as reference prices</h3>
+          <p class="item-b"><strong>Revised assessment</strong>: A reliable index is an admission condition for an equity perpetual. Listing materials should also explain which rights available through tokenized spot ownership the contract does not convey.</p><p class="item-b"><strong>Evidence and limits</strong>: Dinari offered eligible U.S. users 724 equities backed 1:1 in custody with dividends, voting and corporate actions reflected. Reported scale was around $10 million, insufficient to establish mainstream liquidity.</p>
 
           <div class="item-meta">
 
@@ -284,7 +284,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

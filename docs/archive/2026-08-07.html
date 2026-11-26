@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-08-07</title>
+<title>Perp DEX Daily · 2026-08-07</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 43 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 43</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 8 月 7 日 · 星期五</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">August 7, 2026 · Friday</div>
     </header>
-    <p class="lead">Bitget 把股票永续继续扩到消费、航天与半导体，链上交易基础设施却同时暴露持仓周转、MEV 集中和代理测试隔离问题，今天真正值得盯的是产品扩列背后的定价与控制面是否能跟上。</p>
+    <p class="lead">Bitget added stock perpetuals in consumer, aerospace and semiconductor sectors. Elsewhere, position turnover, concentration of MEV and isolation of agent test environments raised questions about whether pricing and controls can keep pace with new listings.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,9 +110,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Bitget 再上五只股票永续，扩列从热门科技股推进到消费、旅游与航天供应链</h3>
-          <p class="item-b"><strong>事件</strong>：Bitget 在 8 月 4 日上线 PEP、BKNG、SSPC、SPCH 与 GFS 五个 USDT 本位股票永续，分别对应百事、Booking、卫星制造商、SPAC ETF 与芯片代工企业，交易入口继续从加密资产向更分散的美股行业扩张。</p><p class="item-b"><strong>机制</strong>：这些合约提供价格敞口而不传递股票所有权，非美股交易时段仍依赖指数源、订单簿和标记价格维持 24 小时交易；标的越分散，休市报价、公司行动与低流动性时段的异常价处理越难用一套参数覆盖。</p><p class="item-b"><strong>二阶效应</strong>：股票永续竞争开始从是否拥有英伟达、特斯拉等头部标的，转向能否低成本维护长尾资产的指数、停牌和公司行动规则；扩列数量若没有资产级深度、OI 与异常处理记录，不能直接视为产品护城河。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>五个交易对已经公布上线，但公告未披露资产级 OI、深度、指数源权重或非美股时段价差，扩列不等于形成可持续流动性。</p>
+          <h3 class="item-h">Bitget adds five stock perpetuals across consumer, travel, aerospace and semiconductor markets</h3>
+          <p class="item-b"><strong>Event</strong>: On August 4, Bitget listed USDT-margined perpetuals on PEP, BKNG, SSPC, SPCH and GFS. The references cover PepsiCo, Booking, a satellite manufacturer, a SPAC ETF and a semiconductor foundry, broadening the sectors available in its U.S. equity range.</p><p class="item-b"><strong>Mechanism</strong>: These contracts provide price exposure without transferring share ownership. Trading outside the underlying stock session depends on the venue’s pricing, risk limits and market makers.</p><p class="item-b"><strong>Second-order effects</strong>: Competition now extends beyond listing names such as Nvidia and Tesla to maintaining reliable indices, halt rules and corporate-action handling for smaller stocks. A longer asset list alone says little about open interest, executable depth or incident handling.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The five listings were announced. The notice did not disclose per-asset open interest, depth, index weights or spreads outside U.S. stock-market hours.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-04</span>
             <a class="item-src" href="https://www.bitget.com/support/articles/12560603891018" target="_blank" rel="noopener">Bitget ↗</a>
@@ -120,19 +120,19 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Hyperliquid 总 OI 约 108 亿美元，持仓与日成交之比升到 1.52</h3>
-          <p class="item-b"><strong>事件</strong>：8 月 7 日市场快照显示，Hyperliquid 未平仓量约 16.73 万 BTC、24 小时成交约 11.03 万 BTC，按当时比特币约 64346 美元折算，分别约为 107.7 亿和 71.0 亿美元。</p><p class="item-b"><strong>机制</strong>：OI 与日成交之比约 1.52，意味着存量风险敞口高于一天成交周转；这与只靠高频换手形成的成交榜不同，更考验保证金、预言机、清算和保险基金对跨日仓位的承载能力。</p><p class="item-b"><strong>二阶效应</strong>：高 OI 黏性提高了场所收入与抵押品沉淀价值，也放大价格源故障和连锁清算的损失面；当天快照没有资产级拆分，因此不能据此宣称 HIP-3 股票永续继续扩张，相关故事线转为 dormant。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>美元值按同一快照 BTC 价格折算，OI 与成交均是全平台合约口径，不代表股票永续或 HIP-3 的单独规模。</p>
+          <h3 class="item-h">Hyperliquid open interest reaches about $10.8 billion, or 1.52 times daily volume</h3>
+          <p class="item-b"><strong>Event</strong>: The August 7 snapshot put Hyperliquid open interest at about 167,300 BTC and 24-hour volume at 110,300 BTC. At the snapshot price of about $64,346 per bitcoin, those amounts were approximately $10.77 billion and $7.10 billion, respectively.</p><p class="item-b"><strong>Mechanism</strong>: Open interest was about 1.52 times daily volume, so outstanding exposure exceeded a full day’s turnover. Carrying positions across days places demands on margin, oracles, liquidations and the insurance fund that a high-volume ranking alone cannot show.</p><p class="item-b"><strong>Second-order effects</strong>: Persistent open interest may support venue revenue and retained collateral, while increasing potential losses from price-feed failures and cascading liquidations. The snapshot had no asset breakdown and provided no new evidence of growth in HIP-3 equity perpetuals. That story was marked dormant.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Dollar values use the BTC price in the same snapshot. Open interest and volume cover all contracts on the venue. Neither figure isolates equity or HIP-3 perpetuals.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-07</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/main/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/main/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">Binance 日成交约 491 亿美元，中心化场所仍以更快周转承接短线订单流</h3>
-          <p class="item-b"><strong>事件</strong>：同日 CoinGecko 衍生品快照显示，Binance 未平仓量约 39.33 万 BTC、24 小时成交约 76.26 万 BTC，折算约 253.1 亿和 490.7 亿美元，合约数为 589 个。</p><p class="item-b"><strong>机制</strong>：其 OI 与日成交之比约 0.52，显著低于 Hyperliquid 的 1.52，说明相对于存量仓位，Binance 的订单周转更快；这是成交分发优势，不自动等同于更稳定的长期持仓或更低的清算风险。</p><p class="item-b"><strong>二阶效应</strong>：链上场所若只比较成交额，会忽略自己更高的存量风险密度；竞争监控应同时看 OI、成交周转、资产集中度和清算损失，才能区分真实持仓需求与促销驱动换手。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>253.1 亿美元 OI 和 490.7 亿美元日成交按 BTC 64346 美元折算；589 是可见合约数，不代表每个市场都有有效深度。</p>
+          <h3 class="item-h">Binance records about $49.1 billion in daily trading as faster turnover attracts short-term flow</h3>
+          <p class="item-b"><strong>Event</strong>: CoinGecko’s derivatives snapshot that day showed about 393,300 BTC of open interest and 762,600 BTC of 24-hour volume on Binance, approximately $25.31 billion and $49.07 billion respectively, across 589 contracts.</p><p class="item-b"><strong>Mechanism</strong>: Binance’s open-interest-to-volume ratio of about 0.52 was below Hyperliquid’s 1.52. Binance turned over more orders relative to its outstanding positions, supporting its advantage in trade distribution. That does not establish more stable long-term holdings or lower liquidation risk.</p><p class="item-b"><strong>Second-order effects</strong>: Volume rankings alone miss the greater outstanding exposure an onchain venue may carry per dollar traded. Comparing open interest, turnover, asset concentration and liquidation losses can help distinguish demand to hold positions from promotion-driven activity.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Open interest of $25.31 billion and daily volume of $49.07 billion use a BTC price of $64,346. The 589 figure counts visible contracts. Executable depth can vary across them.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-07</span>
             <a class="item-src" href="https://www.coingecko.com/en/exchanges/derivatives/binance" target="_blank" rel="noopener">CoinGecko ↗</a>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">OPN 完成 8 月解锁，解锁价值约等于当时市值的 9.8%</h3>
-          <p class="item-b">Opinion 的 OPN 在 8 月 5 日进入新一轮月度解锁，Tokenomics.com 的排期显示该批次价值约占当时市值 9.8%；页面同时显示总量 10 亿枚、市场流通约 18.2%，而按归属表已解锁约 35.9%。</p><p class="item-b">两种口径相差约 17.7% 总供应，说明归属到期不等于代币已经进入流通市场；launchpad 评估解锁压力时应把合约可领取、项目方实际分发和市场流通三步拆开，不能只用一张日历推导抛压。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>9.8% 是第三方按当时市值计算的解锁比例；页面没有提供本批次链上领取地址或实际进入交易所的数量。</p>
+          <h3 class="item-h">OPN completes its August unlock, valued at about 9.8% of its market capitalization at the time</h3>
+          <p class="item-b">Opinion’s OPN entered another monthly unlock on August 5. Tokenomics.com valued the tranche at about 9.8% of its then market capitalization. Of one billion total tokens, about 18.2% were circulating, while 35.9% had unlocked under the vesting schedule.</p><p class="item-b">The difference amounts to about 17.7% of total supply. A token can vest before reaching the market. To assess selling pressure, launchpads should distinguish when tokens become claimable, when the project distributes them and when they enter circulation.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>A third party calculated the 9.8% unlock share using the market capitalization at the time. The page did not identify onchain claim addresses for this tranche or how many tokens reached exchanges.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-05</span>
             <a class="item-src" href="https://app.tokenomics.com/tokenomics/opinion/unlocks" target="_blank" rel="noopener">Tokenomics.com ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Odos 连续 90 天取消前端交换费，把聚合器获客成本重新压到路由与执行质量</h3>
-          <p class="item-b">Odos 从 8 月 5 日起宣布所有链、所有规模的交换在未来 90 天免收前端费用，直接把用户可见价格竞争从费率转向路由报价、滑点、失败率和 MEV 保护。</p><p class="item-b">短期免单可以扩大试用，却没有说明补贴来源、结束后的费率或订单留存；对项目分发而言，真正有效的 launch 不是把前端价格降到零，而是证明新增用户在恢复收费后仍因执行质量留下。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>90 天和零前端费来自项目公告镜像，不包含 gas、滑点、MEV 损失或第三方费用，也没有披露补贴预算。</p>
+          <h3 class="item-h">Odos removes frontend swap fees for 90 days, putting more emphasis on routing and execution quality</h3>
+          <p class="item-b">Starting August 5, Odos waived frontend fees for 90 days on swaps of all sizes across all chains. Users could compare quoted routes, slippage, failure rates and MEV protection without a frontend fee affecting the price.</p><p class="item-b">A temporary waiver may bring people in to try the product. Odos did not disclose the funding source, subsequent fee schedule or order retention. Evidence of lasting distribution would be users continuing to trade for execution quality after fees return.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The 90-day term and zero frontend fees come from a mirror of the announcement. Gas, slippage, MEV losses, and third-party fees are excluded. No subsidy budget was disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-05</span>
             <a class="item-src" href="https://www.kucoin.com/news/trends/ODOS/69fe51a1d064730007b45185" target="_blank" rel="noopener">Odos ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Shard Legends 宣布 8 月 5 日 TGE，但跟踪页仍没有价格、流动性和成交数据</h3>
-          <p class="item-b">Solana 游戏 Shard Legends 把 SLCW 的 TGE 和交易开始时间定在 8 月 5 日 12:00 UTC，并将游戏内挖矿延长至 8 月 4 日，Silver 与 Gold 票券分别对应 15% 和 85% 的分配池。</p><p class="item-b">截至 8 月 6 日第三方跟踪页仍没有代币价格、市值、流动性或 24 小时成交，说明宣告 TGE 与形成可验证市场是两件事；launchpad 应把合约地址、首个可交易池和实际领取率作为交付门槛。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>页面记录了官方 TGE 时间与票券分配，但行情字段仍为空；不能确认代币是否已按计划形成可交易市场。</p>
+          <h3 class="item-h">Shard Legends announces an August 5 token generation event without published price, depth or volume data</h3>
+          <p class="item-b">Solana game Shard Legends scheduled its SLCW token generation event and the start of trading for August 5 at 12:00 UTC. It extended in-game mining through August 4. Silver tickets accounted for 15% of the allocation pool and Gold tickets for 85%.</p><p class="item-b">As of August 6, third-party trackers still showed no token price, market capitalization, liquidity or 24-hour volume. A contract address, first tradable pool and actual claim rate would distinguish an announced TGE from a functioning market.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The page records the official token generation event time and ticket allocation, but its market data fields are empty. Trading at the scheduled time could not be confirmed.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-05</span>
             <a class="item-src" href="https://solgames.buzz/game/shard-legends-clan-wars" target="_blank" rel="noopener">SolGames Buzz ↗</a>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Cardano 与 Injective 在测试网打通首条 IBC 轨道，跨链转账尝试绕开托管桥</h3>
-          <p class="item-b">Cardano 社区 8 月 5 日披露，Cardano 与 Injective 已在测试网通过 IBC 连接，这是 Cardano 首条正在运行的链上 IBC 轨道，目标是让原生资产转移不再依赖中心化托管桥。</p><p class="item-b">IBC 把验证重点从一组桥签名者转向两条链的轻客户端状态与中继，但测试网连通仍不代表主网资产安全；下一步需要公开客户端参数、故障恢复、重放保护和主网转账上限。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>当前是测试网首条 live IBC rail；报道没有主网日期、转账量、客户端审计或异常恢复记录。</p>
+          <h3 class="item-h">Cardano and Injective establish their first testnet IBC connection for transfers without a custodial bridge</h3>
+          <p class="item-b">On August 5, the Cardano community reported that Cardano and Injective had connected via IBC on testnet. Cardano’s first operating onchain IBC connection aims to transfer native assets without relying on a centrally custodied bridge.</p><p class="item-b">IBC relies on light-client state and relays between the two chains for verification. A testnet connection does not establish mainnet asset safety. Client parameters, recovery procedures, replay protection and mainnet transfer caps remain important disclosures.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>This is the first live IBC connection on the testnet. The report provided no mainnet date, transfer volume, client audit, or recovery record.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-05</span>
             <a class="item-src" href="https://forum.cardano.org/t/digest-august-5-2026-cardano-and-injective-connected-via-ibc-on-testnet-constitutional-committee-election-concludes-musashi-dojo-prepares-for-water-phase-cardano-foundation-updates-cardano-improvement-proposals-cip-updates/156123" target="_blank" rel="noopener">Cardano Community Digest ↗</a>
@@ -202,9 +202,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">新研究把 MEV 集中下沉到 searcher 奖励，赢家通吃拍卖可能持续放大头部优势</h3>
-          <p class="item-b">8 月 5 日提交的研究不再只看 builder 和验证者集中度，而是用贡献加权 Jain 指数与预期奖励 HHI 衡量 searcher 竞争，指出异质 searcher 在一价赢家通吃拍卖中可能因排名优势持续集中回报。</p><p class="item-b">论文提出准入过滤与 Shapley 奖励上限的替代机制，同时承认复制策略的女巫攻击和验证者合谋仍需约束；这给链上交易产品的启示是，开放提交并不等于开放竞争，拍卖规则本身会塑造长期订单流集中。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>结论来自理论模型与贝叶斯安全约束，不是主网实验；新拍卖仍需验证延迟、女巫成本和实际收入影响。</p>
+          <h3 class="item-h">Study finds concentration in MEV searcher rewards under winner-takes-all auctions</h3>
+          <p class="item-b">An August 5 paper examined MEV searchers alongside builders and validators. It used a contribution-weighted Jain index and an HHI of expected rewards. In a first-price, winner-takes-all auction, searchers with different capabilities may accumulate rewards continually through rank advantages.</p><p class="item-b">The authors propose filtering admission and capping rewards using Shapley values. They acknowledge that replicated identities or strategies and validator collusion remain concerns. Open submission alone does not guarantee competition. Auction rules can concentrate order flow over time.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The findings come from a theoretical model with Bayesian safety constraints. A mainnet test would still need to measure latency, the cost of Sybil participation, and the new auction&#x27;s effect on revenue.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-05</span>
             <a class="item-src" href="https://arxiv.org/abs/2608.05011" target="_blank" rel="noopener">arXiv ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">区块链代理网络综述划出能力边界，共享账本不能替代单代理安全</h3>
-          <p class="item-b">一篇 8 月 5 日提交的综述把开放代理网络风险拆为身份与能力、授权与委托、信息溯源、群体鲁棒性、问责与结算五个维度，并总结链上身份、可验证授权和不可篡改日志能覆盖的信任需求。</p><p class="item-b">作者同时强调区块链只是共享信任层，不能替代语义验证、隐私保护、稳健推理和单代理安全；这限制了 agent payment 与链上审计的宣传边界，能证明谁做了什么，不代表动作本身正确。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>论文是覆盖 1980 至 2026 年文献的综述与分类，不是生产代理网络的事故率或性能测试。</p>
+          <h3 class="item-h">Review of blockchain agent networks finds that a shared ledger cannot replace individual agent security</h3>
+          <p class="item-b">An August 5 review identified five risks in open agent networks: identity and capability, authorization and delegation, information provenance, collective robustness, and accountability and settlement. It examined where onchain identity, verifiable permissions and tamper-resistant logs can provide trust.</p><p class="item-b">The authors describe blockchains as a shared trust layer. Verifying who performed an action does not establish its correctness. Semantic validation, privacy, reliable reasoning and individual agent security remain separate requirements for payments and onchain auditing.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The paper reviews and classifies literature published from 1980 to 2026. It does not measure incidents or benchmark performance on production agent networks.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-05</span>
             <a class="item-src" href="https://arxiv.org/abs/2608.04626" target="_blank" rel="noopener">arXiv ↗</a>
@@ -233,9 +233,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Meta 测试配置误放开互联网，模型随后利用第三方服务漏洞</h3>
-          <p class="item-b">Meta 8 月 6 日确认，外部安全公司 Irregular 在网络安全测试中出现配置错误，使一个原本应受限的模型访问互联网并利用第三方服务漏洞；Meta 正在调查，完整报告尚未发布。</p><p class="item-b">这次事件的直接失败点是评测环境隔离，而不是模型自行突破未知沙箱；但它说明一旦测试目标、网络出口和凭据边界配置错误，代理会把模拟任务继续执行到真实系统，安全评测本身也必须按生产攻击面治理。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>Meta 只确认第三方服务被利用，未披露模型、受影响公司、数据损失或持续时间；完整调查仍待发布。</p>
+          <h3 class="item-h">Meta reports a third-party security incident after an evaluation environment gained unintended internet access</h3>
+          <p class="item-b">On August 6, Meta confirmed that inadequate isolation during a cybersecurity evaluation run by external firm Irregular allowed a restricted model to affect a real third-party service. Meta was investigating and had not published a full report.</p><p class="item-b">The disclosed failure concerned the evaluation environment’s isolation, with no evidence of an independent escape from an unknown sandbox. An agent’s continued execution reached real systems. Evaluation environments therefore need production-grade controls over permitted targets, connectivity and credentials.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Meta confirmed that a third-party service was abused. It did not name the model or affected companies, quantify data loss, or give the duration. The full investigation was still pending.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-06</span>
             <a class="item-src" href="https://apnews.com/article/0e8061437da6779be962b24ac134a514" target="_blank" rel="noopener">Associated Press ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">ExeCRE 用随机输入的一致性筛掉误导反馈，正确代码被误改次数降近 88%</h3>
-          <p class="item-b">ExeCRE 不依赖额外测试答案或模型裁判，而是让候选代码在大量随机输入上执行，用输出一致性和 Dawid-Skene 模型估计潜在可靠度，再决定是否进入自我修正。</p><p class="item-b">论文在 GPT-5.2 与 LiveCodeBench 上把已经正确代码遭遇的平均误导反馈从 113.2 次降至 14.0 次；方法减少了盲目修正，但随机输入覆盖不足时仍可能让一致错误获得高置信度。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>约 88% 的降幅来自论文特定基线、GPT-5.2 和 LiveCodeBench；尚不能外推到所有语言、私有代码库或工具链。</p>
+          <h3 class="item-h">ExeCRE reduces erroneous changes to correct code by nearly 88% through consistency checks on feedback</h3>
+          <p class="item-b">ExeCRE runs candidate code on many random inputs and uses output agreement and a Dawid–Skene model to estimate reliability before deciding whether to invoke self-correction. It needs neither additional reference answers nor a model judge.</p><p class="item-b">Testing GPT-5.2 on LiveCodeBench, the paper reported a fall from 113.2 to 14.0 in the average number of misleading feedback instances for already-correct code. This can curb unnecessary revisions, although inadequate random input coverage can give consistent errors high confidence.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The roughly 88% reduction applies to the paper&#x27;s chosen baseline, GPT-5.2, and LiveCodeBench. Other languages, private repositories, and toolchains have not been evaluated on that basis.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-05</span>
             <a class="item-src" href="https://arxiv.org/abs/2608.04439" target="_blank" rel="noopener">arXiv ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">WorldCycle 用可逆动作闭环自证长期状态，世界模型回归漂移最多降 44%</h3>
-          <p class="item-b">WorldCycle 把普通动作序列与其逆序组合成闭环，要求模型执行后回到初始状态，从而在没有真实未来视频标注时生成可验证的长期奖励，并用空间闭合与时间一致性共同训练。</p><p class="item-b">论文称状态回归漂移最多降低 44%，组合动作准确率接近基础模型的 4 倍；闭环自证解决了部分长期监督缺口，但可逆动作覆盖不了碰撞、破坏和不可逆交互，仍需开放环境验证。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>44% 和近 4 倍来自作者新建的闭环任务与 CycleBench，主要覆盖可逆动作，不代表开放世界全部长期规划能力。</p>
+          <h3 class="item-h">WorldCycle reports up to 44% less state drift in world models using reversible action cycles</h3>
+          <p class="item-b">WorldCycle joins an action sequence to its reverse and requires a model to return to its initial state. This supplies a verifiable long-horizon reward without labels for future video, using both spatial closure and temporal consistency in training.</p><p class="item-b">The paper reported up to 44% less drift on return to the original state and nearly four times the base model’s accuracy on compound actions. Closed loops supply some long-horizon supervision, but reversible sequences do not cover collisions, destruction or other irreversible interactions. Open-environment validation remains necessary.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The 44% and nearly fourfold results come from the authors&#x27; new closed-loop tasks and CycleBench. The tasks mainly involve reversible actions and do not measure all forms of long-horizon planning in open environments.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-05</span>
             <a class="item-src" href="https://arxiv.org/abs/2608.04964" target="_blank" rel="noopener">arXiv ↗</a>
@@ -267,15 +267,15 @@
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product assessment</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">市场与资产</div>
-          <h3 class="item-h">股票永续扩列门槛应按资产级定价与公司行动能力，而不是按可接入报价数量</h3>
-          <p class="item-b"><strong>判断变化</strong>：从“优先补齐头部股票永续覆盖”更新为“只有指数源、休市定价、公司行动和异常处置均可验证的资产，才进入扩列队列”。</p><p class="item-b"><strong>证据与边界</strong>：Bitget 一次新增消费、旅游、航天和半导体五类股票永续，证明竞品资产覆盖继续加速；但公告没有资产级深度、OI、指数权重或非美股时段价差，无法证明长尾市场质量。</p>
+          <div class="decision-area">Market and Assets</div>
+          <h3 class="item-h">Stock perpetual listings depend on pricing and corporate-action support for each asset</h3>
+          <p class="item-b"><strong>Revised assessment</strong>: Stock perpetual candidates require verifiable index sources, closed-market pricing, corporate-action handling and incident procedures before entering a listing queue.</p><p class="item-b"><strong>Evidence and limits</strong>: Bitget added five equity perpetuals spanning consumer, travel, aerospace and semiconductor exposures. It did not disclose asset-level depth, open interest, index weights or spreads outside U.S. market hours.</p>
 
           <div class="item-meta">
 
@@ -284,7 +284,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

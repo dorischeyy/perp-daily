@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-09-22</title>
+<title>Perp DEX Daily · 2026-09-22</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -82,12 +82,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 84 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 84</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 9 月 22 日 · 星期二</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">September 22, 2026 · Tuesday</div>
     </header>
-    <p class="lead">OKX把对冲模式保证金从双边相加改为取较高侧，Coinbase把IPO申购嵌入零售App，欧洲央行则让代币化资产开始用央行货币结算。</p>
+    <p class="lead">OKX changed margin in hedge mode from the sum of both sides to the larger side. Coinbase added IPO subscriptions to its retail app, and the ECB began enabling tokenized asset settlement in central bank money.</p>
 
 
       <section class="sec sec-perpdex">
@@ -100,27 +100,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">OKX按对冲较高侧计算保证金</h3>
-          <p class="item-b"><strong>事件</strong>：OKX于9月21日宣布，从9月22日起分批调整全仓对冲模式的初始保证金和维持保证金计算，预计10月12日前覆盖全部用户。</p><p class="item-b"><strong>机制</strong>：系统不再把多头与空头两侧保证金相加，而是分别计算持仓与开仓单后取较高一侧，使方向相反的仓位共享风险额度。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>只影响Futures与多币种保证金账户的全仓对冲模式，逐步灰度期间不同用户的页面与API结果可能暂时不同。</p>
+          <h3 class="item-h">OKX bases hedge-mode margin on the larger side</h3>
+          <p class="item-b"><strong>Event</strong>: On September 21, OKX announced a staged change to initial and maintenance margin calculations in cross-margin hedge mode, beginning September 22. It expected to reach all users by October 12.</p><p class="item-b"><strong>Mechanism</strong>: OKX will calculate margin on positions and opening orders separately for each side, then use the larger requirement instead of adding the long and short sides. Opposing positions can therefore share part of their risk capacity.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The change affects only cross-margin hedge mode for Futures and multi-currency margin accounts. During the phased rollout, the interface and API may temporarily return different results for different users.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-21</span>
             <a class="item-src" href="https://www.okx.com/help/okx-to-adjust-initial-and-maintenance-margin-calculations-for-futures-in" target="_blank" rel="noopener">OKX ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Binance用订单簿补齐周末外汇定价</h3>
-          <p class="item-b"><strong>事件</strong>：Binance于9月21日上线USDBRLUSDT永续，以USDT结算并提供最高100倍杠杆，把美元兑巴西雷亚尔纳入全天候TradFi永续。</p><p class="item-b"><strong>机制</strong>：常规外汇时段用第三方报价的加权指数，周末和法定假日改用本平台订单簿EWMA，让没有外部连续报价的时段仍能形成价格指数。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>周末价格由平台自身订单流形成，公告没有披露深度、价差或与周一外汇市场重开时的跳空处理样本。</p>
+          <h3 class="item-h">Binance uses its order book to support weekend FX pricing</h3>
+          <p class="item-b"><strong>Event</strong>: On September 21, Binance listed USDBRLUSDT, a USDT-settled perpetual offering up to 100× leverage on the U.S. dollar against the Brazilian real. It trades around the clock in Binance’s TradFi perpetuals lineup.</p><p class="item-b"><strong>Mechanism</strong>: For regular foreign exchange trading periods, a weighted index based on third-party quotes is used. On weekends and holidays, the platform’s order book EWMA is used instead. This allows for price index formation even during periods without external continuous quotes.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The platform’s own order flow sets weekend prices. The announcement gave no market depth, spreads or examples showing how it handles a price gap when the FX market reopens on Monday.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-21</span>
             <a class="item-src" href="https://www.binance.com/en/support/announcement/detail/533eb2f3998a43e3a34df310998bee48" target="_blank" rel="noopener">Binance ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">MEXC上线Polymarket上市前永续</h3>
-          <p class="item-b"><strong>事件</strong>：MEXC于9月21日上线POLYMARKETUSDT上市前永续，采用逐仓保证金、最高20倍杠杆和全天交易。</p><p class="item-b"><strong>机制</strong>：产品把一家未上市预测市场公司的估值预期转成可连续交易的杠杆合约，并在正式股权发行前先形成二级价格。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>公告没有给出价格参考、IPO触发后的转换或结算规则；该合约不代表持有Polymarket股权。</p>
+          <h3 class="item-h">MEXC launches a Polymarket pre-IPO perpetual</h3>
+          <p class="item-b"><strong>Event</strong>: On September 21, MEXC launched POLYMARKETUSDT premarket perpetuals with isolated margin, up to 20× leverage and round-the-clock trading.</p><p class="item-b"><strong>Mechanism</strong>: The product converts the valuation expectations of a company that is not yet listed into continuously tradable leveraged contracts. This process occurs before the official equity issuance, resulting in secondary prices.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The announcement does not provide price references, conversion rules after an IPO, or settlement rules. This contract does not represent ownership of Polymarket shares.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-21</span>
             <a class="item-src" href="https://www.mexc.com/announcements/article/mexc-to-list-polymarket-pre-ipo-futures-on-sep-21-17827791538742" target="_blank" rel="noopener">MEXC ↗</a>
@@ -138,27 +138,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Coinbase把IPO配售嵌入零售账户</h3>
-          <p class="item-b"><strong>事件</strong>：Coinbase于9月21日向符合条件的美国零售用户开放IPO配售申请，首个项目为Oura，用户可在App内按发行价提交有条件购买意向。</p><p class="item-b"><strong>机制</strong>：FINRA注册券商Coinbase Capital Markets承接配售，算法偏向长期持有者；上市后30天内卖出可能导致未来60天失去参与资格。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>提交申请不保证获配，最终数量取决于承销供给与总需求；功能目前只面向符合条件的美国客户。</p>
+          <h3 class="item-h">Coinbase embeds IPO allocations into its retail accounts</h3>
+          <p class="item-b"><strong>Event</strong>: On September 21, Coinbase opened IPO allocation requests to eligible U.S. retail users, beginning with Oura. Users can submit a conditional indication of interest in the app at the offering price.</p><p class="item-b"><strong>Mechanism</strong>: FINRA-registered brokerage firm Coinbase Capital Markets participates in underwriting deals. The algorithm favors long-term holders. Selling within 30 days after listing may result in disqualification for the next 60 days.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Submitting an application does not guarantee allocation. The final quantity depends on underwriting supply and overall demand. This feature is currently available only to eligible US customers.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-21</span>
             <a class="item-src" href="https://www.coinbase.com/blog/you-can-now-participate-in-ipos-on-coinbase" target="_blank" rel="noopener">Coinbase ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">KuCoin首次触发Spotlight原价回购</h3>
-          <p class="item-b"><strong>事件</strong>：GNOT交易价低于0.0645美元发行价累计超过48小时后，KuCoin于9月21日启动Spotlight原价回购，并计划9月22日执行。</p><p class="item-b"><strong>机制</strong>：回购量取用户完成前每小时快照的最低持仓与原认购量两者较小值，同币种返还认购资金，盈利用户仍可保留已实现收益。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>保护只覆盖已开启自动回购的Spotlight认购者，锁仓、挂单、转账中或不在资金账户的代币可能无法执行。</p>
+          <h3 class="item-h">KuCoin triggers its first Spotlight buyback at the original sale price</h3>
+          <p class="item-b"><strong>Event</strong>: After GNOT traded below its $0.0645 issue price for a cumulative total of more than 48 hours, KuCoin activated its Spotlight buyback at the issue price on September 21. It scheduled execution for September 22.</p><p class="item-b"><strong>Mechanism</strong>: The buyback quantity is the lower of the original subscription and the user’s lowest balance in the hourly snapshots taken before completion. KuCoin refunds the original subscription currency, and users keep any gains they have already realized.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Protection only applies to Spotlight subscribers who have enabled automatic repurchases. Tokens that are locked, in resting orders, or not in the funds account may not be executed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-21</span>
             <a class="item-src" href="https://www.kucoin.com/announcement/en-buyback-for-gno-land-gnot-spotlight-subscription-shares" target="_blank" rel="noopener">KuCoin ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Monochrome用平台币连接IEO与数字IPO</h3>
-          <p class="item-b"><strong>事件</strong>：Monochrome Exchange于9月20日宣布在自有Launchpad发售MCR，公开出售总量的5%，单价0.88美元，认购期为9月21日至28日。</p><p class="item-b"><strong>机制</strong>：代币设置一个月锁定和三个月线性释放，并把手续费折扣、Launchpad与Digital IPO配售、质押和治理放进同一平台权益。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>材料为项目方发布稿，所称260个活跃市场、链上结算和后续配售采用尚无独立数据验证。</p>
+          <h3 class="item-h">Monochrome uses its platform token to connect IEOs and digital IPOs</h3>
+          <p class="item-b"><strong>Event</strong>: Monochrome Exchange announced the launch of MCR on its own Launchpad on September 20th. A total of 5% of the product will be sold publicly, at a price of $0.88 per unit. The subscription period is from September 21st to 28th.</p><p class="item-b"><strong>Mechanism</strong>: Tokens are set to be locked for one month and released linearly over three months. Fees, Launchpad, Digital IPO allocations, staking, and governance are all included in the same platform’s benefits.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The materials are released by the project team. The claimed 260 active markets, on-chain settlement, and subsequent allocations have not been verified with independent data.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-20</span>
             <a class="item-src" href="https://decrypt.co/378719/multi-asset-trading-venue-monochrome-exchange-announces-ieo-of-its-native-token-mcr" target="_blank" rel="noopener">Chainwire ↗</a>
@@ -176,27 +176,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">欧洲央行启动Pontes代币化结算</h3>
-          <p class="item-b"><strong>事件</strong>：欧洲央行于9月21日启动Pontes，让银行和DLT市场基础设施用央行货币结算批发代币化资产交易。</p><p class="item-b"><strong>机制</strong>：Pontes把市场DLT平台连接到TARGET服务，保留无风险结算资产，同时让发行、交易与结算流程继续在代币化基础设施上运行。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>首批银行和运营方已完成接入，但服务范围、参与者与营业时间仍将分阶段扩展，完整实施目标为2028年。</p>
+          <h3 class="item-h">ECB launches Pontes for settlement of tokenized assets</h3>
+          <p class="item-b"><strong>Event</strong>: On September 21st, the European Central Bank launched Pontes, allowing banks and DLT market infrastructure to settle wholesale tokenized assets using central bank currency.</p><p class="item-b"><strong>Mechanism</strong>: Pontes connected the market DLT platform to TARGET services, maintaining risk-free settlement assets while allowing issuance, trading, and settlement processes to continue on the tokenization infrastructure.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The first batch of banks and operators have completed integration. However, the scope of services, participants, and operating hours will still be expanded in phases. The goal is to fully implement this by 2028.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-21</span>
             <a class="item-src" href="https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr260921~e754847a7b.en.html" target="_blank" rel="noopener">European Central Bank ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">ZetaChain投票退出独立L1</h3>
-          <p class="item-b"><strong>事件</strong>：ZetaChain第68号提案于9月20日以99.4%赞成票通过，授权逐步关闭Cosmos L1，并把ZETA按1比1迁移为Solana原生SPL代币。</p><p class="item-b"><strong>机制</strong>：项目用共享链替代自有验证者和升级体系，把资源转向Anuma AI应用；总供应与既有解锁计划保持不变。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>本次投票只是迁移授权，快照高度、停链区块、领取方法和交易所换币仍需第二次提案，现有质押暂时继续。</p>
+          <h3 class="item-h">ZetaChain votes to exit its standalone layer 1</h3>
+          <p class="item-b"><strong>Event</strong>: ZetaChain’s proposal number 68 was approved with 99.4% votes on September 20th. This proposal authorizes the gradual closure of Cosmos L1, and it also mandates that ZETA be migrated to Solana-native SPL tokens at a 1:1 ratio.</p><p class="item-b"><strong>Mechanism</strong>: The project uses a shared chain instead of proprietary validators and upgrade systems. Resources are directed towards the Anuma AI application. The total supply and existing unlocking plans remain unchanged.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>This vote only involves authorization for migration. The height of snapshots, block stops, redemption methods, and exchange coin exchange still require a second proposal. Existing pledges will continue to be honored.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-20</span>
             <a class="item-src" href="https://hub.zetachain.com/governance/proposal/68" target="_blank" rel="noopener">ZetaChain Governance ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Visa要求Memecoin购买改用加密分类</h3>
-          <p class="item-b"><strong>事件</strong>：9月19日报道称，Visa正要求支付处理商停止把Crossmint支持的Memecoin购买归为数字媒体交易，相关宽限期预计本周结束。</p><p class="item-b"><strong>机制</strong>：交易从数字媒体MCC 5815回到加密资产分类后，将重新适用卡组织对加密购买的限制，不能继续按普通消费赚取积分或返现。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>Visa未公开发布指令，报道基于知情人士与往来材料；Crossmint称现行处理程序尚未改变，Mastercard也未披露是否跟进。</p>
+          <h3 class="item-h">Visa requires memecoin purchases to use the crypto transaction category</h3>
+          <p class="item-b"><strong>Event</strong>: Reports from September 19th indicate that Visa is demanding that processors stop categorizing purchases of Memecoin supported by Crossmint as digital media transactions. The relevant grace period is expected to end this week.</p><p class="item-b"><strong>Mechanism</strong>: After transactions are reclassified as crypto assets on the Digital Media MCC 5815, the restrictions on crypto purchases will still apply. Users cannot continue to earn points or discounts through regular consumption.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Visa has not publicly released any instructions. The reports are based on insider information and related materials. Crossmint states that the current processing procedures have not changed, and Mastercard has not disclosed whether it will follow suit.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-19</span>
             <a class="item-src" href="https://www.theblock.co/news/regulation/2026-09-19-visa-to-close-crossmint-memecoin-rewards-loophole-following-the-block-investigation-report-415866" target="_blank" rel="noopener">The Block ↗</a>
@@ -214,27 +214,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">OpenAI提出自动化AI研发共同标准</h3>
-          <p class="item-b"><strong>事件</strong>：OpenAI于9月21日提出面向自动化AI研发的跨国技术标准，覆盖能力测量、人类审查触发条件和事故分级报告。</p><p class="item-b"><strong>机制</strong>：共同定义让不同实验室和国家可比较自主研发进度、护栏强度与事故严重度，同时把是否采用标准留给各国法律体系决定。（嵌入式评估线，自09-18，本次从单家公司访问推进到跨机构共同口径）</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>这是政策主张而非已生效标准；OpenAI明确称完全自主的递归自我改进目前尚未发生。</p>
+          <h3 class="item-h">OpenAI proposes common standards for automated AI research and development</h3>
+          <p class="item-b"><strong>Event</strong>: On September 21, OpenAI proposed a cross-national technical standard for the development of automated AI, covering metrics, human review triggers, and accident classification reports.</p><p class="item-b"><strong>Mechanism</strong>: Common definitions would let labs and countries compare progress in autonomous R&amp;D, the strength of safeguards and incident severity. Each country’s legal system would determine adoption. The embedded evaluation story tracked since September 18 now extends from access at one company to a common framework for several institutions.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>This is a policy statement, not an established standard. OpenAI clearly states that fully autonomous recursive self-improvement has not yet occurred.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-21</span>
             <a class="item-src" href="https://openai.com/index/building-standards-next-phase-ai/" target="_blank" rel="noopener">OpenAI ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Google把Gemini嵌进操作系统指针</h3>
-          <p class="item-b"><strong>事件</strong>：Google于9月21日发布Googlebook，把Gemini直接接入Magic Pointer、语音整理、无代码小组件和本地开发环境。</p><p class="item-b"><strong>机制</strong>：用户选中屏幕对象后才唤起模型，Gemini可在原上下文中安排日程、检查邮件或处理图片，减少复制内容到独立对话框的步骤。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>产品现已开放预订并计划10月4日起发货；主动建议的准确率、企业权限控制和真实使用留存尚未披露。</p>
+          <h3 class="item-h">Google embeds Gemini in the operating system pointer</h3>
+          <p class="item-b"><strong>Event</strong>: On September 21, Google released Googlebook. This tool allows Gemini to be directly integrated into Magic Pointer, voice editing, code-free widgets, and local development environments.</p><p class="item-b"><strong>Mechanism</strong>: The model is activated only after the user selects a screen object. Gemini can schedule tasks, check emails, or process images within the original context, reducing the need to copy content into separate dialog boxes.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Products are now available for reservation, with delivery scheduled for October 4th. The accuracy of proactive recommendations, corporate permission control, and real-world usage have not yet been disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-21</span>
             <a class="item-src" href="https://blog.google/products-and-platforms/devices/googlebook/googlebook-built-in-intelligence/" target="_blank" rel="noopener">Google ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Microsoft用双模型重排化学合成路线</h3>
-          <p class="item-b"><strong>事件</strong>：Microsoft Research于9月21日开源RetroChimera实现与权重，用于从目标分子反推可执行的化学合成路线。</p><p class="item-b"><strong>机制</strong>：系统把自由生成前体的Transformer与受反应模板约束的图模型组合，再学习不同排名下应信任哪一路预测，兼顾罕见反应召回与可靠性。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>专家在10个挑战目标中接受了9条完整路线，但真实实验室成功率、成本和大规模闭环表现仍待验证。</p>
+          <h3 class="item-h">Microsoft uses two models to rerank chemical synthesis routes</h3>
+          <p class="item-b"><strong>Event</strong>: On September 21st, Microsoft Research open-sourced RetroChimera, a tool for calculating executable chemical synthesis routes from target molecules.</p><p class="item-b"><strong>Mechanism</strong>: The system combines freely generated Transformers with graph models constrained by reaction templates. It learns which predictions to trust under different rankings, while also considering rare reactions and reliability.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Experts have completed 9 out of 10 challenges, but the success rate in real laboratories, costs, and large-scale closed-loop performance still need to be verified.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-21</span>
             <a class="item-src" href="https://www.microsoft.com/en-us/research/blog/improving-synthesis-prediction-of-small-molecules-at-scale-with-retrochimera/" target="_blank" rel="noopener">Microsoft Research ↗</a>
@@ -242,7 +242,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

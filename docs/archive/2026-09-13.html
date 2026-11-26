@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-09-13</title>
+<title>Perp DEX Daily · 2026-09-13</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 76 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 76</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 9 月 13 日 · 星期日</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">September 13, 2026 · Sunday</div>
     </header>
-    <p class="lead">Lighter把免gas入金和共享交易核心一起开放，Robinhood Chain上的Pons已拿走过半受追踪发射台手续费，Anthropic则把AI安全讨论推进到外部评估者员工级访问。</p>
+    <p class="lead">Lighter opened gas-free deposits and access to a shared trading engine. Pons collected over half the fees among tracked launchpads on Robinhood Chain. Anthropic proposed staff-level access for external AI safety evaluators.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,9 +110,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Lighter开放共享交易核心与免gas入金</h3>
-          <p class="item-b"><strong>事件</strong>：Lighter在同次更新中开放免gas入金、开发者共享交易核心和自定义PnL日期，并把账户转移费降至1美元、提高提币频率上限。</p><p class="item-b"><strong>机制</strong>：更新同时压低用户资金迁移成本并向外部开发者开放交易底座，分发前端可以少搭一层账户与执行能力。</p><p class="item-b"><strong>二阶效应</strong>：入口越容易复用，客户归属、故障处置和资金限制越需要按前端与交易核心分别界定；目前尚无开发者接入量或新增订单流。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>功能已上线，开发者采用情况仍待观察。</p>
+          <h3 class="item-h">Lighter opens its shared trading engine and gas-free deposits</h3>
+          <p class="item-b"><strong>Event</strong>: Lighter rolled out gas-free deposits, a shared trading core for developers and customizable P&amp;L date ranges. It also cut the account transfer fee to $1 and raised the withdrawal frequency limit.</p><p class="item-b"><strong>Mechanism</strong>: The system updates the cost of user fund transfers and opens the trading base to external developers. The distribution front can use fewer accounts and execution capabilities.</p><p class="item-b"><strong>Second-order effects</strong>: The easier it is for customers to reuse entry points, the more importance should be given to defining customer ownership, fault handling, and funding restrictions separately for the front-end and transaction core. Currently, there are no developers accessing the system, nor any new order streams.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Features are now available; however, developers’ adoption remains to be seen.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-12</span>
             <a class="item-src" href="https://perpdexwars.com/en/perpdex-news?venue=hyperliquid" target="_blank" rel="noopener">PerpDEX Wars ↗</a>
@@ -120,9 +120,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Entropy把builder手续费返给交易与推荐用户</h3>
-          <p class="item-b"><strong>事件</strong>：Entropy开放首轮HYPE返利领取，覆盖平台交易用户和推荐用户。</p><p class="item-b"><strong>机制</strong>：返利来自Entropy deployer层收取的builder手续费，费用先转换为HYPE，再通过推荐页面发放。</p><p class="item-b"><strong>二阶效应</strong>：前端可把订单流收入的一部分直接回流给用户，但返利持续性取决于真实交易量和后续分配规则。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>首轮已可领取，页面未披露本轮总额和长期比例。</p>
+          <h3 class="item-h">Entropy rebates builder fees to traders and referrers</h3>
+          <p class="item-b"><strong>Event</strong>: Entropy started accepting HYPE rewards for the first time, covering both platform users and recommended users.</p><p class="item-b"><strong>Mechanism</strong>: The rebate comes from builder fees collected at Entropy’s deployer layer. Fees are converted to HYPE before distribution through the referral page.</p><p class="item-b"><strong>Second-order effects</strong>: The front-end can directly return part of the order flow revenue to users. However, the sustainability of this return depends on actual transaction volume and subsequent allocation rules.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The first round of rewards can be claimed now, but the total amount and the long-term proportion for this round have not been disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-13</span>
             <a class="item-src" href="https://perpdexwars.com/en/perpdex-news?venue=hyperliquid" target="_blank" rel="noopener">PerpDEX Wars ↗</a>
@@ -130,9 +130,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Poly Perps把ARB永续接进Polymarket</h3>
-          <p class="item-b"><strong>事件</strong>：Poly Perps在Polymarket上线ARB永续，支持最高10倍杠杆，不设交易时段和到期日。</p><p class="item-b"><strong>机制</strong>：产品把连续价格的杠杆合约放进以事件市场著称的分发入口，让同一流量入口同时承接结果判断和价格方向交易。</p><p class="item-b"><strong>二阶效应</strong>：跨品类入口可能降低获客成本，但流动性来源、做市深度与清算安排尚未披露。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>ARB市场已上线，当前更接近单市场试水。</p>
+          <h3 class="item-h">Poly Perps brings ARB perpetuals to Polymarket</h3>
+          <p class="item-b"><strong>Event</strong>: Poly Perps launched ARB perpetual contracts on Polymarket. Leverage can reach up to 10 times. There are no trading hours or expiration dates.</p><p class="item-b"><strong>Mechanism</strong>: The product incorporates leveraged contracts with continuous prices into a distribution platform known for its event-based markets. This allows the same trading platform to handle both price direction trading and result-based decisions.</p><p class="item-b"><strong>Second-order effects</strong>: Bringing multiple asset classes together could reduce acquisition costs. The sources of liquidity, depth provided by market makers and liquidation arrangements remain undisclosed.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The ARB market has been launched, and it is currently more like a pilot market.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-12</span>
             <a class="item-src" href="https://perpdexwars.com/en/perpdex-news?venue=hyperliquid" target="_blank" rel="noopener">PerpDEX Wars ↗</a>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Pons拿走过半受追踪发射台手续费</h3>
-          <p class="item-b"><strong>事件</strong>：9月12日Pons录得583.84万美元手续费和9001.51万美元DefiLlama口径曲线成交，在MemeFees样本中占50.4%手续费份额。（Robinhood分发线 · 自07-02 · 新增Pons价值捕获）</p><p class="item-b"><strong>机制与影响</strong>：V1池手续费为1%，当前工厂按70%给创建者、30%给协议；最新完整日约496.25万美元流向供给侧、87.59万美元计入协议收入，但最近7日手续费较前7日下降49%。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>成交只含V2曲线swap，手续费份额只对应MemeFees样本，不能外推全市场或活跃钱包。</p>
+          <h3 class="item-h">Pons collects more than half of tracked launchpad fees</h3>
+          <p class="item-b"><strong>Event</strong>: On September 12, Pons recorded $5.8384 million in fees and $90.0151 million in bonding-curve volume under DefiLlama’s methodology. It accounted for 50.4% of the fees in the MemeFees sample, adding evidence of Pons’s fee capture to the Robinhood distribution story tracked since July 2.</p><p class="item-b"><strong>Mechanism and impact</strong>: The fee for V1 pools is 1%. Currently, 70% goes to creators, and 30% goes to the protocol. In the latest full day, approximately 4.9625 million USD flowed to the supply side, with 875,900 USD accounted for as protocol revenue. However, the fee has decreased by 49% in the past 7 days compared to the previous 7 days.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The transactions only involve V2 curve swaps. The fee share corresponds only to the MemeFees sample. It cannot be generalized to the entire market or active wallets.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-12</span>
             <a class="item-src" href="https://memefees.com/launchpads/pons" target="_blank" rel="noopener">MemeFees ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Launchpad.meme把LP手续费持续回购销毁</h3>
-          <p class="item-b"><strong>事件</strong>：Launchpad.meme把协议获得的30% LP手续费全部用于回购并销毁LPAD；截至9月12日，页面记录1,731笔回购、销毁1,411.9953万枚LPAD，总成本7,139.08美元。</p><p class="item-b"><strong>机制与影响</strong>：协议通过连续小额链上买入把交易手续费转成代币净销毁，而不是先进入可自由支配的金库；绝对金额仍小，暂不足以证明代币需求或发射台采用形成规模。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>回购交易可查，价值捕获规模仍处早期。</p>
+          <h3 class="item-h">Launchpad.meme uses LP fees for ongoing buybacks and burns</h3>
+          <p class="item-b"><strong>Event</strong>: Launchpad.meme uses 30% of the LP fees obtained from the protocol for repurchasing and destroying LPADs. As of September 12th, the page recorded 1,731 repurchases and destructions of 14.119953 million LPADs, with a total cost of 7,139.08 USD.</p><p class="item-b"><strong>Mechanism and impact</strong>: The agreement converts transaction fees into token destruction through continuous small-scale on-chain purchases. The amount remains small and insufficient to prove token demand or the scale of adoption by platforms.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Repurchase transactions are available; the scale of value capture is still in its early stages.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-12</span>
             <a class="item-src" href="https://launchpad.meme/buybacks?lang=yo" target="_blank" rel="noopener">Launchpad.meme ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">本周主线｜BIBO把发射与流动性激励拆开</h3>
-          <p class="item-b"><strong>事件</strong>：BIBO于9月7日先上线BIBOCAT配对发射，代币沿曲线成交并在毕业后进入流动性池，同时预留创建者与持币者费用。</p><p class="item-b"><strong>机制与影响</strong>：后续计划由ve(3,3)投票把排放导向交易活跃的池，并把发射台协议收入按80%回购销毁BIBO、20%用于运营；BIBO代币、投票和排放尚未上线，当前只能验证发射环节。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>机制文档完整度高于实际落地，需等待投票与激励上线后再评估闭环。</p>
+          <h3 class="item-h">Weekly theme | BIBO separates launch incentives from liquidity incentives</h3>
+          <p class="item-b"><strong>Event</strong>: On September 7, BIBO first enabled launches paired with BIBOCAT. New tokens trade along a bonding curve and enter a liquidity pool at graduation. The design also reserves fees for creators and token holders.</p><p class="item-b"><strong>Mechanism and impact</strong>: Under the proposed design, ve(3,3) votes would direct emissions to actively traded pools. Of launchpad protocol revenue, 80% would buy back and burn BIBO and 20% would fund operations. The BIBO token, voting and emissions have yet to go live. Only the launch process is currently verifiable.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The completeness of the mechanism documentation exceeds what is actually implemented. Evaluation will be conducted after the voting and incentives are launched.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-07</span>
             <a class="item-src" href="https://bibo.trade/docs/how-bibo-works" target="_blank" rel="noopener">BIBO Docs ↗</a>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">SideSwap恢复交易但仍关闭peg-out</h3>
-          <p class="item-b"><strong>事件</strong>：SideSwap在9月11日最新运营更新中恢复市场、swap与peg-in，但Liquid Federation的peg-out仍因安全审查关闭。</p><p class="item-b"><strong>机制与影响</strong>：用户可以交易和把BTC转入Liquid，却仍不能通过联邦桥按正常路径赎回BTC；运营方报告流通4,229枚L-BTC、储备3,627枚BTC，在peg-out恢复前，储备差额与退出安排仍是关键风险。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>储备数字来自运营方且未独立核验，恢复交易不等于恢复兑付。</p>
+          <h3 class="item-h">SideSwap reopens trading while keeping peg-outs closed</h3>
+          <p class="item-b"><strong>Event</strong>: In its latest operational update on September 11, SideSwap restored markets, swaps, and peg-in functions. However, Liquid Federation’s peg-out function remains closed due to security reviews.</p><p class="item-b"><strong>Mechanism and impact</strong>: Users can trade and transfer BTC to Liquid, but they still cannot redeem BTC through the federal bridge using the normal path. The operator reported 4,229 L-BTC in circulation and 3,627 BTC in reserves. Before the peg-out process is restored, the reserve difference and exit arrangements remain key risks.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The reserve numbers come from the operating party and have not been independently verified. Restarting transactions does not mean resuming payments.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-11</span>
             <a class="item-src" href="https://www.cryptocompass.com/articles/sideswap-reopens-l-btc-trading-peg-outs-remain-suspended" target="_blank" rel="noopener">CryptoCompass ↗</a>
@@ -202,9 +202,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Polymath把代币发行接入受监管信托托管</h3>
-          <p class="item-b"><strong>事件</strong>：Polymath与High Ridge Trust合作，把代币化证券的发行、合规和生命周期技术接入受监管信托托管及客户指令交易。</p><p class="item-b"><strong>机制与影响</strong>：技术层负责资产创建与规则执行，信托公司负责合格托管和受托流程，试图补齐机构从发行到持有的责任链；收益产品和更多集成仍是未来方向，尚无资产规模或上线时间表。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>合作已宣布，产品集成、发行方和资金规模未披露。</p>
+          <h3 class="item-h">Polymath connects token issuance to regulated trust custody</h3>
+          <p class="item-b"><strong>Event</strong>: Polymath has partnered with High Ridge Trust to integrate tokenized securities issuance, compliance, and lifecycle technologies into regulated trust custody and client-order trading.</p><p class="item-b"><strong>Mechanism and impact</strong>: The technical layer is responsible for asset creation and rule execution. Trust companies are responsible for qualified custody and fiduciary processes. Efforts are being made to complete the responsibility chain from issuance to holding. Revenue products and further integrations are still the future directions. There is no specific asset size or launch timeline yet.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Cooperation has been announced, but product integration, issuers, and funding amounts remain undisclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-11</span>
             <a class="item-src" href="https://www.prnewswire.com/news-releases/polymath-and-high-ridge-trust-partner-to-advance-institutional-infrastructure-for-tokenized-securities-881804579.html" target="_blank" rel="noopener">PR Newswire ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Ethena把USDe与sUSDe接入TRON</h3>
-          <p class="item-b"><strong>事件</strong>：Ethena在9月12日通过Stargate把USDe和sUSDe接入TRON，用户现可跨链、持有和转账。</p><p class="item-b"><strong>机制与影响</strong>：先建立资产分发与跨链通道，再计划接入JustLend、SUN.io、钱包和交易平台；借贷、DEX和钱包集成仍未落地，现阶段不能把可转账等同于真实采用。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>跨链通道已上线，核心DeFi场景仍在计划中。</p>
+          <h3 class="item-h">Ethena brings USDe and sUSDe to TRON</h3>
+          <p class="item-b"><strong>Event</strong>: Ethena connected USDe and sUSDe to TRON on September 12th through Stargate. Now, users can cross-chain, hold, and transfer assets.</p><p class="item-b"><strong>Mechanism and impact</strong>: First, asset distribution and cross-chain channels need to be established. Then, plans are in place to integrate JustLend, SUN.io, wallets, and trading platforms. Lending, DEX, and wallet integrations are still in progress. At this stage, transferability cannot be equated with actual adoption.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Cross-chain channels have been launched, but the implementation of core DeFi scenarios is still in progress.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-12</span>
             <a class="item-src" href="https://exbasi.com/news/ethena-brings-usde-and-susde-to-tron-expanding-digital-dollar-access-across-its-stablecoin-ecosystem-3622" target="_blank" rel="noopener">EXBASI ↗</a>
@@ -226,16 +226,16 @@
         <div class="sec-head">
           <span class="sec-no">04</span>
           <div>
-            <h2 class="sec-title">AI 相关</h2>
+            <h2 class="sec-title">AI</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
 
-          <h3 class="item-h">OpenAI把长任务执行收进Agents API</h3>
-          <p class="item-b"><strong>事件</strong>：OpenAI于9月10日公开测试Agents API，用单一接口指定任务、模型、工具和运行环境，并支持托管沙箱、长时会话、上下文压缩与多智能体。</p><p class="item-b"><strong>机制与影响</strong>：开发者可以使用OpenAI托管环境，也可接入自有运行时或沙箱伙伴，把工具搜索和程序化调用放进同一执行流程；公测阶段的可靠性、可移植性和长期成本仍需真实任务验证。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>已面向开发者公测，除模型与工具用量外不另收API费。</p>
+          <h3 class="item-h">OpenAI brings long-running task execution into the Agents API</h3>
+          <p class="item-b"><strong>Event</strong>: OpenAI publicly tested the Agents API on September 10. This API allows for the specification of tasks, models, tools, and operating environments using a single interface. It also supports hosting sandboxes, long-term interactions, context compression, and multi-agent systems.</p><p class="item-b"><strong>Mechanism and impact</strong>: Developers can use OpenAI’s hosted environment or connect their own runtime or a sandbox partner, combining tool search and programmatic calls in one execution flow. Reliability, portability and long-term cost still need testing on real tasks during the public beta.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>It has been released for public testing by developers. No additional API fees are charged, except for model and tool usage.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-10</span>
             <a class="item-src" href="https://openai.com/index/introducing-the-agents-api/" target="_blank" rel="noopener">OpenAI ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Google把Gemini带进威尼斯XR叙事</h3>
-          <p class="item-b"><strong>事件</strong>：Google支持的三个XR项目在第83届威尼斯国际电影节首映，分别使用Gemini、Vertex AI对话能力和2D转3D自动空间化。</p><p class="item-b"><strong>机制与影响</strong>：生成式模型不只生成素材，也在体验中实时驱动角色对话与空间内容转换，使叙事根据观众互动改变；目前只有三个项目，尚无规模化用户数据或商业模式验证。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>作品已首映，仍属于项目级展示。</p>
+          <h3 class="item-h">Google brings Gemini to an XR narrative experience in Venice</h3>
+          <p class="item-b"><strong>Event</strong>: Three XR projects supported by Google were presented at the 83rd Venice International Film Festival. These projects utilize Gemini and Vertex AI’s dialogue capabilities, as well as 2D-to-3D automatic spatialization.</p><p class="item-b"><strong>Mechanism and impact</strong>: Generative models not only generate content but also drive character dialogue and spatial content transformation in real-time during the experience. This allows narratives to change based on audience interaction. Currently, there are only three projects, and there is no large-scale user data or business model validation yet.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The project has been released, but it still belongs to the project-level display category.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-11</span>
             <a class="item-src" href="https://blog.google/innovation-and-ai/technology/xr-ar/three-google-supported-projects-premiere-during-the-83rd-venice-international-film-festival/" target="_blank" rel="noopener">Google Blog ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Anthropic承诺给外部评估者员工级访问</h3>
-          <p class="item-b"><strong>事件</strong>：Anthropic CEO Dario Amodei表示将让外部评估者获得接近员工级的系统访问，用于检查前沿模型风险，并呼吁行业降低竞速速度。</p><p class="item-b"><strong>机制与影响</strong>：更深的外部访问可让评估者在发布前接触内部能力与防护，而不是只测试公开接口；目前仍是企业承诺，不具备统一标准或法律约束。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>访问承诺已提出，执行范围和同行采用仍未明确。</p>
+          <h3 class="item-h">Anthropic promises employee-level access for external evaluators</h3>
+          <p class="item-b"><strong>Event</strong>: Dario Amodei, CEO of Anthropic, stated that external evaluators will have access to systems on a level close to that of employees. This will help assess the risks associated with cutting-edge models. He also called for the industry to reduce the pace of competition.</p><p class="item-b"><strong>Mechanism and impact</strong>: More extensive external access allows evaluators to access internal capabilities and protections before the release, rather than just testing public interfaces. Currently, this remains a commitment by enterprises, without any unified standards or legal constraints.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The commitment to provide access has been made, but the scope of implementation and the adoption by peers remain unclear.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-12</span>
             <a class="item-src" href="https://www.axios.com/2026/09/12/anthropic-ai-amodei-pacing" target="_blank" rel="noopener">Axios ↗</a>
@@ -263,7 +263,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

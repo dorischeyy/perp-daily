@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-07-31</title>
+<title>Perp DEX Daily · 2026-07-31</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 38 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 38</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 7 月 31 日 · 星期五</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">July 31, 2026 · Friday</div>
     </header>
-    <p class="lead">CFTC 与 Hyperliquid 阵营把预测市场竞争推进到合约认证和联邦监管口径，Mobee 则把 27 只全球股票与 ETF 的代币化入口带给印尼用户。</p>
+    <p class="lead">The CFTC and groups aligned with Hyperliquid brought contract certification and federal oversight to the center of the prediction-market debate. Mobee gave Indonesian users tokenized access to 27 global stocks and ETFs.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,12 +110,12 @@
 
         <article class="item">
 
-          <h3 class="item-h">本周主线 ｜ Hyperliquid 阵营把预测市场竞争推进到 CFTC 统一监管与结算口径</h3>
-          <p class="item-b"><strong>事件</strong>：（预测市场联邦规则线，自 07-24，第 2 个进展）CFTC 07-24 要求指定合约市场停止用宽泛模板一次性自我认证大量事件合约；Hyperliquid Policy Center 与 Multicoin 07-27 联合支持 CFTC 的预测市场框架，并主张由单一联邦监管者负责。</p><p class="item-b"><strong>机制</strong>：CFTC 要求场所逐项说明结算方法、数据源与核心原则合规；Hyperliquid 阵营进一步建议按合约实际结算结果判断是否涉及受限活动，并公开每次允许或阻止合约的理由，让 outcome contracts 的准入边界可复用。</p><p class="item-b"><strong>二阶效应</strong>：预测市场的竞争门槛不再只是更快创建合约，而是能否为每类结果提供可审计的数据源、结算规则与监管材料；Hyperliquid 已有链上 outcome contracts，但联合意见仍是政策主张，不代表最终规则或场内采用已经确定。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>联合意见是对拟议框架的政策主张，CFTC 07-24 文件是自我认证程序提醒；两者都不是最终规则、牌照批准或成交采用数据。</p>
+          <h3 class="item-h">Weekly theme | Hyperliquid policy group calls for common federal oversight and settlement standards for prediction markets</h3>
+          <p class="item-b"><strong>Event</strong>: On July 24, the CFTC asked designated contract markets to stop using broad templates to self-certify large batches of event contracts. On July 27, the Hyperliquid Policy Center and Multicoin backed a CFTC framework for prediction markets and called for a single federal regulator. This was the second update since July 24.</p><p class="item-b"><strong>Mechanism</strong>: The CFTC asked venues to explain settlement methods, data sources and compliance with core principles for each contract. The policy submission proposed assessing restricted activities by what the contract actually settles on and publishing the reasons for admission or rejection.</p><p class="item-b"><strong>Second-order effects</strong>: Auditable data, settlement rules and regulatory records affect the ability to offer event contracts. Hyperliquid already had onchain outcome contracts. The joint submission was a policy position, with no final rule or venue adoption established by it.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The joint submission was a response to a proposed framework. The CFTC’s July 24 document was procedural guidance on self-certification. Neither constituted a final rule, a licence approval or evidence of trading adoption.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-27</span>
-            <a class="item-src" href="https://hyperliquidpolicy.org/blog/hpc-and-multicoin-back-the-cftc-s-prediction-markets-framework" target="_blank" rel="noopener">Hyperliquid Policy Center ↗</a><a class="item-src item-ref" href="https://www.cftc.gov/PressRoom/PressReleases/9273-26" target="_blank" rel="noopener">补充：CFTC · 07-24 ↗</a>
+            <a class="item-src" href="https://hyperliquidpolicy.org/blog/hpc-and-multicoin-back-the-cftc-s-prediction-markets-framework" target="_blank" rel="noopener">Hyperliquid Policy Center ↗</a><a class="item-src item-ref" href="https://www.cftc.gov/PressRoom/PressReleases/9273-26" target="_blank" rel="noopener">Additional source: CFTC · 07-24 ↗</a>
           </div>
         </article>
         </div>
@@ -131,9 +131,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Mobee 面向印尼用户整合 27 只全球股票与 ETF 的代币化入口</h3>
-          <p class="item-b">印尼交易平台 Mobee 07-28 宣布开放 27 只全球股票与 ETF 的代币化交易入口，产品页显示用户可用印尼盾或加密资产购买，并可通过 Solana 在平台与 Web3 钱包之间转移代币。</p><p class="item-b">这些代币提供相关股票或 ETF 的经济敞口而非实体股东身份，入口把本地法币、交易所账户与链上可转移资产串成一条分发链；公告未给出成交、持仓或赎回规模，现阶段只能确认产品覆盖与流转路径。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>已确认 27 只股票与 ETF 的目录及 Solana 充提能力，但官方未披露用户数、成交、持仓、做市深度或底层资产托管规模。</p>
+          <h3 class="item-h">Mobee brings tokenized access to 27 global stocks and ETFs to Indonesian users</h3>
+          <p class="item-b">On July 28, Indonesian exchange Mobee announced tokenized access to 27 global stocks and ETFs. Its product page says users can buy with rupiah or crypto and transfer tokens between the exchange and Web3 wallets on Solana.</p><p class="item-b">The tokens provide economic exposure to the relevant shares or ETFs without granting direct shareholder status. The service connects local currency, exchange accounts and transferable onchain assets. Mobee had not disclosed trading volume, holdings or redemptions, so the announcement establishes availability and transfer routes only.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The catalog lists 27 stocks and ETFs, with deposits and withdrawals on Solana. The operator did not disclose user count, volume, positions, market depth, or the amount of underlying assets in custody.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-28</span>
             <a class="item-src" href="https://web.mobee.com/en/news" target="_blank" rel="noopener">Mobee ↗</a>
@@ -145,15 +145,15 @@
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product assessment</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">合规</div>
-          <h3 class="item-h">事件合约应先成为可审计的结算对象，再成为可批量创建的市场</h3>
-          <p class="item-b"><strong>判断变化</strong>：从“预测市场可以沿用普通标的的参数化上币流程”更新为“每类事件合约必须先绑定结算来源、争议路径与准入证据，再开放创建和交易”。</p><p class="item-b"><strong>证据与边界</strong>：CFTC 已明确反对用宽泛模板一次认证大量事件合约，Hyperliquid 阵营要求采用结算结果口径并公开审查理由；当前仍处于政策讨论阶段，不能据此假定最终规则会完全采纳。</p>
+          <div class="decision-area">Compliance</div>
+          <h3 class="item-h">Event contracts require auditable settlement before they can be listed at scale</h3>
+          <p class="item-b"><strong>Revised assessment</strong>: An event contract needs a settlement source, a dispute process and evidence of eligibility before a venue allows creation and trading. Ordinary asset-listing parameters cannot establish those conditions.</p><p class="item-b"><strong>Evidence and limits</strong>: The CFTC opposed broad templates for certifying many event contracts at once. Hyperliquid-aligned groups proposed reviewing the actual settlement outcome and publishing reasons. These were policy positions, not a final adopted rule.</p>
 
           <div class="item-meta">
 
@@ -162,7 +162,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

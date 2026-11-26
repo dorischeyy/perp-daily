@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-08-04</title>
+<title>Perp DEX Daily · 2026-08-04</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 40 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 40</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 8 月 4 日 · 星期二</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">August 4, 2026 · Tuesday</div>
     </header>
-    <p class="lead">比特币期货年化基差已跌到美国两年期国债之下，而永续合约正同时向更多资产扩列，竞争焦点开始从合约形式转向净收益、场所风控与可验证分发。</p>
+    <p class="lead">The annualized bitcoin futures basis fell below the yield on two-year U.S. Treasuries as venues continued adding perpetual markets. The economics increasingly depend on net returns, venue risk controls and evidence that a distribution channel brings in traders.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,9 +110,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">比特币期货年化基差降至约 3%，低于两年期美债</h3>
-          <p class="item-b"><strong>事件</strong>：CoinDesk 报道，比特币期货年化基差已从历史上超过 20% 降至约 3%，低于美国两年期国债约 3.8% 的收益率；该相对关系截至报道时已持续 157 天。</p><p class="item-b"><strong>机制</strong>：现金与期货套利需要同时占用现货和衍生品保证金，还要承担交易、托管、融资与展期成本；当名义基差低于低风险美元资产后，机构套利资金缺少继续压入的净收益补偿。</p><p class="item-b"><strong>二阶效应</strong>：成熟市场的竞争不再只是提供高杠杆，而是能否显示扣除资金成本后的真实 carry，并让现货、期货和永续在同一风险预算中比较；3% 与 3.8% 是报道时点的年化口径，不代表所有期限和场所。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>约 3% 是报道时点的比特币期货年化基差，两年期美债约 3.8%；期限、费用和保证金条件不同，不能直接视为同一种收益。</p>
+          <h3 class="item-h">Bitcoin’s annualized futures basis falls to about 3%, below the two-year U.S. Treasury yield</h3>
+          <p class="item-b"><strong>Event</strong>: CoinDesk reported that the annualized bitcoin futures basis had fallen from historical levels above 20% to about 3%, below the roughly 3.8% yield on two-year U.S. Treasuries. At publication, the basis had remained below that yield for 157 days.</p><p class="item-b"><strong>Mechanism</strong>: Cash-and-carry arbitrage requires capital for spot holdings and derivative margin, plus trading, custody, financing and roll costs. A nominal basis below a lower-risk dollar yield leaves less compensation for committing institutional capital.</p><p class="item-b"><strong>Second-order effects</strong>: A venue can make these products easier to compare by showing carry after financing costs and accounting for the risk budget across spot, futures and perpetuals. The 3% basis and 3.8% Treasury yield were annualized observations at publication, not figures for every maturity or venue.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The reported bitcoin futures basis was about 3% annualized versus a two-year Treasury yield near 3.8%. Maturity, fees and margin requirements differ.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-03</span>
             <a class="item-src" href="https://www.coindesk.com/markets/2026/08/03/the-bitcoin-futures-yield-collapse-once-over-20-now-less-than-treasury-notes" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -120,9 +120,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">本周主线 ｜ 永续的系统性风险取决于场所设计而非无到期日</h3>
-          <p class="item-b"><strong>事件</strong>：Bullish Exchange 总裁 Chris Tyrer 在 CoinDesk 观点文章中反驳“永续合约天然制造系统性风险”，把关键变量指向杠杆上限、保证金、指数、资金费率和违约处理。</p><p class="item-b"><strong>机制</strong>：极端行情下，清算能否按顺序吸收亏损，取决于初始与维持保证金、保险基金、自动减仓和清算瀑布；同一无到期日合约放在不同场所，会形成完全不同的尾部损失分配。</p><p class="item-b"><strong>二阶效应</strong>：监管与产品比较应要求场所披露压力测试、指数异常和违约瀑布，而不是只按合约是否到期分类；作者所在 Bullish 已申请美国 DCM 与 DCO 牌照，本文属于有利益相关方的观点，不是独立监管结论。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>这是 7 日内周线观点；作者为 Bullish Exchange 总裁，Bullish 正申请美国交易与清算牌照，论点需按利益相关方意见阅读。</p>
+          <h3 class="item-h">Weekly theme | Venue design shapes systemic risk in perpetual markets</h3>
+          <p class="item-b"><strong>Event</strong>: In a CoinDesk opinion article, Bullish Exchange President Chris Tyrer challenged the claim that perpetuals inherently create systemic risk. He identified leverage limits, margin, reference indexes, funding and default procedures as the relevant variables.</p><p class="item-b"><strong>Mechanism</strong>: In stressed markets, the sequence in which losses are absorbed depends on initial and maintenance margin, insurance funds, auto-deleveraging and the liquidation waterfall. Venues offering the same perpetual contract can therefore allocate tail losses very differently.</p><p class="item-b"><strong>Second-order effects</strong>: A comparison of venues should include stress tests, index disruptions and default waterfalls alongside contract expiry. Tyrer’s employer, Bullish, has applied for U.S. designated contract market and derivatives clearing organization licenses. The article presents an interested operator’s view.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>This weekly item covers commentary published within seven days. Its author is president of Bullish Exchange, which is seeking US trading and clearing licenses. The argument reflects an interested party&#x27;s position.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-29</span>
             <a class="item-src" href="https://www.coindesk.com/opinion/2026/07/29/the-systemic-risk-debate-over-perpetual-futures-is-aimed-at-the-wrong-target" target="_blank" rel="noopener">CoinDesk Opinion ↗</a>
@@ -130,9 +130,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">本周主线 ｜ 可定价标的正在被快速改造成永续市场</h3>
-          <p class="item-b"><strong>事件</strong>：Katana CEO Nathan Scott 在 CoinDesk 观点文章中总结，永续已从加密资产外扩到股票、商品与预测类标的，市场创建的前提逐渐简化为可获得参考价格和持续交易需求。</p><p class="item-b"><strong>机制</strong>：稳定币保证金、链上清算与无需逐一迁移底层资产，让平台可以先部署价格敞口，再通过资金费率把合约价格拉回指数；这提高扩列速度，也把预言机、停牌、公司行动和参考市场休市风险集中到场所规则。</p><p class="item-b"><strong>二阶效应</strong>：扩列能力会商品化，真正护城河转向参考价格质量、分发和异常处置；文章由交易基础设施从业者撰写，且没有给出跨场所采用率，不能据此判断所有新增标的已有稳定流动性。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>页面实际标注 2026-07-30 发布，URL 中的 07-28 不是发布日；这是 7 日内周线观点，不是新增市场数量统计。</p>
+          <h3 class="item-h">Weekly theme | More assets with observable prices are becoming perpetual markets</h3>
+          <p class="item-b"><strong>Event</strong>: Katana CEO Nathan Scott wrote in CoinDesk that perpetuals had expanded from crypto to equities, commodities and prediction-related underlyings. In his view, launching a market increasingly depends on access to a reference price and sustained trading demand.</p><p class="item-b"><strong>Mechanism</strong>: Stablecoin margin and onchain liquidation let venues offer price exposure without transferring each underlying asset. Funding then anchors the contract to its index. Faster listings place greater responsibility on venue rules for oracles, halts, corporate actions and closures in the reference market.</p><p class="item-b"><strong>Second-order effects</strong>: As listings become easier to replicate, reference-price quality, distribution and handling disruptions become more important. The author works in trading infrastructure and supplied no cross-venue adoption figures. Lasting liquidity in each new market remains unproven.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The page gives July 30, 2026 as the publication date. July 28 appears in the URL. This weekly item covers a recent opinion and supplies no count of new markets.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-30</span>
             <a class="item-src" href="https://www.coindesk.com/opinion/2026/07/28/everything-is-becoming-a-perp" target="_blank" rel="noopener">CoinDesk Opinion ↗</a>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">FWA 把 NFT 流动池改造成链上抽卡发行机制</h3>
-          <p class="item-b">Fake World Assets 允许流动性提供者存入 NFT 与 ETH，用户付费随机抽取，中奖 NFT 可保留或按机制换回 FWA；报道显示其上线四天内一度成为以太坊 24 小时最大 gas 消耗者，7 月 31 日 TVL 约 615 万美元。</p><p class="item-b">这种机制把发行、游戏化抽取和二级流动性放进同一池，但代币激励可能放大早期活跃，且抽卡支付、NFT 估值与 FWA 奖励之间存在循环定价风险，短期 gas 与 TVL 不能证明长期需求。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>产品已运行并产生链上费用与 TVL，但数据集中在上线最初四天，且受代币奖励影响，尚不能外推留存。</p>
+          <h3 class="item-h">FWA uses an NFT liquidity pool to issue randomized onchain packs</h3>
+          <p class="item-b">Fake World Assets lets liquidity providers deposit NFTs and ETH. Users pay for a random draw and may keep the NFT or exchange it for FWA under the protocol’s rules. Within four days of launch it briefly led Ethereum’s 24-hour gas consumption, according to the report. TVL was about $6.15 million on July 31.</p><p class="item-b">The pool combines issuance, randomized draws and secondary liquidity. Token rewards can inflate early activity, and draw prices, NFT valuations and FWA rewards can feed back into each other. Short-term gas use and TVL reveal little about lasting demand.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The product is live and has generated onchain fees and TVL. The data cover just the first four days and reflect token rewards. They do not establish retention.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-03</span>
             <a class="item-src" href="https://cointelegraph.com/magazine/how-fake-world-assets-and-online-gacha-became-cryptos-latest-craze" target="_blank" rel="noopener">Cointelegraph Magazine ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">OnlyMarms 迷因币先于研究团队形成非官方发行层</h3>
-          <p class="item-b">UCLA 旱獭研究团队通过 OnlyFans 募集约 4000 美元后，Solana 上出现超过 10 个 OnlyMarms 相关迷因币；研究团队称代币并非其创建，但有人邀请他们认领交易并获得手续费。</p><p class="item-b">这展示 launchpad 可在品牌方缺席时先创建金融化入口，再反向邀请品牌认领收入；同时，创建者身份、授权关系和资金去向均不清楚，用户不能把主题关联误读为官方背书。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>报道确认超过 10 个相关代币并称研究团队未创建它们；是否认领手续费、各代币创建者和实际交易量均未完整披露。</p>
+          <h3 class="item-h">An unofficial OnlyMarms meme token precedes any launch by the research team</h3>
+          <p class="item-b">After a UCLA marmot research team raised about $4,000 on OnlyFans, more than ten OnlyMarms-related meme coins appeared on Solana. The researchers said they had not created the tokens. Someone had invited them to claim the trading activity and collect fees.</p><p class="item-b">A launchpad can create a market around a brand before its owner participates, then invite the owner to claim revenue. Here, the creators’ identities, authorization and destination of the funds were unclear. The theme alone does not establish the researchers’ endorsement.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The report identified more than ten related tokens and said the research team created none of them. It did not fully identify the creators, actual trading volume, or whether fees were claimed.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-03</span>
             <a class="item-src" href="https://decrypt.co/374874/marmot-researchers-onlyfans-memecoins-solana-onlymarms" target="_blank" rel="noopener">Decrypt ↗</a>
@@ -171,12 +171,12 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">AIW3 以任务积分分发 12% 初始空投并在 TGE 全解锁</h3>
-          <p class="item-b">AIW3 官方页面显示，8 月 3 日完成 TGE 并在 OKX Boost 开放领取；初始空投占总量 12%，在 TGE 全部解锁，团队 15% 与早期投资者 10.5% 均采用 12 个月 cliff 加 36 个月线性释放。</p><p class="item-b">积分来源包含签到、预测任务、邀请、策略发布和每 1000 USDT 交易量奖励，分发直接绑定活跃行为；但官方未公开积分到代币的统一换算率，空投全解锁也会把早期参与度迅速转化为可售供应。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>12% 是初始空投占总量的比例并在 TGE 全解锁；任务积分规则可见，但积分兑换率和领取后的实际卖压未披露。</p>
+          <h3 class="item-h">AIW3 allocates 12% to a task-based initial airdrop with full unlock at the token generation event</h3>
+          <p class="item-b">AIW3’s official page said its token generation event took place on August 3 and claims opened on OKX Boost. The initial airdrop, 12% of supply, unlocked in full at the event. Both the team’s 15% and early investors’ 10.5% have a 12-month cliff followed by 36 months of linear vesting.</p><p class="item-b">Users earned points through check-ins, prediction tasks, referrals, published strategies and rewards for each 1,000 USDT in trading volume. The team did not publish a single points-to-token conversion rate. Full unlocking makes the rewards immediately available to sell.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The initial airdrop represents 12% of total supply and unlocks in full at the token generation event. Task rules are public. The points conversion rate and actual selling after claims were not disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-03</span>
-            <a class="item-src" href="https://aiw3.ai/token" target="_blank" rel="noopener">AIW3 官方页面 ↗</a>
+            <a class="item-src" href="https://aiw3.ai/token" target="_blank" rel="noopener">AIW3 official website ↗</a>
           </div>
         </article>
         </div>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">BlackRock 新增两类链上货币基金并瞄准稳定币储备</h3>
-          <p class="item-b">BlackRock 推出以太坊上的 BSTBL 代币化份额，以及支持多链访问、每日股息再投资的 BRSRV；两者都计划争取成为 GENIUS Act 下获准美国支付稳定币发行人的合格储备资产。</p><p class="item-b">货币基金由单纯链上收益资产进一步进入稳定币储备供应链，Securitize 担任 BRSRV 转让代理与代币化服务商；“计划符合资格”不等于已获监管认定，现有 BUIDL 约 25 亿美元规模也不能外推到新品采用。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>两项产品已公布，合格稳定币储备仍是计划目标；约 25 亿美元是既有 BUIDL 规模，不是新品资产规模。</p>
+          <h3 class="item-h">BlackRock adds two classes of onchain money market funds aimed at stablecoin reserves</h3>
+          <p class="item-b">BlackRock launched BSTBL, a tokenized share class on Ethereum, and BRSRV, which supports multichain access and daily dividend reinvestment. Both aim to qualify as reserve assets for authorized U.S. payment stablecoin issuers under the GENIUS Act.</p><p class="item-b">Money funds could become part of stablecoin reserve management as well as onchain yield products. Securitize is BRSRV’s transfer agent and tokenization provider. Qualification remains an objective, and the approximately $2.5 billion already held by BUIDL does not establish demand for the new funds.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Both products were announced. Eligibility as stablecoin reserves remains a goal. The roughly $2.5 billion figure refers to existing BUIDL assets, not the new products.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-03</span>
             <a class="item-src" href="https://www.coindesk.com/business/2026/08/03/blackrock-expands-tokenized-cash-with-new-blockchain-based-money-market-offerings" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -202,9 +202,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Bitget 退出日本并为存量仓位设置强制关闭时间表</h3>
-          <p class="item-b">Bitget 已停止接受日本居民新注册，将在 11 月 1 日把相关账户转为只减仓模式，并在 12 月 31 日强制关闭剩余现货与期货等仓位；之后仍允许提取资产。</p><p class="item-b">日本把加密资产纳入金融工具监管后，未注册境外平台的市场准入风险开始直接传导到仓位生命周期；平台未说明由哪一项具体监管行动触发退出，因此不能把时间表解读为监管机关已作出针对 Bitget 的新处罚。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>时间表针对被识别为日本居民的账户；11 月 1 日只减仓、12 月 31 日强制平仓，提款仍保留。</p>
+          <h3 class="item-h">Bitget announces its exit from Japan and a timetable for compulsory position closures</h3>
+          <p class="item-b">Bitget stopped accepting new registrations from Japanese residents. It plans to switch affected accounts to reduce-only mode on November 1 and forcibly close remaining positions, including spot and futures, on December 31. Asset withdrawals will remain available afterward.</p><p class="item-b">As Japan brings cryptoassets under financial instruments regulation, market-access risk for unregistered offshore venues can affect existing positions. Bitget did not identify a specific enforcement action behind its exit. Its schedule does not establish that regulators imposed a new penalty.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The schedule applies to accounts identified as Japanese residents. They switch to reduce-only on November 1 and face forced closure on December 31. Withdrawals remain available.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-03</span>
             <a class="item-src" href="https://www.coindesk.com/policy/2026/08/03/bitget-set-to-exit-japan-close-all-remaining-positions-by-year-end" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Coldcard 旧固件弱随机数事故的潜在损失升至约 1.14 亿美元</h3>
-          <p class="item-b">研究者估算，自 7 月 30 日以来，攻击者已从超过 5200 个 Coldcard 生成地址转走约 1816 枚 BTC，价值约 1.14 亿美元；问题追溯到 2021 年一版把种子生成路由到可预测软件随机数的固件。</p><p class="item-b">最新一轮交易启用了 replace-by-fee，受影响用户若在确认前发现交易，仍可能用更高手续费抢先转移；估算基于链上模式匹配而非全部受害者确认，且前三轮未触及多签，不能外推为所有 Coldcard 或多签钱包均受影响。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>1816 枚 BTC、约 1.14 亿美元和 5200 多地址为研究者按链上模式估算；并非全部受害者已确认，多签暂未出现在前三轮样本。</p>
+          <h3 class="item-h">Potential losses linked to an earlier Coldcard firmware issue rise to about $114 million</h3>
+          <p class="item-b">Researchers estimated that about 1,816 BTC, worth roughly $114 million, had been moved out of more than 5,200 Coldcard-generated addresses since July 30. They linked the exposure to a weakness in a 2021 firmware release.</p><p class="item-b">Researchers said some affected users might still have time to protect funds before pending transactions confirmed. The estimate came from onchain pattern matching rather than confirmation by every victim. The first three waves did not affect multisignature wallets, and exposure cannot be generalized to all Coldcard or multisignature users.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Researchers estimated 1,816 BTC, about $114 million, across more than 5,200 addresses based on onchain patterns. Not every affected user had been identified. The first three rounds of sampling found no multisig accounts.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-03</span>
             <a class="item-src" href="https://www.coindesk.com/tech/2026/08/03/coldcard-wallet-losses-may-near-usd114-million-as-possible-fourth-sweep-emerges" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -233,19 +233,19 @@
 
         <article class="item">
 
-          <h3 class="item-h">欧盟 AI Act 第 50 条透明度义务开始适用</h3>
-          <p class="item-b">自 8 月 2 日起，欧盟要求部分交互式和生成式 AI 系统告知用户正在与 AI 交互，并为生成或操纵内容加入机器可读标记；深度伪造、无人工编辑的公共利益文本及情绪识别等场景还需面向公众披露。</p><p class="item-b">AI 交易助手若面向欧盟用户，界面提示、输出来源和机器可读标记会变成产品层合规要求；现有部分生成式系统的标记义务可能享有到 12 月的有限过渡期，且具体适用仍取决于系统角色与场景。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>8 月 2 日是第 50 条适用日；部分此前投放市场的生成式系统仅在机器标记义务上可能有有限过渡安排。</p>
+          <h3 class="item-h">EU AI Act Article 50 transparency obligations begin to apply</h3>
+          <p class="item-b">From August 2, EU rules require certain interactive and generative AI systems to inform users when they are interacting with AI and to mark generated or manipulated content in machine-readable form. Deepfakes, public-interest text without human editorial review and certain emotion-recognition uses also require public disclosure.</p><p class="item-b">AI trading assistants serving EU users may need in-product notices, output provenance and machine-readable marks. Some existing generative systems may have a limited transition period for marking until December. Applicability depends on the system’s role and use.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Article 50 applies from August 2. Some generative systems already on the market may qualify for limited transitional arrangements specifically for machine-readable marking.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-02</span>
-            <a class="item-src" href="https://digital-strategy.ec.europa.eu/en/policies/guidelines-transparency-ai-generated-content" target="_blank" rel="noopener">欧盟委员会 ↗</a>
+            <a class="item-src" href="https://digital-strategy.ec.europa.eu/en/policies/guidelines-transparency-ai-generated-content" target="_blank" rel="noopener">European Commission ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">Solana 新任 CISO 把下一波攻击面指向 AI 社工与凭证失守</h3>
-          <p class="item-b">Solana Foundation CISO Michael Coates 认为，AI 生成身份、深度伪造电话和凭证窃取会让攻击从智能合约漏洞转向人和运维系统；近期多起事故的起点也在链外安全环节。</p><p class="item-b">他的建议是把多层控制和安全默认值设计为用户受骗后的第二道防线，而不是要求每个用户成为安全专家；这是 CISO 的风险判断与方法论，报道未给出 Solana 生态 AI 欺诈损失的量化样本。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>文章页面标注 2026-08-01，URL 中的 07-31 不是页面日期；结论来自新任 CISO 访谈，未披露专项损失统计。</p>
+          <h3 class="item-h">Solana’s new CISO identifies AI-assisted impersonation and compromised credentials as emerging risks</h3>
+          <p class="item-b">Solana Foundation CISO Michael Coates argued that AI-generated identities, deepfake calls and credential theft increase risks to people and operations alongside smart contracts. Several recent incidents began with offchain security failures.</p><p class="item-b">Coates recommended layered controls and secure defaults that can protect users even after they have been deceived. His comments give a security practitioner’s assessment. The report provided no quantitative sample of AI fraud losses in the Solana ecosystem.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The article page is dated August 1, 2026. July 31 appears in the URL. The assessment comes from an interview with the new CISO, who provided no separate loss figures.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-01</span>
             <a class="item-src" href="https://www.coindesk.com/tech/2026/07/31/solana-foundation-s-new-ciso-warns-ai-is-making-crypto-scams-more-convincing" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -253,12 +253,12 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Gallup 调查显示 AI 熟悉度上升并未转化为企业信任</h3>
-          <p class="item-b">Gallup 调查中，自认为了解 AI 的美国人升至七成，但认为 AI 弊大于利的比例从 2025 年 31% 升至 39%；仅 27% 至少在一定程度上信任企业负责任使用 AI，低于上一年的 31%。</p><p class="item-b">对 AI 产品而言，更多教育并不会自动消除信任缺口，权限解释、人工复核和责任边界需要在使用时可见；这是美国公众态度调查，不能直接外推为交易用户的实际采用或其他国家的监管偏好。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>39% 与 27% 是美国公众调查结果；熟悉度与态度为自报，不代表具体 AI 产品的留存、付费或交易采用。</p>
+          <h3 class="item-h">Gallup finds that greater familiarity with AI has not translated into trust in companies</h3>
+          <p class="item-b">In a Gallup survey, seven in ten Americans said they understood AI. The share who thought AI did more harm than good rose from 31% in 2025 to 39%. Only 27% placed at least some trust in companies to use AI responsibly, down from 31% a year earlier.</p><p class="item-b">Greater familiarity with AI does not guarantee trust. Products can make permissions, human review and accountability visible during use. The survey measures U.S. public attitudes. It cannot establish actual adoption by traders or regulatory preferences in other countries.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The 39% and 27% figures come from a US public survey. Self-reported awareness and attitudes do not measure retention, payment, or trading adoption for a particular AI product.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-01</span>
-            <a class="item-src" href="https://decrypt.co/374794/more-americans-know-about-ai-less-they-like-gallup" target="_blank" rel="noopener">Decrypt 转引 Gallup ↗</a>
+            <a class="item-src" href="https://decrypt.co/374794/more-americans-know-about-ai-less-they-like-gallup" target="_blank" rel="noopener">Decrypt, citing Gallup ↗</a>
           </div>
         </article>
         </div>
@@ -267,15 +267,15 @@
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product assessment</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">交易与费用</div>
-          <h3 class="item-h">永续产品应把净 carry 与无风险收益放进同一决策界面</h3>
-          <p class="item-b"><strong>判断变化</strong>：从“展示资金费率和历史基差即可”更新为“必须给出扣除交易、融资和保证金占用后的净 carry，并与同期限低风险美元收益比较”。</p><p class="item-b"><strong>证据与边界</strong>：比特币期货年化基差约 3%，低于两年期美债约 3.8%，相对关系已持续 157 天；但这是报道时点和特定期限口径，不能直接替代用户自身资金成本。</p>
+          <div class="decision-area">Transactions and fees</div>
+          <h3 class="item-h">Net carry and low-risk yields offer useful comparisons for perpetual traders</h3>
+          <p class="item-b"><strong>Revised assessment</strong>: Showing funding and historical basis leaves out trading, financing and margin costs. A comparable measure of net carry needs a low-risk dollar alternative over the same maturity.</p><p class="item-b"><strong>Evidence and limits</strong>: The reported bitcoin futures basis was about 3% annualized versus about 3.8% on two-year U.S. Treasuries, a relationship that had persisted for 157 days. These observations do not substitute for an individual trader’s own financing terms.</p>
 
           <div class="item-meta">
 
@@ -284,7 +284,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

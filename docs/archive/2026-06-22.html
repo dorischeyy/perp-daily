@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-06-22</title>
+<title>Perp DEX Daily · 2026-06-22</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -40,7 +40,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品观察」做成醒目的主编批注卡片 */
+  /* Editorial analysis card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -68,26 +68,26 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 4 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 4</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 6 月 22 日 · 星期一</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">June 22, 2026 · Monday</div>
     </header>
-    <p class="lead">美国「永续合约算不算 swaps」的监管定性战正式打响：CME 起诉 CFTC、指其「橡皮图章」批准 Kalshi 首个美国永续期货，分类结果将决定合规永续能否在美放开、以及链上 perp DEX 接入美国用户的路径。</p>
+    <p class="lead">CME accused the CFTC of rubber-stamping Kalshi’s first U.S. perpetual futures. The dispute over whether these contracts qualify as swaps could shape U.S. access to regulated perpetuals and the route onchain exchanges can take to reach American traders.</p>
     
       <section class="sec sec-perpdex">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <div class="sec-kicker">今日主题</div>
+            <div class="sec-kicker">Today’s themes</div>
             <h2 class="sec-title">Perp DEX</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">本周主线 ｜ CME 诉 CFTC：美国永续「算 swaps 还是 futures」定性战开打</h3>
-          <p class="item-b"><strong>事件</strong>：CME 起诉 CFTC，指其批准 Kalshi 首个美国永续期货时「未做自有分析、橡皮图章过审」，批准令通篇未现「swap」一词；TD Cowen 研判 CME 在诉讼中占上风，预计 CME 将申请初步禁令、暂停 perp 上市。</p><p class="item-b"><strong>机制</strong>：核心争点是永续合约按「期货 futures」还是「掉期 swap」监管，二者在保证金、清算、可参与主体、上市审批上的合规义务差异巨大，这一定性会成为美国所有永续产品（含链上 perp）的监管模板。</p><p class="item-b"><strong>二阶效应</strong>：这是永续从「灰色创新」迈向「监管确权」的关键一役，结果将直接决定合规永续能否在美国放开，以及链上 perp DEX 未来接入美国用户的可行路径与成本。（监管线索：06-19 The Block + 06-21 CoinDesk）</p>
+          <h3 class="item-h">Weekly theme | CME v. CFTC tests whether U.S. perpetual contracts are swaps or futures</h3>
+          <p class="item-b"><strong>Event</strong>: CME alleged that the CFTC approved Kalshi’s first U.S. perpetual futures without its own analysis and that the approval order did not use the word “swap.” TD Cowen saw an advantage for CME and expected it to seek a preliminary injunction to pause the listings. This was an analyst’s forecast, not a court order.</p><p class="item-b"><strong>Mechanism</strong>: Classification as a future or a swap affects margin, clearing, eligible participants and listing approval. The case could influence the framework applied to other U.S. perpetual products, including onchain contracts.</p><p class="item-b"><strong>Second-order effects</strong>: A ruling could shape the availability of regulated perpetuals in the United States and the cost and feasibility of bringing onchain exchanges to U.S. users. The reporting trail includes The Block on June 19 and CoinDesk on June 21.</p>
           <div class="item-meta">
             <span class="item-date">2026-06-21</span>
             <a class="item-src" href="https://www.coindesk.com/policy/2026/06/21/are-perps-swaps-a-quick-look-at-that-cme-suit-state-of-crypto" target="_blank" rel="noopener">CoinDesk · The Block ↗</a>
@@ -99,23 +99,23 @@
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <div class="sec-kicker">宏观与行情</div>
+            <div class="sec-kicker">Macro and markets</div>
             <h2 class="sec-title">Crypto</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">BTC 滞涨 $64k，现货 ETF 连续第 6 周净流出</h3>
-          <p class="item-b"><strong>事件</strong>：BTC 卡在 $64,000 附近，现货比特币 ETF 已连续第 6 周净流出；同日 Morgan Stanley 修订 ETH / SOL ETF 文件，拟收 0.14% 管理费，被 ETF 分析师 Balchunas 称为「全美乃至全球最低」。</p><p class="item-b"><strong>机制</strong>：ETF 持续失血叠加降息预期后移，资金风险偏好转弱；而发行商用费率价格战抢 ETH / SOL ETF 份额，说明 ETF 竞争正从 BTC 蔓延到主流山寨。</p>
+          <h3 class="item-h">Bitcoin stalls near $64,000 as spot ETFs register a sixth consecutive week of net outflows</h3>
+          <p class="item-b"><strong>Event</strong>: BTC hovered near $64,000 as spot bitcoin ETFs recorded a sixth consecutive week of net outflows. Morgan Stanley amended its proposed ETH and SOL ETF filings the same day to specify a 0.14% management fee. ETF analyst Eric Balchunas described it as potentially the lowest in the US or even worldwide.</p><p class="item-b"><strong>Mechanism</strong>: Continued ETF outflows and expectations of a later rate cut pointed to weaker risk appetite. At the same time, issuers were competing on price for ETH and SOL ETF assets, extending the fee competition seen in bitcoin funds.</p>
           <div class="item-meta">
             <span class="item-date">2026-06-22</span>
             <a class="item-src" href="https://www.coindesk.com/tech/2026/06/22/live-markets-bitcoin-is-stuck-near-usd64-000-as-etf-outflows-reach-a-sixth-week" target="_blank" rel="noopener">CoinDesk · Cointelegraph ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Bitget 上线「加密直购美股」，交易所 RWA 化再进一步</h3>
-          <p class="item-b"><strong>事件</strong>：Bitget 上线用加密货币直接购买美股的功能，把链上资产与美股交易在同一 App 内打通。</p><p class="item-b"><strong>机制</strong>：CEX 把美股 / RWA 敞口包装成入口级功能，争夺「一个 App 既炒币又买股」的用户心智，是交易所 RWA 化的又一明确信号。</p>
+          <h3 class="item-h">Bitget introduces direct purchases of U.S. stocks using crypto</h3>
+          <p class="item-b"><strong>Event</strong>: Bitget introduced a feature for buying US equities with cryptocurrency, bringing digital asset balances and stock purchases into the same app.</p><p class="item-b"><strong>Mechanism</strong>: Stock trading gives centralized exchanges another way to attract customers who want to hold crypto and equities in a single account.</p>
           <div class="item-meta">
             <span class="item-date">2026-06-22</span>
             <a class="item-src" href="https://www.theblock.co/post/405507/bitget-us-stock-purchases-crypto" target="_blank" rel="noopener">The Block ↗</a>
@@ -127,15 +127,15 @@
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <div class="sec-kicker">Builders 动态</div>
+            <div class="sec-kicker">Builder updates</div>
             <h2 class="sec-title">AI</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">Inception Labs Mercury 2 扩散式 LLM 跑赢 Google DiffusionGemma</h3>
-          <p class="item-b">Inception Labs 的 Mercury 2 用「并行去噪」替代逐字生成，在扩散式 LLM 赛道跑赢 Google 的 DiffusionGemma，且在提速的同时保住推理质量。扩散式 LLM 的提速路线正逼近主流自回归模型的体验，长期对「低延迟、本地化」的 AI 交易 / agent 场景是利好。</p>
+          <h3 class="item-h">Inception Labs’ Mercury 2 diffusion language model outperforms Google’s DiffusionGemma in the reported comparison</h3>
+          <p class="item-b">Inception Labs&#x27; Mercury 2 generates text through parallel denoising. The benchmarks cited in the report put it ahead of Google&#x27;s DiffusionGemma while retaining reasoning performance at higher speeds. Lower latency could make diffusion models more practical for locally deployed trading assistants.</p>
           <div class="item-meta">
             <span class="item-date">2026-06-21</span>
             <a class="item-src" href="https://decrypt.co/371722/inception-labs-mercury-2-ai-beats-googles-diffusiongemma" target="_blank" rel="noopener">Decrypt ↗</a>
@@ -147,23 +147,23 @@
         <div class="sec-head">
           <span class="sec-no">04</span>
           <div>
-            <div class="sec-kicker">机会与打法</div>
-            <h2 class="sec-title">产品观察</h2>
+            <div class="sec-kicker">Product opportunities</div>
+            <h2 class="sec-title">Product observations</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">美国永续监管定性，是必须紧盯的外部变量</h3>
-          <p class="item-b">永续「算 swaps 还是 futures」的定性，将决定合规永续能否在美国放开。</p>
+          <h3 class="item-h">U.S. classification of perpetuals remains an open regulatory question</h3>
+          <p class="item-b">The classification of perpetual contracts as swaps or futures will help determine how regulated U.S. venues can offer them.</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://www.coindesk.com/policy/2026/06/21/are-perps-swaps-a-quick-look-at-that-cme-suit-state-of-crypto" target="_blank" rel="noopener">CoinDesk ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">加密买美股需求被验证，强化美股标的差异化</h3>
-          <p class="item-b">Bitget 让用户用加密直接买美股，印证「加密原生用户要交易美股敞口」是真痛点。</p>
+          <h3 class="item-h">Crypto-funded purchases broaden access to U.S. equities</h3>
+          <p class="item-b">Bitget’s crypto-funded U.S. stock purchases give crypto-native users a route to equity exposure and provide evidence of demand for it.</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://www.theblock.co/post/405507/bitget-us-stock-purchases-crypto" target="_blank" rel="noopener">The Block ↗</a>
@@ -171,7 +171,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

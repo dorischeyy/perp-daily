@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-09-30</title>
+<title>Perp DEX Daily · 2026-09-30</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -82,12 +82,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 92 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 92</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 9 月 30 日 · 星期三</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">September 30, 2026 · Wednesday</div>
     </header>
-    <p class="lead">Aster把OTC协商成交接入永续账户，英国加密授权窗口正式开放，OpenAI则把常驻Agent带进跨应用工作流。</p>
+    <p class="lead">Aster integrated negotiated OTC trades with perpetual accounts. The UK opened its crypto authorization application window, and OpenAI introduced persistent agents for workflows across apps.</p>
 
 
       <section class="sec sec-perpdex">
@@ -100,27 +100,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Aster用Deal Code把OTC成交接入永续账户</h3>
-          <p class="item-b"><strong>事件</strong>：Aster上线OTC交易，首个市场为BTCUSDT，双方先私下约定价格与数量，再由一方生成Deal Code交给对手方确认执行。</p><p class="item-b"><strong>机制</strong>：交易绕开公开订单簿，但仍在同一交易账户内完成交收，适合不希望把大额意图暴露给盘口的交易者；平台尚未披露报价有效期、违约处理、结算价格保护和真实成交规模。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>功能已从公告进入可用状态，但当前只确认BTCUSDT，尚无成交量、参与方数量和风控参数。</p>
+          <h3 class="item-h">Aster uses Deal Codes to bring OTC fills into perpetual accounts</h3>
+          <p class="item-b"><strong>Event</strong>: Aster launched OTC trading with BTCUSDT as its first market. Two parties privately agree a price and quantity, then one generates a Deal Code for the other to confirm execution.</p><p class="item-b"><strong>Mechanism</strong>: The trade settles within the same trading account without appearing on the public order book beforehand, which helps participants keep large intentions private. Aster did not disclose quote expiry, default handling, settlement-price safeguards or actual volume.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Features have been made available, but currently only BTCUSDT is confirmed. There is no volume, number of participants, or risk control parameters available.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-30</span>
             <a class="item-src" href="https://perpdexwars.com/en/perpdex-news" target="_blank" rel="noopener">PerpDEX Wars ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Variational把铜价接入零费率永续</h3>
-          <p class="item-b"><strong>事件</strong>：Variational上线COPP铜价永续，最高10倍杠杆并标注零交易费，流动性直接连接传统金融市场。</p><p class="item-b"><strong>机制</strong>：铜把RWA永续从股票继续扩到工业金属，交易体验取决于传统市场休市时的定价、跳空和流动性回补规则；官方动态未披露价格源、交易时段、OI上限或直接流动性的具体提供方。（TradFi/RWA永续线，自07-09，本次新增工业金属样本）</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>10倍杠杆和零费率只说明产品参数，不能替代对点差、深度、隔夜跳空和清算质量的验证。</p>
+          <h3 class="item-h">Variational adds a zero-fee copper perpetual</h3>
+          <p class="item-b"><strong>Event</strong>: Variational launches a perpetual contract for COPP at a leverage ratio of up to 10 times, with zero transaction fees. This liquidity is directly connected to traditional financial markets.</p><p class="item-b"><strong>Mechanism</strong>: Copper extends RWA perpetuals beyond equities to industrial metals. Execution depends on pricing during traditional market closures, price-gap handling and replenishment of liquidity. The official update omitted the price feed, trading hours, open-interest cap and identity of the direct liquidity provider. Industrial metals add to the TradFi and RWA perpetuals story tracked since July 9.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Leverage ratios of 10 times and zero rates only describe product parameters. They cannot replace verification of spread, depth, overnight gaps, and clearing quality.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-30</span>
             <a class="item-src" href="https://perpdexwars.com/en/perpdex-news" target="_blank" rel="noopener">PerpDEX Wars ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Reya v2订单簿进入私测并清空旧条件单</h3>
-          <p class="item-b"><strong>事件</strong>：Reya v2从AMM切换到具备零知识验证的订单簿，并以私测方式向Season 1交易者和机构做市商开放首批五个市场。</p><p class="item-b"><strong>机制</strong>：既有仓位被保留，但原有止损和止盈订单全部取消，用户必须在新订单簿重新设置；这把撮合迁移风险落到保护单连续性，而不只是接口和流动性迁移。（可机读市场生命周期线，自08-28，本次完成订单簿私测上线）</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>私测首批覆盖ETH、BTC、SOL、HYPE和XRP，尚未披露旧条件单取消后的通知覆盖率与失败回退。</p>
+          <h3 class="item-h">Reya v2 order book enters private testing and clears old conditional orders</h3>
+          <p class="item-b"><strong>Event</strong>: Reya v2 has switched from AMM to a zero-knowledge verification order book. It has been opened to the first five markets for traders in Season 1 and institutional market makers through private testing.</p><p class="item-b"><strong>Mechanism</strong>: Existing positions carried over, but all old stop-loss and take-profit orders were canceled. Users must recreate them on the new order book. Protective-order continuity is therefore part of the matching migration alongside interfaces and liquidity. The private launch updates the machine-readable market lifecycle story tracked since August 28.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Private tests have covered ETH, BTC, SOL, HYPE, and XRP. The notification coverage and failure recovery after the cancellation of previous conditions have not been disclosed yet.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-29</span>
             <a class="item-src" href="https://perpdexwars.com/en/perpdex-news" target="_blank" rel="noopener">PerpDEX Wars ↗</a>
@@ -138,27 +138,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">potato.fun把股票代币变成Memecoin报价资产</h3>
-          <p class="item-b"><strong>事件</strong>：potato.fun在Robinhood Chain开放发射，允许新币与获批股票代币配对，并统一执行卖出销毁1%、单钱包持仓不超过2%的合约规则。</p><p class="item-b"><strong>机制</strong>：买入费为1%，创作者份额从发射时70%升至毕业后90%；股票代币提供新的报价与叙事入口，但固定销毁和钱包上限不能证明真实需求、毕业率或二级流动性。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>页面给出开放时间和强制合约规则，但没有披露首批发射量、毕业项目或股票代币池深度。</p>
+          <h3 class="item-h">potato.fun uses equity tokens as quote assets for memecoins</h3>
+          <p class="item-b"><strong>Event</strong>: Potato.fun opened token launches on Robinhood Chain. New tokens can be paired with approved equity tokens. Its contracts burn 1% on sales and cap each wallet’s holdings at 2%.</p><p class="item-b"><strong>Mechanism</strong>: The purchase fee is 1% The creator’s share increased from 70% at the time of launch to 90% after graduation. Stock tokens provide a new way to present quotes and stories. However, the fixed limits on destruction and wallet capacity do not reflect actual demand, graduation rates, or secondary liquidity.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The page provides information on trading hours and mandatory contract rules, but it does not disclose details about the initial issuance amount, graduation projects, or the depth of the stock token pool.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-28</span>
             <a class="item-src" href="https://potato.fun/" target="_blank" rel="noopener">potato.fun ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">UsePaid把发射台创作者费接到X Money</h3>
-          <p class="item-b"><strong>事件</strong>：UsePaid允许pump.fun和Pons项目把创作者费指定给任意X账号，费用收取后80%换成美元支付，20%用于回购并永久销毁PAID。</p><p class="item-b"><strong>机制</strong>：创作者收入从链上钱包延伸到社交账号和法币支付，但流程增加了账号归属、兑换执行与跨系统结算三层依赖；BingX已于9月28日上线PAID现货。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>公告说明分配机制与上币时间，没有披露已绑定创作者数量、支付规模或X Money失败时的回退路径。</p>
+          <h3 class="item-h">UsePaid connects launchpad creator fees to X Money</h3>
+          <p class="item-b"><strong>Event</strong>: UsePaid allows pump.fun and Pons projects to specify creator fees to any X account. After collecting fees, 80% is converted into USD for payment, while 20% is used for repurchase and permanent destruction of PAID.</p><p class="item-b"><strong>Mechanism</strong>: Creator income extends from on-chain wallets to social accounts and fiat payments. However, the process involves three dependencies: account ownership, execution of exchanges, and cross-system settlement. BingX launched PAID spot on September 28.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The announcement explains the allocation mechanism and the time of coin issuance. It does not disclose the number of creators involved, the scale of payments, or the fallback paths in case of X Money failures.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-28</span>
             <a class="item-src" href="https://bingxservice.zendesk.com/hc/en-001/articles/17781456926607--Limited-Time-Zero-Fee-UsePaid-PAID-Coin-Gets-Listed-on-BingX-Spot" target="_blank" rel="noopener">BingX ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">pump.fun、Flap与Pons瓜分64.5%的发射台费用</h3>
-          <p class="item-b"><strong>事件</strong>：MemeFees在9月30日02:02 UTC记录，pump.fun、Flap.sh和Pons的24小时费用分别为202万、157万和151万美元，份额为25.6%、19.8%和19.1%。</p><p class="item-b"><strong>机制</strong>：三家合计拿走64.5%的已追踪费用，但费用率、成交覆盖和链别不同；Pons费用含V1与V2，成交量仅覆盖V2曲线交易，不能把费用排名直接当作同口径用户活跃度。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>受追踪平台24小时总费用为790万美元，市场HHI为1611，仍属集中但低于前一日只覆盖13家时的失真快照。</p>
+          <h3 class="item-h">Pump.fun, Flap and Pons share 64.5% of launchpad fees</h3>
+          <p class="item-b"><strong>Event</strong>: MemeFees recorded on September 30th at 02:02 UTC. The 24-hour fees for pump.fun, Flap.sh, and Pons were $2.02 million, $1.57 million, and $1.51 million, respectively. The respective share of fees was 25.6%, 19.8%, and 19.1%.</p><p class="item-b"><strong>Mechanism</strong>: The three companies collectively took 64.5% of the tracked costs. However, the cost ratios, transaction coverage, and blockchain types vary. Pons’ costs include both V1 and V2. The trading volume only covers transactions on the V2 curve. Therefore, the cost ranking should not be directly used to determine user activity across these platforms.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The total 24-hour cost for the tracked platform is 7.9 million USD. The market HHI is 1611. This remains a concentrated market, but it’s lower than the previous day’s snapshot, where only 13 platforms were covered.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-30</span>
             <a class="item-src" href="https://memefees.com/" target="_blank" rel="noopener">MemeFees ↗</a>
@@ -176,27 +176,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">英国加密授权窗口正式开放</h3>
-          <p class="item-b"><strong>事件</strong>：英国FCA于9月30日07:00开放新加密资产制度的授权申请，窗口持续到2027年2月28日，覆盖稳定币发行、交易平台、交易安排、托管与质押等活动。</p><p class="item-b"><strong>机制</strong>：窗口内申请且尚未完成审批的现有企业可在满足条件时继续经营，未按期申请的企业只能在过渡安排内履行旧合同，不能与现有或新客户签新合同；完整制度将于2027年10月25日生效。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>现有反洗钱、支付或电子货币注册不会自动转换为新许可，是否能继续服务取决于申请时点和业务所涉活动。</p>
+          <h3 class="item-h">UK crypto authorization application window opens</h3>
+          <p class="item-b"><strong>Event</strong>: The UK FCA opened applications under its new cryptoasset authorization regime at 07:00 on September 30. The window runs until February 28, 2027 and covers activities including stablecoin issuance, trading venues, arranging transactions, custody and staking.</p><p class="item-b"><strong>Mechanism</strong>: Existing enterprises that have applied for but not yet completed approval can continue operating as long as they meet the conditions. Those that do not apply on time can only fulfill their old contracts within the transition period. They cannot sign new contracts with existing or new customers. The complete system will come into effect on October 25, 2027.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Existing anti-money laundering regulations, payment or electronic currency registrations do not automatically translate into new licenses. Whether services can continue depends on the timing of the application and the activities involved in the business.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-30</span>
             <a class="item-src" href="https://www.fca.org.uk/firms/new-regime-cryptoasset-regulation/how-gateway-will-operate" target="_blank" rel="noopener">FCA ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Binance把资金账户改造成股票结算专户</h3>
-          <p class="item-b"><strong>事件</strong>：Binance自9月29日起把资金账户中的非股票加密资产分批迁入现货账户，迁移完成后资金账户将在2027年1月更名为股票账户。</p><p class="item-b"><strong>机制</strong>：新账户只保留股票、股票期权和USD、USDC、USDT、USD1、U、BNB六种结算资产，且不支持链上充提；股票交易由此获得独立资金域，支付、P2P、Convert和API则迁回各自专用或现货账户。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>迁移从9月29日开始并持续到2027年1月，用户批次不同，账户更名和P2P独立账户仍待后续具体日期。</p>
+          <h3 class="item-h">Binance repurposes its funding account as a dedicated equity settlement account</h3>
+          <p class="item-b"><strong>Event</strong>: Starting September 29, Binance began moving non-stock cryptoassets in batches from Funding Accounts to Spot Accounts. After the migration, it plans to rename Funding Accounts as Stock Accounts in January 2027.</p><p class="item-b"><strong>Mechanism</strong>: The new account only supports six types of settlement assets: stocks, stock options, USD, USDC, USDT, USD1, U, and BNB. It does not support on-chain deposits or withdrawals. Stock trading is handled through an independent funding domain. Payments, P2P transactions, Convert operations, and API interactions are handled through their respective dedicated or spot accounts.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The transition began on September 29 and will continue until January 2027. User batches vary, and account renaming and P2P independent accounts are still pending specific dates.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-29</span>
             <a class="item-src" href="https://www.binance.com/en-AE/support/announcement/detail/01cbe42ead1e4f1a9382363754d2eb5a" target="_blank" rel="noopener">Binance ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">美国众议院把预测市场内幕交易调查扩到Hyperliquid</h3>
-          <p class="item-b"><strong>事件</strong>：美国众议院监督委员会主席要求Crypto.com、Hyperliquid和PredictIt提交身份核验、可疑交易识别及过去两年半向监管与执法部门转介的记录。</p><p class="item-b"><strong>机制</strong>：调查把政府内幕信息、员工交易和链上杠杆仓位放进同一监控问题，说明公开可见的成交并不能替代客户身份归属和跨场所可疑行为转介；目前是索取资料，不是违法裁定。（预测市场联邦规则线，自07-24，本次扩到链上永续执行场所）</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>Hyperliquid部分聚焦重大关税公告前的大额杠杆空仓，Crypto.com部分还涉及员工在代币上架前后的交易。</p>
+          <h3 class="item-h">U.S. House expands prediction-market insider trading inquiry to Hyperliquid</h3>
+          <p class="item-b"><strong>Event</strong>: The chairman of the House Committee on Oversight requested that Crypto.com, Hyperliquid, and PredictIt submit information on identity verification, suspicious transaction identification, and records of referrals to regulatory and law enforcement agencies over the past two and a half years.</p><p class="item-b"><strong>Mechanism</strong>: The investigation links government inside information, employee trading and onchain leveraged positions. Public trades alone cannot establish who controls an account or replace referrals about suspicious activity across venues. The authorities requested information and had made no finding of wrongdoing. The federal prediction-market story tracked since July 24 now includes execution on onchain perpetual venues.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The Hyperliquid section focuses on large-scale short positions before major tariff announcements. The Crypto.com section also covers transactions by employees before and after token listing.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-29</span>
             <a class="item-src" href="https://www.theblock.co/news/regulation/2026-09-29-comer-presses-crypto-com-hyperliquid-predictit-identity-checks-suspicious-trades-417192" target="_blank" rel="noopener">The Block ↗</a>
@@ -214,27 +214,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">OpenAI让Dots以独立云电脑常驻工作</h3>
-          <p class="item-b"><strong>事件</strong>：OpenAI发布Dots，Agent拥有独立云电脑，可持续运行多个任务，并通过插件连接4000多个应用，在ChatGPT、Slack和Teams之间保留上下文。</p><p class="item-b"><strong>机制</strong>：产品把Agent从单次会话推进到主动发现任务和跨应用执行，关键控制点是按应用授权、操作审批和可随时查看其电脑；首批面向符合条件的Pro、Business Premium与Enterprise用户。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>首发支持主Dot，企业专用身份、IT配置硬件和深度系统集成仍处于预览阶段。</p>
+          <h3 class="item-h">OpenAI gives Dots dedicated cloud computers for persistent work</h3>
+          <p class="item-b"><strong>Event</strong>: OpenAI launched Dots. These agents have independent cloud computers, enabling them to handle multiple tasks simultaneously. They can connect to over 4,000 applications through plugins, maintaining context between ChatGPT, Slack, and Teams.</p><p class="item-b"><strong>Mechanism</strong>: The product advances agents from single sessions to proactive discovery tasks and cross-application execution. Key controls include application authorization, operational approval, and the ability to view their computers at any time. This feature is available to eligible Pro, Business Premium, and Enterprise users.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The initial release supports the primary Dot. Enterprise-specific identities, hardware provisioned by IT and deeper system integration remain in preview.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-29</span>
             <a class="item-src" href="https://openai.com/index/introducing-dots/" target="_blank" rel="noopener">OpenAI ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Claude Sonnet 5.5把高风险能力分流到旧模型</h3>
-          <p class="item-b"><strong>事件</strong>：Anthropic发布Sonnet 5.5，声称生成速度比Sonnet 5快30%以上，多数任务成本最多降低30%，并显著提升Agent编程与长任务表现。</p><p class="item-b"><strong>机制</strong>：由于网络安全能力已接近Opus 5，Sonnet 5.5首次在Sonnet层级启用高风险请求分类器，命中后回退到Sonnet 5；公司也为工业化蒸馏攻击增加推理提取防护。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>速度、成本与行为审计主要来自Anthropic自测；官方同时承认任何评估集都无法覆盖全部失败模式。</p>
+          <h3 class="item-h">Claude Sonnet 5.5 routes high-risk capabilities to an earlier model</h3>
+          <p class="item-b"><strong>Event</strong>: Anthropic released Sonnet 5.5, claiming that its generation speed is over 30% faster than Sonnet 5. Most tasks also experience a reduction in costs by up to 30%, while agent programming and long-term tasks are significantly improved.</p><p class="item-b"><strong>Mechanism</strong>: As network security capabilities are approaching Opus 5 level, Sonnet 5.5 has enabled high-risk request classifiers at the Sonnet level for the first time. After a high-risk request is identified, the system reverts to Sonnet 5. The company has also added protection against industrial distillation attacks by enhancing reasoning and extraction capabilities.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Speed, cost, and behavior audits are primarily conducted by Anthropic. Officials also acknowledge that any evaluation set cannot cover all failure modes.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-28</span>
             <a class="item-src" href="https://www.anthropic.com/claude-sonnet-5-5" target="_blank" rel="noopener">Anthropic ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">微软Quine把生物学Agent接到湿实验验证</h3>
-          <p class="item-b"><strong>事件</strong>：微软研究院发布Quine研究系统，把多模态世界模型、文献、科学工具和研究者接入同一交互框架，并与Broad Institute筛选能推动肿瘤状态变化的候选化合物。</p><p class="item-b"><strong>机制</strong>：系统不是只生成假设，而是把候选排序后交给多轮湿实验验证；微软明确将其限定为研究技术，结果可能不完整或不准确，不能直接用于临床决策。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>官方称若干高排名候选已通过多种湿实验测定，尚未披露完整候选数量、失败率或外部复现结果。</p>
+          <h3 class="item-h">Microsoft’s Quine links biology agents to laboratory validation</h3>
+          <p class="item-b"><strong>Event</strong>: Microsoft Research released the Quine research system, which integrates multimodal world models, literature, scientific tools, and researchers into a single interaction framework. This system works alongside the Broad Institute to identify compounds that can influence tumor conditions.</p><p class="item-b"><strong>Mechanism</strong>: The system does not simply generate hypotheses; instead, it ranks candidates and then tests them through multiple wet experiments. Microsoft clearly defines this as a research technology, and the results may be incomplete or inaccurate. Therefore, they cannot be used directly for clinical decision-making.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Officials state that several high-ranking candidates have been tested through various wet experiments. The complete number of candidates, failure rates, and external test results have not been disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-29</span>
             <a class="item-src" href="https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology/" target="_blank" rel="noopener">Microsoft Research ↗</a>
@@ -242,7 +242,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

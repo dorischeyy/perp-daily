@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-07-16</title>
+<title>Perp DEX Daily · 2026-07-16</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 持续追踪 STORY THREADS：跨日叙事线的"当前进展地图" */
+  /* Ongoing coverage of developing stories */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -41,7 +41,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -54,7 +54,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品观察」做成醒目的主编批注卡片 */
+  /* Editorial analysis card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -82,39 +82,39 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 25 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 25</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 7 月 16 日 · 星期四</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">July 16, 2026 · Thursday</div>
     </header>
-    <p class="lead">Arbitrum 上的 RWA/外汇永续 DEX Ostium 被攻破预言机签名密钥，一夜蒸发近 1800 万美元流动性金库：链上永续的护城河从来不在撮合引擎，而在谁能签出那个价格。</p>
+    <p class="lead">Ostium, an Arbitrum exchange for real-world asset and foreign exchange perpetuals, lost nearly $18 million from its liquidity vault after an oracle signing key was compromised. The incident highlights the risk that price authorization poses to pooled liquidity.</p>
     
     <section class="threads">
-      <div class="threads-h">持续追踪 · STORY THREADS</div>
+      <div class="threads-h">Story threads</div>
       
         <div class="thread">
-          <div class="thread-t">预言机攻击链：自动化价格基础设施成新攻击面</div>
-          <div class="thread-meta">自 2026-07-15 · 第 1 天 · A 级</div>
-          <div class="thread-u">Ostium 07-15 被攻破预言机签名密钥，攻击者用已注册的 PriceUpKeep 自动化转发器提交伪造未来价格，从流动性金库卷走约 1800-2370 万美元（TVL 跌约 72%），是 2026 年以来第三起同类『自动化基础设施特权角色被攻破』事件（一周前 Summer.fi 约 600 万美元）。</div>
-          <div class="thread-w"><b>下一步看：</b>Ostium 事故报告与赔付方案 / 是否有更多 RWA·Forex perp DEX 曝出同类预言机密钥攻击</div>
+          <div class="thread-t">Oracle security and the risks of automated pricing</div>
+          <div class="thread-meta">Since 2026-07-15 · Day 1 · Tier A</div>
+          <div class="thread-u">Ostium's July 15 incident cost its liquidity vault an estimated $18–23.7 million, about 72% of TVL. It was the third major incident involving privileged automation infrastructure in 2026. Summer.fi lost roughly $6 million a week earlier.</div>
+          <div class="thread-w"><b>Next milestone:</b>Ostium&#x27;s incident report and compensation proposal, and any similar oracle security incidents at RWA or FX perpetuals venues.</div>
         </div>
         <div class="thread">
-          <div class="thread-t">Robinhood Chain 分发线：分发到位不等于产品交付</div>
-          <div class="thread-meta">自 2026-07-02 · 第 14 天 · S 级</div>
-          <div class="thread-u"><strong>meme 引擎也熄火</strong>：靠 CASHCAT 撑起近千万美元手续费的最大发射台 Noxa 07-15 宣布把 100% 交易收入让给创作者、平台方清零抽成，CASHCAT 应声跌超 33%；承诺的 35 个 RWA 永续市场自 07-01 起已连续 14 天卡在候补名单无进展。</div>
-          <div class="thread-w"><b>下一步看：</b>Noxa 收入模式转向后能否维持活跃度 / Arcus RWA 永续何时真正开放交易</div>
+          <div class="thread-t">Robinhood Chain&#x27;s distribution and product delivery</div>
+          <div class="thread-meta">Since 2026-07-02 · Day 14 · Tier S</div>
+          <div class="thread-u"><strong>Memecoin-driven activity also weakens</strong>: On July 15, Noxa, which had earned nearly $10 million in fees driven by CASHCAT, said it would return 100% of trading revenue to creators. CASHCAT fell more than 33%. Fourteen days after July 1, all 35 promised RWA perpetuals markets still had a waiting list.</div>
+          <div class="thread-w"><b>Next milestone:</b>Whether Noxa retains activity under its revised revenue model and when Arcus opens its RWA perpetuals markets.</div>
         </div>
         <div class="thread">
-          <div class="thread-t">Hyperliquid 股票永续矩阵扩张</div>
-          <div class="thread-meta">自 2026-06-12 · 第 34 天 · S 级</div>
-          <div class="thread-u">HIP-3 建市门槛开始被资本中介化：Hyperliquid 国库公司 Hyperion DeFi 07-15 把 50 万枚 HYPE（约 3360 万美元）质押出租给 Skew Technologies 用于满足建市者门槛，换取股权和收入分成，建市权从『自己攒质押』变成『找金主』。</div>
-          <div class="thread-w"><b>下一步看：</b>是否有更多国库公司跟进出租 HYPE / HIP-3 OI 能否守住 40 亿美元关口</div>
+          <div class="thread-t">Hyperliquid expands its equity perpetual markets</div>
+          <div class="thread-meta">Since 2026-06-12 · Day 34 · Tier S</div>
+          <div class="thread-u">On July 15, Hyperion DeFi leased 500,000 HYPE, about $33.6 million, to Skew Technologies to meet HIP-3&#x27;s staking requirement. Hyperion receives equity and a revenue share. Deployers can now seek capital from a token holder instead of accumulating the stake themselves.</div>
+          <div class="thread-w"><b>Next milestone:</b>Whether more treasury companies lease HYPE and whether HIP-3 open interest holds around $4 billion.</div>
         </div>
         <div class="thread">
-          <div class="thread-t">费用→通缩飞轮：Aster / Lighter / pump.fun</div>
-          <div class="thread-meta">自 2026-06-30 · 第 16 天 · A 级</div>
-          <div class="thread-u">pump.fun 史上最大解锁 07-15 实际到账 8650 万美元（低于此前 1.27 亿美元的预期口径），三年归属期启动，PUMP 不跌反涨 24 小时+13%，为『回购销毁能否扛住真实解锁』交出目前最完整的正面样本，与 Aster『回购持续但币价腰斩』对照鲜明。</div>
-          <div class="thread-w"><b>下一步看：</b>Aster 回购力度能否止住价格背离 / 还有多少新锐 perp DEX 跟进同款销毁</div>
+          <div class="thread-t">Fee-funded supply reductions at Aster, Lighter and pump.fun</div>
+          <div class="thread-meta">Since 2026-06-30 · Day 16 · Tier A</div>
+          <div class="thread-u">Actual July 15 distributions from pump.fun&#x27;s largest unlock totaled $86.5 million, below the $127 million forecast, as the three-year vesting period began. PUMP rose 13% in 24 hours. This offers a positive test around an unlock, whereas ASTER lost half its value despite ongoing repurchases.</div>
+          <div class="thread-w"><b>Next milestone:</b>Whether Aster&#x27;s buybacks narrow the gap with its token price, and whether other newer perpetuals venues adopt similar burns.</div>
         </div>
     </section>
     
@@ -122,23 +122,23 @@
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <div class="sec-kicker">预言机攻击、建市资本中介化</div>
+            <div class="sec-kicker">Oracle security and the financing of new HIP-3 markets</div>
             <h2 class="sec-title">Perp DEX</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">RWA/外汇永续 DEX Ostium 遭预言机签名密钥攻击，流动性金库被掏空近 1800 万美元</h3>
-          <p class="item-b"><strong>事件</strong>：Ostium（Arbitrum 上的 RWA/外汇永续 DEX，tradfi-perp-asset-class 线曾以其 400 天 EUR/USD 长仓证明存在真实长期持仓用户）07-15 遭攻击者获取预言机签名者私钥，通过已注册的 PriceUpKeep 自动化转发器提交约 20 笔循环交易的『未来时间戳』伪造价格报告凭空套现，从 OLP 流动性金库卷走约 1800-2370 万美元 USDC（金库原约 3270 万美元，攻击后仅剩约 900 万美元，TVL 跌约 72%）。Ostium 已暂停全部交易，官方仅表态『团队正在调查』，尚未公布赔付方案或事故报告。</p><p class="item-b"><strong>机制</strong>：这不是常见的价格操纵（操纵 DEX 报价本身），而是攻破了预言机系统的信任根：私钥泄露后，攻击者可以让协议『合法地』相信一个凭空捏造的未来价格，绕开正常的价格偏离/延迟校验；第三方安全公司 Blockaid 率先侦测到异常并预警，而非协议自身机制拦下。</p><p class="item-b"><strong>二阶效应</strong>：CoinDesk 统计这是 2026 年以来第三起利用『自动化基础设施特权角色被攻破』模式的大额事件（一周前 Summer.fi 约 600 万美元），显示价格基础设施的权限管理（谁能签名、谁能调用自动化更新）正成为 perp DEX 仅次于智能合约本身的第二大攻击面；越多平台把标的扩展到需要链下报价的虚拟资产（RWA/Forex/商品/个股），这类风险敞口就越大（新建「预言机攻击链」故事线持续追踪，详见上方持续追踪）。</p>
+          <h3 class="item-h">Ostium discloses unauthorized oracle signing and pauses trading</h3>
+          <p class="item-b"><strong>Event</strong>: Ostium, an Arbitrum exchange for RWA and FX perpetuals previously profiled for a 400-day EUR/USD long, reported an incident on July 15. Estimated losses from the OLP liquidity vault were $18–23.7 million in USDC. The vault fell from about $32.7 million to around $9 million, a loss of roughly 72% of TVL. Ostium suspended trading and said it was investigating. It had yet to publish an incident report or compensation plan.</p><p class="item-b"><strong>Mechanism</strong>: The incident involved the reliability of Ostium's oracle authorization system. Third-party security firm Blockaid detected and reported the anomaly. The protocol's own controls did not prevent the losses.</p><p class="item-b"><strong>Implications</strong>: CoinDesk counted this as the third major incident involving privileged automation infrastructure in 2026, after a roughly $6 million incident at Summer.fi a week earlier. Permission management for price infrastructure is an important dependency for perpetuals exchanges, particularly as they expand into FX, commodities and stocks that rely on offchain prices.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-15</span>
             <a class="item-src" href="https://www.coindesk.com/business/2026/07/15/ostium-suffers-usd18-million-exploit-as-oracle-attack-wave-continues-to-hit-defi" target="_blank" rel="noopener">CoinDesk ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Hyperliquid 国库公司把 HYPE 质押&quot;出租&quot;给建市者，HIP-3 准入门槛开始被资本中介化</h3>
-          <p class="item-b"><strong>事件</strong>（Hyperliquid 股票永续矩阵扩张线，自 06-12，第 34 天）：纳斯达克上市的 Hyperliquid 国库公司 Hyperion DeFi 07-15 宣布与 Skew Technologies 达成 HAUS（HYPE Asset Use Service）协议，将 50 万枚 HYPE（约 3360 万美元）质押出租给 Skew，用于满足 HIP-3 建市者的质押门槛，换取 Skew 的股权及市场服务收入分成；Skew 计划借此在 HIP-3 上线一批『机构级永续期货产品』。</p><p class="item-b"><strong>机制</strong>：HIP-3 原本要求建市者自己攒够 50 万+枚 HYPE 质押才能上线新市场，这道资本门槛本意是防止滥建；现在 Hyperion 把自己囤积的 HYPE 持仓当作可租赁的生产资料，相当于凭空造出一个『建市者资本中介』角色，把有 HYPE 没团队的国库公司，和有团队没 HYPE 的建市者撮合到一起。</p><p class="item-b"><strong>二阶效应</strong>：这把 HIP-3 的准入门槛从『自己攒够质押』变成『找到愿意出租 HYPE 的金主』，建市权在事实上被资本化、可交易化；这既可能加速新建市者涌现，也可能让『谁控制 HYPE 供给』变成比『谁的产品好』更重要的护城河，与此前『结算资产标准+分发/订单流才是真护城河』的判断相呼应，新增了『质押资本本身也可以被中介化』这一层。</p>
+          <h3 class="item-h">A Hyperliquid treasury company offers HYPE stake to market builders, introducing an intermediary for HIP-3 entry</h3>
+          <p class="item-b"><strong>Event</strong>: On July 15, Nasdaq-listed Hyperliquid treasury company Hyperion DeFi announced a HYPE Asset Use Service (HAUS) agreement with Skew Technologies. Hyperion will lease 500,000 HYPE worth about $33.6 million to satisfy Skew&#x27;s HIP-3 deployer staking requirement, in exchange for equity and a share of market services revenue. Skew plans to launch institutional perpetuals on HIP-3. This is day 34 of coverage since June 12.</p><p class="item-b"><strong>Mechanism</strong>: HIP-3 generally requires a deployer to stake at least 500,000 HYPE to open markets. Hyperion can lease its treasury holdings to teams that have the expertise to run a venue but lack the required tokens, creating an intermediary for the staking capital.</p><p class="item-b"><strong>Second-order effects</strong>: A deployer can now secure backing from a HYPE holder instead of accumulating the full stake itself. This could support new entrants while giving major holders greater influence over which venues launch. Access to staking capital joins settlement assets, distribution and order flow as a source of competitive advantage.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-15</span>
             <a class="item-src" href="https://www.theblock.co/post/408538/hyperliquid-treasury-firm-hyperion-new-500k-hype-bond-skew" target="_blank" rel="noopener">The Block ↗</a>
@@ -150,23 +150,23 @@
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <div class="sec-kicker">发射台经济模型的两种压力测试</div>
+            <div class="sec-kicker">Two tests for token launchpad business models</div>
             <h2 class="sec-title">Launchpad</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">Robinhood Chain 最大发射台 Noxa 关站前清零抽成，把 100% 收入让给创作者</h3>
-          <p class="item-b">（Robinhood Chain 分发线，自 07-02，第 14 天）Noxa 是 Robinhood Chain 上靠 meme 币 CASHCAT 带动的最大代币发射平台，一周内积累近 1200 万美元手续费；但 07-11 起停止接受新代币发射，07-13 网站下线，07-15 正式宣布『将 100% 交易收入返还给创作者』、平台方不再抽成，等于主动清零自己的收入模型。消息发布后 CASHCAT 24 小时内下跌超 33%。</p><p class="item-b">这不是常规的机制升级，而是发射台主动放弃平台费收入，通常意味着运营方对继续维持中心化抽成模式失去信心；而 Robinhood Chain 承诺的『核心产品』35 个 RWA 永续市场自 07-01 以来已连续 14 天卡在候补名单，此前靠 meme 投机撑起的链上活跃度如今也面临自己的可持续性问题。</p>
+          <h3 class="item-h">Robinhood Chain launchpad Noxa waives its commission before closure, directing 100% of revenue to creators</h3>
+          <p class="item-b">On day 14 of coverage since July 2, Noxa, Robinhood Chain&#x27;s largest token launchpad, had earned nearly $12 million in fees in one week, driven by the memecoin CASHCAT. It stopped accepting new launches on July 11, took its website offline on July 13 and announced on July 15 that it would return 100% of trading revenue to creators. CASHCAT fell more than 33% in 24 hours after the announcement.</p><p class="item-b">Noxa gave up its own trading fee income. Meanwhile, Robinhood Chain&#x27;s 35 promised RWA perpetuals markets had remained behind a waiting list for 14 days since July 1. Memecoin activity, the source of much of the chain&#x27;s early usage, also faced questions about its sustainability.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-15</span>
             <a class="item-src" href="https://www.coindesk.com/business/2026/07/15/the-launchpad-that-fueled-robinhood-chain-s-memecoin-boom-just-gave-away-all-its-revenue" target="_blank" rel="noopener">CoinDesk ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">pump.fun 史上最大解锁落地：实际到账 8650 万美元低于预期，代币不跌反涨 13%</h3>
-          <p class="item-b">（费用→通缩飞轮线，自 06-30，第 16 天）pump.fun 此前被预告的最大一次团队/投资者代币解锁（此前预期约 1.27 亿美元、占流通供应 29%），07-15 实际链上到账 572.79 亿枚 PUMP（约 8650 万美元，分发至 121 个钱包），低于解锁日历给出的预期口径，三年归属期正式开始；解锁落地当天 PUMP 不跌反涨，24 小时+13%。</p><p class="item-b">链上分析师指出，『解锁日历』追踪的是代币何时符合发放资格，不等于代币何时真的转移到地址间，两者常有时间差；市场此前已把最坏情况 price in，真到解锁日反而利空出尽，为『回购销毁机制能否扛住真实解锁』的压力测试交出了目前最完整的正面样本。</p>
+          <h3 class="item-h">Pump.fun’s largest unlock delivers $86.5 million, below expectations, as the token rises 13%</h3>
+          <p class="item-b">On day 16 of the fee-funded buybacks series tracked since June 30, pump.fun&#x27;s July 15 transfers totaled 57.279 billion PUMP, about $86.5 million across 121 wallets. Its largest team and investor unlock had been forecast at about $127 million, or 29% of circulating supply. Actual transfers fell below that calendar estimate and marked the start of three-year vesting. PUMP rose 13% over the next 24 hours.</p><p class="item-b">Onchain analysts noted that unlock calendars track eligibility for distribution, which can precede actual wallet transfers. The market may already have priced in a larger worst-case release. The positive price response provides a clearer test of how a token with a buyback and burn program behaves around an actual unlock.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-15</span>
             <a class="item-src" href="https://crypto.news/pump-fun-unlocks-86m-in-pump-as-three-year-vesting-begins/" target="_blank" rel="noopener">crypto.news ↗</a>
@@ -178,23 +178,23 @@
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <div class="sec-kicker">通胀降温、亚太监管松绑</div>
+            <div class="sec-kicker">Cooling inflation and regulatory easing in Asia-Pacific</div>
             <h2 class="sec-title">Crypto</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">6 月 PPI 意外降温，比特币反弹重上 6.4 万美元，ETF 资金流转正</h3>
-          <p class="item-b">6 月 PPI 环比下降 0.3%（预期持平），核心 PPI 环比仅升 0.2%，纽约联储主席 Williams 称『有充分理由预期通胀已见顶』，9 月降息预期概率从此前 70% 回落至 48%（表述为对加息押注的降温）；比特币反弹至 6.46 万美元附近（经 docs/market.json 今日快照核实，BTC 现价约 6.46 万美元，24h -0.3%），比特币现货 ETF 单日转为净流入 1.81 亿美元（此前一日净流出 4.25 亿美元，iShares IBIT 占 1.39 亿美元），以太坊 ETF 净流入 5800 万美元、十只产品全部为正。</p><p class="item-b">Wintermute 提示 6.5 万美元上方是关键阻力位，存在获利了结压力，这轮反弹是典型的『通胀数据走软→降息预期抬升→风险资产重估』行情。</p>
+          <h3 class="item-h">Bitcoin regains $64,000 and ETF flows turn positive after softer June producer prices</h3>
+          <p class="item-b">June US producer prices fell 0.3% on the month against expectations for no change. Core PPI rose 0.2%. New York Fed President John Williams said there was good reason to think inflation had peaked. The cited probability of a September rate cut fell from 70% to 48%. Bitcoin recovered to about $64,600, down 0.3% over 24 hours. Spot bitcoin ETFs drew $181 million after $425 million left the previous day. BlackRock&#x27;s IBIT accounted for $139 million of the inflow. All ten ether ETFs recorded positive flows, totaling $58 million.</p><p class="item-b">Wintermute identified resistance above $65,000, where holders might take profits. The report linked the rebound in risk assets to softer inflation data and changing rate expectations.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-15</span>
             <a class="item-src" href="https://www.coindesk.com/tech/2026/07/15/live-markets-bitcoin-ether-etfs-draw-inflows-as-majors-rise-as-much-as-5" target="_blank" rel="noopener">CoinDesk ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">日本国会通过法案，将加密资产纳入金融商品法监管并把税率砍至 20%</h3>
-          <p class="item-b">日本国会 07-15 通过法案，把比特币、以太坊、XRP 等加密资产纳入《金融商品交易法》(FIEA) 监管框架，2027 财年生效；同时把加密收入最高 55% 的税率下调为统一 20%（2028 年起），为日本首次出现现货加密 ETF 铺平法律基础，东京证券交易所人士预计交易最早 2027 年启动。</p><p class="item-b">这是亚太主要经济体中少见的『监管从严+税负从宽』组合拳：纳入证券法框架意味着更严的内幕交易/信披规则，但税率大幅下调和 ETF 路径打开显著降低了合规参与的摩擦成本，对亚太零售加密需求是结构性利好。</p>
+          <h3 class="item-h">Japan’s parliament passes legislation bringing crypto under financial instruments law and setting a 20% tax rate</h3>
+          <p class="item-b">Japan&#x27;s legislature passed a bill on July 15 placing crypto assets including bitcoin, ether and XRP under the Financial Instruments and Exchange Act from fiscal 2027. A flat 20% tax on crypto income is scheduled to replace a top rate of 55% from 2028. The legislation provides a legal basis for Japan&#x27;s first spot crypto ETFs. A Tokyo Stock Exchange representative expected trading could begin as early as 2027.</p><p class="item-b">The framework pairs stricter insider-trading and disclosure rules with lower taxes and a potential ETF route. That combination could reduce the cost of regulated participation for Japanese retail investors.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-15</span>
             <a class="item-src" href="https://www.coindesk.com/policy/2026/07/15/japan-reclassifies-crypto-as-a-financial-asset-paves-way-for-tax-cuts" target="_blank" rel="noopener">CoinDesk ↗</a>
@@ -206,15 +206,15 @@
         <div class="sec-head">
           <span class="sec-no">04</span>
           <div>
-            <div class="sec-kicker">模型厂商向企业服务纵深</div>
+            <div class="sec-kicker">Model providers expand enterprise services</div>
             <h2 class="sec-title">AI</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">Anthropic 联手 Blackstone、Hellman &amp; Friedman 成立 15 亿美元企业 AI 服务公司 Ode</h3>
-          <p class="item-b">Anthropic、Blackstone、Hellman &amp; Friedman 07-15 正式发布 Ode with Anthropic，一家依托 Claude 模型的独立企业 AI 服务公司，脱胎于今年 5 月被收购的应用 AI 服务商 Fractional AI 团队；Goldman Sachs、General Atlantic、Leonard Green &amp; Partners、Apollo、GIC、Sequoia 等机构跟投，三大发起方各投入约 3 亿美元、Goldman 追加约 1.5 亿美元，合计资本化约 15 亿美元，主攻帮助中型企业把 AI 从实验阶段落到运营集成。</p><p class="item-b">这标志着模型厂商正从『卖 API』向『卖交付』延伸：Anthropic 自己不再只做技术输出方，而是通过独立关联公司直接下场做企业实施服务，用真金白银的 PE 资本背书『企业能不能真正把 Claude 用起来』这件事的商业化路径。</p>
+          <h3 class="item-h">Anthropic, Blackstone and Hellman &amp; Friedman form $1.5 billion enterprise AI services company Ode</h3>
+          <p class="item-b">Anthropic, Blackstone and Hellman &amp; Friedman launched Ode with Anthropic on July 15. The independent Claude-based enterprise services company grew out of the Fractional AI team acquired in May. The three founders each invested about $300 million, and Goldman Sachs contributed another $150 million. General Atlantic, Leonard Green &amp; Partners, Apollo, GIC and Sequoia also participated. Total capitalization was about $1.5 billion. Ode aims to help mid-sized businesses move AI from trials into operations.</p><p class="item-b">Anthropic is expanding from selling model access into implementation services through an independent affiliate. Private equity funding backs the effort to turn enterprise adoption of Claude into an operating business.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-15</span>
             <a class="item-src" href="https://www.ode.com/press/anthropic-blackstone-and-hellman-friedman-introduce-ode-with-anthropic-an-enterprise-ai-services-firm" target="_blank" rel="noopener">Ode ↗</a>
@@ -226,31 +226,31 @@
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
-            <div class="sec-kicker">机会与打法</div>
-            <h2 class="sec-title">产品观察</h2>
+            <div class="sec-kicker">Product opportunities</div>
+            <h2 class="sec-title">Product observations</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">预言机签名密钥托管值得一次独立审计，而不是等出事才发现</h3>
-          <p class="item-b">Ostium 的预言机签名密钥遭到攻击，导致合约接受异常价格。链上结算除了验证签名，还依赖链下报价方对签名密钥的保管。</p>
+          <h3 class="item-h">Oracle signing-key custody merits independent review</h3>
+          <p class="item-b">Ostium’s oracle incident led its contracts to accept anomalous prices. Onchain verification still depends on the integrity and custody of the offchain price provider’s signing authority.</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://www.coindesk.com/business/2026/07/15/ostium-suffers-usd18-million-exploit-as-oracle-attack-wave-continues-to-hit-defi" target="_blank" rel="noopener">CoinDesk ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">分发合作前先问产品是否真的能交付，避免复刻 Robinhood Chain 的落差</h3>
-          <p class="item-b">Robinhood Chain 案例显示，分发到位（2800 万用户钱包直接嵌入）不等于产品交付：承诺的 35 个 RWA 永续市场卡在候补名单已 14 天，而真正带动链上活跃度的发射台 Noxa 如今也因收入模型难以为继而清零抽成关站，替代性活跃度来源同样不可持续。若未来考虑通过券商/钱包等外部渠道做分发合作，建议把『产品是否已具备实际交付能力』作为前置条件，避免『分发热度先于产品成熟度』的落差损耗信任。</p>
+          <h3 class="item-h">Distribution partnerships depend on the core product reaching users</h3>
+          <p class="item-b">Robinhood Chain&#x27;s integration put the product in wallets serving 28 million users, yet its promised 35 RWA perpetuals markets had remained on a waiting list for 14 days. Noxa, the launchpad driving actual activity on the chain, cut its fees to zero and shut down when its revenue model proved unsustainable. For a brokerage or wallet partnership, confirm that customers can use the promised markets before promoting the distribution agreement. A long wait after the announcement can cost users&#x27; trust.</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://www.coindesk.com/business/2026/07/15/the-launchpad-that-fueled-robinhood-chain-s-memecoin-boom-just-gave-away-all-its-revenue" target="_blank" rel="noopener">CoinDesk ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">permissionless 建市门槛可能被资本中介化，需要提前设计防集中度机制</h3>
-          <p class="item-b">Hyperion 把自己囤的 HYPE 出租给没有资本但有能力的团队上新市场，让 HIP-3 的建市门槛从『自己攒质押』变成『找金主』，permissionless 的准入门槛出现了金融中介化的可能。</p>
+          <h3 class="item-h">Financing for permissionless listings introduces concentration risk among market builders</h3>
+          <p class="item-b">Hyperion offers its HYPE holdings to teams that can operate markets but cannot fund the full stake. Access to permissionless HIP-3 deployment can therefore depend on financing intermediaries.</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://www.theblock.co/post/408538/hyperliquid-treasury-firm-hyperion-new-500k-hype-bond-skew" target="_blank" rel="noopener">The Block ↗</a>
@@ -258,7 +258,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

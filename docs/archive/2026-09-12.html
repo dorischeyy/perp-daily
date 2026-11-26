@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-09-12</title>
+<title>Perp DEX Daily · 2026-09-12</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 75 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 75</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 9 月 12 日 · 星期六</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">September 12, 2026 · Saturday</div>
     </header>
-    <p class="lead">Jump在Hyperliquid形成可见的机构成交集中度，Aster把RWA奖励改为全天平均持仓，Uniswap则以动态费率重做稳定币池的套利分配。</p>
+    <p class="lead">Jump accounted for a measurable concentration of institutional trading on Hyperliquid. Aster switched RWA rewards to average positions held throughout the day, and Uniswap redesigned how stablecoin pools share arbitrage value through dynamic fees.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,9 +110,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Jump贡献Hyperliquid近8%累计永续成交</h3>
-          <p class="item-b"><strong>事件</strong>：Jump Trading自2025年12月以来在Hyperliquid累计成交接近1500亿美元，占平台永续成交约7.8%，在XYZ市场的份额接近19%。</p><p class="item-b"><strong>机制</strong>：一个主账户配合16个子账户执行，约6500万美元USDC作为保证金，当前名义敞口约1.45亿美元；账户已支付约700万美元交易费。</p><p class="item-b"><strong>二阶效应</strong>：机构账户能同时带来深度、费用与大额持仓，也让协议收入和流动性更依赖少数执行主体，平台需要把账户集中度与自然用户增长分开监测。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>成交份额来自链上账户归集，不等于净方向风险或真实做市深度；同一机构内部对冲也会放大双边成交。</p>
+          <h3 class="item-h">Jump accounts for nearly 8% of Hyperliquid’s cumulative perpetual volume</h3>
+          <p class="item-b"><strong>Event</strong>: Since December 2025, Jump Trading has generated nearly $150 billion in volume on Hyperliquid, about 7.8% of its perpetual volume. Its share in XYZ markets was close to 19%.</p><p class="item-b"><strong>Mechanism</strong>: One main account and 16 subaccounts execute the trades, with about $65 million of USDC as margin and current notional exposure of roughly $145 million. The accounts have paid around $7 million in trading fees.</p><p class="item-b"><strong>Second-order effects</strong>: Institutional accounts can bring depth, fees, and large positions simultaneously. This makes the protocol’s revenue and liquidity more dependent on a few executing entities. The platform needs to monitor account concentration separately from natural user growth.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The volume shares reflect aggregated onchain accounts. They reveal neither net directional exposure nor the depth market makers actually provide. An institution hedging internally can inflate volume on both sides.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-09</span>
             <a class="item-src" href="https://en.bloomingbit.io/feed/news/120008" target="_blank" rel="noopener">Bloomingbit ↗</a>
@@ -120,9 +120,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Phoenix上线TWAP大单拆分</h3>
-          <p class="item-b"><strong>事件</strong>：Phoenix上线TWAP订单，允许交易者把目标仓位按时间拆成多笔执行。</p><p class="item-b"><strong>机制</strong>：系统按预设周期逐步成交，降低大单一次性扫过订单簿造成的冲击，但成交均价仍取决于切片频率、盘口深度和期间价格路径。</p><p class="item-b"><strong>二阶效应</strong>：执行工具开始从市价和限价扩展到算法拆单，能改善大额用户体验；若缺少最小深度、偏离保护和暂停条件，风险只是从瞬时滑点转为持续执行风险。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>功能已开放，但来源未披露切片规则、最短周期、偏离保护与实际节省的滑点，尚不能判断执行质量。</p>
+          <h3 class="item-h">Phoenix adds TWAP execution for splitting large orders</h3>
+          <p class="item-b"><strong>Event</strong>: Phoenix introduced TWAP orders, allowing traders to split their target positions into multiple executions over time.</p><p class="item-b"><strong>Mechanism</strong>: The system trades transactions in a predetermined cycle, reducing the impact of large orders that sweep through the order book. However, the average transaction price still depends on the slicing frequency, market depth, and price movement during the period.</p><p class="item-b"><strong>Second-order effects</strong>: Execution tools are now expanding from market prices and limits to algorithmic splitting, which can improve the user experience for large transactions. Without minimum depth, deviation protection, and pause conditions, the risk shifts from momentary slippage to continuous execution risks.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The feature is live. The source omitted order-slicing rules, minimum duration, deviation controls and realized slippage savings, leaving execution quality unknown.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-10</span>
             <a class="item-src" href="https://perpdexwars.com/en/perpdex-news?venue=phoenix" target="_blank" rel="noopener">PerpDEX Wars ↗</a>
@@ -130,9 +130,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Aster把RWA奖励改为全天平均OI</h3>
-          <p class="item-b"><strong>事件</strong>：Aster宣布从Epoch 3起，把USD1 RWA Boost由小时计算改为每日UTC结算，并以24小时平均OI作为乘数。</p><p class="item-b"><strong>机制</strong>：奖励不再只取单个小时的持仓快照，而是用全天平均未平仓量衡量持续贡献，降低结算前短时堆仓对分数的影响。</p><p class="item-b"><strong>二阶效应</strong>：激励从成交瞬时量转向持仓持续性，但若账户集中度、采样异常和自成交识别仍不透明，平均OI也可能被长期占用资本的策略博弈。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>新口径将在9月14日开始的Epoch 3生效，采样、异常账户识别和申诉规则尚未公开。</p>
+          <h3 class="item-h">Aster bases real-world asset rewards on average open interest throughout the day</h3>
+          <p class="item-b"><strong>Event</strong>: Aster announced that starting from Epoch 3, the USD1 RWA Boost will be calculated on a daily basis using UTC timekeeping, with a 24-hour average OI serving as the multiplier.</p><p class="item-b"><strong>Mechanism</strong>: Rewards now use average open interest throughout the day to measure sustained positions. Replacing a single hourly snapshot reduces the scoring benefit of briefly adding positions just before settlement.</p><p class="item-b"><strong>Second-order effects</strong>: Incentives shift from immediate transaction volumes to sustained positions. However, if account concentration, sampling anomalies, and self-transactions remain opaque, the average OI may be exploited by strategies that take advantage of capital.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The new metric will take effect starting from Epoch 3 on September 14. Sampling, abnormal account identification, and appeal rules have not yet been disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-10</span>
             <a class="item-src" href="https://perpdexwars.com/en/perpdex-news?venue=aster" target="_blank" rel="noopener">PerpDEX Wars ↗</a>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">16家Launchpad日发币维持在8.67万枚</h3>
-          <p class="item-b">MemeFees记录9月11日16家Launchpad共创建86715枚代币，较前一日86776枚几乎持平；pump.fun以28271枚居首。</p><p class="item-b">连续两日高位横盘说明供给生产仍未收缩，但发币数只能衡量创建速度，不能替代毕业率、流动性留存和真实买家质量。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>数据按UTC日统计，混合API采样下限与已验证工厂合约完整计数，跨平台数量并非完全同质口径。</p>
+          <h3 class="item-h">Daily token launches across 16 platforms hold at 86,700</h3>
+          <p class="item-b">MemeFees records show that on September 11, 16 Launchpads created a total of 86,715 tokens, which is almost the same as the previous day’s figure of 86,776 tokens. Pump.fun ranked first with 28,271 tokens.</p><p class="item-b">Two consecutive days of high levels indicate that supply production has not decreased. However, the number of coins issued can only measure the creation rate and cannot replace indicators such as graduation rate, liquidity retention, and the quality of real buyers.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Counts use UTC days. Some platforms provide lower bounds sampled through an API, while verified factory contracts provide complete counts for others. Cross-platform comparisons therefore use different coverage.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-11</span>
             <a class="item-src" href="https://memefees.com/stats/launches" target="_blank" rel="noopener">MemeFees ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">SolvScore把Launchpad交易费分给预注册买家</h3>
-          <p class="item-b">SolvScore在OpenLaunch发行SOLV，固定供应10亿枚并把全部代币放入Uniswap v4池，流动性锁定且无管理员密钥。</p><p class="item-b">每笔交易收取3%费用，其中2%分给符合快照与买入时限要求的注册投资者；上线时只有5个注册钱包和14个分润单位，机制已落地但采用仍很早期。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>费用分配规则不可变，但来源未披露成交量、实际分润收入和做市深度，早期钱包数不足以证明分发效果。</p>
+          <h3 class="item-h">SolvScore shares launchpad trading fees with preregistered buyers</h3>
+          <p class="item-b">SolvScore issued SOLV during OpenLaunch, with a fixed supply of 1 billion tokens. All tokens were placed in the Uniswap v4 pool, with liquidity locked and no administrator keys involved.</p><p class="item-b">A 3% fee is charged for each transaction. 2% of this fee goes to registered investors who meet the snapshot and purchase time requirements. At launch, there were only 5 registered wallets and 14 distribution units. The mechanism is in place, but its implementation is still in its early stages.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The fee split is immutable. The source did not report trading volume, revenue actually distributed or market-making depth. Early wallet counts alone do not establish the reach of the platform.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-11</span>
             <a class="item-src" href="https://solvscore.com/launch/" target="_blank" rel="noopener">SolvScore ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Degen用低毕业门槛加快流动性迁移</h3>
-          <p class="item-b">X1上的Degen Launchpad把代币从联合曲线迁移到DEX的门槛压到约1500美元，明显低于主流Solana发币平台。</p><p class="item-b">更低门槛让小额资金也能完成毕业，但页面样本显示数百美元就可能显著移动价格；它提高了迁移速度，也同步放大薄流动性、抢跑和价格操纵风险。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>门槛来自9月10日产品页面审计，X1仍处早期，来源未提供毕业后留存、真实买家和持续成交数据。</p>
+          <h3 class="item-h">Degen uses a low graduation threshold to accelerate liquidity migration</h3>
+          <p class="item-b">Degen Launchpad on X1 set a threshold of about $1,500 for a token to move from its bonding curve to a DEX, substantially below the thresholds on mainstream Solana launchpads.</p><p class="item-b">The lower threshold lets a token graduate with less capital, speeding migration to a DEX. Examples on the page showed that just a few hundred dollars could move the price substantially, making thin liquidity, front-running and price manipulation more significant risks.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The threshold comes from a September 10 review of the product page. X1 is early-stage, and the source gave no figures for retention after graduation, genuine buyers or sustained trading.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-10</span>
             <a class="item-src" href="https://x1report.com/article/how-to-launch-a-token-on-x1-degen-launchpad-guide" target="_blank" rel="noopener">X1 Report ↗</a>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Uniswap把稳定币套利价差留给LP</h3>
-          <p class="item-b">Uniswap在以太坊USDC/USDG和USDC/USDT池上线StablePair Hook：价格处于参考区间内时维持固定价差，偏离越远时纠偏交易费越低。</p><p class="item-b">当套利者把池价拉回参考价，费用按区块从高位递减，原本由最快套利者取得的价差可更多回流LP；参数仍可由治理升级。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>Uniswap第二季度稳定币兑换约434亿美元，高于其后三个场所合计；新Hook当前只覆盖两个以太坊池。</p>
+          <h3 class="item-h">Uniswap directs stablecoin arbitrage spreads to liquidity providers</h3>
+          <p class="item-b">Uniswap has launched a StablePair Hook in the Ethereum USDC/USDG and USDC/USDT pools. When the price is within the reference range, a fixed spread is maintained. The higher the deviation from the reference range, the lower the transaction fees for corrections.</p><p class="item-b">When arbitgers bring the pool price back to the reference price, fees decrease from high to low levels in each block. The price difference that was originally obtained by the fastest arbitgers can be more effectively returned to LP. The parameters can still be upgraded through governance improvements.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Uniswap’s stablecoin exchange volume in the second quarter was approximately 43.4 billion USD, which is higher than the combined volume of the previous three venues. The new Hook currently covers only two Ethereum pools.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-10</span>
             <a class="item-src" href="https://blog.uniswap.org/stablepair-hook-a-fee-that-moves-with-the-market" target="_blank" rel="noopener">Uniswap Labs ↗</a>
@@ -202,19 +202,19 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">SEBI用CBDC原子结算试跑代币化债券</h3>
-          <p class="item-b">印度SEBI启动Demat 2.0试点，在存管机构运营的许可链上原生发行公司债，并保留原ISIN与法定权利。</p><p class="item-b">资金侧使用CBDC钱包，证券与资金以原子交付兑付完成；首阶段面向机构发行，零售二级交易和更多节点、资产将在后续阶段开放。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>首阶段只覆盖机构发行，尚无零售二级成交、结算时延或发行规模数据，不能等同于公开链债券市场。</p>
+          <h3 class="item-h">SEBI pilots tokenized bonds with atomic settlement in central bank digital currency</h3>
+          <p class="item-b">India’s SEBI has launched a pilot program for Demat 2.0. Companies can issue corporate bonds on the permissioned blockchain operated by the depository institution, while retaining their original ISIN and legal rights.</p><p class="item-b">Funds are processed using CBDC wallets, and securities and funds are delivered atomically. The initial phase is aimed at institutions. Retail secondary trading and more nodes/ assets will be available in subsequent phases.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The first phase only covers institutional issuance. There is no data on retail secondary transactions, settlement delays, or issuance volume. Therefore, it cannot be compared to the public blockchain bond market.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-10</span>
-            <a class="item-src" href="https://www.sebi.gov.in/media-and-notifications/press-releases/sep-2026/successful-launch-of-demat-2-0-pilot-project-for-tokenised-corporate-bonds_104418.html" target="_blank" rel="noopener">SEBI ↗</a><a class="item-src item-ref" href="https://www.sebi.gov.in/sebi_data/faqfiles/sep-2026/1789049630065.pdf" target="_blank" rel="noopener">补充：SEBI FAQ · 09-10 ↗</a>
+            <a class="item-src" href="https://www.sebi.gov.in/media-and-notifications/press-releases/sep-2026/successful-launch-of-demat-2-0-pilot-project-for-tokenised-corporate-bonds_104418.html" target="_blank" rel="noopener">SEBI ↗</a><a class="item-src item-ref" href="https://www.sebi.gov.in/sebi_data/faqfiles/sep-2026/1789049630065.pdf" target="_blank" rel="noopener">Additional source: SEBI FAQ · 09-10 ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">KuCoin把保证金借贷额度改为分层上限</h3>
-          <p class="item-b">KuCoin对部分币种的全仓与逐仓保证金借贷上线分层额度，并按VIP等级扩展可借上限。</p><p class="item-b">界面同时展示币种数量和按指数价折算的USDT价值，让用户更容易判断剩余额度；币种范围、各层阈值和压力场景下的动态调整尚未完整披露。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>功能只覆盖部分币种，来源未给完整币种清单、VIP层级额度和市场波动时的收紧规则。</p>
+          <h3 class="item-h">KuCoin introduces tiered caps for margin borrowing</h3>
+          <p class="item-b">KuCoin introduced tiered borrowing limits for selected assets in both cross-margin and isolated-margin accounts. Higher VIP levels can borrow larger amounts.</p><p class="item-b">The interface shows the available quantity in tokens and its USDT value at the index price, making the remaining borrowing capacity easier to assess. The full asset list, tier thresholds and adjustments under stressed conditions were undisclosed.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The feature only covers some currencies. The source does not provide a complete list of currencies, VIP tier limits, or rules for tightening during market fluctuations.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-11</span>
             <a class="item-src" href="https://www.kucoin.com/news/flash/kucoin-launches-tiered-borrowing-limits-for-cross-and-isolated-margin-trading" target="_blank" rel="noopener">KuCoin ↗</a>
@@ -226,16 +226,16 @@
         <div class="sec-head">
           <span class="sec-no">04</span>
           <div>
-            <h2 class="sec-title">AI 相关</h2>
+            <h2 class="sec-title">AI</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
 
-          <h3 class="item-h">OpenAI用Rust重写Habitat支撑十亿周用户</h3>
-          <p class="item-b">OpenAI披露内部存储层Habitat每秒处理约7000万次请求，服务超过10亿周用户并管理超过500PB数据。</p><p class="item-b">两名工程师借助Codex和GPT-5.5把核心Python服务重写为Rust，现已承接95%的生产请求，CPU效率提高6倍、内存效率提高15倍。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>性能倍数来自OpenAI内部生产负载，不代表一般Python服务迁移都能复现，也未披露完整迁移成本与故障数据。</p>
+          <h3 class="item-h">OpenAI rewrites Habitat in Rust to support one billion weekly users</h3>
+          <p class="item-b">OpenAI revealed that its internal storage layer, Habitat, processes approximately 70 million requests per second. The service serves over 1 billion users per week and manages more than 500PB of data.</p><p class="item-b">Two engineers used Codex and GPT-5.5 to rewrite the core Python services into Rust. Now, 95% of production requests are handled by this system. CPU efficiency has increased by 6 times, and memory efficiency has increased by 15 times.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Performance multiples come from OpenAI’s internal production load. This does not mean that general Python services can replicate this performance. The complete migration costs and fault data have not been disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-11</span>
             <a class="item-src" href="https://openai.com/index/scaling-storage-one-billion-users-part-one/" target="_blank" rel="noopener">OpenAI ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Salesforce用AI Control Plane统一治理多Agent</h3>
-          <p class="item-b">Salesforce发布Enterprise AI Harness，以统一控制面发现和管理不同平台的Agent，并覆盖身份、策略、生命周期、评估、行为与成本。</p><p class="item-b">基础能力已可用，统一体验和新增功能预计在2028财年初开始推出；MCP、API、Skills和插件可作为无界面接入层，定价与完整范围仍待公布。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>现有底层能力与未来统一体验处于不同阶段，当前公告不能证明跨平台治理已在客户环境完整运行。</p>
+          <h3 class="item-h">Salesforce introduces AI Control Plane to govern multiple agents</h3>
+          <p class="item-b">Salesforce has released the Enterprise AI Harness, which allows for unified control over the discovery and management of agents across different platforms. This tool covers aspects such as identity management, policies, lifecycle management, evaluation, behavior, and cost optimization.</p><p class="item-b">Basic capabilities are now available. A unified experience and new features are expected to be launched at the beginning of the fiscal year 2028. MCP, API, Skills, and plugins can serve as interface-less access layers. Pricing for the full range of services is still pending announcement.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The current underlying capabilities and future unified experience are at different stages. The current announcement cannot prove that cross-platform governance is fully implemented in the customer environment.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-11</span>
             <a class="item-src" href="https://www.salesforce.com/ap/news/press-releases/2026/09/11/salesforce-introduces-the-trusted-enterprise-ai-harness/?bc=OTH" target="_blank" rel="noopener">Salesforce ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Tempus启动十万例全基因组AI数据集</h3>
-          <p class="item-b">Tempus启动疾病专项全基因组计划，首期目标10万例，并把基因组数据与纵向病历、影像、病理和结局连接。</p><p class="item-b">初始数据通过Early Adopter Program提供，计划2027年中全面开放；长期目标为100万例，研究者可在Lens环境内分析而无需搬移数据。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>当前只是早期访问，样本覆盖、疾病分布、授权方式和模型基准尚未公开，长期百万例目标不等于现有数据量。</p>
+          <h3 class="item-h">Tempus starts an AI dataset covering 100,000 whole genomes</h3>
+          <p class="item-b">Tempus launched a comprehensive genome project for diseases. The initial target is 100,000 cases. Genome data will be connected to longitudinal medical records, images, pathology, and outcomes.</p><p class="item-b">Initial data is provided through the Early Adopter Program. The goal is to fully open up this feature by mid-2027. The long-term goal is to reach 1 million transactions. Researchers can analyze data within the Lens environment without having to transfer data.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>This is only an early-stage access. The sample coverage, disease distribution, authorization methods, and model benchmarks have not been disclosed yet. The long-term goal of reaching one million cases does not equal the current amount of data available.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-11</span>
             <a class="item-src" href="https://investors.tempus.com/node/10676/pdf" target="_blank" rel="noopener">Tempus ↗</a>
@@ -267,15 +267,15 @@
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product analysis</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">分发与增长</div>
-          <h3 class="item-h">奖励结算要同时审计账户集中度与持仓持续性</h3>
-          <p class="item-b"><strong>判断变化</strong>：从只在结算后审计账户集中度，更新为奖励设计同时审计账户集中度与持仓持续性，小时级快照不能单独代表有效贡献。</p><p class="item-b"><strong>证据与边界</strong>：Aster把USD1 RWA Boost从小时计算改成24小时UTC周期并加入24小时平均OI，但未公开采样、异常账户识别和申诉规则，不能证明新口径已消除刷量或短时堆仓。</p>
+          <div class="decision-area">Distribution and growth</div>
+          <h3 class="item-h">Reward settlement needs checks on both account concentration and time positions were held</h3>
+          <p class="item-b"><strong>Change in assessment</strong>: The method of auditing account concentration has been updated from only auditing after settlement to auditing both account concentration and holding duration. Hourly snapshots cannot represent effective contributions independently.</p><p class="item-b"><strong>Evidence and limits</strong>: Aster changed the calculation of USD1 RWA Boost from hourly to 24-hour UTC cycle, and added a 24-hour average OI. However, it has not disclosed sampling, anomaly detection, or appeal rules, making it impossible to prove that the new metric eliminates manipulation or short-term accumulation.</p>
 
           <div class="item-meta">
 
@@ -284,7 +284,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

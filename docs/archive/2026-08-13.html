@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-08-13</title>
+<title>Perp DEX Daily · 2026-08-13</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 49 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 49</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 8 月 13 日 · 星期四</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">August 13, 2026 · Thursday</div>
     </header>
-    <p class="lead">永续场所成交恢复而 OI 增长更快，Kraken 把标普 500 永续接入 funded trading，Kalshi 则把预测市场订单簿送入机构专线，竞争焦点正从标的扩列转向资本与数据分发。</p>
+    <p class="lead">Volume recovered at major perpetual venues as open interest also rose sharply. Kraken added S&amp;P 500 perpetuals to funded trading, and Kalshi distributed its prediction-market order book through a dedicated institutional connection.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,32 +110,32 @@
 
         <article class="item">
 
-          <h3 class="item-h">三大永续场所日成交回升 10.3%，OI 增长 9.6%</h3>
-          <p class="item-b"><strong>事件</strong>：8 月 13 日远端快照中，Binance、Gate 与 Hyperliquid 合计日成交由前一日约 849462 BTC 增至 937076 BTC，增长约 10.3%；合计 OI 由 774435 BTC 增至 848954 BTC，增长约 9.6%。</p><p class="item-b"><strong>机制</strong>：成交从前一日回落中恢复，但 OI 增量几乎与成交增量同步，市场不是单纯增加换手，而是在较高存量之上继续积累仓位。</p><p class="item-b"><strong>二阶效应</strong>：风险判断需要区分普遍建仓与单一场所口径突变；若增量集中在少数场所，合计 OI 会高估全市场可持续容量。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>CoinGecko 场所级 BTC 汇总不含交易对构成、激励成交与可执行深度；三家 OI 增量约 86% 来自 Gate。</p>
+          <h3 class="item-h">Daily volume rises 10.3% across three venues as open interest rises 9.6%</h3>
+          <p class="item-b"><strong>Event</strong>: In the August 13 snapshot, combined daily volume at Binance, Gate and Hyperliquid rose 10.3%, from about 849,462 BTC to 937,076 BTC. Open interest rose 9.6%, from about 774,435 BTC to 848,954 BTC.</p><p class="item-b"><strong>Mechanism</strong>: Volume recovered from the previous day’s decline, and open interest increased almost as quickly. Outstanding positions accumulated on top of an already large base.</p><p class="item-b"><strong>Second-order effects</strong>: A venue-specific reporting change can resemble broad position growth in the aggregate. Concentration of the increase at a small number of venues would make market-wide capacity harder to infer.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Gate accounted for about 86% of the three venues’ additional open interest. CoinGecko’s BTC-denominated totals omit pair composition, incentive-driven activity and executable depth.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-13</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/2a63c17b34ab0b0a9617e089006063a2adc51ae5/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/9a5479488bd5ac2a78e7c8659f9a188b66c87c1d/docs/market.json" target="_blank" rel="noopener">补充：前一日市场快照 · 08-12 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/2a63c17b34ab0b0a9617e089006063a2adc51ae5/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/9a5479488bd5ac2a78e7c8659f9a188b66c87c1d/docs/market.json" target="_blank" rel="noopener">Additional source: Previous day&#x27;s market snapshot · 08-12 ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">Gate 的 OI 单日增加 33.8%，成交反降 27.8%</h3>
-          <p class="item-b"><strong>事件</strong>：Gate 的 OI 由约 189561 BTC 升至 253644 BTC，单日增加约 33.8%；同期日成交由约 122349 BTC 降至 88314 BTC，OI 与成交比由 1.55 跳升至 2.87。</p><p class="item-b"><strong>机制</strong>：仓位存量快速上升却没有获得同方向成交支持，可能来自持仓口径、交易对覆盖或长周期仓位变化，场所汇总本身无法解释增量质量。</p><p class="item-b"><strong>二阶效应</strong>：突发 OI 增长必须先按场所和标的拆解，再决定是否放宽容量；直接把汇总增量视为真实深度，会把口径变化传进风险参数。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>单日异常不足以判断真实建仓或数据问题；需要交易对级 OI、账户集中度与盘口深度交叉验证。</p>
+          <h3 class="item-h">Gate open interest rises 33.8% in a day as volume falls 27.8%</h3>
+          <p class="item-b"><strong>Event</strong>: Gate’s open interest rose from about 189,561 BTC to 253,644 BTC, up roughly 33.8% in a day. Daily volume fell from about 122,349 BTC to 88,314 BTC, sending its open-interest-to-volume ratio from 1.55 to 2.87.</p><p class="item-b"><strong>Mechanism</strong>: Outstanding positions rose sharply without supporting growth in volume. Reporting methodology, the set of pairs covered or longer-lived positions could explain the change. Venue totals alone cannot identify the quality of the additional exposure.</p><p class="item-b"><strong>Second-order effects</strong>: Sudden open-interest growth needs to be broken down by venue and asset before trading capacity is raised. Treating the aggregate increase as new depth could feed a reporting change directly into risk parameters.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>A single daily anomaly cannot distinguish actual position building from a data issue. It needs checking against open interest by pair, account concentration, and order-book depth.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-13</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/2a63c17b34ab0b0a9617e089006063a2adc51ae5/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/9a5479488bd5ac2a78e7c8659f9a188b66c87c1d/docs/market.json" target="_blank" rel="noopener">补充：前一日市场快照 · 08-12 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/2a63c17b34ab0b0a9617e089006063a2adc51ae5/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/9a5479488bd5ac2a78e7c8659f9a188b66c87c1d/docs/market.json" target="_blank" rel="noopener">Additional source: Previous day&#x27;s market snapshot · 08-12 ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">Hyperliquid 成交恢复 25%，相对 Bybit 的持仓周转改善</h3>
-          <p class="item-b"><strong>事件</strong>：Hyperliquid 日成交由约 84059 BTC 增至 105042 BTC，增长约 25.0%，OI 增约 1.9%，OI 与成交比由 2.10 降至 1.71；Bybit 同期比值由 1.14 降至 1.11。</p><p class="item-b"><strong>机制</strong>：Hyperliquid 的成交恢复快于仓位增长，前一日存量相对换手放慢的现象有所缓解，但绝对比值仍高于 Bybit。</p><p class="item-b"><strong>二阶效应</strong>：链上场所的容量证据正在改善，但仍需持续成交和资产级退出深度确认，不能用一天的周转修复替代稳定流动性。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>Hyperliquid 当日 OI 与成交比约为 Bybit 的 1.54 倍，低于前一日 1.84 倍；比值下降只代表相对换手加快。</p>
+          <h3 class="item-h">Hyperliquid volume recovers 25% and its position turnover improves relative to Bybit</h3>
+          <p class="item-b"><strong>Event</strong>: Hyperliquid’s daily volume rose about 25.0%, from 84,059 BTC to 105,042 BTC. Open interest rose about 1.9%, taking its open-interest-to-volume ratio from 2.10 to 1.71. Bybit’s ratio fell from 1.14 to 1.11.</p><p class="item-b"><strong>Mechanism</strong>: Hyperliquid’s volume recovered faster than its open positions grew, partly reversing the previous day’s slowdown in turnover. Its ratio remained higher than Bybit’s.</p><p class="item-b"><strong>Second-order effects</strong>: The new figures strengthen the evidence for onchain capacity. Lasting liquidity still requires sustained volume and the ability to exit at size in each asset.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>Hyperliquid&#x27;s open-interest-to-volume ratio was about 1.54 times Bybit&#x27;s, down from 1.84 the previous day. The drop indicates faster relative turnover.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-13</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/2a63c17b34ab0b0a9617e089006063a2adc51ae5/docs/market.json" target="_blank" rel="noopener">Perp Daily 市场快照 ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/9a5479488bd5ac2a78e7c8659f9a188b66c87c1d/docs/market.json" target="_blank" rel="noopener">补充：前一日市场快照 · 08-12 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/2a63c17b34ab0b0a9617e089006063a2adc51ae5/docs/market.json" target="_blank" rel="noopener">Perp Daily market snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/9a5479488bd5ac2a78e7c8659f9a188b66c87c1d/docs/market.json" target="_blank" rel="noopener">Additional source: Previous day&#x27;s market snapshot · 08-12 ↗</a>
           </div>
         </article>
         </div>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Thrive Holdings 融资 20 亿美元，把 AI 部署变成控股改造模式</h3>
-          <p class="item-b">Thrive Holdings 以 120 亿美元估值融资 20 亿美元，继续收购会计和 IT 服务公司，再由 OpenAI 人员嵌入工作流；当前平台已覆盖 70 多家企业、约 2000 名专业人员。</p><p class="item-b">这类模式不再等待软件客户自行采用，而是先控制传统服务业务，再把工程团队和模型直接放进生产流程；扩张速度更快，但收益仍取决于被收购公司的真实利润改善。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>20 亿美元是新融资，不是 AI 带来的收入；现有落地覆盖 50 多家会计公司和约 20 家 IT 公司。</p>
+          <h3 class="item-h">Thrive Holdings raises $2 billion to deploy AI through controlling stakes in businesses</h3>
+          <p class="item-b">Thrive Holdings raised $2 billion at a $12 billion valuation to keep acquiring accounting and IT services companies and embed OpenAI personnel in their workflows. The platform already spans more than 70 businesses and about 2,000 professionals.</p><p class="item-b">The approach gives the company control over existing service businesses, where engineers and models can join production workflows directly. Acquisitions can accelerate adoption, but returns still depend on improved profitability at the acquired firms.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The $2 billion is newly raised capital, not AI-generated revenue. Deployments cover more than 50 accounting firms and about 20 IT firms.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-12</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Lovable 年化收入达 5 亿美元后再融资 4 亿美元</h3>
-          <p class="item-b">Lovable 完成 4 亿美元 C 轮融资，估值 133 亿美元；公司称 6 月年化收入已达 5 亿美元，平台托管 6000 万个项目，每月吸引 9 亿访问。</p><p class="item-b">vibe coding 已从生成原型推进到大规模托管与自研模型，竞争壁垒转向运行基础设施和分发，而非单次生成效果；公司口径仍未披露毛利、留存和项目活跃分布。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>估值约为披露年化收入的 26.6 倍；6000 万项目和 9 亿访问是平台总量，未披露付费留存。</p>
+          <h3 class="item-h">Lovable raises $400 million after reaching $500 million in annualized revenue</h3>
+          <p class="item-b">Lovable raised $400 million in a Series C at a $13.3 billion valuation. The company said annualized revenue reached $500 million in June. Its platform hosted 60 million projects and attracted 900 million visits per month.</p><p class="item-b">Development with natural-language prompts is extending beyond prototypes into large-scale hosting and proprietary models. Infrastructure and distribution now matter alongside generation quality. Lovable did not disclose gross margin, retention or how activity was distributed among hosted projects.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The valuation is roughly 26.6 times disclosed annualized revenue. The 60 million projects and 900 million visits are platform-wide figures. Paid retention was not disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-12</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Form Energy 融资 7.5 亿美元，百小时储能从单厂走向复制</h3>
-          <p class="item-b">Form Energy 新融资 7.5 亿美元，用于扩大铁空气电池产能和建设更多百小时储能项目；其产品目标是覆盖风光电连续数日不足的缺口，而非与四小时锂电池竞争同一调峰窗口。</p><p class="item-b">长时储能的机制优势来自便宜材料和更长放电时长，但制造复制、项目融资与真实循环效率仍决定能否把示范项目变成电网基础设施。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>7.5 亿美元用于扩产和项目建设；百小时是设计放电时长，不等于所有项目已连续运行 100 小时。</p>
+          <h3 class="item-h">Form Energy raises $750 million to expand hundred-hour energy storage beyond a single factory</h3>
+          <p class="item-b">Form Energy raised $750 million to expand iron-air battery production and build more 100-hour storage projects. Its batteries target multiday gaps in wind and solar output, a different use from the four-hour peak-shaving window served by lithium batteries.</p><p class="item-b">Cheap materials and long discharge times are advantages for long-duration storage. Replicable manufacturing, project finance and actual round-trip efficiency will determine whether demonstrations become grid infrastructure.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The $750 million funds capacity expansion and project construction. One hundred hours is the designed discharge duration. It does not establish that every project has operated continuously for that long.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-12</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/12/form-energy-raises-750m-to-build-more-100-hour-batteries-for-the-grid/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Kraken 把标普 500 永续接入 funded trading，资本分发取代用户自备保证金</h3>
-          <p class="item-b">Kraken Prop 上线以指数预言机定价的标普 500 永续，支持全天交易、最高 5 倍杠杆和最高 100 万美元名义敞口；标普 500 成为继纳斯达克 100 后第二个传统市场，商品将随后加入。</p><p class="item-b">用户先购买最低 20 美元的评估，通过规则后使用 Kraken 资本交易，使平台同时控制筛选、保证金和资产供给；RWA 永续竞争由列出标的推进到谁能分发交易资本。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>已上线两个传统市场；账户规模为 5000 至 20 万美元，100 万美元是最大名义敞口，不是用户资金。</p>
+          <h3 class="item-h">Kraken adds S&amp;P 500 perpetuals to funded trading, providing capital in place of user-posted margin</h3>
+          <p class="item-b">Kraken Prop launched an index-oracle-priced S&amp;P 500 perpetual with round-the-clock trading, up to 5× leverage and up to $1 million in notional exposure. It is the platform’s second traditional market after the Nasdaq 100. Commodities are planned next.</p><p class="item-b">Traders first buy an evaluation starting at $20, then gain access to Kraken capital if they meet the rules. Kraken controls screening, margin and the assets available. Competition in RWA perpetuals now includes who distributes trading capital as well as who lists the contracts.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Two traditional markets are live. Account sizes range from $5,000 to $200,000. The $1 million figure is the maximum notional exposure, not customer capital.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-12</span>
             <a class="item-src" href="https://cointelegraph.com/news/kraken-prop-sp500-perpetual-commodities-next" target="_blank" rel="noopener">Cointelegraph ↗</a>
@@ -202,9 +202,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Kalshi 把实时订单簿接入 DoubleZero，预测市场开始争夺机构数据入口</h3>
-          <p class="item-b">Kalshi 的体育和加密永续事件合约实时订单簿已通过 DoubleZero Edge 专用光纤网络向订阅者分发，机构可直接获取机器可读数据，不必自行拼接订单簿和 API。</p><p class="item-b">当场所把低延迟数据产品化，竞争从前端用户扩展到做市、风控和外部定价基础设施；但专线改善访问速度，不解决合约管辖和结算争议。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>体育与加密分别占 Kalshi 周名义成交 37.8% 和 20.3%；数据源披露的是品类占比，不是专线新增成交。</p>
+          <h3 class="item-h">Kalshi connects its real-time order book to DoubleZero for institutional data distribution</h3>
+          <p class="item-b">Subscribers can receive live order books for Kalshi sports and crypto perpetual event contracts over DoubleZero Edge’s dedicated fiber network. Institutions get machine-readable data directly without piecing together order books and API feeds themselves.</p><p class="item-b">Selling low-latency data extends venue competition into market making, risk systems and external pricing. A dedicated line improves access speed but leaves questions about contract jurisdiction and settlement unresolved.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Sports and crypto accounted for 37.8% and 20.3% of Kalshi&#x27;s weekly notional volume, respectively. These are category shares. They do not measure additional volume from the dedicated connection.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-12</span>
             <a class="item-src" href="https://cointelegraph.com/news/kalshi-launches-sports-crypto-data-feed-doublezero" target="_blank" rel="noopener">Cointelegraph ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">英格兰银行测试稳定币与数字英镑同流程结算，仍不使用真钱</h3>
-          <p class="item-b">英格兰银行 Digital Pound Lab 正测试跨境贸易融资：出口商通过稳定币获得预付款，英国进口商用模拟数字英镑结算，并组合交易与商业风险数据生成可复用信用档案。</p><p class="item-b">稳定币和央行数字货币若能在同一流程协作，可减少跨境结算等待和融资摩擦；但实验没有真实客户或资金，也不代表央行已决定发行数字英镑。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>这是实验室模拟流程，没有真实客户、资金或发行承诺；监管规则目标在 2026 年末定稿。</p>
+          <h3 class="item-h">Bank of England tests stablecoins and digital pounds in one settlement flow without real money</h3>
+          <p class="item-b">The Bank of England’s Digital Pound Lab is testing cross-border trade finance. Exporters receive stablecoin advances, while UK importers settle in simulated digital pounds. Transaction and commercial risk data feed into a reusable credit profile.</p><p class="item-b">Stablecoins and a central bank digital currency could together reduce settlement delays and financing friction. The test involved no real customers or funds. The Bank of England has made no decision to issue a digital pound.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The process was simulated in a lab. It involved no real customers, funds, or issuance commitments. The target for final regulatory rules is the end of 2026.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-12</span>
             <a class="item-src" href="https://cointelegraph.com/news/bank-of-england-tests-stablecoin-digital-pound-interoperability-in-cross-border-payments" target="_blank" rel="noopener">Cointelegraph ↗</a>
@@ -233,9 +233,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Blacksmith 把 AI 代码增长转化为验证需求，客户数一年增至 5000 家</h3>
-          <p class="item-b">AI 代码测试公司 Blacksmith 融资 4500 万美元，估值由不到一年前的 6000 万美元升至 5.5 亿美元；客户从 700 多家增至 5000 多家，并推出可自动修复失败检查的 Codesmith Agent。</p><p class="item-b">代码生成越快，测试和验证越容易成为生产瓶颈；但自动修复若与检查逻辑同源，仍需独立门禁防止 Agent 同时改变实现与验收标准。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>客户数不到一年增长约 7 倍；公司只称收入达数千万美元，未披露最新精确 ARR。</p>
+          <h3 class="item-h">Blacksmith reaches 5,000 customers in a year as AI-generated code increases verification demand</h3>
+          <p class="item-b">AI code-testing company Blacksmith raised $45 million at a $550 million valuation, up from $60 million less than a year earlier. Its customer base grew from more than 700 to over 5,000. Its new Codesmith Agent can automatically repair failed checks.</p><p class="item-b">Faster code generation puts more pressure on testing and verification. When automated repairs share logic with the checks themselves, an independent gate can prevent an agent from changing both the implementation and its acceptance criteria.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The customer count grew roughly sevenfold in under a year. The company placed revenue in the tens of millions of dollars but did not disclose current ARR.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-12</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/12/blacksmiths-valuation-jumps-10x-to-550m-as-ai-coding-fuels-software-validation/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Twitch 默认允许 Amazon 用直播训练 AI，退出机制引发反弹</h3>
-          <p class="item-b">Twitch 新增生成式 AI 训练设置，创作者默认被纳入，需在频道隐私设置中主动退出；平台管理层承认若改为主动加入，几乎不会有人选择加入。</p><p class="item-b">默认授权能快速扩大音视频训练语料，却把知情和同意成本转给创作者；平台甚至无法明确既往内容是否已被使用，数据治理风险先于模型收益暴露。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>设置覆盖 Twitch 创作者频道内容；报道未披露已进入训练的数据量或退出比例。</p>
+          <h3 class="item-h">Twitch defaults to allowing Amazon to train AI on streams, drawing opposition to its opt-out policy</h3>
+          <p class="item-b">Twitch introduced an opt-out setting for generative AI training. Creators are included by default and must change their channel privacy settings to withdraw. Management acknowledged that few creators would actively opt in.</p><p class="item-b">Default consent can expand the pool of audio and video available for training but places the burden of understanding and declining participation on creators. The platform could not clarify whether earlier content had been used, leaving data governance questions before any model benefit could be shown.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The setting covers content on Twitch creators&#x27; channels. The report did not say how much content had already entered training or what share of creators opted out.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-12</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Pixel 11 把 Gemini 放进相机和自然语音入口，系统分发继续前移</h3>
-          <p class="item-b">Google 在 Pixel 11 推出更多 Gemini 功能：Live Transcribe 支持把美国手语转成文字，Rambler 处理填充词和不完整长句，相机可直接调用 Circle to Search。</p><p class="item-b">模型能力被压进相机、语音和无障碍入口后，用户不必先打开聊天应用；AI 竞争进一步从独立 App 月活转向操作系统默认动作和设备上下文。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>功能随 Pixel 11 发布，覆盖手语转写、自然语音和相机搜索；实际语言范围与端侧占比尚未披露。</p>
+          <h3 class="item-h">Pixel 11 brings Gemini into the camera and natural voice interface</h3>
+          <p class="item-b">Google added Gemini features to Pixel 11. Live Transcribe can convert American Sign Language into text, Rambler handles filler words and unfinished long sentences, and users can launch Circle to Search directly from the camera.</p><p class="item-b">Integrating models with the camera, voice and accessibility tools lets users reach AI without opening a chat app. Competition now also concerns default operating-system actions and access to device context, beyond monthly users of standalone apps.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The features launched with Pixel 11 and cover sign-language transcription, natural speech, and camera search. Supported languages and the share processed on-device remain undisclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-12</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/12/google-unveils-pixel-11-lineup-new-airtag-rival-and-gemini-features-at-made-by-google-2026/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -267,24 +267,24 @@
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product assessment</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">市场与资产</div>
-          <h3 class="item-h">RWA 永续优先验证分发资本，不把扩列数量当采用</h3>
-          <p class="item-b"><strong>判断变化</strong>：从主要比较标的覆盖和交易时段，推进到同时比较谁提供交易资本、筛选机制和低延迟数据分发。</p><p class="item-b"><strong>证据与边界</strong>：Kraken Prop 用评估费和平台资本承接标普 500 永续，Kalshi 用专线分发订单簿；两者都扩大入口，但前者尚未披露通过率与真实交易量，后者不解决监管争议。</p>
+          <div class="decision-area">Market and Assets</div>
+          <h3 class="item-h">Capital distributed into real-world asset perpetuals is a stronger adoption measure than listing count</h3>
+          <p class="item-b"><strong>Revised assessment</strong>: Coverage and trading hours explain only part of distribution. The capital provider, trader selection process and delivery of low-latency data also shape the product.</p><p class="item-b"><strong>Evidence and limits</strong>: Kraken Prop paired assessment fees and platform capital with S&amp;P 500 perpetuals, while Kalshi offered a dedicated order-book feed. Kraken had not disclosed pass rates or actual volume, and Kalshi’s data channel did not resolve jurisdictional disputes.</p>
 
           <div class="item-meta">
 
-            <a class="item-src" href="https://cointelegraph.com/news/kraken-prop-sp500-perpetual-commodities-next" target="_blank" rel="noopener">Cointelegraph ↗</a><a class="item-src item-ref" href="https://cointelegraph.com/news/kalshi-launches-sports-crypto-data-feed-doublezero" target="_blank" rel="noopener">补充：Kalshi 数据专线 · 08-12 ↗</a>
+            <a class="item-src" href="https://cointelegraph.com/news/kraken-prop-sp500-perpetual-commodities-next" target="_blank" rel="noopener">Cointelegraph ↗</a><a class="item-src item-ref" href="https://cointelegraph.com/news/kalshi-launches-sports-crypto-data-feed-doublezero" target="_blank" rel="noopener">Additional source: Kalshi dedicated data feed · 08-12 ↗</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

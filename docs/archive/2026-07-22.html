@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-07-22</title>
+<title>Perp DEX Daily · 2026-07-22</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 持续追踪：跨日叙事线的"当前进展地图" */
+  /* Ongoing coverage of developing stories */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -41,7 +41,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -52,7 +52,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「机会与打法」做成醒目的产品判断卡片 */
+  /* Product analysis card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -84,21 +84,21 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 31 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 31</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 7 月 22 日 · 星期三</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">July 22, 2026 · Wednesday</div>
     </header>
-    <p class="lead">Lighter 把 Robinhood 股票代币变成永续保证金，分发竞争开始进入抵押品复用；Ostium 则证明，即使交易者保证金与 LP 金库隔离，事故后的冻结和重启定价仍会成为新的风险分配环节。</p>
+    <p class="lead">Lighter began accepting Robinhood stock tokens as collateral for perpetuals. At Ostium, the separation of trader margin from liquidity-provider vaults still left a question after the incident: how should losses be allocated when trading freezes and positions reopen at a new price?</p>
 
     <section class="threads">
-      <div class="threads-h">持续追踪</div>
+      <div class="threads-h">Story threads</div>
 
         <div class="thread">
-          <div class="thread-t">Hyperliquid 股票永续矩阵扩张</div>
-          <div class="thread-meta">自 2026-06-12 · 第 40 天 · S 级</div>
-          <div class="thread-u">本次到期复盘未发现 07-17 后新增重量级股票永续或可核实的 HIP-3 OI 突破；长鑫科技将于 07-27 上市，当前最有信息量的变化尚未发生。</div>
-          <div class="thread-w"><b>下一步看：</b>07-27 后 CXMT 盘前价格与现货收敛、深度变化，以及指数切换或暂停规则。</div>
+          <div class="thread-t">Hyperliquid expands its equity perpetual markets</div>
+          <div class="thread-meta">Since 2026-06-12 · Day 40 · Tier S</div>
+          <div class="thread-u">The scheduled review found no major new equity perpetual or verified HIP-3 open interest breakout after July 17. ChangXin Memory Technologies (CXMT) is due to list on July 27, so its transition to public trading has yet to be observed.</div>
+          <div class="thread-w"><b>Next milestone:</b>After July 27, whether CXMT&#x27;s premarket price converges with spot, how depth changes and which index-switching or trading-halt rules apply.</div>
         </div>
     </section>
 
@@ -112,18 +112,18 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Lighter 把 Robinhood 股票代币变成永续保证金，钱包分发进入抵押品复用</h3>
-          <p class="item-b"><strong>事件</strong>：（Robinhood 分发线，自 07-02，第 20 天）Lighter 07-20 开放 Robinhood Stock Tokens 作为永续保证金，NVDA、GOOG、AAPL 等股票代币不再只是钱包里的交易资产。</p><p class="item-b"><strong>机制</strong>：这些 ERC-20 代币是 Robinhood Assets Jersey 发行的债务证券，依靠 Chainlink 价格源进入 Lighter 的保证金体系；与只存 USDG 相比，用户可以保留股票敞口，同时用同一资产支撑永续仓位。</p><p class="item-b"><strong>二阶效应</strong>：经纪商与 DEX 的合作从入口导流升级到资产负债表复用，但股票波动、发行人信用、价格源和强平会叠加在同一仓位上；美国及多个司法辖区用户仍被排除，资金效率提升不等于可服务市场同步扩大。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>股票代币已可作保证金，但未披露抵押折扣、强平参数、保证金规模或实际使用率，暂时只能确认功能落地。</p>
+          <h3 class="item-h">Lighter accepts Robinhood stock tokens as margin for perpetuals</h3>
+          <p class="item-b"><strong>Event</strong>: Lighter enabled Robinhood Stock Tokens as perpetual collateral on July 20, extending the use of tokens linked to NVDA, GOOG and AAPL beyond wallet trading. This was day 20 of coverage since July 2.</p><p class="item-b"><strong>Mechanism</strong>: The ERC-20 tokens are debt securities issued by Robinhood Assets Jersey. Lighter values them through Chainlink feeds. Users can maintain stock-linked exposure while posting the same token as collateral, alongside the existing option of depositing USDG.</p><p class="item-b"><strong>Second-order effects</strong>: The structure combines equity volatility, issuer credit, oracle and liquidation risk within one position. It extends the brokerage partnership from distribution to collateral reuse. Users in the United States and several other jurisdictions remain excluded.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Stock tokens were eligible as margin, but the haircut, liquidation parameters, collateral balances and actual usage had not been disclosed.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-20</span>
-            <a class="item-src" href="https://coinmarketcap.com/cmc-ai/lighter/price-analysis/" target="_blank" rel="noopener">CoinMarketCap AI ↗</a><a class="item-src item-ref" href="https://thedefiant.io/news/defi/lighter-makes-stock-tokens-eligible-collateral-on-robinhood-chain" target="_blank" rel="noopener">补充：The Defiant · 07-20 ↗</a>
+            <a class="item-src" href="https://coinmarketcap.com/cmc-ai/lighter/price-analysis/" target="_blank" rel="noopener">CoinMarketCap AI ↗</a><a class="item-src item-ref" href="https://thedefiant.io/news/defi/lighter-makes-stock-tokens-eligible-collateral-on-robinhood-chain" target="_blank" rel="noopener">Additional source: The Defiant · 07-20 ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Ostium 隔离了交易者保证金，却把事故风险推迟到冻结与重启定价</h3>
-          <p class="item-b"><strong>事件</strong>：（预言机攻击线，自 07-15，第 7 天）Ostium 07-20 确认 LP 金库损失 2375 万 USDC；交易者保证金放在独立合约中未被盗，已有仓位在攻击后 60 分钟内冻结。</p><p class="item-b"><strong>机制</strong>：平台计划在恢复前至少提前 24 小时通知，并把冻结仓位统一按重开价格标记。资产隔离阻断了攻击继续侵蚀用户本金，却无法让用户在停牌期间减仓、补保证金或对冲。</p><p class="item-b"><strong>二阶效应</strong>：预言机事故的损失不只在被盗金库，重开价格还会重新分配停牌期间的跳空损益；如果事故报告、LP 补偿和重启规则不能同时公开，恢复交易本身会成为第二个信任测试。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>2375 万 USDC 损失落在 LP 金库，交易者保证金未被盗；赔付、事故报告与恢复日期仍未公布。</p>
+          <h3 class="item-h">Ostium’s segregated trader margin leaves separate questions about freezes and reopening prices</h3>
+          <p class="item-b"><strong>Event</strong>: In an update on July 20, day seven of coverage since July 15, Ostium confirmed losses of 23.75 million USDC from its liquidity provider vault. Trader margin was held in a separate contract and remained intact. Existing positions were frozen within 60 minutes of the incident.</p><p class="item-b"><strong>Mechanism</strong>: Ostium plans to give at least 24 hours&#x27; notice before trading resumes and to mark all frozen positions at the reopening price. Asset segregation protected traders&#x27; principal, but they could not reduce positions, add margin or hedge on the venue while trading was suspended.</p><p class="item-b"><strong>Second-order effects</strong>: The incident&#x27;s effects extend beyond the vault. Reopening prices will determine how gaps during the halt affect each trader&#x27;s gains and losses. Users also need the incident report, LP compensation terms and restart rules to assess the recovery.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The LP vault lost 23.75 million USDC. Traders&#x27; margin was not taken. No compensation plan, incident report, or reopening date had been announced.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-20</span>
             <a class="item-src" href="https://www.bleepingcomputer.com/news/security/hackers-steal-237-million-in-crypto-from-ostium-in-off-chain-attack/" target="_blank" rel="noopener">BleepingComputer ↗</a>
@@ -141,9 +141,9 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">pump.fun 用迁移后回购销毁替代静态锁仓，BOOST 默认覆盖新毕业代币</h3>
-          <p class="item-b">pump.fun 07-21 将 BOOST 设为所有合资格新币的默认迁移机制：代币完成 bonding curve 后，系统在五分钟内以时间加权方式执行买入，并销毁买到的代币。</p><p class="item-b">它把原本长期锁在池中的一部分迁移流动性改成短时、可观察的买盘和永久销毁。好处是减少迁移瞬间的流动性断层，代价是把支持集中在开盘五分钟，之后的深度仍取决于真实交易者和做市。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>每个 SOL 池注入 17.6 SOL、流动性提升约 20% 均来自平台估算，尚无迁移后深度和存活率数据验证。</p>
+          <h3 class="item-h">Pump.fun’s BOOST applies post-migration buybacks and burns to newly graduated tokens by default</h3>
+          <p class="item-b">On July 21, pump.fun made BOOST the default migration mechanism for all eligible new tokens. After a token completes its bonding curve, the system executes time-weighted purchases over five minutes and burns the tokens bought.</p><p class="item-b">BOOST redirects part of the liquidity previously locked in pools into observable purchases and permanent burns. It may soften the liquidity gap at migration, but the support lasts only five minutes. Subsequent depth still depends on traders and market makers.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The figures of 17.6 SOL per pool and roughly 20% more liquidity are platform estimates. Post-migration depth and the share of pools that survive have yet to be measured.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-21</span>
             <a class="item-src" href="https://www.kucoin.com/news/flash/pump-fun-launches-boost-mode-to-recycle-dead-liquidity-via-token-burns" target="_blank" rel="noopener">KuCoin Flash ↗</a>
@@ -155,14 +155,14 @@
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <h2 class="sec-title">机会与打法</h2>
+            <h2 class="sec-title">Product opportunities</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">股票代币作保证金：暂不适合照搬</h3>
-          <p class="item-b"><strong>好处</strong>：用户不用先卖出股票代币换成稳定币，能保留原资产敞口并提高抵押品利用率。</p><p class="item-b"><strong>限制</strong>：发行人信用、司法辖区、价格源和股票跳空会与永续仓位叠加，清算参数也不能沿用稳定币。</p>
+          <h3 class="item-h">Tokenized stocks pose distinct risks as margin collateral</h3>
+          <p class="item-b"><strong>Benefits</strong>: Users can retain stock-token exposure and use it as margin without first selling for stablecoins.</p><p class="item-b"><strong>Limitations</strong>: Equity gaps, issuer credit, jurisdiction and pricing risk combine with the perpetual position. Stablecoin liquidation parameters cannot simply be reused.</p>
 
           <div class="item-meta">
 
@@ -170,8 +170,8 @@
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">事故重启价格：需要预先写进处置规则</h3>
-          <p class="item-b"><strong>好处</strong>：预先定义冻结、通知和重开价格口径，可以缩短事故发生后的临时决策时间，并让用户提前知道损益怎样结算。</p><p class="item-b"><strong>限制</strong>：单一重开价格无法消除停牌期间的跳空损失，通知窗口也不能替代补保证金、减仓和对冲能力。</p>
+          <h3 class="item-h">Market reopening prices belong in published incident procedures</h3>
+          <p class="item-b"><strong>Benefits</strong>: Published freeze, notice and reopening-price rules reduce decisions that must be made during an incident and explain how P&amp;L will settle.</p><p class="item-b"><strong>Limitations</strong>: A single reopening price cannot eliminate gaps during a halt. Notice alone does not allow users to post collateral, reduce exposure or hedge.</p>
 
           <div class="item-meta">
 
@@ -180,7 +180,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

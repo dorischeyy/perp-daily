@@ -1,10 +1,10 @@
 {
   "date": "2026-06-20",
   "edition": 1,
-  "lead": "Hyperliquid 日成交重回百亿美元区间，CME 与 CFTC 的美国永续定性之争继续升级，近期市场同时呈现头部流动性集中和规则边界收紧。",
+  "lead": "Hyperliquid’s daily volume returned to the $10 billion range as liquidity concentrated at leading venues and the dispute between CME and the CFTC over US perpetual futures intensified.",
   "threads": [
     {
-      "title": "CME 诉 CFTC：美国永续监管定性",
+      "title": "CME v. CFTC: US classification of perpetuals",
       "since": "2026-06-19",
       "day_n": 2,
       "tier": "S",
@@ -12,8 +12,8 @@
       "date": "2026-06-20",
       "source": "CFTC",
       "url": "https://www.cftc.gov/PressRoom/PressReleases/example",
-      "update": "**今日**：CME 主张永续应按 swaps 而非 futures 监管，指 CFTC 橡皮图章批准 Kalshi 首个美国永续期货。这是该线自 06-19 起的第 2 个进展，定性之争升温。",
-      "watch": "庭审排期 / CME 是否申请初步禁令 / CFTC 回应"
+      "update": "**Today:** CME argues that perpetuals should be regulated as swaps rather than futures and accuses the CFTC of rubber-stamping Kalshi's first US perpetual futures contract. This is the second development since June 19.",
+      "watch": "Hearing dates, whether CME seeks a preliminary injunction, and the CFTC's response"
     }
   ],
   "sections": [
@@ -22,38 +22,38 @@
       "title": "Perp DEX",
       "items": [
         {
-          "headline": "Hyperliquid 日成交量重回百亿美元区间",
+          "headline": "Hyperliquid's daily volume returns to the $10 billion range",
           "body": [
-            "**事件**：HL 日成交回到 $100 亿+，属统治级梯队（benchmarks：$50–150 亿/日），占 DEX 侧约 60–75%。",
-            "**机制**：新上线市场带动活跃地址增长，手续费流入回购，量价正循环；DEX 侧集中度进一步上升，腰部协议挤压加剧。"
+            "**Event:** Daily volume on Hyperliquid exceeded $10 billion, within the $5 billion to $15 billion range used for leading protocols. Its estimated share of DEX volume was 60–75%.",
+            "**Mechanism:** New markets drew more active addresses, while fees funded buybacks. The interaction between activity and price increased concentration among DEXs and added pressure on mid-sized protocols."
           ],
           "source": "DefiLlama Derivatives",
           "url": "https://defillama.com/derivatives",
           "date": "2026-06-20",
           "references": [
             {
-              "source": "Hyperliquid 官方数据",
+              "source": "Hyperliquid official data",
               "url": "https://app.hyperliquid.xyz/stats",
               "date": "2026-06-20"
             }
           ],
           "context": {
-            "label": "量级参照",
-            "text": "约占 DEX 永续日成交盘子的 4–10%，是统治级协议的常态区间，不代表单日格局突变。"
+            "label": "Scale",
+            "text": "The sample's 4–10% benchmark for DEX perpetuals differs from the 60–75% cited above. The figures are unreconciled. One day cannot establish a shift."
           }
         },
         {
-          "headline": "GMX 与 dYdX 费用收入分化",
-          "body": "费用侧 GMX 稳健，dYdX v4 受激励调整影响环比走低，LP 年化收益随波动率回落。",
+          "headline": "Fee revenue diverges at GMX and dYdX",
+          "body": "GMX fee revenue held steady. Following changes to incentives on dYdX v4, the protocol earned less in fees than in the previous period. Annualized LP yields fell as volatility eased.",
           "source": "DefiLlama Fees",
           "url": "https://defillama.com/fees",
           "date": "2026-06-19"
         },
         {
-          "headline": "Lighter 调整高波动市场的风险参数",
+          "headline": "Lighter adjusts risk limits for volatile markets",
           "body": [
-            "**事件**：Lighter 收紧高波动交易对的初始保证金与持仓上限。",
-            "**机制**：风险参数按市场深度和价格波动分层，避免新增标的共享同一杠杆模板；Perp DEX 的扩列速度开始受制于逐市场风险配置能力。"
+            "**Event:** Lighter tightened initial margin requirements and position limits for volatile pairs.",
+            "**Mechanism:** Limits vary by market depth and volatility. Adding markets requires setting appropriate parameters for each pair instead of applying a single leverage schedule."
           ],
           "source": "Lighter",
           "url": "https://lighter.xyz",
@@ -66,22 +66,22 @@
       "title": "Launchpad",
       "items": [
         {
-          "headline": "pump.fun 上线 creator fee 分成新机制",
-          "body": "发币者可按交易量分成，迁移机制同步调整；GMGN 工具侧跟进 smart money 标签。",
+          "headline": "pump.fun introduces creator fee sharing",
+          "body": "Token creators can earn a share of trading activity under revised migration rules. GMGN updated its smart-money labels.",
           "source": "pump.fun",
           "url": "https://x.com/pumpdotfun",
           "date": "2026-06-20"
         },
         {
-          "headline": "Four.meme 调整代币迁移门槛",
-          "body": "新的迁移条件把曲线成交和外部流动性准备拆开，减少一次性迁移失败。",
+          "headline": "Four.meme revises token migration thresholds",
+          "body": "The new conditions distinguish bonding-curve trading from the preparation of external liquidity to reduce failures during migration.",
           "source": "Four.meme",
           "url": "https://four.meme",
           "date": "2026-06-20"
         },
         {
-          "headline": "Moonshot 增加创建者费用披露",
-          "body": "代币页面在交易前展示创建者费用和迁移状态，降低用户判断成本。",
+          "headline": "Moonshot adds creator fee disclosures",
+          "body": "Token pages show creator fees and migration status before a trade, making those terms easier to check.",
           "source": "Moonshot",
           "url": "https://moonshot.money",
           "date": "2026-06-19"
@@ -93,22 +93,22 @@
       "title": "Crypto",
       "items": [
         {
-          "headline": "BTC 区间上沿震荡，ETH 相对走强",
-          "body": "现货 ETF 净流入回正，市场风险偏好小幅修复。",
+          "headline": "BTC trades near the top of its range as ETH strengthens",
+          "body": "Spot ETF flows turned positive as risk appetite recovered slightly.",
           "source": "CoinGecko",
           "url": "https://www.coingecko.com",
           "date": "2026-06-20"
         },
         {
-          "headline": "Coinbase 扩大受监管衍生品覆盖",
-          "body": "新增合约把更多现货用户导向同一账户下的保证金交易入口。",
+          "headline": "Coinbase expands regulated derivatives coverage",
+          "body": "The new contracts let more spot customers access margin trading from the same account.",
           "source": "Coinbase",
           "url": "https://www.coinbase.com/blog",
           "date": "2026-06-20"
         },
         {
-          "headline": "代币化证券平台补充链上转移能力",
-          "body": "持有人可在合规账户与自托管钱包之间转移部分代币化资产，分发路径继续向链上延伸。",
+          "headline": "A tokenized securities platform expands on-chain transfers",
+          "body": "Holders can transfer eligible tokenized assets between compliant accounts and self-custody wallets, expanding on-chain distribution.",
           "source": "Ondo Finance",
           "url": "https://ondo.finance/blog",
           "date": "2026-06-19"
@@ -120,22 +120,22 @@
       "title": "AI",
       "items": [
         {
-          "headline": "AI coding agent 工具链密集更新",
-          "body": "多家厂商提升上下文窗口与工具调用稳定性，开发者反馈集成成本下降。",
+          "headline": "AI coding agents receive a series of tooling updates",
+          "body": "Several vendors expanded context windows and improved tool-call reliability. Developers reported lower integration costs.",
           "source": "Anthropic Engineering",
           "url": "https://www.anthropic.com/engineering",
           "date": "2026-06-19"
         },
         {
-          "headline": "交易代理增加可审计工具调用记录",
-          "body": "代理执行搜索、报价与下单前会保留结构化调用记录，便于复核错误来源。",
+          "headline": "Trading agents add auditable tool-call records",
+          "body": "Agents retain structured records of searches, quotes and order requests so reviewers can trace errors to their source.",
           "source": "OpenAI",
           "url": "https://openai.com/news",
           "date": "2026-06-20"
         },
         {
-          "headline": "Agent 工具链补充人工批准节点",
-          "body": "高风险操作可在执行前暂停并等待人工确认，减少自动化交易的误动作范围。",
+          "headline": "Agent tools add human approval steps",
+          "body": "High-risk actions can pause for human approval before execution, limiting the impact of accidental trades.",
           "source": "LangChain",
           "url": "https://blog.langchain.com",
           "date": "2026-06-19"

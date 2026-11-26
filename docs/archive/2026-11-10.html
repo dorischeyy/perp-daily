@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-11-10</title>
+<title>Perp DEX Daily · 2026-11-10</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -100,41 +100,41 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 128 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 128</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 11 月 10 日 · 星期二</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">November 10, 2026 · Tuesday</div>
     </header>
-    <p class="lead">OKX将八只代币化股票纳入统一订单簿，并为SNDK拆股规定永续仓位先结算再重开，公司行动已开始同时改写现货单位、衍生品入场价与保护单。</p>
+    <p class="lead">OKX will bring eight tokenized equities into its unified order book and requires SNDK perpetual positions to settle and reopen for the stock split. The rules affect spot units, derivative entry prices and protective orders.</p>
 
 
       <section class="sec sec-tokenized-stock-corporate-actions">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">代币化股票与公司行动</h2>
+            <h2 class="sec-title">Tokenized equities and corporate actions</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月10日，OKX首批统一代币化股票开始交易</h3>
-          <p class="item-b">OKX把多发行方的同一股票代币合并为一个平台资产、一个订单簿和一套公司行动规则，首批xNVDL、xSKDD、xSKUU与xABBV于11月10日开放交易。产品由xStocks支持，可在Solana和X Layer充提，股息扣税后以份额增加形式再投资。</p>
+          <h3 class="item-h">November 10: Trading begins in OKX’s first batch of unified tokenized equities</h3>
+          <p class="item-b">OKX consolidates versions of the same equity token from multiple issuers into one platform asset, one order book and one set of corporate-action rules. Its initial xNVDL, xSKDD, xSKUU and xABBV listings opened on November 10. xStocks supports the product, with deposits and withdrawals on Solana and X Layer. Dividends are reinvested after tax as additional units.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.okx.com/help/okx-to-list-unified-tokenized-stocks-xnvdl-xskdd-and-more-for-spot-trading" target="_blank" rel="noopener" title="OKX · 发布 2026-11-09" aria-label="来源 1：OKX · 发布 2026-11-09">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.okx.com/help/okx-to-list-unified-tokenized-stocks-xnvdl-xskdd-and-more-for-spot-trading" target="_blank" rel="noopener" title="OKX · Published 2026-11-09" aria-label="Source 1: OKX · Published 2026-11-09">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月9日，OKX公布SNDK拆股的永续仓位与订单处理规则</h3>
-          <p class="item-b">为处理SNDK八比一拆股，OKX将于11月20日暂停相关现货、永续和X-Perp交易，先按调整前标记价结算旧仓，再以调整后标记价开出八倍数量的新仓。未触发止盈止损会被取消，部分成交余单将获得新订单号，网格机器人需手动恢复。</p>
+          <h3 class="item-h">November 9: OKX details how it will handle perpetual positions and orders through the SNDK stock split</h3>
+          <p class="item-b">For SNDK’s 8-for-1 split, OKX will pause related spot, perpetual and X-Perp trading on November 20. It will settle old positions at the pre-adjustment mark price and reopen them at the adjusted mark price with eight times the quantity. Untriggered take-profit and stop-loss orders will be canceled. Unfilled remainders of partially filled orders will receive new IDs. Grid bots must be restarted manually.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.okx.com/help/okx-to-adjust-sndk-spot-perpetual-futures-and-x-perp-products-due-to-stock" target="_blank" rel="noopener" title="OKX · 发布 2026-11-09" aria-label="来源 1：OKX · 发布 2026-11-09">1</a><a class="source-number" href="https://www.okx.com/help/corporate-actions-handling-mechanism" target="_blank" rel="noopener" title="OKX · 发布 2026-06-23" aria-label="来源 2：OKX · 发布 2026-06-23">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.okx.com/help/okx-to-adjust-sndk-spot-perpetual-futures-and-x-perp-products-due-to-stock" target="_blank" rel="noopener" title="OKX · Published 2026-11-09" aria-label="Source 1: OKX · Published 2026-11-09">1</a><a class="source-number" href="https://www.okx.com/help/corporate-actions-handling-mechanism" target="_blank" rel="noopener" title="OKX · Published 2026-06-23" aria-label="Source 2: OKX · Published 2026-06-23">2</a>
           </div>
         </article>
         </div>
@@ -143,19 +143,19 @@
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <h2 class="sec-title">永续机制研究</h2>
+            <h2 class="sec-title">Perpetual market design</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Avantis用反向亏损返还来缓冲LP的单边敞口</h3>
-          <p class="item-b">Avantis的USDC金库是所有交易的对手方。市场多空偏斜超过55%后，站在较少一侧的新仓可锁定0%至20%的亏损返还，即使随后偏斜恢复也不重置；LP获得交易费，交易者盈利先由协议缓冲支付，反向激励用于降低金库的单边风险。</p>
+          <h3 class="item-h">Avantis offers loss rebates on counterbalancing positions to reduce LPs’ one-sided exposure</h3>
+          <p class="item-b">Avantis’s USDC vault is the counterparty to every trade. Once long-short skew exceeds 55%, a new position on the smaller side can lock in a loss rebate of 0% to 20%. The rebate does not reset if the market later rebalances. LPs receive trading fees, and the protocol buffer pays trader profits first. Rebates encourage positions that reduce the vault’s directional exposure.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://docs.avantisfi.com/rewards/loss-rebates" target="_blank" rel="noopener" title="Avantis Docs · 未标发布日期 · 核验 2026-11-10" aria-label="来源 1：Avantis Docs · 未标发布日期 · 核验 2026-11-10">1</a><a class="source-number" href="https://docs.avantisfi.com/liquidity-providers/usdc-vault" target="_blank" rel="noopener" title="Avantis Docs · 未标发布日期 · 核验 2026-11-10" aria-label="来源 2：Avantis Docs · 未标发布日期 · 核验 2026-11-10">2</a><a class="source-number" href="https://docs.avantisfi.com/liquidity-providers/risk-management" target="_blank" rel="noopener" title="Avantis Docs · 未标发布日期 · 核验 2026-11-10" aria-label="来源 3：Avantis Docs · 未标发布日期 · 核验 2026-11-10">3</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://docs.avantisfi.com/rewards/loss-rebates" target="_blank" rel="noopener" title="Avantis Docs · Publication date not listed · Verified 2026-11-10" aria-label="Source 1: Avantis Docs · Publication date not listed · Verified 2026-11-10">1</a><a class="source-number" href="https://docs.avantisfi.com/liquidity-providers/usdc-vault" target="_blank" rel="noopener" title="Avantis Docs · Publication date not listed · Verified 2026-11-10" aria-label="Source 2: Avantis Docs · Publication date not listed · Verified 2026-11-10">2</a><a class="source-number" href="https://docs.avantisfi.com/liquidity-providers/risk-management" target="_blank" rel="noopener" title="Avantis Docs · Publication date not listed · Verified 2026-11-10" aria-label="Source 3: Avantis Docs · Publication date not listed · Verified 2026-11-10">3</a>
           </div>
         </article>
         </div>
@@ -164,44 +164,44 @@
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <h2 class="sec-title">AI模型与Agent运行</h2>
+            <h2 class="sec-title">AI models and agent operations</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月9日，Anthropic发布Claude Fable 5.2与Mythos 5.2</h3>
-          <p class="item-b">Anthropic发布同一底层模型的Fable 5.2和受验证计划限制的Mythos 5.2，生成速度较5.1最高提升30%，标准价格为每百万输入和输出token 8与40美元。Fable面向通用高难度工作，Mythos开放更强的网络安全与生物研究能力。</p>
+          <h3 class="item-h">November 9: Anthropic releases Claude Fable 5.2 and Mythos 5.2</h3>
+          <p class="item-b">Anthropic released Fable 5.2 and Mythos 5.2 on the same underlying model. Mythos is restricted to a verified access program. Generation is up to 30% faster than 5.1, and standard pricing is $8 per million input tokens and $40 per million output tokens. Fable serves difficult general-purpose work. Mythos offers broader cybersecurity and biological research capabilities under the verified program.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener" title="Anthropic · 发布 2026-11-09" aria-label="来源 1：Anthropic · 发布 2026-11-09">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener" title="Anthropic · Published 2026-11-09" aria-label="Source 1: Anthropic · Published 2026-11-09">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月9日，Cloudflare让Codex循环在Durable Object中恢复执行</h3>
-          <p class="item-b">Cloudflare发布实验性Codex Agent循环示例，把模型调用和工具执行写入任务日志，并持久化会话、事件流与工作区文件。已完成步骤在重启后复用记录结果，中断步骤可重新执行，使运行在Workers上的代码Agent能够跨故障恢复。</p>
+          <h3 class="item-h">November 9: Cloudflare lets Codex loops resume inside a Durable Object</h3>
+          <p class="item-b">Cloudflare released an experimental Codex Agent example. Model calls and tool executions were recorded in task logs, and sessions, event streams, and workspace files were persisted. Steps that were completed can be reused after a restart. Interrupted steps can be executed again, allowing code agents running on Workers to recover from failures.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://developers.cloudflare.com/changelog/post/2026-11-09-codex-harness/" target="_blank" rel="noopener" title="Cloudflare · 发布 2026-11-09" aria-label="来源 1：Cloudflare · 发布 2026-11-09">1</a><a class="source-number" href="https://developers.cloudflare.com/agents/harnesses/container/" target="_blank" rel="noopener" title="Cloudflare · 发布 2026-11-09" aria-label="来源 2：Cloudflare · 发布 2026-11-09">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://developers.cloudflare.com/changelog/post/2026-11-09-codex-harness/" target="_blank" rel="noopener" title="Cloudflare · Published 2026-11-09" aria-label="Source 1: Cloudflare · Published 2026-11-09">1</a><a class="source-number" href="https://developers.cloudflare.com/agents/harnesses/container/" target="_blank" rel="noopener" title="Cloudflare · Published 2026-11-09" aria-label="Source 2: Cloudflare · Published 2026-11-09">2</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月9日，OpenAI多语言SDK加入Agent任务调度接口</h3>
-          <p class="item-b">OpenAI的Java、Go与Ruby SDK陆续加入Agent调度接口，可创建一次性或周期性任务，并查询、更新、删除、暂停和恢复计划；调用方还能创建与读取每次执行记录。该能力目前从SDK发布说明可核验，正式平台文档和稳定性边界仍待补充。</p>
+          <h3 class="item-h">November 9: OpenAI’s multilingual SDKs add an interface for scheduling agent tasks</h3>
+          <p class="item-b">OpenAI’s Java, Go, and Ruby SDKs have been integrated into the Agent scheduling interface. This allows for the creation of one-time or periodic tasks, as well as the querying, updating, deleting, pausing, and resuming of schedules. Callers can also create and read detailed records of each execution. This capability is currently verified through the SDK release notes. Formal platform documentation and stability details are still being finalized.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://github.com/openai/openai-java/releases/tag/v4.102.0" target="_blank" rel="noopener" title="OpenAI · 发布 2026-11-09" aria-label="来源 1：OpenAI · 发布 2026-11-09">1</a><a class="source-number" href="https://github.com/openai/openai-go/releases/tag/v3.97.0" target="_blank" rel="noopener" title="OpenAI · 发布 2026-11-08" aria-label="来源 2：OpenAI · 发布 2026-11-08">2</a><a class="source-number" href="https://github.com/openai/openai-ruby/releases/tag/v0.121.0" target="_blank" rel="noopener" title="OpenAI · 发布 2026-11-07" aria-label="来源 3：OpenAI · 发布 2026-11-07">3</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://github.com/openai/openai-java/releases/tag/v4.102.0" target="_blank" rel="noopener" title="OpenAI · Published 2026-11-09" aria-label="Source 1: OpenAI · Published 2026-11-09">1</a><a class="source-number" href="https://github.com/openai/openai-go/releases/tag/v3.97.0" target="_blank" rel="noopener" title="OpenAI · Published 2026-11-08" aria-label="Source 2: OpenAI · Published 2026-11-08">2</a><a class="source-number" href="https://github.com/openai/openai-ruby/releases/tag/v0.121.0" target="_blank" rel="noopener" title="OpenAI · Published 2026-11-07" aria-label="Source 3: OpenAI · Published 2026-11-07">3</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

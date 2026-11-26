@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-11-06</title>
+<title>Perp DEX Daily · 2026-11-06</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -100,51 +100,51 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 124 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 124</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 11 月 6 日 · 星期五</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">November 6, 2026 · Friday</div>
     </header>
-    <p class="lead">永续产品竞争正从扩列推进到托管拆分、公司行动结算与跨链迁移，但可交易不等于资金可随时退出，计划上线也不能当作已经可用。</p>
+    <p class="lead">Perpetual venues are changing custody arrangements, corporate-action settlement and cross-chain migration. Trading availability alone does not establish withdrawal liquidity, and several announced products have yet to launch.</p>
 
 
       <section class="sec sec-execution-custody-and-capital-efficiency">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">执行、托管与资本效率</h2>
+            <h2 class="sec-title">Execution, custody and capital efficiency</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月5日，Bullbit从Base迁至自建BullChain并恢复交易</h3>
-          <p class="item-b">Bullbit完成从Base迁移至BullChain，账户、余额、费率层级与交易历史随迁，交易和出入金已恢复。用户先把桥接资金放入Smart Wallet，再转入Perp余额；会话密钥只能管理订单，不能转账或提现，旧API密钥需重建。</p>
+          <h3 class="item-h">November 5: Bullbit resumes trading after migrating from Base to its own BullChain</h3>
+          <p class="item-b">Bullbit has completed the migration from Base to BullChain. Accounts, balances, rate levels, and transaction history have been migrated accordingly. Trading and deposit/withdrawal operations have been restored. Users should first transfer bridge funds into the Smart Wallet, and then into the Perp balance. Session keys can only be used to manage orders; they cannot be used for transfers or withdrawals. Old API keys need to be recreated.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://bullbit.ai/blog/en/bullchain-mainnet-is-now-live" target="_blank" rel="noopener" title="Bullbit · 发布 2026-11-05" aria-label="来源 1：Bullbit · 发布 2026-11-05">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://bullbit.ai/blog/en/bullchain-mainnet-is-now-live" target="_blank" rel="noopener" title="Bullbit · Published 2026-11-05" aria-label="Source 1: Bullbit · Published 2026-11-05">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月5日，Bitget用资产镜像把外部托管接入现货、保证金与期货</h3>
-          <p class="item-b">Bitget上线Open Custody Network，用资产镜像让合格用户把资产留在参与银行或机构托管商，同时访问平台现货、保证金和期货市场。托管与执行被拆开，但首批托管方、镜像结算、追加保证金和异常退出时限尚未披露。</p>
+          <h3 class="item-h">November 5: Bitget uses asset mirroring to connect external custody to spot, margin and futures trading</h3>
+          <p class="item-b">Bitget launched the Open Custody Network. Asset mirroring lets eligible customers retain assets at participating banks or institutional custodians while using Bitget’s spot, margin and futures markets. Custody and execution are separate. Bitget did not identify the first custodians or disclose how mirrored balances settle, how margin calls work or how long exceptional withdrawals take.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.bitget.com/blog/articles/bitget-open-custody-network-launch" target="_blank" rel="noopener" title="Bitget · 发布 2026-11-05" aria-label="来源 1：Bitget · 发布 2026-11-05">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.bitget.com/blog/articles/bitget-open-custody-network-launch" target="_blank" rel="noopener" title="Bitget · Published 2026-11-05" aria-label="Source 1: Bitget · Published 2026-11-05">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月5日，Bitget披露21个外汇CFD小额仓位可用2000倍杠杆</h3>
-          <p class="item-b">Bitget披露21个外汇CFD的前5万USDT名义仓位保证金率降至0.05%，最高杠杆2000倍，超出部分按更高档位计提，重大数据发布前还可临时降杠杆。小仓位资金占用更低，但风险参数会随规模与事件变化。</p>
+          <h3 class="item-h">November 5: Bitget says small positions on 21 FX CFDs can use up to 2,000x leverage</h3>
+          <p class="item-b">For 21 FX CFDs, Bitget cut the margin requirement to 0.05% on the first 50,000 USDT of position notional, permitting up to 2,000x leverage on that portion. Amounts above the threshold fall into higher margin tiers. Bitget may temporarily lower leverage ahead of major economic releases. Smaller positions use less capital, but both size and events affect the applicable limits.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.bitget.com/blog/articles/bitget-raises-leverage-forex-cfd-pairs" target="_blank" rel="noopener" title="Bitget · 发布 2026-11-05" aria-label="来源 1：Bitget · 发布 2026-11-05">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.bitget.com/blog/articles/bitget-raises-leverage-forex-cfd-pairs" target="_blank" rel="noopener" title="Bitget · Published 2026-11-05" aria-label="Source 1: Bitget · Published 2026-11-05">1</a>
           </div>
         </article>
         </div>
@@ -153,39 +153,39 @@
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <h2 class="sec-title">传统资产权利与资金退出</h2>
+            <h2 class="sec-title">Traditional asset rights and withdrawals</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月6日，Binance用特别资金费补记SAMSUNGUSDT股息</h3>
-          <p class="item-b">Binance将按每股1001韩元、折合-0.037336%补记SAMSUNGUSDT股息，只认定9月28日23:00 UTC持有净仓位的账户，并在跨保证金期货账户记账。资金费周期不变、合约也不先转只减仓，说明股票永续权利仍依赖事后规则结算。</p>
+          <h3 class="item-h">November 6: Binance applies a special funding adjustment for the SAMSUNGUSDT dividend</h3>
+          <p class="item-b">Binance will apply a SAMSUNGUSDT dividend adjustment of KRW 1,001 per share, expressed as a −0.037336% special funding rate. It will use net positions held at 23:00 UTC on September 28 and post the adjustment to cross-margin futures accounts. The funding interval stays unchanged, and the contract will not enter reduce-only mode first. The dividend is implemented retrospectively under the venue’s rules.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/square/post/384904459802992" target="_blank" rel="noopener" title="Binance · 发布 2026-11-05" aria-label="来源 1：Binance · 发布 2026-11-05">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.binance.com/en/square/post/384904459802992" target="_blank" rel="noopener" title="Binance · Published 2026-11-05" aria-label="Source 1: Binance · Published 2026-11-05">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月5日，EDX上线Canton版比特币现货并预告永续与抵押</h3>
-          <p class="item-b">EDX上线CBTC/USD现货，CBTC由比特币1:1支持并用Chainlink储备证明，Granite River Trading负责双边报价。CBTC/USD永续、CBTC/BTC现货及以Canton Coin作永续抵押仍只是后续计划，现货上线不能视为衍生品已可用。</p>
+          <h3 class="item-h">November 5: EDX opens spot trading in Canton-based bitcoin and outlines plans for perpetuals and collateral</h3>
+          <p class="item-b">EDX launched CBTC/USD spot trading. Bitcoin backs CBTC 1:1, Chainlink supplies proof of reserves and Granite River Trading provides two-sided quotes. CBTC/USD perpetuals, a CBTC/BTC spot pair and the use of Canton Coin as perpetual collateral remain plans. Only the CBTC/USD spot market was live.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://mondovisione.com/media-and-resources/news/edx-markets-partners-with-bitsafe-to-launch-cbtc-trading-expanding-institutiona-2026115/" target="_blank" rel="noopener" title="EDX Markets · 发布 2026-11-05" aria-label="来源 1：EDX Markets · 发布 2026-11-05">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://mondovisione.com/media-and-resources/news/edx-markets-partners-with-bitsafe-to-launch-cbtc-trading-expanding-institutiona-2026115/" target="_blank" rel="noopener" title="EDX Markets · Published 2026-11-05" aria-label="Source 1: EDX Markets · Published 2026-11-05">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月5日，Binance把提币恢复扩到六条网络的更多资产</h3>
-          <p class="item-b">Binance从11月5日04:00 UTC起分批恢复ETH、BSC、Base、Tron、Polygon和Sui上更多资产的提币，充值保持开放。各资产不会同时恢复，仍要完成安全与可用性检查，拥堵时可能延迟，因此平台恢复应以具体网络状态而非总进度判断。</p>
+          <h3 class="item-h">November 5: Binance restores withdrawals for more assets across six networks</h3>
+          <p class="item-b">From 04:00 UTC on November 5, Binance began restoring withdrawals for more assets on Ethereum, BSC, Base, Tron, Polygon and Sui in stages. Deposits remained open. Individual assets must pass security and availability checks before reopening, and network congestion may delay withdrawals. The relevant indicator is each asset’s network-specific status.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/es-LA/support/announcement/detail/a225a3b6084c41dc8c8dfb33f4de5872" target="_blank" rel="noopener" title="Binance · 发布 2026-11-05" aria-label="来源 1：Binance · 发布 2026-11-05">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.binance.com/es-LA/support/announcement/detail/a225a3b6084c41dc8c8dfb33f4de5872" target="_blank" rel="noopener" title="Binance · Published 2026-11-05" aria-label="Source 1: Binance · Published 2026-11-05">1</a>
           </div>
         </article>
         </div>
@@ -194,44 +194,44 @@
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <h2 class="sec-title">AI模型与Agent控制</h2>
+            <h2 class="sec-title">AI models and agent controls</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月5日，OpenAI发布GPT-6 Cyber并把访问限制在Daybreak Red</h3>
-          <p class="item-b">OpenAI发布GPT-6 Cyber，ExploitGym得分由前代32.1%升至48.5%，并称越界诱饵测试中无部署提示也有99.93%任务守界率。模型被列为网络安全Critical级，只能经Daybreak Red、身份验证、SSO、MFA和IP白名单访问。</p>
+          <h3 class="item-h">November 5: OpenAI releases GPT-6 Cyber with access restricted to Daybreak Red</h3>
+          <p class="item-b">OpenAI released GPT-6 Cyber, reporting an ExploitGym score of 48.5%, up from 32.1% for its predecessor. It also reported that 99.93% of tasks stayed within authorized bounds in a boundary-testing evaluation without a deployment prompt. The model is classified Critical for cybersecurity. Access is restricted to Daybreak Red with identity verification, SSO, MFA and an IP allowlist.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/introducing-gpt-6-cyber/" target="_blank" rel="noopener" title="OpenAI · 发布 2026-11-05" aria-label="来源 1：OpenAI · 发布 2026-11-05">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://openai.com/index/introducing-gpt-6-cyber/" target="_blank" rel="noopener" title="OpenAI · Published 2026-11-05" aria-label="Source 1: OpenAI · Published 2026-11-05">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月5日，DigitalOcean用Cuttlefish把长时Agent审批移到手机</h3>
-          <p class="item-b">DigitalOcean推出Cuttlefish iPhone预览版，可查看长时Agent的完整命令、路径和差异，远程批准、拒绝、纠偏或停止，高风险操作还需Face ID或密码。它支持Codex CLI、Claude Code等多种框架，但Managed Agents仍是公开预览。</p>
+          <h3 class="item-h">November 5: DigitalOcean brings approvals for long-running agents to mobile with Cuttlefish</h3>
+          <p class="item-b">DigitalOcean released a preview version of Cuttlefish for iPhone. This tool allows for detailed viewing of long-term agent commands, paths, and differences. It enables remote approvals, rejections, corrections, and stops. For high-risk operations, Face ID or a password is required. Cuttlefish supports various frameworks such as Codex CLI and Claude Code. However, Managed Agents remain in the public preview stage.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.digitalocean.com/blog/introducing-cuttlefish" target="_blank" rel="noopener" title="DigitalOcean · 发布 2026-11-05" aria-label="来源 1：DigitalOcean · 发布 2026-11-05">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.digitalocean.com/blog/introducing-cuttlefish" target="_blank" rel="noopener" title="DigitalOcean · Published 2026-11-05" aria-label="Source 1: DigitalOcean · Published 2026-11-05">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月4日，Sysdig上线AI Defense从内核层拦截Agent越权动作</h3>
-          <p class="item-b">Sysdig AI Defense正式可用，从Agent框架读取工具、MCP、技能和参数，再用内核遥测核对实际进程与凭据范围；策略可告警、等待人工或直接阻断，并保留不可由Agent改写的审计记录。官方尚未公布误报率、阻断延迟和大规模生产效果。</p>
+          <h3 class="item-h">November 4: Sysdig launches AI Defense to block unauthorized agent actions at the kernel level</h3>
+          <p class="item-b">Sysdig AI Defense is now available. It reads tools, MCPs, skills, and parameters from the Agent framework, then uses kernel telemetry to verify the actual processes and credential ranges. Strategies can trigger alerts, wait for manual intervention, or directly block transactions. Audit records that cannot be rewritten by the Agent are retained. The official team has not yet disclosed the false positive rate, blocking latency, or performance in large-scale production scenarios.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.sysdig.com/press-releases/sysdig-launches-sysdig-ai-defense-bringing-runtime-security-to-every-action-ai-agents-take" target="_blank" rel="noopener" title="Sysdig · 发布 2026-11-04" aria-label="来源 1：Sysdig · 发布 2026-11-04">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.sysdig.com/press-releases/sysdig-launches-sysdig-ai-defense-bringing-runtime-security-to-every-action-ai-agents-take" target="_blank" rel="noopener" title="Sysdig · Published 2026-11-04" aria-label="Source 1: Sysdig · Published 2026-11-04">1</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

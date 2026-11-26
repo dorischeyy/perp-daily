@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-09-04</title>
+<title>Perp DEX Daily · 2026-09-04</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -64,12 +64,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 68 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 68</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 9 月 4 日 · 星期五</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">September 4, 2026 · Friday</div>
     </header>
-    <p class="lead">Hyperliquid把HIP-3许可市场带入测试网，Arqen在Solana开放长尾永续，NVIDIA则把本地Agent的部署和多机推理继续产品化。</p>
+    <p class="lead">Hyperliquid brought permissioned HIP-3 markets to testnet, and Arqen opened long-tail perpetuals on Solana. NVIDIA is developing products for local agent deployment and inference across multiple machines.</p>
 
       <section class="sec sec-perpdex">
         <div class="sec-head">
@@ -81,27 +81,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Hyperliquid测试许可制HIP-3市场</h3>
-          <p class="item-b">Hyperliquid在测试网加入HIP-3可选许可市场，部署方可用链上白名单限制参与者，也可把名单管理交给子部署方。</p><p class="item-b">该设计仍处于初步测试阶段，现有HIP-3市场不会自动启用许可，主网上线日期尚未公布。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>链上白名单只是访问控制工具，不等同于满足具体司法辖区的注册、报告和市场监管要求。</p>
+          <h3 class="item-h">Hyperliquid tests permissioned HIP-3 markets</h3>
+          <p class="item-b">Hyperliquid added optional permissioned HIP-3 markets to testnet. A deployer can restrict access with an onchain allowlist or delegate management of the list to a subdeployer.</p><p class="item-b">The feature is in early testing. Existing HIP-3 markets will not become permissioned automatically, and Hyperliquid has not announced a mainnet launch date.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The on-chain whitelist is merely an access control tool; it does not meet the registration, reporting, and market supervision requirements of specific jurisdictions.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-03</span>
             <a class="item-src" href="https://chaintechdaily.com/2026/09/03/hyperliquid-expands-hip-3-with-permissioned-markets/" target="_blank" rel="noopener">Chain Tech Daily ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Arqen在Solana上线长尾永续</h3>
-          <p class="item-b">Arqen在Solana首发20个长尾资产永续市场，采用逐仓保证金，每个市场由独立做市池承接交易对手敞口。</p><p class="item-b">用户可提名标的，但现阶段仍由协议评估预言机、外部流动性、波动和集中度后决定是否开市及风险参数。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>公告披露了首批市场和风控流程，没有披露成交量、持仓、做市池规模或早期留存。</p>
+          <h3 class="item-h">Arqen launches long-tail perpetuals on Solana</h3>
+          <p class="item-b">Arqen launched 20 long-tail perpetual markets on Solana. They use isolated margin, with a separate market-making pool assuming counterparty exposure for each market.</p><p class="item-b">Users can nominate an underlying asset. For now, the protocol assesses its oracle, external liquidity, volatility and concentration before deciding whether to open the market and which risk parameters to set.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The announcement disclosed the initial market and risk management processes, but it did not disclose trading volume, positions, market-making capacity, or early retention levels.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-03</span>
-            <a class="item-src" href="https://www.reddit.com/r/solana/comments/1w5z4mz/arqen_perps_is_now_live_on_solana/" target="_blank" rel="noopener">r/solana转载Arqen官方公告 ↗</a>
+            <a class="item-src" href="https://www.reddit.com/r/solana/comments/1w5z4mz/arqen_perps_is_now_live_on_solana/" target="_blank" rel="noopener">Arqen official announcement, reposted on r/solana ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">RWAperp发布X Layer上线公告</h3>
-          <p class="item-b">RWAperp宣布在OKX的X Layer上线，首批覆盖19个股票、指数、商品和加密永续市场，并使用统一USDC保证金账户。</p><p class="item-b">其官网当前仍显示候补名单和即将上线，Agent交易区也标为即将推出，实际开放范围仍需验证。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>媒体稿称已经上线，产品官网却仍处于早期访问状态，本期不把公告范围当作已验证完成交易的证明。</p>
+          <h3 class="item-h">RWAperp announces a launch on X Layer</h3>
+          <p class="item-b">RWAperp has announced its launch on OKX’s X Layer. The initial coverage includes 19 stocks, indices, commodities, and crypto perpetual futures markets. A unified USDC margin account is used for these transactions.</p><p class="item-b">The official site still displays a waitlist and labels the product as coming soon. The agent trading area also says it is forthcoming. Actual availability remains unverified.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Media reports claim that products have been launched, but the official website is still in an early access state. This issue does not consider announcements as proof that transactions have been verified.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-03</span>
             <a class="item-src" href="https://www.theblock.co/press-releases/413470/rwaperp-launches-ai-executed-perpetuals-venue-on-okxs-x-layer" target="_blank" rel="noopener">The Block PR ↗</a>
@@ -119,36 +119,36 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Binance把四类bStocks纳入保证金抵押</h3>
-          <p class="item-b">Binance把Seagate、做空纳指三倍ETF、Moderna和CrowdStrike对应的四类bStocks加入跨仓及组合保证金抵押，并同步开放保证金交易。</p><p class="item-b">这些代币化证券仅向获准司法辖区的合资格用户提供，不代表持有人直接拥有底层股票。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>抵押品扩列提高了币股的账户内资金效率，但公告没有披露抵押折扣、实际借贷需求或使用规模。</p>
+          <h3 class="item-h">Binance adds four categories of bStocks as margin collateral</h3>
+          <p class="item-b">Binance has added four types of bStocks related to Seagate, short-selling NAS index triple ETFs, Moderna, and CrowdStrike to its cross-asset and portfolio margin financing. Margin trading is also enabled for these assets.</p><p class="item-b">These tokenized securities are available only to qualified users in approved jurisdictions. They do not represent direct ownership of underlying stocks by the holders.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Increasing collateral efficiency improves the funds efficiency within the coin-stock accounts. However, the announcement does not disclose details such as collateral discounts, actual lending requirements, or the scale of usage.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-02</span>
             <a class="item-src" href="https://www.binance.com/en-BH/support/announcement/detail/8f5c893fa654432883f481b120b0a016" target="_blank" rel="noopener">Binance ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">SoFi与Payward打通银行和加密结算</h3>
-          <p class="item-b">Payward将加入SoFi实时美元结算网络并在Kraken上架SoFiUSD，SoFi则把Kraken Prime接入其加密交易流动性来源。</p><p class="item-b">合作覆盖全天美元清算、稳定币分发和机构交易执行，托管等更深层能力仍处于后续扩展阶段。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>双方已公布接入关系，但公告未给出SoFiUSD上架时间、结算量或Prime流动性占比。</p>
+          <h3 class="item-h">SoFi and Payward connect banking and crypto settlement</h3>
+          <p class="item-b">Payward will join SoFi’s real-time USD settlement network and launch SoFiUSD on Kraken. SoFi will also integrate Kraken Prime into its crypto trading liquidity sources.</p><p class="item-b">The cooperation covers daily US dollar settlements, stablecoin distribution, and institutional trading execution. More advanced capabilities, such as custody services, are still in the process of being expanded.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Both parties have announced their access relationships, but the announcement does not provide information on the launch time of SoFiUSD, the settlement volume, or the proportion of Prime liquidity.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-03</span>
             <a class="item-src" href="https://investors.sofi.com/news/news-details/2026/SoFi-and-Payward-Partner-to-Connect-Banking-and-Digital-Asset-Markets/default.aspx" target="_blank" rel="noopener">SoFi ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">CFTC放宽直接参与者大户报告路径</h3>
-          <p class="item-b">CFTC向Electron Exchange发出不采取行动函，允许该指定合约市场代表直接参与者提交大户报告，并按全部合约均为自行清算处理。</p><p class="item-b">该决定针对Electron Exchange的报告安排，不是面向所有直接参与型市场的通用规则。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>不采取行动立场只覆盖特定事实和申请方，不能直接外推为其他交易场所的合规豁免。</p>
+          <h3 class="item-h">CFTC broadens large-trader reporting options for direct participants</h3>
+          <p class="item-b">The CFTC sent a letter of non-action to Electron Exchange, allowing representatives of this designated contract market to directly submit reports from large traders. All contracts are settled autonomously.</p><p class="item-b">This decision relates to the reporting arrangements for the Electron Exchange. These are not general rules applicable to all direct participation markets.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The position of not taking action applies only to specific facts and applicants. It cannot be directly extrapolated as a compliance exemption for other trading venues.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-02</span>
             <a class="item-src" href="https://www.cftc.gov/PressRoom/PressReleases/9293-26" target="_blank" rel="noopener">CFTC ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">KuCoin钱包接入1inch限价单</h3>
-          <p class="item-b">KuCoin Web3 Wallet的Swap新增由1inch支持的限价单，用户可预设价格并等待链上条件满足后成交。</p><p class="item-b">公告页没有披露支持网络、订单有效期、执行费用或未成交订单处理范围。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>当前可核实的是功能入口已经公布，具体链路和执行边界仍需以产品内规则为准。</p>
+          <h3 class="item-h">KuCoin Wallet adds 1inch limit orders</h3>
+          <p class="item-b">KuCoin Web3 Wallet’s Swap now includes limit orders supported by 1inch. Users can set prices and wait for on-chain conditions to be met before executing trades.</p><p class="item-b">The announcement page does not disclose information regarding support for networks, order validity periods, execution fees, or the processing scope for unexecuted orders.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>What can be confirmed currently is that the functional interface has been announced. The specific links and execution boundaries still depend on the rules within the product.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-02</span>
             <a class="item-src" href="https://www.kucoin.com/announcement/en-kucoin-web3-wallet-swap-launches-limit-orders-powered-by-1inch" target="_blank" rel="noopener">KuCoin ↗</a>
@@ -166,27 +166,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">NVIDIA推出本地AI多机路由工具PAIR</h3>
-          <p class="item-b">NVIDIA发布开源Personal AI Router，可把本地推理任务分配到家庭或工作室中的多台电脑，并宣布Hermes Agent和OpenClaw的Windows一键本地部署。</p><p class="item-b">新版llama.cpp和vLLM优化在RTX 5090测试中把本地推理吞吐最高提升1.9倍，RTX Spark设备计划10月上市。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>吞吐提升来自NVIDIA指定硬件和工作负载测试，不能直接视为所有模型与设备上的通用增幅。</p>
+          <h3 class="item-h">NVIDIA releases PAIR for routing local AI across machines</h3>
+          <p class="item-b">NVIDIA has released an open-source Personal AI Router that allows for distributed local inference tasks across multiple computers in a home or studio setting. It also announced the Windows-based one-click deployment of Hermes Agent and OpenClaw.</p><p class="item-b">Updated llama.cpp and vLLM optimizations delivered up to 1.9× local inference throughput in tests on an RTX 5090. RTX Spark devices are scheduled to go on sale in October.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The increase in throughput comes from NVIDIA-specified hardware and workload tests. It cannot be directly considered as a general increase for all models and devices.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-03</span>
             <a class="item-src" href="https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/" target="_blank" rel="noopener">NVIDIA ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">0G用TEE密封运行GLM-5.3</h3>
-          <p class="item-b">0G把私密推理层从GLM 5.2升级为GLM-5.3，请求在TEE内加密处理并由隔离区签名返回，平台和硬件提供方无法读取推理数据。</p><p class="item-b">GLM-5.2仍可通过只验证路由路径的TeeTLS使用，但需要密封推理的调用方必须迁移到GLM-5.3。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>TeeML证明模型推理发生在隔离区内，TeeTLS只证明路由路径，两种模式的隐私保证范围不同。</p>
+          <h3 class="item-h">0G runs GLM-5.3 inside a sealed trusted execution environment</h3>
+          <p class="item-b">0G has upgraded the private inference layer from GLM 5.2 to GLM-5.3. Requests for encryption within a TEE and signature return from an isolated zone are required. The platform and hardware providers cannot access the inference data.</p><p class="item-b">GLM-5.2 can still be used with TeeTLS, which only verifies the routing path. However, callers who require sealed reasoning must migrate to GLM-5.3.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>TeeML proves that model reasoning occurs in isolated areas. TeeTLS only verifies routing paths. The privacy guarantees of both modes differ.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-03</span>
             <a class="item-src" href="https://0g.ai/blog/glm-5-3-teeml" target="_blank" rel="noopener">0G ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Bretton用执行框架约束金融Agent</h3>
-          <p class="item-b">Bretton公开金融调查Agent执行框架，用显式检查清单、持久工作流、确定性计算和证据检索约束长任务中的遗漏与重复执行。</p><p class="item-b">框架会记录无法完成的检查和工具故障，并要求引用只指向Agent实际取回的来源。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>这是Bretton对自家生产框架的技术说明，页面没有提供独立审计结果或跨客户失败率。</p>
+          <h3 class="item-h">Bretton uses an execution framework to constrain financial agents</h3>
+          <p class="item-b">Bretton’s Open Financial Investigation Agent Framework uses explicit checklists, persistent workflows, deterministic calculations, and evidence retrieval to eliminate omissions and duplicate executions in long tasks.</p><p class="item-b">The framework will record any failed checks and tool failures, and it is required that references only point to the sources actually retrieved by the Agent.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>This is Bretton’s technical description of his own framework. The page does not provide independent audit results or failure rates across customers.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-03</span>
             <a class="item-src" href="https://www2.bretton.com/blog/brettons-agent-harness-makes-our-platform-regulator-approved" target="_blank" rel="noopener">Bretton AI ↗</a>
@@ -194,7 +194,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

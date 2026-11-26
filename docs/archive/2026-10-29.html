@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-10-29</title>
+<title>Perp DEX Daily · 2026-10-29</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -100,51 +100,51 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 116 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 116</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 10 月 29 日 · 星期四</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">October 29, 2026 · Thursday</div>
     </header>
-    <p class="lead">交易平台正在用账户模式、竞赛补贴和稳定币入口争夺同一批高频资金。真正的差异仍落在谁执行订单、奖励怎样稀释，以及用户能否看清退出和权限边界。</p>
+    <p class="lead">Trading venues are competing for high-frequency capital through account modes, trading incentives and stablecoin access. The material differences are who executes an order, how rewards dilute and what users can verify about permissions and exits.</p>
 
 
       <section class="sec sec-account-rules">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">账户规则与分发</h2>
+            <h2 class="sec-title">Account rules and distribution</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">10月28日，OKX宣布停止Futures模式内的现货杠杆</h3>
-          <p class="item-b">OKX将于11月24日停止Futures模式内的现货杠杆开仓和加仓，已有仓位不强平，但部分未成交开仓单会被撤销。用户若要继续使用现货杠杆，需切到Spot、多币种保证金或组合保证金模式；永续、交割和期权不受影响。</p>
+          <h3 class="item-h">October 28: OKX announces the end of spot margin trading in Futures mode</h3>
+          <p class="item-b">On November 24, OKX will stop opening or increasing spot margin positions within Futures mode. Existing positions will not be forcibly closed, but some unfilled opening orders will be canceled. To continue spot margin trading, users must switch to Spot, multi-currency margin or portfolio margin mode. Perpetuals, expiry futures and options are unaffected.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.okx.com/help/okx-to-discontinue-spot-margin-trading-in-futures-mode" target="_blank" rel="noopener" title="OKX公告 · 发布 2026-10-28" aria-label="来源 1：OKX公告 · 发布 2026-10-28">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.okx.com/help/okx-to-discontinue-spot-margin-trading-in-futures-mode" target="_blank" rel="noopener" title="OKX announcement · Published 2026-10-28" aria-label="Source 1: OKX announcement · Published 2026-10-28">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">10月28日，Coinbase用最高200万USDC奖金拉动衍生品交易</h3>
-          <p class="item-b">Coinbase将于11月4日至25日举办首个全球衍生品竞赛，按名义PnL、收益率和成交量设三张榜单，奖金池随成交放大至最高200万USDC。用户在Coinbase Advanced参赛，订单实际由Deribit执行，说明入口和撮合已经分层。</p>
+          <h3 class="item-h">October 28: Coinbase offers up to 2 million USDC in prizes for derivatives trading</h3>
+          <p class="item-b">Coinbase will hold its first global derivatives competition from November 4 to 25. Three leaderboards rank absolute P&amp;L, return and trading volume. The prize pool scales with volume to a maximum of 2 million USDC. Users enter through Coinbase Advanced, while Deribit executes their orders.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.coinbase.com/th/blog/coinbase-has-acquired-one-river-digital-asset-management%C2%A0" target="_blank" rel="noopener" title="Coinbase · 发布 2026-10-28" aria-label="来源 1：Coinbase · 发布 2026-10-28">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.coinbase.com/th/blog/coinbase-has-acquired-one-river-digital-asset-management%C2%A0" target="_blank" rel="noopener" title="Coinbase · Published 2026-10-28" aria-label="Source 1: Coinbase · Published 2026-10-28">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">10月28日，Coinbase上线RLUSD并预告后续抵押品支持</h3>
-          <p class="item-b">Coinbase已在Prime、Exchange和零售App支持RLUSD，用户可通过XRPL、Base和Ethereum充提，并按1:1用美元兑换。Global Exchange和作为交易抵押品的支持仍待后续，当前上线扩大的是稳定币分发与结算入口，不是保证金能力。</p>
+          <h3 class="item-h">October 28: Coinbase lists RLUSD and announces plans to support it as collateral</h3>
+          <p class="item-b">Coinbase already supports RLUSD in its Prime, Exchange, and retail apps. Users can transfer funds using XRPL, Base, and Ethereum, and exchange them at a 1:1 ratio using US dollars. Support for Global Exchange and other trading collateral is still pending. Currently, the product focuses on stablecoin distribution and settlement, not on margin trading capabilities.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.coinbase.com/blog/rlusd-is-now-available-on-coinbase" target="_blank" rel="noopener" title="Coinbase · 发布 2026-10-28" aria-label="来源 1：Coinbase · 发布 2026-10-28">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.coinbase.com/blog/rlusd-is-now-available-on-coinbase" target="_blank" rel="noopener" title="Coinbase · Published 2026-10-28" aria-label="Source 1: Coinbase · Published 2026-10-28">1</a>
           </div>
         </article>
         </div>
@@ -153,39 +153,39 @@
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <h2 class="sec-title">协议机制与获客</h2>
+            <h2 class="sec-title">Protocol design and user acquisition</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Pacifica用每周1000万积分奖励自然活动</h3>
-          <p class="item-b">Pacifica每周四00:00 UTC截取活动，并在24小时内分配1000万积分；GUI和API的自然交易、反馈与传播均可能计入，但公式会动态调整且不公开。积分不能购买，反作弊规则也意味着交易量投入无法直接换算成确定回报。</p>
+          <h3 class="item-h">Pacifica allocates 10 million points per week to reward organic activity</h3>
+          <p class="item-b">Pacifica takes a weekly activity snapshot at 00:00 UTC on Thursday and distributes 10 million points within 24 hours. Organic trading through its interface or API, user feedback and promotion may count. The formula changes and is undisclosed. Points cannot be bought, and anti-abuse rules prevent traders from converting a given volume into a guaranteed reward.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://pacifica.gitbook.io/docs/programs/points-program" target="_blank" rel="noopener" title="Pacifica文档 · 未标发布日期 · 核验 2026-10-29" aria-label="来源 1：Pacifica文档 · 未标发布日期 · 核验 2026-10-29">1</a><a class="source-number" href="https://solbotrank.com/reviews/pacifica-review" target="_blank" rel="noopener" title="SolBotRank Pacifica评测 · 发布 2026-10-23 · 核验 2026-10-29" aria-label="来源 2：SolBotRank Pacifica评测 · 发布 2026-10-23 · 核验 2026-10-29">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://pacifica.gitbook.io/docs/programs/points-program" target="_blank" rel="noopener" title="Pacifica documentation · Publication date not listed · Verified 2026-10-29" aria-label="Source 1: Pacifica documentation · Publication date not listed · Verified 2026-10-29">1</a><a class="source-number" href="https://solbotrank.com/reviews/pacifica-review" target="_blank" rel="noopener" title="SolBotRank review of Pacifica · Published 2026-10-23 · Verified 2026-10-29" aria-label="Source 2: SolBotRank review of Pacifica · Published 2026-10-23 · Verified 2026-10-29">2</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">GRVT把混合执行架构与周积分增长绑定</h3>
-          <p class="item-b">GRVT把撮合和数据存储放在链下，将成交结算、清算校验与资金转移写入自有链并以零知识证明提交Ethereum。其奖励又把周积分的50%给成交量、15%给OI、20%给直接推荐，获客同时要求交易和持续持仓。</p>
+          <h3 class="item-h">GRVT links its hybrid execution architecture to a weekly points program</h3>
+          <p class="item-b">GRVT matches orders and stores data offchain. It records trade settlement, liquidation checks and transfers on its own chain and submits zero-knowledge proofs to Ethereum. Of weekly reward points, 50% go to volume, 15% to open interest and 20% to direct referrals. The design rewards both trading and sustained exposure.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://api-docs.grvt.io/learn/" target="_blank" rel="noopener" title="GRVT技术文档 · 未标发布日期 · 核验 2026-10-29" aria-label="来源 1：GRVT技术文档 · 未标发布日期 · 核验 2026-10-29">1</a><a class="source-number" href="https://help.grvt.io/en/articles/12332040-live-rewards-season-2-0" target="_blank" rel="noopener" title="GRVT Live Rewards Season 2.0 · 发布 2026-03-13 · 核验 2026-10-29" aria-label="来源 2：GRVT Live Rewards Season 2.0 · 发布 2026-03-13 · 核验 2026-10-29">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://api-docs.grvt.io/learn/" target="_blank" rel="noopener" title="GRVT technical documentation · Publication date not listed · Verified 2026-10-29" aria-label="Source 1: GRVT technical documentation · Publication date not listed · Verified 2026-10-29">1</a><a class="source-number" href="https://help.grvt.io/en/articles/12332040-live-rewards-season-2-0" target="_blank" rel="noopener" title="GRVT Live Rewards Season 2.0 · Published 2026-03-13 · Verified 2026-10-29" aria-label="Source 2: GRVT Live Rewards Season 2.0 · Published 2026-03-13 · Verified 2026-10-29">2</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Paradex以加密状态隐藏仓位并保留委员会恢复</h3>
-          <p class="item-b">Paradex隐藏订单、仓位、PnL和清算价，并把加密状态差异连同零知识证明提交Ethereum。用户获得隐私和统一保证金，但紧急退出依赖Paradex Foundation、Paradex与Karnot组成的委员会解密并公布状态，恢复仍有治理依赖。</p>
+          <h3 class="item-h">Paradex uses encrypted state to conceal positions and retains committee-based recovery</h3>
+          <p class="item-b">Paradex conceals orders, positions, P&amp;L and liquidation prices, then submits encrypted state differences and zero-knowledge proofs to Ethereum. Users gain privacy and unified margin. An emergency exit still requires a committee comprising the Paradex Foundation, Paradex and Karnot to decrypt and publish state, leaving recovery dependent on governance.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://docs.paradex.trade/trading/privacy" target="_blank" rel="noopener" title="Paradex隐私文档 · 未标发布日期 · 核验 2026-10-29" aria-label="来源 1：Paradex隐私文档 · 未标发布日期 · 核验 2026-10-29">1</a><a class="source-number" href="https://docs.paradex.trade/home" target="_blank" rel="noopener" title="Paradex产品文档 · 未标发布日期 · 核验 2026-10-29" aria-label="来源 2：Paradex产品文档 · 未标发布日期 · 核验 2026-10-29">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://docs.paradex.trade/trading/privacy" target="_blank" rel="noopener" title="Paradex privacy documentation · Publication date not listed · Verified 2026-10-29" aria-label="Source 1: Paradex privacy documentation · Publication date not listed · Verified 2026-10-29">1</a><a class="source-number" href="https://docs.paradex.trade/home" target="_blank" rel="noopener" title="Paradex product documentation · Publication date not listed · Verified 2026-10-29" aria-label="Source 2: Paradex product documentation · Publication date not listed · Verified 2026-10-29">2</a>
           </div>
         </article>
         </div>
@@ -194,44 +194,44 @@
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <h2 class="sec-title">AI产品与企业落地</h2>
+            <h2 class="sec-title">AI products and enterprise adoption</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">10月28日，ServiceNow MCP插件进入OpenAI市场</h3>
-          <p class="item-b">ServiceNow的MCP插件已进入OpenAI市场，客户可把自身实例接入ChatGPT，在对话中查相似事故、评估变更风险并更新记录；Action Fabric继续执行原有业务规则和权限。安全、语音及Codex深度集成仍多为2027年计划，不能当作现已交付。</p>
+          <h3 class="item-h">October 28: ServiceNow’s MCP plugin joins OpenAI’s marketplace</h3>
+          <p class="item-b">ServiceNow’s MCP plugin has entered the OpenAI market. Customers can integrate their own instances with ChatGPT, allowing them to search for similar incidents, assess risk levels, and update records during conversations. Action Fabric continues to follow its existing business rules and permissions. Security, voice, and Codex integration are still planned for 2027 and cannot be considered as already delivered.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/openai-servicenow-partnership-expansion/" target="_blank" rel="noopener" title="OpenAI · 发布 2026-10-28" aria-label="来源 1：OpenAI · 发布 2026-10-28">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://openai.com/index/openai-servicenow-partnership-expansion/" target="_blank" rel="noopener" title="OpenAI · Published 2026-10-28" aria-label="Source 1: OpenAI · Published 2026-10-28">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">10月27日，OpenAI与Oracle扩大企业采购和应用合作</h3>
-          <p class="item-b">OpenAI与Oracle扩大合作，Oracle称已有13万名活跃ChatGPT用户和9.5万名活跃Codex用户，并开放美国客户通过Oracle Marketplace采购相关产品。AI Workspace、安全网格和App Composer仍处开发或设计阶段，采用数据也主要来自双方自报。</p>
+          <h3 class="item-h">October 27: OpenAI and Oracle expand enterprise procurement and application partnerships</h3>
+          <p class="item-b">OpenAI and Oracle have expanded their cooperation. Oracle stated that it has 130,000 active ChatGPT users and 95,000 active Codex users. American customers can purchase related products through Oracle Marketplace. AI Workspace, Security Grid, and App Composer are still in the development or design phase. The data used for these products mainly comes from reports provided by both companies.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/oracle-apps-in-chatgpt/" target="_blank" rel="noopener" title="OpenAI · 发布 2026-10-27" aria-label="来源 1：OpenAI · 发布 2026-10-27">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://openai.com/index/oracle-apps-in-chatgpt/" target="_blank" rel="noopener" title="OpenAI · Published 2026-10-27" aria-label="Source 1: OpenAI · Published 2026-10-27">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">10月27日，xAI为Grok API加入自定义输出规则</h3>
-          <p class="item-b">xAI在Grok文本API新增请求级moderation guidelines，开发者可分别设置色情、暴力和脏话的输出规则，适用于Chat Completions与Responses API。这让产品能按场景调整内容边界，但规则由调用方声明，也不等同独立策略引擎或执行审计。</p>
+          <h3 class="item-h">October 27: xAI adds custom output rules to the Grok API</h3>
+          <p class="item-b">xAI has added new request-level moderation guidelines in the Grok text API. Developers can set rules for output that includes pornography, violence, and profanity. These rules apply to the Chat Completions and Responses APIs. This allows the product to adjust content boundaries based on context. However, the rules are declared by the caller, and they do not equivalent to independent policy engines or execution audits.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://docs.x.ai/developers/release-notes?release=2026-10-9b9dfeba" target="_blank" rel="noopener" title="xAI · 发布 2026-10-27" aria-label="来源 1：xAI · 发布 2026-10-27">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://docs.x.ai/developers/release-notes?release=2026-10-9b9dfeba" target="_blank" rel="noopener" title="xAI · Published 2026-10-27" aria-label="Source 1: xAI · Published 2026-10-27">1</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

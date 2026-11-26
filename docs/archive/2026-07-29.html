@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-07-29</title>
+<title>Perp DEX Daily · 2026-07-29</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 最高优先级产品判断 */
+  /* Principal market implications */
   .product-view{margin:22px 0 8px; padding:20px 22px; background:#17150f; color:#fbfaf6;
     border-radius:7px; overflow-wrap:anywhere;}
   .product-view-area{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -36,7 +36,7 @@
   .product-view-row{font-size:13.5px; line-height:1.7; color:#d9d2c2;}
   .product-view-row b{color:#fbfaf6;}
   .product-view-f{margin-top:4px; color:#b8ae99;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -54,7 +54,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -65,7 +65,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -100,18 +100,18 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 36 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 36</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 7 月 29 日 · 星期三</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">July 29, 2026 · Wednesday</div>
     </header>
-    <p class="lead">Hyperliquid 上的 CXMT 盘前永续在长鑫科技 A 股开盘前已经贴近真实开盘价，Securitize 则把代币化投资策略所需的投顾、经纪交易、过户与基金管理能力收进同一平台。RWA 交易的竞争正在从“先给出一个价格”推进到“能否平稳切换真实市场并承接完整权利”。</p>
+    <p class="lead">Hyperliquid’s pre-market perpetual on ChangXin Memory Technologies traded close to its eventual A-share opening price. Securitize brought investment advice, brokerage, transfer agency and fund administration for tokenized strategies onto one platform. Both developments concern the transition from a quoted price to a functioning underlying market.</p>
 
     <section class="product-view">
-      <div class="product-view-area">市场与资产 · 置信度 中</div>
-      <div class="product-view-j">盘前或境外股票永续的上线关卡应把上市切换、现货可达性和异常结算放在 Feed 可用性之前；一次准确命中只能证明个案可行，不能替代可复现的切换规则。</div>
-      <div class="product-view-row"><b>判断变化：</b>从“有可靠价格源即可把盘前股票纳入候选”转向“只有预先定义现货开盘后的指数切换、价差收敛、停牌与异常结算规则，并验证不可套利市场不会放大清算风险，盘前股票才进入候选”。</div>
-      <div class="product-view-row product-view-f"><b>证伪条件：</b>若至少三个跨市场 IPO 永续都能在现货开盘前把价差稳定压到 3% 以内，切换后 24 小时没有异常清算或长时间脱锚，且独立做市者能在无现货跨境套利条件下持续提供深度，应降低当前准入门槛。</div>
+      <div class="product-view-area">Market and Assets · Confidence level: Medium</div>
+      <div class="product-view-j">For offline equity perpetual futures, the requirements for listing, liquidity, and abnormal settlements should be prioritized over feed availability. A single accurate hit can only prove that a case is feasible, but it cannot replace reproducible switching rules.</div>
+      <div class="product-view-row"><b>Revised assessment:</b>The approach has shifted from “including pre-market stocks as candidates based on reliable price sources” to “only including pre-defined index switching rules, price convergence, suspension rules, and abnormal settlement rules after the stock market opens. Verifying that non-arbitrage markets do not magnify settlement risks is crucial before pre-market stocks are considered candidates.”</div>
+      <div class="product-view-row product-view-f"><b>Disconfirmation Conditions:</b>If at least three cross-market perpetual futures can stabilize price differences within 3% before the spot market opens, and there are no abnormal liquidations or prolonged position shedding within 24 hours after the switch, and independent market makers can continue to provide deep liquidity without any spot arbitrage opportunities, then the current entry requirements should be lowered.</div>
     </section>
 
 
@@ -126,12 +126,12 @@
 
         <article class="item">
 
-          <h3 class="item-h">CXMT 盘前永续在 A 股开盘前把价差压到约 2%，上市切换首次经受实盘检验</h3>
-          <p class="item-b"><strong>事件</strong>：（股票永续矩阵线，自 06-12，第 12 个进展）长鑫科技 07-27 在上海科创板开盘前，trade.xyz 的 CXMT 永续约报 7.14 美元，真实股票开盘 49.5 元、约合 7.30 美元，两者相差约 2%；股票首日较发行价上涨约 472%。</p><p class="item-b"><strong>机制</strong>：合约以一股 CXMT 的美元价值为标的，用 USDC 隔离保证金和现金结算；上市前由盘前预期定价，上市后切换到真实 A 股价格，但外国用户无法直接买卖 A 股完成现货与永续套利。</p><p class="item-b"><strong>二阶效应</strong>：盘前永续第一次在跨境受限的重量级 IPO 上证明可以形成接近开盘的公开价格，但成功依赖极低流通盘、事件热度和单一建市者；没有现货套利链时，后续折溢价、停牌与公司行动仍由指数规则和做市资本承担。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>上市后仅 6.73% 股本可流通，且跨境现货套利受限；这次约 2% 的开盘命中不能代表普通股票或后续交易时段也能同样收敛。</p>
+          <h3 class="item-h">CXMT pre-market perpetual trades within about 2% of its A-share opening price</h3>
+          <p class="item-b"><strong>Event</strong>: Before ChangXin Memory Technologies opened on Shanghai’s STAR Market on July 27, its trade.xyz perpetual traded near $7.14. The share opened at RMB 49.50, about $7.30, leaving a gap of roughly 2%. The stock gained about 472% from its issue price on the first day. This was the twelfth development tracked since June 12.</p><p class="item-b"><strong>Mechanism</strong>: The contract references the dollar value of one CXMT share, uses isolated USDC margin and settles in cash. It transitions from pre-market expectations to the live A-share price after listing. Cross-border access restrictions prevent many overseas users from arbitraging directly against the stock.</p><p class="item-b"><strong>Second-order effects</strong>: The contract formed a public price close to the opening of a major restricted-access IPO. A small free float, intense event interest and one market builder shaped the outcome. Without an accessible spot arbitrage route, index rules and market-maker capital carry the risks of later premiums, discounts, halts and corporate actions.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Only 6.73% of equity was freely tradable after listing. The roughly 2% opening gap does not establish that pricing will converge as closely in later sessions or other stocks.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-27</span>
-            <a class="item-src" href="https://hyperliquidguide.com/ecosystem/trade-cxmt-pre-ipo-hyperliquid" target="_blank" rel="noopener">Hyperliquid Guide ↗</a><a class="item-src item-ref" href="https://www.tomshardware.com/tech-industry/cxmt-closes-up-466-percent-in-shanghai-debut-with-no-hbm-project-in-its-ipo-prospectus" target="_blank" rel="noopener">补充：Tom&#39;s Hardware · 07-27 ↗</a>
+            <a class="item-src" href="https://hyperliquidguide.com/ecosystem/trade-cxmt-pre-ipo-hyperliquid" target="_blank" rel="noopener">Hyperliquid Guide ↗</a><a class="item-src item-ref" href="https://www.tomshardware.com/tech-industry/cxmt-closes-up-466-percent-in-shanghai-debut-with-no-hbm-project-in-its-ipo-prospectus" target="_blank" rel="noopener">Additional source: Tom&#x27;s Hardware · 07-27 ↗</a>
           </div>
         </article>
         </div>
@@ -147,9 +147,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Securitize 补齐 SEC 投顾牌照，代币化资产平台从发行交易延伸到策略管理</h3>
-          <p class="item-b">Securitize Capital 07-27 正式取得 SEC 注册投资顾问资格；其美国平台由此同时覆盖注册投顾、经纪交易商运营的 ATS、过户代理与基金管理，不再只提供代币发行和二级转让。</p><p class="item-b">这套组合让资产管理人能在同一供应商内完成策略设计、受监管交易、持有人记录和基金运营，但它也说明链上可转移只是资产供给的一层，真实证券权利仍依赖受监管主体持续承接。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>四项受监管能力已集中到美国平台，但公告没有披露由此新增的代币化策略资产规模、交易量或可作为衍生品抵押品的采用数据。</p>
+          <h3 class="item-h">Securitize adds SEC investment adviser registration and extends tokenized assets into strategy management</h3>
+          <p class="item-b">Securitize Capital became an SEC-registered investment adviser on July 27. Its US platform now combines registered investment advice, a broker-dealer-operated alternative trading system, transfer agency and fund administration alongside issuance and secondary transfers.</p><p class="item-b">Asset managers can use one provider for strategy design, regulated trading, shareholder records and fund operations. Onchain transferability is only one part of the offering. Investors&#x27; legal rights still depend on regulated entities maintaining those services.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The US platform now offers four regulated capabilities. The announcement gave no figures for additional tokenized strategy assets, trading volume, or use as derivatives collateral.</p>
           <div class="item-meta">
             <span class="item-date">2026-07-27</span>
             <a class="item-src" href="https://www.theblock.co/post/409821/securitize-expands-regulated-platform-with-sec-adviser-license" target="_blank" rel="noopener">The Block ↗</a>
@@ -161,15 +161,15 @@
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product assessment</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">合规</div>
-          <h3 class="item-h">代币化股票不因可上链转移就适合直接作为保证金</h3>
-          <p class="item-b"><strong>判断变化</strong>：从“代币化股票具备价格源和托管即可评估为抵押品”更新为“只有发行权利、交易场所、持有人记录、公司行动和赎回责任都有明确承接方，才评估为直接抵押品”。</p><p class="item-b"><strong>证据与边界</strong>：Securitize 把投顾、经纪 ATS、过户代理和基金管理合并到同一平台，证明完整权利链需要多项受监管能力；这不能证明其资产适用于 BSC、跨境用户或永续清算。</p>
+          <div class="decision-area">Compliance</div>
+          <h3 class="item-h">Onchain transferability alone does not make a tokenized stock suitable as collateral</h3>
+          <p class="item-b"><strong>Revised assessment</strong>: A price feed and custody are insufficient to assess a tokenized stock as direct collateral. The issuer’s obligations, trading venue, holder records, corporate actions and redemption responsibilities each need an identifiable owner.</p><p class="item-b"><strong>Evidence and limits</strong>: Securitize brought investment advice, a broker-operated ATS, transfer agency and fund administration onto one platform. That illustrates the regulated capabilities needed to support a full set of rights, while leaving suitability for BSC, cross-border users and perpetual liquidations open.</p>
 
           <div class="item-meta">
 
@@ -178,7 +178,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

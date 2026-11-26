@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-08-30</title>
+<title>Perp DEX Daily · 2026-08-30</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 63 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 63</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 8 月 30 日 · 星期日</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">August 30, 2026 · Sunday</div>
     </header>
-    <p class="lead">股票永续竞争开始向期权与组合保证金延伸，监管边界和运行连续性则同步成为扩品之外的硬约束。</p>
+    <p class="lead">Competition in stock perpetuals is expanding into options and portfolio margin. Regulatory limits and continuity of trading constrain how far venues can extend their product ranges.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,9 +110,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Bybit 把股票永续扩展到全天候期权</h3>
-          <p class="item-b"><strong>事件</strong>：Bybit 将于 9 月 17 日先为 SPCX 与 NVDA 股票永续推出 24/7 期权，支持分数手、USDT 结算，并接入统一交易账户与组合保证金；后续计划覆盖 TSLA、QQQ、SOXL 与 MU。</p><p class="item-b"><strong>机制</strong>：用户可在同一账户买卖看涨、看跌并组合价差、跨式与备兑策略，股票永续不再只有线性方向敞口，而是增加期限、波动率与非线性风险的交易层。</p><p class="item-b"><strong>二阶效应</strong>：股票永续竞争从标的扩列和费率补贴推进到完整衍生品栈，但公告只证明产品计划，期权做市深度、波动率曲面和组合保证金在极端行情下的表现仍待验证。（TradFi/RWA 永续线，自 07-09）</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>9 月 17 日是计划启动日，本期只确认产品与首批标的，不把尚未上线的期权写成已有成交或流动性。</p>
+          <h3 class="item-h">Bybit plans 24/7 options on stock perpetuals</h3>
+          <p class="item-b"><strong>Event</strong>: Bybit scheduled 24/7 options on SPCX and NVDA stock perpetuals for September 17, with fractional contracts, USDT settlement and access through its unified account and portfolio margin system. TSLA, QQQ, SOXL and MU were planned for later.</p><p class="item-b"><strong>Mechanism</strong>: Traders would be able to combine calls and puts in spreads, straddles and covered positions in one account. These instruments add volatility, expiry and nonlinear risk exposure to the directional perpetual markets.</p><p class="item-b"><strong>Second-order effects</strong>: The proposal expands competition beyond listings and fee incentives toward a broader derivatives offering. The announcement did not demonstrate options market-making depth, the volatility surface or stressed portfolio-margin performance.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>September 17 was the planned start date. There was no live options volume or liquidity to report in this edition.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-28</span>
             <a class="item-src" href="https://www.theblock.co/news/markets/2026-08-28-bybit-launches-24-7-options-on-stock-perpetuals-starting-with-spacex-and-nvidia-413032" target="_blank" rel="noopener">The Block ↗</a>
@@ -120,9 +120,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">第九巡回法院削弱 Kalshi 的联邦独占管辖主张</h3>
-          <p class="item-b"><strong>事件</strong>：美国第九巡回上诉法院拒绝阻止内华达州对 Kalshi 体育事件合约执行州级博彩监管，认为 Kalshi 尚未证明《商品交易法》很可能排除州监管；Kalshi 表示将寻求进一步复审。</p><p class="item-b"><strong>机制</strong>：裁定没有终结案件，却否定了仅凭 CFTC 监管身份就自动获得联邦优先权的初步论证，使同类合约仍可能同时面对联邦商品规则与州博彩规则。</p><p class="item-b"><strong>二阶效应</strong>：预测市场的合约准入、地区限制和争议处理不能只依赖单一联邦牌照假设，州级规则仍可能直接改变产品可用性；但本次只是禁令阶段，不是终局判决。（预测市场联邦规则线，自 07-24）</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>法院只处理初步禁令与胜诉可能性，没有对联邦优先权作最终裁判，后续复审和实体审理仍可能改变结论。</p>
+          <h3 class="item-h">Ninth Circuit ruling weakens Kalshi’s claim of exclusive federal jurisdiction</h3>
+          <p class="item-b"><strong>Event</strong>: The U.S. Court of Appeals for the Ninth Circuit declined to block Nevada from enforcing state gambling rules against Kalshi’s sports event contracts. It found that Kalshi had not shown that the Commodity Exchange Act was likely to preempt state regulation. Kalshi said it would seek further review.</p><p class="item-b"><strong>Mechanism</strong>: The case continues. At the preliminary stage, the court rejected the argument that CFTC oversight automatically establishes federal preemption. Similar contracts may still face both federal commodities rules and state gambling laws.</p><p class="item-b"><strong>Second-order effects</strong>: Sports contract listings, geographic restrictions and dispute handling may therefore depend on state rules as well as federal licensing. This development in the federal prediction-market story tracked since July 24 concerns an injunction, with a final judgment still outstanding.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The court considered a preliminary injunction and the likelihood of success. It did not issue a final ruling on federal preemption. Further review and proceedings on the merits could change the outcome.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-28</span>
             <a class="item-src" href="https://www.theblock.co/news/regulation/2026-08-28-ninth-circuit-deals-blow-to-kalshi-in-nevada-sports-betting-fight-challenging-cftcs-exclusive-jurisdiction-claim-413046" target="_blank" rel="noopener">The Block ↗</a>
@@ -130,9 +130,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">KuCoin 无停机升级仍暴露 WebSocket 断连窗口</h3>
-          <p class="item-b"><strong>事件</strong>：KuCoin 于 8 月 29 日进行约 120 分钟 API 升级，现货、杠杆、期货、期权与统一账户服务不整体停机，但 WebSocket 可能短暂断连、丢数据或延迟。</p><p class="item-b"><strong>机制</strong>：平台把交易服务连续性与数据连接连续性拆开，连接中断后需要客户端主动重连并恢复状态；这意味着订单系统不能把交易所“无停机”理解为行情流永不间断。</p><p class="item-b"><strong>二阶效应</strong>：可机读市场生命周期不仅要覆盖开放、暂停与结算，还需定义重连、补数和幂等恢复；公告未披露实际中断率或受影响账户，暂不能判断升级质量。（可机读市场生命周期线，自 08-28）</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>120 分钟是预计升级窗口，不等于每个用户中断 120 分钟；公告只提示潜在断连、数据损失与延迟。</p>
+          <h3 class="item-h">KuCoin’s zero-downtime upgrade still leaves a window for WebSocket disconnections</h3>
+          <p class="item-b"><strong>Event</strong>: KuCoin conducted an API upgrade lasting about 120 minutes on August 29. Spot, margin, futures, options and unified-account services had no general shutdown, but WebSocket connections could briefly disconnect, lose data or lag.</p><p class="item-b"><strong>Mechanism</strong>: Trading service availability and data connection continuity are separate. A client may need to reconnect and rebuild its state after a disruption even while the venue itself remains open for trading.</p><p class="item-b"><strong>Second-order effects</strong>: Machine-readable lifecycle information should cover reconnection, data backfill and recovery without duplicate effects, alongside opening, suspension and settlement. KuCoin disclosed neither actual interruption rates nor affected accounts. This adds a recovery question to the market-lifecycle story tracked since August 28.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The estimated upgrade window is 120 minutes. It does not imply a two-hour outage for every user. The announcement warns of possible disconnects, data loss, and delays.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-29</span>
             <a class="item-src" href="https://www.kucoin.com/announcement/en-announcement-of-kucoin-api-upgrade-2026-08-29" target="_blank" rel="noopener">KuCoin ↗</a>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">MEXC 用 Meme+ 包装 Robinhood Chain 新币交易</h3>
-          <p class="item-b">MEXC 于 8 月 29 日上线 Robinhood Chain 代币 MICRODUCK/USDT，并通过 Meme+ 让用户无需 Web3 钱包即可交易链上热门 meme 币，提款于 8 月 30 日开放。</p><p class="item-b">Meme+ 把链上发现、托管和 CEX 账户分发接成一条入口，降低新链资产的交易门槛；但单一上币公告没有持有人、池深或持续成交数据，不能据此判断 Robinhood Chain 已形成稳定发行能力。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>现货交易已开放，提款延后一天；首发标签和免钱包入口只证明渠道上线，不证明资产质量或自然流动性。</p>
+          <h3 class="item-h">MEXC adds new Robinhood Chain tokens through Meme+</h3>
+          <p class="item-b">MEXC listed Robinhood Chain token MICRODUCK/USDT on August 29 through Meme+. Users can trade the onchain meme token without a Web3 wallet. Withdrawals were scheduled to open August 30.</p><p class="item-b">Meme+ connects onchain discovery, custody and centralized exchange accounts, easing access to new-chain assets. This listing supplied no holder figures, pool depth or sustained volume, leaving the durability of Robinhood Chain’s issuance activity unproven.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Spot trading is open, with withdrawals beginning a day later. First-listing status and wallet-free access establish that a channel is available. They do not verify asset quality or organic liquidity.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-29</span>
             <a class="item-src" href="https://www.mexc.com/en-GB/announcements/article/first-in-market-17827791537956" target="_blank" rel="noopener">MEXC ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">KuCoin 为 DGAI 增加隔离保证金分发</h3>
-          <p class="item-b">KuCoin 于 8 月 28 日把 DGAI 加入隔离保证金市场，开放 DGAI/USDT 交易与 DGAI 借贷，并给出 DGAI 4%、USDT 0% 的强平费和 0.97 的保证金系数。</p><p class="item-b">新资产从现货扩展到可借贷和杠杆交易，会增加交易深度与清算需求；隔离模式限制风险跨市场传递，但公告没有借贷额度、利率和初始流动性，无法判断真实杠杆容量。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>4% 是 DGAI 强平费、0.97 是保证金系数，不是用户固定收益；实际可借规模仍由平台库存与市场条件决定。</p>
+          <h3 class="item-h">KuCoin expands DGAI distribution through isolated margin</h3>
+          <p class="item-b">On August 28, KuCoin added DGAI to isolated margin. It opened DGAI/USDT trading and DGAI borrowing, with liquidation fees of 4% for DGAI and 0% for USDT, and a margin coefficient of 0.97.</p><p class="item-b">Borrowing and leveraged trading add demand for both market depth and liquidation capacity beyond spot trading. Isolated margin limits spillover to other markets. Borrowing caps, interest rates and opening liquidity were undisclosed, so actual leverage capacity remains unclear.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The 4% is DGAI&#x27;s liquidation fee and 0.97 is the margin coefficient. Neither is a fixed user return. Actual borrowing capacity depends on platform inventory and market conditions.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-28</span>
             <a class="item-src" href="https://www.kucoin.com/announcement/kucoin-margin-adds-260827" target="_blank" rel="noopener">KuCoin ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Gate 用自动换币和浮动奖池扩大 USDD 分发</h3>
-          <p class="item-b">Gate Web3 第四期 USDD Bonus 于 8 月 29 日启动，用户可在以太坊存入 USDD 或 USDT，获得 4% 基础 APY 并参与 3 万 USDD 奖励池；USDT 会通过 PSM 按 1:1 自动换成 USDD，存款凭证为 sUSDD。</p><p class="item-b">自动换币把稳定币获客和收益产品合并，奖励再按活动参与情况动态分配；这能减少用户换币步骤，却也意味着宣传收益受参与人数、奖励分配和以太坊 gas 共同影响，不能把奖池直接加成确定 APY。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>4% 为基础 APY，3 万 USDD 是全期动态奖池；USDT 会先换成 USDD，最终增量收益取决于参与规模和链上成本。</p>
+          <h3 class="item-h">Gate expands USDD distribution through automatic conversion and a variable rewards pool</h3>
+          <p class="item-b">Gate Web3 opened its fourth USDD Bonus on August 29. Users can deposit USDD or USDT on Ethereum for a 4% base APY and a share of 30,000 USDD in rewards. The PSM automatically converts USDT to USDD one-for-one, and sUSDD serves as the deposit receipt.</p><p class="item-b">Automatic conversion combines stablecoin distribution and a yield product in one step. Rewards depend on participation and allocation, while Ethereum gas also affects net returns. A share of the nominal reward pool cannot be treated as a guaranteed addition to APY.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The base APY is 4%. The 30,000 USDD is a variable prize pool for the whole campaign. USDT is converted to USDD first. Additional yield depends on participation and onchain costs.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-29</span>
             <a class="item-src" href="https://www.gate.com/es/announcements/article/101423" target="_blank" rel="noopener">Gate ↗</a>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Fogo 在攻击者获得 4 亿枚代币后暂停主网</h3>
-          <p class="item-b">Fogo 披露攻击者获得 4 亿枚 FOGO，约占创世供应 4%、流通供应超过 10%，按报道时价格约值 300 万美元；网络在首次披露约 15 小时后暂停，验证者升级以限制相关地址。</p><p class="item-b">暂停主网可以阻止攻击者继续转移，却把安全处置成本转化为全网不可用；攻击路径和恢复时间尚未公开，因此目前只能确认供应暴露、地址限制和停链，不能判断资产是否可追回。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>4 亿枚约占创世供应 4%、流通供应超过 10%；300 万美元为报道时估值，停链损失和最终追回额尚未知。</p>
+          <h3 class="item-h">Fogo pauses mainnet after an incident involving 400 million tokens</h3>
+          <p class="item-b">Fogo disclosed that an attacker obtained 400 million FOGO, about 4% of genesis supply and more than 10% of circulating supply, worth roughly $3 million at the reporting price. The network paused about 15 hours after initial disclosure, and validators upgraded to restrict affected addresses.</p><p class="item-b">Halting mainnet limited further movement but made the network unavailable to all users. The cause and recovery timeline had not been disclosed. The reported supply exposure, address restrictions and halt do not establish whether assets can be recovered.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The 400 million tokens represent about 4% of genesis supply and more than 10% of circulating supply. The $3 million valuation was reported at the time. The cost of the chain halt and the amount ultimately recovered were unknown.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-29</span>
             <a class="item-src" href="https://www.theblock.co/news/defi/2026-08-29-layer-1-blockchain-fogo-halts-mainnet-after-attacker-receives-400-million-fogo-tokens-10-of-circulating-supply-413064" target="_blank" rel="noopener">The Block ↗</a>
@@ -202,9 +202,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Cosmos EVM 误判漏洞后六条链损失 570 万美元</h3>
-          <p class="item-b">Cosmos Labs 称研究员 4 月 25 日已报告相关漏洞，但测试人员误以为线上网络不受影响；攻击者随后利用整数下溢，在 8 月 20 至 25 日攻击六条链，合计损失约 570 万美元。</p><p class="item-b">团队此前采用未公开漏洞细节的静默补丁，却没有让所有下游链及时理解风险与升级优先级；共享组件的安全响应因此不能只交付代码版本，还要包含受影响范围、截止时间和可验证升级状态。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>570 万美元为六条链合计损失，MANTRA 约占 360 万美元；事件证明升级协调失败，不代表所有 Cosmos EVM 链均受影响。</p>
+          <h3 class="item-h">Six chains lose $5.7 million following an incorrect assessment of a Cosmos EVM vulnerability</h3>
+          <p class="item-b">Cosmos Labs said a researcher reported the vulnerability on April 25, but testers incorrectly concluded that live networks were unaffected. Six chains suffered losses totaling roughly $5.7 million in incidents from August 20 to 25.</p><p class="item-b">A previously issued quiet patch left some downstream chains unaware of their exposure and the urgency of upgrading. Shared-component incident response needs to communicate affected versions, deadlines and verifiable upgrade status alongside patched code.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>Total losses of $5.7 million span six chains, including about $3.6 million on MANTRA. The incident documents a failure to coordinate upgrades. It does not establish that every Cosmos EVM chain was affected.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-29</span>
             <a class="item-src" href="https://www.theblock.co/news/defi/2026-08-29-cosmos-labs-says-it-wrongly-cleared-the-bug-behind-a-5-7-million-six-chain-hack-413061" target="_blank" rel="noopener">The Block ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Stellar 代币化 RWA 接近 40 亿美元但集中度仍高</h3>
-          <p class="item-b">Stellar 上代币化 RWA 规模截至 8 月 29 日约为 39.96 亿美元，年内从 8.688 亿美元增长约 360%；Spiko、Realiz、Tradable、Franklin Templeton 与 Ondo 五家合计贡献大部分规模。</p><p class="item-b">增长证明机构发行和分发正在加速，但最大项目 Spiko 单独约 15.5 亿美元，前五项目高度集中；因此链级总量不能直接代表广泛采用，仍需拆分发行方、资产权利、流动性与赎回能力。</p>
-          <p class="item-context"><span class="item-context-label">量级参照</span>39.96 亿美元为链上代币化 RWA 总值，不等于交易量或可立即赎回资金；前五发行项目占据主要规模。</p>
+          <h3 class="item-h">Tokenized real-world assets on Stellar approach $4 billion and remain concentrated</h3>
+          <p class="item-b">As of August 29, tokenized RWAs on Stellar were worth about $3.996 billion, up approximately 360% year to date from $868.8 million. Spiko, Realiz, Tradable, Franklin Templeton and Ondo accounted for most of the total.</p><p class="item-b">Institutional issuance and distribution are growing, but Spiko alone accounts for about $1.55 billion and the top five dominate. Chain-wide value cannot demonstrate broad adoption without information on issuers, asset rights, liquidity and redemption.</p>
+          <p class="item-context"><span class="item-context-label">Scale</span>The $3.996 billion is the total onchain value of tokenized real-world assets. It is not volume or immediately redeemable funds. The five largest issuance projects account for most of the value.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-29</span>
             <a class="item-src" href="https://cointelegraph.com/markets/stellar-tokenized-rwa-market-nears-4b-after-fourfold-2026-growth" target="_blank" rel="noopener">Cointelegraph ↗</a>
@@ -233,9 +233,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Anthropic 用自动研究代理改进十项对齐基准</h3>
-          <p class="item-b">Anthropic 研究人员让自动对齐研究代理完成文献检索、提出方法、短时训练和迭代，在十项失准基准上全部取得改善且未降低总体能力，最佳结果在约六小时内超过有经验的人类研究者。</p><p class="item-b">这展示了 AI 研究流程的可自动化闭环，但基准目标、文献维护和结果解释仍由人定义；单组受控实验不能证明代理能够自主发现真实世界的未知失准问题。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>十项基准和约六小时结果来自研究团队实验；成本和速度优势不覆盖基准设计、数据维护与现实安全验证。</p>
+          <h3 class="item-h">Anthropic uses automated research agents to improve results on ten alignment benchmarks</h3>
+          <p class="item-b">Anthropic researchers used an automated alignment research agent to search the literature, propose methods, run short training experiments and iterate. It improved results on all ten misalignment benchmarks without reducing overall capability. Its best run surpassed experienced human researchers in about six hours.</p><p class="item-b">The controlled experiment demonstrated an automated research loop. Humans still define benchmark objectives, maintain the literature and interpret results. The study does not establish that an agent can independently discover previously unknown real-world misalignment.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The ten benchmarks and roughly six-hour result come from the research team&#x27;s experiments. The reported cost and speed advantages exclude benchmark design, data maintenance, and real-world safety validation.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-28</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">开放权重 AI 公司成为基础设施并购入口</h3>
-          <p class="item-b">AI 基础设施并购正围绕开放权重模型分发展开：Stripe 已收购模型路由平台 OpenRouter，Nvidia 与 Poolside 达成约 60 亿美元合作安排，市场同时出现 Nvidia 洽购 Hugging Face 的报道。</p><p class="item-b">收购逻辑不是开放模型已占企业主流，而是路由、托管与开发者入口能在模型切换中保留流量和算力需求；Hugging Face 交易仍属报道中的洽谈，不能与已确认交易并列为完成收购。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>OpenRouter 收购和 Poolside 安排为已报道交易，Hugging Face 仍是未确认洽谈；估值不能混写为已支付对价。</p>
+          <h3 class="item-h">Open-weight AI companies become acquisition targets for infrastructure providers</h3>
+          <p class="item-b">AI infrastructure deals increasingly concern distribution of open-weight models. Stripe acquired model router OpenRouter, Nvidia agreed to a partnership worth about $6 billion with Poolside, and reports said Nvidia was in talks to buy Hugging Face.</p><p class="item-b">Routing, hosting and developer access can retain traffic and compute demand as customers switch models, regardless of whether open models dominate enterprise use. The reported Hugging Face talks had not resulted in a confirmed acquisition.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The OpenRouter acquisition and Poolside arrangement are reported transactions. Talks involving Hugging Face remain unconfirmed. Valuations are distinct from consideration actually paid.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-28</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/28/open-weight-ai-companies-are-the-valleys-hottest-acquisition-targets/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">a16z 设立 11 亿美元基金押注 AI 物理基础设施</h3>
-          <p class="item-b">a16z 设立 11 亿美元 Machine Age 基金，投资范围从芯片、内存与数据中心扩展到机器人、冷却、材料、电力和相关地产，目标是补齐 AI 计算的物理供给链。</p><p class="item-b">资本配置从模型应用转向能源和工程约束，说明扩张瓶颈越来越落在可建设的算力基础设施；但基金规模只是可投资资本，不等于项目已部署、产能已交付或回报已验证。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>11 亿美元是基金承诺规模，不是当日已投资或已建设金额；项目交付、产能和收益仍需后续验证。</p>
+          <h3 class="item-h">a16z establishes a $1.1 billion fund for physical AI infrastructure</h3>
+          <p class="item-b">Andreessen Horowitz established a $1.1 billion Machine Age fund covering chips, memory, data centers, robotics, cooling, materials, electricity and related real estate. It targets gaps in the physical supply chain for AI computing.</p><p class="item-b">The fund shifts attention from model applications to energy and engineering constraints on buildable compute capacity. The fund size represents capital available for investment. It provides no evidence of deployments, delivered capacity or returns.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The $1.1 billion represents capital committed to the fund. It does not measure investment or construction completed that day. Project delivery, capacity, and returns still need verification.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-28</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/28/a16z-creates-a-1-1b-machine-age-fund-to-accelerate-the-physical-buildout-of-ai/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -267,15 +267,15 @@
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product assessment</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">市场与资产</div>
-          <h3 class="item-h">股票永续的下一层竞争是期权曲面而非继续堆标的</h3>
-          <p class="item-b"><strong>判断变化</strong>：从主要比较股票永续的标的数量、杠杆和费率，更新为把期权期限、波动率曲面与组合保证金视为下一层产品竞争力。</p><p class="item-b"><strong>证据与边界</strong>：Bybit 计划先为 SPCX 与 NVDA 股票永续上线 24/7 期权，并支持价差、跨式和组合保证金，但 9 月 17 日前尚无真实成交、深度或极端行情数据。</p>
+          <div class="decision-area">Market and Assets</div>
+          <h3 class="item-h">Equity perpetual venues face a new test in options pricing across strikes and expiries</h3>
+          <p class="item-b"><strong>Revised assessment</strong>: In addition to listing count, leverage and fees, the next comparison for equity perpetual venues includes options maturities, volatility surfaces and portfolio margin.</p><p class="item-b"><strong>Evidence and limits</strong>: Bybit planned 24/7 options on SPCX and NVDA perpetuals with spreads, straddles and portfolio margin. Before the scheduled September 17 launch, it had no live options volume, depth or stress data to report.</p>
 
           <div class="item-meta">
 
@@ -284,7 +284,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

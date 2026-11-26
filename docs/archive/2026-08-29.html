@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-08-29</title>
+<title>Perp DEX Daily · 2026-08-29</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 62 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 62</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 8 月 29 日 · 星期六</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">August 29, 2026 · Saturday</div>
     </header>
-    <p class="lead">Gate 把杠杆 ETF 与美股一起接入股票永续，HTX 用分层负挂单费争夺 TradFi 成交，Circle 则把双币种稳定币和原生跨链通道部署到 Plasma。</p>
+    <p class="lead">Gate added leveraged ETFs alongside U.S. stocks in its stock perpetual range. HTX offered tiered maker rebates to attract traditional-market trading, while Circle deployed two stablecoin currencies and native cross-chain transfers on Plasma.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,9 +110,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Gate 把每日 2 倍重置 ETF 接入最高 20 倍永续</h3>
-          <p class="item-b"><strong>事件</strong>：Gate 于 8 月 28 日上线 RAM、DJT、TEM 与 MARA 四只 USDT 本位股票永续，支持双向交易和 1 至 20 倍杠杆；其中 RAM 跟踪每日目标为 DRAM 股票组合 2 倍表现的 ETF。</p><p class="item-b"><strong>机制</strong>：每日重置的杠杆 ETF 自带倍数与路径依赖，外层永续再提供最高 20 倍杠杆；资金费、风险限额与维持保证金还可由平台按市场风险调整，不能把它当成普通股票只替换代码。</p><p class="item-b"><strong>二阶效应</strong>：股票永续扩列已从单股推进到内嵌杠杆 ETF，资产准入需要单列底层倍数、休市跳空和累计跟踪偏离；但公告没有成交、OI 或极端行情数据，尚不能判断容量。（TradFi/RWA 永续线，自 07-09）</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>20 倍是外层合约最高杠杆，RAM 底层为每日 2 倍重置 ETF；公告只证明上线，不证明叠加杠杆下的真实深度与价格稳定性。</p>
+          <h3 class="item-h">Gate adds a daily-reset 2× ETF as the reference for a perpetual with up to 20× leverage</h3>
+          <p class="item-b"><strong>Event</strong>: Gate listed four USDT-margined equity perpetuals on August 28: RAM, DJT, TEM and MARA. The contracts support long and short positions with 1× to 20× leverage. RAM references an ETF targeting twice the daily performance of a portfolio of DRAM stocks.</p><p class="item-b"><strong>Mechanism</strong>: Daily resetting makes the underlying leveraged ETF path-dependent. The perpetual adds a separate leverage layer of up to 20×. Gate can also adjust funding, risk limits and maintenance margin as market conditions change.</p><p class="item-b"><strong>Second-order effects</strong>: A leveraged ETF requires different listing checks from a single stock, including its multiplier, gaps when spot markets are closed and cumulative tracking error. The notice contained no volume, open interest or stressed-market data from which to infer capacity.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The 20× maximum applies to the perpetual; RAM itself targets 2× daily exposure. Launch does not establish depth or price stability under the combined leverage.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-28</span>
             <a class="item-src" href="https://www.gate.com/es/announcements/article/101420" target="_blank" rel="noopener">Gate ↗</a>
@@ -120,9 +120,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">HTX 用负挂单费和月度返现争夺 TradFi 成交</h3>
-          <p class="item-b"><strong>事件</strong>：HTX 推出邀请制 TradFi Growth Partner Program，活动期为 9 月 1 日至 12 月 31 日，按月成交量设置五档费率和 1000 至 8000 USDT 奖励。</p><p class="item-b"><strong>机制</strong>：最低档要求月成交不少于 5000 万 USDT，最高档要求不少于 5 亿 USDT；最高档挂单费为 -0.010%，吃单费为 0.0180%，当月成交决定次月等级，子账户并入主账户。</p><p class="item-b"><strong>二阶效应</strong>：竞争焦点从扩列推进到可持续订单流补贴，但活动排除刷量、负费率及部分活动成交，说明平台也在隔离补贴嵌套；四个月活动后的成交留存仍待验证。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>费率和现金奖励只面向受邀用户并按月重算；活动成交不等于无补贴需求，负费率成交也不全部计入等级。</p>
+          <h3 class="item-h">HTX offers maker rebates and monthly cashback to attract traditional-market trading</h3>
+          <p class="item-b"><strong>Event</strong>: HTX launched an invitation-only TradFi Growth Partner Program running September 1 through December 31. Five monthly volume tiers determine fees and rewards of 1,000 to 8,000 USDT.</p><p class="item-b"><strong>Mechanism</strong>: The lowest tier requires monthly volume of at least 50 million USDT and the highest at least 500 million USDT. At the top tier the maker fee is −0.010% and the taker fee is 0.0180%. Each month’s volume sets the next month’s tier, with subaccounts counted under the main account.</p><p class="item-b"><strong>Second-order effects</strong>: Competition is extending to recurring order-flow subsidies. The program excludes wash trades, negative-fee volume and certain campaign trades, limiting overlap between incentives. Retention after the four-month program remains unknown.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Rates and cash rewards apply only to invited users and are recalculated monthly. Campaign volume does not establish unsubsidized demand, and some negative-fee trades are excluded from tier calculations.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-28</span>
             <a class="item-src" href="https://www.htx.com/support/65042227146601/" target="_blank" rel="noopener">HTX ↗</a>
@@ -130,9 +130,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">OKX 上线 SPKUSD X-Perp 但未披露到期参数</h3>
-          <p class="item-b"><strong>事件</strong>：OKX 于 8 月 28 日 07:00 UTC 在网页、App 与 API 上线 SPKUSD UM Expiry Perp，并以 X-Perp 作为产品标签。</p><p class="item-b"><strong>机制</strong>：公告把产品命名为带到期属性的永续，但正文只给出开始交易时间，没有列出到期日、结算价、合约规格或适用地区，暂时无法与普通永续或季度交割合约比较经济性。</p><p class="item-b"><strong>二阶效应</strong>：混合产品命名若没有机器可读的到期与结算字段，会把认知成本转移给前端和交易系统；当前只能确认上线，不能推断其持仓期限和结算行为。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>来源页没有披露到期日、结算规则和地区范围，本期不补猜产品机制，也不把 X-Perp 自动等同于普通永续。</p>
+          <h3 class="item-h">OKX lists SPKUSD X-Perp without disclosing expiry parameters</h3>
+          <p class="item-b"><strong>Event</strong>: At 07:00 UTC on August 28, OKX listed the SPKUSD UM Expiry Perp on its website, app and API under the X-Perp product label.</p><p class="item-b"><strong>Mechanism</strong>: The name indicates an expiry feature, but the announcement specified only the opening time. It omitted expiry, settlement price, contract specifications and eligible regions, preventing comparison with a standard perpetual or a quarterly delivery contract.</p><p class="item-b"><strong>Second-order effects</strong>: Hybrid naming leaves frontend developers and trading systems to interpret maturity unless expiry and settlement are machine-readable. The listing is confirmed. The available information does not establish how long a position can be held or how it settles.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The source gives no expiry date, settlement rules, or geographic coverage. The edition leaves those terms open and does not assume X-Perp has the same mechanics as a conventional perpetual.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-28</span>
             <a class="item-src" href="https://www.okx.com/en-au/help/okx-to-list-spkusd-x-perp" target="_blank" rel="noopener">OKX ↗</a>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Gate 把 15 日滚动积分接到期货空投入口</h3>
-          <p class="item-b">Gate 第 135 期 Futures Points Airdrop 允许用户用 15 个期货积分兑换 12 GUSD，或在余额不少于 40 USDT 时用 20 积分兑换 100 USDT 仓位体验金，活动于 8 月 31 日限时开放并按先到先得分配。</p><p class="item-b">期货积分按最近 15 天的 USDT、BTC 余额和交易活跃度滚动计算，并用于空投、TGE 认购和限时活动准入；复制交易、机器人、USD1 交易量及刷量不计分，说明平台正用可复用积分连接交易留存与发行分发。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>100 USDT 是仓位体验金，不是可直接提现现金；15 日积分决定活动资格，不能据兑换面值倒推出用户确定收益。</p>
+          <h3 class="item-h">Gate links a 15-day rolling points balance to futures airdrop eligibility</h3>
+          <p class="item-b">Gate’s 135th Futures Points Airdrop offers 12 GUSD for 15 futures points, or 100 USDT in position trial credit for 20 points for users with at least a 40 USDT balance. The limited August 31 redemption is first come, first served.</p><p class="item-b">Futures points use a rolling 15 days of USDT and BTC balances and trading activity. They grant access to airdrops, token generation event subscriptions and limited campaigns. Copy trading, bots, USD1 volume and wash trades are excluded. The same points link repeat trading with token distribution.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The 100 USDT is trial credit for positions and cannot be withdrawn directly as cash. Eligibility depends on points earned over 15 days. Redemption face value does not establish the return to a user.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-28</span>
             <a class="item-src" href="https://www.gate.com/es/announcements/article/101419" target="_blank" rel="noopener">Gate ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">KuCoin 用一小时集合竞价启动 BLESS 现货</h3>
-          <p class="item-b">KuCoin 为 BLESS/USDT 设置 8 月 28 日 09:00 至 10:00 UTC 的一小时集合竞价，连续交易随后开放，提款延后至 8 月 29 日 10:00 UTC，交易机器人同步上线。</p><p class="item-b">集合竞价把首发价格发现与连续撮合分离，延迟提款则把初期流动性留在平台内；但这只说明上市流程，不证明项目质量、分配公平或竞价后的价格稳定。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>集合竞价和提款时间来自平台公告；机器人同步开放不代表流动性充足，也不构成对代币的质量背书。</p>
+          <h3 class="item-h">KuCoin opens BLESS spot trading with a one-hour call auction</h3>
+          <p class="item-b">KuCoin scheduled a one-hour opening call auction for BLESS/USDT from 09:00 to 10:00 UTC on August 28, followed by continuous trading and trading bot support. Withdrawals were deferred until 10:00 UTC on August 29.</p><p class="item-b">The auction separates opening price discovery from continuous matching, while the temporary withdrawal delay keeps early liquidity on the venue. These procedures provide no evidence of project quality, fair allocation or post-auction price stability.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The call auction and withdrawal times come from the platform notice. Opening access to bots at the same time does not establish adequate liquidity or endorse token quality.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-28</span>
             <a class="item-src" href="https://www.kucoin.com/announcement/en-bless-bless-listed-on-kucoin" target="_blank" rel="noopener">KuCoin ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">本周主线｜TermMax 用双倍权重和 Learn &amp; Earn 延长 TMX 分发</h3>
-          <p class="item-b">KuCoin 的 90 万枚 TMX 活动把 8 月 25 日至 9 月 1 日的交易任务，与 8 月 28 日开始的 Learn &amp; Earn 串成两段分发：交易部分含 17 万枚抽奖池和 58 万枚成交池，学习任务另分 15 万枚。</p><p class="item-b">TMX 成交按两倍计入，符合条件的新用户与推荐成交还能叠加两倍权重，单人交易奖励上限为 8500 TMX；跨任务能延长触达周期，也使活动成交更难代表自然需求。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>来源发布于四天前，本期只因 Learn &amp; Earn 阶段于 8 月 28 日启动而作为周度趋势收录；90 万枚是多任务总奖池。</p>
+          <h3 class="item-h">Weekly theme | TermMax extends TMX distribution with double weighting and Learn &amp; Earn</h3>
+          <p class="item-b">KuCoin’s 900,000 TMX campaign combines August 25–September 1 trading tasks with Learn &amp; Earn starting August 28. Trading includes a 170,000-token draw and a 580,000-token volume pool. Learning tasks distribute another 150,000.</p><p class="item-b">TMX volume counts double, and qualifying new-user and referral volume can receive an additional 2× weighting. Trading rewards are capped at 8,500 TMX per user. Multiple tasks extend engagement but obscure the share of volume attributable to organic demand.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The source was published four days earlier. The edition includes it only as a weekly trend because the Learn &amp; Earn phase started August 28. The 900,000 tokens are the combined prize pool across multiple tasks.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-25</span>
             <a class="item-src" href="https://www.kucoin.com/announcement/en-termmax-tmx-listing-campaign-900000-tmx-giveaway" target="_blank" rel="noopener">KuCoin ↗</a>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Circle 把 USDC、EURC 与原生跨链通道部署到 Plasma</h3>
-          <p class="item-b">Circle 宣布 USDC、EURC、CCTP 和 Bridge Kit 已在 Plasma 上线；两种稳定币均由 Circle 发行并支持 1:1 赎回，EURC 具备 MiCA 合规属性。</p><p class="item-b">CCTP 通过销毁和铸造完成原生跨链，不依赖包装资产，Bridge Kit 则把集成压缩为约十行代码；基础设施已可用，但公告没有 Plasma 上的供应、跨链量或活跃集成数据。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>产品已经上线，Circle 的全球兑付网络不等于 Plasma 采用规模；本期不把可集成写成已有流动性。</p>
+          <h3 class="item-h">Circle adds USDC, EURC and native cross-chain transfers to Plasma</h3>
+          <p class="item-b">Circle announced that USDC, EURC, CCTP and Bridge Kit were live on Plasma. Circle issues both stablecoins and supports one-for-one redemption. EURC is MiCA-compliant.</p><p class="item-b">CCTP burns and mints natively across chains without wrapped assets. Bridge Kit reduces the integration to about ten lines of code. The infrastructure is available, but Circle disclosed no Plasma supply, cross-chain volume or active integrations.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The product is live. Circle&#x27;s global redemption network does not measure adoption on Plasma. The ability to integrate a product does not establish available liquidity.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-28</span>
             <a class="item-src" href="https://www.circle.com/fr/blog/now-available-usdc-eurc-cctp-and-bridge-kit-on-plasma" target="_blank" rel="noopener">Circle ↗</a>
@@ -202,9 +202,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Circle 将在 12 月暂停 CCTP V1 合约</h3>
-          <p class="item-b">Circle 宣布 CCTP V1 Legacy 将从 10 月 31 日起降低销毁限额和性能，并在 12 月 1 日完成弃用、暂停 V1 合约；仍未迁移的集成届时将无法继续转移资产。</p><p class="item-b">V2 使用独立合约和 API，不向后兼容，并提供标准、快速两种模式与 hooks；27 条链的迁移把升级从功能选择变成有硬截止日的运营风险，接入方需先盘点 V1 依赖。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>10 月 31 日开始降级，12 月 1 日才完成暂停；V2 独立部署意味着不能只切换版本号。</p>
+          <h3 class="item-h">Circle plans to pause its CCTP V1 contracts in December</h3>
+          <p class="item-b">Circle announced that CCTP V1 Legacy would begin reducing burn limits and performance on October 31. V1 contracts will pause when deprecation completes on December 1. Integrations still using V1 will then be unable to transfer assets.</p><p class="item-b">V2 uses separate contracts and APIs and is not backward-compatible. It adds standard and fast modes and hooks. Across 27 chains, the hard deadline makes identifying V1 dependencies an operational priority.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>Degradation begins October 31, with full suspension on December 1. V2 has a separate deployment, so migration requires more than changing a version number.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-27</span>
             <a class="item-src" href="https://www.circle.com/blog/migrate-to-cctp-v2-ahead-of-cctp-v1-legacy-deprecation" target="_blank" rel="noopener">Circle ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">OKX 稳定币奖励改按实际持币量计算</h3>
-          <p class="item-b">OKX 将从 9 月 1 日起把 USDG、RLUSD、OKUSD 与 BUIDL 奖励的计算基础，从账户净值改为实际符合条件的代币余额；APY、发放节奏和资格规则不变。</p><p class="item-b">新口径减少用其他资产净值放大奖励基数的空间，使激励成本更贴近真实稳定币库存；但公告没有披露旧口径规模和奖励预算，无法估算用户收益或平台成本变化。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>只改奖励计算基数，不改 APY、发放节奏和资格；实际影响取决于用户此前账户净值与合格代币余额的差额。</p>
+          <h3 class="item-h">OKX changes stablecoin rewards to use actual token balances</h3>
+          <p class="item-b">Starting September 1, OKX will calculate USDG, RLUSD, OKUSD and BUIDL rewards from actual eligible token balances instead of net account equity. APYs, payout schedules and eligibility rules remain the same.</p><p class="item-b">The new basis prevents unrelated assets from inflating reward eligibility and ties incentive costs more closely to stablecoin inventory. Without figures for the former calculation base or budget, changes to user earnings and platform cost cannot yet be estimated.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Only the basis for calculating rewards changes. APY, payout timing, and eligibility remain the same. The effect depends on the difference between a user&#x27;s previous account equity and eligible token balance.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-28</span>
             <a class="item-src" href="https://www.okx.com/en-gb/help/usdg-rlusd-okusd-and-buidl-reward-calculation-update" target="_blank" rel="noopener">OKX ↗</a>
@@ -233,9 +233,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Salesforce 把 37 项销售技能接入 Claude</h3>
-          <p class="item-b">Salesforce 与 Anthropic 发布 Claudeforce，Salesforce in Claude 插件提供 37 项销售技能，可在治理边界内读取收入上下文并更新销售管道；AIforce 则通过 MCP、API 和 CLI 连接数据、工作流与动作。</p><p class="item-b">合作把模型入口、CRM 数据和可执行动作接成企业代理栈，但 810 万小时年度生产力提升来自 Salesforce 内部估算，公告没有外部客户采用、错误率或审计结果。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>37 项技能和集成路径为已发布能力；810 万小时是厂商内部估算，不能当成外部部署效果。</p>
+          <h3 class="item-h">Salesforce adds 37 sales skills to Claude</h3>
+          <p class="item-b">Salesforce and Anthropic released Claudeforce. The Salesforce in Claude plugin supplies 37 sales skills for reading revenue context and updating the sales pipeline within governance controls. AIforce connects data, workflows and actions through MCP, APIs and a CLI.</p><p class="item-b">The partnership connects an AI interface with CRM records and executable business actions. The estimate of 8.1 million hours in annual productivity gains comes from Salesforce’s internal analysis. The announcement gave no external customer adoption, error rates or audit results.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The 37 skills and integration options are available. The 8.1 million hours figure is a vendor estimate from internal data, not a measured outcome from external deployments.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-28</span>
             <a class="item-src" href="https://www.salesforce.com/ap/news/press-releases/2026/08/28/salesforce-dan-anthropic-luncurkan-claudeforce-ai-nomor-1-berpadu-dengan-crm-ai-nomor-1/?bc=OTH" target="_blank" rel="noopener">Salesforce ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">腾讯开源 7700 亿参数 Hy4 预览版</h3>
-          <p class="item-b">腾讯开源 Tencent Hy4 Preview，模型总参数 7700 亿、激活参数 490 亿，支持超过 100 万 token 上下文，并同步提供应用和 API。</p><p class="item-b">腾讯内部 163 名专家、203 项工程任务评测给出 2.99 分，且称模型参与优化训练栈后推理吞吐提升 31.8%；两组结果均为厂商内部基准，预览版的外部可靠性、成本和工具调用表现仍待复核。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>参数与开源状态可核验，评分和吞吐提升均基于腾讯内部任务及基线；预览版不等于生产稳定版。</p>
+          <h3 class="item-h">Tencent releases an open preview of its 770-billion-parameter Hy4 model</h3>
+          <p class="item-b">Tencent open-sourced Tencent Hy4 Preview with 770 billion total parameters, 49 billion active parameters and a context window exceeding one million tokens. An app and API were released alongside it.</p><p class="item-b">In an internal evaluation by 163 experts on 203 engineering tasks, Tencent reported a score of 2.99. It also claimed that model-assisted training-stack optimizations raised inference throughput by 31.8%. Both are internal benchmarks. External reliability, cost and tool-call performance remain unverified.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Parameter counts and the open-source release can be verified. Scores and throughput gains come from Tencent&#x27;s internal tasks and baselines. This is a preview release.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-28</span>
             <a class="item-src" href="https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/" target="_blank" rel="noopener">Tencent ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">OpenAI 与泰国政府把创业加速器限定到两类场景</h3>
-          <p class="item-b">OpenAI 与泰国高等教育、科学、研究与创新部启动八周加速器，选择十家初创企业，其中五家聚焦健康与福祉、五家聚焦教育，每家获得 2000 美元 API 额度和导师支持。</p><p class="item-b">参与者需设定产品、试点、评估或商业里程碑，并在 Demo Day 前交付可运行产品或重大升级及代表性用户证据；这比泛化培训更接近场景验证，但十家样本和 2000 美元额度不足以证明规模化采用。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>项目只有十家企业并限定健康与教育；泰国使用增长为 OpenAI 自报，不用于推断加速器结果。</p>
+          <h3 class="item-h">OpenAI and Thailand’s government narrow their startup accelerator to two use cases</h3>
+          <p class="item-b">OpenAI and Thailand’s Ministry of Higher Education, Science, Research and Innovation launched an eight-week accelerator for ten startups. Five focus on health and well-being and five on education. Each receives $2,000 in API credits and mentorship.</p><p class="item-b">Teams must set product, pilot, evaluation or business milestones and demonstrate a functioning product or substantial upgrade, with evidence from representative users, by Demo Day. The format tests use cases, while ten participants and $2,000 per team cannot establish adoption at scale.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The program covers ten companies and is limited to health and education. OpenAI reported the growth in use in Thailand. It does not establish the accelerator&#x27;s results.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-28</span>
             <a class="item-src" href="https://openai.com/index/supporting-next-generation-ai-startups-thailand/" target="_blank" rel="noopener">OpenAI ↗</a>
@@ -267,15 +267,15 @@
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product assessment</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">市场与资产</div>
-          <h3 class="item-h">杠杆 ETF 永续要按叠加杠杆单独准入</h3>
-          <p class="item-b"><strong>判断变化</strong>：从把股票与 ETF 永续统一按外层杠杆、价格源和交易时段评估，更新为对每日重置的杠杆 ETF 单列底层倍数、路径依赖与累计跟踪偏离。</p><p class="item-b"><strong>证据与边界</strong>：Gate 将每日 2 倍重置的 RAM ETF 放进最高 20 倍股票永续，但公告只证明产品上线，未披露成交、OI、定价误差或极端行情表现。</p>
+          <div class="decision-area">Market and Assets</div>
+          <h3 class="item-h">Leveraged ETF perpetuals need admission criteria that account for both layers of leverage</h3>
+          <p class="item-b"><strong>Revised assessment</strong>: Daily-reset leveraged ETFs require separate evaluation of the underlying multiplier, path dependence and cumulative tracking difference in addition to the perpetual’s leverage, price sources and hours.</p><p class="item-b"><strong>Evidence and limits</strong>: Gate placed the daily-reset 2× RAM ETF inside an equity perpetual offering up to 20× leverage. The announcement did not disclose volume, open interest, pricing errors or stressed-market performance.</p>
 
           <div class="item-meta">
 
@@ -284,7 +284,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

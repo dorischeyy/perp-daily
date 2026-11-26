@@ -1,78 +1,77 @@
 #!/usr/bin/env bash
-# publish.sh — 机械发布管线（零 LLM、零 token）。
+# Publish a previously researched edition.
 #
-# 解耦原则：昂贵的"调研+评分+生成"(产出 content.json / threads.json / review.draft.md) 是上游，
-# 本脚本只消费这些交接物做"校验→渲染→推送"。content.json 是两段之间的持久交接物，
-# 下游任何一步失败都能"哪步坏跑哪步"单独重跑，绝不需要重新调研。
+# Inputs: content.json, threads.json, and review.draft.md.
+# Stages can be retried independently after failure.
 #
-# 阶段化用法（可插拔）：
-#   bash publish.sh            # 全流程 preflight → validate → render → push
-#   bash publish.sh preflight  # 调研前查重复发布 + 行情快照状态
-#   bash publish.sh validate   # 只跑内容/编辑/时效/台账关卡
-#   bash publish.sh render      # 只渲染 HTML + 落自评 + 写 latest.json
-#   bash publish.sh manifest    # 生成连接器发布清单（大小 + Git blob SHA）
-#   bash publish.sh push        # 只 commit + pull --rebase + push（Legacy Actions fallback）
-# 交付(发飞书/Slack)是独立的 GitHub Action；它失败用仓库 Actions 页 "Run workflow" 重发，同样不碰生成。
+# Usage:
+#   bash publish.sh           Run all stages for the legacy Actions fallback.
+#   bash publish.sh preflight Check the edition date and market snapshot.
+#   bash publish.sh validate  Check content, editorial review, freshness, and ledger.
+#   bash publish.sh render    Render HTML, archive the review, and write latest.json.
+#   bash publish.sh manifest  Verify file lengths and Git blob hashes.
+#   bash publish.sh push      Commit, rebase, and push in the legacy fallback.
+# Delivery runs separately and can be retried without generating the edition again.
 set -uo pipefail
 
 STAGE="${1:-all}"
 DATE=$(TZ=Asia/Shanghai date +%F)
 URL="https://dorischeyy.github.io/perp-daily/archive/${DATE}.html"
 
-# 阶段 0：应在联网调研前运行。已发布返回 10，明确 no-op，避免重复消耗研究成本。
+# Check before online research. Exit 10 when the edition already exists.
 stage_preflight() {
   node lib/check-run-state.mjs "${DATE}"
 }
 
-# 阶段 1：校验关卡（纯只读，可反复跑）
+# Read-only validation. Fix the specific failure before retrying.
 stage_validate() {
   node lib/validate-content.mjs content.json || {
-    echo "⛔ content.json 结构校验未通过。按上方缺失字段修 content.json 后重跑 \`bash publish.sh validate\`。" >&2; return 1; }
+    echo "Invalid content.json. Fix the reported fields and rerun bash publish.sh validate." >&2; return 1; }
   node lib/check-editorial.mjs content.json || {
-    echo "⛔ 编辑去重/版式关卡未通过。只修对应文案后重跑 \`bash publish.sh validate\`。" >&2; return 1; }
+    echo "Editorial validation failed. Revise the affected copy and rerun bash publish.sh validate." >&2; return 1; }
   node lib/check-review.mjs review.draft.md content.json || {
-    echo "⛔ 读者价值自问/编辑自评关卡未通过。只补全 review.draft.md 后重跑 \`bash publish.sh validate\`。" >&2; return 1; }
+    echo "Editorial review incomplete. Update review.draft.md and rerun bash publish.sh validate." >&2; return 1; }
   node lib/check-freshness.mjs content.json "${DATE}" || {
-    echo "⛔ 时效/防造假关卡未通过。修 content.json 后重跑 \`bash publish.sh validate\`（无需重新调研）。" >&2; return 1; }
+    echo "Source-date validation failed. Correct content.json and rerun bash publish.sh validate." >&2; return 1; }
   node lib/threads.mjs "${DATE}" || {
-    echo "⛔ 台账结构校验未通过。修 threads.json 后重跑 \`bash publish.sh validate\`。" >&2; return 1; }
-  echo "✅ validate 通过"
+    echo "Invalid ledger. Correct threads.json and rerun bash publish.sh validate." >&2; return 1; }
+  echo "Validation passed."
 }
 
-# 阶段 2：渲染（幂等，可反复跑；只读 content.json，写 docs/）
+# Render the dated edition and latest index from the verified inputs.
 stage_render() {
   mkdir -p docs/archive
-  node lib/build-html.mjs content.json "docs/archive/${DATE}.html" || { echo "⛔ 渲染失败" >&2; return 1; }
+  node lib/build-html.mjs content.json "docs/archive/${DATE}.html" || { echo "Rendering failed." >&2; return 1; }
   cp "docs/archive/${DATE}.html" docs/index.html
   [ -f review.draft.md ] && mv -f review.draft.md "docs/archive/${DATE}-review.md"
-  node -e "const fs=require('fs');const c=JSON.parse(fs.readFileSync('content.json','utf8'));const d='${DATE}';fs.writeFileSync('docs/latest.json',JSON.stringify({date:d,url:'${URL}',title:'Perp DEX 日报 · '+d,lead:c.lead||'今日 Perp DEX 日报'},null,2))" \
-    || { echo "⛔ 写 latest.json 失败" >&2; return 1; }
-  echo "✅ render 完成：docs/archive/${DATE}.html"
+  node -e "const fs=require('fs');const c=JSON.parse(fs.readFileSync('content.json','utf8'));const d='${DATE}';fs.writeFileSync('docs/latest.json',JSON.stringify({date:d,url:'${URL}',title:'Perp DEX Daily · '+d,lead:c.lead||'Perp DEX Daily'},null,2))" \
+    || { echo "Failed to write latest.json." >&2; return 1; }
+  echo "Rendered docs/archive/${DATE}.html"
 }
 
-# 阶段 2.5：为连接器发布生成固定五文件清单。
-# 它不联网、不写仓库；任何文件缺失、截断或首页/归档不一致都会阻断发布。
+# Generate the five-file connector manifest locally.
+# Missing or truncated files, or a homepage/archive mismatch, block publication.
 stage_manifest() {
   node lib/build-publish-manifest.mjs "${DATE}" || {
-    echo "⛔ 发布清单未通过。不得上传文件或更新远端 main。" >&2; return 1; }
+    echo "Manifest validation failed. Do not upload artifacts or update remote main." >&2; return 1; }
 }
 
-# 阶段 3：提交+推送（可重入：已 commit 但 push 失败时，重跑只补推）
+# Retry a pending push without creating a second report commit.
 stage_push() {
   git config user.name "dorischeyy"; git config user.email "startrail1016@gmail.com"
   git add docs threads.json
   local has_staged=0; git diff --cached --quiet || has_staged=1
-  [ "$has_staged" = 1 ] && { git commit -m "report: ${DATE}" || { echo "⛔ commit 失败" >&2; return 1; }; }
+  [ "$has_staged" = 1 ] && { git commit -m "report: ${DATE}" || { echo "Commit failed." >&2; return 1; }; }
   git fetch -q origin main 2>/dev/null || true
   local ahead; ahead=$(git rev-list --count origin/main..HEAD 2>/dev/null || echo 0)
   if [ "$has_staged" = 0 ] && [ "$ahead" = 0 ]; then
-    echo "⚠️ 无新变更、无待推提交——内容可能没产出或今天已发过，请检查上游。" >&2; return 1
+    echo "No changes or pending commits. Check the generation output and publication date." >&2; return 1
   fi
   git pull --rebase -q origin main || {
-    echo "⛔ rebase 失败（冲突/未提交改动）。人工处理后重跑 \`bash publish.sh push\`。" >&2; return 1; }
+    echo "Rebase failed. Resolve the conflict or uncommitted changes and rerun bash publish.sh push." >&2; return 1; }
   git push origin main || {
-    echo "⛔ push 失败。修 token/网络后重跑 \`bash publish.sh push\`（已 render 过，不会重做）。" >&2; return 1; }
-  echo "✅ push 完成：${URL}（飞书+Slack 由 GitHub Action 投递）"
+    echo "Push failed. Check authorization and network access, then rerun bash publish.sh push." >&2; return 1; }
+  echo "Published ${URL}. The delivery workflow handles Feishu and Slack."
 }
 
 case "$STAGE" in
@@ -83,5 +82,5 @@ case "$STAGE" in
   push|commit)   stage_push     || exit 1 ;;
   all)           stage_preflight; rc=$?; [ "$rc" -eq 0 ] || exit "$rc"
                  stage_validate && stage_render && stage_manifest && stage_push || exit 1 ;;
-  *) echo "未知阶段: ${STAGE} (可选 preflight | validate | render | manifest | push | all)" >&2; exit 2 ;;
+  *) echo "Unknown stage: ${STAGE}. Choose preflight, validate, render, manifest, push, or all." >&2; exit 2 ;;
 esac

@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-06-20</title>
+<title>Perp DEX Daily · 2026-06-20</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -40,7 +40,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品观察」做成醒目的主编批注卡片 */
+  /* Editorial analysis card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -66,45 +66,45 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 2 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 2</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 6 月 20 日 · 星期六</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">June 20, 2026 · Saturday</div>
     </header>
-    <p class="lead">CME 集团 6/18 在联邦法院起诉 CFTC，挑战批准 Kalshi 和 Coinbase 提供合规永续期货的决定——传统金融用诉讼反击，perp DEX 赛道迎来最强行业确认：这条赛道已真实威胁到 CME 的存量生意。</p>
+    <p class="lead">CME Group sued the CFTC in federal court on June 18, challenging its decisions allowing Kalshi and Coinbase to offer regulated perpetual futures. The suit shows how seriously CME views competition for its existing futures business.</p>
     
       <section class="sec sec-perpdex">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <div class="sec-kicker">合规化战场开打 · HL 全谱系扩张 · 商品 perp 主流化</div>
+            <div class="sec-kicker">US regulation, Hyperliquid&#x27;s expansion and commodity perpetuals</div>
             <h2 class="sec-title">Perp DEX</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">CME 起诉 CFTC（6/18）：Kalshi + Coinbase 获批合规永续引发传统交易所反击，perp 赛道被迫登上主流战场</h3>
-          <p class="item-b">Kalshi 于 5/29 成为美国历史上首个获 CFTC 批准提供永续期货的机构，BTC PERP 6/3 上线、ETH PERP 6/5 上线，随后扩展至 HYPE、DOGE 等，初期零手续费运营；Coinbase 亦获批跟进。CME 集团（全球最大衍生品交易所）于 6/18 向联邦法院提起诉讼，直接挑战 CFTC 主席 Michael Selig 的批准决定；此前 CME、ICE、Nasdaq、CBOE 股价在 CFTC 批准消息落地时已被市场提前抛售，说明传统交易所将合规 perp 视为真实竞争威胁而非边际噪音。机制：Kalshi 通过预测市场监管框架绕开 CME 垄断的期货合规通道，永续合约不设到期日、CFTC 合规、面向美国用户——链上 perp DEX 虽无牌照，但同样受益于「perp 概念被 CFTC 正名」的叙事窗口。二阶效应：①若 CME 胜诉，Kalshi 产品受阻，合规化进程延后；若败诉，机构资金将加速向链上流动；②无论结果，本次诉讼已让主流媒体将永续期货与「传统金融的存量保卫战」画上等号——perp DEX 赛道的叙事地位不可逆地提升。</p>
+          <h3 class="item-h">CME sues the CFTC on June 18 over approval of perpetuals for Kalshi and Coinbase</h3>
+          <p class="item-b">Kalshi secured CFTC approval for U.S. perpetual futures on May 29, launched BTC perpetuals on June 3 and ETH on June 5, then added contracts including HYPE and DOGE. It initially charged no trading fees. Coinbase also received approval. On June 18, CME Group challenged the decisions of CFTC Chair Michael Selig in federal court. Shares of CME, ICE, Nasdaq and Cboe had fallen when approval was announced. Kalshi used its existing regulated venue to offer U.S. customers contracts without an expiry date. Onchain perpetual exchanges do not share its regulatory status, although official recognition of the product could influence their market prospects. A CME victory could delay expansion. A loss could clear a path for further institutional participation. Neither outcome had been decided.</p>
           <div class="item-meta">
             <span class="item-date">2026-06-18</span>
             <a class="item-src" href="https://money.usnews.com/investing/news/articles/2026-06-18/cme-sues-us-cftc-over-letting-kalshi-coinbase-offer-perpetual-futures" target="_blank" rel="noopener">U.S. News · DeFi Rate · Fortune ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Hyperliquid HIP-4 预测市场：BTC 结果合约 day1 超 600 万张合约，成交量约为 Kalshi+Polymarket 同类三倍，HL 从 perp DEX 演进为全谱系衍生品平台</h3>
-          <p class="item-b">HIP-4 于 5/2 在 Hyperliquid L1 主网激活，首个市场为「BTC 价格是否超 $79,980（5/5 前）」二元结果合约：day1 超 600 万张合约成交、约 4,000 独立地址参与，BTC 结果市场成交量约为 Polymarket+Kalshi 同类市场三倍之和（来源：DL News，待一手核实）。此后 HL 将 CPI、美联储利率决议等宏观事件纳入预测市场，直接竞争 Kalshi/Polymarket 的 $240 亿预测市场份额。HYPE 在 6/16 触及 ATH $76.90（+11%），带动约 $1,150 万空头爆仓。机制：HIP-4 在 HL L1 原生结算，用户无需跨协议——同一账户可同时持有 perp 头寸和预测市场仓位，对比 Kalshi 需独立账户存在功能整合优势。二阶效应：HL 的演进路径（spot→perp→pre-IPO→prediction markets）确立了「全谱系链上衍生品平台」的战略终点；单纯做 perp 的 DEX 与平台型选手的估值差距将持续拉大。SpaceX perp 一度占 HL 单日成交量的 30%（约 $14 亿），印证 pre-IPO 类标的的真实需求。</p>
+          <h3 class="item-h">Hyperliquid’s HIP-4 bitcoin outcome contract trades more than 6 million contracts on its first day</h3>
+          <p class="item-b">HIP-4 went live on Hyperliquid’s Layer 1 on May 2. Its first binary market asked whether bitcoin would exceed $79,980 by May 5. More than 6 million contracts traded on day one across about 4,000 addresses. DL News put volume at roughly three times that of comparable Kalshi and Polymarket markets combined, a figure awaiting primary-source confirmation. Hyperliquid later added CPI and Federal Reserve decisions, entering a prediction market the edition valued at $24 billion. HYPE reached a high of $76.90 on June 16, up 11%, with about $11.5 million in short liquidations. HIP-4 settles natively, allowing the same account to hold perpetuals and event positions. Hyperliquid’s expansion spans spot, perpetuals, pre-IPO and event markets. Its SpaceX perpetual once accounted for 30% of daily platform volume, about $1.4 billion, indicating demand for pre-IPO exposure.</p>
           <div class="item-meta">
             <span class="item-date">2026-05-02</span>
             <a class="item-src" href="https://www.coingecko.com/learn/hyperliquid-hip3-hip4-tokenized-stocks-and-prediction-markets" target="_blank" rel="noopener">CoinGecko Learn · crypto.news · DL News ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">GMX 上线 24/7 黄金/白银 perp（4/10，首日 $1000 万成交）+ v2.3 跨仓保证金：商品 perp 技术门槛已被 Chainlink Data Streams 打平</h3>
-          <p class="item-b">GMX 于 4/10 在 Arbitrum 上线 XAU/USD 和 XAG/USD 24/7 合成永续期货，首日成交超 $1,000 万；定价依托 Chainlink Data Streams 低延迟 oracle，结算通过 WETH-USDC GM 池完成，此后补充石油/天然气标的。v2.3 版本引入跨仓保证金（cross-margin），多头寸共享同一保证金池，资本效率显著提升。机制：合成 perp 不持有实物资产，由链上 GM 池对手方承担价格风险，Chainlink Data Streams 提供实时商品报价（低延迟、可链上验证）；跨仓进一步降低非加密标的的保证金要求，散户进入门槛下降。二阶效应：商品 perp 的「预言机+链上结算」技术栈通过 GMX 被大规模验证，Ostium/Avantis 等同类协议可信度随之提升；更重要的是，这将 oracle 数据源的选择从「需要自研」变为「可对接成熟方案」。</p>
+          <h3 class="item-h">GMX introduced 24/7 gold and silver perpetuals on April 10, with $10 million in first-day volume. Chainlink Data Streams supplies prices, and GMX v2.3 adds cross-margin.</h3>
+          <p class="item-b">GMX launched 24/7 synthetic XAU/USD and XAG/USD perpetuals on Arbitrum on April 10. First-day volume exceeded $10 million. Chainlink Data Streams supplies low-latency pricing, and settlement uses a WETH-USDC GM pool. Oil and natural gas markets followed. Version 2.3 introduced cross-margin so multiple positions could draw on the same collateral pool. These synthetic contracts do not hold physical commodities. Liquidity providers in the GM pool bear counterparty price risk, while Chainlink supplies verifiable commodity quotes. Cross-margin can reduce the collateral needed across positions. GMX’s deployment also gives projects such as Ostium and Avantis a working example of commodity pricing and onchain settlement using an established oracle provider.</p>
           <div class="item-meta">
             <span class="item-date">2026-04-10</span>
-            <a class="item-src" href="https://gmxio.substack.com/p/247-gold-and-silver-perp-markets" target="_blank" rel="noopener">GMX 官方 Substack · The Defiant · Chainlink Today ↗</a>
+            <a class="item-src" href="https://gmxio.substack.com/p/247-gold-and-silver-perp-markets" target="_blank" rel="noopener">GMX official Substack · The Defiant · Chainlink Today ↗</a>
           </div>
         </article>
         </div>
@@ -113,15 +113,15 @@
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <div class="sec-kicker">pump.fun 注意力商品化：GO 悬赏市集 + USDC 曲线双发</div>
+            <div class="sec-kicker">Pump.fun adds GO bounties and USDC bonding curves</div>
             <h2 class="sec-title">Launchpad</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">pump.fun GO 悬赏市集（6/4）：$5.7 万最高奖、24 小时 230+ 任务上线，「极端清单」引发内容合规质疑</h3>
-          <p class="item-b">pump.fun 于 6/4 上线 GO 平台，任何人可发布任意任务并附加 USDC 奖励（最高单笔 $57,000），资金入托管；上线 24 小时内积累超 $111,000 未认领奖池、230+ 活跃悬赏，核心用途是为 meme 代币冲买热度。因早期出现高风险/违规类任务，GO 迅速引发行业批评和内容审核合规讨论。同期（5/21），pump.fun 上线 USDC 计价 bonding curve，起始市值 $4,000、毕业门槛 $58,783，旨在降低散户进入门槛和对 SOL 价格的敏感性；此外，平台已宣布将 50% 净收入用于回购销毁 PUMP。机制：GO 将「人类注意力」商品化，本质是 pump.fun 从「发币基础设施」向「注意力经济市集」的产品扩张实验；USDC 曲线在 SOL 下跌周期可部分维持发币热度。二阶效应：若 GO 内容审核问题持续，积累监管风险；若控制成功，则为 pump.fun 提供与发币量挂钩的新营收，对冲当前毕业率较峰值约 -80% 的收入压力；回购销毁是代币经济从「通胀激励」转向「盈利分配」的标志性动作。</p>
+          <h3 class="item-h">Pump.fun&#x27;s GO bounty marketplace opened on June 4 with over 230 tasks in 24 hours and a top reward of $57,000. Some listings drew scrutiny over content moderation.</h3>
+          <p class="item-b">Pump.fun launched GO on June 4. Users can post tasks backed by escrowed USDC, with individual rewards as high as $57,000. In its first 24 hours, the marketplace listed more than 230 active bounties and over $111,000 in unclaimed rewards. Many sought attention for meme tokens. High-risk or prohibited tasks drew criticism of its moderation. On May 21, pump.fun had also introduced a USDC bonding curve with a $4,000 starting market capitalization and a $58,783 graduation threshold, reducing sensitivity to SOL prices. It announced plans to spend 50% of net revenue on PUMP buybacks and burns. GO could diversify revenue as token graduation rates sit roughly 80% below their peak, but its viability depends on moderation and its ability to attract genuine paid activity.</p>
           <div class="item-meta">
             <span class="item-date">2026-06-04</span>
             <a class="item-src" href="https://thedefiant.io/news/nfts-and-web3/pump-fun-launches-go-bounty-platform-backlash-extreme-listings" target="_blank" rel="noopener">The Defiant · cryptobriefing.com · The Defiant USDC ↗</a>
@@ -133,15 +133,15 @@
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <div class="sec-kicker">BTC ETF 净流出后修复 · CME 诉讼新增监管不确定性</div>
+            <div class="sec-kicker">Bitcoin ETF flows recover as CME&#x27;s lawsuit adds uncertainty</div>
             <h2 class="sec-title">Crypto</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">BTC 现货 ETF 连续 13 天净流出 $44 亿（5/15-6/3）后修复，CME 起诉 CFTC 为机构配置节奏新增变量</h3>
-          <p class="item-b">美国现货 BTC ETF 在 5/15-6/3 创下 2026 年最长连续净流出纪录（13 天 $44 亿，单周峰值 -$17.2 亿），市场归因于非农数据强劲、降息预期降温；IBIT 于 6/5 止流，此后进入净流入修复阶段。BTC 当前约 $63K-65K 区间（参照：6/16 Decrypt 报价 $63,609，从 ATH $126,080 回落约 49%，6/20 实时价格因 CoinGecko API 限速未获取，仅供参照）。6/18 CME 起诉 CFTC 引入新政策不确定性：若诉讼冻结美国合规 perp 扩张节奏，机构可能阶段性推迟加密衍生品配置，对 BTC 现货 ETF 净流入的修复速度有潜在拖累，需观察后续庭审进展。</p>
+          <h3 class="item-h">Spot BTC ETFs recovered after $4.4 billion in net outflows over 13 days from May 15 to June 3. CME&#x27;s suit against the CFTC added uncertainty over the timing of institutional allocations.</h3>
+          <p class="item-b">U.S. spot bitcoin ETFs lost a net $4.4 billion over 13 consecutive trading days from May 15 to June 3, the longest streak of 2026. Outflows peaked at $1.72 billion in one week. Market participants pointed to strong payrolls and diminished expectations of rate cuts. IBIT’s outflows ended on June 5 and inflows began to recover. Decrypt quoted bitcoin at $63,609 on June 16, about 49% below its $126,080 high and within the $63,000–65,000 range cited here. CoinGecko rate limits prevented a June 20 live quote. CME’s June 18 lawsuit introduced another variable: restrictions on regulated perpetuals could delay institutional derivatives allocations and slow the ETF recovery. The effect remained uncertain pending court proceedings.</p>
           <div class="item-meta">
             <span class="item-date">2026-06-06</span>
             <a class="item-src" href="https://bitcoinfoundation.org/news/crypto-etfs-news/etf-outflows-june-first-week/" target="_blank" rel="noopener">Bitcoin Foundation · Spotedcrypto · Bitrue ↗</a>
@@ -153,15 +153,15 @@
         <div class="sec-head">
           <span class="sec-no">04</span>
           <div>
-            <div class="sec-kicker">AI Agent 原生接入 DeFi：Base MCP + ERC-4337</div>
+            <div class="sec-kicker">Base MCP and ERC-4337 give AI agents access to DeFi</div>
             <h2 class="sec-title">AI</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">Base MCP 将 AI Agent 接入 Avantis/Uniswap/Morpho，ERC-4337 智能账户超 3000 万——竞品已在列，我们不在</h3>
-          <p class="item-b">Base 的 Model Context Protocol（MCP）通过 OAuth 2.1 为 AI agent 提供经授权的链上 DeFi 接入管道，目前已支持 Uniswap、Morpho、Moonwell、Avantis（perp DEX 竞品）等协议；用户可通过自然语言指令由 agent 完成 DeFi 操作。截至 2026 年 6 月，EVM 链上 ERC-4337 智能账户超 3,000 万，为 agent 提供可编程权限和会话密钥；KuCoin 研究报告显示 Q1 2026 AI agent 钱包占 EVM DeFi 总成交量的 8-12%。机制：MCP 将 agent 的自然语言意图翻译为链上操作，ERC-4337 账户通过 session key 限制 agent 操作范围（仅执行授权的特定行为），解决「agent 失控」的安全顾虑。二阶效应：越早接入 agent 友好架构的 DeFi 协议越可能在 DeFAI 用户层优先受益；多位 CryptoConsensus Miami 2026 高管表示 DeFi 正进入主流，AI agent 是主要驱动力之一。</p>
+          <h3 class="item-h">Base MCP connects AI agents to Avantis, Uniswap and Morpho as ERC-4337 accounts exceed 30 million</h3>
+          <p class="item-b">Base uses the Model Context Protocol and OAuth 2.1 to give authorized AI agents access to DeFi protocols including Uniswap, Morpho, Moonwell and Avantis. Users can request transactions in natural language. By June 2026, EVM networks had more than 30 million ERC-4337 smart accounts, which support programmable permissions and session keys. KuCoin Research estimated that agent wallets accounted for 8–12% of EVM DeFi trading volume in Q1 2026. Session keys can restrict an agent to the actions a user authorizes. Integration with agent interfaces may give protocols a new distribution channel. Executives at CryptoConsensus Miami 2026 also cited agents as one driver of broader DeFi adoption.</p>
           <div class="item-meta">
             <span class="item-date">2026-06-01</span>
             <a class="item-src" href="https://blog.kyberswap.com/how-ai-agents-trade-crypto-in-2026-defi-skills-mcp-and-execution/" target="_blank" rel="noopener">KyberSwap Blog · CryptoDaily · CoinDesk ↗</a>
@@ -173,31 +173,31 @@
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
-            <div class="sec-kicker">CEO 视角 · 机会与打法</div>
-            <h2 class="sec-title">产品观察</h2>
+            <div class="sec-kicker">Product strategy and opportunities</div>
+            <h2 class="sec-title">Product observations</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">CME 对 CFTC 的诉讼涉及永续合约监管</h3>
-          <p class="item-b">CME 起诉 CFTC 后，美国永续合约应如何分类成为诉讼争点。案件走向会影响交易场所可以采用的合约结构。</p>
+          <h3 class="item-h">CME’s lawsuit puts the classification of perpetuals before a U.S. court</h3>
+          <p class="item-b">CME’s lawsuit against the CFTC raised the question of how U.S. law should classify perpetual contracts. The outcome could affect which contract structures trading venues may offer.</p>
           <div class="item-meta">
             <span class="item-date">2026-06-18</span>
             <a class="item-src" href="https://money.usnews.com/investing/news/articles/2026-06-18/cme-sues-us-cftc-over-letting-kalshi-coinbase-offer-perpetual-futures" target="_blank" rel="noopener">U.S. News · DeFi Rate ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">GMX 以低延迟报价支持贵金属永续合约</h3>
-          <p class="item-b">GMX 的黄金和白银永续合约使用 Chainlink Data Streams 报价，首日成交额达 1,000 万美元。比较这类合约的执行质量，需要同时观察报价延迟与成交滑点。</p>
+          <h3 class="item-h">GMX uses low-latency prices for precious-metal perpetuals</h3>
+          <p class="item-b">GMX uses Chainlink Data Streams to price its gold and silver perpetuals, which traded $10 million on their first day. Assessing execution quality requires comparing price-feed latency with realized slippage.</p>
           <div class="item-meta">
             <span class="item-date">2026-04-10</span>
-            <a class="item-src" href="https://gmxio.substack.com/p/247-gold-and-silver-perp-markets" target="_blank" rel="noopener">GMX 官方 Substack · Chainlink Today ↗</a>
+            <a class="item-src" href="https://gmxio.substack.com/p/247-gold-and-silver-perp-markets" target="_blank" rel="noopener">GMX official Substack · Chainlink Today ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Base MCP 接入 Avantis 永续交易</h3>
-          <p class="item-b">AI 代理可通过 Base MCP 调用 Avantis 的永续交易功能。对开发者而言，交易协议能否通过标准接口接入，会影响可选的执行场所。</p>
+          <h3 class="item-h">Base MCP provides access to Avantis perpetuals</h3>
+          <p class="item-b">AI agents can use Base MCP to access perpetual trading on Avantis. For developers, support for a standard interface helps determine which execution venues an agent can use.</p>
           <div class="item-meta">
             <span class="item-date">2026-06-01</span>
             <a class="item-src" href="https://blog.kyberswap.com/how-ai-agents-trade-crypto-in-2026-defi-skills-mcp-and-execution/" target="_blank" rel="noopener">KyberSwap Blog · CryptoDaily ↗</a>
@@ -205,7 +205,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

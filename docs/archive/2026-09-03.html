@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-09-03</title>
+<title>Perp DEX Daily · 2026-09-03</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -64,12 +64,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 67 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 67</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 9 月 3 日 · 星期四</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">September 3, 2026 · Thursday</div>
     </header>
-    <p class="lead">Variational把传统金融流动性带入链上互换，Backpack让真实股票进入跨资产保证金，Anthropic和Beeline则把Agent蓝图与受控企业连接继续产品化。</p>
+    <p class="lead">Variational is bringing traditional market liquidity to onchain swaps. Backpack is adding actual shares to cross-asset margin. Anthropic and Beeline are developing agent blueprints and controlled connections to enterprise systems.</p>
 
       <section class="sec sec-perpdex">
         <div class="sec-head">
@@ -81,27 +81,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Variational上线黄金与美股指数互换</h3>
-          <p class="item-b">Variational在Omni上线XAU和US100互换市场，通过RFQ由OLP对接传统金融场所，而不是依赖链上订单簿；持仓成本改为与美元借贷利率关联。</p><p class="item-b">首发每个市场的OI上限约1000万美元，平台称数日内计划提高至5000万美元以上，交易费为零。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>市场已经上线，限额提升、API与全天候流动性仍是后续计划，协议未披露独立成交数据。</p>
+          <h3 class="item-h">Variational launches swaps on gold and a U.S. equity index</h3>
+          <p class="item-b">Variational added XAU and US100 swaps to Omni. The OLP uses RFQs to access traditional financial venues, and the swaps’ carrying costs are linked to U.S. dollar borrowing rates. Execution does not rely on an onchain order book.</p><p class="item-b">Each market initially has an open-interest cap of about $10 million. Variational said it planned to raise each cap above $50 million within days. Trading fees are zero.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The market is live. Higher limits, an API and round-the-clock liquidity remain planned. The protocol has yet to publish standalone trading volume.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-02</span>
             <a class="item-src" href="https://www.chaincatcher.com/article/2287087" target="_blank" rel="noopener">ChainCatcher ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Entropy下架零成交OpenAI盘前永续</h3>
-          <p class="item-b">Entropy在Hyperliquid的HIP-3部署器io下登记过OpenAI盘前永续io:OAI，但该市场没有产生任何成交即被下架；io:ANTH与io:SNDK仍在交易。</p><p class="item-b">这次失败把盘前标的的登记、实际开市和形成流动性三个阶段区分开来。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>报道确认零成交和下架状态，但Entropy没有公开解释未形成交易的原因。</p>
+          <h3 class="item-h">Entropy delists an OpenAI premarket perpetual that attracted no trades</h3>
+          <p class="item-b">Entropy registered the io:OAI OpenAI premarket perpetual through Hyperliquid HIP-3 deployer io. It was delisted without a single trade. The io:ANTH and io:SNDK markets remained active.</p><p class="item-b">This failure separates the three stages of registration, actual market opening, and liquidity creation for pre-market targets.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Reports confirm that there were no transactions and the product was taken off the market. However, Entropy did not provide any explanation for why no transactions occurred.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-02</span>
             <a class="item-src" href="https://cryptobriefing.com/entropyio-pre-ipo-perps-hyperliquid/" target="_blank" rel="noopener">Crypto Briefing ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">本周主线 ｜ HyENA完成逐市场退出</h3>
-          <p class="item-b">HyENA此前宣布在8月31日至9月2日逐小时下架全部市场，并按最终标记价格自动结算仓位、把保证金返还现货余额。</p><p class="item-b">平台称累计处理逾40亿美元交易，但USDe保证金差异化减弱后选择退出，HLPe仍可按1:1申领。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>40亿美元为平台累计自报成交；本次可核实增量是退出安排在9月2日完成。</p>
+          <h3 class="item-h">Weekly theme | HyENA completes its market-by-market exit</h3>
+          <p class="item-b">HyENA had announced that it would delist its markets in hourly batches from August 31 through September 2. Positions would settle automatically at the final mark price, with margin returned to users’ spot balances.</p><p class="item-b">The platform claims to have processed transactions worth over 4 billion USD. However, after the differentiation of USDe margins decreased, the platform chose to withdraw from the market. HLPe can still be claimed in a 1:1 ratio.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>4 billion USD represents the cumulative transactions reported by the platform. The verifiable increase this time indicates that the exit arrangement will be completed on September 2nd.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-28</span>
             <a class="item-src" href="https://www.chaincatcher.com/article/2286294" target="_blank" rel="noopener">ChainCatcher ↗</a>
@@ -119,36 +119,36 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Backpack让真实股票进入永续保证金</h3>
-          <p class="item-b">Backpack上线MU、SNDK、SPY与QQQ四个全天候永续市场，并允许用户把平台持有的Micron和SanDisk真实股票用于跨资产组合保证金。</p><p class="item-b">股票仍由持牌经纪商体系持有，四个永续只提供价格敞口，不附带股东权利或股息。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>首阶段只有Micron与SanDisk股票可作抵押，产品可用地区和风险参数仍受平台限制。</p>
+          <h3 class="item-h">Backpack enables actual shares to serve as perpetual collateral</h3>
+          <p class="item-b">Backpack listed four perpetual markets for round-the-clock trading, covering MU, SNDK, SPY and QQQ. Users can also put actual Micron and SanDisk shares held on the platform toward cross-asset portfolio margin.</p><p class="item-b">Stocks are still held by licensed brokerage firms. The four perpetual contracts only offer price exposure; they do not come with shareholder rights or dividends.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>In the initial phase, only Micron and SanDisk stocks can be used as collateral. The regions where products can be used and the risk parameters are still subject to platform restrictions.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-01</span>
             <a class="item-src" href="https://learn.backpack.exchange/blog/backpack-tradfi-perpetuals-equity-collateral" target="_blank" rel="noopener">Backpack ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Ondo向SEC和CFTC提交三封市场结构意见</h3>
-          <p class="item-b">Ondo围绕永续期货、组合保证金和链上市场数据向SEC与CFTC提交三封意见函，主张资金费与逐日盯市可以承担传统到期收敛的功能。</p><p class="item-b">意见还要求保证金规则按实时风险衡量，并允许监管者直接使用共享、可验证的链上记录。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>三封信属于行业政策建议，不是SEC或CFTC已经采纳的规则。</p>
+          <h3 class="item-h">Ondo submits three market structure comment letters to the SEC and CFTC</h3>
+          <p class="item-b">Ondo has submitted three letters of opinion to the SEC and CFTC regarding perpetual futures, portfolio margining, and on-chain market data. They argue that funding payments and daily market monitoring can fulfill the functions of traditional maturity convergence mechanisms.</p><p class="item-b">The proposal also requires that margin rules be based on real-time risk assessment, and regulators are allowed to directly use shared, verifiable on-chain records.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The three letters refer to industry policy recommendations, not rules adopted by the SEC or CFTC.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-02</span>
             <a class="item-src" href="https://ondo.finance/blog/open-markets-by-design" target="_blank" rel="noopener">Ondo Finance ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">新泽西请求最高法院审理Kalshi体育市场</h3>
-          <p class="item-b">新泽西州请求美国最高法院复审第三巡回法院的裁定，该裁定认为联邦法排除了各州对预测市场体育合约的监管。</p><p class="item-b">申请援引第三与第九巡回法院的分歧，案件能否进入实体审理仍由最高法院决定。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>州政府已经提交复审申请，但最高法院尚未决定是否受理。</p>
+          <h3 class="item-h">New Jersey asks the Supreme Court to hear the Kalshi sports market case</h3>
+          <p class="item-b">New Jersey petitioned the U.S. Supreme Court to review a Third Circuit ruling that federal law preempts state regulation of sports contracts on prediction markets.</p><p class="item-b">The petition cites a split between the Third and Ninth Circuits. The Supreme Court will decide whether to take the case and consider its merits.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The state government has submitted a request for review, but the Supreme Court has not yet decided whether to accept it.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-02</span>
             <a class="item-src" href="https://newjerseymonitor.com/2026/09/02/nj-supreme-court-kalshi-sports-betting/" target="_blank" rel="noopener">New Jersey Monitor ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Circle用CCTP原生跨链EURC</h3>
-          <p class="item-b">Circle把EURC接入CCTP，首批支持Ethereum与Base之间通过销毁和铸造完成原生跨链，原有USDC流程不变。</p><p class="item-b">开发者现在可用同一套基础设施移动美元和欧元稳定币，不必为EURC单独接入桥。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>EURC当前先覆盖Ethereum与Base，跨链转账不可逆且不是Circle提供的金融服务。</p>
+          <h3 class="item-h">Circle enables native cross-chain EURC transfers through CCTP</h3>
+          <p class="item-b">Circle has integrated EURC into CCTP. The first batch of support includes Ethereum and Base, enabling native cross-chain transactions through destruction and minting. The existing USDC process remains unchanged.</p><p class="item-b">Developers can now use the same infrastructure to move US dollars and euros stablecoins. There is no need to connect EURC separately.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>EURC currently covers Ethereum and Base. Cross-chain transfers are irreversible and not financial services provided by Circle.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-02</span>
             <a class="item-src" href="https://www.circle.com/blog/cctp-extends-circles-crosschain-trust-layer-to-eurc" target="_blank" rel="noopener">Circle ↗</a>
@@ -166,27 +166,27 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">Anthropic发布商业Agent蓝图</h3>
-          <p class="item-b">Anthropic发布可部署的商业Agent蓝图，包含面向消费者的购物Agent和面向商家的运营Agent，并提供零售、旅行、电信与票务参考实现。</p><p class="item-b">蓝图可运行在Claude API、Amazon Bedrock、Microsoft Foundry或Google Cloud Vertex AI，购物Agent把支付留给现有结账系统。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>代码与演示已经开放，商家仍需接入自己的目录、政策、结账和订单系统。</p>
+          <h3 class="item-h">Anthropic publishes commercial agent blueprints</h3>
+          <p class="item-b">Anthropic released a deployable commercial agent blueprint, including shopping agents for consumers and operational agents for merchants. It also provides implementations for retail, travel, telecommunications, and ticketing applications.</p><p class="item-b">The blueprint can run on Claude API, Amazon Bedrock, Microsoft Foundry, or Google Cloud Vertex AI. The shopping agent leaves payment processing to existing checkout systems.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The code and demonstrations are now available. Merchants still need to integrate their own directories, policies, payment systems, and order management systems.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-02</span>
             <a class="item-src" href="https://claude.com/blog/claude-for-commerce-agents" target="_blank" rel="noopener">Anthropic ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Beeline把MCP原生接入用工管理</h3>
-          <p class="item-b">Beeline在供应商管理系统中原生加入MCP，让获批Agent可按既有身份、角色权限和审批层级访问寻源、用工与合规数据。</p><p class="item-b">分类与合规等高风险决定仍保留人工审核，避免Agent绕过企业原有治理。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>这是Beeline客户体系内的受控连接能力，不等于任意外部Agent可直接读取全部数据。</p>
+          <h3 class="item-h">Beeline integrates MCP natively into workforce management</h3>
+          <p class="item-b">Beeline has integrated MCP into its supplier management system. Approved agents can access source data, employment information, and compliance data based on their existing identities, roles, and approval levels.</p><p class="item-b">High-risk decisions such as classification and compliance continue to be reviewed manually to prevent agents from bypassing the company’s existing governance mechanisms.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>This is a controlled connection capability within Beeline’s customer system. It does not mean that any external agent can directly access all the data.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-02</span>
             <a class="item-src" href="https://www.beeline.com/news/beeline-pioneers-agentic-ai-for-the-extended-workforce-with-beeline-mcp?hs_amp=true" target="_blank" rel="noopener">Beeline ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Tether开源离线多语翻译模型</h3>
-          <p class="item-b">Tether AI发布TranslatePsy-AfriSLM、AfriNano与EuroNano模型，可在手机、笔记本等边缘设备离线运行，并把翻译数据留在本地。</p><p class="item-b">两个非洲语言系列分别覆盖19种和8种语言，EuroNano覆盖9种欧洲语言，模型已在Hugging Face开放下载。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>语言覆盖和基准成绩来自发布方，实际设备速度、质量与场景泛化仍需独立验证。</p>
+          <h3 class="item-h">Tether open-sources an offline multilingual translation model</h3>
+          <p class="item-b">Tether AI released the TranslatePsy-AfriSLM, AfriNano, and EuroNano models, which can run offline on mobile devices, laptops, and other edge devices. The translation data is stored locally.</p><p class="item-b">Two African language series cover 19 and 8 languages, respectively. EuroNano covers 9 European languages. The models are available for download on Hugging Face.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Language coverage and benchmark results come from the publisher. The actual device speed, quality, and applicability in various scenarios still require independent verification.</p>
           <div class="item-meta">
             <span class="item-date">2026-09-02</span>
             <a class="item-src" href="https://tether.io/news/tether-releases-open-source-ai-translation-models-for-african-and-european-languages/" target="_blank" rel="noopener">Tether ↗</a>
@@ -194,7 +194,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-11-17</title>
+<title>Perp DEX Daily · 2026-11-17</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -100,41 +100,41 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 135 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 135</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 11 月 17 日 · 星期二</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">November 17, 2026 · Tuesday</div>
     </header>
-    <p class="lead">同一交易入口接入多个永续后台，不代表合约生命周期统一。Bitget Wallet披露的SNDK拆股安排显示，三家底层场所分别采用强制结算与仓位换算。</p>
+    <p class="lead">Connecting multiple perpetual trading platforms through the same entry point does not mean that the contract lifecycle is unified. According to the SNDK split-up arrangement disclosed by Bitget Wallet, the three underlying platforms use forced settlement and position conversion methods.</p>
 
 
       <section class="sec sec-contract-lifecycle">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">合约生命周期与外部依赖</h2>
+            <h2 class="sec-title">Contract lifecycles and external dependencies</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月16日，Bitget Wallet披露三家永续后台采用不同SNDK拆股方案</h3>
-          <p class="item-b">Bitget Wallet的SNDK拆股安排显示，PopDEX和Hyperliquid会暂停交易并强制结算剩余仓位，tatadex则保留仓位，把数量乘八、平均开仓价除以八。三家场所都会取消未成交单及止盈止损单，用户不能把同一钱包入口理解成统一的合约生命周期。</p>
+          <h3 class="item-h">On November 16th, Bitget Wallet revealed that three perpetual exchanges use different SNDK splitting schemes.</h3>
+          <p class="item-b">Bitget Wallet’s SNDK stock-split notice shows that PopDEX and Hyperliquid will suspend trading and forcibly settle remaining positions. tatadex will keep positions open, multiply position size by eight and divide average entry price by eight. All three venues will cancel unfilled orders, including take-profit and stop-loss orders. The same wallet can therefore expose users to different contract lifecycles.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://web3.bitget.com/en/blog/articles/sndk-trading-adjustment-notice" target="_blank" rel="noopener" title="Bitget Wallet SNDK交易调整公告 · 发布 2026-11-16" aria-label="来源 1：Bitget Wallet SNDK交易调整公告 · 发布 2026-11-16">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://web3.bitget.com/en/blog/articles/sndk-trading-adjustment-notice" target="_blank" rel="noopener" title="Bitget Wallet SNDK trading adjustment notice · Published 2026-11-16" aria-label="Source 1: Bitget Wallet SNDK trading adjustment notice · Published 2026-11-16">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月16日，ApeX因外部指数成分变更暂停ANT永续并按标记价结算</h3>
-          <p class="item-b">ApeX将于11月17日8时UTC暂时下架ANT-USDT永续，并提前30分钟停止开新仓；原因是部分指数价格来源交易所调整相关合约的面值和代码。届时未成交单会取消，剩余仓位按标记价结算，待外部指数定价与流动性稳定后再重新上线。</p>
+          <h3 class="item-h">November 16: ApeX announces a temporary ANT perpetual delisting and mark-price settlement after index changes</h3>
+          <p class="item-b">ApeX will temporarily delist the ANT-USDT perpetual at 08:00 UTC on November 17 and stop new positions 30 minutes earlier. Some exchanges contributing index prices changed the denominations and symbols of related contracts. ApeX will cancel unfilled orders and settle outstanding positions at the mark price. It plans to relist once external index pricing and liquidity stabilize.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.apex.exchange/blog/detail/apex-omni-product-update-17-november-2026" target="_blank" rel="noopener" title="ApeX Omni产品更新公告 · 发布 2026-11-16" aria-label="来源 1：ApeX Omni产品更新公告 · 发布 2026-11-16">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.apex.exchange/blog/detail/apex-omni-product-update-17-november-2026" target="_blank" rel="noopener" title="ApeX Omni product update · Published 2026-11-16" aria-label="Source 1: ApeX Omni product update · Published 2026-11-16">1</a>
           </div>
         </article>
         </div>
@@ -143,49 +143,49 @@
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <h2 class="sec-title">资金入口与股票代币权利</h2>
+            <h2 class="sec-title">Funding access and stock token rights</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月14日，MEXC因第三方发卡方调整暂停Global Card交易与充值</h3>
-          <p class="item-b">MEXC称因第三方发卡方服务调整，Global Card自11月14日15时30分UTC起维护，预计持续至18日；期间全部卡片交易和充值会被拒绝。用户仍可查看记录，并把剩余卡内余额转入MEXC法币账户。公告未说明此次维护与FinCEN命令存在因果关系。</p>
+          <h3 class="item-h">November 14: MEXC suspends Global Card payments and top-ups after its third-party issuer changes service</h3>
+          <p class="item-b">MEXC said Global Card maintenance began at 15:30 UTC on November 14 following a service change by its third-party card issuer and was expected to last until November 18. Card payments and top-ups would be declined. Users could still view transaction histories and transfer remaining card balances to their MEXC fiat accounts. MEXC did not attribute the maintenance to the FinCEN order.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://t.me/s/MEXCofficialNews?before=38820" target="_blank" rel="noopener" title="MEXC Global Card维护公告，官方新闻频道 · 发布 2026-11-14" aria-label="来源 1：MEXC Global Card维护公告，官方新闻频道 · 发布 2026-11-14">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://t.me/s/MEXCofficialNews?before=38820" target="_blank" rel="noopener" title="MEXC Global Card maintenance notice on the official news channel · Published 2026-11-14" aria-label="Source 1: MEXC Global Card maintenance notice on the official news channel · Published 2026-11-14">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月16日，Bitget把20只股票代币加入统一交易账户保证金币种</h3>
-          <p class="item-b">Bitget宣布在统一交易账户新增20只股票代币作为保证金币种，包括rSPXL、rAAPU、rNVDX和rTSLL等杠杆或反向产品。持仓可用于账户内其他交易的保证金，但公告没有披露各资产折扣率、压力情景或异常行情下的退出顺序，不能按面值推断可用购买力。</p>
+          <h3 class="item-h">November 16: Bitget adds 20 equity tokens as collateral in its unified trading account</h3>
+          <p class="item-b">Bitget announced the addition of 20 new stock tokens as margin currencies in its unified trading account. These tokens include rSPXL, rAAPU, rNVDX, and rTSLL, among other leveraged or inverse products. These tokens can be used as margin for other transactions within the account. However, the announcement did not disclose the discount rates for each asset, pressure scenarios, or exit procedures in case of abnormal market conditions. Therefore, it is not possible to infer the actual purchasing power based on the face value of the tokens.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.bitget.com/support/articles/12560603900680" target="_blank" rel="noopener" title="Bitget统一交易账户保证金币种公告 · 发布 2026-11-16" aria-label="来源 1：Bitget统一交易账户保证金币种公告 · 发布 2026-11-16">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.bitget.com/support/articles/12560603900680" target="_blank" rel="noopener" title="Bitget unified trading account collateral currency notice · Published 2026-11-16" aria-label="Source 1: Bitget unified trading account collateral currency notice · Published 2026-11-16">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月16日，Coinbase与Broadridge发布链上股东通信开放标准</h3>
-          <p class="item-b">Coinbase与Broadridge发布Onchain Rights Standard，供发行人、托管商和钱包把股东通信及公司行动传递给代币化股票持有人。该标准面向不同区块链开放采用，当前重点是通信基础；链上代理投票被列为下一阶段，不能写成持有人已经获得完整投票功能。</p>
+          <h3 class="item-h">November 16th, Coinbase and Broadridge released an open standard for blockchain-based shareholder communication.</h3>
+          <p class="item-b">Coinbase and Broadridge released the Onchain Rights Standard, which allows issuers, custodians, and wallets to transmit shareholder communications and corporate actions to tokenized stockholders. This standard is open for adoption across different blockchains, with the focus currently being on communication basics. On-chain proxy voting is listed as the next step, but it cannot be assumed that holders will have full voting capabilities.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.coinbase.com/blog/expanding-trust%3A-a-privacy-first-network-for-global-crypto-compliance" target="_blank" rel="noopener" title="Coinbase与Broadridge标准发布说明 · 发布 2026-11-16" aria-label="来源 1：Coinbase与Broadridge标准发布说明 · 发布 2026-11-16">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.coinbase.com/blog/expanding-trust%3A-a-privacy-first-network-for-global-crypto-compliance" target="_blank" rel="noopener" title="Coinbase and Broadridge standard release announcement · Published 2026-11-16" aria-label="Source 1: Coinbase and Broadridge standard release announcement · Published 2026-11-16">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月16日，Binance以追加bStocks单位发放微软和应用材料净股息</h3>
-          <p class="item-b">Binance将按11月19日1时UTC快照，为MSFTB和AMATB持有人分配股息；税费等扣除后的净额会再投资为同一bStock的新增或碎片单位，链上持有人通过乘数调整获得。现货交易继续，但充提及股票与代币的一比一转换会在分配前暂停。</p>
+          <h3 class="item-h">November 16: Binance announces Microsoft and Applied Materials dividends payable in additional bStock units</h3>
+          <p class="item-b">Binance will distribute dividends to MSFTB and AMATB holders based on a snapshot at 01:00 UTC on November 19. After taxes and fees, the proceeds will be reinvested in additional or fractional units of the same bStock. Onchain holders receive the adjustment through the multiplier. Spot trading continues, but deposits, withdrawals and one-to-one share-to-token conversions will pause before distribution.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/square/post/388708813293948" target="_blank" rel="noopener" title="Binance bStocks股息分配公告 · 发布 2026-11-16" aria-label="来源 1：Binance bStocks股息分配公告 · 发布 2026-11-16">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.binance.com/en/square/post/388708813293948" target="_blank" rel="noopener" title="Binance bStocks dividend distribution notice · Published 2026-11-16" aria-label="Source 1: Binance bStocks dividend distribution notice · Published 2026-11-16">1</a>
           </div>
         </article>
         </div>
@@ -200,38 +200,38 @@
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月16日，OpenAI开放医疗计算机操作Agent并公布安全与成本评测</h3>
-          <p class="item-b">OpenAI已开放医疗计算机操作，可通过API及医疗版ChatGPT跨EHR与保险门户执行多步流程。官方称GPT-6 Astra在325项任务中99%被评为安全；HealthAdminBench得94.3%，Luna得91.8%且每项0.085美元，部署仍需审批与审计。</p>
+          <h3 class="item-h">November 16th, OpenAI released a medical computer operation agent and published evaluations regarding its safety and cost-effectiveness.</h3>
+          <p class="item-b">OpenAI made healthcare computer use available through its API and the healthcare edition of ChatGPT for multistep tasks across EHR and insurance portals. OpenAI said GPT-6 Astra was rated safe on 99% of 325 tasks. On HealthAdminBench, Astra scored 94.3% and Luna scored 91.8%. Luna cost $0.085 per task. Deployment still requires approvals and auditing.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/advancing-computer-use-for-healthcare-teams/" target="_blank" rel="noopener" title="OpenAI医疗计算机操作Agent发布说明 · 发布 2026-11-16" aria-label="来源 1：OpenAI医疗计算机操作Agent发布说明 · 发布 2026-11-16">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://openai.com/index/advancing-computer-use-for-healthcare-teams/" target="_blank" rel="noopener" title="OpenAI release notes for its healthcare computer-use agent · Published 2026-11-16" aria-label="Source 1: OpenAI release notes for its healthcare computer-use agent · Published 2026-11-16">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月16日，OpenAI发布面向平台的CSAM图像分类器与模型卡</h3>
-          <p class="item-b">OpenAI发布CSAM图像分类器，可识别哈希匹配可能漏掉的新图像或AI生成内容，并向经审核的机构免费提供API。模型只输出风险分数，用于排序和交由受训人员复核；分数本身不能确认图像违法或决定报告义务，仍需结合上下文和人工流程。</p>
+          <h3 class="item-h">November 16th, OpenAI released a platform-specific CSAM image classifier and model cards.</h3>
+          <p class="item-b">OpenAI has released a CSAM image classifier that can identify new images or AI-generated content that may have been missed by hash matching. This tool provides APIs to accredited institutions for free. The model only outputs risk scores, which are used for ranking and review by trained personnel. The scores themselves cannot confirm whether an image is illegal or determine the obligation to report. Context and manual processes are still necessary.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://deploymentsafety.openai.com/csam-image-classifier/introduction" target="_blank" rel="noopener" title="OpenAI CSAM图像分类器模型卡 · 发布 2026-11-16" aria-label="来源 1：OpenAI CSAM图像分类器模型卡 · 发布 2026-11-16">1</a><a class="source-number" href="https://openai.com/index/strengthening-online-child-safety/" target="_blank" rel="noopener" title="OpenAI儿童安全能力发布说明 · 发布 2026-11-16" aria-label="来源 2：OpenAI儿童安全能力发布说明 · 发布 2026-11-16">2</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://deploymentsafety.openai.com/csam-image-classifier/introduction" target="_blank" rel="noopener" title="OpenAI model card for its child sexual abuse material image classifier · Published 2026-11-16" aria-label="Source 1: OpenAI model card for its child sexual abuse material image classifier · Published 2026-11-16">1</a><a class="source-number" href="https://openai.com/index/strengthening-online-child-safety/" target="_blank" rel="noopener" title="OpenAI release notes on child safety features · Published 2026-11-16" aria-label="Source 2: OpenAI release notes on child safety features · Published 2026-11-16">2</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月16日，Liquid AI发布支持音频与五类结构化任务的d1.2模型</h3>
-          <p class="item-b">Liquid AI发布d1.2和d1.2-ultra，新增音频输入及字段读取、区间定位、图像框选、数量估计和多选任务，并已在Liquid API开放。两款模型每百万输入Token分别收费0.02和0.042美元，只计输入；新增任务表现来自厂商内部评测，采购时仍需用自有数据复测。</p>
+          <h3 class="item-h">November 16th, Liquid AI released the d1.2 model, which supports audio processing and five types of structured tasks.</h3>
+          <p class="item-b">Liquid AI released d1.2 and d1.2-ultra through the Liquid API. They add audio input and five structured tasks: field extraction, span localization, image bounding boxes, quantity estimation and multiple choice. Pricing is input-only at $0.02 and $0.042 per million tokens, respectively. Results for the new tasks come from the vendor’s internal evaluations and still need testing on a buyer’s own data.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://www.liquid.ai/blog/d1-2" target="_blank" rel="noopener" title="Liquid AI d1.2发布说明 · 发布 2026-11-16" aria-label="来源 1：Liquid AI d1.2发布说明 · 发布 2026-11-16">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://www.liquid.ai/blog/d1-2" target="_blank" rel="noopener" title="Liquid AI d1.2 release notes · Published 2026-11-16" aria-label="Source 1: Liquid AI d1.2 release notes · Published 2026-11-16">1</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

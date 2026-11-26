@@ -7,7 +7,6 @@ import { run, baseContent } from "./_helpers.mjs";
 
 const dir = mkdtempSync(join(tmpdir(), "bh-"));
 let n = 0;
-// 渲染并返回 {code, html}
 function render(content) {
   const inP = join(dir, `c${n}.json`);
   const outP = join(dir, `o${n++}.html`);
@@ -18,13 +17,16 @@ function render(content) {
   return { code: r.code, html, out: r.out };
 }
 
-test("合法 content 渲染成功且含标题", () => {
+test("Renders a valid edition", () => {
   const { code, html } = render(baseContent());
   assert.equal(code, 0);
-  assert.match(html, /标题/);
+  assert.match(html, /Headline/);
+  assert.match(html, /<html lang="en">/);
+  assert.match(html, /<div class="mast-sub">June 23, 2026 · Tuesday<\/div>/);
+  assert.match(html, /Built and maintained by Doris/);
 });
 
-test("HTML 特殊字符被转义（防 XSS）", () => {
+test("Escapes HTML in headlines", () => {
   const c = baseContent();
   c.sections[0].items[0].headline = '<script>alert(1)</script>';
   const { html } = render(c);
@@ -32,116 +34,116 @@ test("HTML 特殊字符被转义（防 XSS）", () => {
   assert.match(html, /&lt;script&gt;/);
 });
 
-test("javascript: 链接不被渲染进 href", () => {
+test("Rejects non-HTTP source links", () => {
   const c = baseContent();
   c.sections[0].items[0].url = "javascript:alert(1)";
   const { html } = render(c);
   assert.ok(!/href="javascript:/i.test(html));
 });
 
-test("渲染器不再为旧产品判断栏隐藏日期", () => {
+test("Displays dates in archived product sections", () => {
   const c = baseContent();
-  c.sections = [{ id: "old-column", title: "产品判断", items: [
-    { decision_area: "战略优先级", headline: "洞察", body: ["x"], url: "https://x.com/p", date: "2026-05-01" },
+  c.sections = [{ id: "old-column", title: "Product assessment", items: [
+    { decision_area: "Strategic priorities", headline: "Insight", body: ["x"], url: "https://x.com/p", date: "2026-05-01" },
   ] }];
   const { html } = render(c);
   const seg = (html.match(/<section class="sec sec-legacy-product-view">[\s\S]*?<\/section>/) || [""])[0];
-  assert.ok(seg.includes("产品观察"));
-  assert.ok(!seg.includes("产品判断"));
+  assert.ok(seg.includes("Product observations"));
+  assert.ok(!seg.includes("Product assessment"));
   assert.ok(seg.includes("item-date"));
   assert.ok(seg.includes("2026-05-01"));
   assert.ok(!seg.includes("decision-area"));
 });
 
-test("顶部只渲染一句市场概括，不渲染 product_view 卡片", () => {
+test("Omits the retired lead card", () => {
   const c = baseContent({
     product_view: {
-      area: "战略优先级",
-      judgment: "旧判断不应再显示。",
-      change: "旧变化不应再显示。",
-      confidence: "中",
-      falsifier: "旧证伪条件不应再显示。",
+      area: "Strategic priorities",
+      judgment: "The old judgment should no longer be shown.",
+      change: "The retired update should be hidden.",
+      confidence: "Medium",
+      falsifier: "Withdraw the judgment if volumes decline.",
     },
   });
   const { html } = render(c);
-  assert.match(html, /近期永续市场的竞争正在从扩充标的数量/);
+  assert.match(html, /Perpetual futures venues are competing for sustained order flow/);
   assert.ok(!html.includes("product-view"));
-  assert.ok(!html.includes("旧判断不应再显示"));
-  assert.ok(!html.includes("证伪条件："));
+  assert.ok(!html.includes("The old judgment should no longer be shown"));
+  assert.ok(!html.includes("Withdraw the judgment"));
 });
 
-test("栏目只渲染一级标题，不渲染 kicker", () => {
+test("Uses one heading per section", () => {
   const c = baseContent();
-  c.sections[0].kicker = "重复副标题";
+  c.sections[0].kicker = "Repeated headline";
   const { html } = render(c);
-  assert.ok(!html.includes("重复副标题"));
+  assert.ok(!html.includes("Repeated headline"));
   assert.ok(!html.includes("sec-kicker"));
 });
 
-test("数字量级说明渲染为次级提示且会转义", () => {
+test("Escapes metric context", () => {
   const c = baseContent();
-  c.sections[0].items[0].context = { label: "量级参照", text: "约占 <10%，不应被解读成行业格局反转。" };
+  c.sections[0].items[0].context = { label: "Scale", text: "About <10% of reported volume came from this venue." };
   const { html } = render(c);
   assert.match(html, /<p class="item-context">/);
-  assert.match(html, /量级参照/);
-  assert.match(html, /约占 &lt;10%/);
+  assert.match(html, /Scale/);
+  assert.match(html, /About &lt;10%/);
 });
 
-test("补充来源渲染为独立可核查链接", () => {
+test("Links to additional sources", () => {
   const c = baseContent();
   c.sections[0].items[0].references = [
-    { source: "交叉验证", url: "https://example.com/b", date: "2026-06-22" },
+    { source: "Independent confirmation", url: "https://example.com/b", date: "2026-06-22" },
   ];
   const { html } = render(c);
-  assert.match(html, /补充：交叉验证 · 06-22 ↗/);
+  assert.match(html, /Additional source: Independent confirmation · 06-22 ↗/);
   assert.match(html, /href="https:\/\/example\.com\/b"/);
 });
 
-test("损坏 JSON → 干净报错退出 1（不崩栈）", () => {
+test("Rejects malformed JSON", () => {
   const inP = join(dir, "bad.json");
   writeFileSync(inP, "{ not json");
   const r = run(["lib/build-html.mjs", inP, join(dir, "x.html")]);
   assert.equal(r.code, 1);
-  assert.match(r.out, /渲染失败/);
+  assert.match(r.out, /Rendering failed/);
 });
 
-test("缺 sections → 不崩溃（兜底渲染）", () => {
+test("Handles missing sections", () => {
   const c = baseContent(); delete c.sections;
   const { code } = render(c);
   assert.equal(code, 0);
 });
 
-test("今日进展展示新 delta 的日期与来源，不再使用持续追踪标题", () => {
+test("Includes a date and source for each development", () => {
   const c = baseContent({
     threads: [{
-      title: "钱包分发出现新变化",
+      title: "New wallet distribution routes",
       since: "2026-06-01",
       day_n: 23,
       tier: "A",
       status: "active",
       date: "2026-06-23",
-      source: "官方公告",
+      source: "Official announcement",
       url: "https://example.com/thread",
-      update: "钱包新增嵌入式衍生品入口。",
-      watch: "观察订单流归属。",
+      update: "The wallet introduced a derivatives trading interface.",
+      watch: "Monitor the resulting order flow.",
     }],
   });
   const { html } = render(c);
-  assert.match(html, />今日进展</);
-  assert.ok(!html.includes(">持续追踪<"));
-  assert.match(html, /官方公告 ↗/);
+  assert.match(html, />Latest developments</);
+  assert.ok(!html.includes(">Continuous tracking<"));
+  assert.match(html, /Official announcement ↗/);
   assert.match(html, /2026-06-23/);
 });
 
-test("v2 动态栏目遵循输入顺序，完整标题与正文只渲染一段", () => {
+test("Preserves section order and single-paragraph bodies in v2", () => {
   const item = baseContent().sections[0].items[0];
-  const headline = "Trasia 通过亚洲交易员社区与移动端引导新用户使用 Hyperliquid 的现有流动性";
+  const headline = "Trasia connects Asian trading communities to Hyperliquid through its mobile app";
   const c = baseContent({
     editorial_version: 2,
     sections: [
-      { id: "distribution", title: "交易入口与用户增长", items: [{ ...item, headline, body: ["第一句说明现有流动性的来源。", "第二句说明新增用户路径。"] }] },
-      { id: "ai", title: "交易工具", items: [{ ...item, headline: "工具标题", body: "工具正文。" }] },
-      { id: "perpdex", title: "市场机制", items: [{ ...item, headline: "市场标题", body: "市场正文。" }] },
+      { id: "distribution", title: "Trading access and user growth", items: [{ ...item, headline, body: ["The venue draws liquidity from a shared order book.", "Traders place orders through the mobile app."] }] },
+      { id: "ai", title: "Trading tools", items: [{ ...item, headline: "Tool launch", body: "A new tool entered public beta." }] },
+      { id: "perpdex", title: "Market structure", items: [{ ...item, headline: "Market update", body: "The venue revised its margin rules." }] },
     ],
   });
   const { code, html } = render(c);
@@ -149,75 +151,75 @@ test("v2 动态栏目遵循输入顺序，完整标题与正文只渲染一段",
   assert.ok(html.indexOf('sec-distribution"') < html.indexOf('sec-ai"'));
   assert.ok(html.indexOf('sec-ai"') < html.indexOf('sec-perpdex"'));
   assert.ok(html.includes(`<h3 class="item-h">${headline}</h3>`));
-  assert.ok(html.includes('<p class="item-b">第一句说明现有流动性的来源。 第二句说明新增用户路径。</p>'));
+  assert.ok(html.includes('<p class="item-b">The venue draws liquidity from a shared order book. Traders place orders through the mobile app.</p>'));
   assert.equal((html.match(/<p class="item-b">/g) || []).length, 3);
   assert.ok(!html.includes('<span class="source-date">'));
   assert.ok(!html.includes('<span class="item-date">'));
-  assert.match(html, /title="S · 发布 2026-06-23"/);
+  assert.match(html, /title="S · Published 2026-06-23"/);
 });
 
-test("v2 隐藏内部研究结构、context 和重复的今日进展", () => {
+test("Hides internal research and context", () => {
   const c = baseContent({
     editorial_version: 2,
-    threads: [{ title: "内部台账标题", update: "内部台账增量", watch: "内部台账待查" }],
+    threads: [{ title: "Internal thread title", update: "Internal account update", watch: "Internal review reminder" }],
   });
   Object.assign(c.sections[0].items[0], {
     kind: "research",
-    body: "这段正文已经包含读者需要的产品事实和分析。",
+    body: "Each position draws collateral from a dedicated margin account.",
     date: null,
     checked_at: "2026-06-23",
-    context: { label: "影响范围", text: "内部context内容不能另起小块" },
+    context: { label: "Scope", text: "Recorded internal context" },
     research: {
-      project: "内部重复项目名", category: "perp-protocol",
-      why_now: "内部选题理由", mechanism: "内部机制证据", gtm: "内部增长证据",
-      product: "内部产品证据", implication: "内部推断", unknowns: "内部未知项",
-      discussions: [], discussion_gap: "内部讨论访问缺口",
+      project: "Internal project name", category: "perp-protocol",
+      why_now: "Internal selection rationale", mechanism: "Internal mechanism evidence", gtm: "Internal distribution evidence",
+      product: "Internal product evidence", implication: "Internal inference", unknowns: "Unresolved internal question",
+      discussions: [], discussion_gap: "Original discussion was unavailable",
     },
   });
   const { html } = render(c);
-  for (const value of ["内部台账标题", "内部台账增量", "内部台账待查", "内部context内容", "内部重复项目名", "内部选题理由", "内部机制证据", "内部增长证据", "内部产品证据", "内部推断", "内部未知项", "内部讨论访问缺口"]) {
+  for (const value of ["Internal thread title", "Internal account update", "Internal review reminder", "Recorded internal context", "Internal project name", "Internal selection rationale", "Internal mechanism evidence", "Internal distribution evidence", "Internal product evidence", "Internal inference", "Unresolved internal question", "Original discussion was unavailable"]) {
     assert.ok(!html.includes(value), value);
   }
   assert.ok(!html.includes('<section class="threads">'));
   assert.ok(!html.includes('<p class="item-context">'));
   assert.ok(!html.includes('<dl class="research-details">'));
   assert.ok(!html.includes('<div class="research-meta">'));
-  assert.ok(html.includes("未标发布日期 · 核验 2026-06-23"));
+  assert.ok(html.includes("publication date unavailable · Verified 2026-06-23"));
 });
 
-test("v2 讨论原文保留为去重的来源链接，不显示内部讨论摘要", () => {
+test("Deduplicates discussion links", () => {
   const c = baseContent({ editorial_version: 2 });
-  c.sections = [{ id: "distribution", title: "交易入口", items: [{
+  c.sections = [{ id: "distribution", title: "Trading access", items: [{
     ...c.sections[0].items[0],
-    references: [{ source: "项目访谈", url: "https://example.com/shared", date: "2026-06-22" }],
+    references: [{ source: "Project interviews", url: "https://example.com/shared", date: "2026-06-22" }],
     research: { discussions: [
-      { speaker: "已列访谈作者", affiliation: "official", summary: "这段内部摘要不应出现在页面", url: "https://example.com/shared", date: "2026-06-22" },
-      { speaker: "独立作者<甲>", affiliation: "independent", summary: "另一段内部讨论摘要也不显示", url: "https://example.net/discussion", date: "2026-06-23" },
-      { speaker: "无效来源", affiliation: "unknown", summary: "不可信", url: "javascript:alert(1)", date: "2026-06-23" },
+      { speaker: "Project spokesperson", affiliation: "official", summary: "Internal interview summary", url: "https://example.com/shared", date: "2026-06-22" },
+      { speaker: "Independent author<Ace>", affiliation: "independent", summary: "Internal independent assessment", url: "https://example.net/discussion", date: "2026-06-23" },
+      { speaker: "Invalid source", affiliation: "unknown", summary: "Invalid source summary", url: "javascript:alert(1)", date: "2026-06-23" },
     ] },
   }] }];
   const { html } = render(c);
   assert.equal((html.match(/href="https:\/\/example\.com\/shared"/g) || []).length, 1);
   assert.ok(html.includes('href="https://example.net/discussion"'));
-  assert.ok(html.includes("独立作者&lt;甲&gt;（独立讨论） · 发布 2026-06-23"));
-  assert.ok(html.includes("项目访谈 · 发布 2026-06-22；已列访谈作者（官方） · 发布 2026-06-22"));
-  assert.ok(!html.includes("内部摘要"));
-  assert.ok(!html.includes("内部讨论摘要"));
+  assert.ok(html.includes("Independent author&lt;Ace&gt; (Independent analysis) · Published 2026-06-23"));
+  assert.ok(html.includes("Project interviews · Published 2026-06-22; Project spokesperson (Official) · Published 2026-06-22"));
+  assert.ok(!html.includes("Internal interview summary"));
+  assert.ok(!html.includes("Internal independent assessment"));
   assert.ok(!html.includes('href="javascript:'));
 });
 
-test("v2 八个来源完整编号一行展示，长名称与核验信息只放可访问属性", () => {
+test("Preserves accessible details on eight numbered sources", () => {
   const c = baseContent({ editorial_version: 2 });
-  const longName = '很长的官方来源名称"包含引号"与<特殊字符>'.repeat(4);
-  c.sections = [{ id: "distribution", title: "交易入口", items: [{
+  const longName = 'Official source with "quotes" and <brackets>'.repeat(4);
+  c.sections = [{ id: "distribution", title: "Trading access", items: [{
     ...c.sections[0].items[0], kind: "research", source: longName, date: null, checked_at: "2026-06-23",
     references: Array.from({ length: 3 }, (_, index) => ({
-      source: `补充来源${index + 1}`, url: `https://example.com/reference-${index + 1}`,
+      source: `Reference ${index + 1}`, url: `https://example.com/reference-${index + 1}`,
       date: "2026-05-01", checked_at: "2026-06-23",
     })),
     research: { discussions: Array.from({ length: 4 }, (_, index) => ({
-      speaker: `作者${index + 1}`, affiliation: index === 0 ? "sponsored" : "independent",
-      summary: "内部讨论证据不作为正文展开", url: `https://example.net/discussion-${index + 1}`, date: "2026-06-22",
+      speaker: `Author ${index + 1}`, affiliation: index === 0 ? "sponsored" : "independent",
+      summary: "Internal discussion notes", url: `https://example.net/discussion-${index + 1}`, date: "2026-06-22",
     })) },
   }] }];
   const { html } = render(c);
@@ -229,16 +231,16 @@ test("v2 八个来源完整编号一行展示，长名称与核验信息只放�
     ...Array.from({ length: 3 }, (_, index) => `https://example.com/reference-${index + 1}`),
     ...Array.from({ length: 4 }, (_, index) => `https://example.net/discussion-${index + 1}`),
   ]);
-  assert.equal(row.replace(/<[^>]+>/g, "").replace(/\s+/g, ""), "来源12345678");
-  assert.match(row, /title="很长的官方来源名称&quot;包含引号&quot;与&lt;特殊字符&gt;/);
-  assert.match(row, /aria-label="来源 1：[^"]+未标发布日期 · 核验 2026-06-23"/);
-  assert.match(row, /aria-label="来源 2：补充来源1 · 发布 2026-05-01 · 核验 2026-06-23"/);
-  assert.match(row, /aria-label="来源 5：作者1（赞助内容） · 发布 2026-06-22"/);
+  assert.equal(row.replace(/<[^>]+>/g, "").replace(/\s+/g, ""), "Sources12345678");
+  assert.match(row, /title="Official source with &quot;quotes&quot; and &lt;brackets&gt;/);
+  assert.match(row, /aria-label="Source 1:[^"]+publication date unavailable · Verified 2026-06-23"/);
+  assert.match(row, /aria-label="Source 2: Reference 1 · Published 2026-05-01 · Verified 2026-06-23"/);
+  assert.match(row, /aria-label="Source 5: Author 1 \(Sponsored\) · Published 2026-06-22"/);
   assert.match(html, /\.item-meta\.compact-sources\{display:inline-flex; flex-wrap:nowrap; gap:8px;/);
   assert.match(html, /white-space:nowrap;/);
 });
 
-test("v1 归档继续使用既有栏目顺序", () => {
+test("Keeps the legacy section order", () => {
   const c = baseContent();
   c.sections.reverse();
   const { html } = render(c);

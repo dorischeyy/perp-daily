@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-08-24</title>
+<title>Perp DEX Daily · 2026-08-24</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -56,7 +56,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品判断」做成醒目的决策拆解卡片 */
+  /* Market implications card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -91,12 +91,12 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 57 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 57</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 8 月 24 日 · 星期一</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">August 24, 2026 · Monday</div>
     </header>
-    <p class="lead">四个主要永续场所成交回落但 OI 上升，Hyperliquid 周转进一步放慢，KuCoin 则用分阶段标记价切换处理两项合约退市。</p>
+    <p class="lead">Volume fell across four major perpetual venues as open interest rose. Hyperliquid’s turnover slowed further. KuCoin outlined a staged mark-price transition for two contracts it was delisting.</p>
 
 
       <section class="sec sec-perpdex">
@@ -110,29 +110,29 @@
 
         <article class="item">
 
-          <h3 class="item-h">四个主要永续场所成交回落而 OI 上升</h3>
-          <p class="item-b"><strong>事件</strong>：2026-08-24 远端快照显示，Binance、Hyperliquid、Bybit 与 Gate 的 24 小时成交合计由约 137.96 万 BTC 降至 106.99 万 BTC，下降 22.4%，OI 则由约 86.92 万 BTC 增至 88.32 万 BTC，增加 1.6%。</p><p class="item-b"><strong>机制</strong>：成交减少而 OI 增加，意味着存量仓位周转放慢，不能把较低成交解释为去杠杆，容量判断仍需结合资产级深度与退出冲击。</p><p class="item-b"><strong>二阶效应</strong>：若这种分化连续出现，场所面对的风险重点会从高频成交承载转向更久期仓位的资金费、保证金和清算路径。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>同口径只覆盖四个场所并以 BTC 计价；本轮变化说明周转下降，不代表全市场净风险敞口同步增加。</p>
+          <h3 class="item-h">Daily volume falls 22.4% across four venues as open interest rises 1.6%</h3>
+          <p class="item-b"><strong>Event</strong>: In the August 24 snapshot, combined daily volume at Binance, Hyperliquid, Bybit and Gate fell 22.4%, from about 1,379,600 BTC to 1,069,900 BTC. Open interest rose 1.6%, from about 869,200 BTC to 883,200 BTC.</p><p class="item-b"><strong>Mechanism</strong>: Falling volume alongside rising open interest points to slower turnover in existing positions. Lower volume alone does not show deleveraging. Per-asset depth and exit price impact remain relevant.</p><p class="item-b"><strong>Second-order effects</strong>: If the divergence persists, funding, margin and liquidation of longer-held positions may become more important than the ability to process high-frequency trades.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The four-venue series is denominated in BTC. The change shows slower turnover and does not establish a matching increase in net exposure across the market.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-24</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/f680bd9a436887db2d19123bb3bca98d1a55f494/docs/market.json" target="_blank" rel="noopener">CoinGecko / GitHub Snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/2870e6036dae49ee805d1f3cceb5df5afe593a83/docs/market.json" target="_blank" rel="noopener">补充：前一日同口径快照 · 08-23 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/f680bd9a436887db2d19123bb3bca98d1a55f494/docs/market.json" target="_blank" rel="noopener">CoinGecko / GitHub Snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/2870e6036dae49ee805d1f3cceb5df5afe593a83/docs/market.json" target="_blank" rel="noopener">Additional source: Previous day&#x27;s snapshot on the same basis · 08-23 ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">Hyperliquid 的 OI 与成交比升至 1.82</h3>
-          <p class="item-b"><strong>事件</strong>：Hyperliquid 的 OI 较前一日增加 4.0%，24 小时成交减少 30.6%，OI 与成交比由 1.21 升至 1.82。</p><p class="item-b"><strong>机制</strong>：这一比值衡量未平仓规模相对单日成交的厚度，上升说明同一单位存量仓位对应的交易周转变少，而不是直接证明新增仓位更安全。</p><p class="item-b"><strong>二阶效应</strong>：若高比值持续，场所级 OI 看似稳定，资产级退出深度和极端行情下的清算承载却会变得更重要。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>这是场所整体的一日比值，不能替代单资产流动性、仓位方向或用户集中度数据。</p>
+          <h3 class="item-h">Hyperliquid’s open-interest-to-volume ratio rises to 1.82</h3>
+          <p class="item-b"><strong>Event</strong>: Hyperliquid open interest rose 4.0% from the previous day while 24-hour volume fell 30.6%. Its open-interest-to-volume ratio rose from 1.21 to 1.82.</p><p class="item-b"><strong>Mechanism</strong>: The ratio compares outstanding positions with a day’s turnover. A rise means less trading per unit of open exposure. It says nothing by itself about the safety of new positions.</p><p class="item-b"><strong>Second-order effects</strong>: If the ratio stays high, market-level exit depth and capacity to absorb liquidations in volatile conditions will matter more, even if the venue’s aggregate open interest appears stable.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The ratio covers one venue for one day. It does not measure individual asset liquidity, position direction, or user concentration.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-24</span>
-            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/f680bd9a436887db2d19123bb3bca98d1a55f494/docs/market.json" target="_blank" rel="noopener">CoinGecko / GitHub Snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/2870e6036dae49ee805d1f3cceb5df5afe593a83/docs/market.json" target="_blank" rel="noopener">补充：前一日同口径快照 · 08-23 ↗</a>
+            <a class="item-src" href="https://github.com/dorischeyy/perp-daily/blob/f680bd9a436887db2d19123bb3bca98d1a55f494/docs/market.json" target="_blank" rel="noopener">CoinGecko / GitHub Snapshot ↗</a><a class="item-src item-ref" href="https://github.com/dorischeyy/perp-daily/blob/2870e6036dae49ee805d1f3cceb5df5afe593a83/docs/market.json" target="_blank" rel="noopener">Additional source: Previous day&#x27;s snapshot on the same basis · 08-23 ↗</a>
           </div>
         </article>
         <article class="item">
 
-          <h3 class="item-h">KuCoin 用分阶段标记价切换处理合约退市</h3>
-          <p class="item-b"><strong>事件</strong>：KuCoin 将于 8 月 26 日停止 ICXUSDT 与 STORJUSDT 永续合约，在最终结算前先停止开仓，并用最后 30 分钟指数均价结算。</p><p class="item-b"><strong>机制</strong>：平台自 06:30 UTC 起用 180 秒过渡把标记价切至指数价，06:50 停止开仓，07:00 结算，实质是把退市拆成价格切换、只减仓和最终结算三个状态。</p><p class="item-b"><strong>二阶效应</strong>：分阶段处理能给持仓与机器人可预测的退出窗口，但最终风险会更集中到指数质量、尾段流动性与结算窗口。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>公告未披露两项合约的成交、OI 与指数构成，无法判断退市是否由流动性单一因素触发。</p>
+          <h3 class="item-h">KuCoin uses a staged mark-price transition to settle delisted contracts</h3>
+          <p class="item-b"><strong>Event</strong>: KuCoin plans to delist ICXUSDT and STORJUSDT perpetuals on August 26. It will stop position openings before settlement and use the final 30-minute average index price to settle both contracts.</p><p class="item-b"><strong>Mechanism</strong>: At 06:30 UTC, a 180-second transition will move the mark price to the index price. Position openings stop at 06:50 and settlement follows at 07:00. The sequence gives users distinct pricing-transition, reduce-only and final-settlement stages.</p><p class="item-b"><strong>Second-order effects</strong>: Staged delisting gives holders and trading bots a predictable exit window. Residual risk concentrates in index quality, liquidity near the end of trading and the settlement window.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The notice gave no volume, open interest, or index composition for the two contracts. The evidence does not establish that liquidity alone prompted delisting.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-23</span>
             <a class="item-src" href="https://www.kucoin.com/announcement/delistings" target="_blank" rel="noopener">KuCoin ↗</a>
@@ -151,9 +151,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Flipkart Minutes 用高密度履约节点追近头部</h3>
-          <p class="item-b">Flipkart 的即时零售业务 Minutes 日订单已增至约 110 万至 120 万，接近 Swiggy Instamart 的约 140 万，并以每月约 100 个的速度增加微型履约中心。</p><p class="item-b">这说明平台型新业务的冷启动并不只靠流量入口，供给节点密度、复购率与稳定履约共同决定它能否把一次性尝试变成高频习惯。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>订单与节点数据来自知情人士，尚非公司正式披露；对比仅覆盖印度即时零售业务。</p>
+          <h3 class="item-h">Flipkart Minutes closes the gap with leading rivals through a dense fulfillment network</h3>
+          <p class="item-b">Flipkart’s quick-commerce business Minutes reached about 1.1 million to 1.2 million orders per day, approaching Swiggy Instamart’s roughly 1.4 million. It was adding about 100 micro-fulfillment centers per month.</p><p class="item-b">Existing platform traffic can drive trial, but local fulfillment density, repeat purchases and reliable delivery determine whether customers turn a new service into a frequent habit.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Order figures and network location counts came from people familiar with the business and had not been formally disclosed by the company. The comparison covers Indian quick commerce only.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-22</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/22/two-years-after-launch-walmarts-flipkart-is-closing-in-on-indias-quick-commerce-leaders/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -161,9 +161,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Rillet 在 48 小时内完成独角兽轮融资</h3>
-          <p class="item-b">AI 财务软件公司 Rillet 在约 48 小时内完成 1 亿美元融资，估值达到 10 亿美元，现有投资人基于约 600 家客户与上一季度翻倍的年化收入增速快速加注。</p><p class="item-b">这里更有意义的不是融资速度本身，而是已有使用数据让投资决策从讲故事变成读取持续行为，缩短了项目从验证到扩张的时间。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>估值、客户数与收入增速来自公司及投资人表述，不等同于审计后的财务结果。</p>
+          <h3 class="item-h">Rillet closes its unicorn funding round in 48 hours</h3>
+          <p class="item-b">AI finance software company Rillet closed a $100 million round in about 48 hours at a $1 billion valuation. Existing investors moved quickly on the strength of about 600 customers and annualized revenue that doubled in the previous quarter.</p><p class="item-b">Sustained usage gave investors evidence beyond the company’s pitch and shortened the interval between validation and expansion.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The company and investors supplied the valuation, customer count, and revenue growth rate. These figures are not audited financial results.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-21</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/21/how-ai-accounting-startup-rillet-raised-100m-and-became-a-unicorn-in-48-hours/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -171,9 +171,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">哈佛把 AI 教练嵌入八周创业训练营</h3>
-          <p class="item-b">Harvard Business School Foundry 推出 699 美元、为期八周的创业训练营，用 HeyGen 生成的教师数字分身反馈路演与董事会演练，同时保留每周真人教师环节。</p><p class="item-b">数字分身承担高频练习反馈，真人教师处理判断与互动，这种分工让专家内容从一次性课程变成可反复调用的训练产品。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>目前是付费八周项目且每周仍有真人环节，数字分身只辅助练习，不能视为无人化教学。</p>
+          <h3 class="item-h">Harvard integrates an AI coach into an eight-week startup program</h3>
+          <p class="item-b">Harvard Business School Foundry launched an eight-week, $699 entrepreneurship program. HeyGen-generated faculty avatars give feedback on pitches and simulated board meetings, alongside weekly sessions with human instructors.</p><p class="item-b">Avatars provide feedback on repeated practice, while instructors supply judgment and live interaction. The split makes expert teaching available for repeated exercises beyond the initial course session.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>This is a paid eight-week program with a live human session every week. The digital double helps with practice. Instruction is not fully automated.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-22</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -192,9 +192,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">Term Finance 的治理防线未挡住 850 万美元攻击</h3>
-          <p class="item-b">Term Labs 确认协议遭治理攻击，安全机构估算损失约 850 万美元，约占相关金库 TVL 的 68%，以太坊金库资金几乎全部受损。</p><p class="item-b">攻击穿过自定义治理封装、七天延迟与 LP 否决设计，说明有时间锁不等于执行链安全，权限组合与实际调用路径仍可能绕过表面上的多层保护。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>损失与占比来自安全机构初步估算，协议已确认治理攻击，但最终追偿与完整根因仍未公布。</p>
+          <h3 class="item-h">Term Finance reports an $8.5 million loss despite its governance controls</h3>
+          <p class="item-b">Term Labs confirmed a governance incident. Security firms estimated losses at about $8.5 million, approximately 68% of TVL in the affected vaults. Nearly all funds in its Ethereum vault were affected.</p><p class="item-b">The incident showed that a seven-day governance timelock and LP veto did not ensure safe execution. Reviews need to verify effective permissions and how governance controls work together throughout the process.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The loss and its percentage share are preliminary estimates by a security firm. The protocol confirmed a governance attack. Final recoveries and a full root-cause analysis remain pending.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-23</span>
             <a class="item-src" href="https://www.theblock.co/news/defi/2026-08-23-defi-lending-protocol-term-finance-loses-an-estimated-8-5-million-to-governance-exploit-412543" target="_blank" rel="noopener">The Block ↗</a>
@@ -202,9 +202,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Tether 的乌拉圭挖矿项目因电力合同争议停摆</h3>
-          <p class="item-b">路透调查显示，Tether 投入约 1.2 亿美元的乌拉圭比特币挖矿项目在电力合同争议后停摆，当地电力公司已于 2025 年 7 月断电。</p><p class="item-b">这次披露把算力扩张的约束重新拉回长期电价、合同执行与本地监管，低碳电力并不自动等于可持续的挖矿容量。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>项目停摆发生在此前，8 月 23 日的新信息来自调查披露；投资额与争议细节尚无完整合同文本可核。</p>
+          <h3 class="item-h">Tether’s Uruguay mining operation pauses over a power contract dispute</h3>
+          <p class="item-b">Reuters reported that Tether’s roughly $120 million bitcoin mining project in Uruguay had stopped after a power contract dispute. The local utility cut electricity in July 2025.</p><p class="item-b">The case highlights long-term power pricing, contract enforcement and local regulation as constraints on mining expansion. Low-carbon electricity alone does not ensure sustainable mining capacity.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>The project had already stopped operating. The August 23 update came from an investigation. Full contracts were unavailable to verify the investment amount and disputed details.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-23</span>
             <a class="item-src" href="https://www.theblock.co/news/business/2026-08-23-tethers-120-million-uruguay-bitcoin-mining-project-collapsed-over-a-power-contract-dispute-reuters-412536" target="_blank" rel="noopener">The Block ↗</a>
@@ -212,9 +212,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Utorg 把自托管钱包、换币与卡整合进 Utapp</h3>
-          <p class="item-b">Utorg 推出 iOS 应用 Utapp，把自托管钱包、加密卡、链内与跨链换币放进同一入口，并为多数支持资产覆盖换币 Gas。</p><p class="item-b">旧 iOS 用户需先备份恢复短语再迁移，钱包资产与卡余额随后延续，说明超级入口的便利仍依赖用户正确完成密钥交接。</p>
-          <p class="item-context"><span class="item-context-label">落地程度</span>目前迁移只影响 iOS，功能与覆盖网络以官方说明为准，Android 用户仍使用原应用。</p>
+          <h3 class="item-h">Utorg combines a self-custody wallet, swaps and a payment card in Utapp</h3>
+          <p class="item-b">Utorg launched Utapp for iOS. It combines a self-custody wallet, a crypto card, same-chain swaps and cross-chain swaps, and covers swap gas for most supported assets.</p><p class="item-b">Existing iOS users need to back up their recovery phrase before migrating. Wallet assets and card balances then carry over. Continuity depends on the user completing the key handover correctly.</p>
+          <p class="item-context"><span class="item-context-label">Implementation</span>The migration currently applies only to iOS. The official notice specifies the functionality and supported networks. Android users continue using the original app.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-21</span>
             <a class="item-src" href="https://utorg.com/blog/utapp-our-new-ios-crypto-wallet-card-app-for-crypto-and-everyday-spending" target="_blank" rel="noopener">Utorg ↗</a>
@@ -233,9 +233,9 @@
 
         <article class="item">
 
-          <h3 class="item-h">匿名模型 Ox Alpha 以免费预览进入 OpenRouter</h3>
-          <p class="item-b">第三方匿名模型 Ox Alpha 在 OpenRouter 开放免费预览，定位于编码、持续代理任务与生产工作流，但提供方和底层模型身份尚未公开。</p><p class="item-b">匿名发布可以快速获得真实负载反馈，却让能力归因、数据处理边界与长期可用性都难以验证，适合测试而不适合先假定为稳定依赖。</p>
-          <p class="item-context"><span class="item-context-label">口径限制</span>目前只有免费预览与匿名方描述，缺少公开基准、模型卡、数据政策和服务承诺。</p>
+          <h3 class="item-h">Anonymous model Ox Alpha enters OpenRouter as a free preview</h3>
+          <p class="item-b">Ox Alpha, an anonymous third-party model, opened a free preview on OpenRouter for coding, persistent agent tasks and production workflows. Neither the provider nor the underlying model has been identified.</p><p class="item-b">An anonymous preview can collect feedback from real workloads quickly. Its capabilities, data handling and long-term availability remain difficult to verify, making evaluation a more reasonable use than relying on it for ongoing operations.</p>
+          <p class="item-context"><span class="item-context-label">Measurement limits</span>Only a free preview and an anonymous account are available. Public benchmarks, a model card, a data policy, and service commitments were not provided.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-23</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/23/whos-behind-the-new-stealth-model-ox-alpha/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -243,9 +243,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">AI 训练的版权边界更取决于来源与替代关系</h3>
-          <p class="item-b">美国近期判例显示，模型训练可能因转化性用途获得合理使用保护，但盗版取得训练材料仍可单独构成侵权，直接替代原作品市场的用途也更难通过抗辩。</p><p class="item-b">同样是训练行为，数据如何取得、输出是否替代原市场和具体用途会导向不同结果，不能把一次胜诉概括为所有抓取都合法。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>这是对多起美国案件的阶段性分析，不是全国统一终局规则，不同事实与司法辖区仍可能得出不同结论。</p>
+          <h3 class="item-h">Source material and substitution increasingly shape the copyright debate over AI training</h3>
+          <p class="item-b">Recent U.S. cases suggest that transformative use can support a fair-use defense for training. Obtaining training material through piracy can still constitute a separate infringement, and uses that substitute directly for the original work face a weaker defense.</p><p class="item-b">Acquisition of the data, substitution for the original market and the particular use can change the outcome for otherwise similar training. A favorable ruling in one case supplies no general authorization for scraping.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>This analysis covers interim developments in several US cases. It does not establish a final national rule. Different facts or jurisdictions may produce different outcomes.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-23</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/23/is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -253,9 +253,9 @@
         </article>
         <article class="item">
 
-          <h3 class="item-h">Uber 因自动停权面临 8.25 亿欧元罚款</h3>
-          <p class="item-b">荷兰数据保护机构因 Uber 的自动化司机账号停权流程处以 8.25 亿欧元罚款，核心争议是告知、人工介入与申诉是否充分。</p><p class="item-b">Uber 否认永久停权由纯自动化决定并已上诉，案件仍表明高影响自动决策不能只提供结果，组织还要证明人工复核真实存在且用户能够有效挑战。</p>
-          <p class="item-context"><span class="item-context-label">影响范围</span>罚款决定仍在上诉，Uber 对流程事实有异议，当前不能把监管认定表述为已终局确认。</p>
+          <h3 class="item-h">Uber faces an €825 million fine over automated account suspensions</h3>
+          <p class="item-b">The Dutch data protection authority fined Uber €825 million over automated driver account suspensions. The dispute concerns the adequacy of notice, human intervention and appeal rights.</p><p class="item-b">Uber denied that permanent deactivations were decided entirely by automation and appealed. The dispute illustrates why organizations need to demonstrate genuine human review and a practical way to challenge high-impact automated decisions.</p>
+          <p class="item-context"><span class="item-context-label">Scope</span>The fine is under appeal and Uber disputes the account of its process. The regulator&#x27;s findings are not final.</p>
           <div class="item-meta">
             <span class="item-date">2026-08-23</span>
             <a class="item-src" href="https://techcrunch.com/2026/08/23/uber-faces-fine-of-nearly-1b-over-automated-driver-suspensions/" target="_blank" rel="noopener">TechCrunch ↗</a>
@@ -267,15 +267,15 @@
         <div class="sec-head">
           <span class="sec-no">05</span>
           <div>
-            <h2 class="sec-title">产品判断</h2>
+            <h2 class="sec-title">Product assessment</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <div class="decision-area">市场与资产</div>
-          <h3 class="item-h">退市应被定义为分阶段市场状态</h3>
-          <p class="item-b"><strong>判断变化</strong>：从资产风险升高时只考虑暂停、限额或直接下线，更新为退市需要独立的生命周期，至少区分停止开仓、只减仓、价格切换与最终结算。</p><p class="item-b"><strong>证据与边界</strong>：KuCoin 对两项合约给出分阶段标记价切换和最终结算窗口，证明明确状态能减少退出歧义；但公告未披露成交、OI 与指数构成，中心化交易所流程也不能原样套用到链上。</p>
+          <div class="decision-area">Market and Assets</div>
+          <h3 class="item-h">Contract delisting needs a staged transition through defined market states</h3>
+          <p class="item-b"><strong>Revised assessment</strong>: Delisting needs its own lifecycle, including the end of new positions, reduce-only trading, a price transition and final settlement.</p><p class="item-b"><strong>Evidence and limits</strong>: KuCoin published staged mark-price transitions and final settlement windows for two contracts. The announcement omitted volume, open interest and index composition. A centralized venue’s procedures also require adaptation for onchain execution.</p>
 
           <div class="item-meta">
 
@@ -284,7 +284,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

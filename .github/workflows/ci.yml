@@ -1,7 +1,7 @@
 name: CI
 
-# 代码改动即跑：语法检查 + 单元测试 + 关卡冒烟。
-# 让坏提交在进云端 Routine 前就被发现（仅文档改动的发报提交跳过，省算力）。
+# Check script syntax, unit tests, and a sample edition before deployment.
+# Pushes that change only published pages skip this job.
 on:
   push:
     branches: [main]
@@ -18,11 +18,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: 语法检查（所有 lib 脚本）
+      - name: Check library syntax
         run: for f in lib/*.mjs; do node --check "$f" || exit 1; done
-      - name: 单元测试
+      - name: Run unit tests
         run: npm test
-      - name: 关卡冒烟（用样例跑通整条校验+渲染）
+      - name: Validate and render the sample edition
         run: |
           node lib/validate-content.mjs config/content.sample.json
           node lib/check-freshness.mjs config/content.sample.json 2026-06-20

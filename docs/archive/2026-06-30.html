@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-06-30</title>
+<title>Perp DEX Daily · 2026-06-30</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 持续追踪 STORY THREADS：跨日叙事线的"当前进展地图" */
+  /* Ongoing coverage of developing stories */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -41,7 +41,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -54,7 +54,7 @@
   .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
   .sec-perpdex .sec-title{color:#b03a2e;}
   .sec-launchpad .sec-title{color:#1f7a5a;}
-  /* 「产品观察」做成醒目的主编批注卡片 */
+  /* Editorial analysis card */
   .sec-product-notes{background:#faf7ef; border:1px solid #ecdfbf; border-radius:8px;
     padding:24px 28px 16px; margin-top:36px; border-bottom:1px solid #ecdfbf;}
   .sec-product-notes .sec-title{color:#9a7b1f;}
@@ -82,33 +82,33 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 9 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 9</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 6 月 30 日 · 星期二</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">June 30, 2026 · Tuesday</div>
     </header>
-    <p class="lead">新加坡 MAS 将 Hyperliquid 列入投资者警告名单，亚太监管压力从中心化交易所蔓延到链上 perp，这是永续 DEX 在合规维度上的第一次直接碰撞。</p>
+    <p class="lead">Singapore’s Monetary Authority added Hyperliquid to its Investor Alert List. Scrutiny of trading venues in Asia is reaching beyond centralized exchanges to the onchain perpetuals market.</p>
     
     <section class="threads">
-      <div class="threads-h">持续追踪 · STORY THREADS</div>
+      <div class="threads-h">Story threads</div>
       
         <div class="thread">
-          <div class="thread-t">CME 诉 CFTC：美国永续监管定性</div>
-          <div class="thread-meta">自 2026-06-19 · 第 12 天 · S 级</div>
-          <div class="thread-u">next_check = 07-02，今日无新裁定；<strong>JPMorgan 研报同日揭示约半数链上 perp 量仅由 12 个钱包资金支撑</strong>，定性 perp 为散户工具而非机构对冲标的，与 CME「perp = swaps = 非机构期货」的诉讼论述形成市场结构旁证。</div>
-          <div class="thread-w"><b>下一步看：</b>CME 初步禁令申请进展 / CFTC 正式书面答复 / 庭审排期（07-02 复盘）</div>
+          <div class="thread-t">CME v. CFTC: U.S. regulatory classification of perpetuals</div>
+          <div class="thread-meta">Since 2026-06-19 · Day 12 · Tier S</div>
+          <div class="thread-u">Next review July 2. No new ruling today.<strong>A JPMorgan report said that just 12 wallets accounted for about half of onchain perpetuals volume</strong>. The report&#x27;s characterization of perpetuals as a retail rather than institutional hedging product offers market context for CME&#x27;s legal argument that these contracts are swaps.</div>
+          <div class="thread-w"><b>Next milestone:</b>Progress on a CME preliminary injunction, the CFTC&#x27;s formal written response and court scheduling. Review July 2.</div>
         </div>
         <div class="thread">
-          <div class="thread-t">亚太监管压力：MAS 将链上 perp 纳入警告名单</div>
-          <div class="thread-meta">自 2026-06-30 · 第 1 天 · A 级</div>
-          <div class="thread-u">新线建立：MAS 于 06-26 将 Hyperliquid 及 Hyper Foundation 列入 IAL，与 Bybit、KuCoin 并列，是亚太监管框架首次将链上永续协议纳入合规压力范围。</div>
-          <div class="thread-w"><b>下一步看：</b>日本 FSA 或韩国 FSC 是否跟进类似警告 / Hyperliquid 官方回应是否成为行业合规话语标准 / MAS 是否升级为执法行动</div>
+          <div class="thread-t">Asia-Pacific regulation: MAS adds an onchain perpetual venue to its alert list</div>
+          <div class="thread-meta">Since 2026-06-30 · Day 1 · Tier A</div>
+          <div class="thread-u">On June 26, Singapore&#x27;s MAS added Hyperliquid and the Hyper Foundation to its Investor Alert List alongside Bybit and KuCoin. The report identified this as a first instance of an Asia-Pacific regulator applying that form of scrutiny to an onchain perpetuals protocol.</div>
+          <div class="thread-w"><b>Next milestone:</b>Whether Japan&#x27;s FSA or South Korea&#x27;s FSC issues a similar warning, how Hyperliquid responds and whether MAS escalates to enforcement.</div>
         </div>
         <div class="thread">
-          <div class="thread-t">Aster 手续费回购销毁飞轮</div>
-          <div class="thread-meta">自 2026-06-30 · 第 1 天 · A 级</div>
-          <div class="thread-u">建线首日：12 天回购+销毁约 294 万枚 $ASTER；AOS-1 permissionless listing 上架费（5 万 USDT 每次）并入同一回购资金池，品种扩张与代币通缩形成联动。</div>
-          <div class="thread-w"><b>下一步看：</b>去杠杆期手续费收缩是否压缩回购力度 / veASTER 质押率与币价走势 / 其他 perp DEX 是否跟进 99% 费用回购模型</div>
+          <div class="thread-t">Aster&#x27;s fee-funded token buybacks and burns</div>
+          <div class="thread-meta">Since 2026-06-30 · Day 1 · Tier A</div>
+          <div class="thread-u">In 12 days, the first buyback and burn round covered roughly 2.94 million ASTER. AOS-1 listing fees of 50,000 USDT per application enter the same buyback pool, linking new listings to supply reduction.</div>
+          <div class="thread-w"><b>Next milestone:</b>Whether declining fees weaken buybacks, how the veASTER staking rate and token price evolve, and whether other exchanges adopt Aster&#x27;s 99% fee allocation.</div>
         </div>
     </section>
     
@@ -116,31 +116,31 @@
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <div class="sec-kicker">监管碰壁与机构冷眼</div>
+            <div class="sec-kicker">Regulatory setbacks and cautious institutions</div>
             <h2 class="sec-title">Perp DEX</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">本周主线 | 新加坡 MAS 将 Hyperliquid 列入投资者警告名单，亚太监管压力首次蔓延至链上 perp</h3>
-          <p class="item-b"><strong>事件</strong>：MAS 于 6 月 26 日将 Hyperliquid 主站及 Hyper Foundation 列入「投资者警告名单」（IAL），与 Bybit（6 月 17 日列入）、KuCoin、Bitget 等境外平台并列；本周同期澳大利亚 ASIC 延长加密牌照申请截止至 9 月 30 日，亚太主要司法区联动节奏加快。</p><p class="item-b"><strong>机制</strong>：IAL 是消费者保护机制，提示「平台可能被误认为受 MAS 监管」，不等于执法禁令，用户短期仍可访问；但本地银行和支付机构将受压力切断相关通道，间接影响法币出入金的便利性。Hyperliquid 回应称从未申请 MAS 牌照、自我定位为无许可基础设施。</p><p class="item-b"><strong>二阶效应</strong>：监管路径从 CEX 向链上延伸是本次的结构性信号，参照日本 FSA 2024 年将 Bybit 驱逐出境的先例，MAS IAL 一旦叠加本地机构断通道，实际效果可能超出「仅作提示」的字面定义；链上 perp「去中心化即免疫监管」的叙事受到正面挑战。</p>
+          <h3 class="item-h">Weekly theme | Singapore’s MAS adds Hyperliquid to its Investor Alert List</h3>
+          <p class="item-b"><strong>Event</strong>: On June 26, MAS added the Hyperliquid website and Hyper Foundation to its Investor Alert List alongside offshore venues including KuCoin, Bitget and Bybit, which was added on June 17. In Australia, ASIC extended a crypto licensing application deadline to September 30.</p><p class="item-b"><strong>Mechanism</strong>: The list warns consumers about entities that may be mistaken for MAS-regulated firms. Listing is distinct from an enforcement ban, and users could still access the platform. Local banks and payment providers could nevertheless restrict fiat access. Hyperliquid said it had never applied for an MAS licence and described its role as permissionless infrastructure.</p><p class="item-b"><strong>Second-order effects</strong>: The case extends regulatory attention from centralized exchanges to onchain venues. Japan’s FSA action involving Bybit in 2024 offers a point of comparison. If local institutions also restrict payment routes, a warning can have consequences beyond its formal legal status.</p>
           <div class="item-meta">
             <span class="item-date">2026-06-26</span>
             <a class="item-src" href="https://cointelegraph.com/features/singapores-hyperliquid-warning-indonesias-finfluencer-licence-asia-express" target="_blank" rel="noopener">Cointelegraph ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">JPMorgan 研报：机构对永续合约需求极低，约半数链上量仅由 12 个钱包资金支撑</h3>
-          <p class="item-b"><strong>事件</strong>：JPMorgan 衍生品团队 6 月 29 日发布报告，结论是机构对链上永续合约「无/极低」真实需求，现有成交量主要由散户投机和做市商驱动；报告援引 Hyperliquid 链上数据，约半数永续成交量来源集中于仅 12 个钱包。</p><p class="item-b"><strong>机制</strong>：三大结构壁垒阻碍机构进入，无前向期限曲线（缺乏期限溢价供对冲定价）、无实物交割选项、资金费率产生无边界基差风险；这三点恰好是永续对散户友好的设计逻辑，却是机构风控框架无法接受的先天缺陷。</p><p class="item-b"><strong>二阶效应</strong>：12 钱包撑起半数量意味着链上 perp 的「去中心化流动性」实为高度集中，清算时尾部流动性极度脆弱；此数据也与 CME 在监管诉讼中「perp 本质是散户投机工具」的论述方向一致（CME-CFTC 线 · 自 06-19 · 第 4 个关联进展）。</p>
+          <h3 class="item-h">JPMorgan sees limited institutional demand for perpetuals and links about half of onchain volume to funding from 12 wallets</h3>
+          <p class="item-b"><strong>Event</strong>: In a June 29 report, JPMorgan&#x27;s derivatives team said it found little or no genuine institutional demand for onchain perpetuals and attributed most trading to retail speculation and market making. Citing Hyperliquid data, the team said just 12 wallets accounted for roughly half its perpetuals volume.</p><p class="item-b"><strong>Mechanism</strong>: The team identified three barriers for institutions: the absence of a forward curve for pricing term hedges, the lack of physical delivery, and open-ended basis risk from funding payments. Features convenient for retail users can be difficult to accommodate in an institutional risk framework.</p><p class="item-b"><strong>Second-order effects</strong>: The concentration of half the volume in 12 wallets raises questions about liquidity during liquidations. The finding also echoes CME&#x27;s argument in its regulatory suit that perpetuals primarily serve retail speculation. This is the fourth related development in the dispute tracked since June 19.</p>
           <div class="item-meta">
             <span class="item-date">2026-06-29</span>
             <a class="item-src" href="https://www.coindesk.com/business/2026/06/29/jpmorgan-sees-limited-institutional-demand-for-perpetual-futures" target="_blank" rel="noopener">CoinDesk ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Aster 新代币经济 12 天成绩单：99% 手续费回购+销毁约 294 万枚 $ASTER，AOS-1 上架费并入同一飞轮</h3>
-          <p class="item-b"><strong>事件</strong>：6 月 17 日至 29 日，Aster 按新代币经济将 99% 平台日手续费用于公开市场回购 $ASTER 注入 veASTER 奖励池，并等量销毁团队份额，首轮约 294 万枚；同期（背景，06-26）推出 AOS-1 permissionless listing 机制，已在 Binance Spot/Alpha 上线的代币可付 5 万 USDT 申请上架，每笔上架费同样并入未来回购资金池，长期目标总供应从 80 亿降至 30 亿。</p><p class="item-b"><strong>机制</strong>：双飞轮联动，交易量产生手续费，99% 手续费驱动回购，回购推高 veASTER 质押收益，质押收益锁住流通盘；AOS-1 上架费作为额外增量现金流旁路汇入同一池子，「品种扩张」与「代币通缩」在机制层形成正循环，而非互相稀释。</p><p class="item-b"><strong>二阶效应</strong>：当前去杠杆行情下手续费收入收缩，将直接压缩回购力度，飞轮「旺季自我强化、淡季加速收缩」的周期放大效应是最主要的尾部风险；Aster 日量级别约属腰部至头部区间（约 Hyperliquid 的 2-5%），在此量级下推激进 99% 回购，表明利润分配已成为 perp DEX 的竞争性武器。</p>
+          <h3 class="item-h">Aster&#x27;s 99% fee-funded buybacks and matching burns cover about 2.94 million ASTER in 12 days, with AOS-1 listing fees joining the pool</h3>
+          <p class="item-b"><strong>Event</strong>: From June 17 to 29, Aster earmarked 99% of daily trading fees to buy ASTER in the market for the veASTER reward pool and burn a matching team allocation. The first round covered about 2.94 million tokens. AOS-1, introduced June 26, lets tokens already listed on Binance Spot or Alpha apply for listing for 50,000 USDT. Listing fees also fund future buybacks. Aster aims to reduce total supply from 8 billion to 3 billion.</p><p class="item-b"><strong>Mechanism</strong>: Aster allocates 99% of trading fees to buybacks. Repurchased tokens reward veASTER stakers, encouraging holders to lock up their tokens. The AOS-1 listing fee contributes a second source of cash to the same pool, linking expansion of the market list to the supply policy.</p><p class="item-b"><strong>Second-order effects</strong>: Lower volume during deleveraging means less fee income and smaller buybacks, amplifying the effect of a slowdown. Aster&#x27;s daily volume was roughly 2–5% of Hyperliquid&#x27;s. Earmarking 99% of fees for purchases at that scale shows how aggressively mid-sized venues are competing through tokenholder distributions.</p>
           <div class="item-meta">
             <span class="item-date">2026-06-29</span>
             <a class="item-src" href="https://www.cryptotimes.io/2026/06/29/aster-burns-2-9m-tokens-in-first-buyback-under-new-tokenomics/" target="_blank" rel="noopener">CryptoTimes ↗</a>
@@ -152,31 +152,31 @@
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <div class="sec-kicker">机会与打法</div>
-            <h2 class="sec-title">产品观察</h2>
+            <div class="sec-kicker">Product opportunities</div>
+            <h2 class="sec-title">Product observations</h2>
           </div>
         </div>
         <div class="sec-body">
           
         <article class="item">
-          <h3 class="item-h">MAS 警告 Hyperliquid 的逻辑：「可能被误认为受监管」，比实际违规更难辩驳，提前定位比事后解释便宜</h3>
-          <p class="item-b">MAS 把 Hyperliquid 列入 IAL 的理由不是它做错了什么，而是「用户可能误以为它受 MAS 监管」。这套逻辑对任何在新加坡有用户的链上 perp 都适用。</p>
+          <h3 class="item-h">MAS’s Hyperliquid warning concerns the possibility of mistaken regulatory status</h3>
+          <p class="item-b">MAS’s Investor Alert List warns that users could mistake Hyperliquid for an MAS-regulated entity. The notice is relevant to other onchain perpetual venues with Singapore users and does not itself establish an offence.</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://cointelegraph.com/features/singapores-hyperliquid-warning-indonesias-finfluencer-licence-asia-express" target="_blank" rel="noopener">Cointelegraph ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Hyperliquid 十二个钱包的成交集中度</h3>
-          <p class="item-b">Hyperliquid 50% 量来自 12 个钱包，外部观察者看到的是「深度好」，实际上是清算时的尾部流动性极度脆弱。</p>
+          <h3 class="item-h">Concentration of Hyperliquid trading in 12 wallets</h3>
+          <p class="item-b">An estimated 50% of Hyperliquid volume was associated with 12 wallets. That concentration raises a question about how much apparent depth would remain during widespread liquidations.</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://www.coindesk.com/business/2026/06/29/jpmorgan-sees-limited-institutional-demand-for-perpetual-futures" target="_blank" rel="noopener">CoinDesk ↗</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">Aster AOS-1 的设计逻辑值得移植：permissionless 上架费可以自带代币经济正循环，而非单纯运营成本</h3>
-          <p class="item-b">Aster 的 AOS-1 上架费（5 万 USDT）并非运营收入，而是直接并入代币回购资金池，让「品种扩张」行为本身驱动代币通缩。</p>
+          <h3 class="item-h">Aster’s AOS-1 shows how permissionless listing fees can fund token buybacks</h3>
+          <p class="item-b">Aster directs its 50,000 USDT AOS-1 listing fee into its token buyback pool. Adding a market can therefore help fund supply reduction instead of contributing only to operating revenue.</p>
           <div class="item-meta">
             
             <a class="item-src" href="https://www.cryptotimes.io/2026/06/29/aster-burns-2-9m-tokens-in-first-buyback-under-new-tokenomics/" target="_blank" rel="noopener">CryptoTimes ↗</a>
@@ -184,7 +184,7 @@
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>

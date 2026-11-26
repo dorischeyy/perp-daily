@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perp DEX 日报 · 2026-11-15</title>
+<title>Perp DEX Daily · 2026-11-15</title>
 <style>
   :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -14,7 +14,7 @@
   }
   .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
     border:1px solid #e4ded0; padding:56px 56px 64px; }
-  /* 报头 */
+  /* Masthead */
   .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
   .mast-row{display:flex; justify-content:space-between; align-items:baseline;
     font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
@@ -23,11 +23,11 @@
     margin:14px 0 6px; line-height:1.05;}
   .mast-sub{font-family:-apple-system,"PingFang SC",sans-serif; font-size:13px;
     color:#6b6655; letter-spacing:.03em;}
-  /* 导语 */
+  /* Lead */
   .lead{font-size:18px; line-height:1.85; color:#2c2820;
     padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
   .lead::first-letter{font-size:30px; font-weight:700;}
-  /* 今日进展：只展示有来源的新 delta */
+  /* Daily developments with source links */
   .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
     border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
   .threads-h{font-family:-apple-system,"PingFang SC",sans-serif; font-size:11px;
@@ -45,7 +45,7 @@
   .thread-w{font-family:-apple-system,"PingFang SC",sans-serif; font-size:12px;
     color:#8a7f66; margin-top:4px;}
   .thread-w b{color:#6b6655; font-weight:600;}
-  /* 章节 */
+  /* Sections */
   .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
   .sec:last-child{border-bottom:none; padding-bottom:8px;}
   .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
@@ -100,51 +100,51 @@
   <main class="mag">
     <header class="masthead">
       <div class="mast-row">
-        <span>每日链上观察</span><span>第 133 期</span>
+        <span>Daily On-Chain Review</span><span>Issue 133</span>
       </div>
-      <h1 class="mast-title">PERP DEX 日报</h1>
-      <div class="mast-sub">2026 年 11 月 15 日 · 星期日</div>
+      <h1 class="mast-title">PERP DEX DAILY</h1>
+      <div class="mast-sub">November 15, 2026 · Sunday</div>
     </header>
-    <p class="lead">trade.xyz在英伟达财报前把NVDA永续最高杠杆临时减半，Aster与Ondo则把现货纳入永续策略和保证金。竞争焦点从扩列转向风险容量与资金复用。</p>
+    <p class="lead">trade.xyz is temporarily halving maximum leverage on NVDA perpetuals ahead of Nvidia’s earnings. Aster is bringing spot and perpetual strategies into the same vault, while Ondo is letting traders reuse spot assets as collateral.</p>
 
 
       <section class="sec sec-risk-capital">
         <div class="sec-head">
           <span class="sec-no">01</span>
           <div>
-            <h2 class="sec-title">风险容量与资金复用</h2>
+            <h2 class="sec-title">Risk capacity and capital reuse</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月15日，trade.xyz在英伟达财报前把NVDA杠杆减半</h3>
-          <p class="item-b">trade.xyz将在英伟达11月17日盘后财报前，把NVDA永续最高杠杆由20倍临时降至10倍，11月15日20:05美东时间生效，并计划在财报发布后恢复。公告未说明已有仓位是否同步降档，也未给出波动或深度恢复阈值。</p>
+          <h3 class="item-h">November 15th, trade.xyz halved the NVDA leverage before NVIDIA’s financial report.</h3>
+          <p class="item-b">Ahead of Nvidia’s November 17 after-hours earnings release, trade.xyz will temporarily reduce maximum leverage on its NVDA perpetual from 20x to 10x, effective November 15 at 20:05 Eastern time. It plans to restore the limit after the release. The announcement did not specify how existing positions would be treated or set volatility or market-depth thresholds for restoring leverage.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://teapawt.net/tradexyz?filter=posts" target="_blank" rel="noopener" title="trade.xyz官方X镜像 · 发布 2026-11-15" aria-label="来源 1：trade.xyz官方X镜像 · 发布 2026-11-15">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://teapawt.net/tradexyz?filter=posts" target="_blank" rel="noopener" title="Public mirror of trade.xyz&#x27;s official X account · Published 2026-11-15" aria-label="Source 1: Public mirror of trade.xyz&#x27;s official X account · Published 2026-11-15">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月14日，Ondo Perps新增五只可作永续保证金的现货资产</h3>
-          <p class="item-b">Ondo Perps把MSTRon、INTCon、COINon、MRVLon和BMNRon五只现货资产接入订单簿，并允许它们作为已有永续仓位的保证金，便于做基差策略。公告没有披露抵押折扣、集中度限额或现货下跌时的追加保证金规则。</p>
+          <h3 class="item-h">On November 14, Ondo Perps added five new spot assets that can be used as perpetual margins.</h3>
+          <p class="item-b">Ondo Perps added MSTRon, INTCon, COINon, MRVLon and BMNRon to its spot order book. These assets can also collateralize existing perpetual positions, making it easier to run basis trades. The announcement did not specify collateral haircuts, concentration limits or margin-call rules if a spot asset falls in price.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://x.com/OndoPerps/status/2121213991091585525" target="_blank" rel="noopener" title="Ondo Perps · 发布 2026-11-14" aria-label="来源 1：Ondo Perps · 发布 2026-11-14">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://x.com/OndoPerps/status/2121213991091585525" target="_blank" rel="noopener" title="Ondo Perps · Published 2026-11-14" aria-label="Source 1: Ondo Perps · Published 2026-11-14">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月13日，Aster Vault支持同一金库交易现货与永续</h3>
-          <p class="item-b">Aster允许新建Vault时选择Perp + Spot，管理人可在同一金库运行现货与永续对冲或资金费中性策略。官方只确认创建入口和策略范围，尚未说明两类仓位是否共享保证金、现货资产折扣、清算顺序和赎回等待。</p>
+          <h3 class="item-h">November 13th, Aster Vault supports both spot and perpetual transactions for the same vault.</h3>
+          <p class="item-b">When creating a new Aster Vault, a manager can select Perp + Spot and use one vault for spot and perpetual hedges or funding-neutral strategies. Aster confirmed the setup option and supported strategies. It has yet to explain whether the positions share margin, how spot collateral is discounted, which positions liquidate first or how long redemptions take.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://nitter.rdrama.net/Aster_DEX" target="_blank" rel="noopener" title="Aster官方X镜像 · 发布 2026-11-13" aria-label="来源 1：Aster官方X镜像 · 发布 2026-11-13">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://nitter.rdrama.net/Aster_DEX" target="_blank" rel="noopener" title="Public mirror of Aster&#x27;s official X account · Published 2026-11-13" aria-label="Source 1: Public mirror of Aster&#x27;s official X account · Published 2026-11-13">1</a>
           </div>
         </article>
         </div>
@@ -153,39 +153,39 @@
         <div class="sec-head">
           <span class="sec-no">02</span>
           <div>
-            <h2 class="sec-title">永续产品与用户运营</h2>
+            <h2 class="sec-title">Perpetuals products and user engagement</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月14日，Pacifica移动端上线OCO订单</h3>
-          <p class="item-b">Pacifica移动端新增OCO订单，用户可同时挂出两个互斥订单，其中一个成交后系统自动取消另一个，可用于突破、回撤和持仓退出。更新把组合退出带到移动端，但公告未披露网络延迟、部分成交或取消失败时的兜底顺序。</p>
+          <h3 class="item-h">November 14: Pacifica adds one-cancels-the-other orders to its mobile app</h3>
+          <p class="item-b">Pacifica’s mobile app now lets traders place two linked orders. When one fills, the system automatically cancels the other. Traders can use them for breakout or pullback entries and position exits. The announcement did not explain how the system handles network delays, partial fills or a failed cancellation.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://x.com/pacifica_fi/status/2121234849659044023" target="_blank" rel="noopener" title="Pacifica · 发布 2026-11-14" aria-label="来源 1：Pacifica · 发布 2026-11-14">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://x.com/pacifica_fi/status/2121234849659044023" target="_blank" rel="noopener" title="Pacifica · Published 2026-11-14" aria-label="Source 1: Pacifica · Published 2026-11-14">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月14日，Variational加入Scale Orders与Cancel All</h3>
-          <p class="item-b">Variational Omni新增Scale Orders，可按设定区间自动放置多笔限价单，并加入一键撤销全部挂单，订单面板也改进价差深度显示。功能适合分层建仓和快速收缩风险，但官方未披露批量订单上限与极端行情下的撤单延迟。</p>
+          <h3 class="item-h">On November 14th, Variational added Scale Orders and Cancel All.</h3>
+          <p class="item-b">Variational Omni has added a feature called “Scale Orders.” This allows for the automatic placement of multiple limit orders within a set range. It also includes a function to cancel all pending orders with one click. The order panel has been improved, with better display of price differences. This feature is suitable for stratifying positions and quickly reducing risks. However, the official documentation does not specify the maximum number of batch orders or the delay in canceling orders during extreme market conditions.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://x.com/variational_io/status/2121241706863751464" target="_blank" rel="noopener" title="Variational · 发布 2026-11-14" aria-label="来源 1：Variational · 发布 2026-11-14">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://x.com/variational_io/status/2121241706863751464" target="_blank" rel="noopener" title="Variational · Published 2026-11-14" aria-label="Source 1: Variational · Published 2026-11-14">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月13日，Nado结束持续51周的积分计划</h3>
-          <p class="item-b">Nado停止积分累计，并称51周内向超过4.5万名用户发放约3320万积分，现有余额锁定，后续处理另行公布。平台把退出积分计划与即将推出的机构大额交易产品PRIME和移动端Purps相连，但尚未给出上线日期或迁移权益。</p>
+          <h3 class="item-h">November 13: Nado ends its 51-week points program</h3>
+          <p class="item-b">Nado stopped awarding points after distributing about 33.2 million to more than 45,000 users over 51 weeks. Existing balances are locked pending an announcement. Nado linked the transition to PRIME, its planned institutional block-trading product, and Purps, its planned mobile product. It has announced neither launch dates nor migration entitlements.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://nitter.cf/NADOHQ" target="_blank" rel="noopener" title="Nado官方X镜像 · 发布 2026-11-13" aria-label="来源 1：Nado官方X镜像 · 发布 2026-11-13">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://nitter.cf/NADOHQ" target="_blank" rel="noopener" title="Public mirror of Nado&#x27;s official X account · Published 2026-11-13" aria-label="Source 1: Public mirror of Nado&#x27;s official X account · Published 2026-11-13">1</a>
           </div>
         </article>
         </div>
@@ -194,44 +194,44 @@
         <div class="sec-head">
           <span class="sec-no">03</span>
           <div>
-            <h2 class="sec-title">AI模型与Agent基础设施</h2>
+            <h2 class="sec-title">AI models and agent infrastructure</h2>
           </div>
         </div>
         <div class="sec-body">
 
         <article class="item">
-          <h3 class="item-h">11月12日，Google发布Gemini 4 Hydrogen与自动模型编排</h3>
-          <p class="item-b">Gemini 4 Hydrogen面向编码与Agent执行开放百万上下文，API每百万输入和输出分别为1.5美元、7.5美元。Google同时推出Orchestrator，在Carbon与Hydrogen间动态切换，官方测试称任务成功率接近Carbon，配额少24%、速度快19%。</p>
+          <h3 class="item-h">On November 12th, Google released Gemini 4 Hydrogen and automatic model orchestration.</h3>
+          <p class="item-b">Gemini 4 Hydrogen offers a million-token context window for coding and agent tasks. API pricing is $1.50 per million input tokens and $7.50 per million output tokens. Google also introduced Orchestrator, which switches between Carbon and Hydrogen. Google reported a task success rate close to Carbon’s, with 24% less quota usage and 19% faster performance.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/" target="_blank" rel="noopener" title="Google · 发布 2026-11-12" aria-label="来源 1：Google · 发布 2026-11-12">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/" target="_blank" rel="noopener" title="Google · Published 2026-11-12" aria-label="Source 1: Google · Published 2026-11-12">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月13日，OpenAI推出需逐笔生物验证的Agent钱包</h3>
-          <p class="item-b">ChatGPT Wallet先向美国ChatGPT Pro成年用户开放，用户逐笔核对商品、总额和卡片后，以面容或指纹批准；支付网络向Agent提供替代卡号，实际卡片信息不暴露。首阶段仅在dots内使用，网站风控仍可能误拒Agent订单。</p>
+          <h3 class="item-h">November 13: OpenAI introduces an agent wallet requiring biometric approval for each payment</h3>
+          <p class="item-b">ChatGPT Wallet will first be available to adult users of ChatGPT Pro in the United States. Users will verify the products, total amounts, and cards one by one, and then approve them using facial recognition or fingerprint recognition. The payment network will provide agents with alternative card numbers, and the actual card information will not be disclosed. This system will be used only within Dots at the beginning, and website risk control may still reject agents’ orders incorrectly.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://openai.com/index/introducing-chatgpt-wallet/" target="_blank" rel="noopener" title="OpenAI · 发布 2026-11-13" aria-label="来源 1：OpenAI · 发布 2026-11-13">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://openai.com/index/introducing-chatgpt-wallet/" target="_blank" rel="noopener" title="OpenAI · Published 2026-11-13" aria-label="Source 1: OpenAI · Published 2026-11-13">1</a>
           </div>
         </article>
         <article class="item">
-          <h3 class="item-h">11月13日，DeepSeek开放完整应用能力API</h3>
-          <p class="item-b">DeepSeek把网页与图片搜索、深度检索、文件输入、URL读取和安全检查接入Messages、Responses与Chat Completions API，并另提供OCR、ASR和TTS。工具调用与上下文拼装由服务端处理，但工具费另计，公开应用仍须启用安全检查。</p>
+          <h3 class="item-h">November 13th, DeepSeek released the complete application capability API.</h3>
+          <p class="item-b">DeepSeek has integrated web and image search, deep retrieval, file input, URL reading, and security checks into the Messages, Responses, and Chat Completions APIs. It also provides OCR, ASR, and TTS services. Tool calls and context assembly are handled by the server, but the costs of these tools are separate. Public applications must still enable security checks.</p>
 
 
           <div class="item-meta compact-sources">
 
-            <span class="source-label">来源</span><a class="source-number" href="https://api-docs.deepseek.com/news/news261113/" target="_blank" rel="noopener" title="DeepSeek · 发布 2026-11-13" aria-label="来源 1：DeepSeek · 发布 2026-11-13">1</a>
+            <span class="source-label">Sources</span><a class="source-number" href="https://api-docs.deepseek.com/news/news261113/" target="_blank" rel="noopener" title="DeepSeek · Published 2026-11-13" aria-label="Source 1: DeepSeek · Published 2026-11-13">1</a>
           </div>
         </article>
         </div>
       </section>
-    <footer class="foot">PERP DEX DAILY · 自动生成 · 仅供参考，非投资建议</footer>
+    <footer class="foot">PERP DEX DAILY · Automated publication · For information only. Not investment advice.</footer>
   </main>
 </body>
 </html>
