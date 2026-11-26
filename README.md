@@ -1,6 +1,6 @@
 # Perp DEX Daily
 
-Perp DEX Daily is an independent research publication built and maintained by Doris. It covers perpetual futures markets, crypto trading infrastructure, and AI products. Each edition examines changes in pricing, margin, liquidation, or settlement and explains what traders, product builders, and researchers can do with that information.
+Perp DEX Daily is an independent research publication built and maintained by Doris. New daily editions are written in Simplified Chinese. The archive through November 26, 2026 is available in English. The publication covers perpetual futures markets, crypto trading infrastructure, and AI products. Each edition examines changes in pricing, margin, liquidation, or settlement and explains what traders, product builders, and researchers can do with that information.
 
 [Read the latest edition](https://dorischeyy.github.io/perp-daily/) · [Browse past editions and editorial reviews](docs/archive/)
 

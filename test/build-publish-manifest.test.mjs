@@ -73,9 +73,10 @@ test("rejects a truncated story ledger", () => {
   assert.match(result.out, /threads\.json is unexpectedly short/);
 });
 
-test("flags untranslated text in an otherwise English editorial review", () => {
-  const review = `# Editorial review\n${"Verified source. ".repeat(30)}\u4e2d\u6587`;
+test("includes the UTF-8 bytes of a Chinese editorial review in the manifest", () => {
+  const review = `# 编辑自评\n${"已核实原始来源和事件日期。".repeat(30)}`;
   const result = run(["lib/build-publish-manifest.mjs", DATE, fixture({ review })]);
-  assert.equal(result.code, 1);
-  assert.match(result.out, /remaining Chinese text in docs\/archive\/.+-review\.md/);
+  assert.equal(result.code, 0);
+  const entry = JSON.parse(result.out).files.find(file => file.path.endsWith("-review.md"));
+  assert.equal(entry.bytes, Buffer.byteLength(review));
 });

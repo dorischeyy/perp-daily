@@ -1,6 +1,6 @@
 # Project discovery and research
 
-Use this playbook with [the publishing guide](../generate.md) and `editorial_version: 2`. Research establishes who competes for users, how orders reach a venue, and who bears the risk. Publish the findings in English, while searching original materials in the languages used by projects and their users.
+Use this playbook with [the publishing guide](../generate.md) and `editorial_version: 2`. Research establishes who competes for users, how orders reach a venue, and who bears the risk. Write new editions in Simplified Chinese. Search original materials in the languages used by projects and their users.
 
 ## 1. Choosing subjects
 
@@ -62,11 +62,11 @@ Trace the route from discovery to continued use. Identify the audience, where th
 
 Explain at least one documented choice and its cost. Examples include building a venue versus drawing on existing liquidity, mobile onboarding versus professional API access, market breadth versus asset specialization, or collateral efficiency versus risk isolation. Attribute a project's stated position and label any inference about motives or effects.
 
-Keep the full mechanism, go-to-market analysis, product trade-off, discussion, inference, and unknowns in the evidence record. Publish a 3 to 25 word headline and a single paragraph of 30 to 100 words. Put links in the source fields. For news, lead with the event, affected users, and effective scope. Document the previous rule before claiming a difference. For a study, describe what users can deposit, borrow, trade, or withdraw. Explain which balances can support which positions before generalizing about margin systems.
+Keep the full mechanism, go-to-market analysis, product trade-off, discussion, inference, and unknowns in the evidence record. Write a headline of 12 to 90 characters and a single paragraph of 70 to 150 characters. Put links in the source fields. For news, lead with the event, affected users, and effective scope. Document the previous rule before claiming a difference. For a study, describe what users can deposit, borrow, trade, or withdraw. Explain which balances can support which positions before generalizing about margin systems.
 
-Use `event_date` for a verified event and match the headline date. Leave undated mechanism headlines undated. For a genuine data study, use `snapshot_date` with a matching “As of” date, no later than the report date. It is mutually exclusive with `event_date`. The actual source publication date stays in `date`, or is null for undated research material. Record the research check separately in `checked_at`. Never convert a check date into a launch or snapshot date.
+Use `event_date` for a verified event and match the headline date. Leave undated mechanism headlines undated. For a genuine data study, use `snapshot_date` and give the observation date in the Chinese headline. The observation must fall on or before the report date. It is mutually exclusive with `event_date`. The actual source publication date stays in `date`, or is null for undated research material. Record the research check separately in `checked_at`. Never convert a check date into a launch or snapshot date.
 
-Write the lead in one or two sentences, 8 to 55 words in total, with no sentence longer than 32 words. State one supported finding and any essential condition. Leave out reading instructions, general claims of significance, and connections between unrelated events.
+Write the lead in one or two sentences, 20 to 120 characters in total, with no sentence longer than 70 characters. State one supported finding and any essential condition. Leave out reading instructions, general claims of significance, and connections between unrelated events.
 
 ## 5. Discussion and adoption claims
 
@@ -78,13 +78,13 @@ A claim that multiple people discussed an issue requires at least two distinct a
 
 Each study requires at least two distinct source URLs, including an official mechanism document or product page. Two official pages can confirm a rule without showing independent adoption. Reread the primary source and references on the report date and set their `checked_at` accordingly. A readable specification alone does not establish production availability. The public source row deduplicates the primary, reference, and discussion URLs and keeps source names, publication and check dates, and available affiliations in accessible link metadata.
 
-Write `## A4 Project discovery and evidence` using these headings in order:
+Follow the Chinese A4 headings in the [editorial review template](../generate.md#7-complete-the-editorial-review). Record the following in order:
 
-- `### Search coverage` records actual queries, windows, discoveries, selections, exclusions, and at least two searches outside the registry.
-- `### Project classification` names the internal type, public grouping, domain, and relevance of each selected item.
-- `### Discussion evidence` records author, affiliation, date, observation, and URL, or the specific evidence gap.
-- `### New findings and open questions` compares the research with the past seven editions, identifies undisclosed details, and sets a trigger for the next review.
+- Search coverage records actual queries, windows, discoveries, selections, exclusions, and at least two searches outside the registry.
+- Project classification names the internal type, public grouping, domain, and relevance of each selected item.
+- Discussion evidence records author, affiliation, date, observation, and URL, or the specific evidence gap.
+- For new findings and open questions, compare the research with the past seven editions, identify undisclosed details and set a trigger for the next review.
 
-Follow A4 with `## A5 AI candidate selection`, before section B. In `### Vendor coverage`, use all seven canonical names and give the actual searches, source pages, findings, exclusions, or access gaps for each. In `### Top three and exclusions`, consolidate the same event and score all candidates across the five dimensions worth 30, 25, 20, 15, and 10 points. Explain the descending ranking, tie-breaks, and exclusions. Match the three published integer scores to those in A5.
+Follow A4 with the AI selection record (A5), before section B. In its vendor coverage subsection, use all seven canonical names and give the actual searches, source pages, findings, exclusions, or access gaps for each. In its top-three selection subsection, consolidate the same event and score all candidates across the five dimensions worth 30, 25, 20, 15, and 10 points. Explain the descending ranking, tie-breaks, and exclusions. Match the three published integer scores to those in A5.
 
 Carry discovery leads into the next research cycle through A4 and A5. Add a qualifying change to `threads.json` using its actual event date. The five-file daily publication excludes source registry changes.

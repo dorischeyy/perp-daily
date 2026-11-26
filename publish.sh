@@ -25,7 +25,7 @@ stage_preflight() {
 
 # Read-only validation. Fix the specific failure before retrying.
 stage_validate() {
-  node lib/validate-content.mjs content.json || {
+  node lib/validate-content.mjs content.json --require-chinese || {
     echo "Invalid content.json. Fix the reported fields and rerun bash publish.sh validate." >&2; return 1; }
   node lib/check-editorial.mjs content.json || {
     echo "Editorial validation failed. Revise the affected copy and rerun bash publish.sh validate." >&2; return 1; }
@@ -44,8 +44,20 @@ stage_render() {
   node lib/build-html.mjs content.json "docs/archive/${DATE}.html" || { echo "Rendering failed." >&2; return 1; }
   cp "docs/archive/${DATE}.html" docs/index.html
   [ -f review.draft.md ] && mv -f review.draft.md "docs/archive/${DATE}-review.md"
-  node -e "const fs=require('fs');const c=JSON.parse(fs.readFileSync('content.json','utf8'));const d='${DATE}';fs.writeFileSync('docs/latest.json',JSON.stringify({date:d,url:'${URL}',title:'Perp DEX Daily · '+d,lead:c.lead||'Perp DEX Daily'},null,2))" \
-    || { echo "Failed to write latest.json." >&2; return 1; }
+  if ! node --input-type=module - "${DATE}" "${URL}" <<'NODE'
+import { readFileSync, writeFileSync } from "node:fs";
+import { reportCopy } from "./lib/edition-copy.mjs";
+
+const [date, url] = process.argv.slice(2);
+const content = JSON.parse(readFileSync("content.json", "utf8"));
+const { name } = reportCopy(content);
+const latest = { date, url, title: `${name} · ${date}`, lead: content.lead || name };
+writeFileSync("docs/latest.json", JSON.stringify(latest, null, 2));
+NODE
+  then
+    echo "Failed to write latest.json." >&2
+    return 1
+  fi
   echo "Rendered docs/archive/${DATE}.html"
 }
 

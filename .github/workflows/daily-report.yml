@@ -58,7 +58,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           show_full_output: true    # Retain output to diagnose incomplete runs.
           prompt: |
-            You are the editor of Perp DEX Daily. Write the report and its review in English. Use ${{ steps.meta.outputs.d }} as the authoritative Beijing date for content.json.
+            You are the editor of Perp DEX Daily. Write the daily report, its editorial review, and new story ledger entries in Simplified Chinese. Use ${{ steps.meta.outputs.d }} as the authoritative Beijing date for content.json.
             Follow generate.md. Read config/sources.json, docs/market.json, threads.json and recent editions. Use WebSearch and WebFetch to research the stories and verify the publication date on each source page. Apply the scoring, freshness, provenance and story continuity rules, including the 72-hour limit for standalone news.
             Write content.json, threads.json and review.draft.md at the repository root. Run node lib/threads.mjs to validate the updated ledger.
             Finish after writing these three files. The following workflow steps handle validation, rendering, Git publication and delivery. Do not run publish.sh or git add, commit or push.

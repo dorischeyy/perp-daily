@@ -248,3 +248,16 @@ test("Keeps the legacy section order", () => {
   assert.ok(html.indexOf('sec-launchpad"') < html.indexOf('sec-crypto"'));
   assert.ok(html.indexOf('sec-crypto"') < html.indexOf('sec-ai"'));
 });
+
+test("renders the Chinese edition with a localized masthead, attribution and accessible sources", () => {
+  const c = baseContent({ editorial_version: 2, lead: "两家交易所公布新的保证金规则。", edition: 144 });
+  c.sections[0].items[0].source = "官方公告";
+  const { code, html } = render(c);
+  assert.equal(code, 0);
+  assert.match(html, /<html lang="zh-CN">/);
+  assert.match(html, /<title>Perp DEX 日报 · 2026-06-23<\/title>/);
+  assert.match(html, /第 144 期/);
+  assert.match(html, /2026年6月23日 · 星期二/);
+  assert.match(html, /aria-label="来源 1：官方公告 · 发布 2026-06-23"/);
+  assert.match(html, /Doris 开发与维护/);
+});

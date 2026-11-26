@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { validateContent } from "../lib/validate-content.mjs";
-import { baseContent } from "./_helpers.mjs";
+import { baseContent, tmpJson, run } from "./_helpers.mjs";
 import { researchContent } from "./_research-fixture.mjs";
 
 test("Accepts a valid report", () => {
@@ -245,4 +245,27 @@ test("Validates ordered AI scores", () => {
   assert.deepEqual(validateContent(content).errors, []);
   ai[2].importance_score = 80;
   assert.ok(validateContent(content).errors.some((error) => /descending order/.test(error)));
+});
+
+test("guards Chinese daily copy while accepting English archive inputs", () => {
+  const english = researchContent();
+  assert.deepEqual(validateContent(english).errors, []);
+  const cli = run(["lib/validate-content.mjs", tmpJson(english), "--require-chinese"]);
+  assert.equal(cli.code, 1);
+  assert.match(cli.out, /lead must be written in Chinese/);
+  assert.match(cli.out, /headline must be written in Chinese/);
+  assert.match(cli.out, /body must be written in Chinese/);
+
+  const daily = researchContent({ lead: "交易平台扩大保证金的适用范围，交易者可查看新增资产的抵押折扣。" });
+  for (const section of daily.sections) {
+    for (const item of section.items) {
+      item.headline = item.kind === "research" ? "钱包应用通过订单簿为交易者提供新的入口" : "6月23日交易平台调整保证金折扣";
+      item.body = "交易平台列明了新增抵押资产的估值方式和使用范围。持仓用户能在账户页查看折扣后的可用余额，新增资产可以承担多少风险取决于相应合约的保证金要求，公告还未披露上线后的使用规模。";
+    }
+  }
+  assert.deepEqual(validateContent(daily, { requireChinese: true }).errors, []);
+  daily.sections[0].items.at(-1).headline = "6月23日 Example Protocol opens its lending market";
+  assert.ok(validateContent(daily, { requireChinese: true }).errors.some(error => /headline must be written in Chinese/.test(error)));
+  daily.sections.at(-1).items.at(-1).body = english.sections.at(-1).items.at(-1).body;
+  assert.ok(validateContent(daily, { requireChinese: true }).errors.some(error => /ai.*body must be written in Chinese/.test(error)));
 });

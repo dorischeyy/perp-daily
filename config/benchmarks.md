@@ -44,7 +44,7 @@ Hyperliquid's historical daily fees were roughly $1 million to $3 million. Mid-s
 3. When only notional volume is available, describe what is known about trading activity and what remains unverified about its quality. Points programs and low open interest alone do not prove artificial trading.
 4. Evaluate new products on mechanics, acquisition, and distribution as well as scale. Funding or volume identifies a stage of development and limits how far a finding can be generalized.
 
-Choose the one comparison that helps the reader interpret a figure. Fold it into the 30 to 100 word item. These questions belong in the editorial review:
+Choose the one comparison that helps the reader interpret a figure. Include it in the item’s 70 to 150 characters of body copy. These questions belong in the editorial review:
 
 | Review label | Applies to | Evidence to include |
 | --- | --- | --- |

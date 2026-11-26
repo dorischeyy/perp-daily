@@ -447,3 +447,31 @@ test("Escapes discussion content and hides research notes", () => {
   assert.ok(!html.includes('Unsafe source'));
   assert.ok(!html.includes('&lt;script&gt;alert(2)&lt;/script&gt;'));
 });
+
+test("checks Chinese character limits, bullets, snapshot dates and weekly windows", () => {
+  const content = researchContent();
+  const research = item(content);
+  research.body = "甲".repeat(70);
+  research.snapshot_date = TODAY;
+  research.headline = "截至6月23日钱包订单簿已支持十个合约";
+  assert.deepEqual(errors(content), []);
+  research.body = "甲".repeat(151);
+  assert.ok(errors(content).some(error => /70–150 visible characters/.test(error)));
+  research.body = "机制：" + "甲".repeat(70);
+  assert.ok(errors(content).some(error => /labeled subheadings/.test(error)));
+  research.body = "1、 " + "甲".repeat(70);
+  assert.ok(errors(content).some(error => /bullets/.test(error)));
+  research.body = "甲".repeat(70);
+  research.headline = "截至2025年6月23日钱包订单簿已支持十个合约";
+  assert.ok(errors(content).some(error => /match snapshot_date/.test(error)));
+  delete research.snapshot_date;
+  assert.ok(errors(content).some(error => /must be undated/.test(error)));
+  research.headline = "钱包订单簿为交易者提供多种合约";
+
+  const news = content.sections[0].items[2];
+  news.headline = "本周主线：6月16日交易平台调整部分持仓限制";
+  news.event_date = "2026-06-16";
+  assert.equal(freshness(content).code, 0);
+  news.headline = "6月16日交易平台调整部分持仓限制";
+  assert.equal(freshness(content).code, 1);
+});

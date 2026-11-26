@@ -1,6 +1,6 @@
 # Perp DEX Daily publishing guide
 
-Produce one English-language edition for the current date in Beijing. Write headlines, body copy, section labels, summaries, editorial reviews, and ledger commentary in English. Preserve source URLs, API identifiers, numbers, dates, and attributed meaning. Research may use sources in other languages.
+Produce one daily edition in Simplified Chinese for the current date in Beijing. Use Simplified Chinese for the lead, headlines, body copy, section labels, delivery summaries, editorial review, and new story ledger entries. Keep official organization names, product names, and tickers recognizable. Preserve source URLs, API identifiers, numbers, dates, and attributed meaning. Research may use sources in other languages.
 
 Perp DEX Daily serves traders, product builders, and market researchers. Cover perpetual futures, crypto trading infrastructure, and material AI developments. Verify what changed, when it happened, who can use it, and what decision it affects. Use `editorial_version: 2` for current editions. Read [the research playbook](config/research-playbook.md) with [the project radar](config/project-radar.json).
 
@@ -51,12 +51,12 @@ Use the four date fields for their specific purposes:
 | --- | --- |
 | `date` | Actual publication date of the cited source, confirmed on the page. News requires a date. Undated research documents may use null. |
 | `event_date` | Verified date of the event itself. Include it in news headlines. A later reprint does not renew an event. For an announcement of future implementation, distinguish the announcement from its effective date. |
-| `snapshot_date` | Actual observation date of a data study. Use it only on research and with a matching “As of” headline, no later than the report date. It is mutually exclusive with `event_date`. |
+| `snapshot_date` | Actual observation date of a data study. Use it only on research and with a headline with `截至` and the same observation date, no later than the report date. It is mutually exclusive with `event_date`. |
 | `checked_at` | Day the source was read. For studies, set it to the report date on the primary source and each reference. Keep it out of undated mechanism headlines. |
 
 Check embedded source URL dates against the source's real date. An unexplained difference of more than two days blocks publication. In a prior edition, articles published on December 19, 2025, January 29, March 18, and June 3, 2026 were assigned June 20 or 21 dates. Keep an older article's true date even when that removes a candidate.
 
-**News.** A standalone news item's source and event must meet the 72-hour window. Older evidence needed for context can appear briefly in a current item, clearly dated as background. A seven-day exception is available for one or two genuine multi-event weekly trends. Consolidate related developments into a chronological account, prefix the headline with `Weekly theme |`, use the latest relevant source date, and explain the change over the week. A single old announcement cannot use this exception. AI news follows the same rule. Reject future and invalid dates.
+**News.** A standalone news item's source and event must meet the 72-hour window. Older evidence needed for context can appear briefly in a current item, clearly dated as background. A seven-day exception is available for one or two genuine multi-event weekly trends. Consolidate related developments into a chronological account, begin the headline with `本周主线`, use the latest relevant source date, and explain the change over the week. A single old announcement cannot use this exception. AI news follows the same rule. Reject future and invalid dates.
 
 **Research.** Use `kind: "research"` for a substantive non-AI study with full evidence. Require at least two distinct URLs, including an official mechanism document or product page, and reread all sources on the report date. Preserve known dates even when old. Document which rule, application, comparison, or evidence is new to the publication. Search current discussion over seven days where possible, up to 30 days. Mechanism documents have no age limit. Older interviews can serve as references. Record specific discussion gaps if original observations are unavailable.
 
@@ -92,9 +92,9 @@ A qualifying development appears in one normal report item. Use a short sentence
 
 ## 6. Write the public edition
 
-- **Lead.** State one supported finding and any necessary limit in one or two sentences. Use 8 to 55 words overall and at most 32 words per sentence. Prefer the concrete change and its consequence over phrases such as “This edition will explore” or “Let's look at.” Keep detailed numbers and mechanics in the body. A regulatory or funding announcement earns the lead only if its effect warrants it.
-- **Headlines.** Use 3 to 25 words in a complete statement. News headlines name the real event date, project, and change. Use ISO dates or English month-and-day dates. Mechanism studies have undated headlines unless tied to a verified event. Snapshot studies use “As of” and the matching data date.
-- **Body.** Write a single paragraph of 30 to 100 English words in a single string. Omit bullets, stacked subheads, and separate context cards. The public headline and numbered source row are outside the body word count. Use plain prose or the renderer's supported bold markers and place URLs in their dedicated fields.
+- **Lead.** State one supported finding and any necessary limit in one or two sentences. Use 20 to 120 characters overall, with at most 70 per sentence. Prefer the concrete change and its consequence over phrases such as “This edition will explore” or “Let's look at.” Keep detailed numbers and mechanics in the body. A regulatory or funding announcement earns the lead only if its effect warrants it.
+- **Headlines.** Use 12 to 90 characters in a complete statement. News headlines name the real event date, project, and change. Use an ISO date or Chinese month and day, such as `11月25日`. Mechanism studies have undated headlines unless tied to a verified event. Snapshot studies use `截至` and the matching data date.
+- **Body.** Write a single paragraph of 70 to 150 characters in a single string. Count each Unicode character, including Latin letters, digits, and punctuation. Exclude whitespace and supported bold markers. Omit bullets, stacked subheads, and separate context cards. The public headline and numbered source row are outside the body character count. Use plain prose or the renderer's supported bold markers and place URLs in their dedicated fields.
 - **News.** Begin with what was added, changed, or withdrawn. Give the affected users and scope, including region or effective date where material. Compare with the previous rule only if documented. Explain the mechanism after the event itself.
 - **Studies.** Describe what users deposit, borrow, trade, or withdraw. Compare a documented equivalent mode. For instance, if each pair needs separate collateral, say that the balance assigned to one pair cannot cover a loss in another. Explain the actual account behavior before calling a rule unusual.
 - **Navigation and evidence.** Use one section heading. Keep `kicker`, `product_view`, separate developments, retired product-assessment sections, item `context`, and internal research labels off the current page. Let the lead summarize the main change and use the body for detail. A finding can draw on the internal notes without duplicating a visible paragraph. Avoid repeating a project study or the same event in multiple sections.
@@ -105,37 +105,37 @@ A qualifying development appears in one normal report item. Use a short sentence
 Review the working draft, revise the edition, and save the audit to `review.draft.md` in the repository root. Render archives it as `docs/archive/YYYY-MM-DD-review.md`. The audit is a separate published artifact. Use the following headings and order exactly.
 
 ```markdown
-## A0 Reader value
-**Why open this edition today?**: ...
-**What is the most important finding?**: ...
-**Which prior assessment changed?**: ...
-**What decision can readers make?**: ...
-**What evidence would overturn the conclusion?**: ...
-**Which news recap was removed?**: Removed ...
+## A0 读者价值自问
+**为什么今天值得点开？**：…
+**最值得看的是什么？**：…
+**哪项原有判断被更新？**：…
+**看完后能做出什么更好的决定？**：…
+**什么证据会推翻今天的结论？**：…
+**哪条内容只是新闻复述？**：已删除…
 
-## A Editorial review
-### Freshness audit
-### Six reader perspectives
-### Ten-dimension assessment
-### Top three revisions
-## A1 Metric context
-## A2 Candidate scores
-## A3 Story continuity
-## A4 Project discovery and evidence
-### Search coverage
-### Project classification
-### Discussion evidence
-### New findings and open questions
-## A5 AI candidate selection
-### Vendor coverage
-### Top three and exclusions
-## B Excluded items
-## C Changelog
+## A 体检报告
+### 时效自查
+### 六视角找茬
+### 十维度打分
+### 今天必须改的 Top 3
+## A1 数字量级检查
+## A2 评分表
+## A3 故事线连续性检查
+## A4 项目发现与证据
+### 检索覆盖
+### 项目分类
+### 讨论证据
+### 研究增量与待查
+## A5 AI候选筛选
+### 厂商覆盖
+### 前三条与取舍
+## B 不收录清单
+## C changelog
 ```
 
-Fill every section with actual observations. In A0, give a concrete subject, change in judgment, decision, and observable falsifier. State which prior conclusion changed or why confidence changed. Explain the basis and limits of the lead and why it outranked other candidates. Begin the final answer with `Removed` and identify an actual removal. Revise the draft if it offers no specific reader benefit.
+Fill every section with actual observations. In A0, give a concrete subject, change in judgment, decision, and observable falsifier. State which prior conclusion changed or why confidence changed. Explain the basis and limits of the lead and why it outranked other candidates. Begin the final A0 answer with `已删除` and identify an actual removal. Revise the draft if it offers no specific reader benefit.
 
-In the freshness audit, list every headline, section, kind, source date, event date, snapshot date, check date, body word count, and disposition. Mark inapplicable fields explicitly. Check source and event freshness for news, source-level verification for studies, matching snapshot headlines, and the multi-event basis for any weekly trend. In the six perspectives, give one or two item-specific observations for each reader:
+In the freshness audit, list every headline, section, kind, source date, event date, snapshot date, check date, body character count, and disposition. Mark inapplicable fields explicitly. Check source and event freshness for news, source-level verification for studies, matching snapshot headlines, and the multi-event basis for any weekly trend. In the six perspectives, give one or two item-specific observations for each reader:
 
 1. A trader checks positions, margin, exits, and comparable figures.
 2. A product lead checks implementation status and a comparable user action.
@@ -161,18 +161,18 @@ Preserve the field names. The following illustration shows one non-AI news item,
   "date": "2026-11-26",
   "editorial_version": 2,
   "edition": 143,
-  "lead": "The exchange extended collateral eligibility to five tokenized securities.",
+  "lead": "Binance将五只代币化证券纳入保证金范围，合格用户可用其作为抵押品。",
   "sections": [{
     "id": "collateral",
-    "title": "Collateral and margin",
+    "title": "抵押品与保证金",
     "items": [{
       "kind": "news",
       "domain": "crypto",
-      "relevance": "Eligibility affects which assets traders can post as margin.",
+      "relevance": "抵押资格决定交易者可以用哪些资产作为保证金。",
       "event_date": "2026-11-25",
-      "headline": "November 25: Binance adds five tokenized securities as collateral",
-      "body": "Binance added five tokenized securities to its eligible collateral list. Eligible users can trade these instruments on the spot market and use them as collateral under the applicable margin program.",
-      "source": "Illustrative exchange announcement",
+      "headline": "11月25日，Binance将五只代币化证券纳入保证金范围",
+      "body": "Binance于11月25日上线ARTYB、FRHCB、IBITB、IGVB和SOXXB现货，并将这五只代币化证券纳入跨仓和组合保证金的抵押品范围。服务仅向获准地区的合格用户开放。",
+      "source": "交易所公告示例",
       "url": "https://example.com/announcement",
       "date": "2026-11-25"
     }]

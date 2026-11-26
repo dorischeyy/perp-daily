@@ -106,3 +106,40 @@ test("Checks section and question order", () => {
   assert.ok(errors.some((error) => /sections are out of order/.test(error)));
   assert.ok(errors.some((error) => /answers are out of order/.test(error)));
 });
+
+test("checks the same editorial evidence in a Chinese A0–A5 review", () => {
+  const review = `## A0 读者价值自问
+**为什么今天值得点开？**：交易平台调整了账户抵押品的折算规则，改变了可用保证金。
+**最值得看的是什么？**：相同资产在两个账户模式下采用不同折扣。
+**哪项原有判断被更新？**：已提高复核抵押资产折扣变化的优先级。
+**看完后能做出什么更好的决定？**：风控团队可以核对各档抵押品的清算条件。
+**什么证据会推翻今天的结论？**：如果交易平台撤回折扣规则，需要重新评估。
+**哪条内容只是新闻复述？**：已删除未披露可用时间的合作公告。
+## A 体检报告
+### 时效自查
+### 六视角找茬
+### 十维度打分
+### 今天必须改的 Top 3
+## A1 数字量级检查
+## A2 评分表
+## A3 故事线连续性检查
+## A4 项目发现与证据
+### 检索覆盖
+检索了交易平台的公开文档与官方公告，并按日期核对版本。
+### 项目分类
+钱包为交易前端，订单簿撮合和清算分别由外部服务提供。
+### 讨论证据
+用户讨论中提到资金跨账户划转，平台帮助中心确认了相关规则。
+### 研究增量与待查
+新公告披露了抵押品限额，各账户适用的折扣还需另行确认。
+## A5 AI候选筛选
+### 厂商覆盖
+Anthropic、OpenAI、Scale AI、xAI、Kimi、DeepSeek、Qwen 的官方公告均已检查，并分别记录了可用日期与访问限制。
+### 前三条与取舍
+按可用范围、模型能力变化和证据质量选择前三条，排除旧功能转述。
+## B 不收录清单
+## C changelog`;
+  assert.deepEqual(auditReview(review, { editorial_version: 2 }).errors, []);
+  assert.ok(auditReview(review.replace("### 前三条与取舍", ""), { editorial_version: 2 }).errors.some(error => /A5/.test(error)));
+  assert.ok(auditReview(review.replace("已删除未披露可用时间的合作公告。", "继续观察。")).errors.some(error => /generic answer/.test(error)));
+});
