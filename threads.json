@@ -1542,12 +1542,12 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-10-21",
-      "last_update": "2026-11-20",
+      "last_update": "2026-11-25",
       "cadence_days": 3,
-      "next_check": "2026-11-26",
-      "thesis": "模型选型新增Qwen4-Max正式版的显式缓存、思维链摘要和美国区域部署，以及Seedance 2.5 Flash可调用的视频API。文本Agent和视频生产分别出现新的复用、驻留及成本参数，仍需按任务成功率、重复调用和完整账单比较。",
+      "next_check": "2026-11-29",
+      "thesis": "模型选型新增Qwen4-Max正式版的显式缓存、思维链摘要和多区域部署；预览版下线后旧ID会自动路由正式版并结束折扣，接口连续不代表模型版本与账单不变。文本Agent和视频生产仍需按任务成功率、重复调用和完整账单比较。",
       "why_us": "团队评估研究、客服、代码和定时Agent时，可以把任务成功率、工具调用次数、缓存命中与完整账单放在同一套真实任务中比较，避免只看每token单价或厂商基准决定模型和运行预算。",
-      "watch_for": "Qwen4-Max正式版与preview的接入及真实任务表现 / 显式缓存命中、写入和完整账单 / Seedance Flash试片成功率、分辨率与重试成本",
+      "watch_for": "Qwen4-Max旧ID自动路由后的任务差异与完整账单 / 显式缓存命中、写入和区域价格 / Seedance Flash试片成功率、分辨率与重试成本",
       "log": [
         {
           "date": "2026-10-19",
@@ -1588,6 +1588,11 @@
           "date": "2026-11-20",
           "point": "QwenCloud把Qwen4-Max加入美国弗吉尼亚部署范围，继续提供多模态、网页搜索、工具调用、结构化输出以及OpenAI和Anthropic兼容接口；区域接入和数据驻留选择增加，但价格、基准和美国区域服务级别没有新增披露。",
           "url": "https://docs.qwencloud.com/changelog/models"
+        },
+        {
+          "date": "2026-11-25",
+          "point": "阿里云下线Qwen4-Max-Preview，旧模型ID继续可调用但自动路由至qwen4-max，Credits与用量按正式版统计，预览折扣同时结束。接入不会立即中断，但底层模型、版本可复现性和完整账单可能静默变化。",
+          "url": "https://help.aliyun.com/en/model-studio/token-plan-product-updates"
         }
       ]
     },
@@ -1598,12 +1603,12 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-10-21",
-      "last_update": "2026-11-21",
+      "last_update": "2026-11-25",
       "cadence_days": 7,
-      "next_check": "2026-11-28",
-      "thesis": "资本复用正在从保证金和生息抵押扩展到股票持仓出借。Bybit允许符合条件的美股、ETF和ADR按机构需求出借并以USDC按月结算收益，但加入不保证成交或收益；复用价值必须与借出概率、费率分成和退出条件一起核验。",
+      "next_check": "2026-12-02",
+      "thesis": "资本复用正在从生息抵押和股票持仓出借扩展到代币化证券保证金。Binance允许五只bStocks进入跨仓与组合保证金，但这些资产是金融工具凭证而非直接股票，复用价值必须与抵押折扣、法律权利、强平和退出条件一起核验。",
       "why_us": "比较杠杆交易和生息抵押产品时，应分开说明交易流动性、保证金风险归属与提现结算依赖。共享订单簿不能自动推出跨市场保证金效率，获得借贷收益也不能自动承诺随时到账；这些差别会影响账户设计、风险提示和退出流程。",
-      "watch_for": "Bybit股票出借的实际借出率、费率分成和召回时效 / DeepBook Margin坏账与清算体验 / predict.fun赎回延迟 / 独立交易者采用与退出证据",
+      "watch_for": "Binance bStocks抵押折扣、强平顺序和退出限制 / Bybit股票出借率与召回时效 / DeepBook Margin坏账与清算体验 / 独立交易者采用与退出证据",
       "log": [
         {
           "date": "2026-10-23",
@@ -1639,6 +1644,11 @@
           "date": "2026-11-21",
           "point": "Bybit为符合条件的美股、ETF和ADR开放全额证券出借，费用按证券市值、借贷利率和用户分成逐日累计，并按自然月以USDC结算。加入计划不保证证券被借出或产生收益，持仓利用率需要与实际借出需求和退出条件一起评估。",
           "url": "https://announcements.bybit.com/en/article/fully-paid-securities-lending-fpsl-is-now-available-on-bybit-stocks--art1bc2caf65bc3/"
+        },
+        {
+          "date": "2026-11-25",
+          "point": "Binance把ARTYB、FRHCB、IBITB、IGVB和SOXXB五只代币化证券加入跨仓、组合保证金与Portfolio Margin Pro抵押品。它们可与底层持仓1比1转换，但法律形态是ADGM批准的金融工具凭证，公告未披露本期抵押折扣与极端行情退出顺序。",
+          "url": "https://www.binance.com/en/square/post/391930722230690"
         }
       ]
     },
