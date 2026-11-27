@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Perp DEX 日报由 Doris 开发并维护，追踪永续合约交易所、加密市场基础设施与 AI 产品进展。" />
+<title>Perp DEX 日报 · 2026-11-27</title>
+<style>
+  :root{ --ink:#16140f; --paper:#fbfaf6; --muted:#a3987f; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#f4f1ea; color:#16140f;
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    line-height:1.7; padding:48px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .mag{max-width:720px; margin:0 auto; background:#fbfaf6;
+    border:1px solid #e4ded0; padding:56px 56px 64px; }
+
+  .masthead{border-bottom:3px double #16140f; padding-bottom:20px; margin-bottom:8px;}
+  .mast-row{display:flex; justify-content:space-between; align-items:baseline;
+    font-family:-apple-system,sans-serif; font-size:12px;
+    letter-spacing:.08em; color:#6b6655; text-transform:uppercase;}
+  .mast-title{font-size:44px; font-weight:800; letter-spacing:-.01em;
+    margin:14px 0 6px; line-height:1.05;}
+  .mast-sub{font-family:-apple-system,sans-serif; font-size:13px;
+    color:#6b6655; letter-spacing:.03em;}
+
+  .lead{font-size:18px; line-height:1.85; color:#2c2820;
+    padding:28px 0 8px; border-bottom:1px solid #e4ded0; margin-bottom:8px;}
+  .lead::first-letter{font-size:30px; font-weight:700;}
+
+  .threads{margin:22px 0 6px; padding:18px 22px 8px; background:#f7f4ec;
+    border:1px solid #e4ded0; border-left:3px solid #b03a2e; border-radius:6px;}
+  .threads-h{font-family:-apple-system,sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#b03a2e; font-weight:700; margin-bottom:12px;}
+  .thread{padding:9px 0 11px; border-bottom:1px dotted #ddd6c6;}
+  .thread:last-child{border-bottom:none;}
+  .thread-t{font-size:16px; font-weight:700; color:#16140f; line-height:1.4;}
+  .thread-meta{font-family:-apple-system,sans-serif; font-size:11px;
+    color:#a3987f; letter-spacing:.04em; margin:2px 0 5px;}
+  .thread-u{font-size:14.5px; color:#403a2e; line-height:1.72;}
+  .thread-source{font-family:-apple-system,sans-serif; font-size:11px;
+    color:#a3987f; margin-top:4px;}
+  .thread-src{color:#8a7f66; text-decoration:none;}
+  .thread-src:hover{color:#b03a2e;}
+  .thread-w{font-family:-apple-system,sans-serif; font-size:12px;
+    color:#8a7f66; margin-top:4px;}
+  .thread-w b{color:#6b6655; font-weight:600;}
+
+  .sec{padding:34px 0; border-bottom:1px solid #ece6d8;}
+  .sec:last-child{border-bottom:none; padding-bottom:8px;}
+  .sec-head{display:flex; gap:18px; align-items:flex-start; margin-bottom:18px;}
+  .sec-no{font-family:-apple-system,sans-serif; font-size:13px;
+    font-weight:700; color:#b03a2e; border:1.5px solid #b03a2e; border-radius:50%;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex:0 0 30px; margin-top:4px;}
+  .sec-title{font-size:27px; font-weight:800; letter-spacing:-.01em; line-height:1.2;}
+  .sec-perpdex .sec-title{color:#b03a2e;}
+  .sec-launchpad .sec-title{color:#1f7a5a;}
+  .item{padding:14px 0 16px; border-bottom:1px dotted #ddd6c6; min-width:0; overflow-wrap:anywhere;}
+  .item:last-child{border-bottom:none;}
+  .item-h{font-size:19px; font-weight:700; line-height:1.45; margin-bottom:6px;}
+  .item-b{font-size:15.5px; color:#403a2e; line-height:1.8;}
+  .item-b + .item-b{margin-top:7px;}
+  .item-b strong{color:#16140f; font-weight:700;}
+  .item-context{margin-top:9px; padding:7px 10px; background:#f7f4ec; border-left:2px solid #b03a2e;
+    color:#6b6655; font-family:-apple-system,sans-serif; font-size:12.5px; line-height:1.65;}
+  .item-context-label{color:#b03a2e; font-weight:700; margin-right:6px;}
+  .item-meta{margin-top:9px; display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+    font-family:-apple-system,sans-serif; font-size:12px; letter-spacing:.03em;}
+  .item-date{color:#b03a2e; font-weight:600; font-variant-numeric:tabular-nums;
+    border:1px solid #e8d6d2; border-radius:3px; padding:1px 6px;}
+  .item-meta.compact-sources{display:inline-flex; flex-wrap:nowrap; gap:8px; max-width:100%;
+    white-space:nowrap; letter-spacing:0; line-height:1.5;}
+  .source-label{color:#a3987f; flex:none;}
+  .source-number{color:#8a7f66; text-decoration:underline; text-underline-offset:2px;
+    min-width:14px; padding:2px 0; text-align:center; flex:none; font-variant-numeric:tabular-nums;}
+  .source-number:hover,.source-number:focus-visible{color:#b03a2e;}
+  .item-src{color:#8a7f66; text-decoration:none; min-width:0; overflow-wrap:anywhere;}
+  .item-ref{color:#a3987f;}
+  a.item-src:hover{color:#b03a2e;}
+  .research-meta{font-family:-apple-system,sans-serif; font-size:11px; color:#b03a2e; margin-top:12px;}
+  .research-project{font-size:15px; font-weight:700; margin:4px 0 8px;}
+  .research-details{border-top:1px solid #e4ded0; font-size:14px; line-height:1.75;}
+  .research-row{padding:8px 0; display:grid; grid-template-columns:104px minmax(0,1fr); gap:12px;}
+  .research-row + .research-row{border-top:1px dotted #e4ded0;}
+  .research-row dt{font-family:-apple-system,sans-serif; font-size:12px; font-weight:600; color:#6b6655;}
+  .research-row dd{min-width:0; color:#403a2e;}
+  .research-inference{background:#f7f4ec; padding:10px;}
+  .research-discussions{list-style:none;}
+  .research-discussions li + li{margin-top:8px;}
+  .discussion-meta{font-family:-apple-system,sans-serif; font-size:11px; color:#8a7f66;}
+  .discussion-meta a{color:#8a7f66; text-decoration:underline; overflow-wrap:anywhere;}
+  .foot{margin-top:40px; padding-top:18px; border-top:3px double #16140f;
+    font-family:-apple-system,sans-serif; font-size:11px;
+    letter-spacing:.06em; color:#6b6655; text-align:center; line-height:1.8;}
+  .foot a{color:inherit; text-underline-offset:.16em;}
+  @media(max-width:560px){ .mag{padding:32px 22px 40px;} .mast-title{font-size:32px;} .research-row{grid-template-columns:minmax(0,1fr); gap:3px;} }
+</style>
+</head>
+<body>
+  <main class="mag">
+    <header class="masthead">
+      <div class="mast-row">
+        <span>永续合约与市场基础设施</span><span>第 144 期</span>
+      </div>
+      <h1 class="mast-title">PERP DEX 日报</h1>
+      <div class="mast-sub">2026年11月27日 · 星期五</div>
+    </header>
+    <p class="lead">Binance今日上线小米与建滔积层板永续，均为24小时交易、最高20倍杠杆。KuCoin同时用股票代币、试用金与手续费券召回流失VIP用户。</p>
+
+
+      <section class="sec sec-tradfi-products-and-distribution">
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2 class="sec-title">传统资产产品与分发</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月27日，Binance上线小米与建滔积层板永续</h3>
+          <p class="item-b">Binance于11月27日上线XIAOMIUSDT与HK1888USDT永续，前者按USDT计价，后者为Quanto合约。两者均以USDT结算，24小时交易，最高20倍杠杆，资金费每四小时结算，并进入Binance RIE交易及RCH清算体系。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.binance.com/en/square/post/392325392940659" target="_blank" rel="noopener" title="Binance TradFi永续上线公告 · 发布 2026-11-26" aria-label="来源 1：Binance TradFi永续上线公告 · 发布 2026-11-26">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月25日，Poloniex公布21只股票与ETF代币但交易尚未开放</h3>
+          <p class="item-b">Poloniex于11月25日公布21只bStocks股票与ETF代币，充值已开放，现货交易需等入金达到市场需求后另行开启，提现时间仍待确认。用户目前可把代币转入平台，却不能据此判断交易与退出通道已经可用。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.poloniex.com/announcement/45049898254247" target="_blank" rel="noopener" title="Poloniex代币化股票与ETF上线公告 · 发布 2026-11-25" aria-label="来源 1：Poloniex代币化股票与ETF上线公告 · 发布 2026-11-25">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月26日，KuCoin用股票代币和期货权益召回流失VIP</h3>
+          <p class="item-b">KuCoin面向曾为VIP、现已降至VIP0的用户推出召回计划，期限至12月31日。礼包最高1万USDT，拆分为股票代币、期货试用金、手续费券与收益加成，具体额度由客户经理按历史等级确认，不对机构、经纪商及受限地区开放。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://www.kucoin.com/announcement/KuCoin_VIP_Return_Program" target="_blank" rel="noopener" title="KuCoin VIP召回计划公告 · 发布 2026-11-26" aria-label="来源 1：KuCoin VIP召回计划公告 · 发布 2026-11-26">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="sec sec-ai">
+        <div class="sec-head">
+          <span class="sec-no">02</span>
+          <div>
+            <h2 class="sec-title">AI</h2>
+          </div>
+        </div>
+        <div class="sec-body">
+
+        <article class="item">
+          <h3 class="item-h">11月24日，Anthropic让MCP服务器随工具分发技能并承接长任务</h3>
+          <p class="item-b">Anthropic于11月24日把Skills over MCP开放为公开测试，MCP服务器可随工具分发按需加载的技能。Tasks与Elicitation同时正式可用，服务器可承接后台长任务，并在付费或删除等动作中暂停请求用户确认；文件上传仍在逐步上线。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://claude.com/resources/articles/skills-over-mcp-tasks-and-more" target="_blank" rel="noopener" title="Anthropic MCP产品更新 · 发布 2026-11-24" aria-label="来源 1：Anthropic MCP产品更新 · 发布 2026-11-24">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月26日，Qwen Code 0.28.7切换Harness内核并增强会话接管</h3>
+          <p class="item-b">Qwen Code于11月26日发布v0.28.7，CLI切换到Harness内核，默认关闭使用统计，并可保存每个模型的推理强度与上下文设置。新版本还支持跨控制平面接管托管会话、恢复工作树快照；取消模型循环检测属于需单独评估的破坏性变更。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://github.com/QwenLM/qwen-code/releases/tag/v0.28.7" target="_blank" rel="noopener" title="Qwen Code v0.28.7发布说明 · 发布 2026-11-26" aria-label="来源 1：Qwen Code v0.28.7发布说明 · 发布 2026-11-26">1</a>
+          </div>
+        </article>
+        <article class="item">
+          <h3 class="item-h">11月24日，Google用544道基础题测试模型稳定性</h3>
+          <p class="item-b">Google DeepMind于11月24日发布Humanity&#39;s First Exam，用544道文本与图像基础题测试模型对轻微变体能否稳定答对，而非只看一次成功。榜单与Kaggle竞赛已开放，竞赛持续至12月15日；它衡量的是基础可靠性，不等同于专业能力上限。</p>
+
+
+          <div class="item-meta compact-sources">
+
+            <span class="source-label">来源</span><a class="source-number" href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/humanitys-first-exam/" target="_blank" rel="noopener" title="Google DeepMind Humanity&#39;s First Exam公告 · 发布 2026-11-24" aria-label="来源 1：Google DeepMind Humanity&#39;s First Exam公告 · 发布 2026-11-24">1</a>
+          </div>
+        </article>
+        </div>
+      </section>
+    <footer class="foot"><a href="https://github.com/dorischeyy/perp-daily">Doris 开发与维护</a> · 自动化编发 · 仅供研究参考，不构成投资建议</footer>
+  </main>
+</body>
+</html>

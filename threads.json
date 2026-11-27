@@ -15,7 +15,7 @@
     "watch_for": "Next milestone or event to monitor",
     "log": "[{date, point, url}] Dated developments in chronological order, recording only new information"
   },
-  "updated": "2026-11-25",
+  "updated": "2026-11-27",
   "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -135,9 +135,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-07-09",
-      "last_update": "2026-11-23",
+      "last_update": "2026-11-27",
       "cadence_days": 6,
-      "next_check": "2026-11-30",
+      "next_check": "2026-12-03",
       "thesis": "On-chain TradFi trading now involves regulatory classification, corporate actions, layered leverage and rights to underlying securities. Under temporary SEC relief, OKXICE launched a permissioned AMM for eligible US users with one-to-one securities entitlements. Access, legal rights, execution and the position lifecycle need to be verified together.",
       "why_us": "Compare changes in volume and open interest across FX, equity index and precious metals perpetuals to see whether demand persists after listing.",
       "watch_for": "Formal CFTC rules for single-stock perpetuals. Effective leverage, funding and liquidation examples for AMDL. Open positions and mark-price discrepancies after the SNDK split. Comparable Q4 volumes, open interest and fees.",
@@ -531,6 +531,11 @@
           "date": "2026-11-23",
           "point": "OKXICE opened round-the-clock tokenized securities trading to eligible US users who complete identity verification and CeDeFi Wallet onboarding. It plans to phase in 113 stocks, ETFs, and ETPs. Each digital security has 1:1 share backing and trades through permissioned Uniswap v4 pools on X Layer. This is a live US permissioned AMM operating under temporary SEC exemptive relief, not a registered exchange.",
           "url": "https://www.okx.com/learn/okxice-tsv-launch-going-live"
+        },
+        {
+          "date": "2026-11-27",
+          "point": "Binance listed XIAOMIUSDT as a USDT-priced perpetual and HK1888USDT as a quanto perpetual. Both settle in USDT, trade around the clock with up to 20x leverage, and use four-hour funding. The pair shows that a common margin and clearing system can expose users to different quotation structures, while the announcement supplied no volume, open interest, or off-hours price-quality evidence.",
+          "url": "https://www.binance.com/en/square/post/392325392940659"
         }
       ]
     },
@@ -1161,7 +1166,7 @@
       "first_seen": "2026-08-25",
       "last_update": "2026-11-21",
       "cadence_days": 6,
-      "next_check": "2026-11-27",
+      "next_check": "2026-11-30",
       "thesis": "Venues increasingly share matching, clearing, risk, data and settlement services. ATLAS is designed to let multiple frontends use one engine while retaining customer relationships. The CFTC has also said on-chain architecture does not remove US retail derivatives registration requirements. Licensing obligations follow the parties as well as the technical design.",
       "why_us": "For wallet or broker integrations, verify customer ownership, allocation of risk, incident responsibilities and execution compatibility.",
       "watch_for": "Whether ATLAS launches on November 30 and attracts partner frontends and real orders. Formal CFTC registration or partnership rules. Liability for shared Pyth data, production latency, fund returns and incident recovery.",
