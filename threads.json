@@ -15,7 +15,7 @@
     "watch_for": "Next milestone or event to monitor",
     "log": "[{date, point, url}] Dated developments in chronological order, recording only new information"
   },
-  "updated": "2026-11-27",
+  "updated": "2026-11-28",
   "threads": [
     {
       "id": "prediction-market-federal-rulebook",
@@ -536,6 +536,11 @@
           "date": "2026-11-27",
           "point": "Binance listed XIAOMIUSDT as a USDT-priced perpetual and HK1888USDT as a quanto perpetual. Both settle in USDT, trade around the clock with up to 20x leverage, and use four-hour funding. The pair shows that a common margin and clearing system can expose users to different quotation structures, while the announcement supplied no volume, open interest, or off-hours price-quality evidence.",
           "url": "https://www.binance.com/en/square/post/392325392940659"
+        },
+        {
+          "date": "2026-11-27",
+          "point": "Extended披露改用Arc结算后首个30天的成交构成。338个市场合计成交60.1亿美元，现实资产市场成交18.3亿美元，占30.5%。该口径涵盖多类现实资产，未披露这一组市场的持仓量。",
+          "url": "https://t.me/extended_updates/404"
         }
       ]
     },
@@ -1376,9 +1381,9 @@
       "tier": "S",
       "status": "active",
       "first_seen": "2026-09-18",
-      "last_update": "2026-11-23",
+      "last_update": "2026-11-27",
       "cadence_days": 6,
-      "next_check": "2026-11-28",
+      "next_check": "2026-12-03",
       "thesis": "Frontier evaluations now cover training progress, capability thresholds, chat behavior and production oversight as well as task scores. GPT-6.2 Chat reported internal measurements for image understanding, complex instructions, web research and safety. Independent cross-lab and real-task evaluations remain necessary.",
       "why_us": "Agents that can call trading or wallet tools have real permissions. Check separation of test and production, emergency stops, incident disclosure and independent evaluation before deployment.",
       "watch_for": "Standards for evaluator access and reporting, shared measures of automated R&D, triggers for human review, funding independence, production isolation, disclosure of boundary violations and controls on high-risk tool calls.",
@@ -1537,6 +1542,11 @@
           "date": "2026-11-23",
           "point": "OpenAI began rolling out its chat-focused GPT-6.2 to Plus, Pro, Business and Enterprise. Internal image-understanding scores rose from 47.4% to 71.7%, complex instruction scores from 62.5% to 78.1%, and safety-policy compliance from 77–80% to 91–94%. The figures came from internal testing. The rollout did not change the models used by Work or Codex.",
           "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+        },
+        {
+          "date": "2026-11-27",
+          "point": "欧盟人工智能办公室开始征集驻场评估方案，讨论独立评估人员可接触的内部模型、日志和事故记录，以及厂商推迟披露报告的条件。征集截至12月9日，2027年1月召开研讨会，尚未形成对厂商有约束力的要求。",
+          "url": "https://digital-strategy.ec.europa.eu/en/news/call-participants-workshop-embedded-evaluations-gpai-models-systemic-risk"
         }
       ]
     },
@@ -1608,7 +1618,7 @@
       "tier": "A",
       "status": "active",
       "first_seen": "2026-10-21",
-      "last_update": "2026-11-25",
+      "last_update": "2026-11-27",
       "cadence_days": 7,
       "next_check": "2026-12-02",
       "thesis": "Collateral reuse now extends beyond yield-bearing assets and stock lending to tokenized securities. Binance accepts five bStocks for cross and portfolio margin. These are financial instrument certificates rather than direct shareholdings. Evaluate haircuts, legal rights, liquidation and exit terms together.",
@@ -1654,6 +1664,16 @@
           "date": "2026-11-25",
           "point": "Binance added ARTYB, FRHCB, IBITB, IGVB and SOXXB as collateral in cross margin, portfolio margin and Portfolio Margin Pro. These tokenized securities can convert one-to-one against underlying holdings. Legally they are ADGM-approved financial instrument certificates. The notice did not give the applicable haircuts or exit priority in stressed markets.",
           "url": "https://www.binance.com/en/square/post/391930722230690"
+        },
+        {
+          "date": "2026-11-26",
+          "point": "Velocity恢复已有账户交易，允许重新开仓，但仍暂停新开户和入金。持仓者暂不能通过新入金追加保证金，平台尚未公布该通道的恢复时间。",
+          "url": "https://www.cryptotimes.io/2026/11/26/solana-based-velocity-resumes-trading-after-fixing-insurance-fund-bug/"
+        },
+        {
+          "date": "2026-11-27",
+          "point": "币安确认十月安全事件造成的提币限制已全部解除。少数网络仍因维护或计划升级暂停，用户须按所选资产与网络核对状态。",
+          "url": "https://www.binance.com/en/square/post/392614643875657"
         }
       ]
     },
@@ -1685,6 +1705,48 @@
           "date": "2026-11-17",
           "point": "Following a change by the third-party issuer, MEXC Global Card suspended all card transactions and top-ups from November 14. Users could move remaining card balances to their MEXC fiat accounts. This is a separate interruption to an external funding channel. MEXC did not identify a causal link to the FinCEN order.",
           "url": "https://t.me/s/MEXCofficialNews?before=38820"
+        }
+      ]
+    },
+    {
+      "id": "document-parsing-evaluations",
+      "title": "财报与表格解析的可复现评测",
+      "score": 86,
+      "tier": "A",
+      "status": "active",
+      "first_seen": "2026-11-26",
+      "last_update": "2026-11-26",
+      "cadence_days": 6,
+      "next_check": "2026-12-02",
+      "thesis": "文档解析团队可以用已知的图表数值和表格结构训练模型，再以真实财报检验错误。",
+      "why_us": "研究员从财报抽取数据时，表格错列或数字错读会影响比较。",
+      "watch_for": "有人工校对的真实财报评测、按文档类型拆分的错误率。",
+      "log": [
+        {
+          "date": "2026-11-26",
+          "point": "NVIDIA为Nemotron 3.5 Parse开放三套合成训练数据，含998万条图表样本、100万条表格样本及790万条多语言文字识别样本，并公布微调方法。处理财报等复杂版面的团队可以用带标注的页面训练解析器，检查图表数值是否读准、表格行列是否错位。",
+          "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin"
+        }
+      ]
+    },
+    {
+      "id": "speech-translation-latency",
+      "title": "实时语音翻译的会议延迟",
+      "score": 83,
+      "tier": "A",
+      "status": "active",
+      "first_seen": "2026-11-26",
+      "last_update": "2026-11-26",
+      "cadence_days": 6,
+      "next_check": "2026-12-02",
+      "thesis": "实时语音翻译进入会议和语音接口，模型改进与会议端到端体验需要分别测量。",
+      "why_us": "语音产品团队需要估算跨语种客服和会议中用户实际等待的时长。",
+      "watch_for": "实际会议的双向延迟、语种覆盖及独立测量。",
+      "log": [
+        {
+          "date": "2026-11-26",
+          "point": "DeepL在线会议、线下对话和语音API已为英、德、法、西、日、韩六种语言自动启用Aure v2。模型直接把讲话译成另一种语言的语音。DeepL用十组语言对的一分钟录音测试，译声相对前代的中位延迟下降50%，该测量未计入应用自身的延迟。",
+          "url": "https://www.deepl.com/en/press-release/aure-v2"
         }
       ]
     }
